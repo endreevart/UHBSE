@@ -1,0 +1,19 @@
+# Copy to private/sources.yaml and fill credentials locally.
+# Connection defaults match docker-compose + db.env.
+
+sources:
+  local_stage:
+    host: localhost
+    port: 5434
+    database: magerya_api
+    user: magerya_api
+    # password: set via env POSTGRES_PASSWORD or private/sources.yaml
+
+dumps:
+  primary: dumps/stage_magerya_api.dump
+  additional:
+    - kgz-20231204.dump
+
+restore:
+  script: ./restore.sh
+  compose: docker-compose.yml

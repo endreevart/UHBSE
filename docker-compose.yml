@@ -1,0 +1,19 @@
+services:
+  mg-db:
+    image: postgis/postgis:14-3.4
+    container_name: human-simulator-db
+    restart: unless-stopped
+    env_file:
+      - db.env
+    ports:
+      - "5434:5432"
+    volumes:
+      - mg-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U magerya_api -d magerya_api"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mg-db-data:

@@ -1,0 +1,24 @@
+---
+description: Prevent assumptions and unsupported conclusions
+alwaysApply: true
+---
+
+Never infer a medical field meaning from its name alone.
+
+Each mapped field must have one of these statuses:
+
+- CONFIRMED;
+- LIKELY;
+- UNKNOWN;
+- EXCLUDED.
+
+CONFIRMED requires evidence from schema, code, documentation or user review.
+
+Every report statement must link to:
+
+- a profiling result;
+- a SQL query identifier;
+- a schema constraint;
+- or a documented human decision.
+
+Unknown information must remain unknown.

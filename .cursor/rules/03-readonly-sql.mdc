@@ -1,0 +1,36 @@
+---
+description: Read-only SQL requirements for original source databases
+globs: ["**/*.sql", "src/**/*.py"]
+alwaysApply: true
+---
+
+The original restored database is read-only.
+
+Derived databases are writable and may contain:
+
+- corrected data;
+- normalized data;
+- expert annotations;
+- calculated values;
+- imputed values;
+- synthetic experimental data.
+
+Never modify the original restored database.
+
+Connections to the original restored database must:
+
+- use a dedicated read-only role;
+- enable read-only transactions;
+- set statement_timeout;
+- set lock_timeout;
+- use parameterized queries;
+- avoid SELECT *;
+- avoid unrestricted sampling;
+- never print row values to logs, terminal, or Git artifacts;
+- prefer database statistics and aggregate queries;
+- record query name, duration and source without recording sensitive values.
+
+Initial schema discovery must use information_schema and database catalogs.
+
+Exact full-table counts must not be run automatically on large tables.
+Use estimated counts first.

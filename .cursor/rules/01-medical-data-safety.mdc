@@ -1,0 +1,36 @@
+---
+description: Safety rules for medical and personal data
+alwaysApply: true
+---
+
+Local application code may process complete row-level patient data.
+
+Do not include patient data in:
+
+- Cursor prompts;
+- external LLM requests;
+- application logs;
+- terminal output;
+- Git repository files.
+
+Row-level processing must happen inside the local application runtime.
+
+Never include in agent-visible output or repository files:
+
+- full names;
+- phone numbers;
+- email addresses;
+- addresses;
+- passport or insurance identifiers;
+- medical document bodies;
+- unredacted free text;
+- raw database rows;
+- database credentials.
+
+The original clinic dump remains unchanged for reproducibility.
+All modifications belong in derived datasets.
+
+Never execute INSERT, UPDATE, DELETE, ALTER, DROP, TRUNCATE or CREATE
+against the original clinic database.
+
+Secrets must not be stored inside the repository.

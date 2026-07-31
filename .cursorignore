@@ -1,0 +1,17 @@
+# Large binary dumps — exclude from agent indexing
+*.dump
+dumps/
+kgz-*.dump
+
+# Virtualenv and caches
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Raw artifact samples (may contain PHI)
+artifacts/**/raw/
+artifacts/**/samples/
+
+# Local secrets
+private/sources.yaml
+db.env

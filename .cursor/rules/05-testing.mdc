@@ -1,0 +1,23 @@
+---
+description: Testing requirements for the data audit tool
+globs: ["src/**/*.py", "tests/**/*.py"]
+alwaysApply: false
+---
+
+Every profiler component must have tests.
+
+Tests must cover:
+
+- read-only enforcement;
+- credential redaction;
+- PHI redaction;
+- deterministic output;
+- unsupported database objects;
+- empty tables;
+- null-only columns;
+- large tables;
+- interrupted queries;
+- malformed dates;
+- unknown data types.
+
+A task is not complete until its tests pass.

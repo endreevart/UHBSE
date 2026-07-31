@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets and local config
+private/sources.yaml
+db.env
+
+# Database dumps (keep local, never commit)
+*.dump
+dumps/
+
+# Artifacts with raw samples (aggregates in artifacts/stage-01/ are OK)
+artifacts/**/raw/
+artifacts/**/samples/
+
+# OS / IDE
+.DS_Store
+.idea/
+*.swp

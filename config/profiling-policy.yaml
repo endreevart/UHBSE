@@ -1,0 +1,29 @@
+# Profiling limits for stage-01 (read-only)
+
+forbidden_operations:
+  - INSERT
+  - UPDATE
+  - DELETE
+  - TRUNCATE
+  - CREATE
+  - ALTER
+  - DROP
+  - GRANT
+  - COPY
+
+limits:
+  max_rows_sample: 1000
+  max_tables: null  # null = no limit; set integer to cap profiling scope
+
+pii:
+  redact_in_artifacts: true
+  never_sample_columns_matching:
+    - ".*password.*"
+    - ".*phone.*"
+    - ".*snils.*"
+    - ".*passport.*"
+    - ".*email.*"
+
+output:
+  artifacts_dir: artifacts/stage-01
+  evidence_dir: artifacts/stage-01/evidence

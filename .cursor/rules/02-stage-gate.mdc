@@ -1,0 +1,22 @@
+---
+description: Stage control and completion gates
+alwaysApply: true
+---
+
+Before starting work, read:
+
+- AGENTS.md
+- docs/current-stage.md
+- docs/stage-01-acceptance.md
+
+After every completed task update docs/current-stage.md.
+
+Do not begin the next stage automatically.
+
+When all Stage 01 acceptance criteria are met:
+
+1. verify `artifacts/stage-01/stage-01-report.md` has **Report status: DRAFT**;
+2. promote the report to **Report status: FINAL**;
+3. list unresolved questions;
+4. stop;
+5. tell the user that the stage gate has been reached.

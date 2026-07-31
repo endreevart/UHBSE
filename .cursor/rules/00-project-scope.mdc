@@ -1,0 +1,14 @@
+---
+description: UHBSE product boundary and current development stage
+alwaysApply: true
+---
+
+Work only on the current stage defined in AGENTS.md.
+
+Do not implement future stages unless the current gate has passed.
+
+Do not introduce ML, LLM, OMOP, FHIR, simulation runtime or cross-clinic
+data merging during Stage 01.
+
+If a requested change belongs to a future stage, record it in
+docs/future-work.md and do not implement it.

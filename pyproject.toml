@@ -1,0 +1,39 @@
+[project]
+name = "human-simulator"
+version = "0.1.0"
+description = "UHBSE Stage 01 read-only clinic database audit tool"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "polars>=1.0",
+    "pyarrow>=15.0",
+    "pyyaml>=6.0",
+    "structlog>=24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+]
+
+[project.scripts]
+audit = "human_simulator.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "integration: tests that require a live PostgreSQL instance",
+]

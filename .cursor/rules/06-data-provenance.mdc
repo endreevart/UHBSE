@@ -1,0 +1,33 @@
+---
+description: Track the origin of every value
+alwaysApply: true
+---
+
+Every value in a derived dataset must have record_origin:
+
+- OBSERVED;
+- CORRECTED;
+- NORMALIZED;
+- ANNOTATED;
+- DERIVED;
+- IMPUTED;
+- PREDICTED;
+- SYNTHETIC.
+
+Never overwrite observed data.
+
+Corrections and additions must create new versions.
+
+IMPUTED, PREDICTED and SYNTHETIC values must not be treated as
+observed ground truth.
+
+Every changed or added record must contain:
+
+- source_dataset_id;
+- source_record_id;
+- record_origin;
+- transformation_id;
+- transformation_version;
+- created_at;
+- created_by;
+- evidence or calculation reference.
