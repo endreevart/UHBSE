@@ -1,0 +1,290 @@
+{
+  "definitions": {
+    "constraint_definitions": {
+      "encounter": {
+        "encounter_missing_clinical_time_documented": "CHECK (occurred_at IS NOT NULL OR missingness_reason IS NOT NULL)",
+        "encounter_pkey": "PRIMARY KEY (encounter_id)",
+        "encounter_provenance_origin_specific_fields": "CHECK (((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'CORRECTED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['prior_record_reference'::text, 'correction_reason'::text]) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'NORMALIZED'::text OR jsonb_strip_nulls(provenance) ? 'normalization_lineage'::text) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'ANNOTATED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['annotation_text'::text, 'annotated_at'::text]))",
+        "encounter_provenance_profile_valid": "CHECK (jsonb_typeof(provenance) = 'object'::text AND provenance ? 'record_origin'::text AND ((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND ((provenance ->> 'mapping_status'::text) = ANY (ARRAY['CONFIRMED_SCHEMA'::text, 'CANDIDATE'::text, 'HYPOTHESIS'::text, 'UNRESOLVED'::text, 'NOT_MAPPED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text] AND NOT provenance ? 'source_record_locator'::text))",
+        "encounter_provenance_profiles_exclusive": "CHECK (((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR NOT provenance ?| ARRAY['input_record_references'::text, 'computation_method'::text, 'computation_version'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR NOT provenance ?| ARRAY['source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text]))",
+        "encounter_provenance_required_values_present": "CHECK (\nCASE\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['DERIVED'::text, 'IMPUTED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    ELSE false\nEND)",
+        "encounter_provider_null_in_pilot": "CHECK (provider_id IS NULL)",
+        "encounter_subject_fkey": "FOREIGN KEY (subject_id) REFERENCES canonical_evidence.subject(subject_id)"
+      },
+      "observation": {
+        "observation_encounter_null_in_pilot": "CHECK (encounter_id IS NULL)",
+        "observation_missing_clinical_time_documented": "CHECK (observed_at IS NOT NULL OR missingness_reason IS NOT NULL)",
+        "observation_normalized_concept_null_in_pilot": "CHECK (normalized_concept IS NULL)",
+        "observation_normalized_unit_null_in_pilot": "CHECK (normalized_unit IS NULL)",
+        "observation_pkey": "PRIMARY KEY (observation_id)",
+        "observation_provenance_origin_specific_fields": "CHECK (((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'CORRECTED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['prior_record_reference'::text, 'correction_reason'::text]) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'NORMALIZED'::text OR jsonb_strip_nulls(provenance) ? 'normalization_lineage'::text) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'ANNOTATED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['annotation_text'::text, 'annotated_at'::text]))",
+        "observation_provenance_profile_valid": "CHECK (jsonb_typeof(provenance) = 'object'::text AND provenance ? 'record_origin'::text AND ((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND ((provenance ->> 'mapping_status'::text) = ANY (ARRAY['CONFIRMED_SCHEMA'::text, 'CANDIDATE'::text, 'HYPOTHESIS'::text, 'UNRESOLVED'::text, 'NOT_MAPPED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text] AND NOT provenance ? 'source_record_locator'::text))",
+        "observation_provenance_profiles_exclusive": "CHECK (((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR NOT provenance ?| ARRAY['input_record_references'::text, 'computation_method'::text, 'computation_version'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR NOT provenance ?| ARRAY['source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text]))",
+        "observation_provenance_required_values_present": "CHECK (\nCASE\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['DERIVED'::text, 'IMPUTED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    ELSE false\nEND)",
+        "observation_reference_range_is_object": "CHECK (reference_range IS NULL OR jsonb_typeof(reference_range) = 'object'::text)",
+        "observation_subject_fkey": "FOREIGN KEY (subject_id) REFERENCES canonical_evidence.subject(subject_id)",
+        "observation_uncertainty_is_object": "CHECK (uncertainty IS NULL OR jsonb_typeof(uncertainty) = 'object'::text)"
+      },
+      "observation_component": {
+        "observation_component_normalized_unit_null_in_pilot": "CHECK (normalized_unit IS NULL)",
+        "observation_component_observation_fkey": "FOREIGN KEY (observation_id) REFERENCES canonical_evidence.observation(observation_id)",
+        "observation_component_pkey": "PRIMARY KEY (component_id)",
+        "observation_component_provenance_origin_specific_fields": "CHECK (((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'CORRECTED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['prior_record_reference'::text, 'correction_reason'::text]) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'NORMALIZED'::text OR jsonb_strip_nulls(provenance) ? 'normalization_lineage'::text) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'ANNOTATED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['annotation_text'::text, 'annotated_at'::text]))",
+        "observation_component_provenance_profile_valid": "CHECK (jsonb_typeof(provenance) = 'object'::text AND provenance ? 'record_origin'::text AND ((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND ((provenance ->> 'mapping_status'::text) = ANY (ARRAY['CONFIRMED_SCHEMA'::text, 'CANDIDATE'::text, 'HYPOTHESIS'::text, 'UNRESOLVED'::text, 'NOT_MAPPED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text] AND NOT provenance ? 'source_record_locator'::text))",
+        "observation_component_provenance_profiles_exclusive": "CHECK (((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR NOT provenance ?| ARRAY['input_record_references'::text, 'computation_method'::text, 'computation_version'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR NOT provenance ?| ARRAY['source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text]))",
+        "observation_component_provenance_required_values_present": "CHECK (\nCASE\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['DERIVED'::text, 'IMPUTED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    ELSE false\nEND)",
+        "observation_component_reference_range_is_object": "CHECK (reference_range IS NULL OR jsonb_typeof(reference_range) = 'object'::text)",
+        "observation_component_sequence_order_non_negative": "CHECK (sequence_order IS NULL OR sequence_order >= 0)"
+      },
+      "source_record": {
+        "source_record_key_version_not_blank": "CHECK (btrim(locator_key_version) <> ''::text)",
+        "source_record_locator_not_blank": "CHECK (btrim(source_record_locator) <> ''::text)",
+        "source_record_locator_scheme_allowed": "CHECK (locator_scheme = 'deterministic_hmac_locator'::text)",
+        "source_record_locator_unique": "UNIQUE (source_record_locator)",
+        "source_record_pkey": "PRIMARY KEY (source_record_id)",
+        "source_record_provenance_matches_columns": "CHECK (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR (provenance ->> 'source_system'::text) = source_system_id AND (provenance ->> 'source_schema'::text) = source_schema AND ((provenance ->> 'source_relation'::text) = source_relation OR (provenance ->> 'source_relation'::text) = ((source_schema || '.'::text) || source_relation)) AND (provenance ->> 'source_record_locator'::text) = source_record_locator)",
+        "source_record_provenance_origin_specific_fields": "CHECK (((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'CORRECTED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['prior_record_reference'::text, 'correction_reason'::text]) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'NORMALIZED'::text OR jsonb_strip_nulls(provenance) ? 'normalization_lineage'::text) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'ANNOTATED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['annotation_text'::text, 'annotated_at'::text]))",
+        "source_record_provenance_profile_valid": "CHECK (jsonb_typeof(provenance) = 'object'::text AND provenance ? 'record_origin'::text AND ((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND ((provenance ->> 'mapping_status'::text) = ANY (ARRAY['CONFIRMED_SCHEMA'::text, 'CANDIDATE'::text, 'HYPOTHESIS'::text, 'UNRESOLVED'::text, 'NOT_MAPPED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text] AND NOT provenance ? 'source_record_locator'::text))",
+        "source_record_provenance_profiles_exclusive": "CHECK (((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR NOT provenance ?| ARRAY['input_record_references'::text, 'computation_method'::text, 'computation_version'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR NOT provenance ?| ARRAY['source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text]))",
+        "source_record_provenance_required_values_present": "CHECK (\nCASE\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['DERIVED'::text, 'IMPUTED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    ELSE false\nEND)",
+        "source_record_source_system_fkey": "FOREIGN KEY (source_system_id) REFERENCES canonical_evidence.source_system(source_system_id)"
+      },
+      "source_system": {
+        "source_system_id_not_blank": "CHECK (btrim(source_system_id) <> ''::text)",
+        "source_system_label_not_blank": "CHECK (btrim(source_label) <> ''::text)",
+        "source_system_pkey": "PRIMARY KEY (source_system_id)"
+      },
+      "subject": {
+        "subject_pkey": "PRIMARY KEY (subject_id)",
+        "subject_provenance_origin_specific_fields": "CHECK (((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'CORRECTED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['prior_record_reference'::text, 'correction_reason'::text]) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'NORMALIZED'::text OR jsonb_strip_nulls(provenance) ? 'normalization_lineage'::text) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'ANNOTATED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['annotation_text'::text, 'annotated_at'::text]))",
+        "subject_provenance_profile_valid": "CHECK (jsonb_typeof(provenance) = 'object'::text AND provenance ? 'record_origin'::text AND ((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND ((provenance ->> 'mapping_status'::text) = ANY (ARRAY['CONFIRMED_SCHEMA'::text, 'CANDIDATE'::text, 'HYPOTHESIS'::text, 'UNRESOLVED'::text, 'NOT_MAPPED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text] AND NOT provenance ? 'source_record_locator'::text))",
+        "subject_provenance_profiles_exclusive": "CHECK (((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR NOT provenance ?| ARRAY['input_record_references'::text, 'computation_method'::text, 'computation_version'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR NOT provenance ?| ARRAY['source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text]))",
+        "subject_provenance_required_values_present": "CHECK (\nCASE\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['DERIVED'::text, 'IMPUTED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    ELSE false\nEND)",
+        "subject_source_local_identity_unique": "UNIQUE (source_system_id, source_subject_key)",
+        "subject_source_subject_key_not_blank": "CHECK (btrim(source_subject_key) <> ''::text)",
+        "subject_source_system_fkey": "FOREIGN KEY (source_system_id) REFERENCES canonical_evidence.source_system(source_system_id)"
+      },
+      "subject_characteristic": {
+        "subject_characteristic_concept_null_in_pilot": "CHECK (concept_id IS NULL)",
+        "subject_characteristic_identity_present": "CHECK (characteristic_code IS NOT NULL OR concept_id IS NOT NULL)",
+        "subject_characteristic_normalized_unit_null_in_pilot": "CHECK (normalized_unit IS NULL)",
+        "subject_characteristic_pkey": "PRIMARY KEY (characteristic_id)",
+        "subject_characteristic_provenance_origin_specific_fields": "CHECK (((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'CORRECTED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['prior_record_reference'::text, 'correction_reason'::text]) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'NORMALIZED'::text OR jsonb_strip_nulls(provenance) ? 'normalization_lineage'::text) AND ((provenance ->> 'record_origin'::text) IS DISTINCT FROM 'ANNOTATED'::text OR jsonb_strip_nulls(provenance) ?& ARRAY['annotation_text'::text, 'annotated_at'::text]))",
+        "subject_characteristic_provenance_profile_valid": "CHECK (jsonb_typeof(provenance) = 'object'::text AND provenance ? 'record_origin'::text AND ((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND ((provenance ->> 'mapping_status'::text) = ANY (ARRAY['CONFIRMED_SCHEMA'::text, 'CANDIDATE'::text, 'HYPOTHESIS'::text, 'UNRESOLVED'::text, 'NOT_MAPPED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR provenance ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text] AND NOT provenance ? 'source_record_locator'::text))",
+        "subject_characteristic_provenance_profiles_exclusive": "CHECK (((provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text, 'DERIVED'::text, 'IMPUTED'::text])) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text])) OR NOT provenance ?| ARRAY['input_record_references'::text, 'computation_method'::text, 'computation_version'::text]) AND (((provenance ->> 'record_origin'::text) <> ALL (ARRAY['DERIVED'::text, 'IMPUTED'::text])) OR NOT provenance ?| ARRAY['source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text]))",
+        "subject_characteristic_provenance_required_values_present": "CHECK (\nCASE\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['OBSERVED'::text, 'CORRECTED'::text, 'NORMALIZED'::text, 'ANNOTATED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'source_system'::text, 'source_schema'::text, 'source_relation'::text, 'source_record_locator'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    WHEN (provenance ->> 'record_origin'::text) = ANY (ARRAY['DERIVED'::text, 'IMPUTED'::text]) THEN jsonb_strip_nulls(provenance) ?& ARRAY['record_origin'::text, 'input_record_references'::text, 'computation_method'::text, 'computation_version'::text, 'uncertainty'::text, 'transformation_id'::text, 'transformation_version'::text, 'transformed_at'::text, 'input_artifact_sha256'::text, 'confidence'::text, 'mapping_status'::text]\n    ELSE false\nEND)",
+        "subject_characteristic_raw_code_not_blank": "CHECK (btrim(raw_code) <> ''::text)",
+        "subject_characteristic_raw_value_preserved": "CHECK (btrim(raw_value) <> ''::text)",
+        "subject_characteristic_status_matches_provenance": "CHECK (status::text = (provenance ->> 'mapping_status'::text))",
+        "subject_characteristic_subject_fkey": "FOREIGN KEY (subject_id) REFERENCES canonical_evidence.subject(subject_id)",
+        "subject_characteristic_typed_value_xor": "CHECK ((\nCASE\n    WHEN date_value IS NOT NULL THEN 1\n    ELSE 0\nEND +\nCASE\n    WHEN numeric_value IS NOT NULL THEN 1\n    ELSE 0\nEND +\nCASE\n    WHEN text_value IS NOT NULL THEN 1\n    ELSE 0\nEND +\nCASE\n    WHEN categorical_value IS NOT NULL THEN 1\n    ELSE 0\nEND +\nCASE\n    WHEN boolean_value IS NOT NULL THEN 1\n    ELSE 0\nEND) = 1)"
+      }
+    },
+    "default_privileges": [
+      "canonical_owner:r:canonical_loader=ar/canonical_owner,canonical_validator_ro=r/canonical_owner"
+    ],
+    "enums": {
+      "canonical_data_level": [
+        "PATIENT_EVENT",
+        "OBSERVATION_HEADER",
+        "OBSERVATION_VALUE",
+        "ATTRIBUTE_CONTAINER",
+        "REFERENCE_CATALOG",
+        "WORKFLOW",
+        "PAYLOAD",
+        "UNKNOWN"
+      ],
+      "canonical_mapping_status": [
+        "CONFIRMED_SCHEMA",
+        "CANDIDATE",
+        "HYPOTHESIS",
+        "UNRESOLVED",
+        "NOT_MAPPED"
+      ]
+    },
+    "index_definitions": {
+      "encounter": {
+        "encounter_pkey": "CREATE UNIQUE INDEX encounter_pkey ON canonical_evidence.encounter USING btree (encounter_id)",
+        "encounter_subject_idx": "CREATE INDEX encounter_subject_idx ON canonical_evidence.encounter USING btree (subject_id)"
+      },
+      "observation": {
+        "observation_pkey": "CREATE UNIQUE INDEX observation_pkey ON canonical_evidence.observation USING btree (observation_id)",
+        "observation_subject_idx": "CREATE INDEX observation_subject_idx ON canonical_evidence.observation USING btree (subject_id)"
+      },
+      "observation_component": {
+        "observation_component_observation_idx": "CREATE INDEX observation_component_observation_idx ON canonical_evidence.observation_component USING btree (observation_id)",
+        "observation_component_pkey": "CREATE UNIQUE INDEX observation_component_pkey ON canonical_evidence.observation_component USING btree (component_id)"
+      },
+      "source_record": {
+        "source_record_locator_unique": "CREATE UNIQUE INDEX source_record_locator_unique ON canonical_evidence.source_record USING btree (source_record_locator)",
+        "source_record_pkey": "CREATE UNIQUE INDEX source_record_pkey ON canonical_evidence.source_record USING btree (source_record_id)",
+        "source_record_source_relation_idx": "CREATE INDEX source_record_source_relation_idx ON canonical_evidence.source_record USING btree (source_system_id, source_schema, source_relation)"
+      },
+      "source_system": {
+        "source_system_pkey": "CREATE UNIQUE INDEX source_system_pkey ON canonical_evidence.source_system USING btree (source_system_id)"
+      },
+      "subject": {
+        "subject_pkey": "CREATE UNIQUE INDEX subject_pkey ON canonical_evidence.subject USING btree (subject_id)",
+        "subject_source_local_identity_unique": "CREATE UNIQUE INDEX subject_source_local_identity_unique ON canonical_evidence.subject USING btree (source_system_id, source_subject_key)"
+      },
+      "subject_characteristic": {
+        "subject_characteristic_pkey": "CREATE UNIQUE INDEX subject_characteristic_pkey ON canonical_evidence.subject_characteristic USING btree (characteristic_id)",
+        "subject_characteristic_subject_idx": "CREATE INDEX subject_characteristic_subject_idx ON canonical_evidence.subject_characteristic USING btree (subject_id)"
+      }
+    },
+    "schema_owner": "canonical_owner",
+    "schema_privileges": {
+      "canonical_loader": [
+        "USAGE"
+      ],
+      "canonical_migrator": [
+        "CREATE",
+        "USAGE"
+      ],
+      "canonical_owner": [
+        "CREATE",
+        "USAGE"
+      ],
+      "canonical_validator_ro": [
+        "USAGE"
+      ]
+    },
+    "table_owners": {
+      "encounter": "canonical_owner",
+      "observation": "canonical_owner",
+      "observation_component": "canonical_owner",
+      "source_record": "canonical_owner",
+      "source_system": "canonical_owner",
+      "subject": "canonical_owner",
+      "subject_characteristic": "canonical_owner"
+    },
+    "table_privileges": {
+      "canonical_loader": {
+        "encounter": [
+          "INSERT",
+          "SELECT"
+        ],
+        "observation": [
+          "INSERT",
+          "SELECT"
+        ],
+        "observation_component": [
+          "INSERT",
+          "SELECT"
+        ],
+        "source_record": [
+          "INSERT",
+          "SELECT"
+        ],
+        "source_system": [
+          "INSERT",
+          "SELECT"
+        ],
+        "subject": [
+          "INSERT",
+          "SELECT"
+        ],
+        "subject_characteristic": [
+          "INSERT",
+          "SELECT"
+        ]
+      },
+      "canonical_owner": {
+        "encounter": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "observation": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "observation_component": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "source_record": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "source_system": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "subject": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "subject_characteristic": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ]
+      },
+      "canonical_validator_ro": {
+        "encounter": [
+          "SELECT"
+        ],
+        "observation": [
+          "SELECT"
+        ],
+        "observation_component": [
+          "SELECT"
+        ],
+        "source_record": [
+          "SELECT"
+        ],
+        "source_system": [
+          "SELECT"
+        ],
+        "subject": [
+          "SELECT"
+        ],
+        "subject_characteristic": [
+          "SELECT"
+        ]
+      }
+    }
+  },
+  "definitions_sha256": "cadda67833cc5db91f8ed38ebe2378a37bed1ad4ce677ba6508ca6f77dff9af0",
+  "produced_by_migrations": {
+    "0001_roles_and_schema.sql": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+    "0002_pilot_evidence_tables.sql": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+    "0003_pilot_grants.sql": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+    "0004_storage_contract_hardening.sql": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a"
+  },
+  "schema": "canonical_evidence"
+}

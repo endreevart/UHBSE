@@ -1,0 +1,1149 @@
+classified_at: '2026-07-31T21:31:46.743195+00:00'
+application_schemas:
+- magerya_api
+table_roles:
+- schema: magerya_api
+  relation: account_contractor
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_doctor
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_doctorbranch
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_doctorcertificateimage
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_doctorfeedback
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_employee
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_methodologistpatientsession
+  kind: table
+  role: TECHNICAL
+- schema: magerya_api
+  relation: account_patient
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+- schema: magerya_api
+  relation: account_patient_wards
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_user
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_user_groups
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: account_user_user_permissions
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: appointment_appointment
+  kind: table
+  role: EVENT
+- schema: magerya_api
+  relation: appointment_appointmentrequest
+  kind: table
+  role: EVENT
+- schema: magerya_api
+  relation: appointment_callbackrequest
+  kind: table
+  role: EVENT
+- schema: magerya_api
+  relation: reference_branch
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: auth_group
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: auth_group_permissions
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: auth_permission
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: authentication_actiontoken
+  kind: table
+  role: TECHNICAL
+- schema: magerya_api
+  relation: authentication_blacklist
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: authentication_smscode
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: authentication_whitelistphone
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: authtoken_token
+  kind: table
+  role: TECHNICAL
+- schema: magerya_api
+  relation: bonus_program_bonusprofile
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: bonus_program_bonustransaction
+  kind: table
+  role: WORKFLOW
+- schema: magerya_api
+  relation: bonus_program_programsegment
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: bonus_program_segmentlocation
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: certificates_certificate
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: certificates_certificatebatch
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: certificates_certificatetransaction
+  kind: table
+  role: WORKFLOW
+- schema: magerya_api
+  relation: chat_channel
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: chat_chatroom
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: chat_chatroommember
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: chat_message
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: chat_messageadditionalinfo
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: chat_messagetemplates
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: content_clinicdocument
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: content_contentdocs
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: content_documentcategory
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: content_news
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: content_newsimage
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: content_vacancy
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: contract_contract
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: contract_estimate
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: contract_estimateitem
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: contract_refundorder
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: contract_saleorder
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: coupon_management_allowedusersrule
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: coupon_management_allowedusersrule_users
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: coupon_management_coupon
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: coupon_management_couponuser
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: coupon_management_discount
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: coupon_management_maxusesrule
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: coupon_management_ruleset
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: coupon_management_validityrule
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_appointrecommendation
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_appointrecommendation_service_prices
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_appointrecommendationresult
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_conditionsmedicines
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_diagnosis
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_diagnosis_analysis
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_diagnosis_appointment_recommendations
+  kind: table
+  role: EVENT
+- schema: magerya_api
+  relation: diagnosis_diagnosis_functional_studies
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_diagnosis_manipulations
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_diagnosis_medicines
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_diagnosis_procedures
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_diagnosis_recommendations
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_functionalstudies
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_functionalstudiesresult
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_manipulations
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_manipulationsresult
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_measurementunits
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_medicineappointments
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_medicines
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_medicines_conditions
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_medicinesform
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_procedures
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_proceduresresult
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_receptionfrequency
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_recommendation
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: diagnosis_recommendationcategory
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: django_admin_log
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: django_content_type
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: django_migrations
+  kind: table
+  role: TECHNICAL
+- schema: magerya_api
+  relation: django_session
+  kind: table
+  role: TECHNICAL
+- schema: magerya_api
+  relation: document_analysis
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_analysis_analyzes
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_analysisitem
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_analysisresult
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_analysisresultitem
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_appointmentanalysisresult
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_doctorquestion
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_doctorquestiongroup
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_doctorquestionnaire
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_doctorquestionnairetemplate
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+- schema: magerya_api
+  relation: document_document
+  kind: table
+  role: EVENT
+- schema: magerya_api
+  relation: document_document_messages
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_informationform
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_manipulationreport
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_medicalreport
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_patientquestion
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_patientquestionnaire
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_patientquestionnairetemplate
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+- schema: magerya_api
+  relation: document_procedurelist
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_procedurelist_diagnosis
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_questionnairefilledtemplate
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_recommendation
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_recommendationtemplate
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_recommendationtemplate_branches
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_recommendationtemplate_services
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_recommendationtemplatecategory
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_suggestion
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: document_unit
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: easy_thumbnails_source
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: easy_thumbnails_thumbnail
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: easy_thumbnails_thumbnaildimensions
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+- schema: magerya_api
+  relation: evotor_evotororder
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: fcm_django_fcmdevice
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: knowledge_base_article
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: knowledge_base_article_categories
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: knowledge_base_article_read_users
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: knowledge_base_articlecategory
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: knowledge_base_paragraph
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: knowledge_base_paragraphimage
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: logg_apilogentry
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: lottery_lottery
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: lottery_lotteryprizewinner
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: lottery_prize
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+- schema: magerya_api
+  relation: notification_notification
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: payment_acquiringprovider
+  kind: table
+  role: WORKFLOW
+- schema: magerya_api
+  relation: payment_payment
+  kind: table
+  role: WORKFLOW
+- schema: magerya_api
+  relation: payment_paymentitem
+  kind: table
+  role: WORKFLOW
+- schema: magerya_api
+  relation: payment_receipt
+  kind: table
+  role: WORKFLOW
+- schema: magerya_api
+  relation: payment_vat
+  kind: table
+  role: WORKFLOW
+- schema: magerya_api
+  relation: prodoctorov_prodocclaim
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: promocode_promocode
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: promocode_promocode_patients
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: promocode_promocode_service_prices
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: promocode_promocodepatient
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: promocode_promocodepatientservice
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_clinic
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_disease
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_disease_disease_types
+  kind: table
+  role: REFERENCE
+- schema: magerya_api
+  relation: reference_diseasetype
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_diseasetype_branches
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_doctorbranchoptions
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_doctorbranchservices
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_option
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_serviceprice
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_servicepricegroup
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_servicepricegroup_items
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_settings
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: reference_termsofusedocument
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: salary_directionplan
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: salary_payroll
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: schedule_doctorschedule
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: schedule_schedule
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: schedule_slot
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: statistic_stats
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: tax_refund_relationconfirmationdocument
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: tax_refund_taxapplicant
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: tax_refund_taxpayer
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: tax_refund_taxrefundapplication
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: tax_refund_taxrefundreference
+  kind: table
+  role: UNCLASSIFIED
+- schema: magerya_api
+  relation: voximplant_voximplantuser
+  kind: table
+  role: UNCLASSIFIED
+entity_types:
+  patients:
+  - schema: magerya_api
+    relation: account_patient
+    kind: table
+    role: ATTRIBUTE_CONTAINER
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches patients heuristics
+    - type: foreign_key
+      detail: magerya_api.account_doctorfeedback.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.account_methodologistpatientsession.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.account_patient.created_by_id -> magerya_api.account_employee.id
+    - type: foreign_key
+      detail: magerya_api.account_patient.user_id -> magerya_api.account_user.id
+    - type: foreign_key
+      detail: magerya_api.account_patient_wards.from_patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.account_patient_wards.to_patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.representative_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.representative_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.authentication_actiontoken.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.authentication_smscode.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.bonus_program_bonusprofile.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.certificates_certificate.purchased_by_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.certificates_certificate.received_by_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.chat_chatroom.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.chat_chatroom.representative_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.contract_contract.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.contract_estimate.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.contract_estimate.representative_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.diagnosis_appointrecommendationresult.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.diagnosis_functionalstudiesresult.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.diagnosis_manipulationsresult.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.diagnosis_medicineappointments.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.diagnosis_proceduresresult.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_analysisresult.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_document.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_informationform.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_medicalreport.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_patientquestionnaire.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_procedurelist.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_questionnairefilledtemplate.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_doctorquestionnaire.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.notification_notification.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.promocode_promocode_patients.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.promocode_promocodepatient.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.promocode_promocodepatientservice.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.tax_refund_taxpayer.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.voximplant_voximplantuser.patient_id -> magerya_api.account_patient.id
+  visits:
+  - schema: magerya_api
+    relation: appointment_appointmentrequest
+    kind: table
+    role: EVENT
+    status: CANDIDATE
+    evidence:
+    - type: column_name_pattern
+      detail: 'columns match visits heuristics: visit_type'
+    - &id001
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.appointment_id -> magerya_api.appointment_appointment.id
+    - &id002
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.branch_id -> magerya_api.reference_branch.id
+    - &id003
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.clinic_id -> magerya_api.reference_clinic.id
+    - &id004
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.contractor_id -> magerya_api.account_contractor.uid
+    - &id005
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.coupon_id -> magerya_api.coupon_management_coupon.id
+    - &id006
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.created_by_id -> magerya_api.account_employee.id
+    - &id007
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.doctor_id -> magerya_api.account_doctor.id
+    - &id008
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.manipulation_id -> magerya_api.reference_serviceprice.id
+    - &id009
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.option_id -> magerya_api.reference_option.id
+    - &id010
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.patient_id -> magerya_api.account_patient.id
+    - &id011
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.representative_id -> magerya_api.account_patient.id
+    - &id012
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.slot_id -> magerya_api.schedule_slot.id
+    - &id013
+      type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.suggestion_id -> magerya_api.document_suggestion.id
+    - &id014
+      type: foreign_key
+      detail: magerya_api.chat_message.appointment_request_id -> magerya_api.appointment_appointmentrequest.id
+    - &id015
+      type: foreign_key
+      detail: magerya_api.contract_estimateitem.appointment_request_id -> magerya_api.appointment_appointmentrequest.id
+    - &id016
+      type: foreign_key
+      detail: magerya_api.notification_notification.appointment_request_id -> magerya_api.appointment_appointmentrequest.id
+    - &id017
+      type: foreign_key
+      detail: magerya_api.payment_payment.appointment_request_id -> magerya_api.appointment_appointmentrequest.id
+    - &id018
+      type: foreign_key
+      detail: magerya_api.prodoctorov_prodocclaim.appointment_request_id -> magerya_api.appointment_appointmentrequest.id
+    - &id019
+      type: foreign_key
+      detail: magerya_api.promocode_promocodepatientservice.appointment_request_id
+        -> magerya_api.appointment_appointmentrequest.id
+  doctors: []
+  specialties: []
+  laboratory_results: []
+  diagnoses: []
+  prescriptions: []
+  medications: []
+  procedures: []
+  ultrasound_examinations: []
+  operations: []
+  medical_documents: []
+  measurements: []
+  appointments:
+  - schema: magerya_api
+    relation: appointment_appointment
+    kind: table
+    role: EVENT
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches appointments heuristics
+    - type: column_name_pattern
+      detail: 'columns match appointments heuristics: parent_appointment_id, next_appointment_date,
+        next_appointment_type'
+    - type: foreign_key
+      detail: magerya_api.appointment_appointmentrequest.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.branch_id -> magerya_api.reference_branch.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.chat_room_id -> magerya_api.chat_chatroom.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.parent_appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.parent_appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.representative_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.appointment_appointment.doctor_id -> magerya_api.account_doctor.id
+    - type: foreign_key
+      detail: magerya_api.chat_message.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_appointmentanalysisresult.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_document.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_informationform.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_manipulationreport.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_medicalreport.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_patientquestionnaire.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_procedurelist.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_doctorquestionnaire.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_recommendation.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_suggestion.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.notification_notification.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.payment_payment.appointment_id -> magerya_api.appointment_appointment.id
+  - schema: magerya_api
+    relation: appointment_appointmentrequest
+    kind: table
+    role: EVENT
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches appointments heuristics
+    - type: column_name_pattern
+      detail: 'columns match appointments heuristics: appointment_id, first_appointment'
+    - *id001
+    - *id002
+    - *id003
+    - *id004
+    - *id005
+    - *id006
+    - *id007
+    - *id008
+    - *id009
+    - *id010
+    - *id011
+    - *id012
+    - *id013
+    - *id014
+    - *id015
+    - *id016
+    - *id017
+    - *id018
+    - *id019
+  - schema: magerya_api
+    relation: appointment_callbackrequest
+    kind: table
+    role: EVENT
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches appointments heuristics
+  - schema: magerya_api
+    relation: diagnosis_diagnosis_appointment_recommendations
+    kind: table
+    role: EVENT
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches appointments heuristics
+    - type: foreign_key
+      detail: magerya_api.diagnosis_diagnosis_appointment_recommendations.appointrecommendation_id
+        -> magerya_api.diagnosis_appointrecommendation.id
+    - type: foreign_key
+      detail: magerya_api.diagnosis_diagnosis_appointment_recommendations.diagnosis_id
+        -> magerya_api.diagnosis_diagnosis.id
+  - schema: magerya_api
+    relation: document_document
+    kind: table
+    role: EVENT
+    status: CANDIDATE
+    evidence:
+    - type: column_name_pattern
+      detail: 'columns match appointments heuristics: appointment_id'
+    - type: foreign_key
+      detail: magerya_api.diagnosis_functionalstudiesresult.patient_document_id ->
+        magerya_api.document_document.id
+    - type: foreign_key
+      detail: magerya_api.document_document.appointment_id -> magerya_api.appointment_appointment.id
+    - type: foreign_key
+      detail: magerya_api.document_document.branch_id -> magerya_api.reference_branch.id
+    - type: foreign_key
+      detail: magerya_api.document_document.chat_room_id -> magerya_api.chat_chatroom.id
+    - type: foreign_key
+      detail: magerya_api.document_document.doctor_id -> magerya_api.account_doctor.id
+    - type: foreign_key
+      detail: magerya_api.document_document_messages.document_id -> magerya_api.document_document.id
+    - type: foreign_key
+      detail: magerya_api.document_document.patient_id -> magerya_api.account_patient.id
+    - type: foreign_key
+      detail: magerya_api.document_informationform.patient_document_id -> magerya_api.document_document.id
+    - type: foreign_key
+      detail: magerya_api.document_manipulationreport.patient_document_id -> magerya_api.document_document.id
+    - type: foreign_key
+      detail: magerya_api.document_medicalreport.patient_document_id -> magerya_api.document_document.id
+    - type: foreign_key
+      detail: magerya_api.document_procedurelist.patient_document_id -> magerya_api.document_document.id
+infrastructure_inventory:
+- schema: magerya_api
+  relation: account_methodologistpatientsession
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: magerya_api
+  relation: authentication_actiontoken
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: magerya_api
+  relation: authtoken_token
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: magerya_api
+  relation: django_migrations
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: magerya_api
+  relation: django_session
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+role_classified_relations:
+- schema: magerya_api
+  relation: bonus_program_bonustransaction
+  kind: table
+  role: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: certificates_certificatetransaction
+  kind: table
+  role: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: document_doctorquestionnairetemplate
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  status: ATTRIBUTE_CONTAINER
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: document_patientquestionnairetemplate
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  status: ATTRIBUTE_CONTAINER
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: easy_thumbnails_thumbnaildimensions
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  status: ATTRIBUTE_CONTAINER
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: lottery_prize
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  status: ATTRIBUTE_CONTAINER
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: payment_acquiringprovider
+  kind: table
+  role: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: payment_payment
+  kind: table
+  role: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: payment_paymentitem
+  kind: table
+  role: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: payment_receipt
+  kind: table
+  role: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: payment_vat
+  kind: table
+  role: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: magerya_api
+  relation: reference_disease_disease_types
+  kind: table
+  role: REFERENCE
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+excluded_relations:
+- schema: magerya_api
+  relation: account_methodologistpatientsession
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name
+- schema: magerya_api
+  relation: authentication_actiontoken
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name
+- schema: magerya_api
+  relation: authtoken_token
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name
+- schema: magerya_api
+  relation: django_migrations
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name
+- schema: magerya_api
+  relation: django_session
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name

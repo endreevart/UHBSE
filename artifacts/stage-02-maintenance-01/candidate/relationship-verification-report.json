@@ -1,0 +1,168 @@
+{
+  "verified_at": "2026-08-01T16:52:05.644467+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "source_a_report_status",
+      "status": "PASS",
+      "detail": "stage-01-report status='FINAL', expected FINAL"
+    },
+    {
+      "name": "stage_01_artifacts",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "name": "source_a_live_extraction",
+      "status": "PASS",
+      "detail": "extraction_method=live_readonly_profile"
+    },
+    {
+      "name": "source_a_audit_user",
+      "status": "PASS",
+      "detail": "connection_user=mg_audit_ro"
+    },
+    {
+      "name": "source_a_reachable",
+      "status": "PASS",
+      "detail": "reachable=True"
+    },
+    {
+      "name": "source_a_readonly_validation",
+      "status": "PASS",
+      "detail": "readonly_validation.safe=true"
+    },
+    {
+      "name": "source_a_fingerprint_match",
+      "status": "PASS",
+      "detail": "fingerprints_match=True"
+    },
+    {
+      "name": "source_a_manifest",
+      "status": "PASS",
+      "detail": "verified 10 entries in manifest.sha256"
+    },
+    {
+      "name": "source_a_not_preliminary",
+      "status": "PASS",
+      "detail": "preliminary Stage 01 artifacts must not gate compare"
+    },
+    {
+      "name": "source_b_pass",
+      "status": "PASS",
+      "detail": "source-b-audit status=PASS"
+    },
+    {
+      "name": "source_b_manifest",
+      "status": "PASS",
+      "detail": "verified 5 entries in manifest.sha256"
+    },
+    {
+      "name": "source_b_schema-profile-kgz.json",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "source_b_entity-candidates-kgz.yaml",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "source_b_relation_graph_nodes",
+      "status": "PASS",
+      "detail": "graph_nodes=8, unique_candidate_relations=8"
+    },
+    {
+      "name": "compare_verification_report",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "name": "source_a_runtime_user",
+      "status": "PASS",
+      "detail": "current_user='mg_audit_ro', expected 'mg_audit_ro'"
+    },
+    {
+      "name": "source_b_runtime_user",
+      "status": "PASS",
+      "detail": "current_user='kgz_audit_ro', expected 'kgz_audit_ro'"
+    },
+    {
+      "name": "relationship_manifest",
+      "status": "PASS",
+      "detail": "verified 8 entries in relationship-manifest.sha256"
+    },
+    {
+      "name": "raw_databases_unchanged",
+      "status": "PASS",
+      "detail": "row-count fingerprints identical before/after assessment"
+    },
+    {
+      "name": "artifact_safety",
+      "status": "PASS",
+      "detail": "no PII/HMAC leaks"
+    },
+    {
+      "name": "no_linkage_proven",
+      "status": "PASS",
+      "detail": "identity_verdict=POTENTIAL_OVERLAP"
+    },
+    {
+      "name": "subject_root_verdicts_present",
+      "status": "PASS",
+      "detail": "source_a=SUBJECT_ROOT_CONFIRMED, source_b=SUBJECT_ROOT_CANDIDATE"
+    },
+    {
+      "name": "source_relationship_verdict_present",
+      "status": "PASS",
+      "detail": "SAME_DOMAIN_DIFFERENT_SYSTEMS"
+    },
+    {
+      "name": "population_overlap_not_extrapolated",
+      "status": "PASS",
+      "detail": "Source A phone coverage is 0.7%; missingness cannot be assumed random; only 22 consistent dual-identifier subject pairs — insufficient for population extrapolation"
+    },
+    {
+      "name": "infrastructure_excluded_from_application_similarity",
+      "status": "PASS",
+      "detail": "application vs infrastructure relation counts are separated"
+    },
+    {
+      "name": "identifier_matches_not_labeled_subject_matches",
+      "status": "PASS",
+      "detail": "overlap uses identifier-level naming"
+    },
+    {
+      "name": "subjects_without_any_strong_identifier_per_source",
+      "status": "PASS",
+      "detail": "missing strong identifiers reported separately per source"
+    },
+    {
+      "name": "conflict_definition_present",
+      "status": "PASS",
+      "detail": "conflict_definition block present in identity assessment"
+    },
+    {
+      "name": "supporting_evidence_no_population_extrapolation",
+      "status": "PASS",
+      "detail": "supporting evidence avoids population percentage extrapolation"
+    },
+    {
+      "name": "hmac_key_metadata",
+      "status": "PASS",
+      "detail": "HMAC key metadata uses runtime-only fields"
+    }
+  ],
+  "summary": {
+    "subject_root_a_verdict": "SUBJECT_ROOT_CONFIRMED",
+    "subject_root_b_verdict": "SUBJECT_ROOT_CANDIDATE",
+    "identity_verdict": "POTENTIAL_OVERLAP",
+    "source_relationship_verdict": "SAME_DOMAIN_DIFFERENT_SYSTEMS",
+    "population_overlap_estimate_status": "NOT_ESTIMABLE"
+  },
+  "unresolved_questions": [
+    "Whether systems ever shared a deployment or data export path",
+    "Exact laboratory result representation equivalence (header/value split differs)",
+    "Source B patient root resolves via shared users table; staff/patient separation unclear"
+  ]
+}

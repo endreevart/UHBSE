@@ -1,0 +1,130 @@
+stage: "03"
+phase: implementation
+changeset: stage-03-implementation-changeset-01
+title: Required Shape and Meaning of the Contracts That Unblock the First Live Load
+document_version: "0.2"
+introduced_in: "0.2.2"
+revised_in: "0.2.3"
+
+purpose: >
+  This is a schema, not a contract. It states exactly what an accepted artifact must contain
+  before the pre-live-load gate will consider a blocker resolved. No contract instance exists
+  yet, which is why both contract blockers remain OPEN. Writing one here would close a blocker
+  by self-assertion, so this changeset deliberately does not — and from v0.2.3 the changeset
+  directory is structurally forbidden as a contract source anyway.
+
+authority: artifacts/stage-03-implementation-changeset-01/contract-authority-policy.yaml
+validator: src/human_simulator/stage03/live_load_contracts.py
+
+why_this_exists: >
+  Changeset 01 v0.2 decided resolution by searching accepted artifacts for words. Any file
+  containing "hash" proved subject-key opacity, and any file mentioning "SET ROLE" proved a
+  loader runtime principal existed. v0.2.2 replaced that with field-completeness checks, which
+  still let a value be well-formed and wrong: an algorithm named "not-hmac-sha256" passed a
+  substring test for "hmac-sha256", and "SET ROLE postgres" satisfied a check for "SET ROLE".
+  v0.2.3 validates what the values mean.
+
+placeholder_values_rejected:
+  reason: >
+    A field whose value is TBD, TODO, none, unknown, unspecified, pending, latest or empty is not
+    an answer. The validator treats these as missing.
+  examples: ["", "TBD", "TODO", "none", "null", "n/a", "unknown", "unspecified", "pending", "latest", "current", "placeholder"]
+
+secret_reference_schemes:
+  accepted: ["vault://", "aws-secretsmanager://", "gcp-secretmanager://", "azure-keyvault://", "k8s-secret://"]
+  rejected: >
+    Any literal value, any bare string, and anything shaped like key material. A credential
+    field must point at a secret store, never carry the secret.
+
+contracts:
+  - key: subject_key_transformation_contract
+    resolves_blocker: source_subject_key_opacity_undefined
+    authoritative_path: artifacts/stage-03/canonical-id-contract.yaml
+    required_fields:
+      - name: transformation_id
+        meaning: the transformation the record construction contract references
+        must_equal: subject_key_from_id
+      - name: algorithm
+        meaning: the keyed pseudorandom function
+        matching: exact equality against a canonical identifier, never substring containment
+        accepted: [hmac-sha256, hmac-sha-256, hmac-sha384, hmac-sha-384, hmac-sha512, hmac-sha-512, hmac-sha3-256, hmac-sha3-512, kmac128, kmac256, keyed-blake2b, keyed-blake2s]
+        rejected_examples: [sha256, sha-512, md5, hash, digest, HMAC, not-hmac-sha256, fake-hmac-sha256, hmac-sha256-unkeyed]
+      - name: key_reference
+        meaning: a secret-store reference; a literal key or arbitrary string is a failure
+      - name: key_version
+        meaning: a comparable version so a rotation is detectable
+        format: "v1, 1, 1.2 or an ISO date"
+      - name: namespace
+        meaning: a compact domain separator without whitespace, preventing cross-source collision
+      - name: input_encoding
+        meaning: unambiguous encoding of the source value before keying
+        accepted: [utf8-decimal-string, utf8-canonical-string, utf8-nfc-string, big-endian-int64, big-endian-int32]
+        rejected: prose, because two encodings of one id produce two different keys
+      - name: output_encoding
+        accepted: [base32-nopad, base64url-nopad, hex-lowercase, hex-uppercase]
+      - name: rotation_policy
+        shape: mapping
+        required_subfields: [interval, procedure, prior_key_handling]
+      - name: collision_handling
+        meaning: what the loader does when two distinct source values map to one key
+        accepted_actions: [abort, quarantine, abort-and-quarantine, quarantine-and-abort, reject]
+        rejected_actions: [ignore, continue, overwrite, skip, log-and-continue, warn, retry, merge]
+        reason: >
+          Two distinct subjects sharing one key must stop the load. Any action that lets it
+          continue hides the collision permanently.
+    why_a_bare_digest_is_insufficient: >
+      account_patient.id is a bounded integer space. An unkeyed digest of it is reversible by
+      exhaustive search in negligible time, so it cannot make source_subject_key opaque.
+    words_that_do_not_resolve_this_blocker: [hash, opaque, pseudonym, digest, tokenised, anonymised]
+
+  - key: canonical_loader_runtime_contract
+    resolves_blocker: canonical_loader_runtime_principal_undefined
+    authoritative_path: artifacts/stage-03-implementation/security-runtime-plan.yaml
+    required_fields:
+      - name: login_principal
+        meaning: the named account that authenticates
+        must_not_equal: canonical_loader
+        format: a valid unquoted PostgreSQL identifier
+        rejected: [postgres, root, admin]
+      - name: group_role
+        must_equal: canonical_loader
+      - name: group_role_is_nologin
+        must_equal: true
+        reason: migration 0001 creates canonical_loader NOLOGIN and that must stay so
+      - name: credential_source_reference
+        meaning: a secret-store reference; a literal credential is a failure
+      - name: connection_path
+        meaning: the permitted network path and endpoint for the loader session
+      - name: set_role_flow
+        meaning: the exact statement sequence
+        must_contain: SET ROLE canonical_loader
+        rejected: >
+          any SET ROLE naming another role, including SET ROLE postgres, and any prose that
+          mentions SET ROLE without stating the operation
+      - name: minimal_grants
+        allowlist: [SELECT, INSERT, USAGE]
+        forbidden: [ALL, ALL PRIVILEGES, SUPERUSER, CREATEDB, CREATEROLE, BYPASSRLS, REPLICATION, UPDATE, DELETE, TRUNCATE, CREATE, DROP, REFERENCES, TRIGGER]
+      - name: audit_identity
+        must_reference: session_user
+        and_must_name: the login_principal value
+        reason: >
+          Without session_user, an action taken under the group role cannot be attributed to the
+          principal that performed it.
+      - name: rotation_and_revocation_procedure
+        shape: mapping
+        required_subfields: [rotation, revocation]
+        revocation_must_state_an_action: [REVOKE, DROP ROLE, "ALTER ROLE ... NOLOGIN", disabling the credential]
+    words_that_do_not_resolve_this_blocker: ["SET ROLE mentioned in prose", "runtime_principal: TBD", "credential_source with an empty value"]
+
+conflict_derived_blockers:
+  source: artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml
+  rule: >
+    Every conflict with severity BLOCKS_LIVE_LOAD and status OPEN becomes a gate FAIL check
+    automatically. There is no second, hand-maintained list to keep in step, so recording a
+    conflict is sufficient to block the first live load.
+  registry_validity_is_its_own_check: accepted_artifact_conflict_registry_valid
+
+gate: stage02_relationship_integrity_pre_live_load
+gate_is_read_only: true
+contract_instances_created_by_this_changeset: 0
+blockers_resolved_by_this_changeset: 0

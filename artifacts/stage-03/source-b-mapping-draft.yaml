@@ -1,0 +1,486 @@
+stage: "03"
+phase: design
+source_system: kgz_raw
+source_label: Source B
+draft_version: "0.6.0"
+schema_profile: artifacts/stage-02/schema-profile-kgz.json
+
+catalog_mappings:
+  - source_relation: quest_digital.analyses_catalog
+    source_column: id
+    canonical_entity: Concept
+    canonical_field: source_concept_key
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: catalog_key
+    evidence: FK from analyses_constructor.catalog_id
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: required
+  - source_relation: quest_digital.analyses_catalog
+    source_column: name_ru
+    canonical_entity: Concept
+    canonical_field: display_name
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: copy_text
+    evidence: catalog display column
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_catalog
+    source_column: code
+    canonical_entity: Concept
+    canonical_field: raw_code
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: copy_text
+    evidence: catalog code column
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: nullable
+
+mappings:
+  - source_relation: public.persons
+    source_column: id
+    canonical_entity: Subject
+    canonical_field: source_subject_key
+    mapping_status: NOT_MAPPED
+    data_level: UNKNOWN
+    transformation: defer
+    evidence: persons_hypothesis_verdict=NO_SUBJECT_ROOT; table empty (0 rows)
+    unresolved_reason: patients:None->public.persons
+    lossiness: empty_table_no_subject_root
+    nullable_decision: required
+  - source_relation: public.users
+    source_column: id
+    canonical_entity: Subject
+    canonical_field: source_subject_key
+    mapping_status: HYPOTHESIS
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: subject_key_from_users
+    evidence: consultations.patient_id has 100% coverage of users.id; SUBJECT_ROOT_CANDIDATE path
+    unresolved_reason: users multi-role container; staff/patient separation unclear
+    lossiness: role_ambiguity
+    nullable_decision: required
+  - source_relation: public.users
+    source_column: id
+    canonical_entity: Provider
+    canonical_field: source_provider_key
+    mapping_status: HYPOTHESIS
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: provider_key_from_users
+    evidence: consultations.doctor_id references users; is_doctor flag present but not confirmed sole role
+    unresolved_reason: users multi-role; provider role not exclusively confirmed
+    lossiness: dual_role_same_table
+    nullable_decision: required
+  - source_relation: public.consultations
+    source_column: id
+    canonical_entity: Encounter
+    canonical_field: encounter_id
+    mapping_status: HYPOTHESIS
+    data_level: PATIENT_EVENT
+    transformation: encounter_key_from_id
+    evidence: Stage 02 visits crosswalk hypothesis
+    unresolved_reason: visits:magerya_api.appointment_appointment->public.consultations
+    lossiness: consultation_vs_appointment_semantic_gap
+    nullable_decision: required
+  - source_relation: public.consultations
+    source_column: patient_id
+    canonical_entity: Encounter
+    canonical_field: subject_id
+    mapping_status: HYPOTHESIS
+    data_level: PATIENT_EVENT
+    transformation: fk_to_subject_via_users
+    evidence: schema-profile patient_id; 100% coverage users.id
+    unresolved_reason: subject resolution via multi-role users
+    lossiness: subject_resolution_ambiguous
+    nullable_decision: required
+  - source_relation: public.consultations
+    source_column: doctor_id
+    canonical_entity: Encounter
+    canonical_field: provider_id
+    mapping_status: HYPOTHESIS
+    data_level: PATIENT_EVENT
+    transformation: fk_to_provider_via_users
+    evidence: schema-profile doctor_id
+    unresolved_reason: provider role via multi-role users
+    lossiness: provider_resolution_ambiguous
+    nullable_decision: nullable
+  - source_relation: public.consultations
+    source_columns: [date, time]
+    canonical_entity: Encounter
+    canonical_field: occurred_at
+    mapping_status: HYPOTHESIS
+    data_level: PATIENT_EVENT
+    transformation: combine_date_time
+    combination_rule: combine_date_time
+    record_group: source_b_consultations_encounter
+    evidence: separate date and time columns in schema profile
+    unresolved_reason: clinical occurrence semantics unconfirmed
+    lossiness: timezone_and_duration_unknown
+    nullable_decision: nullable
+  - source_relation: public.consultations
+    source_column: created_at
+    canonical_entity: Encounter
+    canonical_field: recorded_at
+    mapping_status: CANDIDATE
+    data_level: PATIENT_EVENT
+    transformation: copy_system_timestamp
+    evidence: schema-profile created_at
+    lossiness: system_time_not_clinical_occurrence
+    nullable_decision: required
+  - source_relation: public.consultations
+    source_column: success_at
+    canonical_entity: Encounter
+    canonical_field: completed_at
+    mapping_status: HYPOTHESIS
+    data_level: PATIENT_EVENT
+    transformation: copy_status_timestamp
+    evidence: success status timestamp
+    lossiness: workflow_status_not_clinical_end
+    nullable_decision: nullable
+  - source_relation: public.consultations
+    source_column: cancel_at
+    canonical_entity: Encounter
+    canonical_field: cancelled_at
+    mapping_status: CANDIDATE
+    data_level: PATIENT_EVENT
+    transformation: copy_status_timestamp
+    evidence: cancellation timestamp column
+    lossiness: none
+    nullable_decision: nullable
+  - source_relation: public.consultations
+    source_column: confirmed_at
+    canonical_entity: Encounter
+    canonical_field: confirmed_at
+    mapping_status: CANDIDATE
+    data_level: PATIENT_EVENT
+    transformation: copy_status_timestamp
+    evidence: confirmation timestamp column
+    lossiness: none
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_constructor
+    source_column: id
+    canonical_entity: ObservationComponent
+    canonical_field: component_id
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    transformation: component_key_from_id
+    evidence: Stage 02 laboratory_results crosswalk hypothesis
+    unresolved_reason: no confirmed Source B observation header table
+    lossiness: value_row_without_confirmed_header
+    nullable_decision: required
+  - source_relation: quest_digital.analyses_constructor
+    source_column: consultation_id
+    canonical_entity: ObservationComponent
+    canonical_field: observation_id
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    transformation: grouping_key_consultation
+    grouping_rule: source_b_lab_header_synthesis
+    record_group: source_b_lab_observation_header
+    evidence: FK to consultations; used in grouping rule
+    unresolved_reason: maps to synthetic Observation header key not a source row
+    lossiness: header_is_derived_not_observed
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_constructor
+    source_column: pool_id
+    canonical_entity: ObservationComponent
+    canonical_field: observation_id
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    transformation: grouping_key_pool
+    grouping_rule: source_b_lab_header_synthesis
+    record_group: source_b_lab_observation_header
+    evidence: pool_id participates in grouping rule
+    unresolved_reason: header grouping hypothesis only
+    lossiness: header_is_derived_not_observed
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_constructor
+    source_column: catalog_id
+    canonical_entity: ObservationComponent
+    canonical_field: raw_code
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    transformation: fk_to_catalog_code
+    evidence: FK to analyses_catalog
+    lossiness: code_via_catalog_join
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_constructor
+    source_column: date
+    canonical_entity: ObservationComponent
+    canonical_field: observation_id
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    transformation: grouping_key_date
+    grouping_rule: source_b_lab_header_synthesis
+    record_group: source_b_lab_observation_header
+    evidence: date used in grouping rule
+    unresolved_reason: header grouping hypothesis only
+    lossiness: header_is_derived_not_observed
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_constructor
+    source_column: value
+    canonical_entity: ObservationComponent
+    canonical_field: raw_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    transformation: copy_raw_value
+    evidence: schema-profile value column (not result)
+    unresolved_reason: equivalence to Source A analysisresultitem unproven
+    lossiness: structured_payload_may_need_parse
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_constructor
+    source_column: status
+    canonical_entity: ObservationComponent
+    canonical_field: text_value
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: copy_status
+    combination_rule: status_with_optional_extra_payload
+    record_group: source_b_analyses_constructor_component
+    evidence: schema-profile status
+    lossiness: status_vocab_unknown
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_constructor
+    source_column: extra
+    canonical_entity: ObservationComponent
+    canonical_field: text_value
+    mapping_status: UNRESOLVED
+    data_level: OBSERVATION_VALUE
+    transformation: defer_json_parse
+    combination_rule: status_with_optional_extra_payload
+    record_group: source_b_analyses_constructor_component
+    evidence: extra payload column present
+    unresolved_reason: payload schema unknown
+    lossiness: unstructured_extra
+    nullable_decision: nullable
+  - source_relation: quest_digital.analyses_constructor
+    source_column: has_result
+    canonical_entity: ObservationComponent
+    canonical_field: abnormal_flag
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    transformation: copy_boolean_flag
+    evidence: boolean result availability flag
+    lossiness: not_equivalent_to_abnormal_flag
+    nullable_decision: nullable
+  - source_relation: quest_digital.lab_result
+    source_column: id
+    canonical_entity: Observation
+    canonical_field: observation_id
+    mapping_status: UNRESOLVED
+    data_level: PAYLOAD
+    transformation: payload_blob_reference
+    evidence: Stage 02 laboratory_results B-only candidate
+    unresolved_reason: laboratory_results:None->quest_digital.lab_result
+    lossiness: payload_vs_header_role_unclear
+    nullable_decision: required
+  - source_relation: quest_digital.lab_result
+    source_column: body
+    canonical_entity: Observation
+    canonical_field: raw_value
+    mapping_status: UNRESOLVED
+    data_level: PAYLOAD
+    transformation: payload_body_copy
+    evidence: body column stores payload
+    unresolved_reason: payload structure unknown
+    lossiness: opaque_payload
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: user_id
+    canonical_entity: Subject
+    canonical_field: source_subject_key
+    mapping_status: HYPOTHESIS
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: subject_key_from_user_id
+    evidence: profilaxys_profile.user_id references public.users; users not confirmed sole subject root
+    unresolved_reason: users multi-role container; subject root hypothesis only
+    lossiness: user_id_to_subject_not_confirmed_root
+    nullable_decision: required
+  - source_relation: public.profilaxys_profile
+    source_column: id
+    canonical_entity: Observation
+    canonical_field: observation_id
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_HEADER
+    transformation: profile_row_to_observation_header
+    evidence: profilaxys_profile row as wellness measurement container
+    unresolved_reason: measurements:None->public.profilaxys_profile
+    lossiness: wellness_profile_not_confirmed_observation
+    nullable_decision: required
+  - source_relation: public.profilaxys_profile
+    source_column: birthdate
+    canonical_entity: SubjectCharacteristic
+    canonical_field: date_value
+    characteristic_code: source_birthdate
+    mapping_status: HYPOTHESIS
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: copy_date_as_characteristic
+    evidence: stable profile birthdate; not merged with users_profile birth_date
+    lossiness: source_local_birthdate_no_cross_source_overwrite
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: sex
+    canonical_entity: SubjectCharacteristic
+    canonical_field: categorical_value
+    characteristic_code: source_sex
+    mapping_status: HYPOTHESIS
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: copy_categorical_as_characteristic
+    evidence: raw sex column; not biological_sex normalization
+    lossiness: raw_sex_not_biological_sex_normalization
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: weight
+    canonical_entity: ObservationComponent
+    canonical_field: numeric_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    record_group: source_b_profilaxys_profile_observation_components
+    transformation: copy_integer_component
+    evidence: dynamic wellness indicator on profile row
+    lossiness: unit_and_clinical_semantics_unconfirmed
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: height
+    canonical_entity: ObservationComponent
+    canonical_field: numeric_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    record_group: source_b_profilaxys_profile_observation_components
+    transformation: copy_integer_component
+    evidence: dynamic wellness indicator on profile row
+    lossiness: unit_and_clinical_semantics_unconfirmed
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: pregnant
+    canonical_entity: ObservationComponent
+    canonical_field: categorical_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    record_group: source_b_profilaxys_profile_observation_components
+    transformation: copy_raw_categorical_component
+    evidence: pregnant stored as raw categorical varchar
+    lossiness: pregnancy_status_semantics_unconfirmed
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: kok
+    canonical_entity: ObservationComponent
+    canonical_field: boolean_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    record_group: source_b_profilaxys_profile_observation_components
+    transformation: copy_boolean_flag
+    evidence: boolean kok flag; not OCP use without semantic confirmation
+    lossiness: kok_not_automatic_ocp_use
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: height_decreased
+    canonical_entity: ObservationComponent
+    canonical_field: boolean_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    record_group: source_b_profilaxys_profile_observation_components
+    transformation: copy_boolean_flag
+    evidence: boolean height_decreased flag
+    lossiness: clinical_assertion_semantics_unconfirmed
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: cigarettes
+    canonical_entity: ObservationComponent
+    canonical_field: numeric_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    record_group: source_b_profilaxys_profile_observation_components
+    transformation: copy_integer_component
+    evidence: integer cigarettes column; not per-day count without documentation
+    lossiness: cigarettes_not_automatic_per_day_count
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: temperature
+    canonical_entity: ObservationComponent
+    canonical_field: numeric_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    record_group: source_b_profilaxys_profile_observation_components
+    transformation: copy_numeric_component
+    evidence: double precision temperature; unit not stored or confirmed
+    lossiness: temperature_unit_not_assigned_without_evidence
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_profile
+    source_column: sleep
+    canonical_entity: ObservationComponent
+    canonical_field: numeric_value
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_VALUE
+    record_group: source_b_profilaxys_profile_observation_components
+    transformation: copy_integer_component
+    evidence: integer sleep column; not hours without documentation
+    lossiness: sleep_not_automatic_hour_count
+    nullable_decision: nullable
+  - source_relation: public.profilaxys_analyses
+    source_column: id
+    canonical_entity: ObservationComponent
+    canonical_field: component_id
+    mapping_status: UNRESOLVED
+    data_level: OBSERVATION_VALUE
+    transformation: profilaxy_analysis_to_component
+    evidence: Stage 02 measurements candidate
+    unresolved_reason: measurements:None->public.profilaxys_analyses
+    lossiness: screenings_blob_semantics_unknown
+    nullable_decision: required
+  - source_relation: public.users_profile
+    source_column: user_id
+    canonical_entity: Subject
+    canonical_field: source_subject_key
+    mapping_status: HYPOTHESIS
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: subject_key_from_user_id
+    evidence: users_profile.user_id references public.users; users multi-role; Subject B CANDIDATE
+    unresolved_reason: measurements:None->public.users_profile
+    lossiness: user_id_to_subject_not_confirmed_root
+    nullable_decision: required
+  - source_relation: public.users_profile
+    source_column: birth_date
+    canonical_entity: SubjectCharacteristic
+    canonical_field: date_value
+    characteristic_code: source_birthdate
+    mapping_status: HYPOTHESIS
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: copy_date_as_characteristic
+    evidence: users_profile birth_date; not merged with profilaxys_profile birthdate
+    lossiness: source_local_birthdate_no_cross_source_overwrite
+    nullable_decision: nullable
+  - source_relation: public.users_profile
+    source_column: gender
+    canonical_entity: SubjectCharacteristic
+    canonical_field: categorical_value
+    characteristic_code: source_gender
+    mapping_status: HYPOTHESIS
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: copy_categorical_as_characteristic
+    evidence: users_profile gender column; not biological_sex normalization
+    lossiness: raw_gender_not_biological_sex_normalization
+    nullable_decision: nullable
+
+observation_grouping_hypothesis:
+  name: source_b_lab_header_synthesis
+  mapping_status: HYPOTHESIS
+  clinically_confirmed: false
+  rule: >
+    When no confirmed Source B observation header table exists, derive an Observation
+    header key from source-local subject_id + consultation_id or pool_id + observation date;
+    each analyses_constructor row maps to ObservationComponent; grouping is structural
+    hypothesis only and not clinical equivalence with Source A document_analysisresult.
+  components:
+    - subject from user_id via users
+    - consultation_id or pool_id
+    - date
+  data_levels:
+    derived_observation_header: OBSERVATION_HEADER
+    analyses_constructor_row: OBSERVATION_VALUE
+    analyses_pool: WORKFLOW
+
+notes:
+  - public.persons is NOT_MAPPED; empty table; NO_SUBJECT_ROOT
+  - consultations.patient_id used instead of nonexistent user_id column
+  - analyses_constructor.value used instead of nonexistent result column

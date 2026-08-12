@@ -1,0 +1,27 @@
+{
+  "accepted_archive_sha256": null,
+  "accepted_archive_sha256_recorded": false,
+  "archive": "stage-03-design-v0.7.4-review.zip",
+  "archive_present": true,
+  "archive_sha256": "20368132847e291595cf38550bdef9141a74f49967c21c88f66369bc7b718fa9",
+  "archive_source": "artifacts/external-review/stage-03-design-v0.7.4-review.zip",
+  "audited_bytes_recovered_from": [
+    "stage-03-implementation-changeset-01-v0.1-review.zip",
+    "stage-03-implementation-plan-v0.3.4-review.zip"
+  ],
+  "audited_design_evidence_sha256": {
+    "stage-03-design-report.md": "6f30b6aaa25a2efa9a6ead3ab7f76563fa688f1f61d94818c2562015d70a6785",
+    "stage-03-design-verification.json": "ae4a426aa5cb44e03cf509afed54c917af25a2d6283486ab393ae19159f8254c"
+  },
+  "claim": "The archive present now, SHA-256 20368132847e291595cf38550bdef9141a74f49967c21c88f66369bc7b718fa9, does not carry the audited Design evidence bytes. This is a statement about this artifact only.",
+  "embedded_design_evidence_sha256": {
+    "stage-03-design-report.md": "b748d07810fba253f204ae9bfcad4e59c081566df62aa647c2026f51fd8c4c67",
+    "stage-03-design-verification.json": "df91f0b8127db60d901e3a0b7050540f5192725bae282bf7129bb53a22356b5f"
+  },
+  "embedded_matches_audited": false,
+  "finding_id": "design_v0_7_4_archive_evidence_mismatch",
+  "historical_corruption_claimed": false,
+  "republishing_design_archive": "out of scope; Design v0.7.4 is a frozen input",
+  "status": "REPRODUCED_CURRENT_ARTIFACT",
+  "why_no_historical_claim": "No sidecar was ever published for this archive, so no accepted hash exists for it. What the archive contained at first publication therefore cannot be established, and this finding does not assert it."
+}

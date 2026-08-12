@@ -1,0 +1,137 @@
+stage: "03"
+phase: design
+title: Canonical ID Contract
+document_version: "0.7.5"
+id_namespace_version: "0.7.0"
+version: "0.7.5"
+contract_kind: design_only_not_implementation
+
+purpose: >
+  Single authoritative specification for deterministic canonical identifiers.
+  Secrets never appear in design artifacts; only key_version/key_reference are stored.
+  document_version tracks the design artifact revision; id_namespace_version is the
+  stable canonical ID namespace used in domain separation and must not change when
+  only document_version is bumped.
+
+canonical_id_contract:
+  algorithm: HMAC-SHA256
+  secret_storage: runtime_only
+  forbidden_in_artifacts:
+    - secret
+    - key_material
+    - hmac_secret
+    - env_file
+  key_version:
+    field: key_version
+    key_reference: canonical_id_key_v1
+    rotation: versioned_migration_only
+  domain_separation:
+    format: "{entity}|{id_namespace_version}|{source_system}"
+    encoding: UTF-8
+    id_namespace_version_field: id_namespace_version
+  message_layout: >
+    length_prefix(domain) || length_prefix(input_1) || ... || length_prefix(input_n)
+  input_fields:
+    order: strict_declared_order
+    encoding: UTF-8
+    serialization: length_prefix_utf8
+    length_prefix_bytes: 4
+    length_prefix_byteorder: big
+    null_encoding: length_prefix_null_sentinel
+    null_sentinel_length_prefix: "0xFFFFFFFF"
+    empty_string_encoding: length_prefix_zero_bytes
+    array_form: forbidden_use_length_prefix_sequence
+  output_encoding: hex
+  identity_rule_binding:
+    contract_reference: canonical_id_contract_v0.7.5
+    required_identity_fields:
+      - algorithm
+      - contract
+      - key_reference
+      - inputs
+  forbidden_algorithms:
+    - random_uuid
+    - uuid4
+    - uuid
+    - auto_increment
+    - cross_source_shared_id
+    - hmac_sha256
+  forbidden_patterns:
+    - shared_id_across_source_systems
+    - nondeterministic_uuid
+
+key_rotation:
+  design_only_not_implementation: true
+  key_version_storage:
+    - provenance.key_version
+    - canonical_record_metadata.key_version
+  runtime_secret_rotation:
+    rule: >
+      Changing the runtime HMAC secret while key_version remains unchanged is forbidden.
+      A new secret produces different canonical IDs and requires key_version increment
+      plus an explicit versioned migration/re-key operation.
+    forbidden:
+      - secret_change_without_key_version_bump
+      - silent_rekey_on_secret_rotation
+      - claiming_same_key_version_after_secret_rotation
+  versioned_migration:
+    rule: ID namespace changes require explicit key_version increment and migration operation
+    parent_child_consistency: parent and child references must share one key_version namespace per link
+  concurrent_key_versions:
+    rule: During migration window, readers resolve IDs using provenance.key_version
+    resolution: lookup_by_key_version_then_hmac_inputs
+    forbidden: cross_version_implicit_merge
+
+subject_key_transformation_contract:
+  transformation_id: subject_key_from_id
+  algorithm: hmac-sha256
+  key_version: v1
+  namespace: magerya_api.account_patient
+  input_encoding: utf8-decimal-string
+  output_encoding: base32-nopad
+  rotation_policy:
+    interval: P365D
+    procedure: increment key_version and re-key on full reload after secret rotation
+    prior_key_handling: retain read-only for lineage verification; never delete prior versions
+  collision_handling:
+    action: abort
+    detail: abort the load and quarantine colliding source records for review
+  key_reference_decision:
+    status: DECISION_REQUIRED_SECRET_PROVIDER
+    decision_artifact: artifacts/stage-03-alignment-candidate/decision-required-secret-provider.yaml
+    blocker: source_subject_key_opacity_undefined
+    note: >
+      No accepted pilot secret-store provider is configured. key_reference must name a
+      vault://, aws-secretsmanager://, gcp-secretmanager://, azure-keyvault:// or
+      k8s-secret:// reference once a provider is selected. runtime_environment_file_outside_git
+      is dev-only HMAC injection and is not an accepted secret-store scheme for live load.
+
+test_vectors:
+  note: >
+    Artificial key and IDs only; never use production secrets or patient identifiers.
+    Vectors validate the active id_namespace_version, independent of document_version bumps.
+  artificial_key_hex: "000102030405060708090a0b0c0d0e0f"
+  key_reference: canonical_id_key_v1
+  id_namespace_version: "0.7.0"
+  encoding_checks:
+    null_length_prefix_hex: "ffffffff"
+    empty_string_length_prefix_hex: "00000000"
+    null_not_equal_empty: true
+  vectors:
+    - name: subject_artificial
+      entity: Subject
+      source_system: test_source
+      inputs: [magerya_api, account_patient, "42", subject]
+      expected_hex: "9421d3452438ec2e0215dbc5b1718ed524eba6bfa553bbb7e32cae58c31db198"
+    - name: encounter_artificial
+      entity: Encounter
+      source_system: test_source
+      inputs: [magerya_api, appointment_appointment, "99", encounter]
+      expected_hex: "0e5b4e6d1ee9a102d0a57044c95a294fac7e375ccd474cbe9dc768342a0c7fab"
+    - name: observation_artificial
+      entity: Observation
+      source_system: test_source
+      inputs: [magerya_api, document_analysisresult, "7", observation]
+      expected_hex: "5e38fb4c418f107fe39d1b3283854172f3425f70904acd30af13597100d47c7d"
+
+implementation_status: not_started

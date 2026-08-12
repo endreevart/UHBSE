@@ -1,4 +1,6 @@
 import type { Dict } from "./en";
+import { status } from "../status/zh"
+import type { StatusContent } from "../status/types"
 
 export const zh: Dict = {
   meta: {
@@ -14,10 +16,11 @@ export const zh: Dict = {
     partners: "合作",
     cta: "加入研究网络",
     language: "语言",
+    ariaLabel: "主导航",
   },
 
   hero: {
-    titleA: "医学已学会观察人体。",
+    titleA: "医学已学会观察人体这一有机整体。",
     titleB: "现在，它必须学会仿真人体。",
     lead: "UHBSE 是一个人体生物学仿真引擎，用于建模个体生物状态在药物、补充剂、营养与身体活动作用下可能发生的变化。",
     sub: "基于真实临床证据构建。围绕不确定性设计。面向临床应用之前的研究。",
@@ -347,20 +350,7 @@ export const zh: Dict = {
     ],
   },
 
-  status: {
-    kicker: "现状",
-    title: "UHBSE 目前处于研究与基础设施建设阶段。",
-    lead: "这是一项在建的研究技术，而非可供临床使用的产品。",
-    items: [
-      "接入多个临床数据源",
-      "纵向数据分析",
-      "生物事件的规范化模型",
-      "独立的循证状态数据库",
-      "可复现的数据溯源架构",
-      "首个有限研究试点的准备工作",
-    ],
-    dataNote: "来自参与医疗机构的纵向临床数据。",
-  },
+  status: status satisfies StatusContent,
 
   partners: {
     kicker: "合作",
@@ -392,6 +382,7 @@ export const zh: Dict = {
 
   manifesto: {
     kicker: "宣言",
+    title: "我们在构建医学尚未拥有的那一层：仿真层。",
     l1: "人体不是一份静态的病历。",
     l2: "它是一个在成千上万的变量、干预与时刻中不断变化的生物系统。",
     l3: "数十年来，医学记录下的只是这种变化的碎片。",

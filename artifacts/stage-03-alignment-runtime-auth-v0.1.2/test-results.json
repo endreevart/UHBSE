@@ -1,0 +1,28 @@
+{
+  "document_version": "0.1.2",
+  "unit_static_suite": {
+    "exit_code": 0,
+    "passed": 23,
+    "failed": 0,
+    "command": "pytest -q --noconftest tests/test_runtime_auth_v012_unit.py tests/test_runtime_auth_v012_publication.py",
+    "passed_status": true
+  },
+  "publisher_side_clean_extraction_verifier": {
+    "kind": "publisher_side_clean_extraction_verifier",
+    "not_extracted_bundle_suite": true,
+    "manifest_ok_before_mutation": true,
+    "manifest_fails_after_content_mutation": true,
+    "passed": true
+  },
+  "extracted_bundle_suite": {
+    "status": "DEFERRED_UNTIL_AFTER_ZIP",
+    "note": "Suite from extracted review bundle runs after atomic pack; recorded in attestation"
+  },
+  "live_agent_suite": {
+    "passed_status": true,
+    "overall_status": "PASS",
+    "runtime_contract": "PARTIAL_RUNTIME_VERIFIED",
+    "command": "python3.12 -m human_simulator.stage03_alignment.run_runtime_auth_v012"
+  },
+  "suites_passed": true
+}

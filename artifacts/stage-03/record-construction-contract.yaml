@@ -1,0 +1,1033 @@
+stage: "03"
+phase: design
+title: Canonical Record Construction Contract
+version: "0.7.5"
+contract_kind: design_only_not_implementation
+canonical_id_contract_ref: canonical-id-contract.yaml
+
+purpose: >
+  Define deterministic rules for constructing complete canonical evidence records
+  from source rows. Field mappings alone are insufficient; this contract closes
+  the gap between mapping drafts and fully populated canonical entities.
+
+global_rules:
+  canonical_record_from_source_row:
+    rule: Each construction group specifies how one source row (or filtered subset)
+      materializes one or more canonical records of a target entity.
+  deterministic_canonical_ids:
+    rule: Primary keys use canonical_id_contract HMAC-SHA256 with domain separation
+    contract: canonical-id-contract.yaml
+    forbidden: random UUIDs, auto-increment assumptions, cross-source shared IDs
+  source_local_subject_resolution:
+    rule: subject_id always resolves to a source-local Subject; no cross-source merge
+  generated_fields:
+    rule: Document algorithm for each generated canonical field (IDs, keys)
+  constant_fields:
+    rule: Document fixed values (data_level, null clinical times, provenance profile)
+  field_mappings:
+    rule: Link source columns to canonical fields with typed value selection
+  parent_child_relationships:
+    rule: Child records reference parent IDs produced in the same or parent construction group
+  wide_to_long_transformations:
+    rule: One source row may fan out to multiple child records (characteristics, components)
+  null_emission_policy:
+    rule: When source value is null, canonical record or component is not emitted
+    forbidden: [empty_string_substitution, zero_substitution, false_substitution, placeholder_values]
+  target_field_collision_policy:
+    rule: Multiple source columns mapping to one canonical field require explicit
+      combination_rule, precedence_rule, grouping_rule, or target_collision_rule
+    forbidden: silent_last_write_wins
+    record_group_alone_insufficient: true
+  timestamp_precedence:
+    rule: System timestamps use documented coalesce/precedence; clinical times remain null when absent
+  provenance_population:
+    rule: SOURCE_BACKED records include algorithms for all required provenance fields
+  raw_value_serialization:
+    rule: lossless serialization of source value into raw_value parallel to typed fields
+  mapping_status_propagation:
+    rule: Canonical status mirrors construction group mapping_status unless overridden
+  no_cross_source_merge:
+    forbidden: [cross_source_consolidation, overwriting values from another source system]
+  subject_root_candidate_eligibility:
+    rule: public.users is multi-role SUBJECT_ROOT_CANDIDATE; Subject emission requires
+      documented patient linkage (e.g. public.consultations.patient_id)
+    forbidden: [row_filter_always, is_doctor_false_as_patient_proof, emit_all_users]
+  source_record_emission:
+    rule: >
+      Emit exactly one SourceRecord per source row that participates in a pilot
+      construction group. SourceRecord must be created before any dependent canonical
+      evidence record from the same source row. Locator uses HMAC per canonical-id-contract;
+      raw source primary key must not be stored as an open value.
+    locator: hmac_locator_canonical_id_contract
+    raw_primary_key_open_storage: forbidden
+    load_order: before_dependent_evidence_records
+
+x-source-backed-provenance: &source_backed_provenance
+  profile: SOURCE_BACKED
+  algorithms:
+    record_origin: constant_OBSERVED
+    source_system: from_group.source_system
+    source_schema: split_source_relation_schema
+    source_relation: from_group.source_relation
+    source_record_locator: hmac_locator_canonical_id_contract
+    transformation_id: stage03_mapping_pipeline
+    transformation_version: "0.7.4"
+    transformed_at: runtime_iso8601_utc
+    input_artifact_sha256: design_content_manifest_sha256
+    confidence: mapping_status_to_confidence_band
+    mapping_status: from_group.mapping_status
+
+construction_groups:
+
+  - group_id: source_a_source_record_account_patient
+    source_system: magerya_api
+    source_relation: magerya_api.account_patient
+    source_primary_key: id
+    target_entity: SourceRecord
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      source_record_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, source_record]
+      source_record_locator:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, locator]
+    generated_fields:
+      source_record_id: identity_rule.source_record_id
+      source_record_locator: identity_rule.source_record_locator
+    constant_fields:
+      source_schema: magerya_api
+      source_relation: account_patient
+      locator_scheme: deterministic_hmac_locator
+      locator_key_version: from_runtime_key_version
+    mapped_fields:
+      - source_column: created
+        canonical_field: source_created_at
+        emit_when: source_non_null
+      - source_column: modified
+        canonical_field: source_updated_at
+        emit_when: source_non_null
+    subject_resolution: not_applicable
+    relationship_fields:
+      source_system_id:
+        source: SourceSystem.source_system_id
+        pilot_value: magerya_api
+    null_policy:
+      emit_record: true
+    collision_policy: none
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    mapping_status: CANDIDATE
+    implementation_status: not_started
+
+  - group_id: source_a_source_record_appointment
+    source_system: magerya_api
+    source_relation: magerya_api.appointment_appointment
+    source_primary_key: id
+    target_entity: SourceRecord
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      source_record_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, source_record]
+      source_record_locator:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, locator]
+    generated_fields:
+      source_record_id: identity_rule.source_record_id
+      source_record_locator: identity_rule.source_record_locator
+    constant_fields:
+      source_schema: magerya_api
+      source_relation: appointment_appointment
+      locator_scheme: deterministic_hmac_locator
+      locator_key_version: from_runtime_key_version
+    mapped_fields:
+      - source_column: created
+        canonical_field: source_created_at
+        emit_when: source_non_null
+      - source_column: modified
+        canonical_field: source_updated_at
+        emit_when: source_non_null
+    subject_resolution: not_applicable
+    relationship_fields:
+      source_system_id:
+        source: SourceSystem.source_system_id
+        pilot_value: magerya_api
+    null_policy:
+      emit_record: true
+    collision_policy: none
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    mapping_status: CANDIDATE
+    implementation_status: not_started
+
+  - group_id: source_a_source_record_analysisresult
+    source_system: magerya_api
+    source_relation: magerya_api.document_analysisresult
+    source_primary_key: id
+    target_entity: SourceRecord
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      source_record_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, source_record]
+      source_record_locator:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, locator]
+    generated_fields:
+      source_record_id: identity_rule.source_record_id
+      source_record_locator: identity_rule.source_record_locator
+    constant_fields:
+      source_schema: magerya_api
+      source_relation: document_analysisresult
+      locator_scheme: deterministic_hmac_locator
+      locator_key_version: from_runtime_key_version
+    mapped_fields:
+      - source_column: created
+        canonical_field: source_created_at
+        emit_when: source_non_null
+      - source_column: modified
+        canonical_field: source_updated_at
+        emit_when: source_non_null
+    subject_resolution: not_applicable
+    relationship_fields:
+      source_system_id:
+        source: SourceSystem.source_system_id
+        pilot_value: magerya_api
+    null_policy:
+      emit_record: true
+    collision_policy: none
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    mapping_status: CANDIDATE
+    implementation_status: not_started
+
+  - group_id: source_a_source_record_analysisresultitem
+    source_system: magerya_api
+    source_relation: magerya_api.document_analysisresultitem
+    source_primary_key: id
+    target_entity: SourceRecord
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      source_record_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, source_record]
+      source_record_locator:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, locator]
+    generated_fields:
+      source_record_id: identity_rule.source_record_id
+      source_record_locator: identity_rule.source_record_locator
+    constant_fields:
+      source_schema: magerya_api
+      source_relation: document_analysisresultitem
+      locator_scheme: deterministic_hmac_locator
+      locator_key_version: from_runtime_key_version
+    mapped_fields: []
+    subject_resolution: not_applicable
+    relationship_fields:
+      source_system_id:
+        source: SourceSystem.source_system_id
+        pilot_value: magerya_api
+    null_policy:
+      emit_record: true
+    collision_policy: none
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    mapping_status: CANDIDATE
+    implementation_status: not_started
+
+  - group_id: source_a_account_patient_subject
+    source_system: magerya_api
+    source_relation: magerya_api.account_patient
+    source_primary_key: id
+    target_entity: Subject
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      subject_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, subject]
+    subject_resolution: self
+    generated_fields:
+      subject_id: identity_rule.subject_id
+    constant_fields:
+      subject_role_hint: null
+    mapped_fields:
+      - source_column: id
+        canonical_field: source_subject_key
+        transformation: subject_key_from_id
+    relationship_fields:
+      source_system_id: constant_magerya_api
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: true
+    collision_policy: none
+    mapping_status: CANDIDATE
+    implementation_status: not_started
+
+  - group_id: source_a_account_patient_characteristics
+    source_system: magerya_api
+    source_relation: magerya_api.account_patient
+    source_primary_key: id
+    target_entity: SubjectCharacteristic
+    cardinality: zero_to_many_per_row
+    row_filter: always
+    identity_rule:
+      characteristic_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, characteristic_code]
+    subject_resolution:
+      subject_id:
+        from_group: source_a_account_patient_subject
+        via_field: id
+        rule: source_local Subject from account_patient.id
+    generated_fields:
+      characteristic_id: identity_rule.characteristic_id
+    constant_fields:
+      concept_id: null
+      raw_unit: null
+      normalized_unit: null
+      effective_at: null
+      status: CANDIDATE
+    mapped_fields:
+      - source_column: birthdate
+        characteristic_code: source_birthdate
+        raw_code: birthdate
+        canonical_field: date_value
+        typed_field: date_value
+        emit_when: source_non_null
+      - source_column: sex
+        characteristic_code: source_sex
+        raw_code: sex
+        canonical_field: categorical_value
+        typed_field: categorical_value
+        emit_when: source_non_null
+        forbidden_normalization: biological_sex
+    relationship_fields:
+      subject_id: subject_resolution.subject_id
+    wide_to_long:
+      enabled: true
+      one_record_per: mapped_field_with_non_null_source
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: false_when_source_null
+      snapshot_missingness: reflected_at_evidence_state_snapshot_construction
+    collision_policy: none
+    timestamp_precedence:
+      recorded_at:
+        precedence_rule: coalesce_modified_then_created
+        sources: [modified, created]
+    raw_value_serialization: lossless_source_to_string
+    mapping_status: CANDIDATE
+    implementation_status: not_started
+
+  - group_id: source_a_appointment_encounter
+    source_system: magerya_api
+    source_relation: magerya_api.appointment_appointment
+    source_primary_key: id
+    target_entity: Encounter
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      encounter_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, encounter]
+    subject_resolution:
+      subject_id:
+        via_column: patient_id
+        subject_group: source_a_account_patient_subject
+        rule: fk patient_id to account_patient Subject
+    generated_fields:
+      encounter_id: identity_rule.encounter_id
+    constant_fields:
+      data_level: PATIENT_EVENT
+      occurred_at: null
+      encounter_type: null
+      temporal_precision: unknown
+    mapped_fields:
+      - source_column: completed_at
+        canonical_field: completed_at
+        emit_when: source_non_null
+    relationship_fields:
+      subject_id: subject_resolution.subject_id
+    deferred_fields:
+      provider_id:
+        status: DEFERRED_UNTIL_PROVIDER_CONSTRUCTION
+        reason: Provider construction group absent from Source A pilot; doctor_id not copied
+        nullable: true
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: true
+    collision_policy:
+      missingness_reason:
+        grouping_rule: encounter_missingness_evidence
+        source_columns: [next_appointment_date, chat_end_time]
+      temporal_precision:
+        constant: unknown
+        when: occurred_at_null
+    timestamp_precedence:
+      recorded_at:
+        precedence_rule: coalesce_modified_then_created
+        sources: [modified, created]
+    mapping_status: UNRESOLVED
+    implementation_status: not_started
+    implementation_blocked: false
+
+  - group_id: source_a_observation_header
+    source_system: magerya_api
+    source_relation: magerya_api.document_analysisresult
+    source_primary_key: id
+    target_entity: Observation
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      observation_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, observation]
+    subject_resolution:
+      subject_id:
+        via_column: patient_id
+        subject_group: source_a_account_patient_subject
+    generated_fields:
+      observation_id: identity_rule.observation_id
+    constant_fields:
+      data_level: OBSERVATION_HEADER
+      encounter_id: null
+      normalized_concept: null
+      normalized_unit: null
+      temporal_precision: unknown
+    mapped_fields:
+      - source_column: sampling_date
+        canonical_field: specimen_collected_at
+        emit_when: source_non_null
+      - source_column: appointment_date
+        canonical_field: observed_at
+        emit_when: source_non_null
+      - source_column: status
+        canonical_field: status
+        emit_when: source_non_null
+    relationship_fields:
+      subject_id: subject_resolution.subject_id
+    child_groups:
+      - source_a_observation_component
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: true
+    collision_policy: none
+    timestamp_precedence:
+      recorded_at:
+        precedence_rule: coalesce_created
+        sources: [created]
+    mapping_status: CANDIDATE
+    implementation_status: not_started
+
+  - group_id: source_a_observation_component
+    source_system: magerya_api
+    source_relation: magerya_api.document_analysisresultitem
+    source_primary_key: id
+    target_entity: ObservationComponent
+    cardinality: one_per_row
+    row_filter: always
+    parent_group: source_a_observation_header
+    identity_rule:
+      component_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, component]
+    subject_resolution: inherited_from_parent
+    generated_fields:
+      component_id: identity_rule.component_id
+    constant_fields:
+      raw_unit: null
+      normalized_unit: null
+      abnormal_flag: null
+    mapped_fields:
+      - source_column: name
+        raw_code: name
+        canonical_field: raw_code
+        emit_when: source_non_null
+      - source_column: value
+        raw_code: value
+        canonical_field: raw_value
+        typed_field: raw_value
+        emit_when: source_non_null
+      - source_column: unit
+        raw_code: unit
+        canonical_field: raw_unit
+        emit_when: source_non_null
+      - source_column: flag
+        raw_code: flag
+        canonical_field: abnormal_flag
+        emit_when: source_non_null
+      - source_column: note
+        raw_code: note
+        canonical_field: text_value
+        emit_when: source_non_null
+    relationship_fields:
+      observation_id: parent_group.observation_id
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: true
+    collision_policy:
+      reference_range:
+        combination_rule: structured_reference_range_from_bounds
+        source_columns: [ref_value_from, ref_value_to]
+    raw_value_serialization: lossless_source_to_string
+    mapping_status: CANDIDATE
+    implementation_status: not_started
+
+  - group_id: source_b_users_subject
+    source_system: kgz_raw
+    source_relation: public.users
+    source_primary_key: id
+    target_entity: Subject
+    cardinality: zero_or_one_per_eligible_row
+    row_filter:
+      eligibility_rule: consultations_patient_id_reference
+      type: exists_in_reference
+      reference:
+        relation: public.consultations
+        column: patient_id
+        matches_field: id
+      mapping_status: HYPOTHESIS
+      forbidden:
+        - row_filter_always
+        - is_doctor_false_as_patient_proof
+        - emit_all_users_as_subjects
+    subject_eligibility:
+      documented_patient_link: public.consultations.patient_id -> public.users.id
+      status: HYPOTHESIS
+      emit_only_when_eligible: true
+      note: is_doctor=false is not patient proof without separate documented linkage
+    identity_rule:
+      subject_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, subject]
+    subject_resolution: self
+    generated_fields:
+      subject_id: identity_rule.subject_id
+    constant_fields:
+      subject_role_hint: null
+    mapped_fields:
+      - source_column: id
+        canonical_field: source_subject_key
+    relationship_fields:
+      source_system_id: constant_kgz_raw
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: false_when_ineligible
+    collision_policy: none
+    mapping_status: HYPOTHESIS
+    implementation_status: not_started
+    implementation_blocked: false
+
+  - group_id: source_b_users_profile_characteristics
+    source_system: kgz_raw
+    source_relation: public.users_profile
+    source_primary_key: id
+    target_entity: SubjectCharacteristic
+    cardinality: zero_to_many_per_row
+    row_filter: always
+    identity_rule:
+      characteristic_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, characteristic_code]
+    subject_resolution:
+      subject_id:
+        via_column: user_id
+        subject_group: source_b_users_subject
+        require_eligible_subject: true
+        rule: resolve through users_profile.user_id only when eligible Subject exists
+    generated_fields:
+      characteristic_id: identity_rule.characteristic_id
+    constant_fields:
+      concept_id: null
+      raw_unit: null
+      normalized_unit: null
+      effective_at: null
+      status: HYPOTHESIS
+    mapped_fields:
+      - source_column: birth_date
+        characteristic_code: source_birthdate
+        raw_code: birth_date
+        canonical_field: date_value
+        typed_field: date_value
+        emit_when: source_non_null
+      - source_column: gender
+        characteristic_code: source_gender
+        raw_code: gender
+        canonical_field: categorical_value
+        typed_field: categorical_value
+        emit_when: source_non_null
+        forbidden_normalization: biological_sex
+    relationship_fields:
+      subject_id: subject_resolution.subject_id
+    wide_to_long:
+      enabled: true
+      one_record_per: mapped_field_with_non_null_source
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: false_when_source_null
+      snapshot_missingness: reflected_at_evidence_state_snapshot_construction
+    collision_policy: none
+    no_cross_source_merge:
+      forbidden_overwrite: [profilaxys_profile.birthdate, profilaxys_profile.sex]
+    timestamp_precedence:
+      recorded_at:
+        precedence_rule: coalesce_updated_at_then_created_at
+        sources: [updated_at, created_at]
+    raw_value_serialization: lossless_source_to_string
+    mapping_status: HYPOTHESIS
+    implementation_status: not_started
+
+  - group_id: source_b_profilaxys_profile_characteristics
+    source_system: kgz_raw
+    source_relation: public.profilaxys_profile
+    source_primary_key: id
+    target_entity: SubjectCharacteristic
+    cardinality: zero_to_many_per_row
+    row_filter: always
+    identity_rule:
+      characteristic_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, characteristic_code]
+    subject_resolution:
+      subject_id:
+        via_column: user_id
+        subject_group: source_b_users_subject
+        require_eligible_subject: true
+    generated_fields:
+      characteristic_id: identity_rule.characteristic_id
+    constant_fields:
+      concept_id: null
+      raw_unit: null
+      normalized_unit: null
+      effective_at: null
+      status: HYPOTHESIS
+    mapped_fields:
+      - source_column: birthdate
+        characteristic_code: source_birthdate
+        raw_code: birthdate
+        canonical_field: date_value
+        typed_field: date_value
+        emit_when: source_non_null
+      - source_column: sex
+        characteristic_code: source_sex
+        raw_code: sex
+        canonical_field: categorical_value
+        typed_field: categorical_value
+        emit_when: source_non_null
+        forbidden_normalization: biological_sex
+    relationship_fields:
+      subject_id: subject_resolution.subject_id
+    wide_to_long:
+      enabled: true
+      one_record_per: mapped_field_with_non_null_source
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: false_when_source_null
+    collision_policy: preserve_separate_from_users_profile
+    no_cross_source_merge:
+      rule: conflicting birthdate/sex values from users_profile preserved separately
+    timestamp_precedence:
+      recorded_at:
+        precedence_rule: coalesce_updated_at_then_created_at
+        sources: [updated_at, created_at]
+    raw_value_serialization: lossless_source_to_string
+    mapping_status: HYPOTHESIS
+    implementation_status: not_started
+
+  - group_id: source_b_consultations_encounter
+    source_system: kgz_raw
+    source_relation: public.consultations
+    source_primary_key: id
+    target_entity: Encounter
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      encounter_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, encounter]
+    subject_resolution:
+      subject_id:
+        via_column: patient_id
+        subject_group: source_b_users_subject
+        require_eligible_subject: true
+    generated_fields:
+      encounter_id: identity_rule.encounter_id
+    constant_fields:
+      data_level: PATIENT_EVENT
+      temporal_precision: unknown
+    mapped_fields:
+      - source_column: success_at
+        canonical_field: completed_at
+        emit_when: source_non_null
+      - source_column: cancel_at
+        canonical_field: cancelled_at
+        emit_when: source_non_null
+      - source_column: confirmed_at
+        canonical_field: confirmed_at
+        emit_when: source_non_null
+    relationship_fields:
+      subject_id: subject_resolution.subject_id
+      provider_id: via_column.doctor_id
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: true
+    collision_policy:
+      occurred_at:
+        combination_rule: combine_date_time
+        source_columns: [date, time]
+    timestamp_precedence:
+      recorded_at:
+        precedence_rule: coalesce_created_at
+        sources: [created_at]
+    mapping_status: HYPOTHESIS
+    implementation_status: not_started
+    implementation_blocked: false
+
+  - group_id: source_b_lab_observation_header
+    source_system: kgz_raw
+    source_relation: quest_digital.analyses_constructor
+    source_primary_key: id
+    target_entity: Observation
+    cardinality: derived_grouping_not_one_per_row
+    row_filter: grouping_key_present
+    identity_rule:
+      observation_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, grouping_key, user_id, consultation_id, pool_id, date]
+        note: synthetic header key from grouping rule not a single source row PK
+    subject_resolution:
+      subject_id:
+        via_column: user_id
+        subject_group: source_b_users_subject
+        require_eligible_subject: true
+    generated_fields:
+      observation_id: identity_rule.observation_id
+    constant_fields:
+      data_level: OBSERVATION_HEADER
+      raw_code: source_b_lab_synthetic_header
+      observed_at: null
+      encounter_id: null
+      temporal_precision: unknown
+    mapped_fields: []
+    relationship_fields:
+      subject_id: subject_resolution.subject_id
+    child_groups:
+      - source_b_analyses_constructor_component
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: false_when_grouping_incomplete
+    collision_policy:
+      observation_id:
+        grouping_rule: source_b_lab_header_synthesis
+        source_columns: [user_id, consultation_id, pool_id, date]
+    mapping_status: HYPOTHESIS
+    implementation_status: not_started
+    implementation_blocked: true
+    unresolved_reason: synthetic Observation header from analyses_constructor grouping; header table unconfirmed
+
+  - group_id: source_b_analyses_constructor_component
+    source_system: kgz_raw
+    source_relation: quest_digital.analyses_constructor
+    source_primary_key: id
+    target_entity: ObservationComponent
+    cardinality: one_per_row
+    row_filter: always
+    parent_group: source_b_lab_observation_header
+    identity_rule:
+      component_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, component]
+    subject_resolution: inherited_from_parent
+    generated_fields:
+      component_id: identity_rule.component_id
+    constant_fields:
+      raw_unit: null
+      normalized_unit: null
+      reference_range: null
+      abnormal_flag: null
+    mapped_fields:
+      - source_column: catalog_id
+        raw_code: catalog_id
+        canonical_field: raw_code
+        emit_when: source_non_null
+      - source_column: value
+        raw_code: value
+        canonical_field: raw_value
+        typed_field: raw_value
+        emit_when: source_non_null
+      - source_column: has_result
+        raw_code: has_result
+        canonical_field: abnormal_flag
+        emit_when: source_non_null
+    relationship_fields:
+      observation_id: parent_group.observation_id
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: true
+    collision_policy:
+      text_value:
+        combination_rule: status_with_optional_extra_payload
+        source_columns: [status, extra]
+    raw_value_serialization: lossless_source_to_string
+    mapping_status: HYPOTHESIS
+    implementation_status: not_started
+    implementation_blocked: true
+    unresolved_reason: parent lab header synthesis blocked; component semantics depend on header resolution
+
+  - group_id: source_b_profilaxys_profile_observation
+    source_system: kgz_raw
+    source_relation: public.profilaxys_profile
+    source_primary_key: id
+    target_entity: Observation
+    cardinality: one_per_row
+    row_filter: always
+    identity_rule:
+      observation_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, profile_observation]
+    subject_resolution:
+      subject_id:
+        via_column: user_id
+        subject_group: source_b_users_subject
+        require_eligible_subject: true
+    generated_fields:
+      observation_id: identity_rule.observation_id
+    constant_fields:
+      raw_code: source_profilaxys_profile
+      data_level: OBSERVATION_HEADER
+      observed_at: null
+      encounter_id: null
+      normalized_concept: null
+      normalized_unit: null
+      temporal_precision: unknown
+      status: null
+    mapped_fields: []
+    relationship_fields:
+      subject_id: subject_resolution.subject_id
+    child_groups:
+      - source_b_profilaxys_profile_observation_components
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: true
+    collision_policy:
+      recorded_at:
+        precedence_rule: coalesce_updated_at_then_created_at
+        source_columns: [updated_at, created_at]
+        priority: updated_at
+    timestamp_precedence:
+      recorded_at:
+        precedence_rule: coalesce_updated_at_then_created_at
+        sources: [updated_at, created_at]
+    mapping_status: HYPOTHESIS
+    implementation_status: not_started
+
+  - group_id: source_b_profilaxys_profile_observation_components
+    source_system: kgz_raw
+    source_relation: public.profilaxys_profile
+    source_primary_key: id
+    target_entity: ObservationComponent
+    cardinality: zero_to_many_per_row
+    row_filter: source_column_non_null
+    parent_group: source_b_profilaxys_profile_observation
+    identity_rule:
+      component_id:
+        algorithm: HMAC-SHA256
+        contract: canonical_id_contract_v0.7.5
+        key_reference: canonical_id_key_v1
+        inputs: [source_system, source_relation, source_primary_key, source_column]
+    subject_resolution: inherited_from_parent
+    generated_fields:
+      component_id: identity_rule.component_id
+    constant_fields:
+      raw_unit: null
+      normalized_unit: null
+      reference_range: null
+      abnormal_flag: null
+    mapped_fields:
+      - source_column: weight
+        raw_code: weight
+        canonical_field: numeric_value
+        typed_field: numeric_value
+        sequence_order: 1
+        forbidden: [unit_assignment_without_evidence]
+      - source_column: height
+        raw_code: height
+        canonical_field: numeric_value
+        typed_field: numeric_value
+        sequence_order: 2
+        forbidden: [unit_assignment_without_evidence]
+      - source_column: pregnant
+        raw_code: pregnant
+        canonical_field: categorical_value
+        typed_field: categorical_value
+        sequence_order: 3
+        forbidden: [normalize_to_boolean_without_documentation]
+      - source_column: kok
+        raw_code: kok
+        canonical_field: boolean_value
+        typed_field: boolean_value
+        sequence_order: 4
+        forbidden: [interpret_as_ocp]
+      - source_column: height_decreased
+        raw_code: height_decreased
+        canonical_field: boolean_value
+        typed_field: boolean_value
+        sequence_order: 5
+      - source_column: cigarettes
+        raw_code: cigarettes
+        canonical_field: numeric_value
+        typed_field: numeric_value
+        sequence_order: 6
+        forbidden: [interpret_as_per_day_count]
+      - source_column: temperature
+        raw_code: temperature
+        canonical_field: numeric_value
+        typed_field: numeric_value
+        sequence_order: 7
+        forbidden: [unit_celsius_without_evidence]
+      - source_column: sleep
+        raw_code: sleep
+        canonical_field: numeric_value
+        typed_field: numeric_value
+        sequence_order: 8
+        forbidden: [interpret_as_hours_without_documentation]
+    relationship_fields:
+      observation_id: parent_group.observation_id
+    wide_to_long:
+      enabled: true
+      one_record_per: mapped_field_with_non_null_source
+    provenance_profile: SOURCE_BACKED
+    provenance_population: *source_backed_provenance
+    null_policy:
+      emit_record: false_when_source_null
+    collision_policy: none
+    raw_value_serialization: lossless_source_to_string
+    mapping_status: HYPOTHESIS
+    implementation_status: not_started
+
+target_collision_rules:
+  - name: source_a_appointment_missingness_evidence
+    source_relation: magerya_api.appointment_appointment
+    canonical_entity: Encounter
+    canonical_field: missingness_reason
+    grouping_rule: encounter_missingness_evidence
+    source_columns: [next_appointment_date, chat_end_time]
+    record_group: source_a_appointment_encounter
+  - name: source_a_reference_range_bounds
+    source_relation: magerya_api.document_analysisresultitem
+    canonical_entity: ObservationComponent
+    canonical_field: reference_range
+    combination_rule: structured_reference_range_from_bounds
+    source_columns: [ref_value_from, ref_value_to]
+    record_group: source_a_observation_component
+  - name: source_b_consultations_occurred_at
+    source_relation: public.consultations
+    canonical_entity: Encounter
+    canonical_field: occurred_at
+    combination_rule: combine_date_time
+    source_columns: [date, time]
+    record_group: source_b_consultations_encounter
+  - name: source_b_profilaxys_recorded_at
+    source_relation: public.profilaxys_profile
+    canonical_entity: Observation
+    canonical_field: recorded_at
+    precedence_rule: coalesce_updated_at_then_created_at
+    source_columns: [updated_at, created_at]
+    priority: updated_at
+    record_group: source_b_profilaxys_profile_observation
+  - name: source_b_lab_observation_grouping
+    source_relation: quest_digital.analyses_constructor
+    canonical_entity: Observation
+    canonical_field: observation_id
+    grouping_rule: source_b_lab_header_synthesis
+    source_columns: [user_id, consultation_id, pool_id, date]
+    record_group: source_b_lab_observation_header
+  - name: source_b_analyses_constructor_text_value
+    source_relation: quest_digital.analyses_constructor
+    canonical_entity: ObservationComponent
+    canonical_field: text_value
+    combination_rule: status_with_optional_extra_payload
+    source_columns: [status, extra]
+    record_group: source_b_analyses_constructor_component
+  - name: source_b_profilaxys_component_numeric_wide_to_long
+    source_relation: public.profilaxys_profile
+    canonical_entity: ObservationComponent
+    canonical_field: numeric_value
+    grouping_rule: wide_to_long_one_record_per_source_column
+    source_columns: [weight, height, cigarettes, temperature, sleep]
+    record_group: source_b_profilaxys_profile_observation_components
+  - name: source_b_profilaxys_component_categorical_wide_to_long
+    source_relation: public.profilaxys_profile
+    canonical_entity: ObservationComponent
+    canonical_field: categorical_value
+    grouping_rule: wide_to_long_one_record_per_source_column
+    source_columns: [pregnant]
+    record_group: source_b_profilaxys_profile_observation_components
+  - name: source_b_profilaxys_component_boolean_wide_to_long
+    source_relation: public.profilaxys_profile
+    canonical_entity: ObservationComponent
+    canonical_field: boolean_value
+    grouping_rule: wide_to_long_one_record_per_source_column
+    source_columns: [kok, height_decreased]
+    record_group: source_b_profilaxys_profile_observation_components
+
+implementation_status: not_started

@@ -1,0 +1,365 @@
+{
+  "auto_restore_performed": false,
+  "changeset": "stage-03-implementation-changeset-01",
+  "changeset_version": "0.2.3",
+  "checks": {
+    "all_frozen_evidence_unchanged": true,
+    "controlled_prior_stage_file_count": true,
+    "controlled_prior_stage_files_unchanged": true,
+    "design_content_manifest_verified": true,
+    "frozen_design_report_match": true,
+    "frozen_design_verification_match": true,
+    "implementation_plan_manifest_verified": true
+  },
+  "controlled_prior_stage": {
+    "all_unchanged": true,
+    "file_count": 9,
+    "files": [
+      {
+        "accepted_sha256": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+        "current_sha256": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+        "path": "artifacts/stage-01/schema-profile.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff",
+        "current_sha256": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff",
+        "path": "artifacts/stage-01/stage-01-report.md",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a",
+        "current_sha256": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a",
+        "path": "artifacts/stage-02/verify-stage-02.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+        "current_sha256": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+        "path": "artifacts/stage-02/stage-02-report.md",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+        "current_sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+        "path": "artifacts/stage-02/stage-02-final-manifest.sha256",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "f0b93b4e6ccea2732483b66001d28368365bc8eeb197c39b302f36975a74f920",
+        "current_sha256": "f0b93b4e6ccea2732483b66001d28368365bc8eeb197c39b302f36975a74f920",
+        "path": "artifacts/stage-02/entity-crosswalk.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+        "current_sha256": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+        "path": "artifacts/stage-02/identity-linkage-assessment.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+        "current_sha256": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+        "path": "artifacts/stage-02/subject-root-analysis.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+        "current_sha256": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+        "path": "artifacts/stage-02/schema-profile-kgz.json",
+        "unchanged": true
+      }
+    ]
+  },
+  "design_baseline_version": "0.7.4",
+  "evaluated_at": "2026-08-07T14:02:25.388483+00:00",
+  "failures": [],
+  "frozen_evidence": {
+    "all_unchanged": true,
+    "automatic_restore_performed": false,
+    "changed": [],
+    "file_count": 36,
+    "files": [
+      {
+        "accepted_sha256": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+        "path": "artifacts/stage-01/schema-profile.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff",
+        "path": "artifacts/stage-01/stage-01-report.md",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "f0b93b4e6ccea2732483b66001d28368365bc8eeb197c39b302f36975a74f920",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "f0b93b4e6ccea2732483b66001d28368365bc8eeb197c39b302f36975a74f920",
+        "path": "artifacts/stage-02/entity-crosswalk.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+        "path": "artifacts/stage-02/identity-linkage-assessment.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+        "path": "artifacts/stage-02/schema-profile-kgz.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+        "path": "artifacts/stage-02/stage-02-final-manifest.sha256",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+        "path": "artifacts/stage-02/stage-02-report.md",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+        "path": "artifacts/stage-02/subject-root-analysis.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a",
+        "category": "stage_01_02_controlled",
+        "current_sha256": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a",
+        "path": "artifacts/stage-02/verify-stage-02.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "f25adefc6279b0d947daf0e4140d6cd683f37f207e849e203f53cb7b613ede6d",
+        "category": "design_content_artifact",
+        "current_sha256": "f25adefc6279b0d947daf0e4140d6cd683f37f207e849e203f53cb7b613ede6d",
+        "path": "artifacts/stage-03/canonical-id-contract.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "6d28201e8c2147a1c69b4ca46ca664ca064d6273012af889e8583ca065b937bf",
+        "category": "design_content_artifact",
+        "current_sha256": "6d28201e8c2147a1c69b4ca46ca664ca064d6273012af889e8583ca065b937bf",
+        "path": "artifacts/stage-03/canonical-model.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "e41fb95dc67d0812214356f49c11e4702f916037a83f35cf9c870b5c1564133f",
+        "category": "design_content_artifact",
+        "current_sha256": "e41fb95dc67d0812214356f49c11e4702f916037a83f35cf9c870b5c1564133f",
+        "path": "artifacts/stage-03/field-semantics-register.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+        "category": "design_content_artifact",
+        "current_sha256": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+        "path": "artifacts/stage-03/provenance-contract.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "0453af28317ad896d74ef8a11a4a8e45495366d09ec4886a39660b0580f344f6",
+        "category": "design_content_artifact",
+        "current_sha256": "0453af28317ad896d74ef8a11a4a8e45495366d09ec4886a39660b0580f344f6",
+        "path": "artifacts/stage-03/record-construction-contract.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "56bc3dfaf1b3861192dfdb230949a9c0b57b3ce1bfd4da5feada3a1b148221c8",
+        "category": "design_content_artifact",
+        "current_sha256": "56bc3dfaf1b3861192dfdb230949a9c0b57b3ce1bfd4da5feada3a1b148221c8",
+        "path": "artifacts/stage-03/source-a-mapping-draft.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "81888066a6a63f71eafb0d9139e39ac7691604d814747bac4a5a403c28c9669f",
+        "category": "design_content_artifact",
+        "current_sha256": "81888066a6a63f71eafb0d9139e39ac7691604d814747bac4a5a403c28c9669f",
+        "path": "artifacts/stage-03/source-b-mapping-draft.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "42f37892a3d95f0493f9c7fd9a3d739303c0ab4c8ee20ddf28871b40a0f159f8",
+        "category": "design_content_artifact",
+        "current_sha256": "42f37892a3d95f0493f9c7fd9a3d739303c0ab4c8ee20ddf28871b40a0f159f8",
+        "path": "artifacts/stage-03/state-snapshot-contract.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "b195cf8be406aed70e0c70c47e4368caabe5cc9bd93bc4931c6963ae3a0d0977",
+        "category": "design_content_artifact",
+        "current_sha256": "b195cf8be406aed70e0c70c47e4368caabe5cc9bd93bc4931c6963ae3a0d0977",
+        "path": "artifacts/stage-03/temporal-contract.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "4d2d10ae89af502b69867ff46d3d354223daa563ade8721ca0e61356b01af60a",
+        "category": "design_content_artifact",
+        "current_sha256": "4d2d10ae89af502b69867ff46d3d354223daa563ade8721ca0e61356b01af60a",
+        "path": "artifacts/stage-03/unresolved-design-decisions.md",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "e61a3c42b1bc1cac30df1b017e2910ef9b76f19c675e55199081b1f649577ebb",
+        "category": "design_content_artifact",
+        "current_sha256": "e61a3c42b1bc1cac30df1b017e2910ef9b76f19c675e55199081b1f649577ebb",
+        "path": "artifacts/stage-03/validation-rules.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": null,
+        "category": "design_manifest",
+        "current_sha256": "51e0d31dabec8ef81b20a7fb57470b02fc833e8c7f2b06c063e987342ed86b37",
+        "path": "artifacts/stage-03/design-content-manifest.sha256",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "6f30b6aaa25a2efa9a6ead3ab7f76563fa688f1f61d94818c2562015d70a6785",
+        "category": "design_evidence",
+        "current_sha256": "6f30b6aaa25a2efa9a6ead3ab7f76563fa688f1f61d94818c2562015d70a6785",
+        "path": "artifacts/stage-03/stage-03-design-report.md",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "ae4a426aa5cb44e03cf509afed54c917af25a2d6283486ab393ae19159f8254c",
+        "category": "design_evidence",
+        "current_sha256": "ae4a426aa5cb44e03cf509afed54c917af25a2d6283486ab393ae19159f8254c",
+        "path": "artifacts/stage-03/stage-03-design-verification.json",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "51e0d31dabec8ef81b20a7fb57470b02fc833e8c7f2b06c063e987342ed86b37",
+        "category": "plan_artifact",
+        "current_sha256": "51e0d31dabec8ef81b20a7fb57470b02fc833e8c7f2b06c063e987342ed86b37",
+        "path": "artifacts/stage-03-implementation/design-baseline-manifest.sha256",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "27cfa45000b1d04dd3fca0eb0a8732ae89b05e3bb614098fb5029bd437b57111",
+        "category": "plan_artifact",
+        "current_sha256": "27cfa45000b1d04dd3fca0eb0a8732ae89b05e3bb614098fb5029bd437b57111",
+        "path": "artifacts/stage-03-implementation/implementation-plan.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "4ba34752f9fd7c70ad3cec844426efa694121bf6db297321325126e028a785d3",
+        "category": "plan_artifact",
+        "current_sha256": "4ba34752f9fd7c70ad3cec844426efa694121bf6db297321325126e028a785d3",
+        "path": "artifacts/stage-03-implementation/physical-storage-plan.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "90c972ec17352acd733e9e625716d54df921dd36da7ee68924b5617978054747",
+        "category": "plan_artifact",
+        "current_sha256": "90c972ec17352acd733e9e625716d54df921dd36da7ee68924b5617978054747",
+        "path": "artifacts/stage-03-implementation/pilot-slice.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "2be7a7599ba014e25eaffb50c3025c5512c5be94daa2276f6856829db6cb7f95",
+        "category": "plan_artifact",
+        "current_sha256": "2be7a7599ba014e25eaffb50c3025c5512c5be94daa2276f6856829db6cb7f95",
+        "path": "artifacts/stage-03-implementation/pipeline-plan.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "4c1aff8b2cdb5fbf10aad7477871b4c2fd2652159798c80c06fd261efd486612",
+        "category": "plan_artifact",
+        "current_sha256": "4c1aff8b2cdb5fbf10aad7477871b4c2fd2652159798c80c06fd261efd486612",
+        "path": "artifacts/stage-03-implementation/security-runtime-plan.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "204f4f122dfd6f0686df57619b9ef090b8047ca870ed16a9a05933eff5b0db06",
+        "category": "plan_artifact",
+        "current_sha256": "204f4f122dfd6f0686df57619b9ef090b8047ca870ed16a9a05933eff5b0db06",
+        "path": "artifacts/stage-03-implementation/unresolved-implementation-decisions.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "3e0c725f7b26960eda7850ed42e4b38ada23d86d260a1de11bad2ce85523e4af",
+        "category": "plan_artifact",
+        "current_sha256": "3e0c725f7b26960eda7850ed42e4b38ada23d86d260a1de11bad2ce85523e4af",
+        "path": "artifacts/stage-03-implementation/validation-plan.yaml",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": null,
+        "category": "plan_manifest",
+        "current_sha256": "e0dda93309329a991d1e697cdf7182cf2558a7a92c1f0ada04f49f0cff3f7c4e",
+        "path": "artifacts/stage-03-implementation/implementation-plan-manifest.sha256",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+        "category": "migration",
+        "current_sha256": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+        "path": "migrations/canonical/0001_roles_and_schema.sql",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+        "category": "migration",
+        "current_sha256": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+        "path": "migrations/canonical/0002_pilot_evidence_tables.sql",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+        "category": "migration",
+        "current_sha256": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+        "path": "migrations/canonical/0003_pilot_grants.sql",
+        "unchanged": true
+      },
+      {
+        "accepted_sha256": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a",
+        "category": "migration",
+        "current_sha256": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a",
+        "path": "migrations/canonical/0004_storage_contract_hardening.sql",
+        "unchanged": true
+      }
+    ],
+    "frozen_design_report_match": true,
+    "frozen_design_verification_match": true,
+    "read_only": true,
+    "recovery_sources": [
+      "stage-03-implementation-changeset-01-v0.1-review.zip",
+      "stage-03-implementation-plan-v0.3.4-review.zip"
+    ],
+    "repairs_performed": 0,
+    "status": "PASS"
+  },
+  "frozen_manifests": {
+    "design": {
+      "detail": "verified 11 entries",
+      "entry_count": 11,
+      "manifest": "design-content-manifest.sha256",
+      "manifest_sha256": "51e0d31dabec8ef81b20a7fb57470b02fc833e8c7f2b06c063e987342ed86b37",
+      "verified": true
+    },
+    "implementation_plan": {
+      "detail": "verified 8 entries",
+      "entry_count": 8,
+      "manifest": "implementation-plan-manifest.sha256",
+      "manifest_sha256": "e0dda93309329a991d1e697cdf7182cf2558a7a92c1f0ada04f49f0cff3f7c4e",
+      "verified": true
+    }
+  },
+  "implementation_plan_version": "0.3.5",
+  "read_only": true,
+  "status": "PASS"
+}

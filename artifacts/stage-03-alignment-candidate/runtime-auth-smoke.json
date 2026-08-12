@@ -1,0 +1,93 @@
+{
+  "stage": "03",
+  "phase": "alignment_candidate",
+  "title": "Synthetic runtime authentication smoke",
+  "document_version": "0.1.0",
+  "synthetic_subject_label": "SYNTHETIC_RUNTIME_SMOKE",
+  "note": "Raw identifier and HMAC digest intentionally omitted from evidence",
+  "approle_auth": {
+    "role_id_retrieved": "PASS",
+    "wrapped_secret_id_created": "PASS",
+    "wrapping_path_contract": "PASS",
+    "secret_id_unwrapped": "PASS",
+    "approle_login": "PASS",
+    "token_policies_exact": "PASS"
+  },
+  "vault_agent_config": {
+    "agent_hcl_present": "PASS",
+    "wrapping_path_configured": "PASS",
+    "remove_secret_id_file_after_reading": "PASS",
+    "runtime_path_run_uhbse_vault": "PASS",
+    "tls_skip_verify_absent": "PASS"
+  },
+  "compose": {
+    "compose_agent_tmpfs": "PASS",
+    "compose_no_secret_env": "PASS"
+  },
+  "hmac": {
+    "algorithm": "HMAC-SHA256",
+    "key_version": 1,
+    "checks": {
+      "algorithm": "PASS",
+      "key_version_field": "PASS",
+      "output_length_bytes": "PASS",
+      "deterministic_repeatability": "PASS",
+      "raw_identifier_absent_from_artifacts": "PASS",
+      "digest_absent_from_artifacts": "PASS",
+      "key_version": "PASS"
+    }
+  },
+  "loader_credential_checks": {
+    "loader_username": "PASS",
+    "loader_password_present": "PASS"
+  },
+  "postgres": {
+    "session_user": "PASS",
+    "current_user_before_set_role": "PASS",
+    "current_user_after_set_role": "PASS",
+    "select_privilege": "PASS",
+    "insert_privilege": "PASS",
+    "insert_not_executed": "PASS",
+    "reset_role": "PASS"
+  },
+  "cleanup": {
+    "secret_files_removed": "PASS"
+  },
+  "clinical_rows_read": 0,
+  "raw_db_connections": 0,
+  "canonical_rows_written": 0,
+  "secrets_recorded_in_artifacts": false,
+  "overall_status": "PASS",
+  "checks": {
+    "role_id_retrieved": "PASS",
+    "wrapped_secret_id_created": "PASS",
+    "wrapping_path_contract": "PASS",
+    "secret_id_unwrapped": "PASS",
+    "approle_login": "PASS",
+    "token_policies_exact": "PASS",
+    "agent_hcl_present": "PASS",
+    "wrapping_path_configured": "PASS",
+    "remove_secret_id_file_after_reading": "PASS",
+    "runtime_path_run_uhbse_vault": "PASS",
+    "tls_skip_verify_absent": "PASS",
+    "compose_agent_tmpfs": "PASS",
+    "compose_no_secret_env": "PASS",
+    "algorithm": "PASS",
+    "key_version_field": "PASS",
+    "output_length_bytes": "PASS",
+    "deterministic_repeatability": "PASS",
+    "raw_identifier_absent_from_artifacts": "PASS",
+    "digest_absent_from_artifacts": "PASS",
+    "key_version": "PASS",
+    "loader_username": "PASS",
+    "loader_password_present": "PASS",
+    "session_user": "PASS",
+    "current_user_before_set_role": "PASS",
+    "current_user_after_set_role": "PASS",
+    "select_privilege": "PASS",
+    "insert_privilege": "PASS",
+    "insert_not_executed": "PASS",
+    "reset_role": "PASS",
+    "secret_files_removed": "PASS"
+  }
+}

@@ -1,0 +1,41 @@
+---
+description: Canonical model design constraints for Stage 03
+alwaysApply: true
+---
+
+Stage 03 is **design only** unless explicitly moved to an implementation gate.
+
+Forbidden in design phase:
+
+- creating a canonical database;
+- writing SQL DDL;
+- running ETL or migrating rows;
+- merging patients across Source A and Source B;
+- creating global_patient_id or global_subject_id;
+- modifying artifacts under artifacts/stage-01/ or artifacts/stage-02/;
+- promoting CANDIDATE or HYPOTHESIS mappings to CONFIRMED clinical semantics;
+- treating POTENTIAL_OVERLAP as proof of subject equality;
+- promoting stage-03-design-report.md to FINAL;
+- cross-source consolidation of birthdate, sex, or gender;
+- automatic normalization of source sex/gender to biological_sex.
+
+Required design invariants:
+
+- three separated layers: evidence (OBSERVED…IMPUTED), simulation (SYNTHETIC), prediction (PREDICTED);
+- every canonical entity carries provenance metadata;
+- raw values are preserved after normalization;
+- Subject identity is source-local: source_system + source_subject_key;
+- stable demographics use SubjectCharacteristic with raw characteristic codes;
+- REFERENCE_CATALOG facts are not patient clinical events;
+- IdentityLinkEvidence is future-only and must not activate merge;
+- ScenarioIntervention holds identity and defaults; ScenarioEvent applies timeline overrides per scenario_event_precedence_contract;
+- state snapshot construction follows state-snapshot-contract.yaml (design contract only);
+- canonical record construction follows record-construction-contract.yaml (design contract only);
+
+Mapping status semantics:
+
+- CONFIRMED_SCHEMA confirms structure only, not clinical equivalence;
+- UNRESOLVED and HYPOTHESIS from Stage 02 must be preserved, not silently resolved.
+
+When editing Stage 03 artifacts, update design-content-manifest.sha256 via stage-03-check.
+Content artifact list is STAGE03_CONTENT_ARTIFACTS in the verifier (do not hardcode file counts separately).

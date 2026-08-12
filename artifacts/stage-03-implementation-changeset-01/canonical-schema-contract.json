@@ -1,0 +1,718 @@
+{
+  "changeset": "stage-03-implementation-changeset-01",
+  "contract": {
+    "enums": {
+      "canonical_data_level": [
+        "PATIENT_EVENT",
+        "OBSERVATION_HEADER",
+        "OBSERVATION_VALUE",
+        "ATTRIBUTE_CONTAINER",
+        "REFERENCE_CATALOG",
+        "WORKFLOW",
+        "PAYLOAD",
+        "UNKNOWN"
+      ],
+      "canonical_mapping_status": [
+        "CONFIRMED_SCHEMA",
+        "CANDIDATE",
+        "HYPOTHESIS",
+        "UNRESOLVED",
+        "NOT_MAPPED"
+      ]
+    },
+    "expected_table_owner": "canonical_owner",
+    "schema": "canonical_evidence",
+    "table_load_order": [
+      "source_system",
+      "source_record",
+      "subject",
+      "subject_characteristic",
+      "encounter",
+      "observation",
+      "observation_component"
+    ],
+    "tables": [
+      {
+        "check_constraints": [
+          "source_system_id_not_blank",
+          "source_system_label_not_blank"
+        ],
+        "columns": [
+          {
+            "name": "source_system_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "source_label",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "audit_stage_reference",
+            "nullable": true,
+            "type": "text"
+          }
+        ],
+        "entity": "SourceSystem",
+        "foreign_keys": [],
+        "indexes": [],
+        "null_only_columns_in_pilot": [],
+        "primary_key": [
+          "source_system_id"
+        ],
+        "requires_provenance": false,
+        "table": "source_system",
+        "unique_constraints": []
+      },
+      {
+        "check_constraints": [
+          "source_record_locator_scheme_allowed",
+          "source_record_locator_not_blank",
+          "source_record_key_version_not_blank",
+          "source_record_provenance_profile_valid",
+          "source_record_provenance_required_values_present",
+          "source_record_provenance_origin_specific_fields",
+          "source_record_provenance_profiles_exclusive",
+          "source_record_provenance_matches_columns"
+        ],
+        "columns": [
+          {
+            "name": "source_record_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "source_system_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "source_schema",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "source_relation",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "source_record_locator",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "locator_scheme",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "locator_key_version",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "source_created_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "source_updated_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "provenance",
+            "nullable": false,
+            "type": "jsonb"
+          }
+        ],
+        "entity": "SourceRecord",
+        "foreign_keys": [
+          {
+            "columns": [
+              "source_system_id"
+            ],
+            "name": "source_record_source_system_fkey",
+            "references": {
+              "columns": [
+                "source_system_id"
+              ],
+              "table": "source_system"
+            }
+          }
+        ],
+        "indexes": [
+          "source_record_source_relation_idx"
+        ],
+        "null_only_columns_in_pilot": [],
+        "primary_key": [
+          "source_record_id"
+        ],
+        "requires_provenance": true,
+        "table": "source_record",
+        "unique_constraints": [
+          {
+            "columns": [
+              "source_record_locator"
+            ],
+            "name": "source_record_locator_unique"
+          }
+        ]
+      },
+      {
+        "check_constraints": [
+          "subject_source_subject_key_not_blank",
+          "subject_provenance_profile_valid",
+          "subject_provenance_required_values_present",
+          "subject_provenance_origin_specific_fields",
+          "subject_provenance_profiles_exclusive"
+        ],
+        "columns": [
+          {
+            "name": "subject_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "source_system_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "source_subject_key",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "subject_role_hint",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "provenance",
+            "nullable": false,
+            "type": "jsonb"
+          }
+        ],
+        "entity": "Subject",
+        "foreign_keys": [
+          {
+            "columns": [
+              "source_system_id"
+            ],
+            "name": "subject_source_system_fkey",
+            "references": {
+              "columns": [
+                "source_system_id"
+              ],
+              "table": "source_system"
+            }
+          }
+        ],
+        "indexes": [],
+        "null_only_columns_in_pilot": [],
+        "primary_key": [
+          "subject_id"
+        ],
+        "requires_provenance": true,
+        "table": "subject",
+        "unique_constraints": [
+          {
+            "columns": [
+              "source_system_id",
+              "source_subject_key"
+            ],
+            "name": "subject_source_local_identity_unique"
+          }
+        ]
+      },
+      {
+        "check_constraints": [
+          "subject_characteristic_identity_present",
+          "subject_characteristic_typed_value_xor",
+          "subject_characteristic_raw_value_preserved",
+          "subject_characteristic_raw_code_not_blank",
+          "subject_characteristic_concept_null_in_pilot",
+          "subject_characteristic_normalized_unit_null_in_pilot",
+          "subject_characteristic_provenance_profile_valid",
+          "subject_characteristic_provenance_required_values_present",
+          "subject_characteristic_provenance_origin_specific_fields",
+          "subject_characteristic_provenance_profiles_exclusive",
+          "subject_characteristic_status_matches_provenance"
+        ],
+        "columns": [
+          {
+            "name": "characteristic_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "subject_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "characteristic_code",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "concept_id",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "raw_code",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "raw_value",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "date_value",
+            "nullable": true,
+            "type": "date"
+          },
+          {
+            "name": "numeric_value",
+            "nullable": true,
+            "type": "numeric"
+          },
+          {
+            "name": "text_value",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "categorical_value",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "boolean_value",
+            "nullable": true,
+            "type": "boolean"
+          },
+          {
+            "name": "raw_unit",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "normalized_unit",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "effective_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "recorded_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "status",
+            "nullable": false,
+            "type": "canonical_mapping_status"
+          },
+          {
+            "name": "provenance",
+            "nullable": false,
+            "type": "jsonb"
+          }
+        ],
+        "entity": "SubjectCharacteristic",
+        "foreign_keys": [
+          {
+            "columns": [
+              "subject_id"
+            ],
+            "name": "subject_characteristic_subject_fkey",
+            "references": {
+              "columns": [
+                "subject_id"
+              ],
+              "table": "subject"
+            }
+          }
+        ],
+        "indexes": [
+          "subject_characteristic_subject_idx"
+        ],
+        "null_only_columns_in_pilot": [
+          "concept_id",
+          "normalized_unit"
+        ],
+        "primary_key": [
+          "characteristic_id"
+        ],
+        "requires_provenance": true,
+        "table": "subject_characteristic",
+        "unique_constraints": []
+      },
+      {
+        "check_constraints": [
+          "encounter_provider_null_in_pilot",
+          "encounter_missing_clinical_time_documented",
+          "encounter_provenance_profile_valid",
+          "encounter_provenance_required_values_present",
+          "encounter_provenance_origin_specific_fields",
+          "encounter_provenance_profiles_exclusive"
+        ],
+        "columns": [
+          {
+            "name": "encounter_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "subject_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "provider_id",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "encounter_type",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "occurred_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "recorded_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "completed_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "cancelled_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "confirmed_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "status",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "data_level",
+            "nullable": false,
+            "type": "canonical_data_level"
+          },
+          {
+            "name": "missingness_reason",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "provenance",
+            "nullable": false,
+            "type": "jsonb"
+          }
+        ],
+        "entity": "Encounter",
+        "foreign_keys": [
+          {
+            "columns": [
+              "subject_id"
+            ],
+            "name": "encounter_subject_fkey",
+            "references": {
+              "columns": [
+                "subject_id"
+              ],
+              "table": "subject"
+            }
+          }
+        ],
+        "indexes": [
+          "encounter_subject_idx"
+        ],
+        "null_only_columns_in_pilot": [
+          "provider_id"
+        ],
+        "primary_key": [
+          "encounter_id"
+        ],
+        "requires_provenance": true,
+        "table": "encounter",
+        "unique_constraints": []
+      },
+      {
+        "check_constraints": [
+          "observation_encounter_null_in_pilot",
+          "observation_normalized_concept_null_in_pilot",
+          "observation_normalized_unit_null_in_pilot",
+          "observation_missing_clinical_time_documented",
+          "observation_reference_range_is_object",
+          "observation_uncertainty_is_object",
+          "observation_provenance_profile_valid",
+          "observation_provenance_required_values_present",
+          "observation_provenance_origin_specific_fields",
+          "observation_provenance_profiles_exclusive"
+        ],
+        "columns": [
+          {
+            "name": "observation_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "subject_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "encounter_id",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "observed_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "specimen_collected_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "result_available_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "recorded_at",
+            "nullable": true,
+            "type": "timestamp with time zone"
+          },
+          {
+            "name": "status",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "data_level",
+            "nullable": false,
+            "type": "canonical_data_level"
+          },
+          {
+            "name": "raw_code",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "normalized_concept",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "raw_value",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "raw_unit",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "normalized_unit",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "reference_range",
+            "nullable": true,
+            "type": "jsonb"
+          },
+          {
+            "name": "abnormal_flag",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "uncertainty",
+            "nullable": true,
+            "type": "jsonb"
+          },
+          {
+            "name": "missingness_reason",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "provenance",
+            "nullable": false,
+            "type": "jsonb"
+          }
+        ],
+        "entity": "Observation",
+        "foreign_keys": [
+          {
+            "columns": [
+              "subject_id"
+            ],
+            "name": "observation_subject_fkey",
+            "references": {
+              "columns": [
+                "subject_id"
+              ],
+              "table": "subject"
+            }
+          }
+        ],
+        "indexes": [
+          "observation_subject_idx"
+        ],
+        "null_only_columns_in_pilot": [
+          "encounter_id",
+          "normalized_concept",
+          "normalized_unit"
+        ],
+        "primary_key": [
+          "observation_id"
+        ],
+        "requires_provenance": true,
+        "table": "observation",
+        "unique_constraints": []
+      },
+      {
+        "check_constraints": [
+          "observation_component_normalized_unit_null_in_pilot",
+          "observation_component_reference_range_is_object",
+          "observation_component_sequence_order_non_negative",
+          "observation_component_provenance_profile_valid",
+          "observation_component_provenance_required_values_present",
+          "observation_component_provenance_origin_specific_fields",
+          "observation_component_provenance_profiles_exclusive"
+        ],
+        "columns": [
+          {
+            "name": "component_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "observation_id",
+            "nullable": false,
+            "type": "text"
+          },
+          {
+            "name": "raw_code",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "raw_value",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "numeric_value",
+            "nullable": true,
+            "type": "numeric"
+          },
+          {
+            "name": "text_value",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "categorical_value",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "boolean_value",
+            "nullable": true,
+            "type": "boolean"
+          },
+          {
+            "name": "raw_unit",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "normalized_unit",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "reference_range",
+            "nullable": true,
+            "type": "jsonb"
+          },
+          {
+            "name": "abnormal_flag",
+            "nullable": true,
+            "type": "text"
+          },
+          {
+            "name": "sequence_order",
+            "nullable": true,
+            "type": "integer"
+          },
+          {
+            "name": "provenance",
+            "nullable": false,
+            "type": "jsonb"
+          }
+        ],
+        "entity": "ObservationComponent",
+        "foreign_keys": [
+          {
+            "columns": [
+              "observation_id"
+            ],
+            "name": "observation_component_observation_fkey",
+            "references": {
+              "columns": [
+                "observation_id"
+              ],
+              "table": "observation"
+            }
+          }
+        ],
+        "indexes": [
+          "observation_component_observation_idx"
+        ],
+        "null_only_columns_in_pilot": [
+          "normalized_unit"
+        ],
+        "primary_key": [
+          "component_id"
+        ],
+        "requires_provenance": true,
+        "table": "observation_component",
+        "unique_constraints": []
+      }
+    ]
+  },
+  "contract_fingerprint": "99e3610fb9f828ec8982de766c57da754547ad007a76059062e549ca07872536"
+}

@@ -1,0 +1,41 @@
+stage: "03"
+phase: implementation_planning
+title: Security and Runtime Plan
+document_version: "0.3.6"
+implementation_status: planning_only_not_started
+
+canonical_id:
+  algorithm: HMAC-SHA256
+  id_namespace_version: "0.7.0"
+  key_version_field: key_version
+  secret_storage: runtime_only
+  dev_secret_injection: runtime_environment_file_outside_git
+  pilot_secret_provider_status: DECISION_REQUIRED_SECRET_PROVIDER
+  decision_artifact: artifacts/stage-03-alignment-candidate/decision-required-secret-provider.yaml
+
+canonical_loader_runtime_contract:
+  group_role: canonical_loader
+  group_role_is_nologin: true
+  credential_source_decision:
+    status: DECISION_REQUIRED_SECRET_PROVIDER
+    decision_artifact: artifacts/stage-03-alignment-candidate/decision-required-secret-provider.yaml
+    blocker: canonical_loader_runtime_principal_undefined
+    note: >
+      LOGIN principal name, credential_source_reference, connection_path, SET ROLE flow, grants,
+      audit identity and rotation procedure remain undefined until a secret-store provider is
+      selected and provisioned. migration 0001 creates canonical_loader NOLOGIN only.
+
+database_roles:
+  - canonical_owner
+  - canonical_migrator
+  - canonical_loader
+  - canonical_validator_ro
+  - mg_audit_ro
+
+logging:
+  forbidden: [hmac_secret, doctor_id_values, patient_names, raw_row_payloads]
+
+implementation_guardrails:
+  no_database_creation_in_planning: true
+  no_ddl_in_planning: true
+  no_etl_execution_in_planning: true

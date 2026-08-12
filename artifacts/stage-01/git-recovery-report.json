@@ -1,0 +1,35 @@
+{
+  "searched_at": "2026-07-31T21:45:00+00:00",
+  "repository": "UHBSE",
+  "finding": "NO_ORIGINAL_STAGE01_ARTIFACTS_IN_GIT",
+  "commits_scanned": [
+    {
+      "hash": "ed1c545",
+      "subject": "Initial commit: UHBSE Stage 01 agent-first repository.",
+      "stage_01_files": [
+        "artifacts/stage-01/.gitkeep"
+      ]
+    }
+  ],
+  "missing_in_git": [
+    "schema-profile.json",
+    "entity-candidates.yaml",
+    "relation-graph.md",
+    "unknown-semantics.md",
+    "source-audit.json",
+    "stage-01-report.md",
+    "verify-result.json",
+    "profiling-query-log.json",
+    "manifest.sha256"
+  ],
+  "present_untracked_on_disk": [
+    "artifacts/stage-01-preliminary/ (offline bootstrap copies preserved)"
+  ],
+  "schema_fingerprint_baseline": {
+    "path": "artifacts/stage-01/schema-fingerprint.json",
+    "sha256": "01272eab2d7d29ee4cd5a90a81e724f02e691c8da5e27ce65afb19a91227919e",
+    "note": "baseline from restore verification; not modified by offline bootstrap"
+  },
+  "recovery_action": "live_readonly_profile_via_mg_audit_ro",
+  "auto_restore_from_git": false
+}

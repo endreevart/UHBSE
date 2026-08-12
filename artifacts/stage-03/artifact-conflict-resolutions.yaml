@@ -1,0 +1,73 @@
+stage: '03'
+phase: design
+title: Artifact Conflict Resolutions
+document_version: 0.7.5
+design_release: 0.7.5
+implementation_plan_release: 0.3.6
+report_status_required_for_gate: FINAL
+verification_required_for_gate: PASS
+manifest_inclusion_required_for_gate: true
+purpose: 'Records explicit resolutions for conflicts listed in artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml.
+  The historical conflicts registry is immutable. Gate closure requires this artifact,
+  a verified release manifest, and FINAL report status on the owning release.
+
+  '
+resolutions:
+- conflict_id: temporal_precision_field_absent_from_model
+  source_conflict_artifact: artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml
+  prior_artifact_versions:
+    temporal-contract.yaml: 0.4.0
+    canonical-model.yaml: 0.6.0
+  resolution_decision: 'Added temporal_precision (enum with unknown) and optional
+    sequence_when_time_unknown to Encounter and Observation in canonical-model.yaml;
+    synchronized temporal-contract.yaml, field-semantics-register.yaml, validation-rules.yaml
+    and Source A construction constants.
+
+    '
+  new_artifact_versions:
+    temporal-contract.yaml: 0.4.1
+    canonical-model.yaml: 0.6.1
+    field-semantics-register.yaml: 0.5.1
+    validation-rules.yaml: 0.6.1
+    record-construction-contract.yaml: 0.7.5
+  confirming_file_sha256:
+    canonical-model.yaml: 54e7ef79a3e730ff9da90c59cff2b7cb78b6f3f759fc37f8c89bf813affc161f
+    temporal-contract.yaml: e6c4bc62ed3d8aabfb2e56d2dd3d005854fda26e172d3b98f91fc300896be2c4
+    record-construction-contract.yaml: 35cffd328241b0f2db48a0597e176733a045adfa92770ec27d4af3032ea6b8bc
+    source-a-mapping-draft.yaml: 9cfdebb2d31fdcdf4c444c5a2f03f1f77a842952e5130049508d15c855ea235d
+    field-semantics-register.yaml: 7733a8e22829730241c2c3537b6c48c799553e1aa7172a4261a68e245f350b58
+    validation-rules.yaml: d5fcaa51b0901edf909263f199ed83d424524f337ff52fd9ce7b2ba5f5ef7929
+  resolution_status: RESOLVED_PENDING_FINAL_RELEASE
+  owning_release: Stage 03 Design v0.7.5
+- conflict_id: encounter_provider_id_population_disagreement
+  source_conflict_artifact: artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml
+  prior_artifact_versions:
+    record-construction-contract.yaml: 0.7.4
+    pilot-slice.yaml: 0.3.5
+    pipeline-plan.yaml: 0.3.5
+  resolution_decision: 'Source A pilot defers Encounter.provider_id until Provider
+    construction exists. Removed via_column.doctor_id from source_a_appointment_encounter;
+    aligned source-a-mapping-draft.yaml, pilot-slice.yaml and pipeline-plan.yaml with
+    DEFERRED_UNTIL_PROVIDER_CONSTRUCTION.
+
+    '
+  new_artifact_versions:
+    record-construction-contract.yaml: 0.7.5
+    source-a-mapping-draft.yaml: unchanged_version
+    pilot-slice.yaml: 0.3.6
+    pipeline-plan.yaml: 0.3.6
+  confirming_file_sha256:
+    canonical-model.yaml: 54e7ef79a3e730ff9da90c59cff2b7cb78b6f3f759fc37f8c89bf813affc161f
+    temporal-contract.yaml: e6c4bc62ed3d8aabfb2e56d2dd3d005854fda26e172d3b98f91fc300896be2c4
+    record-construction-contract.yaml: 35cffd328241b0f2db48a0597e176733a045adfa92770ec27d4af3032ea6b8bc
+    source-a-mapping-draft.yaml: 9cfdebb2d31fdcdf4c444c5a2f03f1f77a842952e5130049508d15c855ea235d
+    field-semantics-register.yaml: 7733a8e22829730241c2c3537b6c48c799553e1aa7172a4261a68e245f350b58
+    validation-rules.yaml: d5fcaa51b0901edf909263f199ed83d424524f337ff52fd9ce7b2ba5f5ef7929
+  resolution_status: RESOLVED_PENDING_FINAL_RELEASE
+  owning_release: Stage 03 Design v0.7.5
+gate_rule: 'A conflict-derived blocker closes only when resolution_status is RESOLVED,
+  the owning release report is FINAL, release verification PASS, the manifest verifies,
+  and this artifact is listed in the design content manifest. DRAFT releases and correct
+  manifests alone do not close blockers.
+
+  '

@@ -1,0 +1,50 @@
+# Decision — Vault Key Custody
+# Status: DECISION_REQUIRED — do not silently select a model.
+
+stage: "03"
+phase: alignment_candidate
+document_version: "0.1.0"
+decision_id: DECISION_REQUIRED_VAULT_KEY_CUSTODY
+status: DECISION_REQUIRED
+report_status: DRAFT
+blocks_live_load: true
+blocks_canonical_loader_runtime_contract: true
+automatic_rekey_in_this_task: false
+
+current_local_keyring:
+  classification: NOT_ACCEPTABLE_FOR_LIVE_LOAD
+  summary: >
+    Locally generated three-key shared keyring with empty passphrases on one host.
+    This is not multi-custodian separation.
+  related_findings:
+    - pgp_keys_shared_keyring_empty_passphrase
+    - multi_custodian_separation_absent
+
+models:
+  A_MULTI_CUSTODIAN_2_OF_3:
+    id: MULTI_CUSTODIAN_2_OF_3
+    requirements:
+      - three independently generated PGP public keys
+      - private keys stored separately (no shared keyring)
+      - passphrases enabled on each private key
+      - at least two real custodians required for unseal/recovery
+    live_load_acceptable_when_implemented: true
+
+  B_SINGLE_OPERATOR_PILOT:
+    id: SINGLE_OPERATOR_PILOT
+    requirements:
+      - one explicitly identified operational owner
+      - encrypted offline recovery material
+      - documented single-person availability risk
+      - no false multi-custodian claim
+    live_load_acceptable_when_implemented: conditional
+    note: Honest single-operator pilot only; availability risk must be accepted explicitly.
+
+selection:
+  status: DECISION_REQUIRED
+  selected_model: null
+  forbidden: silent_selection
+
+note: >
+  Do not perform Vault rekey automatically in runtime-auth v0.1.
+  Operator must confirm a custody model in a later task before live load.

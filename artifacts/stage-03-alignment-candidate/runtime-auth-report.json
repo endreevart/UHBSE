@@ -1,0 +1,39 @@
+{
+  "stage": "03",
+  "phase": "alignment_candidate",
+  "title": "Operational Security and Runtime Authentication Candidate",
+  "document_version": "0.1.0",
+  "report_status": "DRAFT",
+  "generated_at": "2026-08-11T15:38:22.900896+00:00",
+  "overall_status": "PASS",
+  "vault_runtime_authentication": "PASS",
+  "postgres_principal": "PASS_UNCHANGED",
+  "canonical_database": "empty",
+  "runtime_contract": "PARTIAL_RUNTIME_VERIFIED",
+  "custody_decision": "DECISION_REQUIRED",
+  "gates": {
+    "phase0": "PASS",
+    "secret_shape": "PASS",
+    "approle_hardening": "PASS",
+    "synthetic_smoke": "PASS",
+    "schema_fingerprint_unchanged": "PASS",
+    "row_counts_zero": "PASS",
+    "migrations_unchanged": "PASS",
+    "postgres_principal_unchanged": "PASS",
+    "zero_secret_leakage": "PASS",
+    "zero_canonical_writes": "PASS"
+  },
+  "clinical_rows_read": 0,
+  "raw_db_connections": 0,
+  "canonical_rows_written": 0,
+  "changeset_02_started": false,
+  "migration_0005_started": false,
+  "etl_executed": false,
+  "live_load_executed": false,
+  "design_plan_final_promotion": false,
+  "secrets_recorded_in_artifacts": false,
+  "exact_commands": [
+    "python -m human_simulator.stage03_alignment.run_runtime_auth",
+    "python -m human_simulator.stage03_alignment.publish_runtime_auth_v01"
+  ]
+}

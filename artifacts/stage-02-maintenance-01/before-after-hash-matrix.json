@@ -1,0 +1,275 @@
+{
+  "artifacts_pinned_by_both_authorities": [
+    "identity-linkage-assessment.json",
+    "subject-root-analysis.json"
+  ],
+  "authorities": {
+    "prior_stage_baseline": "human_simulator.stage03.prior_stage_integrity.ACCEPTED_SHA256",
+    "relationship_manifest": "artifacts/stage-02/relationship-manifest.sha256"
+  },
+  "defect": "stage02_relationship_manifest_drift",
+  "drifted_artifacts": [
+    "subject-root-analysis.json",
+    "identity-linkage-assessment.json"
+  ],
+  "generated_at": "2026-08-07T15:04:45.256302+00:00",
+  "matching_artifacts": [
+    "subject-root-analysis.md",
+    "source-relationship-assessment.json",
+    "source-relationship-assessment.md",
+    "identity-linkage-assessment.md",
+    "relationship-verification-report.json",
+    "relationship-query-log.json"
+  ],
+  "promotion": {
+    "controlled_stage_01_02": {
+      "artifacts/stage-01/schema-profile.json": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+      "artifacts/stage-01/stage-01-report.md": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff",
+      "artifacts/stage-02/entity-crosswalk.yaml": "f0b93b4e6ccea2732483b66001d28368365bc8eeb197c39b302f36975a74f920",
+      "artifacts/stage-02/identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "artifacts/stage-02/schema-profile-kgz.json": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+      "artifacts/stage-02/stage-02-final-manifest.sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+      "artifacts/stage-02/stage-02-report.md": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+      "artifacts/stage-02/subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "artifacts/stage-02/verify-stage-02.json": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a"
+    },
+    "controlled_stage_01_02_after": {
+      "artifacts/stage-01/schema-profile.json": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+      "artifacts/stage-01/stage-01-report.md": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff",
+      "artifacts/stage-02/entity-crosswalk.yaml": "f0b93b4e6ccea2732483b66001d28368365bc8eeb197c39b302f36975a74f920",
+      "artifacts/stage-02/identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "artifacts/stage-02/schema-profile-kgz.json": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+      "artifacts/stage-02/stage-02-final-manifest.sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+      "artifacts/stage-02/stage-02-report.md": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+      "artifacts/stage-02/subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "artifacts/stage-02/verify-stage-02.json": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a"
+    },
+    "forbidden_stage_02_files": {
+      "stage-02-final-manifest.sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+      "stage-02-report.md": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+      "verify-stage-02.json": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a"
+    },
+    "manifest_sha256_after": "13aae26b37032730c533740bc513872cb2a6890429b64ebd2fb923ffcf672974",
+    "manifest_sha256_before": "19b932cc2f27684013d743444b0b8d66f560e200fffc73a571e387178b6ec6f2",
+    "manifest_sha256_expected_after": "13aae26b37032730c533740bc513872cb2a6890429b64ebd2fb923ffcf672974",
+    "note": "before manifest captured from authorised expected value; repair already on disk",
+    "recorded_at": "2026-08-07T17:29:29.019233+00:00",
+    "relationship_artifacts": {
+      "identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "identity-linkage-assessment.md": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d",
+      "relationship-query-log.json": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+      "relationship-verification-report.json": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4",
+      "source-relationship-assessment.json": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07",
+      "source-relationship-assessment.md": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6",
+      "subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "subject-root-analysis.md": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58"
+    },
+    "relationship_artifacts_after": {
+      "identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "identity-linkage-assessment.md": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d",
+      "relationship-query-log.json": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+      "relationship-verification-report.json": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4",
+      "source-relationship-assessment.json": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07",
+      "source-relationship-assessment.md": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6",
+      "subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "subject-root-analysis.md": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58"
+    },
+    "rolled_back": false
+  },
+  "reproduction_manifest_sha256": "1d23a3b0802adbd09975c088b1f74bcbea980a43fddfcd1130cc223a7227307b",
+  "rows": [
+    {
+      "artifact": "subject-root-analysis.json",
+      "current_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-design-v0.7-review.zip",
+        "stage-03-design-v0.7.1-review.zip",
+        "stage-03-design-v0.7.4-review.zip",
+        "stage-03-implementation-changeset-01-v0.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip",
+        "stage-03-implementation-plan-v0.3.4-review.zip",
+        "stage-03-implementation-plan-v0.3.5-review.zip"
+      ],
+      "distinct_published_hashes": 7,
+      "manifest_bytes_published_in": [],
+      "matches_relationship_manifest": false,
+      "pinned_by_both_authorities": true,
+      "prior_stage_baseline_pins": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "read_only_reproduction_sha256": "4051ba072f665487d3e496c6a4687067c7c0272217e6f022d7f360ab83cfb829",
+      "relationship_manifest_records": "285ea434c7f13daa8ca10f859beb4743c468174a9d3785b4d2bd576b097d9083",
+      "working_stage_02_sha256": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8"
+    },
+    {
+      "artifact": "subject-root-analysis.md",
+      "current_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "distinct_published_hashes": 1,
+      "manifest_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "matches_relationship_manifest": true,
+      "pinned_by_both_authorities": false,
+      "prior_stage_baseline_pins": null,
+      "read_only_reproduction_sha256": "a46d510c6a3f8976a28818d8155d9803e8caebb60afd883b7f6e1194d6db7f94",
+      "relationship_manifest_records": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58",
+      "working_stage_02_sha256": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58"
+    },
+    {
+      "artifact": "source-relationship-assessment.json",
+      "current_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "distinct_published_hashes": 1,
+      "manifest_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "matches_relationship_manifest": true,
+      "pinned_by_both_authorities": false,
+      "prior_stage_baseline_pins": null,
+      "read_only_reproduction_sha256": "2c30b24289798aa2a4b885a9aa4fcdeb332016df61f120a77625f83c9a8e79a2",
+      "relationship_manifest_records": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07",
+      "working_stage_02_sha256": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07"
+    },
+    {
+      "artifact": "source-relationship-assessment.md",
+      "current_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "distinct_published_hashes": 1,
+      "manifest_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "matches_relationship_manifest": true,
+      "pinned_by_both_authorities": false,
+      "prior_stage_baseline_pins": null,
+      "read_only_reproduction_sha256": "89ff748aea67b0fe5cf58ba8e27b0fa3f9c71fecb69b8822571364233a05eeae",
+      "relationship_manifest_records": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6",
+      "working_stage_02_sha256": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6"
+    },
+    {
+      "artifact": "identity-linkage-assessment.json",
+      "current_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-design-v0.7-review.zip",
+        "stage-03-design-v0.7.1-review.zip",
+        "stage-03-design-v0.7.4-review.zip",
+        "stage-03-implementation-changeset-01-v0.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip",
+        "stage-03-implementation-plan-v0.3.4-review.zip",
+        "stage-03-implementation-plan-v0.3.5-review.zip"
+      ],
+      "distinct_published_hashes": 7,
+      "manifest_bytes_published_in": [],
+      "matches_relationship_manifest": false,
+      "pinned_by_both_authorities": true,
+      "prior_stage_baseline_pins": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "read_only_reproduction_sha256": "bf9a6c5bdc2e2d44299b58745a83a50db38b53f0e4c924bba74ae742c40c5c37",
+      "relationship_manifest_records": "d5481701a6ee435dbdda2b15825bd09993196503f194cdd65eb918fbddc634cc",
+      "working_stage_02_sha256": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6"
+    },
+    {
+      "artifact": "identity-linkage-assessment.md",
+      "current_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "distinct_published_hashes": 1,
+      "manifest_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "matches_relationship_manifest": true,
+      "pinned_by_both_authorities": false,
+      "prior_stage_baseline_pins": null,
+      "read_only_reproduction_sha256": "f9999f67a25c70c43a69c31e751177b588b6ef42af285cdd6dc812c901adbd62",
+      "relationship_manifest_records": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d",
+      "working_stage_02_sha256": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d"
+    },
+    {
+      "artifact": "relationship-verification-report.json",
+      "current_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "distinct_published_hashes": 1,
+      "manifest_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "matches_relationship_manifest": true,
+      "pinned_by_both_authorities": false,
+      "prior_stage_baseline_pins": null,
+      "read_only_reproduction_sha256": "772788bf9db7f14c25329bfa17e25bb372b81492f69147eaba58469e7e1adf8f",
+      "relationship_manifest_records": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4",
+      "working_stage_02_sha256": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4"
+    },
+    {
+      "artifact": "relationship-query-log.json",
+      "current_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "distinct_published_hashes": 1,
+      "manifest_bytes_published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip"
+      ],
+      "matches_relationship_manifest": true,
+      "pinned_by_both_authorities": false,
+      "prior_stage_baseline_pins": null,
+      "read_only_reproduction_sha256": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+      "relationship_manifest_records": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+      "working_stage_02_sha256": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87"
+    }
+  ],
+  "working_relationship_manifest_sha256": "13aae26b37032730c533740bc513872cb2a6890429b64ebd2fb923ffcf672974"
+}

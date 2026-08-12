@@ -7,6 +7,7 @@ interface RevealProps {
   delay?: number
   className?: string
   style?: CSSProperties
+  rootMargin?: string
   /** state attributes the wrapped block needs, such as `data-hints` */
   [data: `data-${string}`]: unknown
 }
@@ -17,9 +18,12 @@ export function Reveal({
   delay = 0,
   className = '',
   style,
+  rootMargin,
   ...rest
 }: RevealProps) {
-  const { ref, inView } = useInView<HTMLDivElement>()
+  const { ref, inView } = useInView<HTMLDivElement>(
+    rootMargin ? { threshold: 0, rootMargin } : undefined,
+  )
   return (
     <Tag
       ref={ref}

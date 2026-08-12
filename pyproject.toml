@@ -36,4 +36,7 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 markers = [
     "integration: tests that require a live PostgreSQL instance",
+    "verify_stage02_gate: tests that invoke verify-stage-02 with pytest (excluded from gate suite)",
+    "publisher_only: publisher-workspace tests that mutate or rebuild publication artifacts",
+    "canonical_migration: canonical storage migration tests that need the isolated derived database",
 ]

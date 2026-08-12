@@ -1,0 +1,27 @@
+{
+  "document_version": "0.1",
+  "phase": "2_runbook_corrected",
+  "phase_2_status": "WAITING_FOR_THREE_CUSTODIANS",
+  "security_remediation_status": "PARTIAL",
+  "security_report_status": "DRAFT",
+  "runtime_contract": "PARTIAL_RUNTIME_VERIFIED",
+  "confirmed_custody_model": "MULTI_CUSTODIAN_2_OF_3",
+  "confirmed_limited_operator_auth_method": "userpass",
+  "limited_operator_live_verification": "PASS",
+  "custody_ceremony": "WAITING_FOR_THREE_CUSTODIANS",
+  "runbook": "ops/vault/runbooks/multi-custodian-rekey-ceremony.md",
+  "vault_mutations_this_step": false,
+  "secrets_read_or_written_this_step": false,
+  "root_revocation": "NOT_STARTED",
+  "phase_3_started": false,
+  "review_zip_created": false,
+  "findings": [
+    {"id": "initial_root_token_available", "status": "OPEN"},
+    {"id": "limited_operator_identity_absent", "status": "CLOSED", "evidence": "limited-operator-verification.json"},
+    {"id": "vault_key_custody_decision_required", "status": "OPEN", "note": "decision confirmed; ceremony not executed"},
+    {"id": "pgp_keys_shared_keyring_empty_passphrase", "status": "OPEN"},
+    {"id": "multi_custodian_separation_absent", "status": "OPEN"},
+    {"id": "loader_restart_reauth_procedure_absent", "status": "CLOSED"}
+  ],
+  "note": "Runbook corrected for PGP format, verify-mandatory rekey, mandatory seal/unseal drill, and snapshot non-rollback. No live rekey."
+}

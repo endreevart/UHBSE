@@ -1,0 +1,689 @@
+{
+  "baseline_status": "PASS",
+  "changeset": "stage-03-implementation-changeset-01",
+  "changeset_version": "0.2.3",
+  "checks": [
+    {
+      "category": "baseline",
+      "detail": "baseline status='PASS'",
+      "name": "baseline_status_pass",
+      "status": "PASS"
+    },
+    {
+      "category": "baseline",
+      "detail": "9 controlled files, all_unchanged=True",
+      "name": "controlled_prior_stage_nine_files_unchanged",
+      "status": "PASS"
+    },
+    {
+      "category": "baseline",
+      "detail": "verified 11 entries (design v0.7.4)",
+      "name": "design_baseline_v074_manifest_verified",
+      "status": "PASS"
+    },
+    {
+      "category": "baseline",
+      "detail": "verified 8 entries (plan v0.3.5)",
+      "name": "implementation_plan_v035_manifest_verified",
+      "status": "PASS"
+    },
+    {
+      "category": "baseline",
+      "detail": "no prior-stage restoration was performed",
+      "name": "baseline_check_performed_no_auto_restore",
+      "status": "PASS"
+    },
+    {
+      "category": "gate_state",
+      "detail": "gate_open=True changeset='stage-03-implementation-changeset-01'",
+      "name": "implementation_gate_open_for_this_changeset",
+      "status": "PASS"
+    },
+    {
+      "category": "gate_state",
+      "detail": "6 authorized paths",
+      "name": "authorized_changeset_paths_exist",
+      "status": "PASS"
+    },
+    {
+      "category": "gate_state",
+      "detail": "11 capabilities remain forbidden",
+      "name": "forbidden_capabilities_still_closed",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "canonical-db service present",
+      "name": "canonical_service_declared",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "image='postgres:16'",
+      "name": "canonical_service_postgres_16",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "ports=['5436:5432']",
+      "name": "canonical_service_planned_port",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "volumes=['uhbse_canonical_dev_data:/var/lib/postgresql/data']",
+      "name": "canonical_service_dedicated_volume",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "POSTGRES_DB='uhbse_canonical_dev'",
+      "name": "canonical_service_planned_database",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "canonical=['canonical-net'] raw=[]",
+      "name": "canonical_network_isolated_from_raw_services",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "canonical-db.env untracked (runtime-only)",
+      "name": "canonical_env_file_not_committed",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "env_file=['canonical-db.env']",
+      "name": "canonical_env_file_referenced_by_compose",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "canonical-db.env listed in .gitignore",
+      "name": "canonical_env_file_gitignored",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "config/canonical-db.env.template",
+      "name": "canonical_env_template_present",
+      "status": "PASS"
+    },
+    {
+      "category": "infrastructure",
+      "detail": "all secret assignments are placeholders",
+      "name": "canonical_env_template_has_no_secret_values",
+      "status": "PASS"
+    },
+    {
+      "category": "migrations",
+      "detail": "4 migrations, contiguous from 0001",
+      "name": "migrations_discoverable",
+      "status": "PASS"
+    },
+    {
+      "category": "migrations",
+      "detail": "no INSERT/UPDATE/DELETE/COPY/TRUNCATE/DROP or cross-database extension",
+      "name": "migrations_contain_no_data_statements",
+      "status": "PASS"
+    },
+    {
+      "category": "migrations",
+      "detail": "guarded CREATE statements present",
+      "name": "migrations_are_idempotent_by_construction",
+      "status": "PASS"
+    },
+    {
+      "category": "migrations",
+      "detail": "accepted plan defines no reverse DDL; up->down->up not applicable",
+      "name": "down_migrations_absent_as_planned",
+      "status": "PASS"
+    },
+    {
+      "category": "migrations",
+      "detail": "no raw source relation names in migrations",
+      "name": "migrations_reference_no_raw_relations",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "3 accepted migrations byte identical",
+      "name": "published_migrations_are_immutable",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "0004_storage_contract_hardening.sql present",
+      "name": "schema_corrections_use_a_new_forward_only_migration",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "canonical-definition-baseline.json pins normalized definitions",
+      "name": "definition_baseline_is_committed_and_self_consistent",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "pinned definitions were produced by exactly these migration bytes",
+      "name": "definition_baseline_traces_to_the_accepted_migrations",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "8 of 8 sections pinned",
+      "name": "definition_baseline_covers_every_pinned_section",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "18 hardening constraints pinned",
+      "name": "provenance_hardening_constraints_are_pinned",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "a missing, skipped or failing integration suite blocks publication",
+      "name": "integration_migration_suite_is_mandatory",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "9 gate inputs bundled so a clean extraction fails identically",
+      "name": "stage_02_gate_inputs_travel_with_the_bundle",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "open: ['canonical_loader_runtime_principal_undefined', 'encounter_provider_id_population_disagreement', 'source_subject_key_opacity_undefined', 'stage02_relationship_manifest_drift', 'temporal_precision_field_absent_from_model']",
+      "name": "pre_live_load_blockers_are_recorded_open",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "migration 0004 stays applicable while live load is blocked",
+      "name": "open_blockers_do_not_block_schema_only_migration",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "stage-03-design-report.md carries the audited bytes",
+      "name": "frozen_design_report_match",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "stage-03-design-verification.json carries the audited bytes",
+      "name": "frozen_design_verification_match",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "36 frozen inputs byte identical",
+      "name": "all_frozen_evidence_unchanged",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "no evidence was repaired automatically; recovery is a confirmed human action",
+      "name": "automatic_restore_performed",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "7 categories pinned including the two generated Design evidence files no manifest covers",
+      "name": "frozen_baseline_covers_every_category",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "no gate, suite or publisher can repair frozen evidence",
+      "name": "recovery_unreachable_from_the_pipeline",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "every publishing test runs in a throwaway workspace copy",
+      "name": "publication_tests_are_isolated",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "the publication pipeline runs under an exclusive inter-process lock",
+      "name": "publication_lock_verified",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "no transient publication-lock artifact is a review bundle member; uv.lock is a dependency lockfile, is unrelated to publication locking, and is bundled",
+      "name": "publication_lock_excluded_from_bundle",
+      "status": "PASS"
+    },
+    {
+      "category": "isolation",
+      "detail": "independent check reports subject-root-analysis.json, identity-linkage-assessment.json; Stage 02 not modified",
+      "name": "stage_02_manifest_mismatches_enumerated",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "2 OPEN BLOCKS_LIVE_LOAD conflicts enforced as FAIL checks",
+      "name": "every_open_blocking_conflict_is_a_gate_check",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "gate FAIL with blockers ['canonical_loader_runtime_principal_undefined', 'encounter_provider_id_population_disagreement', 'source_subject_key_opacity_undefined', 'stage02_relationship_manifest_drift', 'temporal_precision_field_absent_from_model']",
+      "name": "all_five_pre_live_load_blockers_fail_closed",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "neither contract exists, so both blockers stay OPEN: no accepted release defines subject_key_transformation_contract at its authoritative path artifacts/stage-03/canonical-id-contract.yaml; no accepted release defines canonical_loader_runtime_contract at its authoritative path artifacts/stage-03-implementation/security-runtime-plan.yaml",
+      "name": "blocker_resolution_requires_a_structured_contract",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "only keyed PRFs are accepted; bare SHA-256, hash, digest and unqualified HMAC are rejected",
+      "name": "unkeyed_digests_cannot_close_the_subject_key_blocker",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "36 frozen inputs identical before and after; no repair, no manifest written, no database connection, no clinical row read",
+      "name": "gate_evaluation_is_read_only",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "REPRODUCED_CURRENT_ARTIFACT; archive sha256 20368132847e291595cf38550bdef9141a74f49967c21c88f66369bc7b718fa9; no historical corruption asserted without the hash of a corrupted archive",
+      "name": "design_archive_finding_is_hash_bound",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "a changeset cannot author the contract that unblocks it; authoritative paths are canonical_loader_runtime_contract -> artifacts/stage-03-implementation/security-runtime-plan.yaml (Stage 03 Implementation Plan), subject_key_transformation_contract -> artifacts/stage-03/canonical-id-contract.yaml (Stage 03 Design)",
+      "name": "contract_authority_excludes_the_changeset_directory",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "each authoritative path is listed in its owning release manifest",
+      "name": "authoritative_paths_are_release_manifest_covered",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "names that contain a canonical identifier without being one are rejected",
+      "name": "algorithm_matching_is_exact_not_substring",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "2 conflicts, 2 open and blocking, registry sha256 cc5f3a8b815d1533bef6361ed8f2472cee157b681315e1da604a51ee3752b54b; every OPEN blocking conflict is a gate check",
+      "name": "accepted_artifact_conflict_registry_valid",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "damaging the registry adds a failure instead of silently removing blocker checks",
+      "name": "conflict_registry_validity_is_a_gate_check",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "conflict checks are derived from the registry alone",
+      "name": "no_conflict_identifier_is_hardcoded",
+      "status": "PASS"
+    },
+    {
+      "category": "hardening",
+      "detail": "both contract blockers stay OPEN: no accepted release defines either contract",
+      "name": "no_contract_instance_was_created",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "7 tables for 7 pilot entities",
+      "name": "schema_contract_covers_exactly_pilot_entities",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "Provenance has no table; it is an embedded jsonb column",
+      "name": "provenance_is_embedded_not_a_table",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "6/6 entities requiring provenance carry the column",
+      "name": "provenance_column_present_where_required",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "provenance-contract entity_exceptions.SourceSystem honoured",
+      "name": "source_system_carries_no_row_provenance",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "no global_patient_id, global_subject_id or raw primary key columns",
+      "name": "no_forbidden_identifier_columns",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "unique (source_system_id, source_subject_key)",
+      "name": "subject_identity_is_source_local_unique",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "unique source_record_locator",
+      "name": "source_locator_unique",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "single-column canonical identifier primary key on every pilot table",
+      "name": "canonical_id_unique_index_per_entity",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "every foreign key target is loaded earlier",
+      "name": "fk_graph_matches_pipeline_load_order",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "exactly-one typed value constraint declared over the five typed columns",
+      "name": "subject_characteristic_typed_value_xor_declared",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "at least one of characteristic_code or concept_id; XOR-only identity forbidden",
+      "name": "subject_characteristic_identity_not_xor",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "subject_characteristic.raw_value is NOT NULL",
+      "name": "raw_value_preserved_after_normalization",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "no XOR invented for an entity the model does not constrain",
+      "name": "observation_component_typed_value_not_invented",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "all *_at columns are timezone-aware",
+      "name": "temporal_columns_are_timestamptz",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "encounter and observation require missingness_reason when clinical time is null",
+      "name": "missing_clinical_time_requires_documented_reason",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "deferred and out-of-scope references are constrained to NULL",
+      "name": "pilot_null_only_columns_match_accepted_plan",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "profile validation constraint present",
+      "name": "provenance_profile_check_on_every_provenance_table",
+      "status": "PASS"
+    },
+    {
+      "category": "schema_contract",
+      "detail": "contract_fingerprint=99e3610fb9f828ec...",
+      "name": "schema_contract_fingerprint_stable",
+      "status": "PASS"
+    },
+    {
+      "category": "roles",
+      "detail": "4 roles declared",
+      "name": "all_planned_roles_declared",
+      "status": "PASS"
+    },
+    {
+      "category": "roles",
+      "detail": "roles are NOLOGIN and no password appears in any migration",
+      "name": "roles_created_nologin",
+      "status": "PASS"
+    },
+    {
+      "category": "roles",
+      "detail": "canonical_loader holds SELECT and INSERT only",
+      "name": "loader_receives_select_and_insert_only",
+      "status": "PASS"
+    },
+    {
+      "category": "roles",
+      "detail": "no UPDATE, DELETE or TRUNCATE granted to canonical_loader",
+      "name": "loader_denied_update_delete_truncate",
+      "status": "PASS"
+    },
+    {
+      "category": "roles",
+      "detail": "canonical_validator_ro is read-only",
+      "name": "validator_receives_select_only",
+      "status": "PASS"
+    },
+    {
+      "category": "roles",
+      "detail": "canonical_evidence owned by canonical_owner",
+      "name": "schema_owned_by_canonical_owner",
+      "status": "PASS"
+    },
+    {
+      "category": "roles",
+      "detail": "no implicit object creation for PUBLIC",
+      "name": "public_schema_create_revoked",
+      "status": "PASS"
+    },
+    {
+      "category": "safety",
+      "detail": "no raw source relation appears in canonical storage code",
+      "name": "canonical_code_reads_no_raw_relations",
+      "status": "PASS"
+    },
+    {
+      "category": "safety",
+      "detail": "canonical tooling refuses raw databases and raw ports",
+      "name": "canonical_target_guard_present",
+      "status": "PASS"
+    },
+    {
+      "category": "safety",
+      "detail": "raw tooling refuses the canonical database",
+      "name": "raw_target_guard_present",
+      "status": "PASS"
+    },
+    {
+      "category": "safety",
+      "detail": "no cohort selection, extraction or load implementation present",
+      "name": "no_pilot_cohort_or_load_code",
+      "status": "PASS"
+    },
+    {
+      "category": "safety",
+      "detail": "no literal credential-bearing DSN or secret included: no connection string, password, secret, token or key value appears in a changeset artifact",
+      "name": "changeset_artifacts_have_no_secrets_or_dsn",
+      "status": "PASS"
+    },
+    {
+      "category": "stage_02_blocker",
+      "detail": "gate_id=stage02_relationship_integrity_pre_live_load",
+      "name": "pre_live_load_gate_executable",
+      "status": "PASS"
+    },
+    {
+      "category": "stage_02_blocker",
+      "detail": "gate status=FAIL, failed checks=['relationship_manifest_hashes_match', 'stage02_relationship_manifest_drift', 'canonical_loader_runtime_principal_undefined', 'source_subject_key_opacity_undefined', 'temporal_precision_field_absent_from_model', 'encounter_provider_id_population_disagreement']",
+      "name": "pre_live_load_gate_fails_on_current_stage_02_drift",
+      "status": "PASS"
+    },
+    {
+      "category": "stage_02_blocker",
+      "detail": "Stage 02 bytes identical before and after gate evaluation",
+      "name": "pre_live_load_gate_did_not_modify_stage_02",
+      "status": "PASS"
+    },
+    {
+      "category": "stage_02_blocker",
+      "detail": "7 live operations blocked while the gate fails",
+      "name": "gate_blocks_every_live_operation",
+      "status": "PASS"
+    },
+    {
+      "category": "stage_02_blocker",
+      "detail": "storage creation and migration operations never consult the live-load gate",
+      "name": "gate_does_not_block_empty_storage_or_migrations",
+      "status": "PASS"
+    },
+    {
+      "category": "stage_02_blocker",
+      "detail": "gate repaired nothing and restored nothing",
+      "name": "gate_performs_no_repair",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "present",
+      "name": "artifact_changeset-01-plan.yaml",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "present",
+      "name": "artifact_unresolved-changeset-01-decisions.yaml",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "present",
+      "name": "artifact_accepted-artifact-conflicts.yaml",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "present",
+      "name": "artifact_canonical-schema-contract.json",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "present",
+      "name": "artifact_canonical-definition-baseline.json",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "present",
+      "name": "artifact_pre-live-load-blockers.yaml",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "present",
+      "name": "artifact_live-load-contract-schema.yaml",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "present",
+      "name": "artifact_contract-authority-policy.yaml",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "design='0.7.4' plan='0.3.5'",
+      "name": "plan_declares_frozen_versions",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "implementation_status='empty_storage_and_migrations_only'",
+      "name": "plan_declares_no_data_load",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "2 conflicts recorded, none repaired",
+      "name": "detected_artifact_conflicts_recorded",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "conflicts recorded without touching frozen artifacts",
+      "name": "no_design_or_plan_artifact_modified_for_conflicts",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "3 decisions block the next phase",
+      "name": "blocking_decisions_declared_consistently",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "changeset report is DRAFT and never claims FINAL",
+      "name": "report_status_draft",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "8 content entries verified",
+      "name": "changeset_manifest_hashes_match",
+      "status": "PASS"
+    },
+    {
+      "category": "artifacts",
+      "detail": "manifest excludes report, verification and release evidence",
+      "name": "changeset_manifest_excludes_generated_evidence",
+      "status": "PASS"
+    }
+  ],
+  "checks_failed": 0,
+  "checks_passed": 109,
+  "checks_total": 109,
+  "content_manifest_sha256": "dde9decbe04c6031fdd94d7e4221f8fbf63ecc81a9cfedb78b84646f7c6d7e6b",
+  "design_baseline_version": "0.7.4",
+  "failures": [],
+  "implementation_plan_version": "0.3.5",
+  "migration_evidence_present": true,
+  "overall_status": "PASS",
+  "publish_artifacts": true,
+  "report_sha256": "373d0174e079448806fe30ab630a94453c1939deff5a95dfca7126c796bf6e3e",
+  "report_status": "DRAFT",
+  "schema_contract_fingerprint": "99e3610fb9f828ec8982de766c57da754547ad007a76059062e549ca07872536",
+  "stage02_pre_live_load_gate": {
+    "failed_checks": [
+      "relationship_manifest_hashes_match",
+      "stage02_relationship_manifest_drift",
+      "canonical_loader_runtime_principal_undefined",
+      "source_subject_key_opacity_undefined",
+      "temporal_precision_field_absent_from_model",
+      "encounter_provider_id_population_disagreement"
+    ],
+    "gate_id": "stage02_relationship_integrity_pre_live_load",
+    "repairs_performed": 0,
+    "status": "FAIL"
+  },
+  "title": "Canonical Storage Foundation",
+  "verified_at": "2026-08-07T14:02:45.614623+00:00"
+}

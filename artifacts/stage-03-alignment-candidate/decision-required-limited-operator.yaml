@@ -1,0 +1,53 @@
+# Decision — Root Token and Limited Operator (sanitised)
+# Status: DRAFT — no automatic root revocation in this task.
+
+stage: "03"
+phase: alignment_candidate
+document_version: "0.1.0"
+decision_id: DECISION_REQUIRED_LIMITED_OPERATOR
+report_status: DRAFT
+blocks_live_load: true
+blocks_canonical_loader_runtime_contract: true
+
+current_root_token_status:
+  finding_id: initial_root_token_available
+  status: OPEN
+  revoked_in_this_task: false
+  note: >
+    Initial root token remains available for operator bootstrap. This task does not
+    automatically revoke it. Finding stays OPEN until a separate confirmed operation.
+
+proposed_limited_operator_policy:
+  name: uhbse-operator-limited
+  capabilities_intended:
+    - read health/status
+    - manage AppRole secret-id issuance for uhbse-canonical-loader only
+    - read/write uhbse KV paths used by the pilot
+  forbidden:
+    - root policy
+    - unrestricted sudo
+    - unrelated mounts
+
+proposed_operator_authentication_method:
+  primary: approle_or_userpass_with_mfa_later
+  interim_pilot: root_token_manual_custody
+  note: Interim only; must be replaced before live load.
+
+verification_procedure_limited_operator:
+  - Create limited policy uhbse-operator-limited
+  - Issue non-root token or AppRole bound to that policy
+  - Confirm root paths are denied
+  - Confirm AppRole secret-id wrap for uhbse-canonical-loader is allowed
+  - Confirm KV read/write for uhbse/canonical/* is allowed as designed
+
+root_token_revocation_procedure:
+  - Confirm limited operator path works end-to-end
+  - vault token revoke <root-token> (value never logged)
+  - Verify subsequent root-token use fails
+  - Update finding initial_root_token_available to CLOSED only after evidence
+
+recovery_procedure:
+  - Use PGP-encrypted unseal/recovery shares per custody model decision
+  - Re-unseal Vault if sealed
+  - Re-establish limited operator identity
+  - Do not re-introduce long-lived root for routine operations

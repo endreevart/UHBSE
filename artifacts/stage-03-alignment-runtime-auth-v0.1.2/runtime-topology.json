@@ -1,0 +1,14 @@
+{
+  "kind": "STATIC",
+  "title": "Runtime topology",
+  "model": "single_container_process_supervisor",
+  "container": "human-simulator-canonical-loader-runtime",
+  "agent_and_child_same_namespace": true,
+  "secrets_filesystem": "container_local_tmpfs:/run/uhbse-vault",
+  "host_run_uhbse_vault_shared": false,
+  "note": "Host path /run/uhbse-vault is NOT the container tmpfs. Credentials are delivered via docker exec into the container-local tmpfs.",
+  "delivery": "stdin_to_docker_exec_files_mode_0600",
+  "compose_secrets": false,
+  "repository_bind_mount_for_secrets": false,
+  "docker_named_volume_for_secrets": false
+}

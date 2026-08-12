@@ -1,0 +1,143 @@
+stage: "03"
+phase: implementation_planning
+title: Pilot Vertical Slice
+document_version: "0.3.6"
+design_baseline_version: "0.7.5"
+implementation_status: planning_only_not_started
+
+pilot_source:
+  source_system: magerya_api
+  audit_role: mg_audit_ro
+  subject_root_status: SUBJECT_ROOT_CONFIRMED
+  schema_profile: artifacts/stage-01/schema-profile.json
+
+source_relation_graph:
+  - source_relation: magerya_api.account_patient
+    entities: [SourceRecord, Subject, SubjectCharacteristic]
+    construction_groups:
+      - source_a_source_record_account_patient
+      - source_a_account_patient_subject
+      - source_a_account_patient_characteristics
+    cardinality:
+      SourceRecord: one_per_row
+      Subject: one_per_row
+      SubjectCharacteristic: zero_to_many_per_row
+  - source_relation: magerya_api.appointment_appointment
+    entities: [SourceRecord, Encounter]
+    construction_groups:
+      - source_a_source_record_appointment
+      - source_a_appointment_encounter
+    cardinality:
+      SourceRecord: one_per_row
+      Encounter: one_per_row
+  - source_relation: magerya_api.document_analysisresult
+    entities: [SourceRecord, Observation]
+    construction_groups:
+      - source_a_source_record_analysisresult
+      - source_a_observation_header
+    cardinality:
+      SourceRecord: one_per_row
+      Observation: one_per_row
+  - source_relation: magerya_api.document_analysisresultitem
+    entities: [SourceRecord, ObservationComponent]
+    construction_groups:
+      - source_a_source_record_analysisresultitem
+      - source_a_observation_component
+    cardinality:
+      SourceRecord: one_per_row
+      ObservationComponent: one_per_row
+    parent_link:
+      field: analysis_result_id
+      parent_entity: Observation
+      parent_id_field: observation_id
+
+pilot_entities:
+  - entity: SourceSystem
+    table_entity: true
+    bootstrap: true
+    source_rows: false
+  - entity: SourceRecord
+    table_entity: true
+    scope: one_per_participating_source_row
+    source_relations: all_pilot_source_relations
+    locator: hmac_per_canonical_id_contract
+    raw_primary_key_open_storage: forbidden
+    load_before: dependent_evidence_records
+  - entity: Subject
+    table_entity: true
+    source_relation: magerya_api.account_patient
+    construction_group: source_a_account_patient_subject
+  - entity: SubjectCharacteristic
+    table_entity: true
+    source_relation: magerya_api.account_patient
+    construction_group: source_a_account_patient_characteristics
+    cardinality: zero_to_many_per_row
+  - entity: Encounter
+    table_entity: true
+    source_relation: magerya_api.appointment_appointment
+    construction_group: source_a_appointment_encounter
+    deferred_fields:
+      - field: provider_id
+        status: DEFERRED_UNTIL_PROVIDER_CONSTRUCTION
+        reason: Provider construction group absent; doctor_id not copied
+        nullable: true
+        logging: column_name_only_no_value
+        aligns_with:
+          - record-construction-contract.yaml::source_a_appointment_encounter.deferred_fields.provider_id
+          - pipeline-plan.yaml::fk_dependencies.Encounter.provider_id
+  - entity: Observation
+    table_entity: true
+    source_relation: magerya_api.document_analysisresult
+    construction_group: source_a_observation_header
+    deferred_fields:
+      - field: encounter_id
+        status: DEFERRED_FOR_PILOT
+        reason: pilot design sets encounter_id null; Encounter not required for Observation load
+        nullable: true
+        logging: column_name_only_no_value
+  - entity: ObservationComponent
+    table_entity: true
+    source_relation: magerya_api.document_analysisresultitem
+    construction_group: source_a_observation_component
+    parent_observation_link: analysis_result_id
+  - entity: Provenance
+    table_entity: false
+    embedded: true
+    representation: validated_jsonb_in_evidence_row
+    notes: cross-cutting embedded component per canonical-model.yaml
+
+construction_groups_required: all_source_a_pilot_construction_groups
+
+source_record_policy:
+  rule: one SourceRecord per source row in any pilot construction group
+  relations:
+    - magerya_api.account_patient
+    - magerya_api.appointment_appointment
+    - magerya_api.document_analysisresult
+    - magerya_api.document_analysisresultitem
+  locator: hmac_sha256_canonical_id_contract
+  raw_primary_key_open_storage: forbidden
+  emission_order: before_dependent_evidence_record
+
+forbidden_in_pilot:
+  - source_b_mappings
+  - Provider_entity_load
+  - identity_linkage_merge
+  - global_patient_id
+  - global_subject_id
+  - cross_source_subject_resolution
+  - simulation_entities
+  - prediction_entities
+
+identity_policy:
+  id_namespace_version: "0.7.0"
+  key_version_required: true
+
+provenance_policy:
+  embedded_only: true
+  separate_table_load: forbidden
+  pipeline_run_id_in_provenance: forbidden
+
+technical_metadata:
+  pipeline_record_emission:
+    fields: [pipeline_run_id, canonical_entity, canonical_id, payload_hash, action, emitted_at]

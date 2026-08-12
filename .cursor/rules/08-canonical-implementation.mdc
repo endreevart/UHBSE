@@ -1,0 +1,34 @@
+---
+description: Stage 03 implementation planning constraints
+alwaysApply: true
+---
+
+Stage 03 is in **implementation planning** until an explicit implementation gate is opened.
+
+Design baseline **v0.7.5** (alignment candidate) under `artifacts/stage-03/` is the active planning input. Published baseline **v0.7.4** remains frozen in `artifacts/external-review/stage-03-design-v0.7.4-review.zip`. Do not edit published v0.7.4 artifacts during planning unless opening a new design release.
+
+Forbidden during implementation planning:
+
+- creating a canonical database;
+- writing or applying SQL DDL;
+- running ETL or loading clinical rows;
+- reading or transferring patient rows for pilot execution;
+- modifying raw Source A / Source B;
+- modifying artifacts under artifacts/stage-01/ or artifacts/stage-02/;
+- modifying approved Stage 03 Design artifacts or design-content-manifest.sha256;
+- linking patients across sources;
+- creating global_patient_id or global_subject_id;
+- starting simulation or prediction engine work;
+- promoting implementation-plan-report.md to FINAL.
+
+Required planning invariants:
+
+- first pilot uses Source A (`magerya_api`) only via read-only `mg_audit_ro`;
+- derived target is isolated (`uhbse_canonical_dev.canonical_evidence` planned only);
+- canonical IDs use HMAC-SHA256 with id_namespace_version 0.7.0;
+- HMAC secrets are runtime-only and never committed;
+- secret change without key_version bump is forbidden;
+- provenance and temporal contracts from design baseline apply;
+- quarantine is derived-only; raw data is never mutated.
+
+When editing planning artifacts, update implementation-plan-manifest.sha256 via stage-03-implementation-plan-check.

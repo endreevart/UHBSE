@@ -1,16 +1,14 @@
 import { useI18n } from '../i18n'
 import { Reveal } from './Reveal'
+import { SectionHead } from './SectionHead'
 
 export function SectionImpact() {
   const { t } = useI18n()
 
   return (
-    <section className="section">
+    <section className="section" id="impact" aria-labelledby="impact-heading">
       <div className="shell">
-        <Reveal className="section__head">
-          <p className="kicker">{t.impact.kicker}</p>
-          <h2 className="display display--l">{t.impact.title}</h2>
-        </Reveal>
+        <SectionHead headingId="impact-heading" title={t.impact.title} />
 
         <div className="impact">
           {t.impact.groups.map((group, i) => (

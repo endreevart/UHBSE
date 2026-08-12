@@ -1,0 +1,130 @@
+document_version: "0.3.6"
+design_baseline_version: "0.7.5"
+implementation_status: planning_only_not_started
+
+decisions:
+  - id: postgresql_local_container
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: PostgreSQL 16 in separate local container on port 5436 with dedicated volume
+    rationale: sufficient for first pilot; production topology deferred
+    must_resolve_before: production_deployment
+
+  - id: orchestrator
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: plain Python CLI orchestrator for pilot
+    rationale: minimal moving parts for deterministic pilot
+    must_resolve_before: multi-environment automation
+
+  - id: provenance_representation
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: embedded validated JSONB in each evidence row
+    rationale: matches canonical-model Provenance.embedded=true
+    must_resolve_before: implementation DDL authoring
+
+  - id: source_record_scope
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: one SourceRecord per participating source row across all four relations with explicit source_system_id and source_relation fields
+    rationale: design v0.7.4 SourceRecord construction groups
+    must_resolve_before: implementation coding
+
+  - id: pilot_cohort_100
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: deterministic cohort of at most 100 Subjects via account_patient.id ASC LIMIT 100 with FK referential closure
+    rationale: bounded blast radius; cohort_policy in pipeline-plan.yaml
+    must_resolve_before: first_live_load
+
+  - id: idempotent_promotion_policy
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: INSERT / NOOP_ALREADY_PUBLISHED / SOURCE_PAYLOAD_CHANGED per idempotent_promotion block
+    rationale: no silent upsert or update of published evidence
+    must_resolve_before: first_live_load
+
+  - id: source_snapshot_fingerprint
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: per-relation HMAC aggregates plus aggregate fingerprint; identical snapshot requires full contract tuple
+    rationale: transaction_id_hash alone insufficient to prove identical input
+    must_resolve_before: first_live_load
+
+  - id: canonical_id_unique_index
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: unique index on canonical_id per entity table required at DDL time
+    rationale: idempotency and promotion conflict detection depend on uniqueness
+    must_resolve_before: implementation DDL authoring
+
+  - id: dev_secret_injection
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: runtime environment file outside git for local HMAC secret
+    rationale: no secrets in repository
+    must_resolve_before: first_live_load
+
+  - id: pilot_cohort_1000
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: second pilot expands to 1000 Subjects after 100-subject reconciliation PASS
+    rationale: staged scale-up
+    must_resolve_before: medium_scale_load
+
+  - id: full_run_confirmation
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: full-unbounded run requires separate explicit confirmation gate
+    rationale: prevent accidental full extract
+    must_resolve_before: full_production_scale_load
+
+  - id: production_secret_manager
+    resolution_status: OPEN
+    blocking_for_next_phase: false
+    decision: production secret manager selection deferred
+    rationale: not required for local pilot
+    must_resolve_before: production_deployment
+
+  - id: table_partitioning
+    resolution_status: OPEN
+    blocking_for_next_phase: false
+    decision: partitioning strategy deferred until volume measured
+    rationale: unknown pilot row counts
+    must_resolve_before: large_scale_observation_storage
+
+  - id: quarantine_retention_ttl
+    resolution_status: OPEN
+    blocking_for_next_phase: false
+    decision: quarantine retention TTL not fixed in planning
+    rationale: operational policy
+    must_resolve_before: operations_handbook
+
+  - id: stage02_relationship_manifest_drift
+    resolution_status: OPEN
+    blocking_for_next_phase: false
+    decision: >-
+      artifacts/stage-02/relationship-manifest.sha256 disagrees with the accepted bytes of
+      subject-root-analysis.json and identity-linkage-assessment.json, so
+      tests/test_verify_stage_02.py::test_live_verify_stage_02_end_to_end fails on its
+      relationship_manifest check. Stage 03 does not read relationship-manifest.sha256 and
+      Stage 02 artifacts are immutable during implementation planning, so nothing is changed here.
+    rationale: >-
+      The drift predates v0.3.5 and originates from earlier live assess-source-relationship runs
+      that rewrote both the analysis artifacts and the manifest, after which only the
+      byte-controlled analysis artifacts were restored to the accepted baseline. Repairing it
+      requires reopening Stage 02, which is outside the implementation planning gate.
+    must_resolve_before: stage_02_reopen_or_first_live_load
+
+  - id: pilot_secret_provider
+    resolution_status: OPEN
+    blocking_for_next_phase: false
+    decision: DECISION_REQUIRED_SECRET_PROVIDER
+    rationale: >
+      No vault/aws/gcp/azure/k8s secret-store reference is configured for pilot runtime.
+      runtime_environment_file_outside_git is dev-only HMAC injection and does not satisfy
+      live-load contract secret-reference schemes.
+    must_resolve_before: first_live_load
+
+open_blocking_count: 0

@@ -11,7 +11,25 @@ build/
 
 # Secrets and local config
 private/sources.yaml
+private/uhbse-operator-limited.password
+private/vault-*
 db.env
+db-audit.env
+db-kgz.env
+canonical-db.env
+
+# Vault TLS material and any local init artifacts (never commit)
+ops/vault/tls/
+ops/vault/pgp/
+ops/vault/operator-custody/
+ops/vault/**/*.pem
+ops/vault/**/*init*.json
+ops/vault/**/unseal*
+ops/vault/**/root-token*
+ops/vault/**/*.asc
+ops/vault/**/*.gpg
+ops/vault/**/*secret_id*
+ops/vault/**/*role_id*
 
 # Database dumps (keep local, never commit)
 *.dump
@@ -21,7 +39,7 @@ dumps/
 artifacts/**/raw/
 artifacts/**/samples/
 
-# OS / IDE
-.DS_Store
+# External review bundles (generated locally, not versioned)
+artifacts/external-review/
 .idea/
 *.swp

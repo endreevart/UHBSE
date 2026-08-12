@@ -1,0 +1,473 @@
+stage: "03"
+phase: design
+source_system: magerya_api
+source_label: Source A
+draft_version: "0.6.0"
+schema_profile: artifacts/stage-01/schema-profile.json
+
+catalog_mappings:
+  - source_relation: magerya_api.diagnosis_diagnosis
+    source_column: id
+    canonical_entity: Concept
+    canonical_field: source_concept_key
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: catalog_key
+    evidence: Stage 01 REFERENCE role
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: required
+  - source_relation: magerya_api.diagnosis_diagnosis
+    source_column: name
+    canonical_entity: Concept
+    canonical_field: display_name
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: copy_text
+    evidence: Stage 01 REFERENCE role
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: nullable
+  - source_relation: magerya_api.diagnosis_medicines
+    source_column: id
+    canonical_entity: Concept
+    canonical_field: source_concept_key
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: catalog_key
+    evidence: Stage 01 medicines catalog
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: required
+  - source_relation: magerya_api.diagnosis_medicines
+    source_column: name
+    canonical_entity: Concept
+    canonical_field: display_name
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: copy_text
+    evidence: Stage 01 medicines catalog
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: nullable
+  - source_relation: magerya_api.diagnosis_procedures
+    source_column: id
+    canonical_entity: Concept
+    canonical_field: source_concept_key
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: catalog_key
+    evidence: Stage 01 procedures catalog
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: required
+  - source_relation: magerya_api.diagnosis_procedures
+    source_column: name
+    canonical_entity: Concept
+    canonical_field: display_name
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: copy_text
+    evidence: Stage 01 procedures catalog
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: nullable
+  - source_relation: magerya_api.diagnosis_measurementunits
+    source_column: id
+    canonical_entity: Unit
+    canonical_field: source_unit_key
+    mapping_status: CONFIRMED_SCHEMA
+    data_level: REFERENCE_CATALOG
+    transformation: catalog_key
+    evidence: Stage 01 unit catalog
+    lossiness: catalog_only_not_patient_fact
+    nullable_decision: required
+
+mappings:
+  - source_relation: magerya_api.account_patient
+    source_column: id
+    canonical_entity: Subject
+    canonical_field: source_subject_key
+    mapping_status: CANDIDATE
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: subject_key_from_id
+    evidence: Stage 01 patients candidate; SUBJECT_ROOT_CONFIRMED
+    lossiness: surrogate_key_only
+    nullable_decision: required
+  - source_relation: magerya_api.account_patient
+    source_column: created
+    canonical_entity: SourceRecord
+    canonical_field: source_created_at
+    mapping_status: CANDIDATE
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: copy_system_timestamp
+    evidence: schema-profile column created
+    lossiness: system_time_not_clinical_time
+    nullable_decision: required
+  - source_relation: magerya_api.account_patient
+    source_column: modified
+    canonical_entity: SourceRecord
+    canonical_field: source_updated_at
+    mapping_status: CANDIDATE
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: copy_system_timestamp
+    evidence: schema-profile column modified
+    lossiness: system_time_not_clinical_time
+    nullable_decision: required
+  - source_relation: magerya_api.account_patient
+    source_column: birthdate
+    canonical_entity: SubjectCharacteristic
+    canonical_field: date_value
+    characteristic_code: source_birthdate
+    mapping_status: CANDIDATE
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: copy_date_as_characteristic
+    evidence: schema-profile birthdate column; stable demographic attribute
+    lossiness: source_local_birthdate_not_cross_source_merged
+    nullable_decision: nullable
+  - source_relation: magerya_api.account_patient
+    source_column: sex
+    canonical_entity: SubjectCharacteristic
+    canonical_field: categorical_value
+    characteristic_code: source_sex
+    mapping_status: CANDIDATE
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: copy_categorical_as_characteristic
+    evidence: schema-profile sex column; raw sex not biological_sex normalization
+    lossiness: raw_sex_not_biological_sex_normalization
+    nullable_decision: nullable
+  - source_relation: magerya_api.account_doctor
+    source_column: id
+    canonical_entity: Provider
+    canonical_field: source_provider_key
+    mapping_status: CANDIDATE
+    data_level: ATTRIBUTE_CONTAINER
+    transformation: provider_key_from_id
+    evidence: Stage 01 doctors candidate
+    lossiness: staff_identity_local_only
+    nullable_decision: required
+  - source_relation: magerya_api.appointment_appointment
+    source_column: id
+    canonical_entity: Encounter
+    canonical_field: encounter_id
+    mapping_status: CANDIDATE
+    data_level: PATIENT_EVENT
+    transformation: encounter_key_from_id
+    evidence: Stage 01 appointment EVENT
+    lossiness: none
+    nullable_decision: required
+  - source_relation: magerya_api.appointment_appointment
+    source_column: patient_id
+    canonical_entity: Encounter
+    canonical_field: subject_id
+    mapping_status: CANDIDATE
+    data_level: PATIENT_EVENT
+    transformation: fk_to_subject
+    evidence: FK to account_patient
+    lossiness: none
+    nullable_decision: required
+  - source_relation: magerya_api.appointment_appointment
+    source_column: doctor_id
+    canonical_entity: Encounter
+    canonical_field: provider_id
+    mapping_status: DEFERRED_UNTIL_PROVIDER_CONSTRUCTION
+    data_level: PATIENT_EVENT
+    transformation: not_copied_in_source_a_pilot
+    evidence: Provider construction group absent; pilot-slice and pipeline-plan defer provider_id
+    lossiness: deferred
+    nullable_decision: nullable
+    pilot_scope: excluded
+  - source_relation: magerya_api.appointment_appointment
+    source_column: created
+    canonical_entity: Encounter
+    canonical_field: recorded_at
+    mapping_status: CANDIDATE
+    data_level: PATIENT_EVENT
+    transformation: copy_system_timestamp
+    evidence: schema-profile column created
+    lossiness: system_time_not_clinical_occurrence
+    nullable_decision: required
+  - source_relation: magerya_api.appointment_appointment
+    source_column: created
+    canonical_entity: SourceRecord
+    canonical_field: source_created_at
+    mapping_status: CANDIDATE
+    data_level: PATIENT_EVENT
+    transformation: copy_system_timestamp
+    evidence: schema-profile column created
+    lossiness: system_time_not_clinical_time
+    nullable_decision: required
+  - source_relation: magerya_api.appointment_appointment
+    source_column: modified
+    canonical_entity: SourceRecord
+    canonical_field: source_updated_at
+    mapping_status: CANDIDATE
+    data_level: PATIENT_EVENT
+    transformation: copy_system_timestamp
+    evidence: schema-profile column modified
+    lossiness: system_time_only
+    nullable_decision: required
+  - source_relation: magerya_api.appointment_appointment
+    source_column: completed_at
+    canonical_entity: Encounter
+    canonical_field: completed_at
+    mapping_status: HYPOTHESIS
+    data_level: PATIENT_EVENT
+    transformation: copy_status_timestamp
+    evidence: completion timestamp column present; clinical completion semantics unconfirmed
+    lossiness: may_be_workflow_not_clinical_end
+    nullable_decision: nullable
+  - source_relation: magerya_api.appointment_appointment
+    source_column: next_appointment_date
+    canonical_entity: Encounter
+    canonical_field: missingness_reason
+    mapping_status: UNRESOLVED
+    data_level: PATIENT_EVENT
+    transformation: defer
+    grouping_rule: encounter_missingness_evidence
+    record_group: source_a_appointment_encounter
+    evidence: future appointment pointer; no canonical occurred_at mapping
+    unresolved_reason: no clinical encounter time column in schema profile
+    lossiness: not_mapped_to_clinical_time
+    nullable_decision: nullable
+  - source_relation: magerya_api.appointment_appointment
+    source_column: chat_end_time
+    canonical_entity: Encounter
+    canonical_field: missingness_reason
+    mapping_status: UNRESOLVED
+    data_level: PATIENT_EVENT
+    transformation: defer
+    grouping_rule: encounter_missingness_evidence
+    record_group: source_a_appointment_encounter
+    evidence: chat workflow timestamp
+    unresolved_reason: workflow timestamp not promoted to clinical time
+    lossiness: workflow_only
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresult
+    source_column: id
+    canonical_entity: Observation
+    canonical_field: observation_id
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_HEADER
+    transformation: observation_key_from_id
+    evidence: Stage 01 laboratory header candidate
+    lossiness: none
+    nullable_decision: required
+  - source_relation: magerya_api.document_analysisresult
+    source_column: patient_id
+    canonical_entity: Observation
+    canonical_field: subject_id
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_HEADER
+    transformation: fk_to_subject
+    evidence: FK to account_patient
+    lossiness: none
+    nullable_decision: required
+  - source_relation: magerya_api.document_analysisresult
+    source_column: sampling_date
+    canonical_entity: Observation
+    canonical_field: specimen_collected_at
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_HEADER
+    transformation: copy_clinical_timestamp
+    evidence: schema-profile sampling_date
+    lossiness: timezone_normalization_deferred
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresult
+    source_column: appointment_date
+    canonical_entity: Observation
+    canonical_field: observed_at
+    mapping_status: HYPOTHESIS
+    data_level: OBSERVATION_HEADER
+    transformation: copy_clinical_timestamp
+    evidence: appointment-linked sample date
+    lossiness: may_be_scheduling_not_collection
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresult
+    source_column: created
+    canonical_entity: Observation
+    canonical_field: recorded_at
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_HEADER
+    transformation: copy_system_timestamp
+    evidence: schema-profile created
+    lossiness: system_time_not_observed_at
+    nullable_decision: required
+  - source_relation: magerya_api.document_analysisresult
+    source_column: status
+    canonical_entity: Observation
+    canonical_field: status
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_HEADER
+    transformation: copy_status
+    evidence: schema-profile status
+    lossiness: source_status_vocab_unknown
+    nullable_decision: required
+  - source_relation: magerya_api.document_analysisresult
+    source_column: created
+    canonical_entity: SourceRecord
+    canonical_field: source_created_at
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_HEADER
+    transformation: copy_system_timestamp
+    evidence: schema-profile column created
+    lossiness: system_time_not_clinical_time
+    nullable_decision: required
+  - source_relation: magerya_api.document_analysisresult
+    source_column: modified
+    canonical_entity: SourceRecord
+    canonical_field: source_updated_at
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_HEADER
+    transformation: copy_system_timestamp
+    evidence: schema-profile column modified
+    lossiness: system_time_only
+    nullable_decision: required
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: id
+    canonical_entity: ObservationComponent
+    canonical_field: component_id
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: component_key_from_id
+    evidence: Stage 01 laboratory item candidate
+    lossiness: none
+    nullable_decision: required
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: analysis_result_id
+    canonical_entity: ObservationComponent
+    canonical_field: observation_id
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: fk_to_observation_header
+    evidence: parent header FK
+    lossiness: none
+    nullable_decision: required
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: name
+    canonical_entity: ObservationComponent
+    canonical_field: raw_code
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: copy_text
+    evidence: schema-profile name
+    lossiness: none
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: value
+    canonical_entity: ObservationComponent
+    canonical_field: raw_value
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: copy_raw_value
+    evidence: schema-profile value
+    lossiness: numeric_parse_deferred
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: unit
+    canonical_entity: ObservationComponent
+    canonical_field: raw_unit
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: copy_text
+    evidence: schema-profile unit
+    lossiness: unit_normalization_deferred
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: flag
+    canonical_entity: ObservationComponent
+    canonical_field: abnormal_flag
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: copy_flag
+    evidence: schema-profile flag
+    lossiness: flag_vocab_unknown
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: ref_value_from
+    canonical_entity: ObservationComponent
+    canonical_field: reference_range
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: reference_range_low
+    combination_rule: structured_reference_range_from_bounds
+    record_group: source_a_observation_component
+    evidence: schema-profile ref_value_from
+    lossiness: paired_with_ref_value_to
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: ref_value_to
+    canonical_entity: ObservationComponent
+    canonical_field: reference_range
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: reference_range_high
+    combination_rule: structured_reference_range_from_bounds
+    record_group: source_a_observation_component
+    evidence: schema-profile ref_value_to
+    lossiness: paired_with_ref_value_from
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_analysisresultitem
+    source_column: note
+    canonical_entity: ObservationComponent
+    canonical_field: text_value
+    mapping_status: CANDIDATE
+    data_level: OBSERVATION_VALUE
+    transformation: copy_text_annotation
+    evidence: schema-profile note
+    lossiness: free_text_annotation
+    nullable_decision: nullable
+  - source_relation: magerya_api.document_document
+    source_column: id
+    canonical_entity: ClinicalDocument
+    canonical_field: document_id
+    mapping_status: UNRESOLVED
+    data_level: PATIENT_EVENT
+    transformation: document_instance
+    evidence: Stage 01 medical_documents candidate
+    unresolved_reason: medical_documents:magerya_api.document_document->None
+    lossiness: document_type_semantics_unknown
+    nullable_decision: required
+  - source_relation: magerya_api.document_informationform
+    source_column: id
+    canonical_entity: ClinicalDocument
+    canonical_field: document_id
+    mapping_status: UNRESOLVED
+    data_level: PATIENT_EVENT
+    transformation: document_instance
+    evidence: Stage 01 medical_documents candidate
+    unresolved_reason: no Source B counterpart
+    lossiness: form_structure_unknown
+    nullable_decision: required
+  - source_relation: magerya_api.document_medicalreport
+    source_column: id
+    canonical_entity: ClinicalDocument
+    canonical_field: document_id
+    mapping_status: UNRESOLVED
+    data_level: PATIENT_EVENT
+    transformation: document_instance
+    evidence: Stage 01 medical_documents candidate
+    unresolved_reason: no Source B counterpart
+    lossiness: report_body_storage_unknown
+    nullable_decision: required
+  - source_relation: magerya_api.document_patientquestionnaire
+    source_column: id
+    canonical_entity: ClinicalDocument
+    canonical_field: document_id
+    mapping_status: UNRESOLVED
+    data_level: PATIENT_EVENT
+    transformation: document_instance
+    evidence: Stage 01 medical_documents candidate
+    unresolved_reason: no Source B counterpart
+    lossiness: questionnaire_scoring_unknown
+    nullable_decision: required
+  - source_relation: magerya_api.document_procedurelist
+    source_column: id
+    canonical_entity: ClinicalDocument
+    canonical_field: document_id
+    mapping_status: UNRESOLVED
+    data_level: PATIENT_EVENT
+    transformation: document_instance
+    evidence: Stage 01 medical_documents candidate
+    unresolved_reason: no Source B counterpart
+    lossiness: procedure_list_vs_procedure_event_ambiguous
+    nullable_decision: required
+
+temporal_gaps:
+  - relation: magerya_api.appointment_appointment
+    issue: no start_datetime/end_datetime columns in schema profile
+    decision: do not map occurred_at or started_at

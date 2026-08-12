@@ -1,0 +1,854 @@
+{
+  "overall_status": "FAIL",
+  "checks_total": 136,
+  "checks_passed": 134,
+  "checks_failed": 2,
+  "checks": [
+    {
+      "name": "stage_01_final",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "stage-01-report status='FINAL'"
+    },
+    {
+      "name": "stage_02_final",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "stage-02-report.md FINAL"
+    },
+    {
+      "name": "verify_stage_02_pass",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "verify-stage-02 status=PASS"
+    },
+    {
+      "name": "stage_02_final_manifest_valid",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "verified 2 entries in stage-02-final-manifest.sha256"
+    },
+    {
+      "name": "unresolved_mappings_available",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "unresolved_mappings=17"
+    },
+    {
+      "name": "population_overlap_not_estimable",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "population_overlap_estimate.status='NOT_ESTIMABLE'"
+    },
+    {
+      "name": "subject_b_candidate",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "subject_root_b='SUBJECT_ROOT_CANDIDATE'"
+    },
+    {
+      "name": "artifact_canonical-model.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_canonical-id-contract.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_provenance-contract.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_temporal-contract.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_state-snapshot-contract.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_record-construction-contract.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_source-a-mapping-draft.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_source-b-mapping-draft.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_field-semantics-register.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_validation-rules.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_artifact-conflict-resolutions.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_unresolved-design-decisions.md",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_stage-03-design-report.md",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "three_architectural_layers",
+      "section": "model",
+      "status": "PASS",
+      "detail": "layers=['evidence', 'prediction', 'simulation_scenario']"
+    },
+    {
+      "name": "evidence_layer_origins",
+      "section": "model",
+      "status": "PASS",
+      "detail": "evidence_origins=['ANNOTATED', 'CORRECTED', 'DERIVED', 'IMPUTED', 'NORMALIZED', 'OBSERVED']"
+    },
+    {
+      "name": "simulation_synthetic_origin",
+      "section": "model",
+      "status": "PASS",
+      "detail": "simulation origin='SYNTHETIC'"
+    },
+    {
+      "name": "prediction_predicted_origin",
+      "section": "model",
+      "status": "PASS",
+      "detail": "prediction origin='PREDICTED'"
+    },
+    {
+      "name": "layers_not_merged",
+      "section": "model",
+      "status": "PASS",
+      "detail": "observed/synthetic/predicted must remain distinct"
+    },
+    {
+      "name": "required_entities_present",
+      "section": "model",
+      "status": "PASS",
+      "detail": "count=29"
+    },
+    {
+      "name": "identity_link_evidence_excluded",
+      "section": "model",
+      "status": "PASS",
+      "detail": "IdentityLinkEvidence is future-only, not in minimal model"
+    },
+    {
+      "name": "subject_source_local",
+      "section": "model",
+      "status": "PASS",
+      "detail": "identity={'scope': 'source_local', 'key': ['source_system_id', 'source_subject_key'], 'forbidden': ['global_subject_id', 'cross_source_merge', 'treating_potential_overlap_as_equality']}"
+    },
+    {
+      "name": "all_entities_require_provenance",
+      "section": "model",
+      "status": "PASS",
+      "detail": "requires_provenance=true"
+    },
+    {
+      "name": "observation_contract_fields",
+      "section": "model",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "observation_component_fields",
+      "section": "model",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "predicted_state_temporal_fields",
+      "section": "model",
+      "status": "PASS",
+      "detail": "fields=['boolean_value', 'branch_id', 'categorical_value', 'concept_id', 'distribution_parameters', 'distribution_type', 'failure_reason', 'generated_at', 'model_version', 'normalized_unit', 'numeric_value', 'predicted_state_id', 'prediction_horizon', 'prediction_status', 'provenance', 'raw_code', 'simulation_run_id', 'subject_id', 'target_at', 'text_value', 'uncertainty_lower', 'uncertainty_upper', 'variable_key']"
+    },
+    {
+      "name": "predicted_state_typed_values",
+      "section": "model",
+      "status": "PASS",
+      "detail": "fields=['boolean_value', 'branch_id', 'categorical_value', 'concept_id', 'distribution_parameters', 'distribution_type', 'failure_reason', 'generated_at', 'model_version', 'normalized_unit', 'numeric_value', 'predicted_state_id', 'prediction_horizon', 'prediction_status', 'provenance', 'raw_code', 'simulation_run_id', 'subject_id', 'target_at', 'text_value', 'uncertainty_lower', 'uncertainty_upper', 'variable_key']"
+    },
+    {
+      "name": "simulationrun_present",
+      "section": "model",
+      "status": "PASS",
+      "detail": "SimulationRun required for v0.4 scenario engine contract"
+    },
+    {
+      "name": "evidencestatesnapshot_present",
+      "section": "model",
+      "status": "PASS",
+      "detail": "EvidenceStateSnapshot required for v0.4 scenario engine contract"
+    },
+    {
+      "name": "statesnapshotcomponent_present",
+      "section": "model",
+      "status": "PASS",
+      "detail": "StateSnapshotComponent required for v0.4 scenario engine contract"
+    },
+    {
+      "name": "scenariocheckpoint_present",
+      "section": "model",
+      "status": "PASS",
+      "detail": "ScenarioCheckpoint required for v0.4 scenario engine contract"
+    },
+    {
+      "name": "scenariointervention_present",
+      "section": "model",
+      "status": "PASS",
+      "detail": "ScenarioIntervention required for v0.4 scenario engine contract"
+    },
+    {
+      "name": "scenariocheckpointstate_present",
+      "section": "model",
+      "status": "PASS",
+      "detail": "ScenarioCheckpointState required for v0.4 scenario engine contract"
+    },
+    {
+      "name": "legacy_state_snapshot_removed",
+      "section": "model",
+      "status": "PASS",
+      "detail": "StateSnapshot must be split into EvidenceStateSnapshot and ScenarioCheckpoint"
+    },
+    {
+      "name": "scenario_branch_fork_fields",
+      "section": "model",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "evidence_snapshot_no_generic_state",
+      "section": "model",
+      "status": "PASS",
+      "detail": "EvidenceStateSnapshot must use StateSnapshotComponent rows"
+    },
+    {
+      "name": "scenario_event_typed_no_generic_payload",
+      "section": "model",
+      "status": "PASS",
+      "detail": "fields=['adherence_pattern', 'branch_id', 'dose', 'dose_unit', 'effective_at', 'effective_until', 'event_action', 'extension_namespace', 'extension_payload', 'extension_schema_version', 'frequency', 'provenance', 'replaces_event_id', 'scenario_event_id', 'scenario_intervention_id']"
+    },
+    {
+      "name": "simulation_run_input_xor_fields",
+      "section": "model",
+      "status": "PASS",
+      "detail": "fields=['branch_id', 'completed_at', 'configuration_hash', 'deterministic_model', 'input_checkpoint_id', 'input_evidence_snapshot_id', 'model_artifact_hash', 'model_id', 'model_version', 'provenance', 'random_seed', 'run_status', 'scenario_id', 'simulation_run_id', 'started_at']"
+    },
+    {
+      "name": "design_constraints_documented",
+      "section": "model",
+      "status": "PASS",
+      "detail": "count=21"
+    },
+    {
+      "name": "scenario_event_precedence_contract",
+      "section": "model",
+      "status": "PASS",
+      "detail": "scenario_event_precedence_contract required"
+    },
+    {
+      "name": "subject_characteristic_present",
+      "section": "model",
+      "status": "PASS",
+      "detail": "fields=['boolean_value', 'categorical_value', 'characteristic_code', 'characteristic_id', 'concept_id', 'date_value', 'effective_at', 'normalized_unit', 'numeric_value', 'provenance', 'raw_code', 'raw_unit', 'raw_value', 'recorded_at', 'status', 'subject_id', 'text_value']"
+    },
+    {
+      "name": "canonical_model_validator",
+      "section": "model",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "name": "data_level_enum_defined",
+      "section": "model",
+      "status": "PASS",
+      "detail": "enum=['ATTRIBUTE_CONTAINER', 'OBSERVATION_HEADER', 'OBSERVATION_VALUE', 'PATIENT_EVENT', 'PAYLOAD', 'REFERENCE_CATALOG', 'UNKNOWN', 'WORKFLOW']"
+    },
+    {
+      "name": "catalog_patient_facts_separated",
+      "section": "model",
+      "status": "PASS",
+      "detail": "catalog vs patient facts must be strictly separated"
+    },
+    {
+      "name": "provenance_profiles_discriminated",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "profiles=['COMPUTED', 'MODEL_OUTPUT', 'SCENARIO', 'SOURCE_BACKED']"
+    },
+    {
+      "name": "source_backed_requires_locator",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "SOURCE_BACKED requires source_record_locator"
+    },
+    {
+      "name": "synthetic_no_source_locator",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "SCENARIO profile must not require source locator or universal scenario_event_id"
+    },
+    {
+      "name": "scenario_profile_by_entity",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "SCENARIO profile_by_entity required in v0.4"
+    },
+    {
+      "name": "predicted_no_source_locator",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "MODEL_OUTPUT must align with PredictedState fields"
+    },
+    {
+      "name": "normalized_no_correction_history",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "NORMALIZED must not require correction history"
+    },
+    {
+      "name": "corrected_requires_prior_record",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "CORRECTED requires prior record reference"
+    },
+    {
+      "name": "provenance_record_origins",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "origins=['ANNOTATED', 'CORRECTED', 'DERIVED', 'IMPUTED', 'NORMALIZED', 'OBSERVED', 'PREDICTED', 'SYNTHETIC']"
+    },
+    {
+      "name": "raw_value_retained_after_normalization",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "raw values must survive normalization"
+    },
+    {
+      "name": "source_system_no_row_provenance",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "SourceSystem must not require row-level provenance"
+    },
+    {
+      "name": "temporal_fields_defined",
+      "section": "temporal",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "no_recorded_at_substitution",
+      "section": "temporal",
+      "status": "PASS",
+      "detail": "must not substitute recorded_at for missing clinical time"
+    },
+    {
+      "name": "predicted_state_uses_generated_and_target",
+      "section": "temporal",
+      "status": "PASS",
+      "detail": "roles={'generated': 'generated_at', 'target': 'target_at', 'horizon': 'prediction_horizon', 'rule': 'target_at must be >= generated_at'}"
+    },
+    {
+      "name": "temporal_runtime_constraints_documented",
+      "section": "temporal",
+      "status": "PASS",
+      "detail": "runtime constraints must be documented for implementation phase"
+    },
+    {
+      "name": "state_snapshot_contract_sections",
+      "section": "snapshot",
+      "status": "PASS",
+      "detail": "sections=18"
+    },
+    {
+      "name": "state_snapshot_contract_versioning",
+      "section": "snapshot",
+      "status": "PASS",
+      "detail": "versioning=['imputation_policy_version', 'input_artifact_hashes', 'selection_policy_version', 'snapshot_builder_version', 'unit_conversion_version']"
+    },
+    {
+      "name": "state_snapshot_cutoff_required",
+      "section": "snapshot",
+      "status": "PASS",
+      "detail": "source_event_cutoff must be required"
+    },
+    {
+      "name": "state_snapshot_no_future_leakage",
+      "section": "snapshot",
+      "status": "PASS",
+      "detail": "no_future_leakage rule required"
+    },
+    {
+      "name": "state_snapshot_age_at_snapshot_rule",
+      "section": "snapshot",
+      "status": "PASS",
+      "detail": "age computed at snapshot_at; not stored as property"
+    },
+    {
+      "name": "state_snapshot_age_birthdate_lineage",
+      "section": "snapshot",
+      "status": "PASS",
+      "detail": "age lineage={'provenance_field': 'provenance.input_record_references', 'required_reference': {'entity': 'SubjectCharacteristic', 'characteristic_code': 'source_birthdate'}, 'rule': 'age-at-snapshot must cite the contributing birthdate SubjectCharacteristic via provenance'}"
+    },
+    {
+      "name": "state_snapshot_input_record_references",
+      "section": "snapshot",
+      "status": "PASS",
+      "detail": "provenance.input_record_references required for lineage"
+    },
+    {
+      "name": "state_snapshot_design_only",
+      "section": "snapshot",
+      "status": "PASS",
+      "detail": "snapshot contract is design-only"
+    },
+    {
+      "name": "canonical_id_contract_algorithm",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "algorithm='HMAC-SHA256'"
+    },
+    {
+      "name": "canonical_id_contract_secret_runtime_only",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "secret_storage='runtime_only'"
+    },
+    {
+      "name": "canonical_id_contract_domain_separation",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "domain separation required"
+    },
+    {
+      "name": "canonical_id_contract_serialization",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "serialization='length_prefix_utf8'"
+    },
+    {
+      "name": "canonical_id_contract_executable_vectors",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "name": "canonical_id_contract_namespace_version_split",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "document_version='0.7.5', id_namespace_version='0.7.0'"
+    },
+    {
+      "name": "canonical_id_contract_key_rotation_policy",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "key rotation must forbid secret change without key_version bump"
+    },
+    {
+      "name": "canonical_id_contract_message_layout",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "message_layout required"
+    },
+    {
+      "name": "canonical_id_contract_null_encoding",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "null_encoding='length_prefix_null_sentinel'"
+    },
+    {
+      "name": "canonical_id_contract_design_only",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "canonical id contract is design-only"
+    },
+    {
+      "name": "record_construction_contract_validator",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "name": "construction_group_source_a_account_patient_characteristics",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_a_appointment_encounter",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_a_observation_component",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_b_users_subject",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_b_users_profile_characteristics",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_b_profilaxys_profile_characteristics",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_b_consultations_encounter",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_b_lab_observation_header",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_b_analyses_constructor_component",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_b_profilaxys_profile_observation",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_group_source_b_profilaxys_profile_observation_components",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "present=True"
+    },
+    {
+      "name": "construction_null_emission_policy",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "null must not become empty or placeholder values"
+    },
+    {
+      "name": "construction_design_only",
+      "section": "construction",
+      "status": "PASS",
+      "detail": "construction contract is design-only"
+    },
+    {
+      "name": "source-a-mapping-draft.yaml_mapping_fields",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "incomplete_indices=[]"
+    },
+    {
+      "name": "source-a-mapping-draft.yaml_wildcard_forbidden",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "wildcard_indices=[]"
+    },
+    {
+      "name": "source-a-mapping-draft.yaml_data_level_enum",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "invalid_indices=[]"
+    },
+    {
+      "name": "source-a-mapping-draft.yaml_no_clinical_confirmed",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "CONFIRMED clinical semantics forbidden in design phase"
+    },
+    {
+      "name": "source_a_no_phantom_time_columns",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "bad_hits=[], created_mapped=True"
+    },
+    {
+      "name": "source_a_subject_characteristic_demographics",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "account_patient birthdate/sex mapped to SubjectCharacteristic with raw codes"
+    },
+    {
+      "name": "source-b-mapping-draft.yaml_mapping_fields",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "incomplete_indices=[]"
+    },
+    {
+      "name": "source-b-mapping-draft.yaml_wildcard_forbidden",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "wildcard_indices=[]"
+    },
+    {
+      "name": "source-b-mapping-draft.yaml_data_level_enum",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "invalid_indices=[]"
+    },
+    {
+      "name": "source-b-mapping-draft.yaml_no_clinical_confirmed",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "CONFIRMED clinical semantics forbidden in design phase"
+    },
+    {
+      "name": "public_persons_not_subject_root_candidate",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "persons mapping={'source_relation': 'public.persons', 'source_column': 'id', 'canonical_entity': 'Subject', 'canonical_field': 'source_subject_key', 'mapping_status': 'NOT_MAPPED', 'data_level': 'UNKNOWN', 'transformation': 'defer', 'evidence': 'persons_hypothesis_verdict=NO_SUBJECT_ROOT; table empty (0 rows)', 'unresolved_reason': 'patients:None->public.persons', 'lossiness': 'empty_table_no_subject_root', 'nullable_decision': 'required'}"
+    },
+    {
+      "name": "analyses_constructor_uses_value_column",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "analyses_constructor.value must be mapped"
+    },
+    {
+      "name": "consultations_use_patient_id",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "patient_id=True, user_id_present=False"
+    },
+    {
+      "name": "source_b_users_profile_subject_characteristics",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "demo=True, user_id_subject=True"
+    },
+    {
+      "name": "source_b_profilaxys_profile_characteristics_and_observations",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "stable=True, dynamic=True, user_id=True"
+    },
+    {
+      "name": "source_mapping_integrity",
+      "section": "mappings",
+      "status": "PASS",
+      "detail": "all mappings validated"
+    },
+    {
+      "name": "field_semantics_raw_preserved",
+      "section": "semantics",
+      "status": "PASS",
+      "detail": "policy='always_preserve'"
+    },
+    {
+      "name": "field_semantics_no_global_patient_id",
+      "section": "semantics",
+      "status": "PASS",
+      "detail": "global_patient_id forbidden"
+    },
+    {
+      "name": "validation_rules_complete",
+      "section": "validation",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "stage_02_unresolved_preserved",
+      "section": "crosswalk",
+      "status": "PASS",
+      "detail": "preserved=17/17"
+    },
+    {
+      "name": "no_secrets_or_pii",
+      "section": "safety",
+      "status": "PASS",
+      "detail": "no credentials, long numeric IDs, or absolute paths detected"
+    },
+    {
+      "name": "report_status_draft",
+      "section": "report",
+      "status": "PASS",
+      "detail": "expected DRAFT, found draft=True"
+    },
+    {
+      "name": "content_manifest_hashes_match",
+      "section": "manifest",
+      "status": "PASS",
+      "detail": "verified 12 content entries"
+    },
+    {
+      "name": "content_manifest_excludes_report",
+      "section": "manifest",
+      "status": "PASS",
+      "detail": "entries=['canonical-model.yaml', 'canonical-id-contract.yaml', 'provenance-contract.yaml', 'temporal-contract.yaml', 'state-snapshot-contract.yaml', 'record-construction-contract.yaml', 'source-a-mapping-draft.yaml', 'source-b-mapping-draft.yaml', 'field-semantics-register.yaml', 'validation-rules.yaml', 'artifact-conflict-resolutions.yaml', 'unresolved-design-decisions.md']"
+    },
+    {
+      "name": "content_manifest_no_self_hash",
+      "section": "manifest",
+      "status": "PASS",
+      "detail": "content manifest must not include itself"
+    },
+    {
+      "name": "verification_json_excluded_from_content_manifest",
+      "section": "manifest",
+      "status": "PASS",
+      "detail": "verification JSON must not be in content manifest"
+    },
+    {
+      "name": "no_cyclic_hash_dependencies",
+      "section": "manifest",
+      "status": "PASS",
+      "detail": "legacy_manifest=False, report_refs_verification_hash=False"
+    },
+    {
+      "name": "pytest_stage_03_design",
+      "section": "verification",
+      "status": "FAIL",
+      "detail": "2 failed, 105 passed, 12 deselected in 4.37s"
+    },
+    {
+      "name": "report_content_manifest_sha256_match",
+      "section": "report",
+      "status": "FAIL",
+      "detail": "expected content manifest sha256=cb75fadb06a6d650b27b2136a2df8b9c86b358305cfd24a56589f827d5ab2468"
+    },
+    {
+      "name": "report_no_self_sha256",
+      "section": "report",
+      "status": "PASS",
+      "detail": "report must not contain its own SHA-256"
+    },
+    {
+      "name": "report_excludes_self_from_content_list",
+      "section": "report",
+      "status": "PASS",
+      "detail": "report must not list itself among content artifacts"
+    },
+    {
+      "name": "verification_report_sha256_match",
+      "section": "verification",
+      "status": "PASS",
+      "detail": "report_sha256='f033e36ea482349c174ea47e86f35783bdc9031c0f90d844b91273cb85f7464a', disk='f033e36ea482349c174ea47e86f35783bdc9031c0f90d844b91273cb85f7464a'"
+    },
+    {
+      "name": "verification_json_no_self_hash_field",
+      "section": "verification",
+      "status": "PASS",
+      "detail": "verification JSON must not embed its own hash"
+    },
+    {
+      "name": "audit_chronology_no_future_timestamps",
+      "section": "audit",
+      "status": "PASS",
+      "detail": "report_future=False, verified_future=False"
+    },
+    {
+      "name": "audit_chronology_report_before_verified",
+      "section": "audit",
+      "status": "PASS",
+      "detail": "report='2026-08-08T11:33:26.590790+00:00', verified='2026-08-08T11:33:26.591173+00:00'"
+    },
+    {
+      "name": "audit_chronology_verified_before_review_bundle",
+      "section": "audit",
+      "status": "PASS",
+      "detail": "verified='2026-08-08T11:33:26.591173+00:00', bundle='2026-08-08T11:33:26.591176+00:00'"
+    },
+    {
+      "name": "publication_disk_report_sha256_match",
+      "section": "verification",
+      "status": "PASS",
+      "detail": "verification='f033e36ea482349c174ea47e86f35783bdc9031c0f90d844b91273cb85f7464a', disk='f033e36ea482349c174ea47e86f35783bdc9031c0f90d844b91273cb85f7464a'"
+    },
+    {
+      "name": "publication_disk_chronology_report_before_verified",
+      "section": "audit",
+      "status": "PASS",
+      "detail": "report='2026-08-08T11:33:26.590790+00:00', verified='2026-08-08T11:33:26.591173+00:00'"
+    },
+    {
+      "name": "publication_disk_chronology_verified_before_bundle",
+      "section": "audit",
+      "status": "PASS",
+      "detail": "verified='2026-08-08T11:33:26.591173+00:00', bundle='2026-08-08T11:33:26.591176+00:00'"
+    },
+    {
+      "name": "publication_disk_overall_status_consistent",
+      "section": "verification",
+      "status": "PASS",
+      "detail": "overall='FAIL', expected='FAIL'"
+    }
+  ],
+  "failures": [
+    {
+      "name": "pytest_stage_03_design",
+      "section": "verification",
+      "status": "FAIL",
+      "detail": "2 failed, 105 passed, 12 deselected in 4.37s"
+    },
+    {
+      "name": "report_content_manifest_sha256_match",
+      "section": "report",
+      "status": "FAIL",
+      "detail": "expected content manifest sha256=cb75fadb06a6d650b27b2136a2df8b9c86b358305cfd24a56589f827d5ab2468"
+    }
+  ],
+  "pytest_command": "python -m pytest tests/test_verify_stage_03_design.py -q -k not test_verification_json_schema_and_no_self_hash and not test_published_verification_matches_final_report_bytes and not test_full_pytest_suite_preserves_publication_artifacts and not test_chronology_fails_when_report_after_verified and not test_chronology_fails_when_report_changed_after_verification and not test_chronology_skips_review_bundle_checks_without_timestamp and not test_clean_extraction_no_publish_verification_passes and not test_unpacked_zip_pytest_preserves_publication_artifacts and not test_review_bundle_contains_final_verification and not test_review_bundle_report_sha_matches_embedded_verification and not test_review_bundle_embedded_chronology_correct and not test_verify_stage_03_design_passes and not test_gate_return_matches_on_disk_design_verification_when_present",
+  "pytest_exit_code": 1,
+  "pytest_collected": 119,
+  "pytest_selected": 107,
+  "pytest_deselected": 12,
+  "pytest_passed": 105,
+  "pytest_failed": 2,
+  "pytest_skipped": 0,
+  "pytest_duration_seconds": 4.37,
+  "pytest_summary": "2 failed, 105 passed, 12 deselected in 4.37s",
+  "python_version": "3.13.11",
+  "content_manifest_sha256": "cb75fadb06a6d650b27b2136a2df8b9c86b358305cfd24a56589f827d5ab2468",
+  "report_sha256": "f033e36ea482349c174ea47e86f35783bdc9031c0f90d844b91273cb85f7464a",
+  "report_generated_at": "2026-08-08T11:33:26.590790+00:00",
+  "review_bundle_generated_at": "2026-08-08T11:33:26.591176+00:00",
+  "verified_at": "2026-08-08T11:33:26.591173+00:00"
+}

@@ -8,14 +8,16 @@ export function Footer() {
     <footer className="footer">
       <div className="shell footer__inner">
         <div>
-          <div className="logo" style={{ fontSize: 13, marginBlockEnd: 8 }}>
+          <p className="logo" style={{ fontSize: 13, marginBlockEnd: 8 }}>
             UHBSE
-          </div>
+          </p>
           <p className="footer__tag">{t.footer.tagline}</p>
         </div>
         <p className="footer__note">{t.footer.research}</p>
         <p className="footer__note tabular">
-          © {year} UHBSE. {t.footer.rights}
+          <small>
+            © {year} UHBSE. {t.footer.rights}
+          </small>
         </p>
       </div>
     </footer>

@@ -1,0 +1,94 @@
+{
+  "assessed_at": "2026-07-31T22:38:21.077245+00:00",
+  "method": "HMAC-SHA256 aggregate linkage",
+  "hmac_key_present_in_runtime": true,
+  "hmac_key_persisted_in_artifacts": false,
+  "hmac_key_source": "local_env",
+  "source_a_subject_table": "magerya_api.account_patient",
+  "source_b_subject_resolution": "public.users.via_consultations.patient_id",
+  "source_a_aggregates": {
+    "subject_count": 43856,
+    "subjects_without_phone": 43570,
+    "subjects_without_email": 15256,
+    "subjects_without_any_strong_identifier": 15125,
+    "phone_present_count": 286,
+    "phone_missing_rate": 0.993479,
+    "email_present_count": 28600,
+    "email_missing_rate": 0.347866,
+    "unique_phone_identifiers": 283,
+    "unique_email_identifiers": 27494,
+    "duplicate_phone_identifier_count": 3,
+    "duplicate_email_identifier_count": 1021,
+    "phone_collision_count": 3,
+    "email_collision_count": 1106
+  },
+  "source_b_aggregates": {
+    "subject_count": 49564,
+    "subjects_without_phone": 562,
+    "subjects_without_email": 2003,
+    "subjects_without_any_strong_identifier": 559,
+    "phone_present_count": 49002,
+    "phone_missing_rate": 0.011339,
+    "email_present_count": 47561,
+    "email_missing_rate": 0.040412,
+    "unique_phone_identifiers": 48996,
+    "unique_email_identifiers": 47484,
+    "duplicate_phone_identifier_count": 6,
+    "duplicate_email_identifier_count": 77,
+    "phone_collision_count": 6,
+    "email_collision_count": 77
+  },
+  "overlap_aggregates": {
+    "matched_unique_phone_identifiers": 67,
+    "matched_unique_email_identifiers": 2340,
+    "uniquely_resolved_subject_pairs_by_phone": 66,
+    "uniquely_resolved_subject_pairs_by_email": 2208,
+    "consistent_subject_pairs_by_phone_and_email": 22,
+    "ambiguous_subject_pairs": 133,
+    "cross_field_conflicts": 21,
+    "one_to_many_across_sources": 131,
+    "observed_unique_phone_identifier_overlap_rate_source_a_available": 0.236749,
+    "observed_unique_phone_identifier_overlap_rate_source_b_available": 0.001367,
+    "observed_unique_email_identifier_overlap_rate_source_a_available": 0.085109,
+    "observed_unique_email_identifier_overlap_rate_source_b_available": 0.04928,
+    "population_overlap_estimate": {
+      "status": "NOT_ESTIMABLE",
+      "reason": "Source A phone coverage is 0.7%; missingness cannot be assumed random; only 22 consistent dual-identifier subject pairs — insufficient for population extrapolation"
+    },
+    "source_a_subjects_without_phone": 43570,
+    "source_a_subjects_without_email": 15256,
+    "source_a_subjects_without_any_strong_identifier": 15125,
+    "source_b_subjects_without_phone": 562,
+    "source_b_subjects_without_email": 2003,
+    "source_b_subjects_without_any_strong_identifier": 559
+  },
+  "conflict_definition": {
+    "summary": "Conflicts and ambiguities are counted at aggregate level only; no subject IDs or HMAC digests are persisted.",
+    "cross_field_conflict": "A matched unique phone identifier appears in both sources, both sides attach at least one email identifier to that phone, and the email identifier sets are disjoint.",
+    "within_field_duplicate": "A normalized phone or email identifier maps to more than one subject within the same source.",
+    "one_to_many_across_sources": "A matched identifier maps to exactly one subject on one source and to more than one subject on the other source; such matches are not uniquely resolved subject pairs.",
+    "duplicate_identifiers_preclude_unique_pair": "Identifier intersection alone does not imply a patient/subject match when duplicates/collisions exist.",
+    "denominators": {
+      "cross_field_conflicts": "matched_unique_phone_identifiers with email evidence on both sides",
+      "within_field_phone_ambiguity": "matched_unique_phone_identifiers",
+      "within_field_email_ambiguity": "matched_unique_email_identifiers",
+      "uniquely_resolved_subject_pairs_by_phone": "matched_unique_phone_identifiers",
+      "uniquely_resolved_subject_pairs_by_email": "matched_unique_email_identifiers",
+      "consistent_subject_pairs_by_phone_and_email": "intersecting (phone, email) signature pairs",
+      "observed_unique_phone_identifier_overlap_rate_source_a_available": "matched_unique_phone_identifiers / unique phone identifiers present in Source A",
+      "observed_unique_email_identifier_overlap_rate_source_a_available": "matched_unique_email_identifiers / unique email identifiers present in Source A",
+      "observed_unique_email_identifier_overlap_rate_source_b_available": "matched_unique_email_identifiers / unique email identifiers present in Source B"
+    }
+  },
+  "identity_verdict": {
+    "verdict": "POTENTIAL_OVERLAP",
+    "reason": "Identifier intersections exist (67 phone, 2340 email) but uniquely resolved subject pairs are unavailable; cross-field conflicts=21, consistent dual-identifier pairs=22"
+  },
+  "notes": [
+    "No per-patient HMAC digests or raw identifiers written to artifacts.",
+    "Plain SHA-256 without secret key was not used.",
+    "Identifier intersections are not subject/patient matches when duplicates or conflicts exist.",
+    "Population overlap is not extrapolated from observed unique-identifier rates.",
+    "LINKAGE_PROVEN is not assigned at Stage 02."
+  ]
+}

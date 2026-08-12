@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "login_principal": "canonical_loader_login",
+  "group_role": "canonical_loader",
+  "checks": [
+    {
+      "id": "canonical_loader_remains_nologin",
+      "status": "PASS"
+    },
+    {
+      "id": "login_attr_rolcanlogin",
+      "status": "PASS"
+    },
+    {
+      "id": "login_attr_rolinherit",
+      "status": "PASS"
+    },
+    {
+      "id": "login_attr_rolsuper",
+      "status": "PASS"
+    },
+    {
+      "id": "login_attr_rolcreatedb",
+      "status": "PASS"
+    },
+    {
+      "id": "login_attr_rolcreaterole",
+      "status": "PASS"
+    },
+    {
+      "id": "login_attr_rolreplication",
+      "status": "PASS"
+    },
+    {
+      "id": "login_attr_rolbypassrls",
+      "status": "PASS"
+    },
+    {
+      "id": "no_foreign_memberships",
+      "status": "PASS"
+    },
+    {
+      "id": "session_user_is_login",
+      "status": "PASS"
+    },
+    {
+      "id": "current_user_before_set_role",
+      "status": "PASS"
+    },
+    {
+      "id": "noinherit_blocks_without_set_role",
+      "status": "PASS"
+    },
+    {
+      "id": "current_user_after_set_role",
+      "status": "PASS"
+    },
+    {
+      "id": "loader_select_allowed",
+      "status": "PASS"
+    },
+    {
+      "id": "loader_insert_allowed",
+      "status": "PASS"
+    },
+    {
+      "id": "update_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "delete_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "truncate_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "ddl_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "reset_role_restores_current_user",
+      "status": "PASS"
+    },
+    {
+      "id": "session_user_stable_after_reset",
+      "status": "PASS"
+    },
+    {
+      "id": "login_has_no_direct_table_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "only_canonical_loader_table_grants",
+      "status": "PASS"
+    }
+  ]
+}

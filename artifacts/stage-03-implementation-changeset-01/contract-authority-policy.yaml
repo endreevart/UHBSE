@@ -1,0 +1,85 @@
+stage: "03"
+phase: implementation
+changeset: stage-03-implementation-changeset-01
+title: Who May Define a Contract That Unblocks the First Live Load
+document_version: "0.1"
+introduced_in: "0.2.3"
+
+purpose: >
+  Structural validation answers "is this contract complete and meaningful". It does not answer
+  "who was allowed to write it". v0.2.2 accepted a complete contract from any YAML file under the
+  Stage 03 directories, including the changeset's own directory, so a changeset could have
+  authored the contract that unblocked the changeset. This policy states where each contract may
+  live and which accepted release owns that place.
+
+principle: >
+  A blocker names a decision that an accepted release has not taken. It can only be closed by an
+  accepted release taking it. Anything a changeset writes about itself is a claim, not a decision.
+
+authoritative_paths:
+  - contract_key: subject_key_transformation_contract
+    path: artifacts/stage-03/canonical-id-contract.yaml
+    owning_release: Stage 03 Design
+    release_manifest: artifacts/stage-03/design-content-manifest.sha256
+    why_this_owner: >
+      Whether a stored subject key is opaque is a property of the canonical model and a
+      data-protection decision, not a loader implementation detail. The same artifact already
+      defines the keyed transformation for source_record_locator, which is why no equivalent
+      blocker exists for the locator.
+    resolves_blocker: source_subject_key_opacity_undefined
+
+  - contract_key: canonical_loader_runtime_contract
+    path: artifacts/stage-03-implementation/security-runtime-plan.yaml
+    owning_release: Stage 03 Implementation Plan
+    release_manifest: artifacts/stage-03-implementation/implementation-plan-manifest.sha256
+    why_this_owner: >
+      Which principal connects, from which credential source and with which privileges is a
+      runtime security decision that the accepted implementation plan owns. That artifact already
+      lists the canonical roles without a principal, which is the gap the blocker names.
+    resolves_blocker: canonical_loader_runtime_principal_undefined
+
+acceptance_conditions:
+  all_must_hold:
+    - the contract mapping appears at the exact authoritative path
+    - the authoritative file is listed in its release manifest
+    - the release manifest verifies by SHA-256 against every file it lists
+    - exactly one definition of the contract key exists anywhere in scope
+    - every required field is present, non-placeholder and semantically valid
+  zero_definitions: blocker stays OPEN; this is the current state
+  multiple_definitions: >
+    separate FAIL check contract_definitions_are_unambiguous. A contract that exists twice is a
+    contract nobody owns, and reporting it as merely absent would understate that.
+
+forbidden_sources:
+  - path: artifacts/stage-03-implementation-changeset-01/
+    reason: >
+      Self-authorisation. A changeset may not write the contract that unblocks the changeset,
+      however complete and well-formed that contract is.
+  - kind: any path not listed in authoritative_paths
+    reason: >
+      Recursive discovery was removed in v0.2.3. A contract in a plausible but unowned location
+      is reported as a non-authoritative definition rather than silently accepted or ignored.
+
+search_scope_for_stray_definitions:
+  - artifacts/stage-03
+  - artifacts/stage-03-implementation
+  - artifacts/stage-03-implementation-changeset-01
+  note: >
+    Scope is searched only to detect and name stray or duplicate definitions. Authority is never
+    inferred from a search result.
+
+validator: src/human_simulator/stage03/live_load_contracts.py
+field_requirements: artifacts/stage-03-implementation-changeset-01/live-load-contract-schema.yaml
+
+conflict_registry:
+  artifact: artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml
+  validator: src/human_simulator/stage03/conflict_registry.py
+  gate_check: accepted_artifact_conflict_registry_valid
+  rationale: >
+    Conflict blockers are derived from the registry, so damaging the registry would remove
+    checks. Its validity is therefore a check in its own right, independent of the conflicts it
+    lists. Absent, unparsable, malformed, self-inconsistent or manifest-mismatched all fail.
+  identifiers_hardcoded_in_python: 0
+
+contract_instances_created_by_this_changeset: 0
+blockers_resolved_by_this_changeset: 0

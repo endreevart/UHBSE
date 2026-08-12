@@ -1,0 +1,690 @@
+{
+  "overall_status": "PASS",
+  "checks_total": 110,
+  "checks_passed": 110,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "stage_01_final",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "stage-01-report status='FINAL'"
+    },
+    {
+      "name": "stage_02_final",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "stage-02-report.md FINAL"
+    },
+    {
+      "name": "verify_stage_02_pass",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "verify-stage-02 status=PASS"
+    },
+    {
+      "name": "stage_02_final_manifest_valid",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "verified 2 entries in stage-02-final-manifest.sha256"
+    },
+    {
+      "name": "unresolved_mappings_available",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "unresolved_mappings=17"
+    },
+    {
+      "name": "population_overlap_not_estimable",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "population_overlap_estimate.status='NOT_ESTIMABLE'"
+    },
+    {
+      "name": "subject_b_candidate",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "subject_root_b='SUBJECT_ROOT_CANDIDATE'"
+    },
+    {
+      "name": "design_manifest_present",
+      "section": "design_integrity",
+      "status": "PASS",
+      "detail": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/stage-03/design-content-manifest.sha256"
+    },
+    {
+      "name": "design_baseline_manifest_present",
+      "section": "design_integrity",
+      "status": "PASS",
+      "detail": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/stage-03-implementation/design-baseline-manifest.sha256"
+    },
+    {
+      "name": "design_manifest_unchanged_from_baseline",
+      "section": "design_integrity",
+      "status": "PASS",
+      "detail": "design-content-manifest.sha256 must match design-baseline-manifest.sha256"
+    },
+    {
+      "name": "design_verification_pass",
+      "section": "design_integrity",
+      "status": "PASS",
+      "detail": "overall_status='PASS'"
+    },
+    {
+      "name": "design_baseline_version_reference",
+      "section": "design_integrity",
+      "status": "PASS",
+      "detail": "design_baseline_version='0.7.5'"
+    },
+    {
+      "name": "no_ddl_etl_or_database_creation_artifacts",
+      "section": "safety",
+      "status": "PASS",
+      "detail": "implementation gate open for stage-03-implementation-changeset-01; 1 authorized implementation paths"
+    },
+    {
+      "name": "physical_storage_not_created",
+      "section": "safety",
+      "status": "PASS",
+      "detail": "stage-03-implementation-changeset-01 authorizes empty canonical storage and migrations only; no clinical rows are loaded"
+    },
+    {
+      "name": "artifact_implementation-plan.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_physical-storage-plan.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_pilot-slice.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_pipeline-plan.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_validation-plan.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_security-runtime-plan.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_unresolved-implementation-decisions.yaml",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "artifact_design-baseline-manifest.sha256",
+      "section": "artifacts",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "implementation_plan_version",
+      "section": "plan",
+      "status": "PASS",
+      "detail": "document_version='0.3.6'"
+    },
+    {
+      "name": "implementation_plan_not_started",
+      "section": "plan",
+      "status": "PASS",
+      "detail": "implementation_status='planning_only_not_started'"
+    },
+    {
+      "name": "pilot_source_a_only",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "source_system='magerya_api'"
+    },
+    {
+      "name": "pilot_entities_in_canonical_model",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "pilot_construction_groups_defined",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "pilot_entities_mapped_in_source_a",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "unmapped=[]"
+    },
+    {
+      "name": "source_relation_closure_exact",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "expected=['magerya_api.account_patient', 'magerya_api.appointment_appointment', 'magerya_api.document_analysisresult', 'magerya_api.document_analysisresultitem'], graph=['magerya_api.account_patient', 'magerya_api.appointment_appointment', 'magerya_api.document_analysisresult', 'magerya_api.document_analysisresultitem'], extract=['magerya_api.account_patient', 'magerya_api.appointment_appointment', 'magerya_api.document_analysisresult', 'magerya_api.document_analysisresultitem']"
+    },
+    {
+      "name": "observation_component_source_relation",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "source_relation='magerya_api.document_analysisresultitem'"
+    },
+    {
+      "name": "encounter_provider_id_deferred",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "deferred_fields=[{'field': 'provider_id', 'status': 'DEFERRED_UNTIL_PROVIDER_CONSTRUCTION', 'reason': 'Provider construction group absent; doctor_id not copied', 'nullable': True, 'logging': 'column_name_only_no_value', 'aligns_with': ['record-construction-contract.yaml::source_a_appointment_encounter.deferred_fields.provider_id', 'pipeline-plan.yaml::fk_dependencies.Encounter.provider_id']}]"
+    },
+    {
+      "name": "encounter_provider_fk_deferred_in_pipeline",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "Encounter.provider_id='deferred_null_until_provider_construction'"
+    },
+    {
+      "name": "provider_not_in_pilot_table_entities",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "Provider must not be loaded in pilot"
+    },
+    {
+      "name": "observation_encounter_id_deferred",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "deferred_fields=[{'field': 'encounter_id', 'status': 'DEFERRED_FOR_PILOT', 'reason': 'pilot design sets encounter_id null; Encounter not required for Observation load', 'nullable': True, 'logging': 'column_name_only_no_value'}]"
+    },
+    {
+      "name": "observation_encounter_fk_deferred_in_pipeline",
+      "section": "pilot",
+      "status": "PASS",
+      "detail": "Observation.encounter_id='deferred_null_for_pilot'"
+    },
+    {
+      "name": "observation_load_depends_subject_only",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "depends_on=['Subject']"
+    },
+    {
+      "name": "observation_not_load_dependent_on_encounter",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "depends_on=['Subject']"
+    },
+    {
+      "name": "cohort_rooted_at_subject_with_fk_closure",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "root={'relation': 'account_patient', 'entity': 'Subject', 'order_by': 'account_patient.id ASC', 'limit': 100}, related_keys=['appointment_appointment', 'document_analysisresult', 'document_analysisresultitem']"
+    },
+    {
+      "name": "cohort_forbids_raw_subject_ids_in_artifacts",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "forbidden_in=['logs', 'reports', 'review_artifacts', 'quarantine_detail']"
+    },
+    {
+      "name": "source_snapshot_fingerprint_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "aggregate={'algorithm': 'HMAC-SHA256', 'inputs': 'four_relation_fingerprints_in_stable_order', 'output_field': 'source_snapshot_fingerprint'}"
+    },
+    {
+      "name": "source_snapshot_fingerprint_forbids_raw_persist",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "forbidden_persisted=['raw_ids', 'raw_values', 'raw_rows', 'pii']"
+    },
+    {
+      "name": "identical_snapshot_requires_full_contract_tuple",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "identical_snapshot_requires=['source_snapshot_fingerprint', 'design_manifest_sha256', 'mapping_version', 'transformation_version', 'id_namespace_version', 'key_version']"
+    },
+    {
+      "name": "source_snapshot_fingerprint_contract_executable",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "contract_version=2, relations=['account_patient', 'appointment_appointment', 'document_analysisresult', 'document_analysisresultitem']"
+    },
+    {
+      "name": "idempotent_promotion_five_way_policy",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "cases={'new_canonical_id': {'action': 'INSERT'}, 'existing_canonical_id_same_payload_hash': {'action': 'NOOP_ALREADY_PUBLISHED'}, 'existing_canonical_id_different_payload_hash_same_input_version': {'action': 'SOURCE_PAYLOAD_CHANGED', 'promotion': 'BLOCKED'}, 'existing_canonical_id_different_payload_hash_mapping_or_transform_version': {'action': 'VERSIONED_REBUILD_REQUIRED', 'promotion': 'BLOCKED'}, 'existing_canonical_id_unclassified_conflict': {'action': 'CANONICAL_PAYLOAD_CONFLICT', 'promotion': 'BLOCKED'}}, blocked_mismatch=[]"
+    },
+    {
+      "name": "idempotent_promotion_forbids_update_delete",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "forbidden=['UPDATE_published_evidence', 'DELETE_published_evidence', 'silent_upsert']"
+    },
+    {
+      "name": "promotion_single_transaction_after_reconciliation",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "promotion_transaction={'scope': 'single_derived_db_transaction', 'start_condition': 'reconciliation_pass', 'on_error': 'full_rollback', 'staging_cleanup': 'current_run_may_be_deleted', 'published_records': 'never_modified'}"
+    },
+    {
+      "name": "construction_required_field_coverage",
+      "section": "design_integrity",
+      "status": "PASS",
+      "detail": "all groups cover nullable:false fields"
+    },
+    {
+      "name": "source_record_groups_explicit_system_and_relation",
+      "section": "design_integrity",
+      "status": "PASS",
+      "detail": "groups=4"
+    },
+    {
+      "name": "pipeline_idempotent_rerun_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "idempotent_rerun=present"
+    },
+    {
+      "name": "pipeline_rollback_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "rollback=present"
+    },
+    {
+      "name": "pipeline_reconciliation_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "reconciliation=present"
+    },
+    {
+      "name": "pipeline_restart_from_checkpoint_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "restart_from_checkpoint=present"
+    },
+    {
+      "name": "pipeline_snapshot_consistency_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "snapshot_consistency=present"
+    },
+    {
+      "name": "pipeline_cohort_policy_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "cohort_policy=present"
+    },
+    {
+      "name": "pipeline_source_snapshot_fingerprint_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "source_snapshot_fingerprint=present"
+    },
+    {
+      "name": "pipeline_idempotent_promotion_defined",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "idempotent_promotion=present"
+    },
+    {
+      "name": "pipeline_extract_read_only",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "mode='read_only', role='mg_audit_ro'"
+    },
+    {
+      "name": "provenance_not_in_table_load_order",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "table_load_order entities=['Encounter', 'Observation', 'ObservationComponent', 'SourceRecord', 'SourceSystem', 'Subject', 'SubjectCharacteristic', 'pipeline_run']"
+    },
+    {
+      "name": "provenance_marked_embedded",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "embedded=True, table_entity=False"
+    },
+    {
+      "name": "snapshot_repeatable_read_single_transaction",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "isolation='repeatable_read'"
+    },
+    {
+      "name": "snapshot_loss_forbids_resume_from_last_pk",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "on_snapshot_loss={'mark_run': 'FAILED', 'clear_staging': True, 'restart': 'new_pipeline_run_id', 'forbidden': 'resume_from_last_source_pk_after_snapshot_loss'}"
+    },
+    {
+      "name": "restart_requires_active_snapshot",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "allowed_only_when='snapshot_transaction_still_active'"
+    },
+    {
+      "name": "staging_insert_only",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "staging mode='insert_only'"
+    },
+    {
+      "name": "no_silent_upsert",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "forbidden=['upsert_by_canonical_id', 'silent_overwrite_on_same_id', 'write_to_raw']"
+    },
+    {
+      "name": "source_payload_changed_blocks_promotion",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "reason_code='SOURCE_PAYLOAD_CHANGED'"
+    },
+    {
+      "name": "rollback_staging_only",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "rollback={'scope': 'current_run_staging_only', 'deletes': 'staging_rows_for_pipeline_run_id', 'published_records': 'never_deleted_by_rollback', 'raw_impact': 'none'}"
+    },
+    {
+      "name": "cardinality_one_per_row_defined",
+      "section": "validation",
+      "status": "PASS",
+      "detail": "one_per_row cardinality required"
+    },
+    {
+      "name": "cardinality_zero_to_many_defined",
+      "section": "validation",
+      "status": "PASS",
+      "detail": "zero_to_many_per_row cardinality required"
+    },
+    {
+      "name": "characteristics_zero_to_many_example",
+      "section": "validation",
+      "status": "PASS",
+      "detail": "groups=['source_a_account_patient_characteristics']"
+    },
+    {
+      "name": "validation_required_checks_defined",
+      "section": "validation",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "quarantine_schema_defined",
+      "section": "validation",
+      "status": "PASS",
+      "detail": "quarantine validation_error_schema required"
+    },
+    {
+      "name": "quarantine_uses_locator_not_raw_pk",
+      "section": "validation",
+      "status": "PASS",
+      "detail": "fields=['reject_id', 'pipeline_run_id', 'source_record_locator', 'locator_key_version', 'source_relation', 'construction_group_id', 'reject_reason_code', 'reject_detail', 'payload_hash', 'rejected_at']"
+    },
+    {
+      "name": "quarantine_forbids_raw_pk_field",
+      "section": "validation",
+      "status": "PASS",
+      "detail": "forbidden_fields=['source_primary_key', 'raw_row_payload', 'patient_names', 'contacts']"
+    },
+    {
+      "name": "canonical_id_namespace_version",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "id_namespace_version='0.7.0'"
+    },
+    {
+      "name": "canonical_id_runtime_secret_only",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "secret_storage='runtime_only'"
+    },
+    {
+      "name": "key_version_required",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "key_version required in runtime plan"
+    },
+    {
+      "name": "secret_change_without_key_version_bump_forbidden",
+      "section": "identity",
+      "status": "PASS",
+      "detail": "forbidden=['secret_change_without_key_version_bump', 'silent_rekey_on_secret_rotation', 'claiming_same_key_version_after_secret_rotation']"
+    },
+    {
+      "name": "temporal_contract_referenced",
+      "section": "temporal",
+      "status": "PASS",
+      "detail": "temporal-contract.yaml must define forbidden substitutions"
+    },
+    {
+      "name": "provenance_contract_referenced",
+      "section": "provenance",
+      "status": "PASS",
+      "detail": "provenance SOURCE_BACKED profile required"
+    },
+    {
+      "name": "derived_database_isolated_from_raw",
+      "section": "storage",
+      "status": "PASS",
+      "detail": "database='uhbse_canonical_dev'"
+    },
+    {
+      "name": "database_roles_defined",
+      "section": "storage",
+      "status": "PASS",
+      "detail": "roles=['canonical_loader', 'canonical_migrator', 'canonical_owner', 'canonical_validator_ro', 'mg_audit_ro']"
+    },
+    {
+      "name": "raw_db_not_write_target",
+      "section": "storage",
+      "status": "PASS",
+      "detail": "forbidden_targets=['magerya_api', 'kgz_raw']"
+    },
+    {
+      "name": "physical_creation_status_not_created",
+      "section": "storage",
+      "status": "PASS",
+      "detail": "physical_creation_status='not_created'"
+    },
+    {
+      "name": "no_global_patient_or_cross_source_merge",
+      "section": "safety",
+      "status": "PASS",
+      "detail": "forbidden_in_pilot=['source_b_mappings', 'Provider_entity_load', 'identity_linkage_merge', 'global_patient_id', 'global_subject_id', 'cross_source_subject_resolution', 'simulation_entities', 'prediction_entities']"
+    },
+    {
+      "name": "zero_open_blocking_decisions",
+      "section": "plan",
+      "status": "PASS",
+      "detail": "open_blocking=0, open_blocking_count=0"
+    },
+    {
+      "name": "prior_stage_integrity_bytes",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "unchanged"
+    },
+    {
+      "name": "release_verification_evidence",
+      "section": "verification",
+      "status": "PASS",
+      "detail": "release evidence pending publication"
+    },
+    {
+      "name": "planning_artifact_versions_synchronized",
+      "section": "plan",
+      "status": "PASS",
+      "detail": "all planning YAML versions synchronized"
+    },
+    {
+      "name": "active_document_version_sync_plan_yaml",
+      "section": "docs",
+      "status": "PASS",
+      "detail": "plan='0.3.6', design='0.7.5'"
+    },
+    {
+      "name": "active_document_version_sync",
+      "section": "docs",
+      "status": "PASS",
+      "detail": "all active docs synchronized"
+    },
+    {
+      "name": "planning_yaml_no_duplicate_keys",
+      "section": "plan",
+      "status": "PASS",
+      "detail": "no duplicate keys"
+    },
+    {
+      "name": "pilot_read_set_fingerprint_coverage",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "all pilot read-set columns covered"
+    },
+    {
+      "name": "pilot_fingerprint_no_undocumented_columns",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "no undocumented fingerprint columns"
+    },
+    {
+      "name": "canonical_payload_hash_contract_executable",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "contract_version=4, payload_shape=['canonical_entity', 'canonical_id', 'stable_clinical_fields', 'stable_source_backed_provenance', 'source_record_locator', 'mapping_status', 'mapping_version', 'transformation_version']"
+    },
+    {
+      "name": "canonical_payload_builder_matches_documented_shape",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "keys=['canonical_entity', 'canonical_id', 'stable_clinical_fields', 'stable_source_backed_provenance', 'source_record_locator', 'mapping_status', 'mapping_version', 'transformation_version']"
+    },
+    {
+      "name": "canonical_payload_hash_supports_nested_scalars",
+      "section": "pipeline",
+      "status": "PASS",
+      "detail": "hash='daf6e656664f789219d961f6b1a08c82decedc8ce148e381dfaf5811a3feaccc'"
+    },
+    {
+      "name": "review_bundle_includes_full_human_simulator",
+      "section": "audit",
+      "status": "PASS",
+      "detail": "src/human_simulator required in review bundle"
+    },
+    {
+      "name": "review_bundle_required_paths_present_in_repo",
+      "section": "audit",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "implementation_content_manifest_hashes_match",
+      "section": "manifest",
+      "status": "PASS",
+      "detail": "verified 8 content entries"
+    },
+    {
+      "name": "implementation_report_draft",
+      "section": "report",
+      "status": "PASS",
+      "detail": "expected DRAFT, draft=True"
+    },
+    {
+      "name": "gate_pytest_preserves_prior_stage_bytes",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "prior-stage hashes identical before and after gate pytest"
+    },
+    {
+      "name": "pytest_implementation_plan",
+      "section": "verification",
+      "status": "PASS",
+      "detail": "75 passed, 3 deselected in 2.50s"
+    },
+    {
+      "name": "prior_stage_integrity_document",
+      "section": "preconditions",
+      "status": "PASS",
+      "detail": "prior-stage-integrity.json"
+    },
+    {
+      "name": "report_phase_version_matches_plan",
+      "section": "report",
+      "status": "PASS",
+      "detail": "expected v0.3.6"
+    },
+    {
+      "name": "report_design_baseline_matches_plan",
+      "section": "report",
+      "status": "PASS",
+      "detail": "expected v0.7.5"
+    },
+    {
+      "name": "report_manifest_sha256_matches",
+      "section": "report",
+      "status": "PASS",
+      "detail": "manifest hash present in report"
+    },
+    {
+      "name": "report_checkpoint_version_matches_plan",
+      "section": "report",
+      "status": "PASS",
+      "detail": "expected checkpoint v0.3.6"
+    },
+    {
+      "name": "report_no_stale_active_baseline",
+      "section": "report",
+      "status": "PASS",
+      "detail": "no stale baseline"
+    },
+    {
+      "name": "report_timestamp_chronology",
+      "section": "verification",
+      "status": "PASS",
+      "detail": "report=2026-08-08T10:03:07.474969+00:00, verified=2026-08-08T10:03:07.474994+00:00, bundle=2026-08-08T10:03:07.475001+00:00"
+    },
+    {
+      "name": "verification_report_sha256_match",
+      "section": "verification",
+      "status": "PASS",
+      "detail": "report_sha256='b18713a01741e649ad2dc25b279df96f3f0735e255e7ff25fdcdfaaafe390457', disk='b18713a01741e649ad2dc25b279df96f3f0735e255e7ff25fdcdfaaafe390457'"
+    }
+  ],
+  "failures": [],
+  "pytest_command": "python -m pytest tests/test_verify_implementation_plan.py tests/test_stage03_contracts.py -q -k 'not test_published_verification_matches_final_report_bytes and not test_full_pytest_suite_preserves_publication_artifacts and not test_verify_without_publish_is_side_effect_free and not test_verify_implementation_plan_passes and not test_gate_return_matches_on_disk_verification_when_present and not test_implementation_plan_clean_extraction_gate and not test_full_pytest_suite_does_not_mutate_prior_stage_artifacts'",
+  "pytest_exit_code": 0,
+  "pytest_collected": 78,
+  "pytest_selected": 75,
+  "pytest_deselected": 3,
+  "pytest_passed": 75,
+  "pytest_failed": 0,
+  "pytest_skipped": 0,
+  "pytest_duration_seconds": 2.5,
+  "pytest_summary": "75 passed, 3 deselected in 2.50s",
+  "content_manifest_sha256": "4df8644a4c4c3a3e51948181a5ed9e0f3c8bb38161a134ed5de050c8d0b20a8e",
+  "report_sha256": "b5258c9a40a05401cb8b9b1d28939edf606aba495fcba15bdd0948591e5b4153",
+  "report_generated_at": "2026-08-08T10:03:07.474969+00:00",
+  "verified_at": "2026-08-08T10:03:07.474994+00:00",
+  "review_bundle_generated_at": "2026-08-08T10:03:07.475001+00:00",
+  "design_baseline_version": "0.7.5",
+  "implementation_plan_version": "0.3.6",
+  "review_bundle_sha256": "7a4ddbad12c3ee7a8c587763f72699ded398ffb9b2267f0bfa4c1b14770dcdb6",
+  "review_bundle_member_count": 181,
+  "review_bundle_indexed_member_count": 180,
+  "review_bundle_path": "stage-03-implementation-plan-v0.3.5-review.zip"
+}

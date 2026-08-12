@@ -1,0 +1,65 @@
+{
+  "kind": "LIVE",
+  "title": "vault_agent_restart_reauthentication",
+  "cycle_1_status": "PASS",
+  "cycle_2_status": "PASS",
+  "two_independent_wrapped_secret_ids": true,
+  "note": "Each cycle obtains a new one-time wrapped SecretID; prior SecretID not reused",
+  "overall_status": "PASS",
+  "cycles": [
+    {
+      "cycle": 1,
+      "overall_status": "PASS",
+      "checks": {
+        "container_started": "PASS",
+        "credentials_delivered_into_container_tmpfs": "PASS",
+        "smoke_result_present": "PASS",
+        "agent_child_status": "PASS",
+        "child_wrapped_secret_id_removed": "PASS",
+        "child_hmac_key_version_1": "PASS",
+        "child_hmac_algorithm": "PASS",
+        "child_loader_username": "PASS",
+        "child_loader_password_present": "PASS",
+        "child_hmac_output_length_32": "PASS",
+        "child_hmac_deterministic": "PASS",
+        "child_session_user": "PASS",
+        "child_current_user_before_set_role": "PASS",
+        "child_current_user_after_set_role": "PASS",
+        "child_select_privilege": "PASS",
+        "child_insert_privilege": "PASS",
+        "child_insert_not_executed": "PASS",
+        "child_row_counts_zero": "PASS",
+        "wrapped_secret_id_absent_after_auth": "PASS",
+        "auth_path_is_agent_supervisor": "PASS",
+        "runtime_container_removed": "PASS"
+      }
+    },
+    {
+      "cycle": 2,
+      "overall_status": "PASS",
+      "checks": {
+        "container_started": "PASS",
+        "credentials_delivered_into_container_tmpfs": "PASS",
+        "smoke_result_present": "PASS",
+        "agent_child_status": "PASS",
+        "child_wrapped_secret_id_removed": "PASS",
+        "child_hmac_key_version_1": "PASS",
+        "child_hmac_algorithm": "PASS",
+        "child_loader_username": "PASS",
+        "child_loader_password_present": "PASS",
+        "child_hmac_output_length_32": "PASS",
+        "child_hmac_deterministic": "PASS",
+        "child_session_user": "PASS",
+        "child_current_user_before_set_role": "PASS",
+        "child_current_user_after_set_role": "PASS",
+        "child_select_privilege": "PASS",
+        "child_insert_privilege": "PASS",
+        "child_insert_not_executed": "PASS",
+        "child_row_counts_zero": "PASS",
+        "wrapped_secret_id_absent_after_auth": "PASS",
+        "auth_path_is_agent_supervisor": "PASS",
+        "runtime_container_removed": "PASS"
+      }
+    }
+  ]
+}

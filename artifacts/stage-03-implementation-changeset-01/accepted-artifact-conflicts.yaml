@@ -1,0 +1,103 @@
+stage: "03"
+phase: implementation
+changeset: stage-03-implementation-changeset-01
+title: Conflicts Detected Between Accepted Artifacts
+document_version: "0.1"
+
+purpose: >
+  Changeset 01 was required to stop and record the exact conflict if accepted artifacts
+  contradict each other. Two conflicts were found. Neither is repaired here, neither is
+  resolved by inventing model fields, and both block live load until an explicit decision
+  is made. Neither conflict affects the creation of empty canonical storage, which is what
+  this changeset delivers.
+
+conflicts:
+  - id: temporal_precision_field_absent_from_model
+    severity: BLOCKS_LIVE_LOAD
+    status: OPEN
+    artifact_a:
+      path: artifacts/stage-03/temporal-contract.yaml
+      version: "0.4.0"
+      location: missing_time_policy.when_clinical_time_unknown
+      states: >
+        When clinical time is unknown the record must "set temporal_precision to unknown"
+        and may "optionally set sequence_when_time_unknown". Both names also appear in
+        temporal_fields.
+    artifact_b:
+      path: artifacts/stage-03/canonical-model.yaml
+      version: "0.6.0"
+      location: entities.Encounter.fields, entities.Observation.fields
+      states: >
+        Neither Encounter nor Observation declares a temporal_precision field or a
+        sequence_when_time_unknown field. No pilot entity declares either field.
+    exact_contradiction: >
+      The temporal contract requires populating two fields that the canonical model does not
+      define on any pilot entity.
+    changeset_01_handling:
+      columns_created: none
+      reason: >
+        Creating temporal_precision or sequence_when_time_unknown would extend the canonical
+        model, which is forbidden. Storage implements exactly the fields the model declares.
+      implemented_instead: >
+        Missing clinical time is documented through the model's own missingness_reason field:
+        encounter.occurred_at null requires missingness_reason, and observation.observed_at
+        null requires missingness_reason.
+    blocks:
+      - canonical_transform_run
+      - canonical_staging_load
+      - canonical_promotion
+    resolution_options:
+      - add temporal_precision and sequence_when_time_unknown to the canonical model in a new design release
+      - remove the requirement from the temporal contract in a new design release
+    decision_owner: design_release
+    must_resolve_before: first_live_load
+
+  - id: encounter_provider_id_population_disagreement
+    severity: BLOCKS_LIVE_LOAD
+    status: OPEN
+    artifact_a:
+      path: artifacts/stage-03/record-construction-contract.yaml
+      version: "0.7.4"
+      location: construction_groups.source_a_appointment_encounter.relationship_fields.provider_id
+      states: "provider_id: via_column.doctor_id"
+    artifact_b:
+      paths:
+        - artifacts/stage-03-implementation/pilot-slice.yaml
+        - artifacts/stage-03-implementation/pipeline-plan.yaml
+      version: "0.3.5"
+      location: >
+        pilot-slice pilot_entities.Encounter.deferred_fields.provider_id and
+        pipeline-plan fk_dependencies.Encounter.provider_id
+      states: >
+        provider_id is DEFERRED_FOR_PILOT with reason "Provider construction group absent;
+        doctor_id not copied", and the foreign key is declared deferred_null_for_pilot.
+    exact_contradiction: >
+      The design construction contract maps appointment_appointment.doctor_id into
+      Encounter.provider_id, while the accepted implementation plan states that doctor_id is
+      not copied and that provider_id stays null for the pilot.
+    changeset_01_handling:
+      column_created: encounter.provider_id
+      constraint: CHECK (provider_id IS NULL)
+      reason: >
+        Fail-closed. Provider is not a pilot table entity, so no referential target exists.
+        The stricter of the two accepted statements is enforced, which makes any future
+        attempt to copy doctor_id fail loudly instead of silently storing an unverifiable
+        staff identifier.
+    blocks:
+      - canonical_transform_run
+      - canonical_staging_load
+    resolution_options:
+      - drop provider_id from the Source A encounter construction group in a new design release
+      - add the Provider entity and its construction group to a later pilot scope
+    decision_owner: design_release_or_next_pilot_scope
+    must_resolve_before: first_live_load
+
+path_corrections:
+  - requested: artifacts/stage-03/physical-storage-plan.yaml
+    actual: artifacts/stage-03-implementation/physical-storage-plan.yaml
+    kind: path_only
+    conflict: false
+
+open_conflict_count: 2
+conflicts_repaired_automatically: 0
+design_or_plan_artifacts_modified: 0

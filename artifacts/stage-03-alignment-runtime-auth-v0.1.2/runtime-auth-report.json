@@ -1,0 +1,38 @@
+{
+  "document_version": "0.1.2",
+  "report_status": "DRAFT",
+  "overall_status": "PASS",
+  "component_statuses": {
+    "direct_approle_api_smoke": "PASS",
+    "vault_agent_configuration_static_validation": "PASS",
+    "vault_agent_runtime_execution": "PASS",
+    "vault_agent_restart_reauthentication": "PASS",
+    "wrapped_secret_id_independence": "PASS",
+    "agent_token_policy_lookup": "PASS"
+  },
+  "runtime_contract": "PARTIAL_RUNTIME_VERIFIED",
+  "runtime_contract_complete": false,
+  "open_blockers": [
+    "initial_root_token_available",
+    "limited_operator_identity_absent",
+    "vault_key_custody_decision_required",
+    "pgp_keys_shared_keyring_empty_passphrase",
+    "multi_custodian_separation_absent"
+  ],
+  "invariants": {
+    "row_counts_after": {
+      "source_system": 0,
+      "source_record": 0,
+      "subject": 0,
+      "subject_characteristic": 0,
+      "encounter": 0,
+      "observation": 0,
+      "observation_component": 0
+    },
+    "schema_fingerprint_unchanged": true,
+    "postgres_principal_unchanged": true
+  },
+  "accepted_v01_sha256": "a7708432dd0484797ee35b613de005bc147b541cb6e484fcd5a999fb024b25b4",
+  "accepted_v011_sha256": "b727967789a87a11b666896a83831487729d407e462ddf88555cc9e94d00c7b3",
+  "secrets_recorded_in_artifacts": false
+}

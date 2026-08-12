@@ -1,0 +1,32 @@
+{
+  "kind": "LIVE",
+  "operator_identity": "uhbse-operator-limited",
+  "auth_method": "userpass",
+  "policy": "uhbse-operator-limited",
+  "positive": {
+    "login_token_usable": "PASS",
+    "policies_exact": "PASS",
+    "default_policy_absent": "PASS",
+    "audit_identity_present": "PASS",
+    "ttl_bounded": "PASS",
+    "approle_metadata_read": "PASS",
+    "wrapped_secret_id_issuance": "PASS",
+    "own_policy_read": "PASS"
+  },
+  "negative": {
+    "root_path_denied": "PASS",
+    "sudo_auth_enable_denied": "PASS",
+    "audit_device_change_denied": "PASS",
+    "storage_change_or_read_denied": "PASS",
+    "wildcard_secret_read_denied": "PASS",
+    "unrelated_secret_read_denied": "PASS",
+    "policy_write_denied": "PASS",
+    "auth_method_change_denied": "PASS"
+  },
+  "overall_status": "PASS",
+  "secrets_recorded": false,
+  "token_policies_observed_count": 1,
+  "display_name_sanitised": "userpass-uhbse-operator-limited",
+  "provision_exit_zero": true,
+  "token_lookup_ok": "PASS"
+}

@@ -2,22 +2,23 @@ import { useState } from 'react'
 import { useI18n } from '../i18n'
 import { PartnerContactModal } from './PartnerContactModal'
 import { Reveal } from './Reveal'
+import { SectionHead } from './SectionHead'
 
 export function SectionPartners() {
   const { t } = useI18n()
   const [contactAudience, setContactAudience] = useState<string | null>(null)
 
   return (
-    <section className="section" id="partners">
+    <section className="section" id="partners" aria-labelledby="partners-heading">
       <div className="shell">
-        <Reveal className="section__head">
-          <p className="kicker">{t.partners.kicker}</p>
-          <h2 className="display display--l">{t.partners.title}</h2>
-        </Reveal>
+        <SectionHead
+          headingId="partners-heading"
+          title={t.partners.title}
+        />
 
-        <div className="partners__list">
+        <ol className="partners__list">
           {t.partners.items.map((item, i) => (
-            <Reveal key={item.audience} delay={i * 80}>
+            <Reveal as="li" key={item.audience} delay={i * 80}>
               <button
                 type="button"
                 className="partner-row"
@@ -34,7 +35,7 @@ export function SectionPartners() {
               </button>
             </Reveal>
           ))}
-        </div>
+        </ol>
       </div>
 
       <PartnerContactModal

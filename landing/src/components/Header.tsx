@@ -84,11 +84,11 @@ export function Header() {
   return (
     <header className="header" data-stuck={stuck}>
       <div className="shell header__inner">
-        <a className="logo" href="#top">
+        <a className="logo" href="#top" aria-label="UHBSE — Human Biology Simulation Engine">
           UHBSE
         </a>
 
-        <nav className="header__nav">
+        <nav className="header__nav" aria-label={t.nav.ariaLabel}>
           <a className="header__link" href="#engine">
             {t.nav.engine}
           </a>

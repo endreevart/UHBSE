@@ -1,0 +1,49 @@
+stage: "03"
+phase: implementation_planning
+title: Physical Storage Plan
+document_version: "0.3.6"
+implementation_status: planning_only_not_started
+
+planned_topology:
+  service_name: human-simulator-canonical
+  database_name: uhbse_canonical_dev
+  schema_name: canonical_evidence
+  postgresql_version: "16"
+  local_container:
+    port: 5436
+    volume: uhbse_canonical_dev_data
+    status: planned_not_created
+
+database_roles:
+  canonical_owner:
+    purpose: object ownership
+    runtime_use: false
+  canonical_migrator:
+    purpose: future DDL migrations
+    runtime_use: false_in_planning
+  canonical_loader:
+    purpose: SELECT/INSERT on derived staging and published tables
+    raw_write: forbidden
+  canonical_validator_ro:
+    purpose: read-only validation queries on derived DB
+  mg_audit_ro:
+    purpose: Source A READ ONLY extract only
+
+connection_policy:
+  raw_connections:
+    role: mg_audit_ro
+    mode: read_only
+  derived_connections:
+    loader_role: canonical_loader
+    validator_role: canonical_validator_ro
+    note: loader requires SELECT for idempotency and reconciliation checks
+  forbidden_targets:
+    - magerya_api
+    - kgz_raw
+
+provenance_storage:
+  embedded_jsonb: true
+  separate_provenance_table: forbidden_in_pilot
+
+physical_creation_status: not_created
+ddl_status: not_authored

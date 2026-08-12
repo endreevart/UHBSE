@@ -1,0 +1,93 @@
+stage: "03"
+phase: design
+title: Field Semantics Register
+version: "0.5.1"
+
+raw_value_policy: always_preserve
+
+data_level_enum:
+  - PATIENT_EVENT
+  - OBSERVATION_HEADER
+  - OBSERVATION_VALUE
+  - ATTRIBUTE_CONTAINER
+  - REFERENCE_CATALOG
+  - WORKFLOW
+  - PAYLOAD
+  - UNKNOWN
+
+forbidden_fields:
+  - global_patient_id
+  - global_subject_id
+  - cross_source_patient_key
+  - raw_national_identifier
+  - raw_phone_number
+  - raw_email
+
+normalized_field_policy:
+  nullable_at_design: true
+  rule: normalized_concept, normalized_unit, normalized_code may be null until coding pipeline exists
+
+field_definitions:
+  source_subject_key:
+    semantics: Opaque source-local subject identifier
+    merge_rule: never cross-source
+  characteristic_code:
+    semantics: Stable local code for SubjectCharacteristic; raw codes like source_birthdate, source_sex
+    merge_rule: never cross-source consolidation
+  subject_characteristic_typed_value:
+    semantics: Exactly one of date/numeric/text/categorical/boolean value fields; raw_value preserved in parallel
+  age_at_snapshot:
+    semantics: Derived at snapshot construction from birthdate; must not be stored on Subject or SubjectCharacteristic
+  source_created_at:
+    semantics: Source row creation timestamp; system time not clinical time
+  source_updated_at:
+    semantics: Source row last modification timestamp
+  recorded_at:
+    semantics: Source system record time; must not substitute missing clinical time
+  occurred_at:
+    semantics: Clinical encounter/event time when explicitly evidenced
+  observed_at:
+    semantics: Clinical observation time when explicitly evidenced
+  temporal_precision:
+    semantics: Precision of primary clinical time; must be unknown when clinical time is absent
+  sequence_when_time_unknown:
+    semantics: Optional ordering among events with unknown clinical time; never substitutes clinical datetime
+  specimen_collected_at:
+    semantics: Specimen collection time
+  result_available_at:
+    semantics: When result became available
+  generated_at:
+    semantics: When a prediction was generated
+  target_at:
+    semantics: Forecast target time for a prediction
+  prediction_horizon:
+    semantics: Horizon from generated_at to target_at
+  source_concept_key:
+    semantics: Source-local catalog row identifier for Concept
+  source_unit_key:
+    semantics: Source-local unit catalog identifier
+  grouping_key:
+    semantics: Derived structural key for hypothesis header synthesis only
+
+snapshot_and_prediction_fields:
+  evidence_state_snapshot:
+    semantics: As-of evidence baseline computed from observations (DERIVED/IMPUTED)
+  state_snapshot_component:
+    semantics: Structured variable row; exactly one typed value field populated
+  scenario_checkpoint:
+    semantics: SYNTHETIC saved scenario state for rollback and branch creation
+  predicted_state_typed_value:
+    semantics: Exactly one of numeric/text/categorical/boolean value fields populated
+  simulation_run_reproducibility:
+    semantics: model_id, model_version, hashes, input_state_reference, random_seed required for COMPLETED runs
+
+intervention_separation:
+  medication_vs_supplement: separate entities MedicationExposure and SupplementExposure
+  plan_vs_actual: separated via intent and record_origin
+
+observation_header_value:
+  Observation: header or derived grouping container
+  ObservationComponent: atomic value row
+  source_a: document_analysisresult + document_analysisresultitem
+  source_b: derived Observation + analyses_constructor row
+  cross_source_equivalence: not declared

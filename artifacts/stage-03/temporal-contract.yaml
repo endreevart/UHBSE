@@ -1,0 +1,122 @@
+stage: "03"
+phase: design
+title: Temporal Contract
+version: "0.4.1"
+
+temporal_fields:
+  - observed_at
+  - specimen_collected_at
+  - result_available_at
+  - recorded_at
+  - occurred_at
+  - intervention_started_at
+  - intervention_ended_at
+  - generated_at
+  - target_at
+  - prediction_horizon
+  - effective_at
+  - effective_until
+  - temporal_precision
+  - timezone
+  - sequence_when_time_unknown
+
+temporal_precision_enum:
+  - day
+  - hour
+  - minute
+  - second
+  - unknown
+
+temporal_precision_semantics:
+  day: clinical time known to calendar day only
+  hour: clinical time known to hour within a day
+  minute: clinical time known to minute within an hour
+  second: clinical time known to second precision
+  unknown: clinical time absent, not evidenced, or not mappable from source without substitution
+
+sequence_when_time_unknown_policy:
+  applies_to:
+    - Encounter
+    - Observation
+  semantics: >
+    Optional integer ordering when multiple events share unknown clinical time within one subject
+    or encounter scope. Does not substitute for occurred_at or observed_at.
+  required_when: never
+  forbidden_substitute_for: [occurred_at, observed_at, recorded_at, created_at]
+
+semantic_definitions:
+  observed_at: When a measurement or specimen-linked observation clinically occurred
+  specimen_collected_at: When specimen/material was collected
+  result_available_at: When a result became available to the source system
+  recorded_at: When the source system stored or last updated the row
+  occurred_at: When a clinical encounter or event happened in the real world
+  intervention_started_at: When an intervention action started or was intended to start
+  intervention_ended_at: When an intervention action ended or was intended to end
+  generated_at: When a prediction or synthetic planning record was created
+  target_at: Future time point a prediction applies to
+  prediction_horizon: Duration or window from generated_at to target_at
+  temporal_precision: Precision qualifier for the primary clinical time field on the entity
+  sequence_when_time_unknown: Optional ordering key when clinical time is unknown
+  timezone: IANA timezone identifier when source documents one explicitly
+
+entity_time_roles:
+  Observation:
+    clinical: observed_at
+    clinical_precision: temporal_precision
+    specimen: specimen_collected_at
+    result: result_available_at
+    documentation: recorded_at
+  Encounter:
+    clinical: occurred_at
+    clinical_precision: temporal_precision
+    documentation: recorded_at
+    completion: completed_at
+    cancellation: cancelled_at
+    confirmation: confirmed_at
+  Intervention:
+    action_start: intervention_started_at
+    action_end: intervention_ended_at
+    documentation: recorded_at
+  PredictedState:
+    generated: generated_at
+    target: target_at
+    horizon: prediction_horizon
+    rule: target_at must be >= generated_at
+  ScenarioEvent:
+    effective_start: effective_at
+    effective_end: effective_until
+    rule: effective_until must be >= effective_at when both present
+
+runtime_constraints:
+  scenario_event_effective_at_required: true
+  scenario_event_effective_until_gte_effective_at: true
+  predicted_state_target_at_gte_generated_at: true
+  uncertainty_bounds_order: uncertainty_lower <= numeric_value <= uncertainty_upper
+  simulation_run_completed_requires_metadata: true
+  simulation_run_random_seed_optional_only_if_deterministic: true
+  extension_payload_requires_namespace_and_version: true
+
+forbidden_substitutions:
+  recorded_at_for_missing_clinical_time: true
+  created_at_for_observed_at: true
+  updated_at_for_started_at: true
+
+missing_time_policy:
+  when_clinical_time_unknown:
+    - leave occurred_at or observed_at null
+    - set temporal_precision to unknown
+    - optionally set sequence_when_time_unknown
+    - document missingness_reason
+  never:
+    - copy source created/created_at into clinical time fields without explicit DERIVED rule
+
+source_a_appointment_time_gap:
+  relation: magerya_api.appointment_appointment
+  issue: no evidenced clinical start/end columns in schema profile
+  allowed: recorded_at from created; completed_at as HYPOTHESIS completion timestamp only
+  forbidden: inferring occurred_at or started_at without evidence
+
+source_b_consultation_time_rule:
+  relation: public.consultations
+  clinical_hypothesis: combine date + time into occurred_at via combine_date_time
+  status: HYPOTHESIS

@@ -1,0 +1,159 @@
+{
+  "stage": "03",
+  "phase": "alignment_candidate",
+  "title": "Runtime-auth Phase 0 frozen baseline",
+  "document_version": "0.1.0",
+  "generated_at": "2026-08-11T15:38:19.379451+00:00",
+  "overall_status": "PASS",
+  "accepted_zips": {
+    "stage-03-alignment-vault-stop-v0.2.1-review.zip": "650c81e709e14211126f06ce20e11758c78de784fcb9e2dd9ad47d1685bf0204",
+    "stage-03-alignment-postgres-principal-v0.1-review.zip": "dfb6f2ce290e1e2fe3451a3d5e819b42709d7ffdcdef368bb85bd7dc943673cd"
+  },
+  "vault_preflight_status": "PASS",
+  "migration_hashes": {
+    "0001_roles_and_schema.sql": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+    "0002_pilot_evidence_tables.sql": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+    "0003_pilot_grants.sql": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+    "0004_storage_contract_hardening.sql": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a"
+  },
+  "schema_fingerprint": {
+    "algorithm": "sha256",
+    "sha256": "ee092ee97ecfce41ed90437f3f03db767e32a57a3f248dfecaa548d6b0856401",
+    "schema": "canonical_evidence",
+    "table_count": 7
+  },
+  "row_counts": {
+    "source_system": 0,
+    "source_record": 0,
+    "subject": 0,
+    "subject_characteristic": 0,
+    "encounter": 0,
+    "observation": 0,
+    "observation_component": 0
+  },
+  "role_inventory": {
+    "canonical_loader_login": {
+      "exists": true,
+      "attributes": {
+        "rolcanlogin": true,
+        "rolinherit": false,
+        "rolsuper": false,
+        "rolcreatedb": false,
+        "rolcreaterole": false,
+        "rolreplication": false,
+        "rolbypassrls": false
+      },
+      "memberships": [
+        "canonical_loader"
+      ]
+    },
+    "canonical_loader": {
+      "exists": true,
+      "attributes": {
+        "rolcanlogin": false,
+        "rolinherit": true,
+        "rolsuper": false,
+        "rolcreatedb": false,
+        "rolcreaterole": false,
+        "rolreplication": false,
+        "rolbypassrls": false
+      },
+      "memberships": []
+    },
+    "vault_approle": "uhbse-canonical-loader"
+  },
+  "operational_security_findings": {
+    "stage": "03",
+    "phase": "alignment_candidate",
+    "title": "Open operational-security findings",
+    "document_version": "0.1.1",
+    "report_status": "DRAFT",
+    "blocks_live_load": true,
+    "blocks_canonical_loader_runtime_contract": true,
+    "findings": [
+      {
+        "id": "pgp_keys_shared_keyring_empty_passphrase",
+        "status": "OPEN",
+        "summary": "PGP keys currently share one local keyring and have empty passphrases"
+      },
+      {
+        "id": "multi_custodian_separation_absent",
+        "status": "OPEN",
+        "summary": "Real multi-custodian separation is not established"
+      },
+      {
+        "id": "initial_root_token_available",
+        "status": "OPEN",
+        "summary": "Initial root token remains available"
+      },
+      {
+        "id": "limited_operator_identity_absent",
+        "status": "OPEN",
+        "summary": "Dedicated limited operator identity is not established"
+      },
+      {
+        "id": "approle_runtime_delivery_unimplemented",
+        "status": "ADDRESSED_IN_CANDIDATE",
+        "summary": "AppRole wrapped SecretID delivery + Agent config implemented in runtime-auth v0.1"
+      },
+      {
+        "id": "loader_restart_reauth_procedure_absent",
+        "status": "OPEN",
+        "summary": "Real loader restart/re-authentication procedure is absent"
+      },
+      {
+        "id": "vault_key_custody_decision_required",
+        "status": "OPEN",
+        "summary": "Custody model remains DECISION_REQUIRED"
+      }
+    ],
+    "canonical_loader_runtime_contract_complete": false
+  },
+  "checks": [
+    {
+      "id": "vault_stop_zip_unchanged",
+      "status": "PASS",
+      "detail": "650c81e709e14211126f06ce20e11758c78de784fcb9e2dd9ad47d1685bf0204"
+    },
+    {
+      "id": "postgres_principal_zip_unchanged",
+      "status": "PASS",
+      "detail": "dfb6f2ce290e1e2fe3451a3d5e819b42709d7ffdcdef368bb85bd7dc943673cd"
+    },
+    {
+      "id": "migrations_immutability",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "migrations_0001_0004_present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "vault_preflight_status",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "id": "operational_security_findings_present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "canonical_row_counts_zero",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "id": "postgres_principal_contract",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "identities": {
+    "vault_approle": "uhbse-canonical-loader",
+    "postgres_login": "canonical_loader_login",
+    "postgres_nologin": "canonical_loader"
+  }
+}

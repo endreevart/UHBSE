@@ -1,0 +1,134 @@
+{
+  "stage": "03",
+  "phase": "alignment_candidate",
+  "title": "Vault Preflight (sanitised) \u2014 vault-stop v0.2.1",
+  "document_version": "0.2.1",
+  "generated_at": "2026-08-11T14:26:29.506287+00:00",
+  "provider": "hashicorp_vault",
+  "deployment": "self_hosted_docker_or_cloud_vm",
+  "vault_mode": "production",
+  "storage": "raft_integrated_storage_single_node",
+  "dev_mode_prohibited": true,
+  "tls_skip_verify_used": false,
+  "vault_addr": "https://127.0.0.1:8200",
+  "kv_mount": "uhbse",
+  "logical_paths": [
+    "canonical/hmac-subject-key",
+    "canonical/loader-credential"
+  ],
+  "contract_references": [
+    "vault://uhbse/canonical/hmac-subject-key?version=1",
+    "vault://uhbse/canonical/loader-credential?version=1"
+  ],
+  "vault_auth_identity": "uhbse-canonical-loader",
+  "postgres_login_principal": "canonical_loader_login",
+  "postgres_nologin_group_role": "canonical_loader",
+  "postgres_principal_status": "HOLD_NOT_CREATED",
+  "sanitised": true,
+  "secrets_recorded": false,
+  "secrets_recorded_in_artifacts": false,
+  "overall_status": "PASS",
+  "counts": {
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0,
+    "total": 17
+  },
+  "checks": [
+    {
+      "id": "vault_container_running",
+      "status": "PASS",
+      "detail": "container human-simulator-vault is running"
+    },
+    {
+      "id": "tls_material_present",
+      "status": "PASS",
+      "detail": "ops/vault/tls/{server.crt,server.key,ca.crt} exist"
+    },
+    {
+      "id": "strict_tls_cacert_configured",
+      "status": "PASS",
+      "detail": "VAULT_CACERT=$PROJECT_ROOT/ops/vault/tls/ca.crt"
+    },
+    {
+      "id": "strict_tls_verification",
+      "status": "PASS",
+      "detail": "vault status succeeded with CA verification (no tls-skip-verify)"
+    },
+    {
+      "id": "vault_initialized",
+      "status": "PASS",
+      "detail": "initialized=true"
+    },
+    {
+      "id": "vault_unsealed",
+      "status": "PASS",
+      "detail": "sealed=false"
+    },
+    {
+      "id": "storage_raft",
+      "status": "PASS",
+      "detail": "storage_type=raft"
+    },
+    {
+      "id": "operator_token_present",
+      "status": "PASS",
+      "detail": "VAULT_TOKEN available for gated checks (value not recorded)"
+    },
+    {
+      "id": "kv_mount_uhbse",
+      "status": "PASS",
+      "detail": "KV v2 mount uhbse/ present"
+    },
+    {
+      "id": "policy_uhbse_canonical_loader",
+      "status": "PASS",
+      "detail": "policy uhbse-canonical-loader exists"
+    },
+    {
+      "id": "approle_uhbse_canonical_loader",
+      "status": "PASS",
+      "detail": "AppRole uhbse-canonical-loader exists"
+    },
+    {
+      "id": "secret_path_canonical_hmac-subject-key",
+      "status": "PASS",
+      "detail": "metadata present current_version=1 (value not read)"
+    },
+    {
+      "id": "secret_path_canonical_loader-credential",
+      "status": "PASS",
+      "detail": "metadata present current_version=1 (value not read)"
+    },
+    {
+      "id": "audit_device",
+      "status": "PASS",
+      "detail": "file audit enabled path=/vault/audit/vault-audit.log"
+    },
+    {
+      "id": "identity_separation_documented",
+      "status": "PASS",
+      "detail": "AppRole uhbse-canonical-loader \u2260 LOGIN canonical_loader_login \u2260 NOLOGIN canonical_loader"
+    },
+    {
+      "id": "dev_mode_prohibited",
+      "status": "PASS",
+      "detail": "compose uses vault server -config (not -dev)"
+    },
+    {
+      "id": "secrets_recorded_in_artifacts",
+      "status": "PASS",
+      "detail": "preflight records no secret values (sanitised=true)"
+    }
+  ],
+  "forbidden_in_evidence": [
+    "root_token",
+    "unseal_keys",
+    "secret_id",
+    "role_id",
+    "hmac_key_value",
+    "loader_password",
+    "dsn",
+    "tls_private_key"
+  ]
+}

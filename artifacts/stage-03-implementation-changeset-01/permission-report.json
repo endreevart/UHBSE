@@ -1,0 +1,159 @@
+{
+  "changeset": "stage-03-implementation-changeset-01",
+  "generated_at": "2026-08-07T08:28:59.318615+00:00",
+  "roles": [
+    "canonical_loader",
+    "canonical_migrator",
+    "canonical_owner",
+    "canonical_validator_ro"
+  ],
+  "schema_owner": "canonical_owner",
+  "schema_privileges": {
+    "canonical_loader": [
+      "USAGE"
+    ],
+    "canonical_migrator": [
+      "CREATE",
+      "USAGE"
+    ],
+    "canonical_owner": [
+      "CREATE",
+      "USAGE"
+    ],
+    "canonical_validator_ro": [
+      "USAGE"
+    ]
+  },
+  "status": "PASS",
+  "table_grants": {
+    "canonical_loader": {
+      "encounter": [
+        "INSERT",
+        "SELECT"
+      ],
+      "observation": [
+        "INSERT",
+        "SELECT"
+      ],
+      "observation_component": [
+        "INSERT",
+        "SELECT"
+      ],
+      "source_record": [
+        "INSERT",
+        "SELECT"
+      ],
+      "source_system": [
+        "INSERT",
+        "SELECT"
+      ],
+      "subject": [
+        "INSERT",
+        "SELECT"
+      ],
+      "subject_characteristic": [
+        "INSERT",
+        "SELECT"
+      ]
+    },
+    "canonical_owner": {
+      "encounter": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ],
+      "observation": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ],
+      "observation_component": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ],
+      "source_record": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ],
+      "source_system": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ],
+      "subject": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ],
+      "subject_characteristic": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    "canonical_validator_ro": {
+      "encounter": [
+        "SELECT"
+      ],
+      "observation": [
+        "SELECT"
+      ],
+      "observation_component": [
+        "SELECT"
+      ],
+      "source_record": [
+        "SELECT"
+      ],
+      "source_system": [
+        "SELECT"
+      ],
+      "subject": [
+        "SELECT"
+      ],
+      "subject_characteristic": [
+        "SELECT"
+      ]
+    }
+  },
+  "table_owners": {
+    "encounter": "canonical_owner",
+    "observation": "canonical_owner",
+    "observation_component": "canonical_owner",
+    "source_record": "canonical_owner",
+    "source_system": "canonical_owner",
+    "subject": "canonical_owner",
+    "subject_characteristic": "canonical_owner"
+  },
+  "target": "localhost:5436/uhbse_canonical_dev",
+  "violations": []
+}

@@ -1,0 +1,50 @@
+# Confirmed custody and limited-operator decisions
+# Human-confirmed 2026-08-12 — not silent selection.
+
+stage: "03"
+phase: security_remediation
+document_version: "0.1"
+report_status: DRAFT
+blocks_live_load: true
+
+confirmed_at: "2026-08-12"
+confirmed_by: human_operator
+
+custody_model:
+  id: MULTI_CUSTODIAN_2_OF_3
+  status: CONFIRMED_DECISION
+  key_shares: 3
+  key_threshold: 2
+  requirements:
+    - three independently generated PGP public keys
+    - private keys stored separately (no shared keyring)
+    - non-empty passphrase on each private key
+    - one person must not control threshold shares
+  live_ceremony_status: WAITING_FOR_THREE_CUSTODIANS
+  note: >
+    Decision CONFIRMED does not close custody blockers.
+    Blockers close only after live rekey verification, completion,
+    mandatory seal/unseal drill, and sanitised evidence PASS.
+    ASCII-armored keys are rejected as Vault -pgp-keys input.
+
+limited_operator_auth_method:
+  id: userpass
+  status: CONFIRMED_DECISION
+  identity_name: uhbse-operator-limited
+  policy_name: uhbse-operator-limited
+  implementation_status: PROVISIONED_PENDING_FINDING_CLOSE
+  note: >
+    limited_operator_identity_absent closes only after live verification PASS
+    (see limited-operator-verification.json).
+
+identity_separation:
+  vault_human_limited_operator: uhbse-operator-limited
+  vault_approle_loader: uhbse-canonical-loader
+  postgres_login: canonical_loader_login
+  postgres_nologin: canonical_loader
+  human_must_not_use_loader_approle: true
+
+forbidden_automatic_actions:
+  - silent_custody_model_selection
+  - automatic_rekey_without_ceremony_confirm
+  - automatic_root_token_revocation

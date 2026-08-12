@@ -1,0 +1,47 @@
+{
+  "stage": "03",
+  "phase": "alignment_candidate",
+  "title": "Open operational-security findings",
+  "document_version": "0.1.1",
+  "report_status": "DRAFT",
+  "blocks_live_load": true,
+  "blocks_canonical_loader_runtime_contract": true,
+  "findings": [
+    {
+      "id": "pgp_keys_shared_keyring_empty_passphrase",
+      "status": "OPEN",
+      "summary": "PGP keys currently share one local keyring and have empty passphrases"
+    },
+    {
+      "id": "multi_custodian_separation_absent",
+      "status": "OPEN",
+      "summary": "Real multi-custodian separation is not established"
+    },
+    {
+      "id": "initial_root_token_available",
+      "status": "OPEN",
+      "summary": "Initial root token remains available"
+    },
+    {
+      "id": "limited_operator_identity_absent",
+      "status": "OPEN",
+      "summary": "Dedicated limited operator identity is not established"
+    },
+    {
+      "id": "approle_runtime_delivery_unimplemented",
+      "status": "ADDRESSED_IN_CANDIDATE",
+      "summary": "AppRole wrapped SecretID delivery + Agent config implemented in runtime-auth v0.1"
+    },
+    {
+      "id": "loader_restart_reauth_procedure_absent",
+      "status": "OPEN",
+      "summary": "Real loader restart/re-authentication procedure is absent"
+    },
+    {
+      "id": "vault_key_custody_decision_required",
+      "status": "OPEN",
+      "summary": "Custody model remains DECISION_REQUIRED"
+    }
+  ],
+  "canonical_loader_runtime_contract_complete": false
+}

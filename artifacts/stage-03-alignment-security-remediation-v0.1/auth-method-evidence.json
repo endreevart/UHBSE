@@ -1,0 +1,9 @@
+{
+  "kind": "LIVE",
+  "document_version": "0.1",
+  "accepted_runtime_auth_v012_sha256": "772efa265a0024760469a9be7d07e8c1b10150758eaca3905025ae4cd4156059",
+  "approle_path_hint_rule": "PASS only with AppRole signal in display_name/path/meta; token_type service|batch alone is FAIL",
+  "code_module": "src/human_simulator/stage03_alignment/auth_method_evidence.py",
+  "negative_tests_present": true,
+  "note": "Evidence-quality fix applied in-repo; runtime-auth v0.1.2 ZIP not republished"
+}

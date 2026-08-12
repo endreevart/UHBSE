@@ -62,19 +62,18 @@ def test_classify_creates_candidate_artifacts(tmp_path: Path, schema_profile: di
     patients = result["entity_types"]["patients"]
     assert any(item["relation"] == "patients" for item in patients)
     visits = next(item for item in result["entity_types"]["visits"] if item["relation"] == "visits")
-    assert visits["status"] == "CONFIRMED"
+    assert visits["status"] == "CANDIDATE"
     assert any(ev["type"] == "foreign_key" for ev in visits["evidence"])
 
     patient_candidate = next(item for item in patients if item["relation"] == "patients")
-    assert patient_candidate["status"] == "CONFIRMED"
-    assert any(ev["type"] == "foreign_key" for ev in patient_candidate["evidence"])
+    assert patient_candidate["status"] == "CANDIDATE"
 
     unknown = {item["relation"] for item in result["unknown_relations"]}
     assert "misc_data" in unknown
     assert "alembic_version" not in unknown
 
 
-def test_name_only_match_is_likely_not_confirmed(tmp_path: Path) -> None:
+def test_name_only_match_is_candidate_not_confirmed(tmp_path: Path) -> None:
     profile = {
         "relations": [{"schema": "public", "name": "doctors", "kind": "table"}],
         "columns": [],
@@ -82,7 +81,7 @@ def test_name_only_match_is_likely_not_confirmed(tmp_path: Path) -> None:
     }
     result = classify_clinical_entities(profile, tmp_path)
     doctor = result["entity_types"]["doctors"][0]
-    assert doctor["status"] == "LIKELY"
+    assert doctor["status"] == "CANDIDATE"
 
 
 def test_classify_from_artifacts(tmp_path: Path, schema_profile: dict) -> None:

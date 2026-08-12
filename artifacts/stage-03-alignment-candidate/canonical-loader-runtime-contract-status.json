@@ -1,0 +1,24 @@
+{
+  "contract_key": "canonical_loader_runtime_contract",
+  "status": "PARTIAL_RUNTIME_VERIFIED",
+  "complete": false,
+  "report_status": "DRAFT",
+  "gates": {
+    "phase0": "PASS",
+    "secret_shape": "PASS",
+    "approle_hardening": "PASS",
+    "synthetic_smoke": "PASS",
+    "schema_fingerprint_unchanged": "PASS",
+    "row_counts_zero": "PASS",
+    "migrations_unchanged": "PASS",
+    "postgres_principal_unchanged": "PASS",
+    "zero_secret_leakage": "PASS",
+    "zero_canonical_writes": "PASS"
+  },
+  "open_blockers": [
+    "initial_root_token_available",
+    "vault_key_custody_decision_required",
+    "loader_restart_reauth_procedure_absent"
+  ],
+  "note": "PARTIAL_RUNTIME_VERIFIED means AppRole/Agent/smoke/SET ROLE path verified; contract remains incomplete while root token, custody, and restart/reauth stay open."
+}

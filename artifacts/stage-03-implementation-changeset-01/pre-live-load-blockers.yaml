@@ -1,0 +1,176 @@
+changeset: stage-03-implementation-changeset-01
+version: "0.2.2"
+title: Pre-live-load blockers
+status: OPEN
+
+purpose: >
+  Everything that must be answered before the first live load. Each entry blocks the load and
+  none blocks applying the schema-only migration 0004 to an empty canonical database. Nothing
+  here is resolved by guessing: a blocker closes only when an accepted release supplies the
+  missing definition. The executable form is
+  src/human_simulator/stage03/pre_live_load_blockers.py, evaluated by the gate
+  stage02_relationship_integrity_pre_live_load.
+
+single_source_of_truth: >
+  v0.2 kept two lists — the blockers evaluated by the gate, and the conflicts recorded in
+  accepted-artifact-conflicts.yaml — and only the first was enforced. Two conflicts marked
+  BLOCKS_LIVE_LOAD and OPEN were therefore documented as blocking while the executable guard
+  ignored them. From v0.2.2 the registry derives conflict blockers directly from that artifact,
+  so recording a conflict is sufficient to block the load and no list can drift out of step.
+
+blocker_sources:
+  - source: artifacts/stage-02/relationship-manifest.sha256
+    produces: [stage02_relationship_manifest_drift]
+  - source: structured contract validation (live_load_contracts.py)
+    produces:
+      - canonical_loader_runtime_principal_undefined
+      - source_subject_key_opacity_undefined
+  - source: artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml
+    rule: every conflict with severity BLOCKS_LIVE_LOAD and status OPEN
+    produces:
+      - temporal_precision_field_absent_from_model
+      - encounter_provider_id_population_disagreement
+
+blockers:
+
+  - id: stage02_relationship_manifest_drift
+    status: OPEN
+    opened_in: stage-02
+    question: >
+      Do the Stage 02 relationship artifacts still carry the bytes their manifest records?
+    evidence:
+      - "An independent recount finds two mismatches: subject-root-analysis.json and
+         identity-linkage-assessment.json."
+      - "verify_relationship_manifest returns on the first mismatch, which understated the
+         defect; the gate now enumerates all of them."
+    why_it_blocks_live_load: >
+      Linkage evidence whose bytes are unverified cannot be relied on when deciding which
+      source rows describe which subject.
+    blocks_live_load: true
+    blocks_schema_only_migration_0004: false
+    resolution_owner: separate Stage 02 maintenance changeset
+    not_repaired_here: true
+
+  - id: canonical_loader_runtime_principal_undefined
+    status: OPEN
+    opened_in: changeset-01-v0.2
+    question: >
+      Which login principal connects and assumes canonical_loader, from which credential
+      source, by which connection path and SET ROLE flow, with which minimal grants, audit
+      identity and rotation procedure?
+    evidence:
+      - "migrations/canonical/0001_roles_and_schema.sql creates canonical_loader NOLOGIN
+         NOSUPERUSER, which is correct for a group role and means no account can
+         authenticate as the loader."
+      - "artifacts/stage-03-implementation/physical-storage-plan.yaml :: database_roles
+         names the role and its purpose but no login principal."
+      - "artifacts/stage-03-implementation/security-runtime-plan.yaml :: database_roles
+         lists the role without a credential source or SET ROLE path."
+      - "No accepted artifact carries a canonical_loader_runtime_contract mapping."
+    resolution_requires: >
+      A complete canonical_loader_runtime_contract as specified in
+      live-load-contract-schema.yaml. A mention of SET ROLE in prose, a runtime_principal
+      whose value is TBD, or an empty credential_source do not close this blocker.
+    why_it_blocks_live_load: >
+      A load cannot be executed, audited or attributed without a named principal. Inventing
+      one here would create an unreviewed access path into the derived database.
+    blocks_live_load: true
+    blocks_schema_only_migration_0004: false
+    resolution_owner: implementation plan release after v0.3.5
+    forbidden_workarounds:
+      - granting LOGIN to canonical_loader
+      - connecting as the admin superuser for the pilot load
+      - storing a loader password in a repository artifact
+
+  - id: source_subject_key_opacity_undefined
+    status: OPEN
+    opened_in: changeset-01-v0.2
+    question: >
+      Does an accepted artifact define subject_key_from_id as a keyed pseudorandom
+      transformation with a key reference, key version, namespace, encodings, rotation policy
+      and collision handling?
+    evidence:
+      - "artifacts/stage-03/canonical-model.yaml :: Subject.source_subject_key declares the
+         field as an opaque source-local subject key."
+      - "artifacts/stage-03/field-semantics-register.yaml :: field_definitions
+         .source_subject_key repeats Opaque source-local subject identifier."
+      - "artifacts/stage-03/record-construction-contract.yaml :: construction group
+         source_a_subject maps the account patient primary key to source_subject_key through
+         the transformation named subject_key_from_id."
+      - "artifacts/stage-03/source-a-mapping-draft.yaml references the same transformation."
+      - "No accepted artifact carries a subject_key_transformation_contract mapping. The name
+         is used but never given an algorithm, key reference or key version."
+    resolution_requires: >
+      A complete subject_key_transformation_contract as specified in
+      live-load-contract-schema.yaml, whose algorithm is a keyed PRF such as HMAC-SHA256.
+    why_a_bare_digest_is_insufficient: >
+      account_patient.id is a bounded integer space. SHA256(account_patient.id) is reversible
+      by exhaustive search in negligible time, so an unkeyed digest cannot make the stored key
+      opaque. v0.2 accepted the words hash and digest as proof of opacity; v0.2.2 does not.
+    contrast: >
+      SourceRecord.source_record_locator does have a defined algorithm
+      (canonical-id-contract v0.7.4, HMAC-SHA256, key_reference canonical_id_key_v1), which
+      is why no equivalent blocker exists for the locator.
+    blocks_live_load: true
+    blocks_schema_only_migration_0004: false
+    resolution_owner: design release after v0.7.4
+    forbidden_workarounds:
+      - copying account_patient.id verbatim into source_subject_key
+      - hashing account_patient.id without a secret key
+      - choosing an HMAC key or namespace in implementation code
+      - relying on the canonical id contract to cover a field it does not name
+
+  - id: temporal_precision_field_absent_from_model
+    status: OPEN
+    opened_in: changeset-01-v0.2
+    derived_from: accepted-artifact-conflicts.yaml
+    question: Has the accepted-artifact conflict temporal_precision_field_absent_from_model been resolved?
+    evidence:
+      - "The temporal contract requires populating temporal_precision and
+         sequence_when_time_unknown, which the canonical model does not declare on any pilot
+         entity."
+    blocks_live_load: true
+    blocks_schema_only_migration_0004: false
+    resolution_owner: design_release
+    not_repaired_here: true
+
+  - id: encounter_provider_id_population_disagreement
+    status: OPEN
+    opened_in: changeset-01-v0.2
+    derived_from: accepted-artifact-conflicts.yaml
+    question: Has the accepted-artifact conflict encounter_provider_id_population_disagreement been resolved?
+    evidence:
+      - "The design construction contract maps appointment_appointment.doctor_id into
+         Encounter.provider_id, while the accepted implementation plan states that doctor_id
+         is not copied and that provider_id stays null for the pilot."
+    blocks_live_load: true
+    blocks_schema_only_migration_0004: false
+    resolution_owner: design_release_or_next_pilot_scope
+    not_repaired_here: true
+
+gate_behaviour:
+  gate_id: stage02_relationship_integrity_pre_live_load
+  expected_status: FAIL
+  failed_checks:
+    - relationship_manifest_hashes_match
+    - stage02_relationship_manifest_drift
+    - canonical_loader_runtime_principal_undefined
+    - source_subject_key_opacity_undefined
+    - temporal_precision_field_absent_from_model
+    - encounter_provider_id_population_disagreement
+  fail_closed: >
+    One open blocker is enough for FAIL. PASS is reachable only when all five are
+    structurally closed, which is demonstrated in an isolated test fixture and is not the
+    state of this workspace.
+  never_blocks:
+    - canonical_database_create
+    - canonical_migration_apply
+    - canonical_schema_verify
+    - canonical_permission_verify
+  performs_repairs: false
+  writes_nothing: true
+  opens_no_database_connection: true
+  reads_no_clinical_rows: true
+  frozen_inputs_hashed_before_and_after: 36
+
+blockers_resolved_by_this_changeset: 0

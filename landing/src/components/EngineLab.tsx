@@ -24,6 +24,7 @@ import { indicatorName } from '../i18n/names'
 import { BiomarkerPanel } from './BiomarkerPanel'
 import { EnsembleFan } from './EnsembleFan'
 import { Reveal } from './Reveal'
+import { SectionHead } from './SectionHead'
 import { SubjectDrawer } from './SubjectDrawer'
 import { TimelineScrubber } from './TimelineScrubber'
 import { TrajectoryInstrumentLegend } from './TrajectoryInstrumentLegend'
@@ -202,13 +203,13 @@ export function EngineLab() {
   )
 
   return (
-    <section className="section section--flush lab-section" id="engine">
+    <section className="section section--flush lab-section" id="engine" aria-labelledby="engine-heading">
       <div className="shell">
-        <Reveal className="section__head">
-          <p className="kicker">{t.engine.kicker}</p>
-          <h2 className="display display--l">{t.engine.title}</h2>
-          <p className="lede">{t.ws.ensembleLead}</p>
-        </Reveal>
+        <SectionHead
+          headingId="engine-heading"
+          title={t.engine.title}
+          lead={t.ws.ensembleLead}
+        />
 
         <Reveal className="rig plate ws--rig" data-hints="false">
           <div className="rig__gate">

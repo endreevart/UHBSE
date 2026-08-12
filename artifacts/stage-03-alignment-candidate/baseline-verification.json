@@ -1,0 +1,135 @@
+{
+  "evaluated_at": "2026-08-11T06:00:49.769493+00:00",
+  "read_only": true,
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "recovery_source_members_verified",
+      "passed": true,
+      "detail": "source=stage-03-implementation-changeset-01-v0.2.3-review.zip",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "recovered_design_bundle_present",
+      "passed": true,
+      "detail": "artifacts/external-review/stage-03-design-v0.7.4-recovered-review.zip",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "recovered_plan_bundle_present",
+      "passed": true,
+      "detail": "artifacts/external-review/stage-03-implementation-plan-v0.3.5-recovered-review.zip",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "invalid_design_archive_marked",
+      "passed": true,
+      "detail": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/external-review/stage-03-design-v0.7.4-review.zip: version=0.7.5",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "invalid_plan_archive_marked",
+      "passed": true,
+      "detail": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/external-review/stage-03-implementation-plan-v0.3.5-review.zip: version=0.3.6",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "stage_01_02_accepted_hashes",
+      "passed": true,
+      "detail": "9/9 controlled files unchanged",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "stage_02_maintenance_01_final",
+      "passed": true,
+      "detail": "report_status='FINAL'",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "relationship_manifest_8_of_8",
+      "passed": true,
+      "detail": "verified 8 entries in relationship-manifest.sha256; manifest_sha=13aae26b37032730c533740bc513872cb2a6890429b64ebd2fb923ffcf672974",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "design_v074_frozen_manifest",
+      "passed": true,
+      "detail": "stage-03-design-v0.7.4-recovered-review.zip manifest verifies (11 entries); document_version=0.7.4",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "plan_v035_frozen_manifest",
+      "passed": true,
+      "detail": "stage-03-implementation-plan-v0.3.5-recovered-review.zip manifest verifies (8 entries); document_version=0.3.5",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "candidate_design_version",
+      "passed": true,
+      "detail": "document_version=0.7.5",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "candidate_plan_version",
+      "passed": true,
+      "detail": "document_version=0.3.6",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "design_baseline_manifest_matches_frozen_v074",
+      "passed": true,
+      "detail": "design-baseline-manifest.sha256 matches recovered v0.7.4 baseline",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "candidate_design_differs_from_frozen_baseline",
+      "passed": true,
+      "detail": "candidate design manifest differs from frozen v0.7.4 baseline",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "migrations_0001_0004_immutable",
+      "passed": true,
+      "detail": "all four migration digests match accepted SHA",
+      "status": "EVALUATED"
+    },
+    {
+      "name": "canonical_db_row_counts_zero",
+      "passed": true,
+      "detail": "row_counts_total=0",
+      "status": "EVALUATED"
+    }
+  ],
+  "not_evaluated_checks": [],
+  "relationship_artifact_count": 8,
+  "frozen_design_zip_recovered": "artifacts/external-review/stage-03-design-v0.7.4-recovered-review.zip",
+  "frozen_plan_zip_recovered": "artifacts/external-review/stage-03-implementation-plan-v0.3.5-recovered-review.zip",
+  "invalid_design_zip": "artifacts/external-review/stage-03-design-v0.7.4-review.zip",
+  "invalid_plan_zip": "artifacts/external-review/stage-03-implementation-plan-v0.3.5-review.zip",
+  "candidate_design_manifest_verified": true,
+  "candidate_plan_manifest_verified": true,
+  "canonical_db": {
+    "canonical_db_connections": 1,
+    "raw_db_connections": 0,
+    "clinical_source_rows_read": 0,
+    "canonical_database_is_empty": true,
+    "row_counts": {
+      "source_system": 0,
+      "source_record": 0,
+      "subject": 0,
+      "subject_characteristic": 0,
+      "encounter": 0,
+      "observation": 0,
+      "observation_component": 0
+    },
+    "connection_user": "canonical_admin",
+    "exception": null
+  },
+  "raw_db_connections": 0,
+  "clinical_source_rows_read": 0,
+  "database_connections_for_clinical_rows": 0,
+  "clinical_rows_read": 0,
+  "etl_executed": false,
+  "live_load_executed": false,
+  "changeset_02_started": false
+}

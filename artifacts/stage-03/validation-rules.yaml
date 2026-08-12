@@ -1,0 +1,141 @@
+stage: "03"
+phase: design
+title: Stage 03 Design Validation Rules
+version: "0.6.1"
+
+data_level_enum:
+  - PATIENT_EVENT
+  - OBSERVATION_HEADER
+  - OBSERVATION_VALUE
+  - ATTRIBUTE_CONTAINER
+  - REFERENCE_CATALOG
+  - WORKFLOW
+  - PAYLOAD
+  - UNKNOWN
+
+runtime_enforcement_phase: implementation
+
+documented_constraints:
+  - branch_baseline_xor
+  - simulation_run_input_xor
+  - snapshot_component_value_constraint
+  - predicted_state_value_constraint
+  - variable_identity_required
+  - scenario_intervention_identity
+  - scenario_event_effective_at_required
+  - scenario_event_effective_until_gte_effective_at
+  - predicted_state_target_at_gte_generated_at
+  - uncertainty_bounds_order
+  - simulation_run_completed_requires
+  - simulation_run_random_seed_optional_only_if_deterministic
+  - extension_payload_requires_namespace
+  - subject_characteristic_identity
+  - subject_characteristic_value_constraint
+  - subject_characteristic_no_auto_sex_normalization
+  - subject_characteristic_cross_source_consolidation_forbidden
+  - subject_characteristic_no_cross_source_overwrite
+  - scenario_event_precedence_contract
+  - provenance_profile_by_entity
+
+rules:
+  - name: entity_has_provenance
+    section: model
+  - name: temporal_entities_have_contract
+    section: temporal
+  - name: raw_value_preserved
+    section: provenance
+  - name: normalized_fields_nullable
+    section: mappings
+  - name: subject_source_local
+    section: identity
+  - name: no_global_patient_id
+    section: identity
+  - name: catalog_patient_facts_separated
+    section: model
+  - name: predicted_synthetic_not_mixed_with_observed
+    section: layers
+  - name: mappings_have_status_evidence_lossiness
+    section: mappings
+  - name: source_mapping_integrity
+    section: mappings
+  - name: mapping_target_collision_policy
+    section: mappings
+  - name: canonical_field_defined
+    section: mappings
+  - name: wildcard_mapping_forbidden
+    section: mappings
+  - name: data_level_enum_consistent
+    section: mappings
+  - name: stage_02_unresolved_preserved
+    section: crosswalk
+  - name: provenance_profiles_discriminated
+    section: provenance
+  - name: scenario_profile_by_entity
+    section: provenance
+  - name: normalized_no_correction_history
+    section: provenance
+  - name: predicted_state_temporal_fields
+    section: temporal
+  - name: temporal_precision_required_on_pilot_entities
+    section: temporal
+  - name: temporal_precision_unknown_when_clinical_time_absent
+    section: temporal
+  - name: sequence_when_time_unknown_optional_only
+    section: temporal
+  - name: encounter_provider_id_deferred_for_source_a_pilot
+    section: construction
+  - name: predicted_state_typed_values
+    section: model
+  - name: scenario_intervention_present
+    section: model
+  - name: scenario_checkpoint_state_present
+    section: model
+  - name: simulation_run_input_xor_fields
+    section: model
+  - name: subject_characteristic_present
+    section: model
+  - name: state_snapshot_contract_present
+    section: snapshot
+  - name: record_construction_contract_present
+    section: construction
+  - name: construction_group_completeness
+    section: construction
+  - name: demographic_mapping_no_clinical_normalization
+    section: mappings
+  - name: design_constraints_documented
+    section: model
+  - name: canonical_model_validator
+    section: model
+  - name: constraint_mutation_regression
+    section: model
+  - name: construction_mutation_regression
+    section: construction
+  - name: stage_03_doc_sync_regression
+    section: docs
+  - name: content_manifest_excludes_report
+    section: manifest
+  - name: content_manifest_no_self_hash
+    section: manifest
+  - name: verification_json_excluded_from_content_manifest
+    section: manifest
+  - name: report_no_self_sha256
+    section: report
+  - name: content_manifest_hashes_match
+    section: manifest
+  - name: report_content_manifest_sha256_match
+    section: report
+  - name: verification_report_sha256_match
+    section: verification
+  - name: no_cyclic_hash_dependencies
+    section: manifest
+  - name: artifacts_no_pii
+    section: safety
+
+report_policy:
+  status: DRAFT
+
+forbidden_in_design_phase:
+  - create_canonical_database
+  - write_sql_ddl
+  - run_etl
+  - promote_report_to_final

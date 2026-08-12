@@ -1,0 +1,89 @@
+stage: "03"
+phase: implementation_planning
+title: Validation Plan
+document_version: "0.3.6"
+implementation_status: planning_only_not_started
+
+pilot_validation_checks:
+  counts:
+    - name: source_row_count
+      scope: per construction_group
+    - name: emitted_canonical_row_count
+      scope: per entity
+    - name: rejected_row_count
+      scope: per construction_group
+    - name: skipped_null_policy_count
+      scope: per construction_group
+  integrity:
+    - name: duplicate_canonical_ids
+    - name: orphan_foreign_keys
+    - name: missing_required_provenance
+    - name: source_payload_changed_blocks_promotion
+  reconciliation:
+    - name: one_per_row_cardinality_balance
+    - name: zero_to_many_cardinality_balance
+    - name: deterministic_rerun
+    - name: raw_database_fingerprint_unchanged
+  safety:
+    - name: zero_cross_source_linkage
+    - name: zero_global_patient_ids
+    - name: zero_pii_raw_rows_in_reports
+
+cardinality_reconciliation:
+  one_per_row:
+    formula: extracted == emitted + rejected + skipped
+    groups:
+      - source_a_source_record_account_patient
+      - source_a_source_record_appointment
+      - source_a_source_record_analysisresult
+      - source_a_source_record_analysisresultitem
+      - source_a_account_patient_subject
+      - source_a_appointment_encounter
+      - source_a_observation_header
+      - source_a_observation_component
+  zero_to_many_per_row:
+    formula: eligible_emission_opportunities == emitted + rejected + skipped
+    groups:
+      - source_a_account_patient_characteristics
+    example: account_patient row may emit 0, 1, or 2+ SubjectCharacteristic rows
+
+temporal_validation:
+  - name: no_future_leakage
+  - name: missing_clinical_time_preserved
+  - name: system_time_isolation
+
+quarantine:
+  storage: derived_staging_only
+  forbidden_fields: [source_primary_key, raw_row_payload, patient_names, contacts]
+  validation_error_schema:
+    fields:
+      - reject_id
+      - pipeline_run_id
+      - source_record_locator
+      - locator_key_version
+      - source_relation
+      - construction_group_id
+      - reject_reason_code
+      - reject_detail
+      - payload_hash
+      - rejected_at
+  reject_reason_codes:
+    - MISSING_REQUIRED_FIELD
+    - INVALID_NULL_POLICY
+    - CONSTRUCTION_CONTRACT_VIOLATION
+    - PROVENANCE_INCOMPLETE
+    - TEMPORAL_SUBSTITUTION_FORBIDDEN
+    - FUTURE_LEAKAGE
+    - DUPLICATE_CANONICAL_ID
+    - FK_UNRESOLVED
+    - SOURCE_PAYLOAD_CHANGED
+    - SNAPSHOT_LOST
+    - CROSS_SOURCE_REFERENCE_FORBIDDEN
+  reject_detail_policy:
+    sanitized: true
+    forbidden_content: [source_values, names, contacts, full_row_payload]
+
+acceptance_thresholds:
+  duplicate_canonical_ids: 0
+  orphan_foreign_keys: 0
+  blocking_unresolved_decisions: 0

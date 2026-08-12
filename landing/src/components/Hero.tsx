@@ -7,15 +7,18 @@ export function Hero() {
   const { t } = useI18n()
 
   return (
-    <section className="hero" id="top">
+    <section className="hero" id="top" aria-labelledby="hero-heading">
       <div className="shell">
         <div className="hero__grid">
           <div className="hero__col">
             <Reveal>
-              <h1 className="display display--xl hero__title">
-                <span>{t.hero.titleA}</span>
-                <span className="hero__title-b">{t.hero.titleB}</span>
-              </h1>
+              <header className="hero__intro">
+                <p className="kicker hero__brand">UHBSE</p>
+                <h1 id="hero-heading" className="display display--xl hero__title">
+                  <span>{t.hero.titleA}</span>
+                  <span className="hero__title-b">{t.hero.titleB}</span>
+                </h1>
+              </header>
             </Reveal>
           </div>
 

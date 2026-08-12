@@ -1,0 +1,46 @@
+{
+  "candidate_status": "PARTIAL",
+  "baseline_status": "PASS",
+  "pre_live_load_gate_status": "FAIL",
+  "design_version": "0.7.5",
+  "plan_version": "0.3.6",
+  "open_blocker_ids": [
+    "canonical_loader_runtime_principal_undefined",
+    "source_subject_key_opacity_undefined",
+    "temporal_precision_field_absent_from_model",
+    "encounter_provider_id_population_disagreement"
+  ],
+  "open_blocker_count": 4,
+  "contract_duplicate_scan": {
+    "subject_key_definitions": 1,
+    "runtime_definitions": 1,
+    "duplicate_subject_key": false,
+    "duplicate_runtime": false,
+    "forbidden_changeset_definitions": false
+  },
+  "design_manifest_verified": true,
+  "plan_manifest_verified": true,
+  "raw_db_connections": 0,
+  "clinical_source_rows_read": 0,
+  "canonical_db": {
+    "canonical_db_connections": 1,
+    "raw_db_connections": 0,
+    "clinical_source_rows_read": 0,
+    "canonical_database_is_empty": true,
+    "row_counts": {
+      "source_system": 0,
+      "source_record": 0,
+      "subject": 0,
+      "subject_characteristic": 0,
+      "encounter": 0,
+      "observation": 0,
+      "observation_component": 0
+    },
+    "connection_user": "canonical_admin",
+    "exception": null
+  },
+  "etl_executed": false,
+  "live_load_executed": false,
+  "changeset_02_started": false,
+  "evaluated_at": "2026-08-11T06:00:51.612868+00:00"
+}

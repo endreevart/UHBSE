@@ -1,0 +1,20 @@
+{
+  "contract_key": "canonical_loader_runtime_contract",
+  "status": "PARTIAL_RUNTIME_VERIFIED",
+  "complete": false,
+  "report_status": "DRAFT",
+  "component_statuses": {
+    "direct_approle_api_smoke": "PASS",
+    "vault_agent_configuration_static_validation": "PASS",
+    "vault_agent_runtime_execution": "PASS",
+    "vault_agent_restart_reauthentication": "PASS"
+  },
+  "open_blockers": [
+    "initial_root_token_available",
+    "limited_operator_identity_absent",
+    "multi_custodian_separation_absent",
+    "pgp_keys_shared_keyring_empty_passphrase",
+    "vault_key_custody_decision_required"
+  ],
+  "note": "Even with Agent PASS, contract remains incomplete while root token, limited operator, and custody decisions stay OPEN."
+}

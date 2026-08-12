@@ -1,0 +1,31 @@
+{
+  "cycle_1": {
+    "overall_status": "PASS",
+    "checks": {
+      "token_sink_present": "PASS",
+      "policies_exact": "PASS",
+      "default_policy_absent": "PASS",
+      "ttl_in_bounds": "PASS",
+      "approle_path_hint": "PASS"
+    },
+    "policies_count": 1,
+    "ttl_seconds": 895,
+    "token_type": "service",
+    "secrets_recorded": false
+  },
+  "cycle_2": {
+    "overall_status": "PASS",
+    "checks": {
+      "token_sink_present": "PASS",
+      "policies_exact": "PASS",
+      "default_policy_absent": "PASS",
+      "ttl_in_bounds": "PASS",
+      "approle_path_hint": "PASS"
+    },
+    "policies_count": 1,
+    "ttl_seconds": 895,
+    "token_type": "service",
+    "secrets_recorded": false
+  },
+  "overall_status": "PASS"
+}

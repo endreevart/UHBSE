@@ -1,0 +1,505 @@
+stage: "03"
+phase: implementation
+changeset: stage-03-implementation-changeset-01
+title: Canonical Storage Foundation
+subtitle: Publication Isolation Fix
+document_version: "0.2.1"
+design_baseline_version: "0.7.4"
+implementation_plan_version: "0.3.5"
+implementation_status: empty_storage_and_migrations_only
+
+purpose: >
+  First implementation changeset. Creates the isolated canonical database service and the
+  forward-only migrations for the Source A pilot entities. No clinical data is extracted,
+  transformed or loaded, and no pilot cohort is created.
+
+revision_v0_2_1:
+  title: Publication Isolation Fix
+  scope: publication_integrity_only
+  defect_found_by_external_audit:
+    id: v0_2_bundle_carried_regenerated_design_evidence
+    what_happened: >
+      The v0.2 review ZIP shipped Design evidence that a test had regenerated in the working
+      tree rather than the bytes of the accepted Design v0.7.4 release. Two full test runs were
+      executing concurrently during publication; both republished Stage 03 evidence, and the
+      interleaving left the workspace holding regenerated files that the builder then packaged.
+    why_nothing_caught_it: >
+      design-content-manifest.sha256 covers the eleven Design content artifacts, all of which
+      were correct. The two generated evidence files are covered by no manifest, so no check
+      compared them to an accepted value.
+    scope_of_damage: >
+      Evidence only. All eleven Design content artifacts, the design manifest, the Plan
+      artifacts, the nine Stage 01/02 files, migrations 0001-0004, the canonical schema and the
+      definition baseline were byte identical throughout and are unchanged by this revision.
+  additional_finding:
+    id: accepted_design_evidence_absent_from_the_design_bundle
+    detail: >
+      stage-03-design-v0.7.4-review.zip in this workspace does not carry the audited bytes
+      either; it holds the same regenerated pair as v0.2. The audited bytes were recovered from
+      stage-03-implementation-changeset-01-v0.1-review.zip and independently corroborated by
+      stage-03-implementation-plan-v0.3.4-review.zip, which agree byte for byte.
+      Republishing the Design v0.7.4 archive is out of scope here and is recorded as open.
+  changes:
+    - id: frozen_evidence_pinned_by_hash
+      detail: >
+        "stage03/frozen_evidence.py pins the accepted SHA-256 of 36 inputs: the 9 controlled
+        Stage 01/02 files, the 11 Design content artifacts, the design manifest, the 2 generated
+        Design evidence files, the 8 Plan artifacts, the plan manifest and migrations 0001-0004.
+        Any change is a hard FAIL."
+    - id: frozen_evidence_checked_around_every_suite
+      detail: >
+        The publisher fingerprints all 36 inputs before and after each mandatory suite, so a
+        suite that writes into a frozen path is attributed to that suite and blocks publication.
+    - id: publication_capable_tests_isolated
+      detail: >
+        "Every test that publishes now runs against the isolated_workspace fixture, a throwaway
+        copy that pytest deletes. No test writes into artifacts/stage-03/,
+        artifacts/stage-03-implementation/, the changeset snapshot or artifacts/external-review/,
+        and no test needs backup-and-restore."
+    - id: inter_process_publication_lock
+      detail: >
+        "stage03/publication_lock.py takes an O_EXCL lock for the whole pipeline. A second
+        publisher fails immediately with a named holder. Stale locks are detected by liveness of
+        the owning pid on the same host, or by age elsewhere. Read-only gates never take it."
+    - id: builder_refuses_regenerated_design_evidence
+      detail: >
+        The bundle builder compares both Design evidence files to their accepted hashes before
+        packaging and refuses to build otherwise. It never regenerates or repairs them.
+    - id: recovery_is_explicit_and_verified
+      detail: >
+        "audit recover-design-evidence --confirm copies the accepted bytes out of an accepted
+        release archive and installs them only if they hash to the audited values. It is
+        unreachable from any gate, suite or publisher."
+    - id: stage_02_mismatches_enumerated
+      detail: >
+        The gate now lists every manifest mismatch instead of stopping at the first, so the
+        report names both subject-root-analysis.json and identity-linkage-assessment.json.
+        Stage 02 itself is untouched.
+  unchanged:
+    - migrations 0001, 0002, 0003 and 0004 bytes
+    - canonical schema and canonical-definition-baseline.json
+    - the 11 Design content artifacts and design-content-manifest.sha256
+    - Design v0.7.4 and Implementation Plan v0.3.5
+    - Stage 01 and Stage 02 artifacts
+    - the pre-live-load blocker decisions
+    - the canonical database stays empty
+
+revision_v0_2:
+  title: Storage Verification Hardening
+  scope: verification_and_forward_only_migration_0004
+  changes:
+    - id: migrations_0001_0003_frozen
+      detail: >
+        The accepted SHA-256 of 0001, 0002 and 0003 is pinned in
+        canonical/constants.py :: ACCEPTED_MIGRATION_SHA256 and checked before any run.
+        Every schema correction is added by migration 0004 instead of by editing them.
+    - id: integration_migration_suite_mandatory
+      detail: >
+        release_verification.py :: MANDATORY_SUITE_NAMES now contains
+        integration_migration_suite, and NO_SKIP_SUITE_NAMES forbids it from skipping.
+        Absence, skip, non-zero exit, any failure or any error makes the overall release
+        FAIL and blocks bundle publication.
+    - id: definition_level_schema_verification
+      detail: >
+        Verification compares normalized pg_get_constraintdef and pg_get_indexdef text,
+        enum value order, table and schema owners, schema privileges, table privileges and
+        default privileges against a pinned baseline, not only object names.
+    - id: provenance_hardening
+      detail: >
+        Migration 0004 adds the origin-specific and non-null requirements the accepted
+        provenance contract states but 0002 did not enforce.
+    - id: stage_02_gate_reproducibility
+      detail: >
+        The bundle now carries the relationship manifest and every artifact it lists, so a
+        clean extraction fails the gate for the same reason as the publisher workspace.
+    - id: pre_live_load_blockers
+      detail: >
+        canonical_loader_runtime_principal_undefined and
+        source_subject_key_opacity_undefined are recorded OPEN in
+        pre-live-load-blockers.yaml and reported by the gate.
+  unchanged:
+    - migrations 0001, 0002 and 0003 bytes
+    - Design v0.7.4
+    - Implementation Plan v0.3.5
+    - Stage 01 and Stage 02 artifacts
+    - the canonical database stays empty
+
+authority:
+  design:
+    - artifacts/stage-03/canonical-model.yaml
+    - artifacts/stage-03/provenance-contract.yaml
+    - artifacts/stage-03/temporal-contract.yaml
+    - artifacts/stage-03/record-construction-contract.yaml
+    - artifacts/stage-03/canonical-id-contract.yaml
+  implementation_plan:
+    - artifacts/stage-03-implementation/physical-storage-plan.yaml
+    - artifacts/stage-03-implementation/pilot-slice.yaml
+    - artifacts/stage-03-implementation/pipeline-plan.yaml
+    - artifacts/stage-03-implementation/validation-plan.yaml
+    - artifacts/stage-03-implementation/security-runtime-plan.yaml
+  note: >
+    physical-storage-plan.yaml lives under artifacts/stage-03-implementation/, not
+    artifacts/stage-03/. Path corrected; content is the accepted v0.3.5 artifact.
+
+precondition:
+  controlled_prior_stage_files: 9
+  design_content_manifest: artifacts/stage-03/design-content-manifest.sha256
+  implementation_plan_manifest: artifacts/stage-03-implementation/implementation-plan-manifest.sha256
+  recorded_in: baseline-verification.json
+  auto_restore: forbidden
+  on_mismatch: fail_closed_stop
+
+infrastructure:
+  service_name: human-simulator-canonical
+  container_name: human-simulator-canonical
+  image: postgres:16
+  database: uhbse_canonical_dev
+  schema: canonical_evidence
+  port: 5436
+  volume: uhbse_canonical_dev_data
+  network: canonical-net
+  isolation:
+    canonical_service_networks: [canonical-net]
+    raw_service_networks: [default]
+    shared_network: none
+    rationale: >
+      The canonical container is attached only to canonical-net, while the raw source
+      containers stay on the compose default network. Neither side can reach the other, so
+      raw cannot write to canonical and canonical cannot write to raw.
+  runtime_guard:
+    module: src/human_simulator/canonical/settings.py
+    forbidden_canonical_targets: [magerya_api, kgz_raw]
+    forbidden_canonical_ports: [5434, 5435]
+    forbidden_raw_target: uhbse_canonical_dev
+  env_template: config/canonical-db.env.template
+  env_file: canonical-db.env
+  secrets_in_repository: forbidden
+
+migrations:
+  directory: migrations/canonical
+  naming: NNNN_snake_case.sql
+  direction: forward_only
+  down_migrations_supported: false
+  down_migrations_rationale: >
+    The accepted plan defines no reverse DDL for canonical evidence. pipeline-plan.yaml
+    rollback is limited to current-run staging rows and states that published records are
+    never deleted by rollback, and physical-storage-plan.yaml declares only a forward DDL
+    role (canonical_migrator). An up -> down -> up cycle is therefore not applicable to
+    Changeset 01 and is not executed.
+  files:
+    - version: "0001"
+      file: 0001_roles_and_schema.sql
+      creates: [canonical roles, canonical_evidence schema]
+    - version: "0002"
+      file: 0002_pilot_evidence_tables.sql
+      creates: [enum types, seven pilot evidence tables, constraints, indexes]
+    - version: "0003"
+      file: 0003_pilot_grants.sql
+      creates: [role privileges on the pilot evidence schema]
+    - version: "0004"
+      file: 0004_storage_contract_hardening.sql
+      added_in: v0.2
+      creates: [provenance hardening check constraints]
+      changes_data: false
+      changes_tables: false
+  immutability:
+    frozen_files: [0001_roles_and_schema.sql, 0002_pilot_evidence_tables.sql, 0003_pilot_grants.sql]
+    accepted_hashes_recorded_in: src/human_simulator/canonical/constants.py
+    editing_a_published_migration: forbidden
+    correction_mechanism: new_forward_only_migration
+    checked_by: "canonical/migrations.py :: migration_immutability"
+  bookkeeping:
+    schema: canonical_migration
+    table: schema_migration_history
+    rationale: >
+      Migration history is kept outside canonical_evidence so that the evidence schema
+      contains exactly the seven pilot entity tables and nothing else.
+  idempotency:
+    statements: guarded_by_if_not_exists
+    reapply_behaviour: no_pending_migrations_no_schema_change
+    checksum_drift_on_applied_migration: fail_closed
+  data_statements_in_migrations: forbidden
+  forbidden_tokens: [INSERT INTO, COPY, DELETE FROM, UPDATE, TRUNCATE, DROP TABLE, DROP SCHEMA, dblink, postgres_fdw]
+
+pilot_scope:
+  table_entities:
+    - SourceSystem
+    - SourceRecord
+    - Subject
+    - SubjectCharacteristic
+    - Encounter
+    - Observation
+    - ObservationComponent
+  embedded_components:
+    - Provenance
+  provenance_representation: embedded_jsonb_per_row
+  separate_provenance_table: forbidden
+  entities_outside_pilot_not_created:
+    - Provider
+    - Concept
+    - Unit
+    - ClinicalAssertion
+    - Intervention
+    - Procedure
+    - ClinicalDocument
+    - EvidenceStateSnapshot
+    - StateSnapshotComponent
+    - Scenario
+    - ScenarioBranch
+    - ScenarioIntervention
+    - ScenarioEvent
+    - SimulationRun
+    - ScenarioCheckpoint
+    - ScenarioCheckpointState
+    - PredictedState
+  load_machinery_not_in_this_changeset:
+    objects:
+      - pipeline_run
+      - pipeline_record_emission
+      - staging_tables
+      - quarantine_tables
+    reason: >
+      pipeline-plan.yaml lists these as technical metadata and staging for the load phase.
+      Changeset 01 is storage foundation only; they belong to the load changeset.
+
+constraints_implemented:
+  primary_keys:
+    rule: one canonical identifier primary key per entity table
+    satisfies_decision: canonical_id_unique_index
+    note: >
+      Each entity primary key is backed by a unique index, which satisfies the accepted
+      decision canonical_id_unique_index in unresolved-implementation-decisions.yaml.
+  foreign_keys:
+    - source_record.source_system_id -> source_system.source_system_id
+    - subject.source_system_id -> source_system.source_system_id
+    - subject_characteristic.subject_id -> subject.subject_id
+    - encounter.subject_id -> subject.subject_id
+    - observation.subject_id -> subject.subject_id
+    - observation_component.observation_id -> observation.observation_id
+  load_order_rule: every referenced table appears earlier in pipeline-plan table_load_order
+  unique_source_locator: source_record.source_record_locator
+  source_local_subject_identity: unique (source_system_id, source_subject_key)
+  global_identifiers: absent
+  forbidden_columns: [global_patient_id, global_subject_id, source_primary_key, raw_primary_key]
+  typed_value_xor:
+    subject_characteristic: exactly one of [date_value, numeric_value, text_value, categorical_value, boolean_value]
+    observation_component: not_constrained
+    observation_component_rationale: >
+      canonical-model.yaml constraints define a typed-value rule for SubjectCharacteristic,
+      StateSnapshotComponent and PredictedState only. No XOR is invented for
+      ObservationComponent.
+  temporal:
+    storage_type: timestamptz
+    naive_datetime: rejected_by_column_type
+    encounter_missing_clinical_time: occurred_at null requires missingness_reason
+    observation_missing_clinical_time: observed_at null requires missingness_reason
+    cross_field_ordering_rules: none_for_pilot_entities
+    cross_field_ordering_rationale: >
+      temporal-contract.yaml runtime_constraints define ordering rules for ScenarioEvent and
+      PredictedState only. No ordering rule is invented for Encounter or Observation.
+  provenance_required_fields:
+    source_backed_profile: enforced_by_check_constraint
+    computed_profile: enforced_by_check_constraint
+    computed_forbidden_field: source_record_locator
+    forbidden_record_origins_in_evidence: [SYNTHETIC, PREDICTED]
+  provenance_hardening_migration_0004:
+    added_in: v0.2
+    authority: artifacts/stage-03/provenance-contract.yaml
+    rules:
+      required_value_may_not_be_json_null:
+        constraint: <table>_provenance_required_values_present
+        mechanism: jsonb_strip_nulls(provenance) ?& required_fields
+        rationale: >
+          The contract lists required fields. A key whose JSON value is null carries no
+          value, so key presence alone does not satisfy the requirement. Stripping JSON
+          nulls first makes presence and value the same test.
+      origin_specific_fields:
+        constraint: <table>_provenance_origin_specific_fields
+        source: "provenance-contract.yaml :: origin_specific_rules"
+        CORRECTED: [prior_record_reference, correction_reason]
+        NORMALIZED: [normalization_lineage]
+        ANNOTATED: [annotation_text, annotated_at]
+      profiles_mutually_exclusive:
+        constraint: <table>_provenance_profiles_exclusive
+        source_backed_may_not_carry: [input_record_references, computation_method, computation_version]
+        computed_may_not_carry: [source_system, source_schema, source_relation, source_record_locator]
+        rationale: >
+          provenance-contract.yaml :: purpose defines the profiles as discriminated by
+          record_origin, so a row satisfies exactly one of them. 0002 already forbade
+          source_record_locator on COMPUTED origins; 0004 adds the mirror direction.
+      subject_characteristic_status_agreement:
+        constraint: subject_characteristic_status_matches_provenance
+        rule: status::text = provenance->>'mapping_status'
+      source_record_column_agreement:
+        constraint: source_record_provenance_matches_columns
+        rule: >
+          For source-backed origins, provenance source_system, source_schema and
+          source_record_locator must equal the corresponding columns, and
+          provenance source_relation must equal either source_relation or
+          source_schema || '.' || source_relation.
+        rationale: >
+          record-construction-contract.yaml pins source_schema and source_relation as
+          constant fields on the row while provenance.source_relation is populated from the
+          group's fully qualified relation, so the qualified form is equivalent, not a
+          contradiction. Nothing is normalised: a disagreeing row is rejected.
+    fields_or_types_invented: none
+
+schema_verification:
+  added_in: v0.2
+  level: normalized_definitions
+  checked:
+    - pg_get_constraintdef for every constraint
+    - primary key, foreign key and unique definitions
+    - CHECK expressions
+    - pg_get_indexdef for every index
+    - enum types and enum value order
+    - table owner
+    - schema owner
+    - schema privileges
+    - table privileges
+    - default privileges
+  pinned_in: canonical-definition-baseline.json
+  capture_command: audit canonical-capture-baseline
+  capture_preconditions:
+    - every published migration matches its accepted SHA-256
+    - the structural contract already holds
+    - the schema was built from nothing on a throwaway database that is then dropped
+  automatic_repair_of_detected_drift: forbidden
+  negative_tests:
+    - constraint replaced by CHECK (TRUE) under the same name
+    - changed foreign key definition
+    - extra index
+    - changed index definition
+    - reordered enum values
+    - loader granted UPDATE or DELETE
+    - validator granted INSERT or CREATE
+    - changed table owner
+
+release_pipeline:
+  added_in: v0.2
+  mandatory_suites:
+    - changeset_01_gate_suite
+    - clean_review_bundle_suite
+    - full_repository_suite
+    - integration_migration_suite
+  suites_that_may_not_skip: [integration_migration_suite]
+  overall_pass_requires: >
+    every mandatory suite present, selected, executed and green, with the migrations really
+    applied to a disposable PostgreSQL 16.
+  on_mandatory_failure: publication_zip_blocked
+  regression_test: tests/test_release_pipeline_mandatory_suites.py
+  enum_values:
+    canonical_data_level: from canonical-model.yaml data_level_enum
+    canonical_mapping_status: from provenance-contract.yaml mapping_status_values
+  null_only_in_pilot:
+    subject_characteristic: [concept_id, normalized_unit]
+    encounter: [provider_id]
+    observation: [encounter_id, normalized_concept, normalized_unit]
+    observation_component: [normalized_unit]
+    rationale: >
+      These columns exist in the canonical model but reference entities outside the pilot or
+      are marked DEFERRED_FOR_PILOT. The accepted record-construction-contract pins each of
+      them to null, so a NOT NULL value would be unverifiable. Constraining them to null is
+      fail-closed: a future load cannot populate them silently.
+
+roles:
+  canonical_owner:
+    owns: canonical_evidence schema and its objects
+    login: false
+  canonical_migrator:
+    privileges: USAGE and CREATE on canonical_evidence
+    table_privileges: none
+    login: false
+  canonical_loader:
+    table_privileges: [SELECT, INSERT]
+    update_delete_truncate: forbidden
+    rationale: >
+      physical-storage-plan.yaml grants SELECT for idempotency and reconciliation;
+      pipeline-plan.yaml forbids UPDATE and DELETE of published evidence.
+    login: false
+  canonical_validator_ro:
+    table_privileges: [SELECT]
+    arbitrary_write: forbidden
+    login: false
+  credential_policy:
+    roles_created_nologin: true
+    passwords_assigned: runtime_only_outside_git
+    permission_verification_method: SET ROLE within an admin session
+
+stage_02_blocker:
+  gate_id: stage02_relationship_integrity_pre_live_load
+  module: src/human_simulator/stage03/pre_live_load_gate.py
+  result_artifact: stage02-pre-live-load-gate.json
+  verifies: artifacts/stage-02/relationship-manifest.sha256
+  expected_status_now: FAIL
+  cause: stage02_relationship_manifest_drift
+  independent_recount:
+    added_in: v0.2.1
+    finding: >
+      An independent comparison of every artifact listed in RELATIONSHIP_MANIFEST_ARTIFACTS
+      finds two mismatches, not one. The gate previously reported only the first because
+      verify_relationship_manifest returns on the first difference it sees. The gate now
+      enumerates all of them; the underlying defect and its scope are unchanged.
+    mismatched_artifacts:
+      - subject-root-analysis.json
+      - identity-linkage-assessment.json
+    matching_artifacts: 6
+    stage_02_action_taken: none
+  blocks:
+    - source_a_live_extract
+    - source_b_live_extract
+    - pilot_cohort_selection
+    - canonical_transform_run
+    - canonical_staging_load
+    - canonical_promotion
+    - etl_pipeline_run
+  does_not_block:
+    - canonical_database_create
+    - canonical_migration_apply
+    - canonical_schema_verify
+    - canonical_permission_verify
+  auto_repair: forbidden
+  stage_02_mutation: forbidden
+  resolution_path: separate maintenance changeset
+  reproducibility:
+    added_in: v0.2
+    requirement: >
+      A clean extraction of the review bundle must fail the gate for the same reason as the
+      publisher workspace, namely relationship_manifest_hashes_match. "manifest missing" is
+      not an acceptable substitute.
+    bundled_inputs: artifacts/stage-02/relationship-manifest.sha256 and every file listed in
+      RELATIONSHIP_MANIFEST_ARTIFACTS
+    declared_by: "review_dependencies.py :: get_stage02_relationship_gate_inputs"
+  additional_open_blockers:
+    added_in: v0.2
+    recorded_in: pre-live-load-blockers.yaml
+    ids:
+      - canonical_loader_runtime_principal_undefined
+      - source_subject_key_opacity_undefined
+    blocks_live_load: true
+    blocks_schema_only_migration_0004: false
+
+explicit_non_actions:
+  - clinical rows read from Source A or Source B
+  - ETL, extraction or load executed
+  - pilot cohort created
+  - data loaded into the canonical database
+  - raw databases modified
+  - Stage 01 or Stage 02 artifacts modified
+  - Source B connected
+  - patient linkage or merge performed
+  - simulation or prediction implemented
+  - Design v0.7.4 or Implementation Plan v0.3.5 changed
+  - secrets, DSN, PII, HMAC or raw values stored in artifacts
+  - Stage 02 manifest drift repaired automatically
+  - migrations 0001 to 0004 modified
+  - canonical schema or definition baseline changed
+  - Design evidence regenerated instead of recovered from an accepted release
+  - v0.2 review bundle overwritten
+  - Design v0.7.4 review bundle republished
+  - Changeset 02 started
+
+report_policy:
+  status: DRAFT
+  promote_to_final: forbidden
+  next_changeset_started: false

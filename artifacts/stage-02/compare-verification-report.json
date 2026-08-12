@@ -1,0 +1,139 @@
+{
+  "compared_at": "2026-08-06T15:46:24.558151+00:00",
+  "status": "PASS",
+  "source_a_report_status": "FINAL",
+  "source_a_audit": {
+    "extraction_method": "live_readonly_profile",
+    "connection_user": "mg_audit_ro",
+    "readonly_user_only": true,
+    "fingerprints_match": true
+  },
+  "source_b_audit_status": "PASS",
+  "artifact_hashes": {
+    "source_a": {
+      "schema-profile.json": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+      "entity-candidates.yaml": "9ebd6c4a618ea9438eb69fa577a333cfa8d9b0da50d19977a4a52ae1e4b9d382",
+      "relation-graph.md": "e14437c1f1d1d8a133ed7249483221f5321d628144a8e6c03106be250cf31e19",
+      "unknown-semantics.md": "31e72a5d69492098fc9bd1959f97656f0e1d2eaf0edc085cffc543a72aac96c3",
+      "stage-01-report.md": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff"
+    },
+    "source_b": {
+      "schema-profile-kgz.json": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+      "entity-candidates-kgz.yaml": "c96a18712479927861c7f5408b0920898a23fb81a8c9661fe342764f9d1a1b8b",
+      "relation-graph-kgz.md": "58eef942992eacb8933cbaf0d143084b8b911c91f606dfeda34fab4a015f172a",
+      "unknown-semantics-kgz.md": "e0d0636f4c4cdaaacc21f41b381bae39bfc9ff3619cd69f1e8bfc16ea65dc804"
+    }
+  },
+  "source_a_manifest": "manifest.sha256",
+  "source_b_manifest": "manifest.sha256",
+  "checks": [
+    {
+      "name": "source_a_report_status",
+      "status": "PASS",
+      "detail": "stage-01-report status='FINAL', expected FINAL"
+    },
+    {
+      "name": "stage_01_artifacts",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "name": "source_a_live_extraction",
+      "status": "PASS",
+      "detail": "extraction_method=live_readonly_profile"
+    },
+    {
+      "name": "source_a_audit_user",
+      "status": "PASS",
+      "detail": "connection_user=mg_audit_ro"
+    },
+    {
+      "name": "source_a_reachable",
+      "status": "PASS",
+      "detail": "reachable=True"
+    },
+    {
+      "name": "source_a_readonly_validation",
+      "status": "PASS",
+      "detail": "readonly_validation.safe=true"
+    },
+    {
+      "name": "source_a_fingerprint_match",
+      "status": "PASS",
+      "detail": "fingerprints_match=True"
+    },
+    {
+      "name": "source_a_manifest",
+      "status": "PASS",
+      "detail": "verified 10 entries in manifest.sha256"
+    },
+    {
+      "name": "source_a_not_preliminary",
+      "status": "PASS",
+      "detail": "preliminary Stage 01 artifacts must not gate compare"
+    },
+    {
+      "name": "source_b_pass",
+      "status": "PASS",
+      "detail": "source-b-audit status=PASS"
+    },
+    {
+      "name": "source_b_manifest",
+      "status": "PASS",
+      "detail": "verified 5 entries in manifest.sha256"
+    },
+    {
+      "name": "source_b_schema-profile-kgz.json",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "source_b_entity-candidates-kgz.yaml",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "source_b_relation_graph_nodes",
+      "status": "PASS",
+      "detail": "graph_nodes=8, unique_candidate_relations=8"
+    },
+    {
+      "name": "schema_diff_written",
+      "status": "PASS",
+      "detail": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/stage-02/schema-diff.yaml"
+    },
+    {
+      "name": "entity_crosswalk_written",
+      "status": "PASS",
+      "detail": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/stage-02/entity-crosswalk.yaml"
+    },
+    {
+      "name": "no_confirmed_crosswalk",
+      "status": "PASS",
+      "detail": "crosswalk preserves CANDIDATE status only"
+    }
+  ],
+  "summary": {
+    "unresolved_mappings": 17,
+    "unresolved_examples": [
+      "patients:magerya_api.account_patient->None",
+      "patients:None->public.persons",
+      "visits:magerya_api.appointment_appointment->public.consultations",
+      "doctors:magerya_api.account_doctor->public.users",
+      "specialties:magerya_api.account_doctor->None",
+      "laboratory_results:magerya_api.document_analysisresult->quest_digital.analyses_constructor",
+      "laboratory_results:magerya_api.document_analysisresultitem->None",
+      "laboratory_results:None->quest_digital.lab_result",
+      "medical_documents:magerya_api.document_document->None",
+      "medical_documents:magerya_api.document_informationform->None"
+    ],
+    "relation_graph_nodes_b": 8,
+    "unique_candidate_relations_b": 8,
+    "entity_candidate_entries_b": 9
+  },
+  "notes": [
+    "Comparison uses artifact metadata only; no row-level patient reads.",
+    "No canonical database or cross-source patient merge performed.",
+    "relation_graph_nodes_b counts graph nodes; entity_candidate_entries_b counts typed candidate rows."
+  ]
+}

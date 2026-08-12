@@ -1,0 +1,109 @@
+stage: "03"
+phase: design
+title: Evidence State Snapshot Construction Contract
+version: "0.6.0"
+contract_kind: design_only_not_implementation
+
+purpose: >
+  Define deterministic, versioned rules for constructing an EvidenceStateSnapshot
+  and its StateSnapshotComponent rows from source-backed evidence. This is a design
+  contract; no snapshot builder implementation exists in Stage 03 design phase.
+
+snapshot_at:
+  semantics: As-of datetime for the reconstructed subject state
+  required: true
+  rule: All included evidence must be valid at or before snapshot_at via clinical or recorded time rules
+
+source_event_cutoff:
+  semantics: Upper bound for source events and observations included in the snapshot
+  required: true
+  rule: No source row whose clinical or system time is strictly after cutoff may contribute
+
+no_future_leakage:
+  forbidden: using data recorded or clinically effective after source_event_cutoff or snapshot_at
+  enforcement: exclude rows with observed_at, effective_at, or recorded_at > cutoff when those times are present
+
+selection_policy:
+  rule: For each variable, select the latest contributing value whose effective or recorded time is <= cutoff
+  ties: Multiple values at the same timestamp must not be resolved silently; emit explicit conflict status
+  version_field: selection_policy_version
+
+clinical_vs_system_time:
+  clinical_time_fields: [observed_at, effective_at, occurred_at, specimen_collected_at, result_available_at]
+  system_time_fields: [recorded_at, source_created_at, source_updated_at, created_at, updated_at]
+  rule: System/recorded time must not substitute missing clinical observation time; observed_at remains null when absent
+
+subject_characteristic_inclusion:
+  entity: SubjectCharacteristic
+  stable_characteristics: [birthdate, sex, gender and other relatively stable profile attributes]
+  rule: Include source-local SubjectCharacteristic rows per selection_policy; never merge across sources
+
+observation_inclusion:
+  entities: [Observation, ObservationComponent]
+  rule: Include dynamic measurements as snapshot components referencing contributing observation ids
+
+source_local_identity:
+  rule: Snapshot is scoped to one source-local Subject; cross-source identity links forbidden
+
+no_cross_source_merge:
+  forbidden: [cross_source_consolidation, overwriting birthdate or sex/gender from another source]
+  rule: Each contributing row retains its source_system and source_subject_key provenance
+
+raw_value_retention:
+  rule: StateSnapshotComponent.raw_value always populated when a typed value is present
+
+unit_normalization_policy:
+  rule: normalized_unit populated only when a documented, confirmed unit conversion rule exists
+  version_field: unit_conversion_version
+  forbidden: assigning clinical units (e.g. °C, hours/day) without storage or conversion evidence
+
+missingness_vs_imputation:
+  missingness: documented absence with missingness_reason; no silent fill
+  imputation: separate IMPUTED record_origin; never conflated with observed missingness
+
+imputed_marking:
+  rule: IMPUTED StateSnapshotComponent rows must have missingness_status=imputed and record_origin=IMPUTED
+
+age_at_snapshot:
+  rule: age is computed from birthdate SubjectCharacteristic at snapshot_at
+  formula: age = snapshot_at date minus birthdate date using documented calendar policy
+  forbidden: storing age as a permanent Subject or SubjectCharacteristic property
+  lineage:
+    provenance_field: provenance.input_record_references
+    required_reference:
+      entity: SubjectCharacteristic
+      characteristic_code: source_birthdate
+    rule: age-at-snapshot must cite the contributing birthdate SubjectCharacteristic via provenance
+
+age_not_stored_property:
+  entities_forbidden: [Subject, SubjectCharacteristic]
+  allowed_output: StateSnapshotComponent derived at snapshot construction time only
+  forbidden: storing age as a permanent property on Subject or SubjectCharacteristic
+
+provenance_per_variable:
+  required: [provenance block, provenance.input_record_references]
+  rule: Every snapshot component traces to one or more source-backed rows via provenance.input_record_references
+  input_record_references:
+    semantics: authoritative lineage to SubjectCharacteristic, Observation, and ObservationComponent records
+    required_for: [StateSnapshotComponent, derived snapshot variables, age_at_snapshot]
+    entity_types: [SubjectCharacteristic, Observation, ObservationComponent]
+    authoritative: true
+  source_observation_ids:
+    semantics: optional convenience field listing Observation/ObservationComponent ids
+    authoritative: false
+    rule: must not be the sole lineage mechanism when characteristic or component references exist
+
+conflict_resolution:
+  rule: Multiple candidate values for the same variable before cutoff must surface conflict, not silent pick
+  allowed_statuses: [single_value, conflict_unresolved, missing]
+
+deterministic_construction:
+  rule: Given identical inputs, cutoff, and version fields, snapshot contents must be identical
+  versioning:
+    snapshot_builder_version: semver of snapshot builder algorithm
+    selection_policy_version: semver of value selection policy
+    unit_conversion_version: semver of unit conversion table
+    imputation_policy_version: semver of imputation rules
+    input_artifact_hashes: sha256 of canonical model, mapping drafts, schema profiles, and construction contract used
+
+implementation_status: not_started

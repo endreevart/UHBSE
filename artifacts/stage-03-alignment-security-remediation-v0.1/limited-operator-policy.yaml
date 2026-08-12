@@ -1,0 +1,40 @@
+# Limited operator policy contract (sanitised)
+# Source of truth for ACL text: ops/vault/policies/uhbse-operator-limited.hcl
+
+name: uhbse-operator-limited
+auth_method: userpass
+identity_name: uhbse-operator-limited
+token_ttl: 15m
+token_max_ttl: 1h
+token_type: service
+token_no_default_policy: true
+shared_credentials: false
+
+allowed:
+  - vault_health_and_seal_status
+  - self_token_lookup_renew_revoke
+  - subject_token_lookup_without_retention
+  - auth_method_list_read
+  - loader_approle_metadata_read
+  - loader_wrapped_secret_id_issuance
+  - read_own_and_loader_acl_policies
+
+forbidden:
+  - root
+  - sudo
+  - wildcard_vault_admin
+  - storage_backend_management
+  - audit_device_configuration
+  - root_policy_modification
+  - arbitrary_policy_create_update
+  - arbitrary_auth_method_enable_disable
+  - kv_secret_reads_including_hmac_and_loader_credentials
+  - raw_database_credential_read
+  - canonical_or_raw_database_mutation
+  - unseal_or_rekey_without_separate_ceremony
+
+login_procedure: ops/vault/scripts/login-limited-operator.sh
+logout_procedure: ops/vault/scripts/logout-limited-operator.sh
+provision_procedure: ops/vault/scripts/provision-limited-operator.sh
+policy_file: ops/vault/policies/uhbse-operator-limited.hcl
+password_storage: private/uhbse-operator-limited.password  # git-ignored; never in ZIP

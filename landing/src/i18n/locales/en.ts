@@ -1,3 +1,6 @@
+import { status } from '../status/en'
+import type { StatusContent } from '../status/types'
+
 export const en = {
   meta: {
     title: "UHBSE — Human Biology Simulation Engine",
@@ -12,10 +15,11 @@ export const en = {
     partners: "Partners",
     cta: "Join the research network",
     language: "Language",
+    ariaLabel: "Primary navigation",
   },
 
   hero: {
-    titleA: "Medicine learned to observe the human body.",
+    titleA: "Medicine learned to observe the human organism.",
     titleB: "Now it must learn to simulate it.",
     lead: "UHBSE is a human biology simulation engine designed to model how an individual biological state may change under medications, supplements, nutrition and physical activity.",
     sub: "Built from real clinical evidence. Designed around uncertainty. Created for research before clinical use.",
@@ -356,22 +360,7 @@ export const en = {
     ],
   },
 
-  status: {
-    kicker: "Status",
-    title:
-      "UHBSE is currently in the research and infrastructure development stage.",
-    lead: "This is a research technology under construction, not a product for clinical use.",
-    items: [
-      "Connection of several clinical sources",
-      "Analysis of longitudinal data",
-      "A canonical model of biological events",
-      "A separate database of evidence-based states",
-      "A reproducible data provenance architecture",
-      "Preparation of the first limited research pilot",
-    ],
-    dataNote:
-      "Longitudinal clinical data from participating healthcare organizations.",
-  },
+  status: status satisfies StatusContent,
 
   partners: {
     kicker: "Partnership",
@@ -418,6 +407,7 @@ export const en = {
 
   manifesto: {
     kicker: "Manifesto",
+    title: "We are building the simulation layer medicine does not yet have.",
     l1: "The human body is not a static medical record.",
     l2: "It is a biological system changing across thousands of variables, interventions and moments in time.",
     l3: "For decades, medicine has recorded fragments of that change.",

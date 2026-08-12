@@ -1,0 +1,113 @@
+stage: "03"
+phase: implementation
+changeset: stage-03-implementation-changeset-01
+document_version: "0.1"
+design_baseline_version: "0.7.4"
+implementation_plan_version: "0.3.5"
+
+note: >
+  artifacts/stage-03-implementation/unresolved-implementation-decisions.yaml belongs to the
+  accepted Implementation Plan v0.3.5 and is immutable here. Decisions raised by Changeset 01
+  are recorded in this separate file.
+
+decisions:
+  - id: forward_only_migrations
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: canonical migrations are forward-only; no down migrations are authored
+    rationale: >
+      The accepted plan defines no reverse DDL. pipeline-plan.yaml limits rollback to
+      current-run staging rows and states published records are never deleted by rollback;
+      physical-storage-plan.yaml declares only a forward DDL role. The requested
+      up -> down -> up check is therefore not applicable and was not executed.
+    must_resolve_before: any_future_destructive_schema_change
+
+  - id: migration_history_outside_evidence_schema
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: migration bookkeeping lives in schema canonical_migration
+    rationale: >
+      Keeps canonical_evidence limited to exactly the seven pilot entity tables so that the
+      "no tables outside pilot scope" check is exact.
+    must_resolve_before: none
+
+  - id: roles_created_nologin
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: canonical roles are created NOLOGIN; credentials are assigned at runtime only
+    rationale: >
+      No password may exist in a migration or artifact. Permission verification uses SET ROLE
+      inside an administrative session, which requires no credentials.
+    must_resolve_before: first_live_load
+
+  - id: pilot_null_only_columns
+    resolution_status: RESOLVED
+    blocking_for_next_phase: false
+    decision: >
+      Columns referencing entities outside the pilot (Concept, Unit, Provider) and the
+      deferred observation.encounter_id are created per the canonical model but constrained
+      to NULL for the pilot.
+    rationale: >
+      record-construction-contract.yaml pins each of these to null in the Source A groups and
+      no referential target table exists in pilot scope. Enforcing NULL is fail-closed.
+    must_resolve_before: pilot_scope_expansion
+
+  - id: observation_component_typed_value_unconstrained
+    resolution_status: OPEN
+    blocking_for_next_phase: false
+    decision: no typed-value XOR is enforced on observation_component
+    rationale: >
+      canonical-model.yaml defines a typed-value constraint for SubjectCharacteristic,
+      StateSnapshotComponent and PredictedState only. Inventing an XOR for
+      ObservationComponent would extend the design.
+    must_resolve_before: design_decision_on_component_value_cardinality
+
+  - id: load_machinery_deferred
+    resolution_status: OPEN
+    blocking_for_next_phase: false
+    decision: >
+      pipeline_run, pipeline_record_emission, staging tables and quarantine tables are not
+      created in Changeset 01.
+    rationale: >
+      pipeline-plan.yaml classifies them as technical metadata and staging for the load
+      phase. Changeset 01 is storage foundation only.
+    must_resolve_before: load_changeset
+
+  - id: temporal_precision_field_absent_from_model
+    resolution_status: OPEN
+    blocking_for_next_phase: true
+    decision: unresolved conflict between temporal-contract.yaml and canonical-model.yaml
+    rationale: >
+      See accepted-artifact-conflicts.yaml. The temporal contract requires populating
+      temporal_precision and sequence_when_time_unknown, which the canonical model does not
+      define on any pilot entity. No column was invented.
+    must_resolve_before: first_live_load
+
+  - id: encounter_provider_id_population_disagreement
+    resolution_status: OPEN
+    blocking_for_next_phase: true
+    decision: unresolved conflict between record-construction-contract.yaml and plan v0.3.5
+    rationale: >
+      See accepted-artifact-conflicts.yaml. The construction contract maps doctor_id into
+      Encounter.provider_id while the accepted plan states doctor_id is not copied and
+      provider_id stays null. Storage enforces the stricter NULL rule.
+    must_resolve_before: first_live_load
+
+  - id: stage02_relationship_manifest_drift
+    resolution_status: OPEN
+    blocking_for_next_phase: true
+    decision: >
+      artifacts/stage-02/relationship-manifest.sha256 disagrees with the accepted bytes of
+      subject-root-analysis.json and identity-linkage-assessment.json. Recorded in Plan v0.3.5
+      and now enforced by the executable gate stage02_relationship_integrity_pre_live_load,
+      which returns FAIL and blocks all live extraction, load and ETL operations.
+    rationale: >
+      Repairing the drift requires reopening Stage 02, which is outside this changeset.
+      Nothing in Stage 02 was modified and no repair was attempted.
+    must_resolve_before: first_live_load
+
+open_blocking_count: 3
+blocking_ids:
+  - temporal_precision_field_absent_from_model
+  - encounter_provider_id_population_disagreement
+  - stage02_relationship_manifest_drift

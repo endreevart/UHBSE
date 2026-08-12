@@ -1,0 +1,216 @@
+# Unknown semantics
+
+Application-schema relations without enough metadata to propose a clinical entity mapping.
+Infrastructure/extension objects are tracked separately in `infrastructure_inventory`.
+Tables with explicit non-entity roles appear under `role_classified_relations`.
+Automatic heuristics never emit CONFIRMED status.
+
+## Unknown relations (UNCLASSIFIED)
+
+- `magerya_api.account_contractor` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.account_doctorbranch` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.account_doctorcertificateimage` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.account_doctorfeedback` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.account_employee` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.account_patient_wards` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.account_user` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.account_user_groups` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.account_user_user_permissions` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.auth_group` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.auth_group_permissions` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.auth_permission` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.authentication_blacklist` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.authentication_smscode` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.authentication_whitelistphone` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.bonus_program_bonusprofile` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.bonus_program_programsegment` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.bonus_program_segmentlocation` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.certificates_certificate` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.certificates_certificatebatch` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.chat_channel` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.chat_chatroom` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.chat_chatroommember` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.chat_messageadditionalinfo` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.chat_messagetemplates` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.content_clinicdocument` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.content_contentdocs` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.content_documentcategory` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.content_news` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.content_newsimage` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.content_vacancy` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.contract_contract` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.contract_estimate` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.contract_estimateitem` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.contract_refundorder` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.contract_saleorder` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.coupon_management_allowedusersrule` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.coupon_management_allowedusersrule_users` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.coupon_management_coupon` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.coupon_management_couponuser` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.coupon_management_discount` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.coupon_management_maxusesrule` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.coupon_management_ruleset` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.coupon_management_validityrule` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_appointrecommendation` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_appointrecommendation_service_prices` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_appointrecommendationresult` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_conditionsmedicines` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_functionalstudiesresult` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_manipulationsresult` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_medicineappointments` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_medicines_conditions` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_proceduresresult` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.diagnosis_recommendation` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.django_admin_log` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.django_content_type` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_analysis` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_analysis_analyzes` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_analysisitem` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_doctorquestion` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_doctorquestiongroup` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_document_messages` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_patientquestion` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_procedurelist_diagnosis` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_questionnairefilledtemplate` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_recommendationtemplate` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_recommendationtemplate_branches` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_recommendationtemplate_services` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_recommendationtemplatecategory` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.document_unit` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.easy_thumbnails_source` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.easy_thumbnails_thumbnail` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.evotor_evotororder` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.fcm_django_fcmdevice` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.knowledge_base_article` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.knowledge_base_article_categories` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.knowledge_base_article_read_users` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.knowledge_base_articlecategory` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.knowledge_base_paragraph` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.knowledge_base_paragraphimage` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.logg_apilogentry` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.lottery_lottery` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.lottery_lotteryprizewinner` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.prodoctorov_prodocclaim` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.promocode_promocode` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.promocode_promocode_patients` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.promocode_promocode_service_prices` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.promocode_promocodepatient` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.promocode_promocodepatientservice` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_branch` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_clinic` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_disease` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_diseasetype` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_diseasetype_branches` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_doctorbranchoptions` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_doctorbranchservices` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_option` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_serviceprice` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_servicepricegroup` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_servicepricegroup_items` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_settings` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.reference_termsofusedocument` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.salary_directionplan` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.salary_payroll` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.schedule_doctorschedule` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.schedule_schedule` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.schedule_slot` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.statistic_stats` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.tax_refund_relationconfirmationdocument` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.tax_refund_taxapplicant` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.tax_refund_taxpayer` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.tax_refund_taxrefundapplication` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.tax_refund_taxrefundreference` (table, role=UNCLASSIFIED) — **UNKNOWN**
+- `magerya_api.voximplant_voximplantuser` (table, role=UNCLASSIFIED) — **UNKNOWN**
+
+## Role-classified relations (non-entity)
+
+- `magerya_api.appointment_appointmentrequest` (table, role=WORKFLOW) — **WORKFLOW**
+- `magerya_api.appointment_callbackrequest` (table, role=WORKFLOW) — **WORKFLOW**
+- `magerya_api.bonus_program_bonustransaction` (table, role=WORKFLOW) — **WORKFLOW**
+- `magerya_api.certificates_certificatetransaction` (table, role=WORKFLOW) — **WORKFLOW**
+- `magerya_api.chat_message` (table, role=LINK) — **LINK**
+- `magerya_api.diagnosis_diagnosis` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.diagnosis_diagnosis_analysis` (table, role=LINK) — **LINK**
+- `magerya_api.diagnosis_diagnosis_appointment_recommendations` (table, role=LINK) — **LINK**
+- `magerya_api.diagnosis_diagnosis_functional_studies` (table, role=LINK) — **LINK**
+- `magerya_api.diagnosis_diagnosis_manipulations` (table, role=LINK) — **LINK**
+- `magerya_api.diagnosis_diagnosis_medicines` (table, role=LINK) — **LINK**
+- `magerya_api.diagnosis_diagnosis_procedures` (table, role=LINK) — **LINK**
+- `magerya_api.diagnosis_diagnosis_recommendations` (table, role=LINK) — **LINK**
+- `magerya_api.diagnosis_functionalstudies` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.diagnosis_manipulations` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.diagnosis_measurementunits` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.diagnosis_medicines` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.diagnosis_medicinesform` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.diagnosis_procedures` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.diagnosis_receptionfrequency` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.diagnosis_recommendationcategory` (table, role=REFERENCE) — **REFERENCE**
+- `magerya_api.document_appointmentanalysisresult` (table, role=LINK) — **LINK**
+- `magerya_api.document_doctorquestionnaire` (table, role=LINK) — **LINK**
+- `magerya_api.document_doctorquestionnairetemplate` (table, role=ATTRIBUTE_CONTAINER) — **ATTRIBUTE_CONTAINER**
+- `magerya_api.document_manipulationreport` (table, role=LINK) — **LINK**
+- `magerya_api.document_patientquestionnairetemplate` (table, role=ATTRIBUTE_CONTAINER) — **ATTRIBUTE_CONTAINER**
+- `magerya_api.document_recommendation` (table, role=LINK) — **LINK**
+- `magerya_api.document_suggestion` (table, role=LINK) — **LINK**
+- `magerya_api.easy_thumbnails_thumbnaildimensions` (table, role=ATTRIBUTE_CONTAINER) — **ATTRIBUTE_CONTAINER**
+- `magerya_api.lottery_prize` (table, role=ATTRIBUTE_CONTAINER) — **ATTRIBUTE_CONTAINER**
+- `magerya_api.notification_notification` (table, role=LINK) — **LINK**
+- `magerya_api.payment_acquiringprovider` (table, role=WORKFLOW) — **WORKFLOW**
+- `magerya_api.payment_payment` (table, role=LINK) — **LINK**
+- `magerya_api.payment_paymentitem` (table, role=WORKFLOW) — **WORKFLOW**
+- `magerya_api.payment_receipt` (table, role=WORKFLOW) — **WORKFLOW**
+- `magerya_api.payment_vat` (table, role=WORKFLOW) — **WORKFLOW**
+- `magerya_api.reference_disease_disease_types` (table, role=REFERENCE) — **REFERENCE**
+
+## Excluded relations (technical names)
+
+- `magerya_api.account_methodologistpatientsession` (table, role=TECHNICAL) — **EXCLUDED**
+- `magerya_api.authentication_actiontoken` (table, role=TECHNICAL) — **EXCLUDED**
+- `magerya_api.authtoken_token` (table, role=TECHNICAL) — **EXCLUDED**
+- `magerya_api.django_migrations` (table, role=TECHNICAL) — **EXCLUDED**
+- `magerya_api.django_session` (table, role=TECHNICAL) — **EXCLUDED**
+
+## Infrastructure inventory
+
+- `magerya_api.account_methodologistpatientsession` (table) — **INFRASTRUCTURE**
+- `magerya_api.authentication_actiontoken` (table) — **INFRASTRUCTURE**
+- `magerya_api.authtoken_token` (table) — **INFRASTRUCTURE**
+- `magerya_api.django_migrations` (table) — **INFRASTRUCTURE**
+- `magerya_api.django_session` (table) — **INFRASTRUCTURE**
+- `public.spatial_ref_sys` (table) — **INFRASTRUCTURE**
+- `tiger.addr` (table) — **INFRASTRUCTURE**
+- `tiger.addrfeat` (table) — **INFRASTRUCTURE**
+- `tiger.bg` (table) — **INFRASTRUCTURE**
+- `tiger.county` (table) — **INFRASTRUCTURE**
+- `tiger.county_lookup` (table) — **INFRASTRUCTURE**
+- `tiger.countysub_lookup` (table) — **INFRASTRUCTURE**
+- `tiger.cousub` (table) — **INFRASTRUCTURE**
+- `tiger.direction_lookup` (table) — **INFRASTRUCTURE**
+- `tiger.edges` (table) — **INFRASTRUCTURE**
+- `tiger.faces` (table) — **INFRASTRUCTURE**
+- `tiger.featnames` (table) — **INFRASTRUCTURE**
+- `tiger.geocode_settings` (table) — **INFRASTRUCTURE**
+- `tiger.geocode_settings_default` (table) — **INFRASTRUCTURE**
+- `tiger.loader_lookuptables` (table) — **INFRASTRUCTURE**
+- `tiger.loader_platform` (table) — **INFRASTRUCTURE**
+- `tiger.loader_variables` (table) — **INFRASTRUCTURE**
+- `tiger.pagc_gaz` (table) — **INFRASTRUCTURE**
+- `tiger.pagc_lex` (table) — **INFRASTRUCTURE**
+- `tiger.pagc_rules` (table) — **INFRASTRUCTURE**
+- `tiger.place` (table) — **INFRASTRUCTURE**
+- `tiger.place_lookup` (table) — **INFRASTRUCTURE**
+- `tiger.secondary_unit_lookup` (table) — **INFRASTRUCTURE**
+- `tiger.state` (table) — **INFRASTRUCTURE**
+- `tiger.state_lookup` (table) — **INFRASTRUCTURE**
+- `tiger.street_type_lookup` (table) — **INFRASTRUCTURE**
+- `tiger.tabblock` (table) — **INFRASTRUCTURE**
+- `tiger.tabblock20` (table) — **INFRASTRUCTURE**
+- `tiger.tract` (table) — **INFRASTRUCTURE**
+- `tiger.zcta5` (table) — **INFRASTRUCTURE**
+- `tiger.zip_lookup` (table) — **INFRASTRUCTURE**
+- `tiger.zip_lookup_all` (table) — **INFRASTRUCTURE**
+- `tiger.zip_lookup_base` (table) — **INFRASTRUCTURE**
+- `tiger.zip_state` (table) — **INFRASTRUCTURE**
+- `tiger.zip_state_loc` (table) — **INFRASTRUCTURE**
+- `topology.layer` (table) — **INFRASTRUCTURE**
+- `topology.topology` (table) — **INFRASTRUCTURE**

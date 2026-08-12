@@ -1,0 +1,42 @@
+{
+  "evidence_location": "artifacts/stage-02-maintenance-01/promotion-verification.json",
+  "expected_manifest_sha256_after": "13aae26b37032730c533740bc513872cb2a6890429b64ebd2fb923ffcf672974",
+  "maintenance_id": "stage-02-maintenance-01",
+  "mandatory_release_suite": {
+    "exit_code": 0,
+    "failed": 0,
+    "passed": 825,
+    "status": "PASS",
+    "summary": "825 passed, 1 skipped, 16 deselected, 1 warning in 412.01s (0:06:52)"
+  },
+  "manifest_sha256_after": "13aae26b37032730c533740bc513872cb2a6890429b64ebd2fb923ffcf672974",
+  "manifest_verified_8_of_8": true,
+  "pre_live_load_gate": {
+    "expected_failed_checks": [
+      "canonical_loader_runtime_principal_undefined",
+      "source_subject_key_opacity_undefined",
+      "temporal_precision_field_absent_from_model",
+      "encounter_provider_id_population_disagreement"
+    ],
+    "failed_checks": [
+      "canonical_loader_runtime_principal_undefined",
+      "source_subject_key_opacity_undefined",
+      "temporal_precision_field_absent_from_model",
+      "encounter_provider_id_population_disagreement"
+    ],
+    "status": "FAIL"
+  },
+  "promotion_bundle": {},
+  "promotion_version": "0.1.1",
+  "publisher_only_suite": {
+    "executed": true,
+    "failed": 3,
+    "passed": 4,
+    "status": "FAIL",
+    "summary": "3 failed, 4 passed, 1 skipped, 834 deselected, 1 warning in 1007.64s (0:16:47)"
+  },
+  "repair_applied": true,
+  "report_status": "FINAL",
+  "rolled_back": false,
+  "verified_at": "2026-08-08T08:15:08.541053+00:00"
+}

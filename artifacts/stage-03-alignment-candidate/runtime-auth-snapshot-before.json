@@ -1,0 +1,261 @@
+{
+  "label": "runtime-auth-before",
+  "schema_fingerprint": {
+    "algorithm": "sha256",
+    "sha256": "ee092ee97ecfce41ed90437f3f03db767e32a57a3f248dfecaa548d6b0856401",
+    "schema": "canonical_evidence",
+    "table_count": 7
+  },
+  "row_counts": {
+    "source_system": 0,
+    "source_record": 0,
+    "subject": 0,
+    "subject_characteristic": 0,
+    "encounter": 0,
+    "observation": 0,
+    "observation_component": 0
+  },
+  "migration_inventory": {
+    "immutability_status": "PASS",
+    "accepted_sha256": {
+      "0001_roles_and_schema.sql": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+      "0002_pilot_evidence_tables.sql": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+      "0003_pilot_grants.sql": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b"
+    },
+    "observed_file_sha256": {
+      "0001_roles_and_schema.sql": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+      "0002_pilot_evidence_tables.sql": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+      "0003_pilot_grants.sql": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b"
+    },
+    "hardening_migration_sha256": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a",
+    "declared_file_sha256": {
+      "0001_roles_and_schema.sql": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+      "0002_pilot_evidence_tables.sql": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+      "0003_pilot_grants.sql": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+      "0004_storage_contract_hardening.sql": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a"
+    },
+    "applied_history": {
+      "0001": {
+        "name": "roles_and_schema",
+        "sha256": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+        "applied_at": "2026-08-06T16:55:08.426865+00:00"
+      },
+      "0002": {
+        "name": "pilot_evidence_tables",
+        "sha256": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+        "applied_at": "2026-08-06T16:55:08.447912+00:00"
+      },
+      "0003": {
+        "name": "pilot_grants",
+        "sha256": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+        "applied_at": "2026-08-06T16:55:08.449937+00:00"
+      },
+      "0004": {
+        "name": "storage_contract_hardening",
+        "sha256": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a",
+        "applied_at": "2026-08-07T07:18:30.391630+00:00"
+      }
+    },
+    "migrations_0001_0004_present": true
+  },
+  "role_inventory": {
+    "roles": {
+      "canonical_owner": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": false,
+          "rolinherit": true,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": []
+      },
+      "canonical_migrator": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": false,
+          "rolinherit": true,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": []
+      },
+      "canonical_loader": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": false,
+          "rolinherit": true,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": []
+      },
+      "canonical_validator_ro": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": false,
+          "rolinherit": true,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": []
+      },
+      "canonical_loader_login": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": true,
+          "rolinherit": false,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": [
+          "canonical_loader"
+        ]
+      }
+    },
+    "password_material_included": false
+  },
+  "grants_and_membership": {
+    "table_grants": {
+      "canonical_loader": {
+        "encounter": [
+          "INSERT",
+          "SELECT"
+        ],
+        "observation": [
+          "INSERT",
+          "SELECT"
+        ],
+        "observation_component": [
+          "INSERT",
+          "SELECT"
+        ],
+        "source_record": [
+          "INSERT",
+          "SELECT"
+        ],
+        "source_system": [
+          "INSERT",
+          "SELECT"
+        ],
+        "subject": [
+          "INSERT",
+          "SELECT"
+        ],
+        "subject_characteristic": [
+          "INSERT",
+          "SELECT"
+        ]
+      },
+      "canonical_owner": {
+        "encounter": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "observation": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "observation_component": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "source_record": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "source_system": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "subject": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ],
+        "subject_characteristic": [
+          "DELETE",
+          "INSERT",
+          "REFERENCES",
+          "SELECT",
+          "TRIGGER",
+          "TRUNCATE",
+          "UPDATE"
+        ]
+      },
+      "canonical_validator_ro": {
+        "encounter": [
+          "SELECT"
+        ],
+        "observation": [
+          "SELECT"
+        ],
+        "observation_component": [
+          "SELECT"
+        ],
+        "source_record": [
+          "SELECT"
+        ],
+        "source_system": [
+          "SELECT"
+        ],
+        "subject": [
+          "SELECT"
+        ],
+        "subject_characteristic": [
+          "SELECT"
+        ]
+      }
+    },
+    "memberships": [
+      {
+        "member": "canonical_loader_login",
+        "role": "canonical_loader"
+      }
+    ]
+  }
+}

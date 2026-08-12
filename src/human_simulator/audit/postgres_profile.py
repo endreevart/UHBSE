@@ -82,7 +82,7 @@ def _run_query(
     started = time.perf_counter()
     with engine.connect() as conn:
         result = conn.execute(text(sql), params or {})
-        rows = [dict(row._mapping) for row in result.mappings()]
+        rows = [dict(row) for row in result.mappings()]
     duration_ms = round((time.perf_counter() - started) * 1000, 2)
     query_log.append(
         {

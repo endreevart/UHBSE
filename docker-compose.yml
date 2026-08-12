@@ -15,5 +15,131 @@ services:
       timeout: 5s
       retries: 10
 
+  kgz-db:
+    image: postgis/postgis:14-3.4
+    container_name: human-simulator-kgz-db
+    restart: unless-stopped
+    env_file:
+      - path: db-kgz.env
+        required: false
+    environment:
+      POSTGRES_USER: kgz_raw
+      POSTGRES_DB: kgz_raw
+    ports:
+      - "5435:5432"
+    volumes:
+      - kgz-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kgz_raw -d kgz_raw"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Stage 03 Implementation Changeset 01 — isolated derived canonical database.
+  # Host publish restricted to loopback until LOGIN principal is confirmed.
+  canonical-db:
+    image: postgres:16
+    container_name: human-simulator-canonical
+    restart: unless-stopped
+    env_file:
+      - path: canonical-db.env
+        required: false
+    environment:
+      POSTGRES_DB: uhbse_canonical_dev
+      POSTGRES_USER: canonical_admin
+    ports:
+      - "127.0.0.1:5436:5432"
+    volumes:
+      - uhbse_canonical_dev_data:/var/lib/postgresql/data
+    networks:
+      - canonical-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U canonical_admin -d uhbse_canonical_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # HashiCorp Vault — production mode, Raft integrated storage, TLS, loopback publish.
+  # Dev mode prohibited. Init uses PGP-encrypted shares (see runbooks).
+  vault:
+    image: hashicorp/vault:1.17.6
+    container_name: human-simulator-vault
+    restart: unless-stopped
+    cap_add:
+      - IPC_LOCK
+    user: root
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        mkdir -p /vault/data /vault/audit &&
+        chown -R vault:vault /vault/data /vault/audit &&
+        exec su-exec vault vault server -config=/vault/config/vault.hcl
+    environment:
+      VAULT_ADDR: https://127.0.0.1:8200
+      VAULT_CACERT: /vault/tls/ca.crt
+    ports:
+      - "127.0.0.1:8200:8200"
+    volumes:
+      - ./ops/vault/config/vault.hcl:/vault/config/vault.hcl:ro
+      - ./ops/vault/tls:/vault/tls:ro
+      - uhbse_vault_raft:/vault/data
+      - uhbse_vault_audit:/vault/audit
+    networks:
+      - vault-net
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "VAULT_ADDR=https://127.0.0.1:8200 VAULT_CACERT=/vault/tls/ca.crt vault status >/dev/null 2>&1; rc=$$?; [ $$rc -eq 0 ] || [ $$rc -eq 2 ]",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+  # Canonical-loader runtime: Vault Agent Process Supervisor + synthetic child.
+  # Same container namespace for Agent and child; secrets only on container-local tmpfs.
+  # No RoleID/SecretID/token/password in Compose environment.
+  canonical-loader-runtime:
+    build:
+      context: ./ops/vault/runtime
+    image: uhbse-canonical-loader-runtime:0.1.1
+    container_name: human-simulator-canonical-loader-runtime
+    restart: "no"
+    profiles: ["runtime-auth"]
+    depends_on:
+      vault:
+        condition: service_healthy
+      canonical-db:
+        condition: service_healthy
+    cap_add:
+      - IPC_LOCK
+    environment:
+      VAULT_ADDR: https://vault:8200
+      VAULT_CACERT: /vault/tls/ca.crt
+      CANONICAL_DB_HOST: canonical-db
+      CANONICAL_DB_PORT: "5432"
+      CANONICAL_DB_NAME: uhbse_canonical_dev
+    volumes:
+      - ./ops/vault/runtime/vault-agent.hcl:/vault/agent/vault-agent.hcl:ro
+      - ./ops/vault/tls:/vault/tls:ro
+    tmpfs:
+      - /run/uhbse-vault:mode=0700,size=32m
+      - /tmp:mode=0700,size=16m
+    networks:
+      - vault-net
+      - canonical-net
+
 volumes:
   mg-db-data:
+  kgz-db-data:
+  uhbse_canonical_dev_data:
+  uhbse_vault_raft:
+  uhbse_vault_audit:
+
+networks:
+  canonical-net:
+    driver: bridge
+  vault-net:
+    driver: bridge
+    internal: false

@@ -1,0 +1,195 @@
+{
+  "profiled_at": "2026-07-31T16:49:40.495844+00:00",
+  "classified_at": "2026-08-08T08:14:10.078070+00:00",
+  "source_id": "kgz",
+  "status": "PASS",
+  "dump_path": "/Volumes/Siska/DEVELOP/Human simulator/kgz-20231204.dump",
+  "database": "kgz_raw",
+  "connection_user": "kgz_audit_ro",
+  "redacted_url": "postgresql+psycopg://kgz_audit_ro:***@localhost:5435/kgz_raw",
+  "readonly_user_only": true,
+  "application_schemas": [
+    "public",
+    "quest_digital"
+  ],
+  "checks": [
+    {
+      "name": "readonly_user",
+      "status": "PASS",
+      "detail": "connection_user=kgz_audit_ro"
+    },
+    {
+      "name": "schema_profile_present",
+      "status": "PASS",
+      "detail": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/stage-02/schema-profile-kgz.json"
+    },
+    {
+      "name": "consultations_not_patients_or_doctors",
+      "status": "PASS",
+      "detail": "consultations entity types: ['appointments', 'visits']"
+    },
+    {
+      "name": "consultations_is_event_candidate",
+      "status": "PASS",
+      "detail": "consultations entity types: ['appointments', 'visits']"
+    },
+    {
+      "name": "feedback_not_doctors",
+      "status": "PASS",
+      "detail": "feedback classified as doctors=False"
+    },
+    {
+      "name": "questionnaire_not_doctors",
+      "status": "PASS",
+      "detail": "questionnaire classified as doctors=False"
+    },
+    {
+      "name": "feedback_not_visits",
+      "status": "PASS",
+      "detail": "feedback classified as visits=False"
+    },
+    {
+      "name": "questionnaire_not_visits",
+      "status": "PASS",
+      "detail": "questionnaire classified as visits=False"
+    },
+    {
+      "name": "users_rating_not_visits",
+      "status": "PASS",
+      "detail": "users_rating classified as visits=False"
+    },
+    {
+      "name": "consultation_service_changes_not_visits",
+      "status": "PASS",
+      "detail": "consultation_service_changes classified as visits=False"
+    },
+    {
+      "name": "payment_transactions_not_operations",
+      "status": "PASS",
+      "detail": "payment_transactions classified as operations=False"
+    },
+    {
+      "name": "persons_not_medical_documents",
+      "status": "PASS",
+      "detail": "persons classified as medical_documents=False"
+    },
+    {
+      "name": "analyses_codes_not_laboratory_results",
+      "status": "PASS",
+      "detail": "analyses_codes classified as laboratory_results=False"
+    },
+    {
+      "name": "catalog_labs_not_laboratory_results",
+      "status": "PASS",
+      "detail": "catalog_labs classified as laboratory_results=False"
+    },
+    {
+      "name": "lab_addresses_not_laboratory_results",
+      "status": "PASS",
+      "detail": "lab_addresses classified as laboratory_results=False"
+    },
+    {
+      "name": "lab_referral_not_laboratory_results",
+      "status": "PASS",
+      "detail": "lab_referral classified as laboratory_results=False"
+    },
+    {
+      "name": "lab_referral_codes_not_laboratory_results",
+      "status": "PASS",
+      "detail": "lab_referral_codes classified as laboratory_results=False"
+    },
+    {
+      "name": "lab_referral_regions_not_laboratory_results",
+      "status": "PASS",
+      "detail": "lab_referral_regions classified as laboratory_results=False"
+    },
+    {
+      "name": "analyses_constructor_is_laboratory_results_candidate",
+      "status": "PASS",
+      "detail": "analyses_constructor laboratory_results=True"
+    },
+    {
+      "name": "profilaxys_profile_is_measurements_candidate",
+      "status": "PASS",
+      "detail": "profilaxys_profile measurements=True"
+    },
+    {
+      "name": "profilaxys_analyses_not_laboratory_results",
+      "status": "PASS",
+      "detail": "entity_types=['measurements']"
+    },
+    {
+      "name": "profilaxys_analyses_is_measurements_candidate",
+      "status": "PASS",
+      "detail": "entity_types=['measurements']"
+    },
+    {
+      "name": "analyses_pool_is_workflow_not_laboratory_results",
+      "status": "PASS",
+      "detail": "role=WORKFLOW, laboratory_results=False"
+    },
+    {
+      "name": "analyses_constructor_observation_value_lab_candidate",
+      "status": "PASS",
+      "detail": "entity_types=['laboratory_results']"
+    },
+    {
+      "name": "lab_result_payload_with_empty_snapshot_note",
+      "status": "PASS",
+      "detail": "lab_result candidate=True"
+    },
+    {
+      "name": "profilaxys_analyses_is_observation_candidate",
+      "status": "PASS",
+      "detail": "role=OBSERVATION, entity_types=['measurements']"
+    },
+    {
+      "name": "spatial_ref_sys_in_infrastructure",
+      "status": "PASS",
+      "detail": "spatial_ref_sys in infrastructure=True"
+    },
+    {
+      "name": "unknown_relations_are_unclassified",
+      "status": "PASS",
+      "detail": "non-UNCLASSIFIED in unknown: []"
+    },
+    {
+      "name": "no_confirmed_from_heuristics",
+      "status": "PASS",
+      "detail": "all entity candidates must be CANDIDATE or lower"
+    },
+    {
+      "name": "infrastructure_separated",
+      "status": "PASS",
+      "detail": "infrastructure_inventory relations=42"
+    },
+    {
+      "name": "artifact_hashes",
+      "status": "PASS",
+      "detail": "hashed 4/4 content artifacts"
+    },
+    {
+      "name": "audit_not_self_hashed",
+      "status": "PASS",
+      "detail": "source-b-audit.json excluded from artifact_hashes; see manifest.sha256"
+    },
+    {
+      "name": "manifest_sha256",
+      "status": "PASS",
+      "detail": "verified 5 entries in manifest.sha256"
+    }
+  ],
+  "artifact_hashes": {
+    "schema-profile-kgz.json": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+    "entity-candidates-kgz.yaml": "c98a56a73e82022281caeb15238b9ca883218606ebc0b355e60de4ab152fb417",
+    "relation-graph-kgz.md": "58eef942992eacb8933cbaf0d143084b8b911c91f606dfeda34fab4a015f172a",
+    "unknown-semantics-kgz.md": "e0d0636f4c4cdaaacc21f41b381bae39bfc9ff3619cd69f1e8bfc16ea65dc804"
+  },
+  "manifest": "manifest.sha256",
+  "summary": {
+    "entity_candidates": 9,
+    "unknown_relations": 55,
+    "infrastructure_relations": 42,
+    "table_roles": 132
+  }
+}

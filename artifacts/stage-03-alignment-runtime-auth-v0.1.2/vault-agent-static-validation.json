@@ -1,0 +1,17 @@
+{
+  "kind": "STATIC",
+  "path": "ops/vault/runtime/vault-agent.hcl",
+  "checks": {
+    "hmac_version_pin_active": "PASS",
+    "loader_version_pin_active": "PASS",
+    "hmac_forbidden_version": "PASS",
+    "loader_forbidden_version": "PASS",
+    "hmac_unpinned_forbidden": "PASS",
+    "loader_unpinned_forbidden": "PASS",
+    "compose_canonical_loader_runtime": "PASS",
+    "exec_supervisor": "PASS"
+  },
+  "overall_status": "PASS",
+  "note": "Comments and documentation strings are ignored; only active template expressions count",
+  "vault_agent_runtime_execution": "NOT_VERIFIED"
+}

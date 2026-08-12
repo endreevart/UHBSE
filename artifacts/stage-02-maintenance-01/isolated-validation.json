@@ -1,0 +1,270 @@
+{
+  "applied_in": "throwaway copy of the workspace, discarded afterwards",
+  "candidate_applied": true,
+  "gate_still_fails_on_remaining_blockers": true,
+  "manifest_drift_blocker_cleared": true,
+  "pre_live_load_gate_failed_checks": [
+    "canonical_loader_runtime_principal_undefined",
+    "source_subject_key_opacity_undefined",
+    "temporal_precision_field_absent_from_model",
+    "encounter_provider_id_population_disagreement"
+  ],
+  "pre_live_load_gate_open_blockers": [
+    "canonical_loader_runtime_principal_undefined",
+    "encounter_provider_id_population_disagreement",
+    "source_subject_key_opacity_undefined",
+    "temporal_precision_field_absent_from_model"
+  ],
+  "pre_live_load_gate_status": "FAIL",
+  "relationship_manifest_detail": "verified 8 entries in relationship-manifest.sha256",
+  "relationship_manifest_verified": true,
+  "verify_stage_02": {
+    "all_checks": [
+      {
+        "name": "source_a_report_final",
+        "status": "PASS"
+      },
+      {
+        "name": "source_a_live_extraction",
+        "status": "PASS"
+      },
+      {
+        "name": "source_a_audit_user",
+        "status": "PASS"
+      },
+      {
+        "name": "source_a_readonly_validation",
+        "status": "PASS"
+      },
+      {
+        "name": "source_a_fingerprint_match",
+        "status": "PASS"
+      },
+      {
+        "name": "source_a_manifest",
+        "status": "PASS"
+      },
+      {
+        "name": "source_a_not_preliminary",
+        "status": "PASS"
+      },
+      {
+        "name": "source_b_audit_pass",
+        "status": "PASS"
+      },
+      {
+        "name": "source_b_audit_user",
+        "status": "PASS"
+      },
+      {
+        "name": "source_b_manifest",
+        "status": "PASS"
+      },
+      {
+        "name": "source_b_restore_completed",
+        "status": "PASS"
+      },
+      {
+        "name": "source_b_profile_completed",
+        "status": "PASS"
+      },
+      {
+        "name": "source_b_raw_db_unchanged",
+        "status": "PASS"
+      },
+      {
+        "name": "compare_verification_report",
+        "status": "PASS"
+      },
+      {
+        "name": "compare_artifact_schema-diff.yaml",
+        "status": "PASS"
+      },
+      {
+        "name": "compare_artifact_entity-crosswalk.yaml",
+        "status": "PASS"
+      },
+      {
+        "name": "crosswalk_candidate_only",
+        "status": "PASS"
+      },
+      {
+        "name": "crosswalk_no_unproven_evidence_backed",
+        "status": "PASS"
+      },
+      {
+        "name": "crosswalk_unresolved_mappings_count",
+        "status": "PASS"
+      },
+      {
+        "name": "crosswalk_data_level_present",
+        "status": "PASS"
+      },
+      {
+        "name": "crosswalk_incompatible_levels_not_mapped",
+        "status": "PASS"
+      },
+      {
+        "name": "no_permanent_patient_crosswalk",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship_verification_report",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship_manifest",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship_summary_subject_root_a_verdict",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship_summary_subject_root_b_verdict",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship_summary_identity_verdict",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship_summary_source_relationship_verdict",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship_summary_population_overlap_estimate_status",
+        "status": "PASS"
+      },
+      {
+        "name": "no_linkage_proven",
+        "status": "PASS"
+      },
+      {
+        "name": "no_population_overlap_percentage",
+        "status": "PASS"
+      },
+      {
+        "name": "population_overlap_not_estimable",
+        "status": "PASS"
+      },
+      {
+        "name": "identifier_matches_separate_from_subject_pairs",
+        "status": "PASS"
+      },
+      {
+        "name": "conflict_definition_present",
+        "status": "PASS"
+      },
+      {
+        "name": "missingness_per_source",
+        "status": "PASS"
+      },
+      {
+        "name": "application_shared_relation_name_count",
+        "status": "PASS"
+      },
+      {
+        "name": "infrastructure_overlap_not_evidence",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship_artifacts_no_pii",
+        "status": "PASS"
+      },
+      {
+        "name": "input_artifact_hashes_computed",
+        "status": "PASS"
+      },
+      {
+        "name": "manifest.sha256_no_self_hash",
+        "status": "PASS"
+      },
+      {
+        "name": "relationship-manifest.sha256_no_self_hash",
+        "status": "PASS"
+      },
+      {
+        "name": "sanitized_query_logs_present",
+        "status": "PASS"
+      },
+      {
+        "name": "no_secrets_in_artifacts",
+        "status": "PASS"
+      },
+      {
+        "name": "full_test_suite",
+        "status": "FAIL"
+      },
+      {
+        "name": "test_result_not_skipped",
+        "status": "FAIL"
+      },
+      {
+        "name": "verify_json_no_self_hash",
+        "status": "PASS"
+      },
+      {
+        "name": "unresolved_mappings_complete",
+        "status": "PASS"
+      },
+      {
+        "name": "verdicts_match_relationship_assessment",
+        "status": "PASS"
+      },
+      {
+        "name": "unresolved_mappings_exact_match",
+        "status": "PASS"
+      },
+      {
+        "name": "report_final_only_on_overall_pass",
+        "status": "PASS"
+      },
+      {
+        "name": "overall_pass_requires_all_checks",
+        "status": "PASS"
+      },
+      {
+        "name": "checks_arithmetic",
+        "status": "PASS"
+      },
+      {
+        "name": "final_manifest_hashes_match",
+        "status": "PASS"
+      }
+    ],
+    "checks_evaluated": 51,
+    "checks_not_evaluated": [
+      "full_test_suite",
+      "test_result_not_skipped"
+    ],
+    "failed_evaluated_checks": [],
+    "raw_status": "FAIL",
+    "relationship_manifest_check": "PASS",
+    "status_excluding_test_gate": "PASS",
+    "why_not_evaluated": "verify-stage-02 runs the full pytest suite as a check; inside a throwaway copy that would re-enter the publication pipeline, so it was not run"
+  },
+  "working_stage_02_sha256_after": {
+    "identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+    "identity-linkage-assessment.md": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d",
+    "relationship-manifest.sha256": "19b932cc2f27684013d743444b0b8d66f560e200fffc73a571e387178b6ec6f2",
+    "relationship-query-log.json": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+    "relationship-verification-report.json": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4",
+    "source-relationship-assessment.json": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07",
+    "source-relationship-assessment.md": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6",
+    "subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+    "subject-root-analysis.md": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58"
+  },
+  "working_stage_02_sha256_before": {
+    "identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+    "identity-linkage-assessment.md": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d",
+    "relationship-manifest.sha256": "19b932cc2f27684013d743444b0b8d66f560e200fffc73a571e387178b6ec6f2",
+    "relationship-query-log.json": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+    "relationship-verification-report.json": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4",
+    "source-relationship-assessment.json": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07",
+    "source-relationship-assessment.md": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6",
+    "subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+    "subject-root-analysis.md": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58"
+  },
+  "working_stage_02_unchanged": true
+}

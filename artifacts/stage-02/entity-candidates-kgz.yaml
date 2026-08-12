@@ -1,0 +1,1489 @@
+classified_at: '2026-08-08T08:14:10.078070+00:00'
+application_schemas:
+- public
+- quest_digital
+table_roles:
+- schema: public
+  relation: abac_rules
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: abacrules_roles
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: address
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: affiliates
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: black_list_users
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: calls_log
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: calls_settings
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: chat_notifier
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: cities
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: company
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: consultation_service_changes
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+- schema: public
+  relation: consultations
+  kind: table
+  role: EVENT
+  data_level: PATIENT_EVENT
+- schema: public
+  relation: consultations_timeline
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: consultations_timeline_settings
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: countries
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: disable_sms_notifications
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: doctrine_migration_versions
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: public
+  relation: document_types
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: public
+  relation: documents
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: email_confirmation
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: failed_jobs
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: feedback
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  data_level: ATTRIBUTE_CONTAINER
+- schema: public
+  relation: feedback_support
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: jobs
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: log_notification
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: log_notify_requests
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: log_sms
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: log_validation_exception
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: message_file
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: message_read
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: message_type
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: messages
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: migration_versions
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: public
+  relation: migrations
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: public
+  relation: notifications
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: oauth_global
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: public
+  relation: password_confirmation
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: password_resets
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: payment_balance
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+- schema: public
+  relation: payment_invoices
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+- schema: public
+  relation: payment_promo_code
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+- schema: public
+  relation: payment_sberbank_orders
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+- schema: public
+  relation: payment_transactions
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+- schema: public
+  relation: permission_role
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: permissions
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: persons
+  kind: table
+  role: ENTITY
+  data_level: ATTRIBUTE_CONTAINER
+- schema: public
+  relation: phone_confirmation
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: profilaxys_analyses
+  kind: table
+  role: OBSERVATION
+  data_level: OBSERVATION_VALUE
+- schema: public
+  relation: profilaxys_profile
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  data_level: ATTRIBUTE_CONTAINER
+- schema: public
+  relation: profilaxys_users
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: promo_notification
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: push_notification_devices
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: push_notification_log
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: questionnaire
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  data_level: ATTRIBUTE_CONTAINER
+- schema: public
+  relation: register_promo_marks
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: reviews
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: role_user
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+- schema: public
+  relation: roles
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: rooms
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: schedule_events
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+- schema: public
+  relation: service_products
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: sessions
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: public
+  relation: spatial_ref_sys
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: public
+  relation: speed_analyst_beacons
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: states
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: user_notification_settings
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: user_pregnants
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: users
+  kind: table
+  role: ENTITY
+  data_level: ATTRIBUTE_CONTAINER
+- schema: public
+  relation: users_abacrules
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: users_address
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+- schema: public
+  relation: users_company
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+- schema: public
+  relation: users_notification
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: users_persons
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+- schema: public
+  relation: users_profile
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  data_level: ATTRIBUTE_CONTAINER
+- schema: public
+  relation: users_rating
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: public
+  relation: vacancies
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: public
+  relation: vacancies_feedback
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: quest_digital
+  relation: analyses_catalog
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: analyses_codes
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: analyses_constructor
+  kind: table
+  role: OBSERVATION
+  data_level: OBSERVATION_VALUE
+- schema: quest_digital
+  relation: analyses_labs
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: analyses_pool
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+- schema: quest_digital
+  relation: analyses_tags
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: quest_digital
+  relation: analyses_weight
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: catalog_labs
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: catalog_weights
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: items_tags
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: quest_digital
+  relation: lab_addresses
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: lab_referral
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: lab_referral_codes
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: lab_referral_regions
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+- schema: quest_digital
+  relation: lab_result
+  kind: table
+  role: OBSERVATION
+  data_level: PAYLOAD
+- schema: quest_digital
+  relation: link_analyses
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+- schema: quest_digital
+  relation: recommendations_category
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: quest_digital
+  relation: recommendations_list
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: quest_digital
+  relation: recommendations_user
+  kind: table
+  role: UNCLASSIFIED
+  data_level: UNKNOWN
+- schema: tiger
+  relation: addr
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: addrfeat
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: bg
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: county
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: county_lookup
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: countysub_lookup
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: cousub
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: direction_lookup
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: edges
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: faces
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: featnames
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: geocode_settings
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: geocode_settings_default
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: loader_lookuptables
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: loader_platform
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: loader_variables
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: pagc_gaz
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: pagc_lex
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: pagc_rules
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: place
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: place_lookup
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: secondary_unit_lookup
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: state
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: state_lookup
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: street_type_lookup
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: tabblock
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: tabblock20
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: tract
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: zcta5
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: zip_lookup
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: zip_lookup_all
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: zip_lookup_base
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: zip_state
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: tiger
+  relation: zip_state_loc
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: topology
+  relation: layer
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+- schema: topology
+  relation: topology
+  kind: table
+  role: TECHNICAL
+  data_level: UNKNOWN
+entity_types:
+  patients:
+  - schema: public
+    relation: persons
+    kind: table
+    role: ENTITY
+    data_level: ATTRIBUTE_CONTAINER
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches patients heuristics
+    - type: foreign_key
+      detail: public.users_persons.person_id -> public.persons.id
+    - type: row_estimate
+      detail: estimated_rows=0
+  visits:
+  - schema: public
+    relation: consultations
+    kind: table
+    role: EVENT
+    data_level: PATIENT_EVENT
+    status: CANDIDATE
+    evidence:
+    - type: curated_rule
+      detail: curated candidate for visits based on schema signature
+    - &id001
+      type: foreign_key
+      detail: public.feedback.consultation_id -> public.consultations.id
+    - &id002
+      type: foreign_key
+      detail: public.questionnaire.consultation_id -> public.consultations.id
+    - &id003
+      type: foreign_key
+      detail: public.users_rating.consultation_id -> public.consultations.id
+    - &id004
+      type: foreign_key
+      detail: quest_digital.analyses_constructor.consultation_id -> public.consultations.id
+    - &id005
+      type: foreign_key
+      detail: quest_digital.analyses_pool.consultation_id -> public.consultations.id
+    - &id006
+      type: foreign_key
+      detail: quest_digital.link_analyses.consultation_id -> public.consultations.id
+    - &id007
+      type: foreign_key
+      detail: quest_digital.recommendations_user.consultations_id -> public.consultations.id
+    - type: row_estimate
+      detail: estimated_rows=88867
+  doctors:
+  - schema: public
+    relation: users
+    kind: table
+    role: ENTITY
+    data_level: ATTRIBUTE_CONTAINER
+    status: CANDIDATE
+    evidence:
+    - type: column_name_pattern
+      detail: 'columns match doctors heuristics: is_doctor'
+    - type: foreign_key
+      detail: public.affiliates.affiliate_user_id -> public.users.id
+    - type: foreign_key
+      detail: public.affiliates.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.feedback_support.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.role_user.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.user_pregnants.staff_id -> public.users.id
+    - type: foreign_key
+      detail: public.user_pregnants.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.users.family_user_id -> public.users.id
+    - type: foreign_key
+      detail: public.users.family_user_id -> public.users.id
+    - type: foreign_key
+      detail: public.users_abacrules.users_id -> public.users.id
+    - type: foreign_key
+      detail: public.users_address.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.users_company.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.users_notification.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.users_persons.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.users_profile.user_id -> public.users.id
+    - type: foreign_key
+      detail: public.users_rating.user_id -> public.users.id
+    - type: foreign_key
+      detail: quest_digital.analyses_constructor.user_id -> public.users.id
+    - type: foreign_key
+      detail: quest_digital.lab_referral_regions.user_id -> public.users.id
+    - type: row_estimate
+      detail: estimated_rows=114748
+  specialties: []
+  laboratory_results:
+  - schema: quest_digital
+    relation: analyses_constructor
+    kind: table
+    role: OBSERVATION
+    data_level: OBSERVATION_VALUE
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches laboratory_results heuristics
+    - type: foreign_key
+      detail: quest_digital.analyses_constructor.catalog_id -> quest_digital.analyses_catalog.id
+    - type: foreign_key
+      detail: quest_digital.analyses_constructor.consultation_id -> public.consultations.id
+    - type: foreign_key
+      detail: quest_digital.analyses_constructor.pool_id -> quest_digital.analyses_pool.id
+    - type: foreign_key
+      detail: quest_digital.analyses_constructor.user_id -> public.users.id
+    - type: foreign_key
+      detail: quest_digital.analyses_constructor.weight_id -> quest_digital.analyses_weight.id
+    - type: row_estimate
+      detail: estimated_rows=2183297
+  - schema: quest_digital
+    relation: lab_result
+    kind: table
+    role: OBSERVATION
+    data_level: PAYLOAD
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches laboratory_results heuristics
+    - type: foreign_key
+      detail: quest_digital.lab_result.referral_id -> quest_digital.lab_referral.id
+    - type: row_estimate
+      detail: estimated_rows=0
+    - type: snapshot_note
+      detail: lab_result table empty in current schema snapshot
+  diagnoses: []
+  prescriptions: []
+  medications: []
+  procedures: []
+  ultrasound_examinations: []
+  operations: []
+  medical_documents: []
+  measurements:
+  - schema: public
+    relation: profilaxys_analyses
+    kind: table
+    role: OBSERVATION
+    data_level: OBSERVATION_VALUE
+    status: CANDIDATE
+    evidence:
+    - type: column_name_pattern
+      detail: 'columns match measurements heuristics: profile_id'
+    - type: foreign_key
+      detail: public.profilaxys_analyses.profile_id -> public.profilaxys_profile.id
+    - type: row_estimate
+      detail: estimated_rows=20876
+  - schema: public
+    relation: profilaxys_profile
+    kind: table
+    role: ATTRIBUTE_CONTAINER
+    data_level: ATTRIBUTE_CONTAINER
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches measurements heuristics
+    - type: foreign_key
+      detail: public.profilaxys_analyses.profile_id -> public.profilaxys_profile.id
+    - type: foreign_key
+      detail: public.profilaxys_profile.user_id -> public.profilaxys_users.id
+    - type: row_estimate
+      detail: estimated_rows=17557
+  - schema: public
+    relation: users_profile
+    kind: table
+    role: ATTRIBUTE_CONTAINER
+    data_level: ATTRIBUTE_CONTAINER
+    status: CANDIDATE
+    evidence:
+    - type: name_pattern
+      detail: relation name matches measurements heuristics
+    - type: foreign_key
+      detail: public.user_notification_settings.profile_id -> public.users_profile.id
+    - type: foreign_key
+      detail: public.users_profile.user_id -> public.users.id
+    - type: row_estimate
+      detail: estimated_rows=114620
+  appointments:
+  - schema: public
+    relation: consultations
+    kind: table
+    role: EVENT
+    data_level: PATIENT_EVENT
+    status: CANDIDATE
+    evidence:
+    - type: curated_rule
+      detail: curated candidate for appointments based on schema signature
+    - *id001
+    - *id002
+    - *id003
+    - *id004
+    - *id005
+    - *id006
+    - *id007
+    - type: row_estimate
+      detail: estimated_rows=88867
+infrastructure_inventory:
+- schema: public
+  relation: doctrine_migration_versions
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: public
+  relation: migration_versions
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: public
+  relation: migrations
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: public
+  relation: oauth_global
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: public
+  relation: sessions
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: non-application schema
+- schema: public
+  relation: spatial_ref_sys
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension table (spatial_ref_sys)
+- schema: tiger
+  relation: addr
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: addrfeat
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: bg
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: county
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: county_lookup
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: countysub_lookup
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: cousub
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: direction_lookup
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: edges
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: faces
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: featnames
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: geocode_settings
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: geocode_settings_default
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: loader_lookuptables
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: loader_platform
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: loader_variables
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: pagc_gaz
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: pagc_lex
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: pagc_rules
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: place
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: place_lookup
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: secondary_unit_lookup
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: state
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: state_lookup
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: street_type_lookup
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: tabblock
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: tabblock20
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: tract
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: zcta5
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: zip_lookup
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: zip_lookup_all
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: zip_lookup_base
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: zip_state
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: tiger
+  relation: zip_state_loc
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (tiger)
+- schema: topology
+  relation: layer
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (topology)
+- schema: topology
+  relation: topology
+  kind: table
+  role: TECHNICAL
+  status: INFRASTRUCTURE
+  evidence:
+  - type: infrastructure
+    detail: PostGIS extension schema (topology)
+role_classified_relations:
+- schema: public
+  relation: consultation_service_changes
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: document_types
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: feedback
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  data_level: ATTRIBUTE_CONTAINER
+  status: ATTRIBUTE_CONTAINER
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: payment_balance
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: payment_invoices
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: payment_promo_code
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: payment_sberbank_orders
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: payment_transactions
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: questionnaire
+  kind: table
+  role: ATTRIBUTE_CONTAINER
+  data_level: ATTRIBUTE_CONTAINER
+  status: ATTRIBUTE_CONTAINER
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: role_user
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+  status: LINK
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: schedule_events
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: users_address
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+  status: LINK
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: users_company
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+  status: LINK
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: users_persons
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+  status: LINK
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: public
+  relation: users_rating
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: analyses_catalog
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: analyses_codes
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: analyses_labs
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: analyses_pool
+  kind: table
+  role: WORKFLOW
+  data_level: WORKFLOW
+  status: WORKFLOW
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: analyses_weight
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: catalog_labs
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: catalog_weights
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: lab_addresses
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: lab_referral
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: lab_referral_codes
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: lab_referral_regions
+  kind: table
+  role: REFERENCE
+  data_level: REFERENCE_CATALOG
+  status: REFERENCE
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+- schema: quest_digital
+  relation: link_analyses
+  kind: table
+  role: LINK
+  data_level: UNKNOWN
+  status: LINK
+  evidence:
+  - type: table_role
+    detail: classified by table role without entity mapping
+excluded_relations:
+- schema: public
+  relation: doctrine_migration_versions
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name
+- schema: public
+  relation: migration_versions
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name
+- schema: public
+  relation: migrations
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name
+- schema: public
+  relation: oauth_global
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name
+- schema: public
+  relation: sessions
+  kind: table
+  role: TECHNICAL
+  status: EXCLUDED
+  evidence:
+  - type: name_pattern
+    detail: technical relation name

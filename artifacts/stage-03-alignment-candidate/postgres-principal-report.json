@@ -1,0 +1,37 @@
+{
+  "stage": "03",
+  "phase": "alignment_candidate",
+  "title": "PostgreSQL LOGIN principal provisioning",
+  "document_version": "0.1.0",
+  "report_status": "DRAFT",
+  "generated_at": "2026-08-11T14:28:56.631686+00:00",
+  "overall_status": "PASS",
+  "login_principal": "canonical_loader_login",
+  "nologin_group": "canonical_loader",
+  "vault_approle": "uhbse-canonical-loader",
+  "provision_action": "noop",
+  "vault_secret_shape_status": "PASS",
+  "permission_verification_status": "PASS",
+  "before_after_status": "PASS",
+  "schema_fingerprint_before": "ee092ee97ecfce41ed90437f3f03db767e32a57a3f248dfecaa548d6b0856401",
+  "schema_fingerprint_after": "ee092ee97ecfce41ed90437f3f03db767e32a57a3f248dfecaa548d6b0856401",
+  "row_counts_after": {
+    "source_system": 0,
+    "source_record": 0,
+    "subject": 0,
+    "subject_characteristic": 0,
+    "encounter": 0,
+    "observation": 0,
+    "observation_component": 0
+  },
+  "clinical_rows_read": 0,
+  "raw_db_connections": 0,
+  "repairs_outside_approved_scope": 0,
+  "canonical_loader_runtime_contract_complete": false,
+  "blocks_live_load_open_findings": true,
+  "secrets_recorded_in_artifacts": false,
+  "exact_commands": [
+    "python -m human_simulator.stage03_alignment.run_postgres_principal",
+    "python -m human_simulator.stage03_alignment.publish_postgres_principal_v01"
+  ]
+}

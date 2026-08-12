@@ -1,0 +1,123 @@
+{
+  "assessed_at": "2026-08-01T16:52:04.369443+00:00",
+  "clinical_domain_overlap": {
+    "shared_domains": [
+      "patients",
+      "visits",
+      "doctors",
+      "laboratory_results",
+      "appointments"
+    ],
+    "source_a_only_domains": [
+      "specialties",
+      "medical_documents"
+    ],
+    "source_b_only_domains": [
+      "measurements"
+    ],
+    "shared_domain_count": 5
+  },
+  "structural_similarity": {
+    "source_a_application_relation_count": 166,
+    "source_b_application_relation_count": 95,
+    "application_shared_relation_name_count": 0,
+    "application_shared_relation_names": [],
+    "infrastructure_shared_relation_name_count": 39,
+    "infrastructure_shared_relation_names": [
+      "addr",
+      "addrfeat",
+      "bg",
+      "county",
+      "county_lookup",
+      "countysub_lookup",
+      "cousub",
+      "direction_lookup",
+      "edges",
+      "faces",
+      "featnames",
+      "geocode_settings",
+      "geocode_settings_default",
+      "geography_columns",
+      "geometry_columns",
+      "layer",
+      "loader_lookuptables",
+      "loader_platform",
+      "loader_variables",
+      "pagc_gaz"
+    ],
+    "hypothesis_mapping_count": 4,
+    "unresolved_mapping_count": 17,
+    "patient_table_mapping_status": "UNRESOLVED",
+    "visit_event_mapping_status": "HYPOTHESIS",
+    "laboratory_mapping_status": "HYPOTHESIS"
+  },
+  "migration_signals": {
+    "application_shared_table_names": [],
+    "signals": [
+      "parallel visit/appointment event tables with different naming",
+      "patient entity tables exist on both sides but are not cross-mapped"
+    ],
+    "migration_hypothesis_strength": "weak",
+    "note": "Infrastructure-only overlaps (PostGIS/extension metadata) are excluded from migration signals."
+  },
+  "unique_subsystems": {
+    "source_a_schemas": [
+      "magerya_api",
+      "public",
+      "tiger",
+      "topology"
+    ],
+    "source_b_schemas": [
+      "public",
+      "quest_digital",
+      "tiger",
+      "topology"
+    ],
+    "source_a_unique": [
+      "magerya_api"
+    ],
+    "source_b_unique": [
+      "quest_digital"
+    ]
+  },
+  "data_level_compatibility": {
+    "compatible_mapping_count": 4,
+    "incompatible_mapping_count": 0,
+    "incompatible_examples": []
+  },
+  "mapping_kinds": {
+    "REPRESENTATION_TRANSFORM": 1,
+    "SEMANTIC_EQUIVALENCE_HYPOTHESIS": 2
+  },
+  "source_relationship_verdict": {
+    "verdict": "SAME_DOMAIN_DIFFERENT_SYSTEMS",
+    "supporting_evidence": [
+      "5 shared clinical entity domains in crosswalk",
+      "Different application schemas and data models (magerya_api vs public/quest_digital)",
+      "Structurally similar patient, visit/event, and laboratory concepts with unresolved mappings",
+      "0 shared application relation names",
+      "Aggregate identity linkage verdict=POTENTIAL_OVERLAP without population extrapolation"
+    ],
+    "contradicting_evidence": [
+      "No EVIDENCE_BACKED entity mappings in crosswalk",
+      "Source B public.persons is empty while Source A has populated account_patient"
+    ],
+    "unresolved_questions": [
+      "Whether systems ever shared a deployment or data export path",
+      "Exact laboratory result representation equivalence (header/value split differs)",
+      "Source B patient root resolves via shared users table; staff/patient separation unclear"
+    ],
+    "confidence": "medium",
+    "prohibited_inferences": [
+      "Patients are not assumed equal across sources.",
+      "No permanent patient crosswalk created.",
+      "Schema similarity does not prove shared deployment or migration.",
+      "Infrastructure relation-name overlap is not evidence of system relationship.",
+      "Observed unique-identifier overlap rates must not be extrapolated to full populations."
+    ]
+  },
+  "notes": [
+    "HYPOTHESIS mappings are not treated as proven structural equivalence.",
+    "HEADER↔VALUE pairs use REPRESENTATION_TRANSFORM; EVENT↔EVENT use SEMANTIC_EQUIVALENCE_HYPOTHESIS."
+  ]
+}

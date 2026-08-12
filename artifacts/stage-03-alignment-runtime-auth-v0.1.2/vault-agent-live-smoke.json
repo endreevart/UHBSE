@@ -1,0 +1,73 @@
+{
+  "kind": "LIVE",
+  "cycle": 1,
+  "overall_status": "PASS",
+  "checks": {
+    "container_started": "PASS",
+    "credentials_delivered": "PASS",
+    "smoke_result_present": "PASS",
+    "agent_child_status": "PASS",
+    "child_wrapped_secret_id_removed": "PASS",
+    "child_hmac_key_version_1": "PASS",
+    "child_hmac_algorithm": "PASS",
+    "child_loader_username": "PASS",
+    "child_loader_password_present": "PASS",
+    "child_hmac_output_length_32": "PASS",
+    "child_hmac_deterministic": "PASS",
+    "child_session_user": "PASS",
+    "child_current_user_before_set_role": "PASS",
+    "child_current_user_after_set_role": "PASS",
+    "child_select_privilege": "PASS",
+    "child_insert_privilege": "PASS",
+    "child_insert_not_executed": "PASS",
+    "child_row_counts_zero": "PASS",
+    "auth_path_is_agent_supervisor": "PASS",
+    "wrapped_secret_id_absent_after_auth": "PASS",
+    "token_lookup": "PASS",
+    "runtime_container_removed": "PASS"
+  },
+  "child_smoke_sanitised": {
+    "status": "PASS",
+    "synthetic_subject_label": "SYNTHETIC_RUNTIME_SMOKE",
+    "checks": {
+      "wrapped_secret_id_removed": "PASS",
+      "hmac_key_version_1": "PASS",
+      "hmac_algorithm": "PASS",
+      "loader_username": "PASS",
+      "loader_password_present": "PASS",
+      "hmac_output_length_32": "PASS",
+      "hmac_deterministic": "PASS",
+      "session_user": "PASS",
+      "current_user_before_set_role": "PASS",
+      "current_user_after_set_role": "PASS",
+      "select_privilege": "PASS",
+      "insert_privilege": "PASS",
+      "insert_not_executed": "PASS",
+      "row_counts_zero": "PASS"
+    },
+    "row_counts": {
+      "source_system": 0,
+      "source_record": 0,
+      "subject": 0,
+      "subject_characteristic": 0,
+      "encounter": 0,
+      "observation": 0,
+      "observation_component": 0
+    }
+  },
+  "agent_token_lookup": {
+    "overall_status": "PASS",
+    "checks": {
+      "token_sink_present": "PASS",
+      "policies_exact": "PASS",
+      "default_policy_absent": "PASS",
+      "ttl_in_bounds": "PASS",
+      "approle_path_hint": "PASS"
+    },
+    "policies_count": 1,
+    "ttl_seconds": 895,
+    "token_type": "service",
+    "secrets_recorded": false
+  },
+  "secrets_recorded": false
+}

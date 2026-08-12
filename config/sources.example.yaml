@@ -9,11 +9,29 @@ sources:
     user: magerya_api
     # password: set via env POSTGRES_PASSWORD or private/sources.yaml
 
+  local_kgz:
+    host: localhost
+    port: 5435
+    database: kgz_raw
+    user: kgz_raw
+    # password: set via env POSTGRES_PASSWORD or db-kgz.env
+
+  local_kgz_audit:
+    host: localhost
+    port: 5435
+    database: kgz_raw
+    user: kgz_audit_ro
+    # password: set via KGZ_AUDIT_PASSWORD in db-kgz.env (created at restore)
+
 dumps:
   primary: dumps/stage_magerya_api.dump
-  additional:
-    - kgz-20231204.dump
+  kgz: kgz-20231204.dump
 
 restore:
   script: ./restore.sh
+  kgz_script: ./restore-kgz.sh
   compose: docker-compose.yml
+
+stage02:
+  target_database: kgz_raw
+  artifacts_dir: artifacts/stage-02

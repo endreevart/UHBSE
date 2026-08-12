@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n'
 import { Reveal } from './Reveal'
+import { SectionHead } from './SectionHead'
 
 export function SectionManifesto() {
   const { t } = useI18n()
@@ -15,14 +16,14 @@ export function SectionManifesto() {
   ]
 
   return (
-    <section className="section section--flush manifesto">
+    <section className="section section--flush manifesto" id="manifesto" aria-labelledby="manifesto-heading">
       <div className="spectral-wash" style={{ insetBlockStart: 0 }} aria-hidden="true" />
       <div className="shell">
-        <Reveal>
-          <p className="kicker" style={{ marginBlockEnd: 40 }}>
-            {m.kicker}
-          </p>
-        </Reveal>
+        <SectionHead
+          headingId="manifesto-heading"
+          title={m.title}
+          titleClass="display display--m"
+        />
         <div className="manifesto__lines">
           {lines.map((line, i) => (
             <Reveal key={line.text} delay={i * 90}>

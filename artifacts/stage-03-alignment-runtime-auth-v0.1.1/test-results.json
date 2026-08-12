@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-08-12T11:53:13.410296+00:00",
+  "unit_suite": {
+    "command": "python -m pytest -q --noconftest tests/test_runtime_auth_v011_unit.py",
+    "collected": 11,
+    "selected": 11,
+    "deselected": 0,
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0
+  },
+  "live_agent_suite": {
+    "command": "python -m human_simulator.stage03_alignment.run_runtime_auth_v011",
+    "note": "Requires live Vault + canonical-db; not reproducible from ZIP alone",
+    "exit_code": 0,
+    "direct_approle_api_smoke": "PASS",
+    "vault_agent_runtime_execution": "PASS",
+    "vault_agent_restart_reauthentication": "PASS",
+    "passed": 3,
+    "failed": 0
+  },
+  "clean_bundle_suite": {
+    "command": "python -m pytest -q --noconftest tests/test_runtime_auth_v011_clean_extraction.py",
+    "collected": 1,
+    "selected": 1,
+    "deselected": 0,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "status": "PASS"
+  }
+}

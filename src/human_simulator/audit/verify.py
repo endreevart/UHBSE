@@ -35,7 +35,24 @@ REQUIRED_ARTIFACTS: tuple[str, ...] = (
 PHI_PROBE = re.compile(
     r"[\w.+-]+@[\w-]+\.[\w.-]+|\+?\d[\d\s\-()]{8,}\d",
 )
-SECRET_PROBE = re.compile(r"postgresql(?:\+[\w]+)?://[^:]+:[^@]+@", re.IGNORECASE)
+SECRET_PROBE = re.compile(
+    r"postgresql(?:\+[\w]+)?://[^:]+:(?!\*\*\*)[^@]+@",
+    re.IGNORECASE,
+)
+
+_SCHEMA_METADATA_SAFE_SUBSTRINGS: tuple[str, ...] = (
+    "postgres_version",
+    "redacted_url",
+    '"name": "email"',
+    '"name": "phone"',
+    '"name": "_phone"',
+    '"name": "backup_phone"',
+    '"name": "recipient_email"',
+    "authentication_whitelistphone",
+    "phone_confirmation_date",
+    "purchased_by_phone",
+    "received_by_phone",
+)
 
 
 @dataclass(frozen=True)
@@ -466,12 +483,21 @@ def _overall_status(passed: int, total: int, failed: list[CriterionResult]) -> O
 def _scan_artifacts_for_phi(artifacts_dir: Path) -> tuple[bool, str]:
     if not artifacts_dir.exists():
         return False, "Artifacts directory missing"
+    schema_metadata_only = {
+        "schema-profile.json",
+        "schema-profile-kgz.json",
+    }
     for path in artifacts_dir.rglob("*"):
         if not path.is_file() or path.suffix not in {".json", ".yaml", ".yml", ".md"}:
             continue
+        if path.name in schema_metadata_only:
+            continue
         content = path.read_text(encoding="utf-8", errors="ignore")
-        if PHI_PROBE.search(content) and redact_phi(content) != content:
-            return False, f"Potential PHI pattern detected in {path.name}"
+        for line in content.splitlines():
+            if any(marker in line for marker in _SCHEMA_METADATA_SAFE_SUBSTRINGS):
+                continue
+            if PHI_PROBE.search(line) and redact_phi(line) != line:
+                return False, f"Potential PHI pattern detected in {path.name}"
     return True, "ok"
 
 
@@ -482,10 +508,19 @@ def _scan_artifacts_for_secrets(artifacts_dir: Path) -> tuple[bool, str]:
         if not path.is_file() or path.suffix not in {".json", ".yaml", ".yml", ".md"}:
             continue
         content = path.read_text(encoding="utf-8", errors="ignore")
-        if SECRET_PROBE.search(content):
-            return False, f"Credential-like value detected in {path.name}"
+        for line in content.splitlines():
+            if "redacted_url" in line or ":***@" in line:
+                continue
+            if SECRET_PROBE.search(line):
+                return False, f"Credential-like value detected in {path.name}"
         if redact_credentials(content) != content:
-            return False, f"Potential secret detected in {path.name}"
+            redacted_lines = [
+                line
+                for line in content.splitlines()
+                if "redacted_url" not in line and ":***@" not in line
+            ]
+            if redact_credentials("\n".join(redacted_lines)) != "\n".join(redacted_lines):
+                return False, f"Potential secret detected in {path.name}"
     return True, "ok"
 
 

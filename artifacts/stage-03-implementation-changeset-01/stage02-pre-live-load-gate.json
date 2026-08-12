@@ -1,0 +1,356 @@
+{
+  "blocks_live_operations": [
+    "source_a_live_extract",
+    "source_b_live_extract",
+    "pilot_cohort_selection",
+    "canonical_transform_run",
+    "canonical_staging_load",
+    "canonical_promotion",
+    "etl_pipeline_run"
+  ],
+  "checks": [
+    {
+      "detail": "relationship-manifest.sha256 present",
+      "name": "relationship_manifest_present",
+      "status": "PASS"
+    },
+    {
+      "detail": "2 manifest mismatches: subject-root-analysis.json, identity-linkage-assessment.json",
+      "name": "relationship_manifest_hashes_match",
+      "status": "FAIL"
+    },
+    {
+      "detail": "9 controlled files verified",
+      "name": "controlled_stage_01_02_files_unchanged",
+      "status": "PASS"
+    },
+    {
+      "detail": "2 conflicts, 2 open and blocking, registry sha256 cc5f3a8b815d1533bef6361ed8f2472cee157b681315e1da604a51ee3752b54b",
+      "name": "accepted_artifact_conflict_registry_valid",
+      "status": "PASS"
+    },
+    {
+      "detail": "2 artifacts disagree with the manifest: ['subject-root-analysis.json', 'identity-linkage-assessment.json']",
+      "name": "stage02_relationship_manifest_drift",
+      "status": "FAIL"
+    },
+    {
+      "detail": "canonical_loader is created NOLOGIN by migration 0001 and no accepted artifact carries a complete canonical_loader_runtime_contract. no accepted release defines canonical_loader_runtime_contract at its authoritative path artifacts/stage-03-implementation/security-runtime-plan.yaml",
+      "name": "canonical_loader_runtime_principal_undefined",
+      "status": "FAIL"
+    },
+    {
+      "detail": "subject_key_from_id has no complete subject_key_transformation_contract, so the opacity of Subject.source_subject_key is unspecified and account_patient.id could be stored in the clear. no accepted release defines subject_key_transformation_contract at its authoritative path artifacts/stage-03/canonical-id-contract.yaml",
+      "name": "source_subject_key_opacity_undefined",
+      "status": "FAIL"
+    },
+    {
+      "detail": "The temporal contract requires populating two fields that the canonical model does not define on any pilot entity.",
+      "name": "temporal_precision_field_absent_from_model",
+      "status": "FAIL"
+    },
+    {
+      "detail": "The design construction contract maps appointment_appointment.doctor_id into Encounter.provider_id, while the accepted implementation plan states that doctor_id is not copied and that provider_id stays null for the pilot.",
+      "name": "encounter_provider_id_population_disagreement",
+      "status": "FAIL"
+    },
+    {
+      "detail": "5 blockers registered from manifest, contracts and conflicts",
+      "name": "required_blocker_checks_present",
+      "status": "PASS"
+    },
+    {
+      "detail": "each contract has at most one definition in scope",
+      "name": "contract_definitions_are_unambiguous",
+      "status": "PASS"
+    },
+    {
+      "detail": "stage 02 bytes identical before and after gate evaluation",
+      "name": "gate_evaluation_did_not_modify_stage_02",
+      "status": "PASS"
+    },
+    {
+      "detail": "36 frozen inputs identical before and after gate evaluation",
+      "name": "gate_evaluation_did_not_modify_frozen_inputs",
+      "status": "PASS"
+    }
+  ],
+  "checks_passed": 7,
+  "checks_total": 13,
+  "clinical_rows_read": 0,
+  "database_connections_opened": 0,
+  "does_not_block": [
+    "canonical_database_create",
+    "canonical_migration_apply",
+    "canonical_schema_verify",
+    "canonical_permission_verify"
+  ],
+  "evaluated_at": "2026-08-07T14:02:27.047616+00:00",
+  "failed_checks": [
+    "relationship_manifest_hashes_match",
+    "stage02_relationship_manifest_drift",
+    "canonical_loader_runtime_principal_undefined",
+    "source_subject_key_opacity_undefined",
+    "temporal_precision_field_absent_from_model",
+    "encounter_provider_id_population_disagreement"
+  ],
+  "frozen_evidence_restored": 0,
+  "frozen_inputs": {
+    "count": 36,
+    "sha256_after": {
+      "artifacts/stage-01/schema-profile.json": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+      "artifacts/stage-01/stage-01-report.md": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff",
+      "artifacts/stage-02/entity-crosswalk.yaml": "f0b93b4e6ccea2732483b66001d28368365bc8eeb197c39b302f36975a74f920",
+      "artifacts/stage-02/identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "artifacts/stage-02/schema-profile-kgz.json": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+      "artifacts/stage-02/stage-02-final-manifest.sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+      "artifacts/stage-02/stage-02-report.md": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+      "artifacts/stage-02/subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "artifacts/stage-02/verify-stage-02.json": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a",
+      "artifacts/stage-03-implementation/design-baseline-manifest.sha256": "51e0d31dabec8ef81b20a7fb57470b02fc833e8c7f2b06c063e987342ed86b37",
+      "artifacts/stage-03-implementation/implementation-plan-manifest.sha256": "e0dda93309329a991d1e697cdf7182cf2558a7a92c1f0ada04f49f0cff3f7c4e",
+      "artifacts/stage-03-implementation/implementation-plan.yaml": "27cfa45000b1d04dd3fca0eb0a8732ae89b05e3bb614098fb5029bd437b57111",
+      "artifacts/stage-03-implementation/physical-storage-plan.yaml": "4ba34752f9fd7c70ad3cec844426efa694121bf6db297321325126e028a785d3",
+      "artifacts/stage-03-implementation/pilot-slice.yaml": "90c972ec17352acd733e9e625716d54df921dd36da7ee68924b5617978054747",
+      "artifacts/stage-03-implementation/pipeline-plan.yaml": "2be7a7599ba014e25eaffb50c3025c5512c5be94daa2276f6856829db6cb7f95",
+      "artifacts/stage-03-implementation/security-runtime-plan.yaml": "4c1aff8b2cdb5fbf10aad7477871b4c2fd2652159798c80c06fd261efd486612",
+      "artifacts/stage-03-implementation/unresolved-implementation-decisions.yaml": "204f4f122dfd6f0686df57619b9ef090b8047ca870ed16a9a05933eff5b0db06",
+      "artifacts/stage-03-implementation/validation-plan.yaml": "3e0c725f7b26960eda7850ed42e4b38ada23d86d260a1de11bad2ce85523e4af",
+      "artifacts/stage-03/canonical-id-contract.yaml": "f25adefc6279b0d947daf0e4140d6cd683f37f207e849e203f53cb7b613ede6d",
+      "artifacts/stage-03/canonical-model.yaml": "6d28201e8c2147a1c69b4ca46ca664ca064d6273012af889e8583ca065b937bf",
+      "artifacts/stage-03/design-content-manifest.sha256": "51e0d31dabec8ef81b20a7fb57470b02fc833e8c7f2b06c063e987342ed86b37",
+      "artifacts/stage-03/field-semantics-register.yaml": "e41fb95dc67d0812214356f49c11e4702f916037a83f35cf9c870b5c1564133f",
+      "artifacts/stage-03/provenance-contract.yaml": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+      "artifacts/stage-03/record-construction-contract.yaml": "0453af28317ad896d74ef8a11a4a8e45495366d09ec4886a39660b0580f344f6",
+      "artifacts/stage-03/source-a-mapping-draft.yaml": "56bc3dfaf1b3861192dfdb230949a9c0b57b3ce1bfd4da5feada3a1b148221c8",
+      "artifacts/stage-03/source-b-mapping-draft.yaml": "81888066a6a63f71eafb0d9139e39ac7691604d814747bac4a5a403c28c9669f",
+      "artifacts/stage-03/stage-03-design-report.md": "6f30b6aaa25a2efa9a6ead3ab7f76563fa688f1f61d94818c2562015d70a6785",
+      "artifacts/stage-03/stage-03-design-verification.json": "ae4a426aa5cb44e03cf509afed54c917af25a2d6283486ab393ae19159f8254c",
+      "artifacts/stage-03/state-snapshot-contract.yaml": "42f37892a3d95f0493f9c7fd9a3d739303c0ab4c8ee20ddf28871b40a0f159f8",
+      "artifacts/stage-03/temporal-contract.yaml": "b195cf8be406aed70e0c70c47e4368caabe5cc9bd93bc4931c6963ae3a0d0977",
+      "artifacts/stage-03/unresolved-design-decisions.md": "4d2d10ae89af502b69867ff46d3d354223daa563ade8721ca0e61356b01af60a",
+      "artifacts/stage-03/validation-rules.yaml": "e61a3c42b1bc1cac30df1b017e2910ef9b76f19c675e55199081b1f649577ebb",
+      "migrations/canonical/0001_roles_and_schema.sql": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+      "migrations/canonical/0002_pilot_evidence_tables.sql": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+      "migrations/canonical/0003_pilot_grants.sql": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+      "migrations/canonical/0004_storage_contract_hardening.sql": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a"
+    },
+    "sha256_before": {
+      "artifacts/stage-01/schema-profile.json": "d549e612a1df27dcdd34dfdcc884a69b08485a3d387edf1f75678b5e96535d0e",
+      "artifacts/stage-01/stage-01-report.md": "f34852cb3eabcd1948524af404bf57a60d325d22f9f52c6e6577ad2c4bcd62ff",
+      "artifacts/stage-02/entity-crosswalk.yaml": "f0b93b4e6ccea2732483b66001d28368365bc8eeb197c39b302f36975a74f920",
+      "artifacts/stage-02/identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "artifacts/stage-02/schema-profile-kgz.json": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+      "artifacts/stage-02/stage-02-final-manifest.sha256": "7752deef1009bc1d846aecb2d2548f73681155528209914eef55ee72d01c5eca",
+      "artifacts/stage-02/stage-02-report.md": "4b64553783594b5c5c6954615ddd230e0b0982ef765966ad1a34897efc77319e",
+      "artifacts/stage-02/subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "artifacts/stage-02/verify-stage-02.json": "57818466c22e9f48968a2e5a421b80462728c03500c480f2c04ffe9efa57bf6a",
+      "artifacts/stage-03-implementation/design-baseline-manifest.sha256": "51e0d31dabec8ef81b20a7fb57470b02fc833e8c7f2b06c063e987342ed86b37",
+      "artifacts/stage-03-implementation/implementation-plan-manifest.sha256": "e0dda93309329a991d1e697cdf7182cf2558a7a92c1f0ada04f49f0cff3f7c4e",
+      "artifacts/stage-03-implementation/implementation-plan.yaml": "27cfa45000b1d04dd3fca0eb0a8732ae89b05e3bb614098fb5029bd437b57111",
+      "artifacts/stage-03-implementation/physical-storage-plan.yaml": "4ba34752f9fd7c70ad3cec844426efa694121bf6db297321325126e028a785d3",
+      "artifacts/stage-03-implementation/pilot-slice.yaml": "90c972ec17352acd733e9e625716d54df921dd36da7ee68924b5617978054747",
+      "artifacts/stage-03-implementation/pipeline-plan.yaml": "2be7a7599ba014e25eaffb50c3025c5512c5be94daa2276f6856829db6cb7f95",
+      "artifacts/stage-03-implementation/security-runtime-plan.yaml": "4c1aff8b2cdb5fbf10aad7477871b4c2fd2652159798c80c06fd261efd486612",
+      "artifacts/stage-03-implementation/unresolved-implementation-decisions.yaml": "204f4f122dfd6f0686df57619b9ef090b8047ca870ed16a9a05933eff5b0db06",
+      "artifacts/stage-03-implementation/validation-plan.yaml": "3e0c725f7b26960eda7850ed42e4b38ada23d86d260a1de11bad2ce85523e4af",
+      "artifacts/stage-03/canonical-id-contract.yaml": "f25adefc6279b0d947daf0e4140d6cd683f37f207e849e203f53cb7b613ede6d",
+      "artifacts/stage-03/canonical-model.yaml": "6d28201e8c2147a1c69b4ca46ca664ca064d6273012af889e8583ca065b937bf",
+      "artifacts/stage-03/design-content-manifest.sha256": "51e0d31dabec8ef81b20a7fb57470b02fc833e8c7f2b06c063e987342ed86b37",
+      "artifacts/stage-03/field-semantics-register.yaml": "e41fb95dc67d0812214356f49c11e4702f916037a83f35cf9c870b5c1564133f",
+      "artifacts/stage-03/provenance-contract.yaml": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+      "artifacts/stage-03/record-construction-contract.yaml": "0453af28317ad896d74ef8a11a4a8e45495366d09ec4886a39660b0580f344f6",
+      "artifacts/stage-03/source-a-mapping-draft.yaml": "56bc3dfaf1b3861192dfdb230949a9c0b57b3ce1bfd4da5feada3a1b148221c8",
+      "artifacts/stage-03/source-b-mapping-draft.yaml": "81888066a6a63f71eafb0d9139e39ac7691604d814747bac4a5a403c28c9669f",
+      "artifacts/stage-03/stage-03-design-report.md": "6f30b6aaa25a2efa9a6ead3ab7f76563fa688f1f61d94818c2562015d70a6785",
+      "artifacts/stage-03/stage-03-design-verification.json": "ae4a426aa5cb44e03cf509afed54c917af25a2d6283486ab393ae19159f8254c",
+      "artifacts/stage-03/state-snapshot-contract.yaml": "42f37892a3d95f0493f9c7fd9a3d739303c0ab4c8ee20ddf28871b40a0f159f8",
+      "artifacts/stage-03/temporal-contract.yaml": "b195cf8be406aed70e0c70c47e4368caabe5cc9bd93bc4931c6963ae3a0d0977",
+      "artifacts/stage-03/unresolved-design-decisions.md": "4d2d10ae89af502b69867ff46d3d354223daa563ade8721ca0e61356b01af60a",
+      "artifacts/stage-03/validation-rules.yaml": "e61a3c42b1bc1cac30df1b017e2910ef9b76f19c675e55199081b1f649577ebb",
+      "migrations/canonical/0001_roles_and_schema.sql": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+      "migrations/canonical/0002_pilot_evidence_tables.sql": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+      "migrations/canonical/0003_pilot_grants.sql": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+      "migrations/canonical/0004_storage_contract_hardening.sql": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a"
+    },
+    "unchanged": true
+  },
+  "gate_id": "stage02_relationship_integrity_pre_live_load",
+  "known_open_defect": "stage02_relationship_manifest_drift",
+  "manifests_created": 0,
+  "pre_live_load_blockers": {
+    "blocker_count": 5,
+    "blockers": [
+      {
+        "blocker_id": "stage02_relationship_manifest_drift",
+        "blocks_live_load": true,
+        "blocks_schema_only_migration_0004": false,
+        "evidence": "2 artifacts disagree with the manifest: ['subject-root-analysis.json', 'identity-linkage-assessment.json']",
+        "question": "Do the Stage 02 relationship artifacts still carry the bytes their manifest records?",
+        "source": "artifacts/stage-02/relationship-manifest.sha256",
+        "status": "OPEN"
+      },
+      {
+        "blocker_id": "canonical_loader_runtime_principal_undefined",
+        "blocks_live_load": true,
+        "blocks_schema_only_migration_0004": false,
+        "evidence": "canonical_loader is created NOLOGIN by migration 0001 and no accepted artifact carries a complete canonical_loader_runtime_contract. no accepted release defines canonical_loader_runtime_contract at its authoritative path artifacts/stage-03-implementation/security-runtime-plan.yaml",
+        "question": "Which login principal connects and assumes canonical_loader, from which credential source, by which connection path and SET ROLE flow, with which minimal grants, audit identity and rotation procedure?",
+        "source": "no artifact defines canonical_loader_runtime_contract",
+        "status": "OPEN"
+      },
+      {
+        "blocker_id": "source_subject_key_opacity_undefined",
+        "blocks_live_load": true,
+        "blocks_schema_only_migration_0004": false,
+        "evidence": "subject_key_from_id has no complete subject_key_transformation_contract, so the opacity of Subject.source_subject_key is unspecified and account_patient.id could be stored in the clear. no accepted release defines subject_key_transformation_contract at its authoritative path artifacts/stage-03/canonical-id-contract.yaml",
+        "question": "Does an accepted artifact define subject_key_from_id as a keyed pseudorandom transformation with a key reference, key version, namespace, encodings, rotation policy and collision handling?",
+        "source": "no artifact defines subject_key_transformation_contract",
+        "status": "OPEN"
+      },
+      {
+        "blocker_id": "temporal_precision_field_absent_from_model",
+        "blocks_live_load": true,
+        "blocks_schema_only_migration_0004": false,
+        "evidence": "The temporal contract requires populating two fields that the canonical model does not define on any pilot entity.",
+        "question": "Has the accepted-artifact conflict temporal_precision_field_absent_from_model been resolved?",
+        "source": "artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml",
+        "status": "OPEN"
+      },
+      {
+        "blocker_id": "encounter_provider_id_population_disagreement",
+        "blocks_live_load": true,
+        "blocks_schema_only_migration_0004": false,
+        "evidence": "The design construction contract maps appointment_appointment.doctor_id into Encounter.provider_id, while the accepted implementation plan states that doctor_id is not copied and that provider_id stays null for the pilot.",
+        "question": "Has the accepted-artifact conflict encounter_provider_id_population_disagreement been resolved?",
+        "source": "artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml",
+        "status": "OPEN"
+      }
+    ],
+    "blocks_first_live_load": true,
+    "blocks_schema_only_migration_0004": false,
+    "conflict_derived_blocker_ids": [
+      "encounter_provider_id_population_disagreement",
+      "temporal_precision_field_absent_from_model"
+    ],
+    "conflict_registry": {
+      "artifact": "artifacts/stage-03-implementation-changeset-01/accepted-artifact-conflicts.yaml",
+      "conflict_count": 2,
+      "matches_changeset_manifest": true,
+      "open_blocking_conflict_ids": [
+        "temporal_precision_field_absent_from_model",
+        "encounter_provider_id_population_disagreement"
+      ],
+      "open_conflict_count_actual": 2,
+      "open_conflict_count_recorded": 2,
+      "problems": [],
+      "sha256": "cc5f3a8b815d1533bef6361ed8f2472cee157b681315e1da604a51ee3752b54b",
+      "valid": true
+    },
+    "contract_authority": {
+      "ambiguous_definitions": [],
+      "contracts": {
+        "canonical_loader_runtime_contract": {
+          "ambiguous": false,
+          "authoritative_path": "artifacts/stage-03-implementation/security-runtime-plan.yaml",
+          "authority_failures": [],
+          "contract_key": "canonical_loader_runtime_contract",
+          "definition_count": 0,
+          "definitions": [],
+          "found_in": null,
+          "missing_fields": [],
+          "owning_release": "Stage 03 Implementation Plan",
+          "release_manifest_verified": true,
+          "satisfied": false,
+          "violations": []
+        },
+        "subject_key_transformation_contract": {
+          "ambiguous": false,
+          "authoritative_path": "artifacts/stage-03/canonical-id-contract.yaml",
+          "authority_failures": [],
+          "contract_key": "subject_key_transformation_contract",
+          "definition_count": 0,
+          "definitions": [],
+          "found_in": null,
+          "missing_fields": [],
+          "owning_release": "Stage 03 Design",
+          "release_manifest_verified": true,
+          "satisfied": false,
+          "violations": []
+        }
+      },
+      "forbidden_source_directories": [
+        "artifacts/stage-03-implementation-changeset-01"
+      ],
+      "policy": {
+        "canonical_loader_runtime_contract": {
+          "authoritative_path": "artifacts/stage-03-implementation/security-runtime-plan.yaml",
+          "owning_release": "Stage 03 Implementation Plan",
+          "release_manifest": "artifacts/stage-03-implementation/implementation-plan-manifest.sha256"
+        },
+        "subject_key_transformation_contract": {
+          "authoritative_path": "artifacts/stage-03/canonical-id-contract.yaml",
+          "owning_release": "Stage 03 Design",
+          "release_manifest": "artifacts/stage-03/design-content-manifest.sha256"
+        }
+      },
+      "recursive_search_for_authority": false,
+      "substring_algorithm_matching": false
+    },
+    "loader_runtime_contract": {
+      "ambiguous": false,
+      "authoritative_path": "artifacts/stage-03-implementation/security-runtime-plan.yaml",
+      "authority_failures": [],
+      "contract_key": "canonical_loader_runtime_contract",
+      "definition_count": 0,
+      "definitions": [],
+      "found_in": null,
+      "missing_fields": [],
+      "owning_release": "Stage 03 Implementation Plan",
+      "release_manifest_verified": true,
+      "satisfied": false,
+      "violations": []
+    },
+    "missing_required_blockers": [],
+    "open_blocker_ids": [
+      "canonical_loader_runtime_principal_undefined",
+      "encounter_provider_id_population_disagreement",
+      "source_subject_key_opacity_undefined",
+      "stage02_relationship_manifest_drift",
+      "temporal_precision_field_absent_from_model"
+    ],
+    "required_blockers_present": true,
+    "subject_key_contract": {
+      "ambiguous": false,
+      "authoritative_path": "artifacts/stage-03/canonical-id-contract.yaml",
+      "authority_failures": [],
+      "contract_key": "subject_key_transformation_contract",
+      "definition_count": 0,
+      "definitions": [],
+      "found_in": null,
+      "missing_fields": [],
+      "owning_release": "Stage 03 Design",
+      "release_manifest_verified": true,
+      "satisfied": false,
+      "violations": []
+    },
+    "validation_method": "authoritative-path resolution, release manifest verification and semantic field validation; no recursive search, no substring matching"
+  },
+  "read_only": true,
+  "relationship_manifest_mismatch_count": 2,
+  "relationship_manifest_mismatches": [
+    {
+      "artifact": "subject-root-analysis.json",
+      "current_sha256": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "recorded_sha256": "285ea434c7f13daa8ca10f859beb4743c468174a9d3785b4d2bd576b097d9083"
+    },
+    {
+      "artifact": "identity-linkage-assessment.json",
+      "current_sha256": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "recorded_sha256": "d5481701a6ee435dbdda2b15825bd09993196503f194cdd65eb918fbddc634cc"
+    }
+  ],
+  "repairs_performed": 0,
+  "stage_02_modified": false,
+  "status": "FAIL"
+}

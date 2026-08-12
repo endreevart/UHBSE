@@ -1,0 +1,344 @@
+stage: "03"
+phase: implementation_planning
+title: Pipeline Plan
+document_version: "0.3.6"
+design_baseline_version: "0.7.5"
+implementation_status: planning_only_not_started
+
+pipeline_stages:
+  - extract
+  - transform
+  - validate
+  - stage
+  - reconcile
+  - promote
+
+extract:
+  source: magerya_api
+  role: mg_audit_ro
+  mode: read_only
+  snapshot:
+    isolation: repeatable_read
+    scope: single_postgresql_transaction
+    covers_relations:
+      - account_patient
+      - appointment_appointment
+      - document_analysisresult
+      - document_analysisresultitem
+    metadata_storage: technical_hashes_only
+    forbidden_in_artifacts: [raw_ids, raw_rows, pii]
+  pagination: keyset_within_snapshot
+  relations_in_pilot:
+    - account_patient
+    - appointment_appointment
+    - document_analysisresult
+    - document_analysisresultitem
+  forbidden:
+    - write_to_raw
+    - cross_source_reads
+
+cohort_policy:
+  first_live_pilot:
+    max_subjects: 100
+    within_snapshot: single_repeatable_read_transaction
+    root:
+      relation: account_patient
+      entity: Subject
+      order_by: account_patient.id ASC
+      limit: 100
+    related_rows:
+      appointment_appointment:
+        via_fk: patient_id
+        selection: all_rows_for_cohort_subjects
+        independent_limit: forbidden
+      document_analysisresult:
+        via_fk: patient_id
+        selection: all_rows_for_cohort_subjects
+        independent_limit: forbidden
+      document_analysisresultitem:
+        via_fk: analysis_result_id
+        parent_relation: document_analysisresult
+        selection: all_rows_for_cohort_analysisresults
+        independent_limit: forbidden
+    referential_closure: required
+    raw_subject_ids:
+      runtime_transaction_only: true
+      forbidden_in: [logs, reports, review_artifacts, quarantine_detail]
+  scale_up:
+    - max_subjects: 1000
+      after: first_100_subject_reconciliation_pass
+    - full_unbounded:
+        requires: explicit_confirmation_gate
+
+source_snapshot_fingerprint:
+  per_relation:
+    persisted_fields:
+      - source_relation
+      - extracted_row_count
+      - ordered_row_content_hmac
+      - locator_key_version
+      - snapshot_transaction_metadata_hash
+    forbidden_persisted: [raw_ids, raw_values, raw_rows, pii]
+  aggregate:
+    algorithm: HMAC-SHA256
+    inputs: four_relation_fingerprints_in_stable_order
+    output_field: source_snapshot_fingerprint
+  identical_snapshot_requires:
+    - source_snapshot_fingerprint
+    - design_manifest_sha256
+    - mapping_version
+    - transformation_version
+    - id_namespace_version
+    - key_version
+
+source_snapshot_fingerprint_contract:
+  contract_version: "2"
+  algorithm: HMAC-SHA256
+  output_encoding: hex
+  key_reference: canonical_id_key_v1
+  domain:
+    format: "source_snapshot_row|2|{source_system}|{source_relation}"
+  row_order:
+    field: source_primary_key
+    direction: ASC
+  field_order:
+    rule: explicit_order_per_relation
+  serialization:
+    format: length_prefix_utf8
+    contract: scalar_serialization_v2
+    length_prefix_bytes: 4
+    byteorder: big
+    null_sentinel: "0xFFFFFFFF"
+    empty_string: "0x00000000"
+    missing_field_policy: fail_closed
+  relation_aggregate:
+    input: ordered length-prefixed row HMAC bytes
+    output: HMAC-SHA256 hex
+  snapshot_aggregate:
+    relation_order:
+      - account_patient
+      - appointment_appointment
+      - document_analysisresult
+      - document_analysisresultitem
+  relations:
+    account_patient:
+      source_primary_key: id
+      fingerprint_columns: [id, created, modified, birthdate, sex]
+    appointment_appointment:
+      source_primary_key: id
+      fingerprint_columns:
+        [id, patient_id, doctor_id, created, modified, completed_at, next_appointment_date, chat_end_time]
+    document_analysisresult:
+      source_primary_key: id
+      fingerprint_columns: [id, patient_id, created, modified, status, sampling_date, appointment_date]
+    document_analysisresultitem:
+      source_primary_key: id
+      fingerprint_columns: [id, analysis_result_id, name, unit, value, flag, ref_value_from, ref_value_to, note]
+
+canonical_payload_hash_contract:
+  contract_version: "4"
+  algorithm: SHA-256
+  output_encoding: hex
+  serialization: canonical_json
+  json_normalization:
+    contract: canonical_json_v4
+    encoding: typed_tagged_array_nodes
+    node_shape: [type_tag, value_optional]
+    scalar_types: [null, boolean, integer, float, string, decimal, date, datetime, uuid]
+    composite_types: [list, object]
+    object_keys: string_only_lexicographic
+    forbidden: [naive_datetime, non_finite_float, tuple, non_string_object_key, unsupported_type]
+    collision_safety: typed_nodes_cannot_equal_user_object_with_same_display
+  json_rules:
+    object_keys: lexicographic
+    unicode: UTF-8
+    datetimes: UTC ISO-8601
+    numbers: deterministic_decimal
+    nulls: preserved
+  payload_shape:
+    - canonical_entity
+    - canonical_id
+    - stable_clinical_fields
+    - stable_source_backed_provenance
+    - source_record_locator
+    - mapping_status
+    - mapping_version
+    - transformation_version
+  stable_source_backed_provenance_allowlist:
+    - record_origin
+    - source_system
+    - source_system_id
+    - source_schema
+    - source_relation
+    - source_record_locator
+    - transformation_id
+    - transformation_version
+    - input_artifact_sha256
+    - confidence
+    - mapping_status
+    - locator_key_version
+    - locator_scheme
+  excluded_volatile_fields:
+    - pipeline_run_id
+    - emitted_at
+    - transformed_at
+    - extraction_timestamp
+    - transaction_id
+    - staging_table_identifiers
+    - runtime_duration
+
+transform:
+  engine: deterministic_python
+  contracts:
+    - record-construction-contract.yaml
+    - canonical-id-contract.yaml
+    - provenance-contract.yaml
+    - temporal-contract.yaml
+  provenance_output: embedded_jsonb_object
+
+validate:
+  layers:
+    - schema_shape
+    - construction_contract
+    - provenance_profile
+    - temporal_safety
+    - fk_readiness
+    - duplicate_canonical_id
+    - payload_hash_stability
+  reject_destination: quarantine_in_derived_staging
+
+load:
+  target_schema: canonical_evidence
+  phases:
+    staging:
+      mode: insert_only
+      scope: pipeline_run_scoped_staging_tables
+    promotion:
+      trigger: reconciliation_pass_only
+      mode: insert_into_published_tables
+  forbidden:
+    - upsert_by_canonical_id
+    - silent_overwrite_on_same_id
+    - write_to_raw
+
+idempotent_promotion:
+  cases:
+    new_canonical_id:
+      action: INSERT
+    existing_canonical_id_same_payload_hash:
+      action: NOOP_ALREADY_PUBLISHED
+    existing_canonical_id_different_payload_hash_same_input_version:
+      action: SOURCE_PAYLOAD_CHANGED
+      promotion: BLOCKED
+    existing_canonical_id_different_payload_hash_mapping_or_transform_version:
+      action: VERSIONED_REBUILD_REQUIRED
+      promotion: BLOCKED
+    existing_canonical_id_unclassified_conflict:
+      action: CANONICAL_PAYLOAD_CONFLICT
+      promotion: BLOCKED
+  forbidden:
+    - UPDATE_published_evidence
+    - DELETE_published_evidence
+    - silent_upsert
+  promotion_transaction:
+    scope: single_derived_db_transaction
+    start_condition: reconciliation_pass
+    on_error: full_rollback
+    staging_cleanup: current_run_may_be_deleted
+    published_records: never_modified
+
+table_load_order:
+  - entity: SourceSystem
+    kind: bootstrap
+  - entity: pipeline_run
+    kind: technical_metadata
+  - entity: SourceRecord
+    kind: source_locator_table
+    depends_on: [SourceSystem]
+  - entity: Subject
+    kind: clinical_table
+    depends_on: [SourceSystem, SourceRecord]
+  - entity: SubjectCharacteristic
+    kind: clinical_table
+    depends_on: [Subject]
+  - entity: Encounter
+    kind: clinical_table
+    depends_on: [Subject]
+  - entity: Observation
+    kind: clinical_table
+    depends_on: [Subject]
+    deferred_fks:
+      - field: encounter_id
+        status: DEFERRED_FOR_PILOT
+  - entity: ObservationComponent
+    kind: clinical_table
+    depends_on: [Observation]
+
+embedded_components:
+  - entity: Provenance
+    excluded_from_table_load_order: true
+
+fk_dependencies:
+  Subject.source_system_id: SourceSystem.source_system_id
+  SubjectCharacteristic.subject_id: Subject.subject_id
+  Encounter.subject_id: Subject.subject_id
+  Encounter.provider_id: deferred_null_until_provider_construction
+  Observation.subject_id: Subject.subject_id
+  Observation.encounter_id: deferred_null_for_pilot
+  ObservationComponent.observation_id: Observation.observation_id
+
+snapshot_consistency:
+  rule: one repeatable_read transaction for all four relations
+  checkpoint_valid_only_while_snapshot_transaction_alive: true
+  on_snapshot_loss:
+    mark_run: FAILED
+    clear_staging: true
+    restart: new_pipeline_run_id
+    forbidden: resume_from_last_source_pk_after_snapshot_loss
+
+restart_from_checkpoint:
+  allowed_only_when: snapshot_transaction_still_active
+  checkpoint_key: [pipeline_run_id, construction_group_id, last_source_record_locator]
+  forbidden_after_snapshot_loss: continue_from_last_source_pk
+
+idempotent_rerun:
+  rule: identical snapshot contract tuple yields identical canonical IDs and payload hashes
+  identical_snapshot_definition: source_snapshot_fingerprint.identical_snapshot_requires
+  same_id_different_payload:
+    action: reject_promotion
+    reason_code: SOURCE_PAYLOAD_CHANGED
+    silent_overwrite: forbidden
+
+rollback:
+  scope: current_run_staging_only
+  deletes: staging_rows_for_pipeline_run_id
+  published_records: never_deleted_by_rollback
+  raw_impact: none
+
+reconciliation:
+  cardinality_models:
+    one_per_row:
+      rule: extracted == emitted + rejected + skipped
+      applies_to: [SourceRecord, Subject, Encounter, Observation, ObservationComponent]
+    zero_to_many_per_row:
+      rule: eligible_emission_opportunities == emitted + rejected + skipped
+      applies_to: [SubjectCharacteristic]
+  forbidden: simple_source_row_count_only_for_zero_to_many_groups
+
+pipeline_record_emission:
+  kind: technical_metadata
+  fields:
+    - pipeline_run_id
+    - canonical_entity
+    - canonical_id
+    - payload_hash
+    - action
+    - emitted_at
+
+pipeline_run_metadata:
+  fields:
+    - pipeline_run_id
+    - design_baseline_version
+    - implementation_plan_version
+    - source_snapshot_fingerprint
+    - snapshot_transaction_metadata_hash

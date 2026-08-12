@@ -1,4 +1,6 @@
 import type { Dict } from "./en";
+import { status } from "../status/fr"
+import type { StatusContent } from "../status/types"
 
 export const fr: Dict = {
   meta: {
@@ -14,10 +16,11 @@ export const fr: Dict = {
     partners: "Partenaires",
     cta: "Rejoindre le réseau de recherche",
     language: "Langue",
+    ariaLabel: "Navigation principale",
   },
 
   hero: {
-    titleA: "La médecine a appris à observer le corps humain.",
+    titleA: "La médecine a appris à observer l'organisme humain.",
     titleB: "Elle doit maintenant apprendre à le simuler.",
     lead: "UHBSE est un moteur de simulation de la biologie humaine conçu pour modéliser comment un état biologique individuel peut évoluer sous l’effet de médicaments, de compléments, de la nutrition et de l’activité physique.",
     sub: "Construit à partir de données cliniques réelles. Conçu autour de l’incertitude. Créé pour la recherche, avant tout usage clinique.",
@@ -359,22 +362,7 @@ export const fr: Dict = {
     ],
   },
 
-  status: {
-    kicker: "Statut",
-    title:
-      "UHBSE est actuellement en phase de recherche et de développement d’infrastructure.",
-    lead: "Il s’agit d’une technologie de recherche en construction, et non d’un produit à usage clinique.",
-    items: [
-      "Connexion de plusieurs sources cliniques",
-      "Analyse de données longitudinales",
-      "Un modèle canonique des événements biologiques",
-      "Une base distincte d’états fondés sur les données probantes",
-      "Une architecture reproductible de provenance des données",
-      "Préparation du premier pilote de recherche restreint",
-    ],
-    dataNote:
-      "Données cliniques longitudinales issues des organisations de santé participantes.",
-  },
+  status: status satisfies StatusContent,
 
   partners: {
     kicker: "Partenariat",
@@ -422,6 +410,7 @@ export const fr: Dict = {
 
   manifesto: {
     kicker: "Manifeste",
+    title: "Nous construisons la couche de simulation qui manque encore à la médecine.",
     l1: "Le corps humain n’est pas un dossier médical statique.",
     l2: "C’est un système biologique qui change à travers des milliers de variables, d’interventions et d’instants.",
     l3: "Pendant des décennies, la médecine n’a enregistré que des fragments de ce changement.",

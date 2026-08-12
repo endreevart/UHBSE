@@ -1,0 +1,131 @@
+{
+  "assessed_at": "2026-07-31T22:38:20.665954+00:00",
+  "coverage_threshold_confirmed": 0.95,
+  "source_a": {
+    "hypothesis": {
+      "schema": "magerya_api",
+      "relation": "account_patient"
+    },
+    "verdict": "SUBJECT_ROOT_CONFIRMED",
+    "verdict_reason": "dedicated patient table with PK and multiple incoming foreign keys",
+    "aggregates": {
+      "row_count": 43856,
+      "distinct_id_count": 43856,
+      "null_id_count": 0,
+      "null_id_rate": 0.0,
+      "duplicate_id_rows": 0,
+      "id_collision_count": 0,
+      "null_user_id_count": 2151,
+      "null_user_id_rate": 0.049047,
+      "distinct_user_id_count": 41705,
+      "incoming_foreign_key_count": 37,
+      "outgoing_foreign_keys": [
+        {
+          "column": "created_by_id",
+          "foreign_schema": "magerya_api",
+          "foreign_table": "account_employee",
+          "foreign_column": "id"
+        },
+        {
+          "column": "user_id",
+          "foreign_schema": "magerya_api",
+          "foreign_table": "account_user",
+          "foreign_column": "id"
+        }
+      ]
+    }
+  },
+  "source_b": {
+    "persons_hypothesis": {
+      "schema": "public",
+      "relation": "persons"
+    },
+    "persons_hypothesis_verdict": "NO_SUBJECT_ROOT",
+    "persons_hypothesis_reason": "candidate table is empty (0 rows)",
+    "persons_aggregates": {
+      "row_count": 0,
+      "distinct_id_count": 0
+    },
+    "consultations_anchor": {
+      "schema": "public",
+      "relation": "consultations"
+    },
+    "consultations_aggregates": {
+      "row_count": 88867,
+      "distinct_patient_id_count": 49564,
+      "null_patient_id_count": 0,
+      "null_patient_id_rate": 0.0
+    },
+    "patient_id_candidate_coverage": [
+      {
+        "label": "public.users.id",
+        "match_count": 88867,
+        "match_rate": 1.0,
+        "orphan_count": 0,
+        "orphan_rate": 0.0
+      },
+      {
+        "label": "public.persons.id",
+        "match_count": 0,
+        "match_rate": 0.0,
+        "orphan_count": 88867,
+        "orphan_rate": 1.0
+      },
+      {
+        "label": "public.profilaxys_profile.id",
+        "match_count": 14687,
+        "match_rate": 0.165269,
+        "orphan_count": 74180,
+        "orphan_rate": 0.834731
+      },
+      {
+        "label": "public.profilaxys_profile.user_id",
+        "match_count": 13427,
+        "match_rate": 0.151091,
+        "orphan_count": 75440,
+        "orphan_rate": 0.848909,
+        "candidate_role": "profile_extension",
+        "note": "Profile extension table; not an independent subject root"
+      },
+      {
+        "label": "public.users_profile.user_id",
+        "match_count": 88867,
+        "match_rate": 1.0,
+        "orphan_count": 0,
+        "orphan_rate": 0.0,
+        "candidate_role": "profile_extension",
+        "note": "Profile extension table; not an independent subject root"
+      },
+      {
+        "label": "public.profilaxys_users.id",
+        "match_count": 13427,
+        "match_rate": 0.151091,
+        "orphan_count": 75440,
+        "orphan_rate": 0.848909
+      },
+      {
+        "label": "distinct_patient_ids",
+        "distinct_patient_id_count": 49564
+      }
+    ],
+    "patient_id_resolution": {
+      "anchor": "public.consultations.patient_id",
+      "target": "public.users.id",
+      "aggregates": {
+        "label": "public.users.id",
+        "match_count": 88867,
+        "match_rate": 1.0,
+        "orphan_count": 0,
+        "orphan_rate": 0.0
+      },
+      "verdict": "SUBJECT_ROOT_CANDIDATE",
+      "verdict_reason": "100% consultations.patient_id coverage in public.users.id, but only CANDIDATE because public.users is multi-role and there is no explicit patient-only FK/root"
+    },
+    "overall_verdict": "SUBJECT_ROOT_CANDIDATE",
+    "overall_verdict_reason": "100% consultations.patient_id coverage in public.users.id, but only CANDIDATE because public.users is multi-role and there is no explicit patient-only FK/root"
+  },
+  "notes": [
+    "Aggregates only; no patient IDs or PII emitted.",
+    "CONFIRMED requires explicit FK or coverage >= threshold."
+  ]
+}

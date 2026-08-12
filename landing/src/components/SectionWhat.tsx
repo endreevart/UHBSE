@@ -1,6 +1,7 @@
 import { useI18n } from '../i18n'
 import { useScrollProgress } from '../lib/useInView'
 import { Reveal } from './Reveal'
+import { SectionHead } from './SectionHead'
 
 export function SectionWhat() {
   const { t } = useI18n()
@@ -8,18 +9,18 @@ export function SectionWhat() {
   const activeIndex = Math.min(t.what.flow.length - 1, Math.floor(progress * t.what.flow.length))
 
   return (
-    <section className="section">
+    <section className="section" id="what" aria-labelledby="what-heading">
       <div className="shell">
-        <Reveal className="section__head">
-          <p className="kicker">{t.what.kicker}</p>
-          <h2 className="display display--l">{t.what.title}</h2>
-          <p className="lede">{t.what.lead}</p>
-        </Reveal>
+        <SectionHead
+          headingId="what-heading"
+          title={t.what.title}
+          lead={t.what.lead}
+        />
 
         <div ref={ref}>
-          <div className="flow">
+          <ol className="flow">
             {t.what.flow.map((step, i) => (
-              <div className="flow__step" key={step.label} data-active={i <= activeIndex}>
+              <li className="flow__step" key={step.label} data-active={i <= activeIndex}>
                 <div className="flow__node">
                   <span
                     className="flow__dot"
@@ -32,9 +33,9 @@ export function SectionWhat() {
                 </div>
                 <h3 className="flow__label">{step.label}</h3>
                 <p className="flow__caption">{step.caption}</p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
           <div
             className="flow__rail"
             style={{ ['--progress' as string]: String(Math.max(0.04, progress)) }}

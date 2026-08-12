@@ -1,0 +1,23 @@
+stage: "03"
+phase: implementation_planning
+title: Stage 03 Implementation Plan
+document_version: "0.3.6"
+design_baseline_version: "0.7.5"
+implementation_status: planning_only_not_started
+
+purpose: >
+  Executable planning baseline for Source A canonical evidence layer pilot.
+  No database, DDL, or ETL runtime is created in this phase.
+
+design_baseline:
+  accepted_version: "0.7.5"
+  baseline_manifest: design-baseline-manifest.sha256
+
+pilot:
+  source: magerya_api
+  audit_role: mg_audit_ro
+  cohort_limits: [100, 1000, full_with_explicit_confirmation]
+
+stop_line: >
+  Planning gate PASS does not authorize database creation, migrations, ORM models,
+  DDL application, or ETL execution.

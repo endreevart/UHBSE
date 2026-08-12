@@ -63,7 +63,6 @@ export function PartnerContactModal({ open, audience, onClose }: Props) {
       <div className="partner-modal__card">
         <header className="partner-modal__head">
           <div>
-            <p className="kicker">{t.partners.kicker}</p>
             <h3 className="partner-modal__title" id={titleId}>
               {t.partners.modal.title}
             </h3>

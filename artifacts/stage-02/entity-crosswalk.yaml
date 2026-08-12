@@ -1,0 +1,325 @@
+rules:
+- CANDIDATE status is never upgraded to CONFIRMED during crosswalk.
+- Curated rules emit HYPOTHESIS only; EVIDENCE_BACKED requires recorded structural
+  proofs.
+- Mappings require compatible data_level on both sides.
+- No cross-source patient identity linkage is attempted.
+- Absence of a mapped table does not imply absence of entity data in other storage
+  forms.
+entity_types:
+  patients:
+    source_a_candidates:
+    - schema: magerya_api
+      relation: account_patient
+      role: ENTITY
+      data_level: ATTRIBUTE_CONTAINER
+      status: CANDIDATE
+    source_b_candidates:
+    - schema: public
+      relation: persons
+      role: ENTITY
+      data_level: ATTRIBUTE_CONTAINER
+      status: CANDIDATE
+    mappings:
+    - source_a: magerya_api.account_patient
+      source_b: null
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: ATTRIBUTE_CONTAINER
+      source_b_data_level: null
+      evidence_refs:
+      - no_structural_or_name_match
+    - source_a: null
+      source_b: public.persons
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: null
+      source_b_data_level: ATTRIBUTE_CONTAINER
+      evidence_refs:
+      - no_source_a_candidate_match
+  visits:
+    source_a_candidates:
+    - schema: magerya_api
+      relation: appointment_appointment
+      role: EVENT
+      data_level: PATIENT_EVENT
+      status: CANDIDATE
+    source_b_candidates:
+    - schema: public
+      relation: consultations
+      role: EVENT
+      data_level: PATIENT_EVENT
+      status: CANDIDATE
+    mappings:
+    - source_a: magerya_api.appointment_appointment
+      source_b: public.consultations
+      confidence: HYPOTHESIS
+      candidate_status: CANDIDATE
+      source_a_data_level: PATIENT_EVENT
+      source_b_data_level: PATIENT_EVENT
+      evidence_refs:
+      - curated_crosswalk_hypothesis
+  doctors:
+    source_a_candidates:
+    - schema: magerya_api
+      relation: account_doctor
+      role: ENTITY
+      data_level: ATTRIBUTE_CONTAINER
+      status: CANDIDATE
+    source_b_candidates:
+    - schema: public
+      relation: users
+      role: ENTITY
+      data_level: ATTRIBUTE_CONTAINER
+      status: CANDIDATE
+    mappings:
+    - source_a: magerya_api.account_doctor
+      source_b: public.users
+      confidence: HYPOTHESIS
+      candidate_status: CANDIDATE
+      source_a_data_level: ATTRIBUTE_CONTAINER
+      source_b_data_level: ATTRIBUTE_CONTAINER
+      evidence_refs:
+      - curated_crosswalk_hypothesis
+  specialties:
+    source_a_candidates:
+    - schema: magerya_api
+      relation: account_doctor
+      role: ENTITY
+      data_level: ATTRIBUTE_CONTAINER
+      status: CANDIDATE
+    source_b_candidates: []
+    mappings:
+    - source_a: magerya_api.account_doctor
+      source_b: null
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: ATTRIBUTE_CONTAINER
+      source_b_data_level: null
+      evidence_refs:
+      - no_structural_or_name_match
+  laboratory_results:
+    source_a_candidates:
+    - schema: magerya_api
+      relation: document_analysisresult
+      role: OBSERVATION
+      data_level: OBSERVATION_HEADER
+      status: CANDIDATE
+    - schema: magerya_api
+      relation: document_analysisresultitem
+      role: OBSERVATION
+      data_level: OBSERVATION_VALUE
+      status: CANDIDATE
+    source_b_candidates:
+    - schema: quest_digital
+      relation: analyses_constructor
+      role: OBSERVATION
+      data_level: OBSERVATION_VALUE
+      status: CANDIDATE
+    - schema: quest_digital
+      relation: lab_result
+      role: OBSERVATION
+      data_level: PAYLOAD
+      status: CANDIDATE
+    mappings:
+    - source_a: magerya_api.document_analysisresult
+      source_b: quest_digital.analyses_constructor
+      confidence: HYPOTHESIS
+      candidate_status: CANDIDATE
+      source_a_data_level: OBSERVATION_HEADER
+      source_b_data_level: OBSERVATION_VALUE
+      evidence_refs:
+      - curated_crosswalk_hypothesis
+    - source_a: magerya_api.document_analysisresultitem
+      source_b: null
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: OBSERVATION_VALUE
+      source_b_data_level: null
+      evidence_refs:
+      - no_structural_or_name_match
+    - source_a: null
+      source_b: quest_digital.lab_result
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: null
+      source_b_data_level: PAYLOAD
+      evidence_refs:
+      - no_source_a_candidate_match
+  diagnoses:
+    source_a_candidates: []
+    source_b_candidates: []
+    mappings: []
+  prescriptions:
+    source_a_candidates: []
+    source_b_candidates: []
+    mappings: []
+  medications:
+    source_a_candidates: []
+    source_b_candidates: []
+    mappings: []
+  procedures:
+    source_a_candidates: []
+    source_b_candidates: []
+    mappings: []
+  ultrasound_examinations:
+    source_a_candidates: []
+    source_b_candidates: []
+    mappings: []
+  operations:
+    source_a_candidates: []
+    source_b_candidates: []
+    mappings: []
+  medical_documents:
+    source_a_candidates:
+    - schema: magerya_api
+      relation: document_document
+      role: OBSERVATION
+      data_level: OBSERVATION_VALUE
+      status: CANDIDATE
+    - schema: magerya_api
+      relation: document_informationform
+      role: OBSERVATION
+      data_level: OBSERVATION_VALUE
+      status: CANDIDATE
+    - schema: magerya_api
+      relation: document_medicalreport
+      role: OBSERVATION
+      data_level: OBSERVATION_VALUE
+      status: CANDIDATE
+    - schema: magerya_api
+      relation: document_patientquestionnaire
+      role: OBSERVATION
+      data_level: OBSERVATION_VALUE
+      status: CANDIDATE
+    - schema: magerya_api
+      relation: document_procedurelist
+      role: OBSERVATION
+      data_level: OBSERVATION_VALUE
+      status: CANDIDATE
+    source_b_candidates: []
+    mappings:
+    - source_a: magerya_api.document_document
+      source_b: null
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: OBSERVATION_VALUE
+      source_b_data_level: null
+      evidence_refs:
+      - no_structural_or_name_match
+    - source_a: magerya_api.document_informationform
+      source_b: null
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: OBSERVATION_VALUE
+      source_b_data_level: null
+      evidence_refs:
+      - no_structural_or_name_match
+    - source_a: magerya_api.document_medicalreport
+      source_b: null
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: OBSERVATION_VALUE
+      source_b_data_level: null
+      evidence_refs:
+      - no_structural_or_name_match
+    - source_a: magerya_api.document_patientquestionnaire
+      source_b: null
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: OBSERVATION_VALUE
+      source_b_data_level: null
+      evidence_refs:
+      - no_structural_or_name_match
+    - source_a: magerya_api.document_procedurelist
+      source_b: null
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: OBSERVATION_VALUE
+      source_b_data_level: null
+      evidence_refs:
+      - no_structural_or_name_match
+  measurements:
+    source_a_candidates: []
+    source_b_candidates:
+    - schema: public
+      relation: profilaxys_analyses
+      role: OBSERVATION
+      data_level: OBSERVATION_VALUE
+      status: CANDIDATE
+    - schema: public
+      relation: profilaxys_profile
+      role: ATTRIBUTE_CONTAINER
+      data_level: ATTRIBUTE_CONTAINER
+      status: CANDIDATE
+    - schema: public
+      relation: users_profile
+      role: ATTRIBUTE_CONTAINER
+      data_level: ATTRIBUTE_CONTAINER
+      status: CANDIDATE
+    mappings:
+    - source_a: null
+      source_b: public.profilaxys_analyses
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: null
+      source_b_data_level: OBSERVATION_VALUE
+      evidence_refs:
+      - no_source_a_candidate_match
+    - source_a: null
+      source_b: public.profilaxys_profile
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: null
+      source_b_data_level: ATTRIBUTE_CONTAINER
+      evidence_refs:
+      - no_source_a_candidate_match
+    - source_a: null
+      source_b: public.users_profile
+      confidence: UNKNOWN
+      candidate_status: CANDIDATE
+      source_a_data_level: null
+      source_b_data_level: ATTRIBUTE_CONTAINER
+      evidence_refs:
+      - no_source_a_candidate_match
+  appointments:
+    source_a_candidates:
+    - schema: magerya_api
+      relation: appointment_appointment
+      role: EVENT
+      data_level: PATIENT_EVENT
+      status: CANDIDATE
+    source_b_candidates:
+    - schema: public
+      relation: consultations
+      role: EVENT
+      data_level: PATIENT_EVENT
+      status: CANDIDATE
+    mappings:
+    - source_a: magerya_api.appointment_appointment
+      source_b: public.consultations
+      confidence: HYPOTHESIS
+      candidate_status: CANDIDATE
+      source_a_data_level: PATIENT_EVENT
+      source_b_data_level: PATIENT_EVENT
+      evidence_refs:
+      - curated_crosswalk_hypothesis
+unresolved_mappings:
+- patients:magerya_api.account_patient->None
+- patients:None->public.persons
+- visits:magerya_api.appointment_appointment->public.consultations
+- doctors:magerya_api.account_doctor->public.users
+- specialties:magerya_api.account_doctor->None
+- laboratory_results:magerya_api.document_analysisresult->quest_digital.analyses_constructor
+- laboratory_results:magerya_api.document_analysisresultitem->None
+- laboratory_results:None->quest_digital.lab_result
+- medical_documents:magerya_api.document_document->None
+- medical_documents:magerya_api.document_informationform->None
+- medical_documents:magerya_api.document_medicalreport->None
+- medical_documents:magerya_api.document_patientquestionnaire->None
+- medical_documents:magerya_api.document_procedurelist->None
+- measurements:None->public.profilaxys_analyses
+- measurements:None->public.profilaxys_profile
+- measurements:None->public.users_profile
+- appointments:magerya_api.appointment_appointment->public.consultations
+compared_at: '2026-07-31T22:38:22.142428+00:00'

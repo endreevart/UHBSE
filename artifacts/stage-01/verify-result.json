@@ -1,0 +1,262 @@
+{
+  "stage": "01",
+  "status": "PASS",
+  "checked_at": "2026-07-31T21:46:05.242947+00:00",
+  "criteria_passed": 25,
+  "criteria_total": 25,
+  "failures": [],
+  "criteria": [
+    {
+      "criterion_id": "scope.single_source",
+      "section": "Scope",
+      "description": "Exactly one clinic source audited (local magerya_api copy)",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Run audit profile-source against the local magerya_api Docker copy",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "scope.no_cross_clinic",
+      "section": "Scope",
+      "description": "No second clinic, no cross-clinic merge, no unified database",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "Process scope attestation only; no cross-clinic artifacts expected in Stage 01",
+      "required_action": "Continue single-source workflow; defer multi-clinic work to docs/future-work.md",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "scope.no_future_work",
+      "section": "Scope",
+      "description": "No simulator design, ML/LLM, OMOP, or FHIR work",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "Process scope attestation only",
+      "required_action": "Record deferred requests in docs/future-work.md without implementing them",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "safety.original_readonly",
+      "section": "Safety",
+      "description": "Original restored database access must be read-only",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Re-run audit profile-source with a read-only role and read-only transaction settings",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "safety.derived_writes_stage_gated",
+      "section": "Safety",
+      "description": "Derived database writes are allowed only when explicitly required by the stage",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "Stage 01 does not perform derived database writes",
+      "required_action": "Defer derived database writes to later stages unless explicitly opened",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "safety.stage01_no_db_modification",
+      "section": "Safety",
+      "description": "Stage 01 does not modify either database",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Complete Stage 01 using read-only profiling against the original restored database",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "safety.no_row_level_phi",
+      "section": "Safety",
+      "description": "No row-level patient data in agent context, logs, or artifacts",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Remove raw values from artifacts; keep aggregates and metadata only",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "safety.no_secrets",
+      "section": "Safety",
+      "description": "No secrets committed to the repository",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Redact credentials from artifacts and keep secrets in private/ or env only",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "safety.no_sensitive_identifiers",
+      "section": "Safety",
+      "description": "No names, phones, emails, addresses, identifiers, or document bodies exposed",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Sanitize artifacts before gate review",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.source-audit.json",
+      "section": "Deliverables",
+      "description": "Artifact exists: source-audit.json",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Generate `source-audit.json` through the Stage 01 pipeline",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.schema-profile.json",
+      "section": "Deliverables",
+      "description": "Artifact exists: schema-profile.json",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Generate `schema-profile.json` through the Stage 01 pipeline",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.entity-candidates.yaml",
+      "section": "Deliverables",
+      "description": "Artifact exists: entity-candidates.yaml",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Generate `entity-candidates.yaml` through the Stage 01 pipeline",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.relation-graph.md",
+      "section": "Deliverables",
+      "description": "Artifact exists: relation-graph.md",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Generate `relation-graph.md` through the Stage 01 pipeline",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.unknown-semantics.md",
+      "section": "Deliverables",
+      "description": "Artifact exists: unknown-semantics.md",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Generate `unknown-semantics.md` through the Stage 01 pipeline",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.stage-01-report.md",
+      "section": "Deliverables",
+      "description": "Artifact exists: stage-01-report.md",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Generate `stage-01-report.md` through the Stage 01 pipeline",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.source_reachable",
+      "section": "Deliverables",
+      "description": "source-audit.json shows reachable source",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Run audit connection-check and record source-audit.json",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.schema_profile_content",
+      "section": "Deliverables",
+      "description": "schema-profile.json contains relation metadata",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Run audit profile-source against the configured PostgreSQL source",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.entity_candidates_content",
+      "section": "Deliverables",
+      "description": "entity-candidates.yaml contains candidate mappings",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Run audit classify-entities after schema profiling",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "deliverable.evidence",
+      "section": "Deliverables",
+      "description": "artifacts/stage-01/evidence/ contains query evidence",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Ensure profile-source records query evidence under artifacts/stage-01/evidence/",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "quality.evidence_references",
+      "section": "Quality",
+      "description": "Every factual claim references a query or generated artifact",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Re-run audit profile-source to capture query identifiers and durations",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "quality.unknown_semantics",
+      "section": "Quality",
+      "description": "Undocumented field meanings marked UNKNOWN",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Run audit classify-entities and review unknown-semantics.md",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "quality.current_stage_updated",
+      "section": "Quality",
+      "description": "docs/current-stage.md updated to reflect progress",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Update docs/current-stage.md after each completed task",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "quality.report_draft_status",
+      "section": "Quality",
+      "description": "stage-01-report.md exists with DRAFT status before gate finalization",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Run audit draft-report after classify-entities before verify-stage",
+      "human_clarification_needed": false
+    },
+    {
+      "criterion_id": "quality.candidate_not_confirmed_by_name",
+      "section": "Quality",
+      "description": "Entity candidates do not treat name-only matches as confirmed medical meaning",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "Some candidates may overstate certainty without evidence",
+      "required_action": "Review entity-candidates.yaml and downgrade unsupported CONFIRMED mappings",
+      "human_clarification_needed": true
+    },
+    {
+      "criterion_id": "quality.pytest",
+      "section": "Quality",
+      "description": "pytest passes for src/human_simulator",
+      "status": "pass",
+      "missing_artifact": null,
+      "reason": "ok",
+      "required_action": "Fix failing tests before declaring Stage 01 complete",
+      "human_clarification_needed": false
+    }
+  ],
+  "report_path": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/stage-01/stage-01-report.md",
+  "artifacts_dir": "/Volumes/Siska/DEVELOP/Human simulator/artifacts/stage-01"
+}

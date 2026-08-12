@@ -1,0 +1,388 @@
+{
+  "stage": "02",
+  "status": "PASS",
+  "verified_at": "2026-07-31T22:38:16.583841+00:00",
+  "checks_passed": 53,
+  "checks_failed": 0,
+  "checks_total": 53,
+  "checks": [
+    {
+      "name": "source_a_report_final",
+      "section": "source_a",
+      "status": "PASS",
+      "detail": "stage-01-report status='FINAL'"
+    },
+    {
+      "name": "source_a_live_extraction",
+      "section": "source_a",
+      "status": "PASS",
+      "detail": "extraction_method=live_readonly_profile"
+    },
+    {
+      "name": "source_a_audit_user",
+      "section": "source_a",
+      "status": "PASS",
+      "detail": "connection_user=mg_audit_ro"
+    },
+    {
+      "name": "source_a_readonly_validation",
+      "section": "source_a",
+      "status": "PASS",
+      "detail": "readonly_validation.safe=true"
+    },
+    {
+      "name": "source_a_fingerprint_match",
+      "section": "source_a",
+      "status": "PASS",
+      "detail": "fingerprints_match=True"
+    },
+    {
+      "name": "source_a_manifest",
+      "section": "source_a",
+      "status": "PASS",
+      "detail": "verified 10 entries in manifest.sha256"
+    },
+    {
+      "name": "source_a_not_preliminary",
+      "section": "source_a",
+      "status": "PASS",
+      "detail": "preliminary artifacts must not gate Stage 02"
+    },
+    {
+      "name": "source_b_audit_pass",
+      "section": "source_b",
+      "status": "PASS",
+      "detail": "source-b-audit status=PASS"
+    },
+    {
+      "name": "source_b_audit_user",
+      "section": "source_b",
+      "status": "PASS",
+      "detail": "connection_user=kgz_audit_ro"
+    },
+    {
+      "name": "source_b_manifest",
+      "section": "source_b",
+      "status": "PASS",
+      "detail": "verified 5 entries in manifest.sha256"
+    },
+    {
+      "name": "source_b_restore_completed",
+      "section": "source_b",
+      "status": "PASS",
+      "detail": "restore_performed=True"
+    },
+    {
+      "name": "source_b_profile_completed",
+      "section": "source_b",
+      "status": "PASS",
+      "detail": "schema profile and source-b-audit present"
+    },
+    {
+      "name": "source_b_raw_db_unchanged",
+      "section": "source_b",
+      "status": "PASS",
+      "detail": "relationship assessment row-count fingerprints unchanged"
+    },
+    {
+      "name": "compare_verification_report",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "name": "compare_artifact_schema-diff.yaml",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "compare_artifact_entity-crosswalk.yaml",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "name": "crosswalk_candidate_only",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "all mappings remain CANDIDATE"
+    },
+    {
+      "name": "crosswalk_no_unproven_evidence_backed",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "EVIDENCE_BACKED requires recorded structural proofs"
+    },
+    {
+      "name": "crosswalk_unresolved_mappings_count",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "unresolved_mappings=17, compare_report=17"
+    },
+    {
+      "name": "crosswalk_data_level_present",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "data_level on mapped pairs"
+    },
+    {
+      "name": "crosswalk_incompatible_levels_not_mapped",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "incompatible data_level pairs not promoted"
+    },
+    {
+      "name": "no_permanent_patient_crosswalk",
+      "section": "compare",
+      "status": "PASS",
+      "detail": "crosswalk rules prohibit permanent patient linkage"
+    },
+    {
+      "name": "relationship_verification_report",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "status=PASS"
+    },
+    {
+      "name": "relationship_manifest",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "verified 8 entries in relationship-manifest.sha256"
+    },
+    {
+      "name": "relationship_summary_subject_root_a_verdict",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "subject_root_a_verdict='SUBJECT_ROOT_CONFIRMED', expected 'SUBJECT_ROOT_CONFIRMED'"
+    },
+    {
+      "name": "relationship_summary_subject_root_b_verdict",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "subject_root_b_verdict='SUBJECT_ROOT_CANDIDATE', expected 'SUBJECT_ROOT_CANDIDATE'"
+    },
+    {
+      "name": "relationship_summary_identity_verdict",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "identity_verdict='POTENTIAL_OVERLAP', expected 'POTENTIAL_OVERLAP'"
+    },
+    {
+      "name": "relationship_summary_source_relationship_verdict",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "source_relationship_verdict='SAME_DOMAIN_DIFFERENT_SYSTEMS', expected 'SAME_DOMAIN_DIFFERENT_SYSTEMS'"
+    },
+    {
+      "name": "relationship_summary_population_overlap_estimate_status",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "population_overlap_estimate_status='NOT_ESTIMABLE', expected 'NOT_ESTIMABLE'"
+    },
+    {
+      "name": "no_linkage_proven",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "identity_verdict=POTENTIAL_OVERLAP"
+    },
+    {
+      "name": "no_population_overlap_percentage",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "estimated population overlap percentage absent"
+    },
+    {
+      "name": "population_overlap_not_estimable",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "population_overlap_estimate.status='NOT_ESTIMABLE'"
+    },
+    {
+      "name": "identifier_matches_separate_from_subject_pairs",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "identifier-level and subject-pair metrics separated"
+    },
+    {
+      "name": "conflict_definition_present",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "conflict_definition block present"
+    },
+    {
+      "name": "missingness_per_source",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "missingness reported separately per source"
+    },
+    {
+      "name": "application_shared_relation_name_count",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "application_shared_relation_name_count=0"
+    },
+    {
+      "name": "infrastructure_overlap_not_evidence",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "infrastructure overlap excluded from supporting evidence"
+    },
+    {
+      "name": "relationship_artifacts_no_pii",
+      "section": "relationship",
+      "status": "PASS",
+      "detail": "no PII/raw IDs/HMAC leaks"
+    },
+    {
+      "name": "input_artifact_hashes_computed",
+      "section": "integrity",
+      "status": "PASS",
+      "detail": "all input artifacts present"
+    },
+    {
+      "name": "manifest.sha256_no_self_hash",
+      "section": "integrity",
+      "status": "PASS",
+      "detail": "manifest does not include itself"
+    },
+    {
+      "name": "relationship-manifest.sha256_no_self_hash",
+      "section": "integrity",
+      "status": "PASS",
+      "detail": "manifest does not include itself"
+    },
+    {
+      "name": "sanitized_query_logs_present",
+      "section": "integrity",
+      "status": "PASS",
+      "detail": "profiling and relationship query logs present"
+    },
+    {
+      "name": "no_secrets_in_artifacts",
+      "section": "integrity",
+      "status": "PASS",
+      "detail": "no secrets or absolute credential paths detected"
+    },
+    {
+      "name": "full_test_suite",
+      "section": "integrity",
+      "status": "PASS",
+      "detail": "{\"collected\": 132, \"passed\": 132, \"failed\": 0, \"skipped\": 0, \"error\": 0, \"command\": \"/Volumes/Siska/DEVELOP/Human simulator/.venv/bin/python3.13 -m pytest -q --tb=no -m not verify_stage02_gate\", \"exit_code\": 0, \"duration_seconds\": 2.64, \"executed\": true, \"status\": \"PASS\"}"
+    },
+    {
+      "name": "test_result_not_skipped",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "test_result.status='PASS'"
+    },
+    {
+      "name": "verify_json_no_self_hash",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "verify JSON must not embed its own SHA-256"
+    },
+    {
+      "name": "unresolved_mappings_complete",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "crosswalk_unresolved=17, compare_unresolved=17"
+    },
+    {
+      "name": "verdicts_match_relationship_assessment",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "actual={'subject_root_a': 'SUBJECT_ROOT_CONFIRMED', 'subject_root_b': 'SUBJECT_ROOT_CANDIDATE', 'identity': 'POTENTIAL_OVERLAP', 'source_relationship': 'SAME_DOMAIN_DIFFERENT_SYSTEMS'}"
+    },
+    {
+      "name": "unresolved_mappings_exact_match",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "verify unresolved_mappings equals entity-crosswalk.yaml unresolved_mappings"
+    },
+    {
+      "name": "report_final_only_on_overall_pass",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "overall=PASS, report_status='FINAL'"
+    },
+    {
+      "name": "overall_pass_requires_all_checks",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "overall=PASS, all_pass=True"
+    },
+    {
+      "name": "checks_arithmetic",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "passed=53, failed=0, total=53, len(checks)=53"
+    },
+    {
+      "name": "final_manifest_hashes_match",
+      "section": "consistency",
+      "status": "PASS",
+      "detail": "verified 2 entries in stage-02-final-manifest.sha256"
+    }
+  ],
+  "failures": [],
+  "artifact_hashes": {
+    "restore-report.json": "7fac84019febee44bd8afaffd320eec45784b7e062c60e77fb9976ed18ad6453",
+    "source-b-audit.json": "7bc715722dbf9cd91e83e7702e35b6c4698e9661d829ba46cda9ed702f4b575d",
+    "schema-profile-kgz.json": "1065db5d00edcabb0fe714cedf6cd80c1a7d19890c34d277bdb6c4694c4238ce",
+    "entity-candidates-kgz.yaml": "7ca9c1406df60da8b685633c5f17dafdefd530e76409447be2fa1077ad5953ae",
+    "relation-graph-kgz.md": "58eef942992eacb8933cbaf0d143084b8b911c91f606dfeda34fab4a015f172a",
+    "unknown-semantics-kgz.md": "e0d0636f4c4cdaaacc21f41b381bae39bfc9ff3619cd69f1e8bfc16ea65dc804",
+    "schema-diff.yaml": "848aeb3bdf39ed54fa0754a4e2c8d55e37c20bd207107cbb1770067a87108274",
+    "entity-crosswalk.yaml": "b0d4ae445f00512d21531bc731005d587899aa27905958a1da692a2616163008",
+    "compare-verification-report.json": "200139dd3ba6ccf88fdea28eb14ffc458dba9bcfaa9db560c8da63191ffb7e5a",
+    "subject-root-analysis.json": "a5065177780cfd028631eb87ef1b7ed587a77722d7d6c5c672582c5cd5597f13",
+    "subject-root-analysis.md": "08077bff9c7b296529c33277ce33d94a72d4818a37b60da4184df507939044f9",
+    "source-relationship-assessment.json": "861ea023dfee0e9e150c67d7278ec2f8b93aaeec38270a9f911a83ed991f4b34",
+    "source-relationship-assessment.md": "75df675096ba7b645a9820664986f1caf349655b170a5f06f2035cc56564481c",
+    "identity-linkage-assessment.json": "c339261b58d198d58da1b36b56efd87a127e1aca454c059253192cbe42d6471a",
+    "identity-linkage-assessment.md": "37c53a9dfe95222c7c433937f8545b1ef4b4a60ae3d405141e02ea524646aca7",
+    "relationship-verification-report.json": "28fbefc43c80a91a486bf597dfb031777a18694ff4de9c399f39a8a960999f73",
+    "relationship-query-log.json": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+    "manifest.sha256": "38d5c779b71f123e2adbd799a9e7835a9cf289b0f023d7ea102b6c852efeb50c",
+    "relationship-manifest.sha256": "99923700a7a40aea9039497e43dbea78c3b88a5a7a1c61da0391a3d576a8f250"
+  },
+  "unresolved_mappings": [
+    "patients:magerya_api.account_patient->None",
+    "patients:None->public.persons",
+    "visits:magerya_api.appointment_appointment->public.consultations",
+    "doctors:magerya_api.account_doctor->public.users",
+    "specialties:magerya_api.account_doctor->None",
+    "laboratory_results:magerya_api.document_analysisresult->quest_digital.analyses_constructor",
+    "laboratory_results:magerya_api.document_analysisresultitem->None",
+    "laboratory_results:None->quest_digital.lab_result",
+    "medical_documents:magerya_api.document_document->None",
+    "medical_documents:magerya_api.document_informationform->None",
+    "medical_documents:magerya_api.document_medicalreport->None",
+    "medical_documents:magerya_api.document_patientquestionnaire->None",
+    "medical_documents:magerya_api.document_procedurelist->None",
+    "measurements:None->public.profilaxys_analyses",
+    "measurements:None->public.profilaxys_profile",
+    "measurements:None->public.users_profile",
+    "appointments:magerya_api.appointment_appointment->public.consultations"
+  ],
+  "reported_unresolved_count": 17,
+  "unresolved_questions": [
+    "Whether systems ever shared a deployment or data export path",
+    "Exact laboratory result representation equivalence (header/value split differs)",
+    "Source B patient root resolves via shared users table; staff/patient separation unclear"
+  ],
+  "test_result": {
+    "collected": 132,
+    "passed": 132,
+    "failed": 0,
+    "skipped": 0,
+    "error": 0,
+    "command": "/Volumes/Siska/DEVELOP/Human simulator/.venv/bin/python3.13 -m pytest -q --tb=no -m not verify_stage02_gate",
+    "exit_code": 0,
+    "duration_seconds": 2.64,
+    "executed": true,
+    "status": "PASS"
+  },
+  "final_manifest": "stage-02-final-manifest.sha256"
+}

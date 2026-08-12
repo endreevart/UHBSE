@@ -7,18 +7,10 @@ import { zh } from './locales/zh'
 import { es } from './locales/es'
 import { fr } from './locales/fr'
 import { de } from './locales/de'
+import { applySeoMeta } from '../lib/seo'
 
-export const LOCALES = [
-  { code: 'en', label: 'English', short: 'EN', dir: 'ltr' },
-  { code: 'ru', label: 'Русский', short: 'RU', dir: 'ltr' },
-  { code: 'ar', label: 'العربية', short: 'AR', dir: 'ltr' },
-  { code: 'zh', label: '中文', short: 'ZH', dir: 'ltr' },
-  { code: 'es', label: 'Español', short: 'ES', dir: 'ltr' },
-  { code: 'fr', label: 'Français', short: 'FR', dir: 'ltr' },
-  { code: 'de', label: 'Deutsch', short: 'DE', dir: 'ltr' },
-] as const
-
-export type LocaleCode = (typeof LOCALES)[number]['code']
+export { LOCALES, type LocaleCode } from './config'
+import type { LocaleCode } from './config'
 
 const DICTS: Record<LocaleCode, Dict> = { en, ru, ar, zh, es, fr, de }
 
@@ -64,10 +56,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     root.dir = 'ltr'
     root.dataset.locale = locale
     root.dataset.textDir = textDir
-    document.title = t.meta.title
-    document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute('content', t.meta.description)
+    applySeoMeta(locale, t.meta)
   }, [locale, textDir, t])
 
   const setLocale = useCallback((code: LocaleCode) => {

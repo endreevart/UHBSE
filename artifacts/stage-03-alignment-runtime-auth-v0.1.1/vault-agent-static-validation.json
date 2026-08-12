@@ -1,0 +1,21 @@
+{
+  "kind": "STATIC",
+  "title": "Vault Agent configuration static validation",
+  "overall_status": "PASS",
+  "checks": {
+    "hcl_present": "PASS",
+    "version_pin_hmac": "PASS",
+    "version_pin_loader": "PASS",
+    "remove_secret_id_file_after_reading": "PASS",
+    "wrapping_path": "PASS",
+    "exec_supervisor": "PASS",
+    "compose_single_container": "PASS",
+    "compose_tmpfs_run": "PASS",
+    "compose_no_named_volume_for_secrets": "PASS",
+    "compose_no_vault_token_env": "PASS",
+    "dockerfile_present": "PASS",
+    "host_path_not_equated_to_container_tmpfs": "PASS"
+  },
+  "note": "Static HCL/compose checks do not constitute vault_agent_runtime_execution",
+  "vault_agent_runtime_execution": "NOT_VERIFIED"
+}

@@ -1,4 +1,6 @@
 import type { Dict } from "./en";
+import { status } from "../status/es"
+import type { StatusContent } from "../status/types"
 
 export const es: Dict = {
   meta: {
@@ -14,10 +16,11 @@ export const es: Dict = {
     partners: "Socios",
     cta: "Unirse a la red de investigación",
     language: "Idioma",
+    ariaLabel: "Navegación principal",
   },
 
   hero: {
-    titleA: "La medicina aprendió a observar el cuerpo humano.",
+    titleA: "La medicina aprendió a observar el organismo humano.",
     titleB: "Ahora debe aprender a simularlo.",
     lead: "UHBSE es un motor de simulación de la biología humana diseñado para modelar cómo puede cambiar un estado biológico individual bajo medicamentos, suplementos, nutrición y actividad física.",
     sub: "Construido a partir de evidencia clínica real. Diseñado en torno a la incertidumbre. Creado para la investigación antes del uso clínico.",
@@ -359,22 +362,7 @@ export const es: Dict = {
     ],
   },
 
-  status: {
-    kicker: "Estado actual",
-    title:
-      "UHBSE se encuentra en la etapa de investigación y desarrollo de infraestructura.",
-    lead: "Es una tecnología de investigación en construcción, no un producto para uso clínico.",
-    items: [
-      "Conexión de varias fuentes clínicas",
-      "Análisis de datos longitudinales",
-      "Un modelo canónico de eventos biológicos",
-      "Una base de datos separada de estados basados en evidencia",
-      "Una arquitectura reproducible de procedencia de datos",
-      "Preparación del primer piloto de investigación limitado",
-    ],
-    dataNote:
-      "Datos clínicos longitudinales de las organizaciones sanitarias participantes.",
-  },
+  status: status satisfies StatusContent,
 
   partners: {
     kicker: "Colaboración",
@@ -421,6 +409,7 @@ export const es: Dict = {
 
   manifesto: {
     kicker: "Manifiesto",
+    title: "Estamos construyendo la capa de simulación que la medicina aún no tiene.",
     l1: "El cuerpo humano no es un registro médico estático.",
     l2: "Es un sistema biológico que cambia a través de miles de variables, intervenciones y momentos en el tiempo.",
     l3: "Durante décadas, la medicina ha registrado fragmentos de ese cambio.",

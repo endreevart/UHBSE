@@ -1,0 +1,33 @@
+{
+  "document_version": "0.1.1",
+  "report_status": "DRAFT",
+  "blocks_live_load": true,
+  "blocks_canonical_loader_runtime_contract": true,
+  "findings": [
+    {
+      "id": "initial_root_token_available",
+      "status": "OPEN"
+    },
+    {
+      "id": "limited_operator_identity_absent",
+      "status": "OPEN"
+    },
+    {
+      "id": "vault_key_custody_decision_required",
+      "status": "OPEN"
+    },
+    {
+      "id": "loader_restart_reauth_procedure_absent",
+      "status": "CLOSED",
+      "detail": "Closed only when two-cycle Agent restart/reauth PASS"
+    },
+    {
+      "id": "pgp_keys_shared_keyring_empty_passphrase",
+      "status": "OPEN"
+    },
+    {
+      "id": "multi_custodian_separation_absent",
+      "status": "OPEN"
+    }
+  ]
+}

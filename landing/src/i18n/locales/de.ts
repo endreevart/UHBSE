@@ -1,4 +1,6 @@
 import type { Dict } from "./en";
+import { status } from "../status/de"
+import type { StatusContent } from "../status/types"
 
 export const de: Dict = {
   meta: {
@@ -14,10 +16,11 @@ export const de: Dict = {
     partners: "Partner",
     cta: "Dem Forschungsnetzwerk beitreten",
     language: "Sprache",
+    ariaLabel: "Hauptnavigation",
   },
 
   hero: {
-    titleA: "Die Medizin hat gelernt, den menschlichen Körper zu beobachten.",
+    titleA: "Die Medizin hat gelernt, den menschlichen Organismus zu beobachten.",
     titleB: "Nun muss sie lernen, ihn zu simulieren.",
     lead: "UHBSE ist eine Simulationsmaschine für die menschliche Biologie, die modelliert, wie sich ein individueller biologischer Zustand unter Medikamenten, Nahrungsergänzung, Ernährung und körperlicher Aktivität verändern kann.",
     sub: "Aus realer klinischer Evidenz gebaut. Um Unsicherheit herum entworfen. Für die Forschung geschaffen — vor jeder klinischen Anwendung.",
@@ -359,22 +362,7 @@ export const de: Dict = {
     ],
   },
 
-  status: {
-    kicker: "Status",
-    title:
-      "UHBSE befindet sich derzeit in der Forschungs- und Infrastrukturentwicklungsphase.",
-    lead: "Dies ist eine im Aufbau befindliche Forschungstechnologie, kein Produkt für den klinischen Einsatz.",
-    items: [
-      "Anbindung mehrerer klinischer Quellen",
-      "Analyse longitudinaler Daten",
-      "Ein kanonisches Modell biologischer Ereignisse",
-      "Eine separate Datenbank evidenzbasierter Zustände",
-      "Eine reproduzierbare Architektur der Datenherkunft",
-      "Vorbereitung des ersten begrenzten Forschungspiloten",
-    ],
-    dataNote:
-      "Longitudinale klinische Daten aus teilnehmenden Gesundheitsorganisationen.",
-  },
+  status: status satisfies StatusContent,
 
   partners: {
     kicker: "Partnerschaft",
@@ -421,6 +409,7 @@ export const de: Dict = {
 
   manifesto: {
     kicker: "Manifest",
+    title: "Wir bauen die Simulationsschicht, die der Medizin bislang fehlt.",
     l1: "Der menschliche Körper ist keine statische Krankenakte.",
     l2: "Er ist ein biologisches System, das sich über Tausende von Variablen, Interventionen und Zeitpunkte hinweg verändert.",
     l3: "Jahrzehntelang hat die Medizin nur Fragmente dieser Veränderung festgehalten.",

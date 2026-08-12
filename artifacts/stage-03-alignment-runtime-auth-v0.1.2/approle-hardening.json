@@ -1,0 +1,46 @@
+{
+  "approle": "uhbse-canonical-loader",
+  "expected": {
+    "bind_secret_id": true,
+    "secret_id_num_uses": 1,
+    "secret_id_ttl_seconds": 300,
+    "token_ttl_seconds": 900,
+    "token_max_ttl_seconds": 3600,
+    "token_type": "service",
+    "token_no_default_policy": true,
+    "token_policies": [
+      "uhbse-canonical-loader"
+    ]
+  },
+  "observed_sanitised": {
+    "bind_secret_id": true,
+    "secret_id_num_uses": 1,
+    "secret_id_ttl": 300,
+    "token_ttl": 900,
+    "token_max_ttl": 3600,
+    "token_type": "service",
+    "token_no_default_policy": true,
+    "token_policies": [
+      "uhbse-canonical-loader"
+    ]
+  },
+  "checks": {
+    "bind_secret_id": "PASS",
+    "secret_id_num_uses": "PASS",
+    "secret_id_ttl": "PASS",
+    "token_ttl": "PASS",
+    "token_max_ttl": "PASS",
+    "token_type": "PASS",
+    "token_no_default_policy": "PASS",
+    "token_policies_exact": "PASS"
+  },
+  "overall_status": "PASS",
+  "forbidden_in_evidence": [
+    "role_id",
+    "secret_id",
+    "wrapping_token",
+    "vault_token"
+  ],
+  "harden_rc": 0,
+  "kind": "LIVE"
+}

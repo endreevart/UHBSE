@@ -1,0 +1,120 @@
+{
+  "kind": "STATIC",
+  "title": "Phase 0 read-only baseline",
+  "generated_at": "2026-08-12T11:50:54.713231+00:00",
+  "accepted_v01": {
+    "zip": "stage-03-alignment-runtime-auth-v0.1-review.zip",
+    "sha256": "a7708432dd0484797ee35b613de005bc147b541cb6e484fcd5a999fb024b25b4",
+    "observed": "a7708432dd0484797ee35b613de005bc147b541cb6e484fcd5a999fb024b25b4"
+  },
+  "migration_hashes": {
+    "0001_roles_and_schema.sql": "65f0647ff09994e0bd0ede693179f0431061224059d75871b997d7dd79b704e0",
+    "0002_pilot_evidence_tables.sql": "81bd54f9a37480a285f79f587cc8552daf86c8a3b3b61429c7a852df974f0009",
+    "0003_pilot_grants.sql": "56948f3066bb4c95efc4e7aa24a97986930c3257878d89e693a95517dd65396b",
+    "0004_storage_contract_hardening.sql": "20f1744f31f4e215243b8c9922ac4838b28ce969fedaef550a8ecb9c6c3b373a"
+  },
+  "schema_fingerprint": {
+    "algorithm": "sha256",
+    "sha256": "ee092ee97ecfce41ed90437f3f03db767e32a57a3f248dfecaa548d6b0856401",
+    "schema": "canonical_evidence",
+    "table_count": 7
+  },
+  "row_counts": {
+    "source_system": 0,
+    "source_record": 0,
+    "subject": 0,
+    "subject_characteristic": 0,
+    "encounter": 0,
+    "observation": 0,
+    "observation_component": 0
+  },
+  "role_inventory": {
+    "roles": {
+      "canonical_owner": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": false,
+          "rolinherit": true,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": []
+      },
+      "canonical_migrator": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": false,
+          "rolinherit": true,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": []
+      },
+      "canonical_loader": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": false,
+          "rolinherit": true,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": []
+      },
+      "canonical_validator_ro": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": false,
+          "rolinherit": true,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": []
+      },
+      "canonical_loader_login": {
+        "exists": true,
+        "attributes": {
+          "rolcanlogin": true,
+          "rolinherit": false,
+          "rolsuper": false,
+          "rolcreatedb": false,
+          "rolcreaterole": false,
+          "rolreplication": false,
+          "rolbypassrls": false
+        },
+        "memberships": [
+          "canonical_loader"
+        ]
+      }
+    },
+    "password_material_included": false
+  },
+  "before_hashes_mutable_files": {
+    "ops/vault/runtime/vault-agent.hcl": "18f7f71cb9aaf6549497f532bea080e2ddfb92e8831d31d6481cf0128360ca89",
+    "ops/vault/runtime/Dockerfile": "e438671c6b91defd61e2e1e75733f5d8e2cf5f9f2ab38620951f6ee34082a743",
+    "ops/vault/runtime/entrypoint.sh": "ed312a391173717348fa2d57961528250fb9ab6d0e4bc542dc5ce7b0edac43f8",
+    "ops/vault/runtime/synthetic_child.py": "e0cafee0b48ba270f7bd1d6f684b825c275bc84dd9826ca7d064277e9a9c3633",
+    "docker-compose.yml": "650b23714fd71dad24fe0fa2fe1f57507ab175eed8cbc01ada33f5a664f98ab1",
+    "src/human_simulator/stage03_alignment/approle_hardening.py": "0f7ab52a713b2f4b893bb92b5c4e81022ef3877f83a91d8e49dcc77351dc2a42",
+    "src/human_simulator/stage03_alignment/token_lifecycle.py": "0e4e105d860e89108e0a50eb8bae65798385fe6e68f2093240dfa9fc2ecc4b64",
+    "src/human_simulator/stage03_alignment/run_runtime_auth_v011.py": "5ffe534841179852a836c0a8120edc0c424de0a36c4cd0f186affc1a18dac4d8"
+  },
+  "checks": {
+    "accepted_v01_sha": "PASS",
+    "migrations_present": "PASS",
+    "row_counts_zero": "PASS",
+    "postgres_principal_contract": "PASS"
+  },
+  "overall_status": "PASS"
+}

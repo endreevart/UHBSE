@@ -1,0 +1,423 @@
+{
+  "authoritative_bytes": {
+    "identity-linkage-assessment.json": {
+      "published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-design-v0.7-review.zip",
+        "stage-03-design-v0.7.1-review.zip",
+        "stage-03-design-v0.7.4-review.zip",
+        "stage-03-implementation-changeset-01-v0.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip",
+        "stage-03-implementation-plan-v0.3.4-review.zip",
+        "stage-03-implementation-plan-v0.3.5-review.zip"
+      ],
+      "sha256": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "why": "pinned by the Stage 03 prior-stage integrity baseline, published verbatim in accepted review bundles, and confirmed semantically current by a read-only reproduction"
+    },
+    "subject-root-analysis.json": {
+      "published_in": [
+        "stage-02-maintenance-01-review.zip",
+        "stage-03-design-v0.7-review.zip",
+        "stage-03-design-v0.7.1-review.zip",
+        "stage-03-design-v0.7.4-review.zip",
+        "stage-03-implementation-changeset-01-v0.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.1-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.2-review.zip",
+        "stage-03-implementation-changeset-01-v0.2.3-review.zip",
+        "stage-03-implementation-plan-v0.3.4-review.zip",
+        "stage-03-implementation-plan-v0.3.5-review.zip"
+      ],
+      "sha256": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "why": "pinned by the Stage 03 prior-stage integrity baseline, published verbatim in accepted review bundles, and confirmed semantically current by a read-only reproduction"
+    }
+  },
+  "candidate": {
+    "artifact_count": 8,
+    "artifact_sha256": {
+      "identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "identity-linkage-assessment.md": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d",
+      "relationship-query-log.json": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+      "relationship-verification-report.json": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4",
+      "source-relationship-assessment.json": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07",
+      "source-relationship-assessment.md": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6",
+      "subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "subject-root-analysis.md": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58"
+    },
+    "candidate_manifest_sha256": "13aae26b37032730c533740bc513872cb2a6890429b64ebd2fb923ffcf672974",
+    "directory": "artifacts/stage-02-maintenance-01/candidate",
+    "files_whose_bytes_differ_from_working_stage_02": [],
+    "regenerated_artifacts": 0,
+    "working_stage_02_written": false
+  },
+  "corroborating_evidence": {
+    "bodies_identical_across_all_published_copies": true,
+    "intersection_of_authorities_equals_drifted_set": true,
+    "manifest_expected_bytes_published_in_any_release": false,
+    "markdown_siblings_disagree_with_their_json": true,
+    "read_only_reproduction_reproduces_the_same_body": true,
+    "restore_mechanism_explains_observed_state": true,
+    "timestamp_split": [
+      {
+        "json_artifact": "identity-linkage-assessment.json",
+        "json_assessed_at": "2026-07-31T22:38:21.077245+00:00",
+        "markdown_artifact": "identity-linkage-assessment.md",
+        "markdown_assessed_at": "2026-08-01T16:52:05.567497+00:00",
+        "siblings_disagree": true
+      },
+      {
+        "json_artifact": "subject-root-analysis.json",
+        "json_assessed_at": "2026-07-31T22:38:20.665954+00:00",
+        "markdown_artifact": "subject-root-analysis.md",
+        "markdown_assessed_at": "2026-08-01T16:52:04.302478+00:00",
+        "siblings_disagree": true
+      }
+    ]
+  },
+  "decided_at": "2026-08-07T15:04:47.122101+00:00",
+  "defect": "stage02_relationship_manifest_drift",
+  "drifted_artifacts": [
+    "subject-root-analysis.json",
+    "identity-linkage-assessment.json"
+  ],
+  "isolated_validation": {
+    "applied_in": "throwaway copy of the workspace, discarded afterwards",
+    "candidate_applied": true,
+    "gate_still_fails_on_remaining_blockers": true,
+    "manifest_drift_blocker_cleared": true,
+    "pre_live_load_gate_failed_checks": [
+      "canonical_loader_runtime_principal_undefined",
+      "source_subject_key_opacity_undefined",
+      "temporal_precision_field_absent_from_model",
+      "encounter_provider_id_population_disagreement"
+    ],
+    "pre_live_load_gate_open_blockers": [
+      "canonical_loader_runtime_principal_undefined",
+      "encounter_provider_id_population_disagreement",
+      "source_subject_key_opacity_undefined",
+      "temporal_precision_field_absent_from_model"
+    ],
+    "pre_live_load_gate_status": "FAIL",
+    "relationship_manifest_detail": "verified 8 entries in relationship-manifest.sha256",
+    "relationship_manifest_verified": true,
+    "verify_stage_02": {
+      "all_checks": [
+        {
+          "name": "source_a_report_final",
+          "status": "PASS"
+        },
+        {
+          "name": "source_a_live_extraction",
+          "status": "PASS"
+        },
+        {
+          "name": "source_a_audit_user",
+          "status": "PASS"
+        },
+        {
+          "name": "source_a_readonly_validation",
+          "status": "PASS"
+        },
+        {
+          "name": "source_a_fingerprint_match",
+          "status": "PASS"
+        },
+        {
+          "name": "source_a_manifest",
+          "status": "PASS"
+        },
+        {
+          "name": "source_a_not_preliminary",
+          "status": "PASS"
+        },
+        {
+          "name": "source_b_audit_pass",
+          "status": "PASS"
+        },
+        {
+          "name": "source_b_audit_user",
+          "status": "PASS"
+        },
+        {
+          "name": "source_b_manifest",
+          "status": "PASS"
+        },
+        {
+          "name": "source_b_restore_completed",
+          "status": "PASS"
+        },
+        {
+          "name": "source_b_profile_completed",
+          "status": "PASS"
+        },
+        {
+          "name": "source_b_raw_db_unchanged",
+          "status": "PASS"
+        },
+        {
+          "name": "compare_verification_report",
+          "status": "PASS"
+        },
+        {
+          "name": "compare_artifact_schema-diff.yaml",
+          "status": "PASS"
+        },
+        {
+          "name": "compare_artifact_entity-crosswalk.yaml",
+          "status": "PASS"
+        },
+        {
+          "name": "crosswalk_candidate_only",
+          "status": "PASS"
+        },
+        {
+          "name": "crosswalk_no_unproven_evidence_backed",
+          "status": "PASS"
+        },
+        {
+          "name": "crosswalk_unresolved_mappings_count",
+          "status": "PASS"
+        },
+        {
+          "name": "crosswalk_data_level_present",
+          "status": "PASS"
+        },
+        {
+          "name": "crosswalk_incompatible_levels_not_mapped",
+          "status": "PASS"
+        },
+        {
+          "name": "no_permanent_patient_crosswalk",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship_verification_report",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship_manifest",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship_summary_subject_root_a_verdict",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship_summary_subject_root_b_verdict",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship_summary_identity_verdict",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship_summary_source_relationship_verdict",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship_summary_population_overlap_estimate_status",
+          "status": "PASS"
+        },
+        {
+          "name": "no_linkage_proven",
+          "status": "PASS"
+        },
+        {
+          "name": "no_population_overlap_percentage",
+          "status": "PASS"
+        },
+        {
+          "name": "population_overlap_not_estimable",
+          "status": "PASS"
+        },
+        {
+          "name": "identifier_matches_separate_from_subject_pairs",
+          "status": "PASS"
+        },
+        {
+          "name": "conflict_definition_present",
+          "status": "PASS"
+        },
+        {
+          "name": "missingness_per_source",
+          "status": "PASS"
+        },
+        {
+          "name": "application_shared_relation_name_count",
+          "status": "PASS"
+        },
+        {
+          "name": "infrastructure_overlap_not_evidence",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship_artifacts_no_pii",
+          "status": "PASS"
+        },
+        {
+          "name": "input_artifact_hashes_computed",
+          "status": "PASS"
+        },
+        {
+          "name": "manifest.sha256_no_self_hash",
+          "status": "PASS"
+        },
+        {
+          "name": "relationship-manifest.sha256_no_self_hash",
+          "status": "PASS"
+        },
+        {
+          "name": "sanitized_query_logs_present",
+          "status": "PASS"
+        },
+        {
+          "name": "no_secrets_in_artifacts",
+          "status": "PASS"
+        },
+        {
+          "name": "full_test_suite",
+          "status": "FAIL"
+        },
+        {
+          "name": "test_result_not_skipped",
+          "status": "FAIL"
+        },
+        {
+          "name": "verify_json_no_self_hash",
+          "status": "PASS"
+        },
+        {
+          "name": "unresolved_mappings_complete",
+          "status": "PASS"
+        },
+        {
+          "name": "verdicts_match_relationship_assessment",
+          "status": "PASS"
+        },
+        {
+          "name": "unresolved_mappings_exact_match",
+          "status": "PASS"
+        },
+        {
+          "name": "report_final_only_on_overall_pass",
+          "status": "PASS"
+        },
+        {
+          "name": "overall_pass_requires_all_checks",
+          "status": "PASS"
+        },
+        {
+          "name": "checks_arithmetic",
+          "status": "PASS"
+        },
+        {
+          "name": "final_manifest_hashes_match",
+          "status": "PASS"
+        }
+      ],
+      "checks_evaluated": 51,
+      "checks_not_evaluated": [
+        "full_test_suite",
+        "test_result_not_skipped"
+      ],
+      "failed_evaluated_checks": [],
+      "raw_status": "FAIL",
+      "relationship_manifest_check": "PASS",
+      "status_excluding_test_gate": "PASS",
+      "why_not_evaluated": "verify-stage-02 runs the full pytest suite as a check; inside a throwaway copy that would re-enter the publication pipeline, so it was not run"
+    },
+    "working_stage_02_sha256_after": {
+      "identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "identity-linkage-assessment.md": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d",
+      "relationship-manifest.sha256": "19b932cc2f27684013d743444b0b8d66f560e200fffc73a571e387178b6ec6f2",
+      "relationship-query-log.json": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+      "relationship-verification-report.json": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4",
+      "source-relationship-assessment.json": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07",
+      "source-relationship-assessment.md": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6",
+      "subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "subject-root-analysis.md": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58"
+    },
+    "working_stage_02_sha256_before": {
+      "identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "identity-linkage-assessment.md": "6647ca41fe8a0fed648539c5ba5b6dc0a4e404aa2417cfe277d0b114d72f7c0d",
+      "relationship-manifest.sha256": "19b932cc2f27684013d743444b0b8d66f560e200fffc73a571e387178b6ec6f2",
+      "relationship-query-log.json": "0c8264005b7118d04b99f064c3426ac3e30db124d91d0e36f63b5807af254e87",
+      "relationship-verification-report.json": "1ba21e779fb154658689a6047b89202d5cec65dccc7d6830d32dfd7ef1295be4",
+      "source-relationship-assessment.json": "b6113021c7875b68fcd0bbaa4d0443e63bdadc7be2d8350fc224336d2481fd07",
+      "source-relationship-assessment.md": "5fe465b39de9edc1d357956367bfc5bce06daba4ea9357e6f4c02d391555d9a6",
+      "subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8",
+      "subject-root-analysis.md": "5b45a907f248dc0839ad3d18bfff7394a39205dcd02f9fca31149bacd4b63f58"
+    },
+    "working_stage_02_unchanged": true
+  },
+  "maintenance_id": "stage-02-maintenance-01",
+  "maintenance_version": "0.1",
+  "mechanism": {
+    "command": "audit restore-prior-stage-baseline --confirm",
+    "covers_the_relationship_manifest": false,
+    "explains_the_observed_state": true,
+    "relationship_artifacts_it_covers": [
+      "identity-linkage-assessment.json",
+      "subject-root-analysis.json"
+    ],
+    "restores_bytes_from": "artifacts/external-review/stage-03-design-v0.7.1-review.zip",
+    "source_matches_current_bytes": true,
+    "source_sha256": {
+      "identity-linkage-assessment.json": "9bc39761915a77308569fef183523a7310bc8248ab62849e648206867c685cd6",
+      "subject-root-analysis.json": "9a685d76cc45cdb948b89d28cc13c6df61984dd15f21c424c5d42f21f76c98e8"
+    }
+  },
+  "non_actions": [
+    "artifacts/stage-02/ not written",
+    "no automatic restore performed",
+    "no repair applied",
+    "relationship manifest not resolved in the working tree",
+    "Design v0.7.5 not created",
+    "Plan v0.3.6 not created",
+    "Changeset 02 not started",
+    "no ETL, extraction or load",
+    "no canonical schema or migration change",
+    "no published archive overwritten"
+  ],
+  "proposed_repair": {
+    "action": "re-seal relationship-manifest.sha256 over the accepted artifact bytes",
+    "applied": false,
+    "artifacts_modified": 0,
+    "candidate_directory": "artifacts/stage-02-maintenance-01/candidate",
+    "candidate_manifest_sha256": "13aae26b37032730c533740bc513872cb2a6890429b64ebd2fb923ffcf672974",
+    "justified_by_evidence": true,
+    "manifest_files_modified": 1,
+    "requires": "a separate, explicitly authorised Stage 02 repair step"
+  },
+  "rejected_alternatives": [
+    {
+      "option": "recompute the manifest over whatever is on disk",
+      "rejected_because": "identical in outcome to the proposed repair only because provenance was established first; taken on its own it signs unverified bytes as correct"
+    },
+    {
+      "option": "adopt the freshly reproduced artifacts",
+      "rejected_because": "a new run writes a new assessed_at, producing bytes no release has accepted and breaking the prior-stage baseline for both files"
+    },
+    {
+      "option": "restore the bytes the manifest expects",
+      "rejected_because": "those bytes exist in no published release and cannot be reconstructed from any accepted artifact"
+    }
+  ],
+  "residual_observations": [
+    {
+      "action": "none",
+      "observation": "subject-root-analysis.md and identity-linkage-assessment.md still record the 2026-08-01T16:52Z run while their .json siblings record 2026-07-31T22:38Z",
+      "why": "both markdown files match the manifest and were published in accepted bundles; regenerating them to agree would create fresh unattested bytes and a second drift"
+    },
+    {
+      "action": "recorded for a future changeset",
+      "observation": "assessed_at makes every relationship artifact non-reproducible byte for byte",
+      "why": "changing artifact generation is out of scope for a diagnosis"
+    }
+  ],
+  "root_cause": "Two controls pin the same two files to different bytes. The relationship manifest was sealed by the assessment run of 2026-08-01T16:52Z over the artifacts that run produced. The Stage 03 prior-stage integrity baseline pins the same two files to the bytes of the 2026-07-31T22:38Z run. Those two files, and only those two, are the intersection of RELATIONSHIP_MANIFEST_ARTIFACTS and ACCEPTED_SHA256, so a prior-stage restore reverted them while the six artifacts pinned by the manifest alone were left at the values the manifest records.",
+  "status": "DIAGNOSED_REPAIR_PREPARED_NOT_APPLIED"
+}

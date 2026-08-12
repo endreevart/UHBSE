@@ -1,0 +1,61 @@
+{
+  "cycle_1": {
+    "status": "PASS",
+    "synthetic_subject_label": "SYNTHETIC_RUNTIME_SMOKE",
+    "checks": {
+      "wrapped_secret_id_removed": "PASS",
+      "hmac_key_version_1": "PASS",
+      "hmac_algorithm": "PASS",
+      "loader_username": "PASS",
+      "loader_password_present": "PASS",
+      "hmac_output_length_32": "PASS",
+      "hmac_deterministic": "PASS",
+      "session_user": "PASS",
+      "current_user_before_set_role": "PASS",
+      "current_user_after_set_role": "PASS",
+      "select_privilege": "PASS",
+      "insert_privilege": "PASS",
+      "insert_not_executed": "PASS",
+      "row_counts_zero": "PASS"
+    },
+    "row_counts": {
+      "source_system": 0,
+      "source_record": 0,
+      "subject": 0,
+      "subject_characteristic": 0,
+      "encounter": 0,
+      "observation": 0,
+      "observation_component": 0
+    }
+  },
+  "cycle_2": {
+    "status": "PASS",
+    "synthetic_subject_label": "SYNTHETIC_RUNTIME_SMOKE",
+    "checks": {
+      "wrapped_secret_id_removed": "PASS",
+      "hmac_key_version_1": "PASS",
+      "hmac_algorithm": "PASS",
+      "loader_username": "PASS",
+      "loader_password_present": "PASS",
+      "hmac_output_length_32": "PASS",
+      "hmac_deterministic": "PASS",
+      "session_user": "PASS",
+      "current_user_before_set_role": "PASS",
+      "current_user_after_set_role": "PASS",
+      "select_privilege": "PASS",
+      "insert_privilege": "PASS",
+      "insert_not_executed": "PASS",
+      "row_counts_zero": "PASS"
+    },
+    "row_counts": {
+      "source_system": 0,
+      "source_record": 0,
+      "subject": 0,
+      "subject_characteristic": 0,
+      "encounter": 0,
+      "observation": 0,
+      "observation_component": 0
+    }
+  },
+  "overall_status": "PASS"
+}

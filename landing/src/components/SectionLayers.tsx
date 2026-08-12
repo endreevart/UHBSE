@@ -1,6 +1,7 @@
 import { useI18n } from '../i18n'
 import { smoothPath, toBand } from '../lib/curve'
 import { Reveal } from './Reveal'
+import { SectionHead } from './SectionHead'
 
 const W = 1400
 const H = 120
@@ -133,13 +134,13 @@ export function SectionLayers() {
   ]
 
   return (
-    <section className="section">
+    <section className="section" id="layers" aria-labelledby="layers-heading">
       <div className="shell">
-        <Reveal className="section__head">
-          <p className="kicker">{t.layers.kicker}</p>
-          <h2 className="display display--l">{t.layers.title}</h2>
-          <p className="lede">{t.layers.lead}</p>
-        </Reveal>
+        <SectionHead
+          headingId="layers-heading"
+          title={t.layers.title}
+          lead={t.layers.lead}
+        />
 
         <div className="layers">
           {rows.map(({ key, color, data, Plot }, i) => (

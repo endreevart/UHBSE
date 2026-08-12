@@ -1,0 +1,37 @@
+{
+  "source_id": "magerya_api",
+  "reachable": true,
+  "duration_ms": 1.22,
+  "database": "magerya_api",
+  "host": "localhost",
+  "port": 5434,
+  "redacted_url": "postgresql+psycopg://mg_audit_ro:***@localhost:5434/magerya_api",
+  "profiled_at": "2026-07-31T21:45:19.409402+00:00",
+  "connection_user": "mg_audit_ro",
+  "readonly_user_only": true,
+  "extraction_method": "live_readonly_profile",
+  "audit_role": {
+    "username": "mg_audit_ro",
+    "redacted_connection": "postgresql+psycopg://mg_audit_ro:***@localhost:5434/magerya_api",
+    "default_transaction_read_only": true,
+    "schemas_granted": [
+      "magerya_api",
+      "public",
+      "tiger",
+      "tiger_data",
+      "topology"
+    ],
+    "provision_method": "docker_exec_admin"
+  },
+  "schema_fingerprint_check": {
+    "current_fingerprint_sha256": "01272eab2d7d29ee4cd5a90a81e724f02e691c8da5e27ce65afb19a91227919e",
+    "current_table_count": 206,
+    "current_schema_count": 4,
+    "unchanged": true,
+    "baseline_fingerprint_sha256": "01272eab2d7d29ee4cd5a90a81e724f02e691c8da5e27ce65afb19a91227919e",
+    "baseline_source": "artifacts/stage-01/schema-fingerprint.json",
+    "baseline_table_count": 206,
+    "fingerprints_match": true,
+    "baseline_status": "compared"
+  }
+}
