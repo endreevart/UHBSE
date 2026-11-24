@@ -1,0 +1,64 @@
+{
+  "V01_INTEGRATED_RUNTIME_CLAIM_STATUS": "CORRECTION_REQUIRED",
+  "accounting": {
+    "V01_JOINT_PANEL_ACCOUNTING_STATUS": "NOT_RECONCILED",
+    "conservation_formula_published": true,
+    "literal_unexplained_zero": true,
+    "ok": true,
+    "outside_vocab_skipped_without_count": true,
+    "version": "0.1.1"
+  },
+  "api": {
+    "V01_API_MODEL_EXECUTION_DEFECT_STATUS": "CONFIRMED",
+    "V01_HTTP_RUNTIME_STATUS": "NOT_IMPLEMENTED",
+    "api_audit_checks_model_execution": false,
+    "event_probability_returns_metadata_only": true,
+    "forecast_returns_metadata_only": true,
+    "handler_imported": true,
+    "ok": true,
+    "server_instantiated": false,
+    "state_returns_metadata_only": true,
+    "version": "0.1.1"
+  },
+  "connectors": {
+    "V01_CONNECTOR_HEALTH_CLAIM_STATUS": "CORRECTION_REQUIRED",
+    "model_registries_counted_as_connectors": true,
+    "no_source_specific_read_transaction": true,
+    "ok": true,
+    "source_a_is_directory_presence": true,
+    "source_b_equals_source_a_dir_probe": true,
+    "version": "0.1.1"
+  },
+  "residual": {
+    "CROSS_HORIZON_DEPENDENCE_STATUS": "NOT_ESTABLISHED",
+    "V01_ENGINE_JOINT_ROLLOUT_CLAIM_STATUS": "CORRECTION_REQUIRED",
+    "V01_ENGINE_RESIDUAL_ONLY_OUTPUT_DEFECT_STATUS": "CONFIRMED",
+    "allowed_name": "SOURCE_SPECIFIC_JOINT_OUTCOME_DISTRIBUTION_AT_REQUESTED_HORIZON",
+    "marginal_provider_executed": false,
+    "ok": true,
+    "residual_added_to_marginal": false,
+    "samples_residuals_as_paths": true,
+    "version": "0.1.1"
+  },
+  "runtime": {
+    "V01_ENGINE_STATE_CONDITIONING_DEFECT_STATUS": "CONFIRMED",
+    "infer_joint_reads_history_depth": false,
+    "infer_joint_reads_state_at_t0": false,
+    "n_paths": 8,
+    "ok": true,
+    "opposite_state_identical_paths": true,
+    "version": "0.1.1"
+  },
+  "scale": {
+    "missing_scale_silent_raw_fallback": true,
+    "ok": true,
+    "version": "0.1.1"
+  },
+  "version": "0.1.1",
+  "workbench": {
+    "V01_WORKBENCH_RUNTIME_INTEGRATION_STATUS": "STATIC_EVIDENCE_SHELL_ONLY",
+    "calls_api": false,
+    "ok": true,
+    "version": "0.1.1"
+  }
+}

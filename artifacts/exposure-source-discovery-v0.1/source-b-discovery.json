@@ -1,0 +1,581 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-11-06T12:18:45Z",
+  "read_only_sessions": true,
+  "row_values_exported": false,
+  "field_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+  "exposure_tier_note": "Recommendation is not administration. No field is promoted to intake evidence by this run.",
+  "source_system": "kgz_raw",
+  "source_a_catalog_used": false,
+  "feedback.drugs": {
+    "rows": 41407,
+    "non_empty": 39615,
+    "non_empty_fraction": 0.9567,
+    "length": {
+      "n": 39615,
+      "p10": 1,
+      "p50": 29,
+      "p90": 206,
+      "mean": 78.8
+    },
+    "pattern_rows": {
+      "dose_amount": 14824,
+      "frequency": 9434,
+      "duration": 2780,
+      "supplement_term": 9161,
+      "route": 112,
+      "intake_change": 629
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.3742,
+      "frequency": 0.2381,
+      "duration": 0.0702,
+      "supplement_term": 0.2313,
+      "route": 0.0028,
+      "intake_change": 0.0159
+    },
+    "dose_and_frequency_rows": 7863,
+    "semantic_status": "UNKNOWN"
+  },
+  "feedback.change_drugs": {
+    "rows": 41407,
+    "non_empty": 33967,
+    "non_empty_fraction": 0.8203,
+    "length": {
+      "n": 33967,
+      "p10": 1,
+      "p50": 3,
+      "p90": 96,
+      "mean": 29.4
+    },
+    "pattern_rows": {
+      "dose_amount": 1852,
+      "frequency": 599,
+      "duration": 632,
+      "supplement_term": 3750,
+      "route": 25,
+      "intake_change": 5534
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.0545,
+      "frequency": 0.0176,
+      "duration": 0.0186,
+      "supplement_term": 0.1104,
+      "route": 0.0007,
+      "intake_change": 0.1629
+    },
+    "dose_and_frequency_rows": 429,
+    "semantic_status": "UNKNOWN"
+  },
+  "feedback.decline_drugs": {
+    "rows": 41407,
+    "non_empty": 33971,
+    "non_empty_fraction": 0.8204,
+    "length": {
+      "n": 33971,
+      "p10": 3,
+      "p50": 3,
+      "p90": 144,
+      "mean": 50.2
+    },
+    "pattern_rows": {
+      "dose_amount": 1916,
+      "frequency": 961,
+      "duration": 3458,
+      "supplement_term": 4765,
+      "route": 27,
+      "intake_change": 6057
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.0564,
+      "frequency": 0.0283,
+      "duration": 0.1018,
+      "supplement_term": 0.1403,
+      "route": 0.0008,
+      "intake_change": 0.1783
+    },
+    "dose_and_frequency_rows": 430,
+    "semantic_status": "UNKNOWN"
+  },
+  "feedback.vitamins": {
+    "rows": 41407,
+    "non_empty": 33959,
+    "non_empty_fraction": 0.8201,
+    "length": {
+      "n": 33959,
+      "p10": 17,
+      "p50": 181,
+      "p90": 511,
+      "mean": 236.1
+    },
+    "pattern_rows": {
+      "dose_amount": 24003,
+      "frequency": 18254,
+      "duration": 2951,
+      "supplement_term": 28550,
+      "route": 54,
+      "intake_change": 585
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.7068,
+      "frequency": 0.5375,
+      "duration": 0.0869,
+      "supplement_term": 0.8407,
+      "route": 0.0016,
+      "intake_change": 0.0172
+    },
+    "dose_and_frequency_rows": 16877,
+    "semantic_status": "UNKNOWN"
+  },
+  "feedback.positive_changes": {
+    "rows": 41407,
+    "non_empty": 33910,
+    "non_empty_fraction": 0.8189,
+    "length": {
+      "n": 33910,
+      "p10": 12,
+      "p50": 65,
+      "p90": 271,
+      "mean": 119.6
+    },
+    "pattern_rows": {
+      "dose_amount": 281,
+      "frequency": 2217,
+      "duration": 2777,
+      "supplement_term": 1061,
+      "route": 54,
+      "intake_change": 940
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.0083,
+      "frequency": 0.0654,
+      "duration": 0.0819,
+      "supplement_term": 0.0313,
+      "route": 0.0016,
+      "intake_change": 0.0277
+    },
+    "dose_and_frequency_rows": 71,
+    "semantic_status": "UNKNOWN"
+  },
+  "feedback.outside_doctor_medicine": {
+    "rows": 41407,
+    "non_empty": 15926,
+    "non_empty_fraction": 0.3846,
+    "length": {
+      "n": 15926,
+      "p10": 1,
+      "p50": 15,
+      "p90": 257,
+      "mean": 92.5
+    },
+    "pattern_rows": {
+      "dose_amount": 3600,
+      "frequency": 2828,
+      "duration": 1885,
+      "supplement_term": 2571,
+      "route": 231,
+      "intake_change": 384
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.226,
+      "frequency": 0.1776,
+      "duration": 0.1184,
+      "supplement_term": 0.1614,
+      "route": 0.0145,
+      "intake_change": 0.0241
+    },
+    "dose_and_frequency_rows": 2106,
+    "semantic_status": "UNKNOWN"
+  },
+  "feedback.drugs_first": {
+    "rows": 41407,
+    "non_empty": 12846,
+    "non_empty_fraction": 0.3102,
+    "length": {
+      "n": 12846,
+      "p10": 1,
+      "p50": 18,
+      "p90": 177,
+      "mean": 66.9
+    },
+    "pattern_rows": {
+      "dose_amount": 2426,
+      "frequency": 1769,
+      "duration": 1491,
+      "supplement_term": 2309,
+      "route": 127,
+      "intake_change": 255
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.1889,
+      "frequency": 0.1377,
+      "duration": 0.1161,
+      "supplement_term": 0.1797,
+      "route": 0.0099,
+      "intake_change": 0.0199
+    },
+    "dose_and_frequency_rows": 1340,
+    "semantic_status": "UNKNOWN"
+  },
+  "feedback.complaints": {
+    "rows": 41407,
+    "non_empty": 33896,
+    "non_empty_fraction": 0.8186,
+    "length": {
+      "n": 33896,
+      "p10": 3,
+      "p50": 92,
+      "p90": 465,
+      "mean": 193.2
+    },
+    "pattern_rows": {
+      "dose_amount": 707,
+      "frequency": 3978,
+      "duration": 4879,
+      "supplement_term": 1410,
+      "route": 200,
+      "intake_change": 1576
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.0209,
+      "frequency": 0.1174,
+      "duration": 0.1439,
+      "supplement_term": 0.0416,
+      "route": 0.0059,
+      "intake_change": 0.0465
+    },
+    "dose_and_frequency_rows": 285,
+    "semantic_status": "UNKNOWN"
+  },
+  "questionnaire.medicines": {
+    "rows": 52686,
+    "non_empty": 10420,
+    "non_empty_fraction": 0.1978,
+    "length": {
+      "n": 10420,
+      "p10": 8,
+      "p50": 69,
+      "p90": 284,
+      "mean": 121.8
+    },
+    "pattern_rows": {
+      "dose_amount": 4919,
+      "frequency": 2862,
+      "duration": 1652,
+      "supplement_term": 5146,
+      "route": 110,
+      "intake_change": 317
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.4721,
+      "frequency": 0.2747,
+      "duration": 0.1585,
+      "supplement_term": 0.4939,
+      "route": 0.0106,
+      "intake_change": 0.0304
+    },
+    "dose_and_frequency_rows": 2253,
+    "semantic_status": "UNKNOWN"
+  },
+  "questionnaire.drugs": {
+    "rows": 52686,
+    "non_empty": 199,
+    "non_empty_fraction": 0.0038,
+    "length": {
+      "n": 199,
+      "p10": 26,
+      "p50": 221,
+      "p90": 958,
+      "mean": 331.9
+    },
+    "pattern_rows": {
+      "dose_amount": 106,
+      "frequency": 93,
+      "duration": 80,
+      "supplement_term": 159,
+      "route": 3,
+      "intake_change": 22
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.5327,
+      "frequency": 0.4673,
+      "duration": 0.402,
+      "supplement_term": 0.799,
+      "route": 0.0151,
+      "intake_change": 0.1106
+    },
+    "dose_and_frequency_rows": 75,
+    "semantic_status": "UNKNOWN"
+  },
+  "questionnaire.drugs_first": {
+    "rows": 52686,
+    "non_empty": 8947,
+    "non_empty_fraction": 0.1698,
+    "length": {
+      "n": 8947,
+      "p10": 16,
+      "p50": 108,
+      "p90": 427,
+      "mean": 194.2
+    },
+    "pattern_rows": {
+      "dose_amount": 4378,
+      "frequency": 2650,
+      "duration": 2717,
+      "supplement_term": 5286,
+      "route": 300,
+      "intake_change": 402
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.4893,
+      "frequency": 0.2962,
+      "duration": 0.3037,
+      "supplement_term": 0.5908,
+      "route": 0.0335,
+      "intake_change": 0.0449
+    },
+    "dose_and_frequency_rows": 2131,
+    "semantic_status": "UNKNOWN"
+  },
+  "questionnaire.drugs_second": {
+    "rows": 52686,
+    "non_empty": 39209,
+    "non_empty_fraction": 0.7442,
+    "length": {
+      "n": 39209,
+      "p10": 3,
+      "p50": 28,
+      "p90": 157,
+      "mean": 63.1
+    },
+    "pattern_rows": {
+      "dose_amount": 12300,
+      "frequency": 7998,
+      "duration": 3582,
+      "supplement_term": 7001,
+      "route": 353,
+      "intake_change": 465
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.3137,
+      "frequency": 0.204,
+      "duration": 0.0914,
+      "supplement_term": 0.1786,
+      "route": 0.009,
+      "intake_change": 0.0119
+    },
+    "dose_and_frequency_rows": 5927,
+    "semantic_status": "UNKNOWN"
+  },
+  "questionnaire.drugs_third": {
+    "rows": 52686,
+    "non_empty": 39178,
+    "non_empty_fraction": 0.7436,
+    "length": {
+      "n": 39178,
+      "p10": 3,
+      "p50": 47,
+      "p90": 229,
+      "mean": 97.8
+    },
+    "pattern_rows": {
+      "dose_amount": 16672,
+      "frequency": 8686,
+      "duration": 2946,
+      "supplement_term": 22965,
+      "route": 120,
+      "intake_change": 408
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.4255,
+      "frequency": 0.2217,
+      "duration": 0.0752,
+      "supplement_term": 0.5862,
+      "route": 0.0031,
+      "intake_change": 0.0104
+    },
+    "dose_and_frequency_rows": 6755,
+    "semantic_status": "UNKNOWN"
+  },
+  "questionnaire.outside_doctor_medicine": {
+    "rows": 52686,
+    "non_empty": 17048,
+    "non_empty_fraction": 0.3236,
+    "length": {
+      "n": 17048,
+      "p10": 1,
+      "p50": 66,
+      "p90": 372,
+      "mean": 157.3
+    },
+    "pattern_rows": {
+      "dose_amount": 2510,
+      "frequency": 1263,
+      "duration": 2283,
+      "supplement_term": 2334,
+      "route": 184,
+      "intake_change": 629
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.1472,
+      "frequency": 0.0741,
+      "duration": 0.1339,
+      "supplement_term": 0.1369,
+      "route": 0.0108,
+      "intake_change": 0.0369
+    },
+    "dose_and_frequency_rows": 802,
+    "semantic_status": "UNKNOWN"
+  },
+  "questionnaire.preview_treatment": {
+    "rows": 52686,
+    "non_empty": 13199,
+    "non_empty_fraction": 0.2505,
+    "length": {
+      "n": 13199,
+      "p10": 1,
+      "p50": 72,
+      "p90": 409,
+      "mean": 187.4
+    },
+    "pattern_rows": {
+      "dose_amount": 3365,
+      "frequency": 2222,
+      "duration": 3075,
+      "supplement_term": 3737,
+      "route": 437,
+      "intake_change": 797
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.2549,
+      "frequency": 0.1683,
+      "duration": 0.233,
+      "supplement_term": 0.2831,
+      "route": 0.0331,
+      "intake_change": 0.0604
+    },
+    "dose_and_frequency_rows": 1663,
+    "semantic_status": "UNKNOWN"
+  },
+  "consultations.recommendations": {
+    "rows": 88867,
+    "non_empty": 82699,
+    "non_empty_fraction": 0.9306,
+    "length": {
+      "n": 82699,
+      "p10": 3980,
+      "p50": 5922,
+      "p90": 8151,
+      "mean": 6000.7
+    },
+    "pattern_rows": {
+      "dose_amount": 82657,
+      "frequency": 82654,
+      "duration": 65196,
+      "supplement_term": 82647,
+      "route": 2404,
+      "intake_change": 53676
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.9995,
+      "frequency": 0.9995,
+      "duration": 0.7884,
+      "supplement_term": 0.9994,
+      "route": 0.0291,
+      "intake_change": 0.6491
+    },
+    "dose_and_frequency_rows": 82651,
+    "semantic_status": "UNKNOWN"
+  },
+  "recommendations_user.description": {
+    "rows": 999606,
+    "non_empty": 999485,
+    "non_empty_fraction": 0.9999,
+    "length": {
+      "n": 999485,
+      "p10": 112,
+      "p50": 274,
+      "p90": 722,
+      "mean": 377.2
+    },
+    "pattern_rows": {
+      "dose_amount": 494121,
+      "frequency": 318392,
+      "duration": 88359,
+      "supplement_term": 367991,
+      "route": 2066,
+      "intake_change": 44720
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.4944,
+      "frequency": 0.3186,
+      "duration": 0.0884,
+      "supplement_term": 0.3682,
+      "route": 0.0021,
+      "intake_change": 0.0447
+    },
+    "dose_and_frequency_rows": 216588,
+    "semantic_status": "UNKNOWN"
+  },
+  "recommendations_list.title_description": {
+    "rows": 234,
+    "non_empty": 234,
+    "non_empty_fraction": 1.0,
+    "length": {
+      "n": 234,
+      "p10": 164,
+      "p50": 379,
+      "p90": 771,
+      "mean": 460.6
+    },
+    "pattern_rows": {
+      "dose_amount": 175,
+      "frequency": 87,
+      "duration": 25,
+      "supplement_term": 69,
+      "route": 4,
+      "intake_change": 26
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.7479,
+      "frequency": 0.3718,
+      "duration": 0.1068,
+      "supplement_term": 0.2949,
+      "route": 0.0171,
+      "intake_change": 0.1111
+    },
+    "dose_and_frequency_rows": 77,
+    "semantic_status": "UNKNOWN"
+  },
+  "recommendations_user_by_catalog_category": [
+    {
+      "category_id": 1,
+      "catalog_title": "Диагнозы",
+      "catalog_user_title": "",
+      "rows": 304069,
+      "active_rows": 304069
+    },
+    {
+      "category_id": 2,
+      "catalog_title": "Питание",
+      "catalog_user_title": "Питание:",
+      "rows": 241045,
+      "active_rows": 241045
+    },
+    {
+      "category_id": 3,
+      "catalog_title": "Препараты",
+      "catalog_user_title": "Препараты:",
+      "rows": 454492,
+      "active_rows": 454492
+    }
+  ],
+  "feedback_consultation_linkage": {
+    "rows": 41407,
+    "with_consultation_id": 33373,
+    "created_after_consultation_date": 31,
+    "median_days_after_consultation": -20.3,
+    "interpretation_status": "UNKNOWN"
+  },
+  "feedback_with_recommendations_on_same_consultation": 29935
+}

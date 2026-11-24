@@ -1,0 +1,88 @@
+{
+  "version": "0.1.1",
+  "V01_PUBLICATION_DEFECT_VERIFICATION_STATUS": "PASS",
+  "v01_sha256": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f",
+  "v01_members": 600,
+  "v01_indexed": 599,
+  "expected_tests_json_sha256": "8577265960e20d7fdd2d01172604f199491041df95bc11d8e5a70d0471a0abef",
+  "actual_tests_json_sha256": "c9225ac70010fb6f3be402775bb74e24b11e48b4d737412a086734be29cac0b4",
+  "manifest_mismatches": [
+    "tests.json"
+  ],
+  "cache_member_count": 45,
+  "pytest_cache_members": 4,
+  "pycache_members": 41,
+  "pyc_members": 41,
+  "attestation_pass_despite_manifest_fail": true,
+  "privacy_baseline_sha256": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+  "privacy_members_indexed": {
+    "members": 540,
+    "indexed": 539
+  },
+  "note": "540/539 is the privacy-cross-source baseline ZIP, not the semantic-review v0.1 ZIP (600/599).",
+  "checks": [
+    {
+      "name": "v01_zip_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "v01_sha256",
+      "ok": true,
+      "detail": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f"
+    },
+    {
+      "name": "members_600",
+      "ok": true,
+      "detail": 600
+    },
+    {
+      "name": "indexed_599",
+      "ok": true,
+      "detail": 599
+    },
+    {
+      "name": "evidence_manifest_fail_for_tests_json",
+      "ok": true,
+      "detail": {
+        "ok": false,
+        "checked": 20,
+        "mismatches": [
+          "tests.json"
+        ],
+        "expected_tests_json_sha256": "8577265960e20d7fdd2d01172604f199491041df95bc11d8e5a70d0471a0abef",
+        "actual_tests_json_sha256": "c9225ac70010fb6f3be402775bb74e24b11e48b4d737412a086734be29cac0b4",
+        "tests_json_match": false
+      }
+    },
+    {
+      "name": "cache_members_present",
+      "ok": true,
+      "detail": 45
+    },
+    {
+      "name": "attestation_pass_despite_manifest_fail",
+      "ok": true,
+      "detail": {
+        "attestation_status": "PASS",
+        "manifest_ok": false
+      }
+    },
+    {
+      "name": "privacy_sha_unchanged",
+      "ok": true,
+      "detail": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231"
+    },
+    {
+      "name": "privacy_540_539_is_not_semantic_review_zip",
+      "ok": true,
+      "detail": {
+        "privacy_members": 540,
+        "privacy_indexed": 539,
+        "semantic_v01_members": 600,
+        "semantic_v01_indexed": 599
+      }
+    }
+  ],
+  "ok": true
+}

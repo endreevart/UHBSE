@@ -1,0 +1,31 @@
+{
+  "first_intervention_associated_baseline_status": "NOT_RUN_DUE_TO_FAILED_GATE",
+  "exploratory_intervention_associated_signal_status": "NOT_RUN",
+  "failed_gates": [
+    "technical_event_timestamp_not_ACCEPTED",
+    "level5_cohort_below_predeclared_minimum"
+  ],
+  "level_counts": {
+    "level_0_source_medication_row": 25726,
+    "level_0_with_patient_link": 25726,
+    "level_1_timestamped_medication_event_candidate": 24880,
+    "level_2_pre_post_event_window": 9969,
+    "level_3_outcome_specific_event_episode_pairs": 212456,
+    "level_3_outcome_specific_event_episodes": 7965,
+    "level_3_subjects": 878,
+    "level_4_medication_specific_outcome_episodes": 7965,
+    "level_4_subjects": 878,
+    "level_5_intervention_associated_modeling_episodes": 0,
+    "level_5_subjects": 0
+  },
+  "prediction_task_name_if_run": "prediction of the next recorded outcome value after a recorded medication event",
+  "forbidden_names": [
+    "treatment effect",
+    "drug response",
+    "clinical response",
+    "causal intervention effect"
+  ],
+  "causal_interpretation_allowed": false,
+  "treatment_effect_estimated": false,
+  "clinical_response_claimed": false
+}

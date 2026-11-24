@@ -1,0 +1,170 @@
+{
+  "version": "0.1.2.1.1",
+  "source_a_population_lineage_status": "PASS",
+  "provenance_filter": "source_system_id=magerya_api",
+  "funnel": [
+    {
+      "name": "1_source_a_total_canonical_subjects",
+      "previous_population": 8262,
+      "resulting_count": 8262,
+      "excluded_count": 0,
+      "inclusion_criterion": "canonical_evidence.subject.source_system_id = magerya_api",
+      "exclusion_criteria": "non-A subjects",
+      "source_relation": "canonical_evidence.subject",
+      "provenance_condition": "source_system_id=magerya_api",
+      "subject_distinctness_rule": "COUNT(subject_id)",
+      "monotonic": true
+    },
+    {
+      "name": "2_source_a_load_eligible_appt3_lab1",
+      "previous_population": 8262,
+      "resulting_count": 8262,
+      "excluded_count": 0,
+      "inclusion_criterion": "In this DB, Subject A rows are the load-eligible cohort",
+      "exclusion_criteria": "none within canonical Subject A",
+      "source_relation": "canonical_evidence.subject",
+      "provenance_condition": "source_system_id=magerya_api",
+      "subject_distinctness_rule": "distinct subject_id",
+      "monotonic": true
+    },
+    {
+      "name": "3_canonical_source_a_subjects",
+      "previous_population": 8262,
+      "resulting_count": 8262,
+      "excluded_count": 0,
+      "inclusion_criterion": "same as load-eligible in current canonical",
+      "exclusion_criteria": "none",
+      "source_relation": "canonical_evidence.subject",
+      "provenance_condition": "source_system_id=magerya_api",
+      "subject_distinctness_rule": "distinct subject_id",
+      "monotonic": true
+    },
+    {
+      "name": "4_scientific_split_eligible_ge2_dated_numeric",
+      "previous_population": 8262,
+      "resulting_count": 7997,
+      "excluded_count": 265,
+      "inclusion_criterion": "\u22652 dated numeric observation_components",
+      "exclusion_criteria": "subjects with <2 dated numeric components",
+      "source_relation": "observation_component \u22c8 observation \u22c8 subject",
+      "provenance_condition": "subject.source_system_id=magerya_api",
+      "subject_distinctness_rule": "GROUP BY subject_id HAVING COUNT(*)>=2",
+      "monotonic": true
+    },
+    {
+      "name": "5_subjects_with_accepted_t3_pmol",
+      "previous_population": 7997,
+      "resulting_count": 6645,
+      "excluded_count": 1352,
+      "inclusion_criterion": "raw_code='\u04223 \u0441\u0432.' AND raw_unit='\u043f\u043c\u043e\u043b\u044c/\u043b'",
+      "exclusion_criteria": "no matching T3 series rows",
+      "source_relation": "observation_component",
+      "provenance_condition": "subject in A-only scientific eligible; code/unit fixed",
+      "subject_distinctness_rule": "distinct opaque_subject_key in series",
+      "monotonic": true
+    },
+    {
+      "name": "6_subjects_with_ge2_dated_numeric_t3",
+      "previous_population": 6645,
+      "resulting_count": 6645,
+      "excluded_count": 0,
+      "inclusion_criterion": "series builder requires clinical timestamp + numeric",
+      "exclusion_criteria": "undated rows skipped in series builder",
+      "source_relation": "fetch_measurement_series",
+      "provenance_condition": "A-only",
+      "subject_distinctness_rule": "distinct subject in series",
+      "monotonic": true
+    },
+    {
+      "name": "7_subjects_with_strict_consecutive_pairs",
+      "previous_population": 6645,
+      "resulting_count": 2925,
+      "excluded_count": 3720,
+      "inclusion_criterion": "strict consecutive neighbors; positive horizon",
+      "exclusion_criteria": "{'missing_timestamp': 0, 'zero_horizon': 2, 'negative_horizon': 0, 'incompatible_unit': 0, 'duplicate_same_timestamp_collapsed': 17, 'all_forward_combinations_forbidden': 0}",
+      "source_relation": "build_consecutive_pairs",
+      "provenance_condition": "A-only",
+      "subject_distinctness_rule": "subjects with \u22651 pair",
+      "monotonic": true
+    },
+    {
+      "name": "8_train_val_test_subjects",
+      "previous_population": 2925,
+      "resulting_count": 2925,
+      "excluded_count": 0,
+      "inclusion_criterion": "subject-level hash-ranked split on A-only scientific eligible",
+      "exclusion_criteria": "eligible subjects without pairs",
+      "source_relation": "build_subject_split + assign_pairs_to_splits",
+      "provenance_condition": "A-only eligible universe",
+      "subject_distinctness_rule": "disjoint train/val/test",
+      "monotonic": true
+    },
+    {
+      "name": "9_train_val_test_pairs",
+      "previous_population": 6345,
+      "resulting_count": 6345,
+      "excluded_count": 0,
+      "inclusion_criterion": "pairs assigned by subject split",
+      "exclusion_criteria": "none if all pair subjects in split",
+      "source_relation": "assign_pairs_to_splits",
+      "provenance_condition": "A-only",
+      "subject_distinctness_rule": "pair locators disjoint across splits",
+      "monotonic": true
+    },
+    {
+      "name": "10_test_pairs_uncertainty_recomputation",
+      "previous_population": 936,
+      "resulting_count": 936,
+      "excluded_count": 0,
+      "inclusion_criterion": "test split pairs used for uncertainty coverage",
+      "exclusion_criteria": "none within test",
+      "source_relation": "test bucket",
+      "provenance_condition": "A-only",
+      "subject_distinctness_rule": "test subjects only",
+      "monotonic": true
+    }
+  ],
+  "counts": {
+    "source_a_total_canonical_subjects": 8262,
+    "source_a_load_eligible": 8262,
+    "canonical_source_a_subjects": 8262,
+    "scientific_split_eligible_source_a_only": 7997,
+    "t3_series_subjects": 6645,
+    "subjects_with_strict_pairs": 2925,
+    "all_t3_pairs": 6345,
+    "train_subjects": 2069,
+    "validation_subjects": 411,
+    "test_subjects": 445,
+    "train_pairs": 4526,
+    "validation_pairs": 883,
+    "test_pairs_uncertainty": 936
+  },
+  "defect_41492_explanation": {
+    "mislabeled_field_in_v0121": "scientific_eligible_subjects_ge2_dated_numeric",
+    "observed_value": 41492,
+    "true_meaning": "unscoped_all_sources_subjects_with_ge2_dated_numeric_components (fetch_eligible_subjects had no source_system filter)",
+    "source_a_component": 7997,
+    "source_b_component": 33495,
+    "sum_equals_observed": true,
+    "renamed_field": "unscoped_all_sources_ge2_dated_numeric_subjects",
+    "must_not_be_used_as_source_a_scientific_eligible": true
+  },
+  "invariants": {
+    "source_b_pair_subjects": 0,
+    "source_a_pair_subjects": 2925,
+    "source_b_rows_in_source_a_experiment": 0,
+    "subject_overlap_train_val_test": 0,
+    "locator_overlap_zero": true,
+    "monotonic_subject_funnel": true,
+    "negative_exclusion_forbidden": true
+  },
+  "split_hash": "8686b0acb2e8c7058c3354963c637a261b5e7e49a3c72ebd5327ab6449e11587",
+  "a_only_funnel_test_pairs": 936,
+  "authoritative_uncertainty_test_pairs": 956,
+  "test_pair_count_accounting": {
+    "v0121_uncertainty_test_pairs_under_unscoped_eligible_split": 956,
+    "v01211_a_only_eligible_funnel_test_pairs": 936,
+    "explanation": "v0.1.2.1 ranked subjects from unscoped eligible (A+B), shifting some A subjects across split boundaries. T3 pair locators remained Source A only. Frozen model bytes are unchanged; exclusive-quantile evidence is carried from v0.1.2.1. A-only funnel test_pairs is the corrected lineage count.",
+    "refit_performed": false
+  }
+}

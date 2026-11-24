@@ -1,0 +1,91 @@
+{
+  "PRIOR_JOINT_FOUNDATION_STATUS": "NOT_ACCEPTED_EVIDENCE_AND_RUNTIME_CORRECTION_REQUIRED",
+  "defects": [
+    {
+      "claim": "D1 trained on in-sample residuals of frozen marginals, not group-OOF",
+      "id": 6,
+      "oof_in_fit_d1": false,
+      "predict_active_in_fit_d1": true,
+      "reproduced": true
+    },
+    {
+      "claim": "Route acceptance is pointwise energy_d1 < energy_d0 without paired group bootstrap CI",
+      "id": 7,
+      "pointwise_flag": true,
+      "reproduced": true
+    },
+    {
+      "claim": "Published improvements of three accepted routes are small and must be recomputed",
+      "id": 8,
+      "reproduced": true,
+      "routes": [
+        {
+          "crps_d1_worse": true,
+          "do_not_transfer_as_accepted": true,
+          "energy_d0": 10.282776753459354,
+          "energy_d1": 10.252154223925995,
+          "energy_delta": -0.030622529533358644,
+          "heldout_energy_d0": 11.565259143074886,
+          "heldout_energy_d1": 11.316820261618394,
+          "horizon_days": 30,
+          "mean_crps_d0": 3.335616550385014,
+          "mean_crps_d1": 3.3585083808629066,
+          "relative_energy_improvement": 0.0029780408801597827,
+          "source_system": "magerya_api"
+        },
+        {
+          "crps_d1_worse": false,
+          "do_not_transfer_as_accepted": true,
+          "energy_d0": 11.850613739433824,
+          "energy_d1": 11.730504760379189,
+          "energy_delta": -0.1201089790546348,
+          "heldout_energy_d0": 11.625178983026883,
+          "heldout_energy_d1": 11.545372887541443,
+          "horizon_days": 90,
+          "mean_crps_d0": 2.643951102941049,
+          "mean_crps_d1": 2.626185208652645,
+          "relative_energy_improvement": 0.01013525389448506,
+          "source_system": "kgz_raw"
+        },
+        {
+          "crps_d1_worse": false,
+          "do_not_transfer_as_accepted": true,
+          "energy_d0": 13.405824386646751,
+          "energy_d1": 13.389383163545473,
+          "energy_delta": -0.01644122310127827,
+          "heldout_energy_d0": 12.379844461306266,
+          "heldout_energy_d1": 12.22609776963179,
+          "horizon_days": 180,
+          "mean_crps_d0": 2.894674034331728,
+          "mean_crps_d1": 2.8883734854510856,
+          "relative_energy_improvement": 0.0012264238757039821,
+          "source_system": "kgz_raw"
+        }
+      ]
+    },
+    {
+      "claim": "Source A 30d validation marginal CRPS D1 worse than D0",
+      "id": 9,
+      "reproduced": true,
+      "source_a_30d": {
+        "crps_d1_worse": true,
+        "do_not_transfer_as_accepted": true,
+        "energy_d0": 10.282776753459354,
+        "energy_d1": 10.252154223925995,
+        "energy_delta": -0.030622529533358644,
+        "heldout_energy_d0": 11.565259143074886,
+        "heldout_energy_d1": 11.316820261618394,
+        "horizon_days": 30,
+        "mean_crps_d0": 3.335616550385014,
+        "mean_crps_d1": 3.3585083808629066,
+        "relative_energy_improvement": 0.0029780408801597827,
+        "source_system": "magerya_api"
+      }
+    }
+  ],
+  "ok": true,
+  "published_JOINT_VALIDATION_ACCEPTED_ROUTE_COUNT": 3,
+  "recount_from_zero": true,
+  "v02_publication_integrity_may_remain_pass": true,
+  "version": "0.1"
+}

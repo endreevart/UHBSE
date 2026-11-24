@@ -1,0 +1,48 @@
+{
+  "n_subjects_in_series": 74,
+  "n_observations_after_filter": 114,
+  "n_pairs": 40,
+  "n_subjects_with_pairs": 30,
+  "pair_definition": "strict_consecutive_neighbors_only",
+  "horizon_days": {
+    "n": 40,
+    "min": 7.5059998617708334,
+    "median": 63.0,
+    "max": 302.0,
+    "mean": 75.8864621457769
+  },
+  "exclusions_by_reason": {
+    "missing_timestamp": 0,
+    "zero_horizon": 0,
+    "negative_horizon": 0,
+    "incompatible_unit": 0,
+    "duplicate_same_timestamp_collapsed": 0,
+    "all_forward_combinations_forbidden": 0
+  },
+  "units": [
+    "\u043f\u043c\u043e\u043b\u044c/\u043b"
+  ],
+  "date_coverage": {
+    "t0_min": "2023-02-25T00:00:00+00:00",
+    "t0_max": "2026-05-12T00:00:00+00:00",
+    "t1_min": "2023-05-19T00:00:00+00:00",
+    "t1_max": "2026-06-30T00:00:00+00:00"
+  },
+  "feature_list": [
+    "y_t0",
+    "horizon_days",
+    "n_prior_measurements",
+    "prior_mean",
+    "prior_last_delta",
+    "days_since_first",
+    "has_prior_history",
+    "prior_mean_missing_flag",
+    "prior_last_delta_missing_flag"
+  ],
+  "dataset_schema_hash": "9a5fde5e8b26931fdc000d1d1ad15a42f4e58c0bd591f772c3802485357278d7",
+  "dataset_build_configuration_hash": "ff1c125987d192893facddb15bab52cf8b18a5376f1e0263259a58b4155f311c",
+  "missingness": {
+    "prior_mean_null_pairs": 30,
+    "prior_last_delta_null_pairs": 30
+  }
+}

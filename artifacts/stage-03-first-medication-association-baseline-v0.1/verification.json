@@ -1,0 +1,76 @@
+{
+  "ok": true,
+  "baseline_ok": true,
+  "statuses": {
+    "version": "0.1",
+    "generated_at": "2026-08-19T09:42:48Z",
+    "EVIDENCE_CORRECTION_STATUS": "PASS",
+    "SOURCE_A_COMPONENT_RECONCILIATION_STATUS": "PASS",
+    "SOURCE_A_IDEMPOTENCY_STATUS": "NOT_CLAIMED_AS_LOADER_REPLAY",
+    "FULL_SOURCE_A_EXPECTED_ID_COVERAGE_CHECK_STATUS": "PASS",
+    "MEDICATION_EPISODE_DATASET_STATUS": "BUILT",
+    "MEDICATION_EVENT_TIMESTAMP_STATUS": "TECHNICAL_HYPOTHESES_EVALUATED_DOMAIN_CONFIRMATION_PENDING",
+    "TECHNICAL_MEDICATION_ASSOCIATION_BASELINE_STATUS": "EVALUATED",
+    "INCREMENTAL_MEDICATION_CONTEXT_SIGNAL_STATUS": "NO_INCREMENTAL_SIGNAL_DETECTED",
+    "MODEL_FREEZE_STATUS": "FROZEN",
+    "ENGINE_SHADOW_INTEGRATION_STATUS": "TECHNICAL_SHADOW_ONLY",
+    "PUBLICATION_INTEGRITY_STATUS": "PENDING",
+    "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+    "TREATMENT_EFFECT_STATUS": "NOT_EVALUATED",
+    "CAUSAL_EFFECT_STATUS": "NOT_EVALUATED",
+    "CLINICAL_VALIDATION_STATUS": "NOT_STARTED",
+    "QSP_STATUS": "NOT_STARTED",
+    "PKPD_STATUS": "NOT_STARTED",
+    "PRODUCTION_READINESS": "NOT_CLAIMED",
+    "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "SOURCE_B_INTERVENTION_DISCOVERY_STATUS": "NO_ACCEPTED_SOURCE_B_INTERVENTION_STRUCTURE_FOUND",
+    "policy": {
+      "version": "0.1",
+      "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+      "intervention_response_model_status": "NOT_STARTED",
+      "treatment_effect_status": "NOT_EVALUATED",
+      "causal_effect_status": "NOT_EVALUATED",
+      "clinical_validation_status": "NOT_STARTED",
+      "qsp_status": "NOT_STARTED",
+      "pkpd_status": "NOT_STARTED",
+      "production_readiness": "NOT_CLAIMED",
+      "clinical_use": "CLINICAL_USE_PROHIBITED",
+      "causal_interpretation": "CAUSAL_INTERPRETATION_PROHIBITED",
+      "predictive_association_is_not_treatment_response": true,
+      "no_identity_merge": true,
+      "seed": 42,
+      "l2": 0.1,
+      "n_bootstrap": 2000,
+      "n_permutation": 500,
+      "horizons_days": [
+        30,
+        90,
+        180,
+        365
+      ],
+      "primary_horizon_days": 365,
+      "level5_gates": {
+        "min_subjects": 200,
+        "min_episodes": 500,
+        "min_test_subjects": 50,
+        "min_test_episodes": 100
+      },
+      "m1_features": [
+        "pre_value",
+        "n_prior_measurements",
+        "prior_slope",
+        "days_since_previous",
+        "horizon_days",
+        "prior_slope_missing",
+        "days_since_previous_missing"
+      ],
+      "m2_extra_features": [
+        "medicine_id_hash",
+        "polypharmacy_flag",
+        "concurrent_med_count"
+      ]
+    },
+    "elapsed_sec": 123.23
+  },
+  "component_matches_gap": true
+}

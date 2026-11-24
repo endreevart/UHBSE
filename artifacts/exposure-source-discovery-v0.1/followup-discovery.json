@@ -1,0 +1,47 @@
+{
+  "version": "0.1",
+  "read_only_sessions": true,
+  "row_values_exported": false,
+  "source_a_recommendation_sections": {
+    "docs_with_sections": 40696,
+    "section_code_counts": {
+      "activity": 34271,
+      "nutrition": 31183,
+      "napravlenie": 9545,
+      "data_povtornogo_obrashcheniia": 3965,
+      "inye_rekomendatsii": 3785,
+      "napravleniia": 3716,
+      "sport": 3611,
+      "medicines": 641
+    },
+    "suppressed_code_count": 8,
+    "items_per_section": {
+      "n": 90726,
+      "p10": 0,
+      "p50": 1,
+      "p90": 8,
+      "mean": 2.8
+    },
+    "code_semantics_status": "UNKNOWN"
+  },
+  "source_b_feedback_after_drug_recommendation": {
+    "feedback_rows": 41407,
+    "with_prior_drug_recommendation_same_subject": 27729,
+    "fraction": 0.6697,
+    "median_days_since_prior_drug_recommendation": 61.0,
+    "subject_key_assumption": "feedback.user_id equals consultations.patient_id — UNKNOWN, needs review",
+    "interpretation_status": "UNKNOWN"
+  },
+  "queries": [
+    {
+      "query": "a_rec_sections",
+      "source": "magerya_api",
+      "duration_seconds": 2.615
+    },
+    {
+      "query": "b_feedback_prior_drug_recommendation",
+      "source": "kgz_raw",
+      "duration_seconds": 0.942
+    }
+  ]
+}

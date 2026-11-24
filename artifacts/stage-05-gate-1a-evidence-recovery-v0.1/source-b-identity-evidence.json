@@ -1,0 +1,67 @@
+{
+  "ambiguities": [
+    "INTEGER types match and do not identify a shared entity",
+    "FOREIGN KEY (consultation_id) links a feedback row to a consultation row",
+    "no foreign key, parent entity, or check constraint links user_id to patient_id"
+  ],
+  "applicability": "SCHEMA_ONLY",
+  "basis": null,
+  "closes_question": false,
+  "column_types": [
+    {
+      "column": "user_id",
+      "data_type": "integer",
+      "relation": "feedback"
+    },
+    {
+      "column": "patient_id",
+      "data_type": "integer",
+      "relation": "consultations"
+    },
+    {
+      "column": "consultation_id",
+      "data_type": "integer",
+      "relation": "feedback"
+    }
+  ],
+  "consultation_link_is_not_subject_identity": true,
+  "consultations_patient_id_foreign_keys": [],
+  "feedback_consultation_foreign_keys": [
+    "FOREIGN KEY (consultation_id) REFERENCES consultations(id)"
+  ],
+  "feedback_user_id_foreign_keys": [],
+  "level": "E1",
+  "numeric_agreement_is_proof": false,
+  "phrase": "NUMERIC_KEY_AGREEMENT_OBSERVED_NOT_IDENTITY_PROOF",
+  "queries": [
+    {
+      "query": "b_constraints",
+      "read_only_verified": true,
+      "sql_sha256": "768f4aade032c11b14e28fadc88c2636271b1f9a372f000c504e5c6040878e60",
+      "success": true
+    },
+    {
+      "query": "b_columns",
+      "read_only_verified": true,
+      "sql_sha256": "166fc6ccbcc4b2482c5d76a1a1a4780e5ae1ef065577a4bef7f95381daedb4f8",
+      "success": true
+    },
+    {
+      "query": "b_triggers",
+      "read_only_verified": true,
+      "sql_sha256": "da7d96819cd2c5da6732020eb62364bf2c547a6b9222ed148692e63a94b55325",
+      "success": true
+    },
+    {
+      "query": "b_views",
+      "read_only_verified": true,
+      "sql_sha256": "6cb5b53b76b1068bba4f3693bf85d6644ee0ff3956cd5e37788356c40a4a6f6c",
+      "success": true
+    }
+  ],
+  "question_id": "B_IDENTITY",
+  "relation_contract": "NOT_FOUND",
+  "shared_parent_constraint": false,
+  "trigger_count": 0,
+  "view_count": 0
+}

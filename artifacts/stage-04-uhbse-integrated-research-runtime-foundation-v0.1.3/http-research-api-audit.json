@@ -1,0 +1,58 @@
+{
+  "API_MODEL_ROUTING_STATUS": "PASS",
+  "API_NO_SILENT_FALLBACK_STATUS": "PASS",
+  "API_SCHEMA_CONTRACT_STATUS": "PASS",
+  "DECLARED_PRE_T0_SUMMARY_STATUS": "PASS",
+  "FROZEN_LEP_REFERENCE_PROBE_STATUS": "PASS",
+  "HTTP_DETERMINISTIC_ERROR_STATUS": "PASS",
+  "HTTP_RESEARCH_API_STATUS": "BUILT",
+  "HTTP_TYPED_SCHEMA_STATUS": "PASS",
+  "PER_OUTCOME_IDENTITY_COMPLETENESS_STATUS": "PASS",
+  "SOURCE_NAMESPACE_BINDING_STATUS": "PASS",
+  "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+  "SYNTHETIC_EVENT_PROBABILITY_STATUS": "PASS",
+  "TEMPORAL_TIMESTAMP_VERIFICATION_STATUS": "PASS",
+  "WORKBENCH_BROWSER_INTEGRATION_STATUS": "PASS",
+  "bind": "127.0.0.1",
+  "browser": {
+    "WORKBENCH_BROWSER_INTEGRATION_STATUS": "PASS",
+    "bad_hash_or_abstain_visible": true,
+    "changed_state_visible": true,
+    "d1_unavailable_visible": true,
+    "not_html_string_only": true,
+    "ok": true,
+    "replay_ran": true,
+    "temporal_evidence_tier_visible": true,
+    "unit_visible": true
+  },
+  "event_executed": true,
+  "frozen_http": {
+    "executed": true,
+    "paths_disclosed": false,
+    "reason": null,
+    "source_b": {
+      "executed": true,
+      "reason": null,
+      "status": "OK"
+    },
+    "source_system": "magerya_api",
+    "status": "OK"
+  },
+  "frozen_http_ok": true,
+  "future_offset_http_reason": "HISTORY_TIMESTAMP_AFTER_CUTOFF_T0",
+  "html_has_fetch_not_a_browser_test": true,
+  "no_cors_wildcard": true,
+  "port": 57895,
+  "timestamp_verified_http": true,
+  "two_state_lep": {
+    "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+    "a_reason": "LEP_STATE_FEATURES_UNAVAILABLE",
+    "a_status": "ABSTAIN",
+    "b_reason": "LEP_STATE_FEATURES_UNAVAILABLE",
+    "b_status": "ABSTAIN",
+    "both_abstain": true,
+    "different_valid_features": false,
+    "ok": true,
+    "silent_identical_support_vector": false
+  }
+}

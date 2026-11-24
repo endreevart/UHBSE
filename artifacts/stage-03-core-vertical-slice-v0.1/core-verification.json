@@ -1,0 +1,54 @@
+{
+  "core_vertical_slice_status": "PASS",
+  "checks": {
+    "source_a_readable": true,
+    "canonical_writable_load": true,
+    "extraction_ok": true,
+    "provenance_present": true,
+    "timeline_built": true,
+    "starting_state_built": true,
+    "three_branches": true,
+    "baseline_ran": true,
+    "synthetic_ran": true,
+    "dose_change_isolated": true,
+    "checkpoint_ok": true,
+    "fork_ok": true,
+    "rollback_ok": true,
+    "uncertainty_present": true,
+    "idempotent_reload": true,
+    "rejects_handled": true,
+    "pii_excluded_from_artifacts": true,
+    "security_findings_non_blocking": true
+  },
+  "policy": {
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "core_development_status": "ACTIVE",
+    "authorised_data_access": "ENABLED",
+    "deferred_production_hardening": [
+      "initial_root_token_available",
+      "vault_key_custody_decision_required",
+      "pgp_keys_shared_keyring_empty_passphrase",
+      "multi_custodian_separation_absent"
+    ],
+    "closed_security_findings": [
+      "limited_operator_identity_absent",
+      "loader_restart_reauth_procedure_absent"
+    ],
+    "security_blocks_core": false,
+    "note": "Security findings are advisory only; they must not change core command exit codes"
+  },
+  "started_at": "2026-08-12T14:23:28.238761+00:00",
+  "finished_at": "2026-08-12T14:23:41.822828+00:00",
+  "canonical_row_counts": {
+    "source_system": 1,
+    "source_record": 100,
+    "subject": 100,
+    "subject_characteristic": 200,
+    "encounter": 2153,
+    "observation": 4000,
+    "observation_component": 5364
+  },
+  "cohort_size": 100
+}

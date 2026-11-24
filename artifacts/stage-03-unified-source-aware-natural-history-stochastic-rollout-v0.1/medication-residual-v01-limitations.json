@@ -1,0 +1,38 @@
+{
+  "version": "0.1",
+  "PRIOR_MEDICATION_RESIDUAL_LIMITATION_REPRODUCTION_STATUS": "PASS",
+  "PRIOR_MEDICATION_RESIDUAL_FOUNDATION_STATUS": "NOT_ACCEPTED_NO_INCREMENTAL_SIGNAL_FOR_EVALUATED_CONSTRUCTION",
+  "zip_sha256": "a08ded64ed4790660861fe79b57eff54a3de1889d2c6ea796bc85d9fc487c612",
+  "validation_accepted_cells": 0,
+  "heldout_confirmed_cells": 0,
+  "engine_eligible_cells": 0,
+  "SOURCE_B_MEDICATION_CONTEXT_STATUS": "NOT_AVAILABLE_NO_TRANSFER",
+  "SCIENTIFICALLY_USABLE_ACCEPTED_DRUG_CONCEPT_COUNT": 0,
+  "STATE_ENCODER_STATUS": "NOT_ACCEPTED",
+  "UPSTREAM_PROBABILITY_CONSUMPTION_STATUS": "NOT_USED_FOR_MEDICATION_RESIDUAL_DUE_TO_HELDOUT_LIMITATION",
+  "ENGINE_MEDICATION_RESIDUAL_SHADOW_STATUS": "TECHNICAL_SHADOW_ABSTAIN_NO_ELIGIBLE_CELL",
+  "limitation_1_target_assignment": {
+    "first_target_in_open_right_closed_window": true,
+    "horizons_iterated_30_90_180_365": true,
+    "global_used_targets": true,
+    "not_fixed_horizon_intervention_cohort": true
+  },
+  "limitation_2_negative_controls": {
+    "shuffle_small_subset": true,
+    "no_refit_in_shuffle": true,
+    "no_empirical_null_of_model_result": true,
+    "pre_t0_falsification_would_fail": false,
+    "overall_ok_true": true,
+    "mismatch_ok_true_with_pre_t0_false": true
+  },
+  "limitation_3_public_minimization": {
+    "vocab_hashes_in_residual_training_json": true,
+    "n_vocab_ids_published": 250,
+    "feature_order_contains_row_derived_catalog_ids": true,
+    "not_patient_level": true,
+    "fails_strict_aggregate_only": true
+  },
+  "do_not_rewrite_or_republish": true,
+  "do_not_consume_vocab_models_or_cells": true,
+  "ok": true
+}

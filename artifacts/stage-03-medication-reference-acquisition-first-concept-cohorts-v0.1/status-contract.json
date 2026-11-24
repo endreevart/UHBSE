@@ -1,0 +1,68 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-08-19T13:36:50Z",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "DRUG_REFERENCE_ACQUISITION_STATUS": "ATTEMPTED_NETWORK_FAILED",
+  "DRUG_CONCEPT_MAPPING_STATUS": "NO_ACCEPTED_MAPPINGS",
+  "DRUG_CONCEPT_ACCEPTED_COUNT": 0,
+  "DRUG_CONCEPT_UNRESOLVED_COUNT": 487,
+  "DOMAIN_REVIEW_WORKBENCH_STATUS": "AVAILABLE",
+  "FIRST_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY",
+  "M2ID_ONEHOT_MODEL_FREEZE_STATUS": "FROZEN",
+  "M2ID_ONEHOT_ENGINE_SHADOW_STATUS": "PASS",
+  "FIRST_CONCEPT_SPECIFIC_ASSOCIATION_BASELINE_STATUS": "NOT_RUN_DUE_TO_FAILED_READINESS_GATE",
+  "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+  "TREATMENT_EFFECT_STATUS": "NOT_EVALUATED",
+  "CAUSAL_EFFECT_STATUS": "NOT_EVALUATED",
+  "QSP_STATUS": "NOT_STARTED",
+  "PKPD_STATUS": "NOT_STARTED",
+  "CLINICAL_VALIDATION_STATUS": "NOT_STARTED",
+  "PRODUCTION_READINESS": "NOT_CLAIMED",
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "PUBLICATION_INTEGRITY_STATUS": "EXTERNAL_ATTESTATION_REQUIRED",
+  "pre_pack_manifest_status": "PASS",
+  "content_verification_status": "PASS",
+  "clean_staging_test_status": "PASS",
+  "post_pack_publication_verification_status": "EXTERNAL_ATTESTATION_REQUIRED",
+  "scope_correction": {
+    "M2ID_ONEHOT_REPRESENTATION_STATUS": "EVALUATED",
+    "M2ID_ONEHOT_MODEL_FREEZE_STATUS": "NOT_DONE_IN_PRIOR_RELEASE",
+    "M2ID_ONEHOT_ENGINE_SHADOW_STATUS": "NOT_RUN_IN_PRIOR_RELEASE",
+    "prior_ENGINE_SHADOW_PASS_applies_only_to_frozen_M1_M2C": true,
+    "onehot_demo_is_not_model_inference": true
+  },
+  "policy": {
+    "version": "0.1",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "intervention_response_model_status": "NOT_STARTED",
+    "treatment_effect_status": "NOT_EVALUATED",
+    "causal_effect_status": "NOT_EVALUATED",
+    "clinical_validation_status": "NOT_STARTED",
+    "qsp_status": "NOT_STARTED",
+    "pkpd_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "clinical_use": "CLINICAL_USE_PROHIBITED",
+    "causal_interpretation": "CAUSAL_INTERPRETATION_PROHIBITED",
+    "scope_correction": {
+      "M2ID_ONEHOT_REPRESENTATION_STATUS": "EVALUATED",
+      "M2ID_ONEHOT_MODEL_FREEZE_STATUS": "NOT_DONE_IN_PRIOR_RELEASE",
+      "M2ID_ONEHOT_ENGINE_SHADOW_STATUS": "NOT_RUN_IN_PRIOR_RELEASE",
+      "prior_engine_shadow_pass_applies_only_to": "frozen_M1_M2C",
+      "onehot_demo_is_not_model_inference": true
+    },
+    "authoritative_comparison": [
+      "M0",
+      "M1",
+      "M2ID_ONEHOT"
+    ],
+    "sensitivity_only": [
+      "M2EXPOSURE_COUNT"
+    ],
+    "seed": 42,
+    "l2": 0.1,
+    "expected_source_medicine_ids": 487,
+    "rxnorm_documented_base": "https://rxnav.nlm.nih.gov/REST"
+  },
+  "duration_seconds": 79.59,
+  "n_human_decisions": 0
+}

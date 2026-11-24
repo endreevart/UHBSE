@@ -1,0 +1,36 @@
+{
+  "version": "0.1",
+  "DRUG_REFERENCE_ACQUISITION_STATUS": "ATTEMPTED_NETWORK_FAILED",
+  "providers": {
+    "RxNorm": {
+      "retrieval_status": "NETWORK_UNAVAILABLE_OR_FAILED",
+      "documented_base": "https://rxnav.nlm.nih.gov/REST",
+      "stats": {
+        "cache_hits": 0,
+        "network_fetches": 0,
+        "network_errors": 974,
+        "http_statuses": {}
+      },
+      "verified_lookups": 0,
+      "paid_api": false,
+      "api_keys": false,
+      "patient_level_data_sent": false
+    },
+    "ESKLP": {
+      "provider_name": "ESKLP",
+      "retrieval_status": "NOT_AVAILABLE_NO_APPROVED_SNAPSHOT",
+      "ESKLP_PROVIDER_STATUS": "NOT_AVAILABLE_NO_APPROVED_SNAPSHOT",
+      "content_hash": null
+    },
+    "DailyMed": {
+      "retrieval_status": "DEFERRED_UNTIL_RXCUI_OR_US_PRODUCT",
+      "note": "Downstream enrichment only after reliable concept ID"
+    },
+    "openFDA": {
+      "retrieval_status": "DEFERRED_UNTIL_RXCUI_OR_US_PRODUCT",
+      "fields_explicitly_not_trusted": [
+        "adverse_event_as_causal_risk"
+      ]
+    }
+  }
+}

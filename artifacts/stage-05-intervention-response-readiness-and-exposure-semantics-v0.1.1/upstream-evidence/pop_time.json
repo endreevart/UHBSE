@@ -1,0 +1,14 @@
+{
+  "appointment_date_non_null": 24880,
+  "created_non_null": 25726,
+  "modified_non_null": 25726,
+  "both_appointment_and_created": 24880,
+  "median_created_minus_appointment_days": 116.34309462722223,
+  "future_appointment_date_rows": 0,
+  "future_created_rows": 0,
+  "same_time_duplicate_groups": 0,
+  "clinical_event_time_status": "CANDIDATE_ONLY",
+  "chosen_technical_timestamp_candidate": "appointment_date",
+  "rationale": "appointment_date is highly populated and temporally nearer to clinical context than created; not ACCEPTED_TECHNICAL_TIMESTAMP without domain confirmation that it represents administration/start rather than scheduling.",
+  "explicit_non_claim": "created is not used as clinical intervention time merely because it is populated."
+}

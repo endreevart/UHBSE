@@ -1,0 +1,146 @@
+{
+  "private_diagnostics_dir": "private/medication-reference-v011/diagnostics",
+  "archive_stats": {
+    "snapshot_sha256": "ecb7d0644dd3363c4bb14b7b1e85754a2a47f11edc35fa74092da90920341bae",
+    "n_concepts": 604286,
+    "n_unique_searchable_terms": 19583,
+    "stats": {
+      "n_archive_members": 15,
+      "n_extracted_files": 15,
+      "n_processed_files": 12,
+      "n_skipped_files": 3,
+      "formats": {
+        "xlsx": 12,
+        "docx": 2,
+        "pdf": 1
+      },
+      "n_concepts": 604286,
+      "n_indexed_rows_seen": 617162,
+      "n_unique_searchable_terms": 19583,
+      "n_unique_trade_names": 11846,
+      "n_unique_inn": 7838,
+      "n_with_strength": 604286,
+      "n_with_form": 604286,
+      "n_with_registration_or_product_id": 601184,
+      "n_duplicate_ids_collapsed": 12876,
+      "n_without_searchable_term": 0
+    }
+  },
+  "source_aggregates": {
+    "records_loaded": 487,
+    "nonempty_original_name": 487,
+    "nonempty_original_description": 487,
+    "unique_normalized_names": 485,
+    "names_containing_strength": 96,
+    "names_containing_dosage_form": 32,
+    "script_counts": {
+      "cyrillic": 421,
+      "latin": 2,
+      "mixed": 64,
+      "other": 0
+    },
+    "duplicate_names": 2,
+    "empty_or_identifier_only_records": 0,
+    "mapper_uses_real_names": true
+  },
+  "search_step_public": {
+    "exact_raw_normalized_name": {
+      "n_source_with_ge1_result": 1,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 1,
+      "no_match_count": 19
+    },
+    "exact_cleaned_trade_product": {
+      "n_source_with_ge1_result": 1,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 1,
+      "no_match_count": 19
+    },
+    "exact_inn_ingredient": {
+      "n_source_with_ge1_result": 0,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 0,
+      "no_match_count": 20
+    },
+    "name_without_manufacturer": {
+      "n_source_with_ge1_result": 1,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 1,
+      "no_match_count": 19
+    },
+    "name_without_strength_form_suffix": {
+      "n_source_with_ge1_result": 1,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 1,
+      "no_match_count": 19
+    },
+    "unicode_normalization": {
+      "n_source_with_ge1_result": 1,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 1,
+      "no_match_count": 19
+    },
+    "yo_to_e": {
+      "n_source_with_ge1_result": 1,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 1,
+      "no_match_count": 19
+    },
+    "punctuation_quote_removal": {
+      "n_source_with_ge1_result": 1,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 1,
+      "no_match_count": 19
+    },
+    "cyrillic_latin_normalization": {
+      "n_source_with_ge1_result": 1,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 1,
+      "no_match_count": 19
+    },
+    "token_based_retrieval": {
+      "n_source_with_ge1_result": 16,
+      "median_candidate_count": 50.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 16,
+      "no_match_count": 4
+    },
+    "conservative_fuzzy_retrieval": {
+      "n_source_with_ge1_result": 0,
+      "median_candidate_count": 0.0,
+      "exact_count": 0,
+      "fuzzy_count": 0,
+      "ambiguous_count": 0,
+      "no_match_count": 20
+    }
+  },
+  "mapping_summary": {
+    "n": 487,
+    "by_status": {
+      "NO_MATCH": 105,
+      "AMBIGUOUS": 381,
+      "EXACT_PROVIDER_MATCH": 1
+    },
+    "with_candidates": 382
+  },
+  "full_medication_strings_in_public": false
+}

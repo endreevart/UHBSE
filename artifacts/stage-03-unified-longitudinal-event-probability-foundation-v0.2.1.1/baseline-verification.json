@@ -1,0 +1,99 @@
+{
+  "version": "0.2.1.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "accepted_lep_v021_sha256": "d0036ecacb52a4e622cf363e9acea27ffadf0163300c596b9fcf2a7bfa2e90dd",
+  "accepted_lep_v02_sha256": "4a92d40dafeaece94cde0a5c29b170c39c000bed1f44793ee8294fdddc88b8d6",
+  "verified_zip": "stage-03-unified-longitudinal-event-probability-foundation-v0.2.1-review.zip",
+  "members": 734,
+  "indexed": 733,
+  "not_traj_v01_member_counts": true,
+  "prior_sha_before": {
+    "lep_v021": "d0036ecacb52a4e622cf363e9acea27ffadf0163300c596b9fcf2a7bfa2e90dd",
+    "lep_v02": "4a92d40dafeaece94cde0a5c29b170c39c000bed1f44793ee8294fdddc88b8d6",
+    "traj_v01": "7236ba12d14f7ba2bcc7345f3a2f00a865f42ba00c8c40c2ca30c5a7199d6421",
+    "csr_v01": "5ba19fbd465f6e41ef5d3d3b0923c073aaf78189bc1046316aba8ec24df4af69",
+    "v0111": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88"
+  },
+  "prior_sha_after": {
+    "lep_v021": "d0036ecacb52a4e622cf363e9acea27ffadf0163300c596b9fcf2a7bfa2e90dd",
+    "lep_v02": "4a92d40dafeaece94cde0a5c29b170c39c000bed1f44793ee8294fdddc88b8d6",
+    "traj_v01": "7236ba12d14f7ba2bcc7345f3a2f00a865f42ba00c8c40c2ca30c5a7199d6421",
+    "csr_v01": "5ba19fbd465f6e41ef5d3d3b0923c073aaf78189bc1046316aba8ec24df4af69",
+    "v0111": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88"
+  },
+  "prior_zips_immutable": true,
+  "checks": [
+    {
+      "name": "lep_v021_sha",
+      "ok": true,
+      "detail": "d0036ecacb52a4e622cf363e9acea27ffadf0163300c596b9fcf2a7bfa2e90dd"
+    },
+    {
+      "name": "lep_v02_sha",
+      "ok": true,
+      "detail": "4a92d40dafeaece94cde0a5c29b170c39c000bed1f44793ee8294fdddc88b8d6"
+    },
+    {
+      "name": "traj_v01_sha",
+      "ok": true,
+      "detail": "7236ba12d14f7ba2bcc7345f3a2f00a865f42ba00c8c40c2ca30c5a7199d6421"
+    },
+    {
+      "name": "csr_v01_sha",
+      "ok": true,
+      "detail": "5ba19fbd465f6e41ef5d3d3b0923c073aaf78189bc1046316aba8ec24df4af69"
+    },
+    {
+      "name": "v0111_sha",
+      "ok": true,
+      "detail": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88"
+    },
+    {
+      "name": "lep_v021_sidecar",
+      "ok": true
+    },
+    {
+      "name": "lep_v021_members",
+      "ok": true,
+      "detail": 734
+    },
+    {
+      "name": "lep_v021_no_parquet",
+      "ok": true
+    },
+    {
+      "name": "lep_v021_indexed",
+      "ok": true,
+      "detail": 733
+    },
+    {
+      "name": "lep_v021_manifest",
+      "ok": true
+    },
+    {
+      "name": "lep_v021_mutation",
+      "ok": true
+    },
+    {
+      "name": "lep_v02_sidecar",
+      "ok": true
+    },
+    {
+      "name": "private_transitions",
+      "ok": true
+    },
+    {
+      "name": "prior_before_after",
+      "ok": true
+    },
+    {
+      "name": "not_traj_member_accounting",
+      "ok": true,
+      "detail": {
+        "members": 734,
+        "indexed": 733
+      }
+    }
+  ],
+  "ok": true
+}

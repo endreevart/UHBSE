@@ -1,0 +1,147 @@
+{
+  "inserted": {
+    "source_system": 1,
+    "source_record": 12544,
+    "subject": 100,
+    "subject_characteristic": 200,
+    "encounter": 2153,
+    "observation": 4000,
+    "observation_component": 5333
+  },
+  "canonical_row_counts_before": {
+    "source_system": 0,
+    "source_record": 0,
+    "subject": 0,
+    "subject_characteristic": 0,
+    "encounter": 0,
+    "observation": 0,
+    "observation_component": 0
+  },
+  "canonical_row_counts": {
+    "source_system": 1,
+    "source_record": 12544,
+    "subject": 100,
+    "subject_characteristic": 200,
+    "encounter": 2153,
+    "observation": 4000,
+    "observation_component": 5333
+  },
+  "write_errors": [],
+  "write_error_count": 0,
+  "subjects_attempted": 100,
+  "subjects_in_map": 100,
+  "reject_count": 958,
+  "reject_categories": [
+    {
+      "category": "MISSING_SOURCE_VALUE",
+      "count": 927,
+      "denominator": 6291,
+      "percentage": 14.7353
+    },
+    {
+      "category": "INVALID_NUMERIC_REPRESENTATION",
+      "count": 31,
+      "denominator": 6291,
+      "percentage": 0.4928
+    },
+    {
+      "category": "BROKEN_SOURCE_RELATIONSHIP",
+      "count": 0,
+      "denominator": 6291,
+      "percentage": 0.0
+    },
+    {
+      "category": "DATABASE_CONSTRAINT_ERROR",
+      "count": 0,
+      "denominator": 12544,
+      "percentage": 0.0
+    },
+    {
+      "category": "MISSING_SUBJECT",
+      "count": 0,
+      "denominator": 6153,
+      "percentage": 0.0
+    }
+  ],
+  "reject_reasons": {
+    "MISSING_SOURCE_VALUE": 927,
+    "INVALID_NUMERIC_REPRESENTATION": 31
+  },
+  "truncation": {
+    "per_patient_limit": 40,
+    "per_result_limit": 15,
+    "cohort_subject_count": 100,
+    "relations": {
+      "appointment_appointment": {
+        "available_rows": 2153,
+        "selected_rows": 2153,
+        "truncated_rows": 0,
+        "coverage_percentage": 100.0,
+        "note": "all appointments for cohort subjects loaded (no per-patient encounter cap)"
+      },
+      "document_analysisresult": {
+        "available_rows": 29464,
+        "selected_rows": 4000,
+        "truncated_rows": 25464,
+        "coverage_percentage": 13.5759
+      },
+      "document_analysisresultitem": {
+        "available_rows": 6538,
+        "selected_rows": 6291,
+        "truncated_rows": 247,
+        "coverage_percentage": 96.2221,
+        "note": "available_rows counted only for selected analysisresult parents"
+      }
+    }
+  },
+  "source_record_coverage": {
+    "every_evidence_has_source_record": true,
+    "missing_total": 0,
+    "per_entity": [
+      {
+        "entity": "subject",
+        "missing_source_record": 0,
+        "ok": true
+      },
+      {
+        "entity": "subject_characteristic",
+        "missing_source_record": 0,
+        "ok": true
+      },
+      {
+        "entity": "encounter",
+        "missing_source_record": 0,
+        "ok": true
+      },
+      {
+        "entity": "observation",
+        "missing_source_record": 0,
+        "ok": true
+      },
+      {
+        "entity": "observation_component",
+        "missing_source_record": 0,
+        "ok": true
+      }
+    ],
+    "source_record_counts_by_relation": {
+      "account_patient": 100,
+      "appointment_appointment": 2153,
+      "document_analysisresult": 4000,
+      "document_analysisresultitem": 6291
+    }
+  },
+  "source_record_counts_by_relation": {
+    "account_patient": 100,
+    "appointment_appointment": 2153,
+    "document_analysisresult": 4000,
+    "document_analysisresultitem": 6291
+  },
+  "rejected_rows_in_source_record_coverage": {
+    "included": true,
+    "explanation": "SourceRecord is created for every processed source row that is a candidate for evidence (including lab items later classified MISSING_SOURCE_VALUE). Coverage check verifies each stored evidence row's provenance locator exists in source_record. Reject-only rows without evidence are counted in SourceRecord relation totals but are not required to have a paired evidence entity."
+  },
+  "opaque_subject_keys_only": true,
+  "patient_ids_not_in_report": true,
+  "evidence_locator_count": 11786
+}

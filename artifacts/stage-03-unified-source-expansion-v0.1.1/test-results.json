@@ -1,0 +1,43 @@
+{
+  "unit/static suite": {
+    "status": "PASS",
+    "collected": 10,
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0
+  },
+  "Source A evidence suite": {
+    "status": "PASS",
+    "note": "locator accounting + idempotency in run"
+  },
+  "scientific robustness suite": {
+    "status": "PASS",
+    "note": "bootstrap 2000 + shuffle 500 in run"
+  },
+  "Source B semantic unit suite": {
+    "status": "PASS",
+    "note": "covered by unit gates + live profile"
+  },
+  "Source B live profiling": {
+    "status": "PASS"
+  },
+  "Source B rollback validation": {
+    "status": "PASS"
+  },
+  "Source B full load": {
+    "status": "PARTIAL",
+    "subjects": 49564,
+    "encounters": 88867,
+    "observations": 0
+  },
+  "Source B idempotency": {
+    "status": "PASS"
+  },
+  "cross-source suite": {
+    "status": "NOT_RUN_DUE_TO_FAILED_GATE"
+  },
+  "clean-extraction suite": {
+    "status": "DEFERRED_TO_PUBLISH"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "ENGINE_JOINT_MODEL_ROUTING_STATUS_PUBLISHED": "DISK_FREEZE_REQUIRED",
+  "defects": [
+    {
+      "bootstrap_uses_mae_pairs": false,
+      "claim": "Bootstrap resamples effective groups then row-weights inside groups",
+      "id": 12,
+      "reproduced": true,
+      "row_weighted_mean": true,
+      "subject_macro_mae_exists": true
+    },
+    {
+      "claim": "Direct validation gate uses residual-quantile interval on path median, not primary empirical path interval",
+      "empirical_computed_but_not_gate": true,
+      "id": 13,
+      "interval_on_median": true,
+      "reproduced": true
+    },
+    {
+      "claim": "DEPENDENCE_STABILITY_STATUS=DETERMINISTIC_TRAIN_FIT is not seed/subsample/bootstrap stability",
+      "id": 14,
+      "published": "DETERMINISTIC_TRAIN_FIT",
+      "reproduced": true
+    }
+  ],
+  "ok": true,
+  "scalar_inference_cannot_be_joint_pass": true,
+  "version": "0.1"
+}

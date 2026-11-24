@@ -1,0 +1,78 @@
+{
+  "version": "0.1.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "accepted_v01_zip": "stage-03-source-a-single-outcome-trajectory-expansion-v0.1-review.zip",
+  "accepted_v01_sha256_expected": "ef3e53c3732691ac371599dfbd3181d317d74b6c1663cec76a40ee34e5373602",
+  "accepted_v01_sha256_observed": "ef3e53c3732691ac371599dfbd3181d317d74b6c1663cec76a40ee34e5373602",
+  "baseline_before": "ef3e53c3732691ac371599dfbd3181d317d74b6c1663cec76a40ee34e5373602",
+  "baseline_after": "ef3e53c3732691ac371599dfbd3181d317d74b6c1663cec76a40ee34e5373602",
+  "baseline_before_equals_after": true,
+  "members": 141,
+  "indexed_members": 140,
+  "checks": [
+    {
+      "name": "v01_zip_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "v01_sha256",
+      "ok": true,
+      "detail": "ef3e53c3732691ac371599dfbd3181d317d74b6c1663cec76a40ee34e5373602"
+    },
+    {
+      "name": "sidecar_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sidecar_matches",
+      "ok": true,
+      "detail": "ef3e53c3732691ac371599dfbd3181d317d74b6c1663cec76a40ee34e5373602"
+    },
+    {
+      "name": "attestation_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "attestation_status",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "attestation_sha",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "members_indexed",
+      "ok": true,
+      "detail": {
+        "members": 141,
+        "indexed": 140
+      }
+    },
+    {
+      "name": "zip_member_count",
+      "ok": true,
+      "detail": 141
+    },
+    {
+      "name": "REVIEW_INDEX_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "evidence_manifest_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "pilot_zip_unchanged",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "ok": true
+}

@@ -1,0 +1,69 @@
+{
+  "version": "0.1",
+  "EXPOSURE_SEMANTICS_STATUS": "CONTRACT_PUBLISHED",
+  "separations": {
+    "RECORDED_MEDICATION_ASSOCIATION_NE_CONFIRMED_ADMINISTRATION": true,
+    "ASSOCIATION_NE_INTERVENTION_RESPONSE": true,
+    "PREDICTION_NE_TREATMENT_EFFECT": true
+  },
+  "layers": {
+    "recorded_medication_association": {
+      "supported": true,
+      "evidence": "diagnosis_medicineappointments rows linked to patients"
+    },
+    "candidate_medication_event": {
+      "supported": true,
+      "evidence": "appointment_date technical hypothesis + medicine_id",
+      "clinical_time_confirmed": false
+    },
+    "candidate_exposure_window": {
+      "supported": true,
+      "evidence": "pre/post lab windows around event timestamp hypothesis",
+      "clinical_exposure_confirmed": false
+    },
+    "confirmed_administration": {
+      "supported": false,
+      "evidence": "no administration/dispense/ingest confirmation fields verified"
+    },
+    "intervention": {
+      "supported": false,
+      "note": "ScenarioIntervention identity not activated from these rows"
+    },
+    "treatment_response": {
+      "supported": false
+    },
+    "causal_effect": {
+      "supported": false
+    }
+  },
+  "timestamp_comparison": {
+    "rows_with_patient": 25726,
+    "appointment_date_nonnull": 24880,
+    "created_nonnull": 25726,
+    "modified_nonnull": 25726,
+    "same_calendar_day_appointment_and_created": 2617,
+    "appointment_after_created": 2650,
+    "appointment_date_status": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+    "created_status": "RECORD_CREATION_TIMESTAMP_SENSITIVITY_CONTROL",
+    "promoted_to_clinical_administration_time": false
+  },
+  "polypharmacy": {
+    "same_day_multi_medicine_patient_days": 3574
+  },
+  "dose_form_route_frequency_availability": {
+    "usable_unit_fk": 0,
+    "usable_form_fk": 0,
+    "usable_frequency_fk": 0,
+    "route_field_available": false,
+    "dose_value_field_available": false
+  },
+  "episode_summary_ref": {
+    "n_episodes": 202374,
+    "n_subjects": 844
+  },
+  "exposure_confidence_levels": {
+    "default_for_source_a_rows": "LOW_TECHNICAL_ASSOCIATION_ONLY",
+    "domain_review_required": true
+  },
+  "migration_0005": "NOT_RUN"
+}

@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "UNIFIED_SOURCE_AWARE_STATE_STATUS": "BUILT",
+  "schema": {
+    "entity": "UnifiedLongitudinalState",
+    "version": "0.1",
+    "required_fields": [
+      "research_subject_id",
+      "source_system",
+      "cutoff_relative",
+      "relative_timeline",
+      "observed_outcomes",
+      "missingness_mask",
+      "prediction_horizon_days",
+      "applicability_fields",
+      "provenance_evidence_locators",
+      "identity_merge"
+    ],
+    "identity_merge_must_be": false,
+    "notes": [
+      "Union of compatible schema/semantics across sources.",
+      "Does not assert that Source A and Source B records belong to the same people.",
+      "Populations must not be mixed for learning before domain-shift and independence gates."
+    ]
+  },
+  "n_accepted_comparable_outcomes": 0,
+  "n_source_a_providers": 95,
+  "n_source_b_catalog_grains": 500,
+  "instance_population": "SCHEMA_ONLY_NO_ACCEPTED_MAPPINGS",
+  "CROSS_SOURCE_IDENTITY_MERGE_STATUS": "NOT_RUN",
+  "identity_merge": false,
+  "source_populations_mixed_for_learning": false,
+  "ok": true
+}

@@ -1,0 +1,20 @@
+{
+  "version": "0.1.1",
+  "stage": "unified_a_b_individual_state_multi_outcome_baseline_v011",
+  "corrects": "v0.1 methodology defects (overlap ID, target reuse, pooled MAE, ridge, M2 gate, freeze, engine shadow)",
+  "preserves_v031_materialized_plane": true,
+  "no_identity_merge": true,
+  "no_raw_canonical_writes": true,
+  "DOMAIN_ACCEPTED_MAPPING_COUNT_default": 0,
+  "SCIENTIFIC_CROSS_SOURCE_PASS": false,
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "seed": 42,
+  "ridge_l2_grid": [
+    0.01,
+    0.1,
+    1.0
+  ],
+  "ridge_l2_default": 0.1,
+  "pooled_raw_mae_across_units": "FORBIDDEN",
+  "primary_target_component_reuse": 0
+}

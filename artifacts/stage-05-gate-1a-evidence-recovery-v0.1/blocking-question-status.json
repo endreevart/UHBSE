@@ -1,0 +1,75 @@
+{
+  "questions": [
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E1",
+      "question_id": "B_IDENTITY",
+      "reason": "no subject-key relation contract"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E1",
+      "question_id": "B_DRUGS",
+      "reason": "no user-facing form binding"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E1",
+      "question_id": "B_VITAMINS",
+      "reason": "no user-facing form binding"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E1",
+      "question_id": "B_CHANGE",
+      "reason": "no user-facing form binding"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E1",
+      "question_id": "B_DECLINE",
+      "reason": "no user-facing form binding"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E1",
+      "question_id": "B_POSITIVE",
+      "reason": "no user-facing form binding"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "NONE",
+      "question_id": "B_SHORT",
+      "reason": "no user-facing form binding"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E2",
+      "question_id": "A_RECOMMENDATION_ITEMS",
+      "reason": "structure only; description is unconstrained"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E1",
+      "question_id": "A_MEDICATION_CODE_SET",
+      "reason": "registry lists more than the accepted medicines code"
+    },
+    {
+      "attestation": "insufficient",
+      "closes_question": false,
+      "level": "E1",
+      "question_id": "A_DOCUMENT_FINAL",
+      "reason": "no delivery or finalization evidence"
+    }
+  ],
+  "source_b_positive_changes_is_response_label": false
+}

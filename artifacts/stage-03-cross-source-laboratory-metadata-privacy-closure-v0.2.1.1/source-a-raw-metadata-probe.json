@@ -1,0 +1,35 @@
+{
+  "version": "0.2.1.1",
+  "LAB_CONTEXT_METADATA_DISCOVERY_STATUS": "PASS",
+  "SOURCE_A_RAW_METADATA_PROBE_STATUS": "PASS",
+  "connection": "OK",
+  "candidates": [],
+  "rejected": [],
+  "queries": [
+    {
+      "name": "a_fk_scan",
+      "query_hash": "db69f80adb2426bfbe6237df1c5ef35d563627a9fb001cceaba52f322c1a3c36",
+      "n": 0
+    },
+    {
+      "name": "a_lab_relation_columns",
+      "query_hash": "132483115f76e1ffa495f621e44073960ff706fb919b78279646cd6d37d94f3e",
+      "n": 20
+    }
+  ],
+  "ok": true,
+  "lab_relation_count": 2,
+  "lab_relations": [
+    "magerya_api.document_analysisresult",
+    "magerya_api.document_analysisresultitem"
+  ],
+  "n_candidates": 0,
+  "n_rejected_scanned": 0,
+  "SOURCE_A_SPECIMEN_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+  "SOURCE_A_ASSAY_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+  "SOURCE_A_METADATA_RECOVERY_STATUS": "PASS_LAB_CONTEXT_NO_CONFIRMED_METADATA",
+  "default_specimen_invented": false,
+  "global_substring_scan_used": false,
+  "sample_category_hashes_emitted": false,
+  "probe_hash": "a3ab3713b908d575dcb23700974067df03abb9a721945abac6a882c41b642b4d"
+}

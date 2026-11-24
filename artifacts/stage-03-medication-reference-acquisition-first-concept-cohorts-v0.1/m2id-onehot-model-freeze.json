@@ -1,0 +1,117 @@
+{
+  "M2ID_ONEHOT_MODEL_FREEZE_STATUS": "FROZEN",
+  "cohorts": [
+    {
+      "status": "FROZEN",
+      "outcome": "\u041b\u0438\u043c\u0444\u043e\u0446\u0438\u0442\u044b",
+      "unit": "%",
+      "relative_path": "frozen_models_m2id_onehot/cohort_3032a40be51c",
+      "file_sha256": "7ce14b43c1960a6011032bbd2c266ed5d80c57bca0ca646226bf01dff5989a18",
+      "model_identity_sha256": "8cee91c6c2b98e974e9c600269972073dfb8ca0bf1b641707a1b9d2b06e9a302",
+      "vocab_hash": "878c6c9a1b6380ab4056430c2ab352958da803ebf62fb8cf7354d93df17552fe",
+      "feature_order_hash": "a4133260c33d09aeb4cca53597d00e133da62a433957152f30d3afdba85d5fa5",
+      "n_features": 305,
+      "vocab_size": 295,
+      "oov_rate_test": 0.014705882352941176,
+      "reload_predictions_match": true,
+      "metrics_test": {
+        "m0_subject_macro_mae": 5.4888345209638425,
+        "m1_subject_macro_mae": 5.011163140962136,
+        "m2id_onehot_subject_macro_mae": 5.166780298237763,
+        "m2exposure_subject_macro_mae": 4.978562643852074,
+        "m1_pair_micro_mae": 5.223346411608519,
+        "m2id_onehot_pair_micro_mae": 5.391044877517482
+      }
+    },
+    {
+      "status": "FROZEN",
+      "outcome": "\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u043e\u0431\u044a\u0435\u043c \u044d\u0440\u0438\u0442\u0440\u043e\u0446\u0438\u0442\u043e\u0432 (MCV)",
+      "unit": "\u0444\u043b",
+      "relative_path": "frozen_models_m2id_onehot/cohort_00cf513e6349",
+      "file_sha256": "6749e960027ff424b35c035d467453c97fdf2e3313b65c15853a128aa30b4a7d",
+      "model_identity_sha256": "b817984322fe1587e18f1ae29f0fec62c35f6326fd01eba2c3a7ca3971c8cbac",
+      "vocab_hash": "db938e43ce94c386a439279465b44e97936f0dd616ead40f5bbfb6d225705b7f",
+      "feature_order_hash": "f4353a797743c9d86cbc9bf133592fac22839b95700c721fdc37a45026aa6234",
+      "n_features": 307,
+      "vocab_size": 297,
+      "oov_rate_test": 0.01564245810055866,
+      "reload_predictions_match": true,
+      "metrics_test": {
+        "m0_subject_macro_mae": 2.0121338171465726,
+        "m1_subject_macro_mae": 1.7995216794155593,
+        "m2id_onehot_subject_macro_mae": 1.9221368281582556,
+        "m2exposure_subject_macro_mae": 1.7972568409068674,
+        "m1_pair_micro_mae": 1.745848466933799,
+        "m2id_onehot_pair_micro_mae": 1.8727592314331547
+      }
+    },
+    {
+      "status": "FROZEN",
+      "outcome": "\u041c\u043e\u043d\u043e\u0446\u0438\u0442\u044b",
+      "unit": "%",
+      "relative_path": "frozen_models_m2id_onehot/cohort_630158434a3e",
+      "file_sha256": "faa1c56915ee1d12b12c14120aab2b84d72d2aeee5e6f6231b4073c40777f37a",
+      "model_identity_sha256": "e202f4bf8c88fa9717d799d1df2973078449974c2d4061e40d5a8ed97b700acf",
+      "vocab_hash": "f145d16d1402e1deb4c93a4b7fb23531bc7d6461868b0e607785091ffb154339",
+      "feature_order_hash": "5703a36043ebc9c9db0e138df7d98b3ba0adfc7cd1fe0f0cebbd6e8119483435",
+      "n_features": 304,
+      "vocab_size": 294,
+      "oov_rate_test": 0.015063731170336037,
+      "reload_predictions_match": true,
+      "metrics_test": {
+        "m0_subject_macro_mae": 1.2664221877319304,
+        "m1_subject_macro_mae": 1.181597672038233,
+        "m2id_onehot_subject_macro_mae": 1.2330050256429053,
+        "m2exposure_subject_macro_mae": 1.1785886613871637,
+        "m1_pair_micro_mae": 1.1932010524953205,
+        "m2id_onehot_pair_micro_mae": 1.2457517815731192
+      }
+    },
+    {
+      "status": "FROZEN",
+      "outcome": "\u041d\u0435\u0439\u0442\u0440\u043e\u0444\u0438\u043b\u044b",
+      "unit": "%",
+      "relative_path": "frozen_models_m2id_onehot/cohort_05cc12cc4fc2",
+      "file_sha256": "80ee556ff3bc8a6ece9c0487361b1d269c5dd0eadff782b60bda0dcfc847f7e4",
+      "model_identity_sha256": "094706a3d45d231ff58742aadf0dee56ea3e12a91c95871699ffeec13c3d3427",
+      "vocab_hash": "62a0816deeb67bc7d5fe9921af232366b4668360216ef34d977cf310bbd2f6d3",
+      "feature_order_hash": "06205ff1ba7b21e3dfd0f80b4450b702ab0e526dceea61ecf40a9fccb221503a",
+      "n_features": 304,
+      "vocab_size": 294,
+      "oov_rate_test": 0.016036655211912942,
+      "reload_predictions_match": true,
+      "metrics_test": {
+        "m0_subject_macro_mae": 10.86591762429768,
+        "m1_subject_macro_mae": 10.44437843010778,
+        "m2id_onehot_subject_macro_mae": 10.6258831411377,
+        "m2exposure_subject_macro_mae": 10.423511805099766,
+        "m1_pair_micro_mae": 11.645258399305696,
+        "m2id_onehot_pair_micro_mae": 11.832704220396801
+      }
+    },
+    {
+      "status": "FROZEN",
+      "outcome": "\u042d\u043e\u0437\u0438\u043d\u043e\u0444\u0438\u043b\u044b",
+      "unit": "%",
+      "relative_path": "frozen_models_m2id_onehot/cohort_9afa137c2155",
+      "file_sha256": "a792a0183f3f3e63656ffa467fbb15d1fcb40f85026c66b9fec821a53b28e787",
+      "model_identity_sha256": "9a96368bef8b2def778e74bea73ba4f78e90b9e94c6bb8222ab78ba3271adb65",
+      "vocab_hash": "bbb0da49b588e1274cede982f8a7b56cf83fd04582f617e5b0fdf87275b66bc1",
+      "feature_order_hash": "8ec08550ae3e4f4559eeae6fc45e601e3da8fb8babca2e88a65f2db465ff6790",
+      "n_features": 304,
+      "vocab_size": 294,
+      "oov_rate_test": 0.016184971098265895,
+      "reload_predictions_match": true,
+      "metrics_test": {
+        "m0_subject_macro_mae": 0.9453776561979687,
+        "m1_subject_macro_mae": 0.8973593199060469,
+        "m2id_onehot_subject_macro_mae": 0.9435060625003683,
+        "m2exposure_subject_macro_mae": 0.8950233442194017,
+        "m1_pair_micro_mae": 0.8585534583126185,
+        "m2id_onehot_pair_micro_mae": 0.9127511977944993
+      }
+    }
+  ],
+  "n_frozen": 5,
+  "n_failed": 0
+}

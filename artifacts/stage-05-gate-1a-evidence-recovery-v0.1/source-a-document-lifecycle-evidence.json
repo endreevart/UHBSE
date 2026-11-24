@@ -1,0 +1,45 @@
+{
+  "ambiguities": [
+    "no finalization, signature, or delivery column on document_recommendation"
+  ],
+  "applicability": "SCHEMA_ONLY",
+  "basis": null,
+  "closes_question": false,
+  "code": {
+    "closes_question": false,
+    "editable_while_appointment_active": true,
+    "one_document_field_found": true,
+    "patient_delivery_path": "NOT_FOUND",
+    "whole_document_replace": true
+  },
+  "document_columns": [
+    "id",
+    "created",
+    "modified",
+    "document",
+    "schema",
+    "version",
+    "appointment_id",
+    "_document",
+    "_schema"
+  ],
+  "document_constraints": [
+    {
+      "definition": "FOREIGN KEY (appointment_id) REFERENCES magerya_api.appointment_appointment(id) DEFERRABLE INITIALLY DEFERRED",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "PRIMARY KEY (id)",
+      "type": "PRIMARY_KEY"
+    },
+    {
+      "definition": "UNIQUE (appointment_id)",
+      "type": "UNIQUE"
+    }
+  ],
+  "finalization_column_present": false,
+  "issued_to_patient": null,
+  "level": "E1",
+  "question_id": "A_DOCUMENT_FINAL",
+  "row_presence_is_not_delivery": true
+}

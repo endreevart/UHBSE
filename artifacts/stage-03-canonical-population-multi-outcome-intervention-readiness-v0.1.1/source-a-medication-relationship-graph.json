@@ -1,0 +1,23 @@
+{
+  "version": "0.1.1",
+  "edges": [
+    {
+      "source_table": "diagnosis_medicineappointments",
+      "source_column": "medicine_id",
+      "target_table": "diagnosis_medicines",
+      "target_column": "id",
+      "fk_declared": false,
+      "match_rate": 1.0,
+      "evidence_status": "CONFIRMED_DATA"
+    },
+    {
+      "source_table": "diagnosis_medicineappointments",
+      "source_column": "patient_id",
+      "target_table": "account_patient",
+      "target_column": "id",
+      "fk_declared": false,
+      "null_rate": 0.0,
+      "evidence_status": "CONFIRMED_DATA"
+    }
+  ]
+}

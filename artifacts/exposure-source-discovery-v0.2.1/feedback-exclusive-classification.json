@@ -1,0 +1,39 @@
+{
+  "FEEDBACK_TEMPORAL_EXCLUSIVE_ACCOUNTING_STATUS": "PASS",
+  "FEEDBACK_TOTAL_COUNT": 41407,
+  "categories": {
+    "CONSULTATION_ID_NULL": {
+      "count": 8034,
+      "fraction": 0.194
+    },
+    "CONSULTATION_ID_PRESENT_TARGET_NOT_FOUND": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "CONSULTATION_TARGET_FOUND_TIME_AFTER": {
+      "count": 24,
+      "fraction": 0.0006
+    },
+    "CONSULTATION_TARGET_FOUND_TIME_BEFORE": {
+      "count": 31271,
+      "fraction": 0.7552
+    },
+    "CONSULTATION_TARGET_FOUND_TIME_SAME_DAY": {
+      "count": 7,
+      "fraction": 0.0002
+    },
+    "CONSULTATION_TARGET_FOUND_TIME_UNCOMPARABLE": {
+      "count": 2071,
+      "fraction": 0.05
+    }
+  },
+  "overlap_count": 0,
+  "sum_exclusive_categories": 41407,
+  "unclassified_count": 0,
+  "uncomparable_components": {
+    "component_sum": 2071,
+    "created_at_null_and_consultation_date_null": 7,
+    "created_at_null_and_consultation_date_present": 64,
+    "created_at_present_and_consultation_date_missing_or_targets_disagree": 2000
+  }
+}

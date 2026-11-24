@@ -1,0 +1,34 @@
+{
+  "MULTI_OUTCOME_ROLLOUT_ASSEMBLY_STATUS": "MARGINAL_SOURCE_SPECIFIC_MULTI_OUTCOME_ROLLOUT",
+  "MULTI_OUTCOME_DEPENDENCE_STATUS": "MARGINAL_ONLY_NO_JOINT_MODEL",
+  "rejected_encoder_used": false,
+  "no_zero_mean_imputation": true,
+  "example": {
+    "version": "0.1",
+    "MULTI_OUTCOME_ROLLOUT_ASSEMBLY_STATUS": "MARGINAL_SOURCE_SPECIFIC_MULTI_OUTCOME_ROLLOUT",
+    "MULTI_OUTCOME_DEPENDENCE_STATUS": "MARGINAL_ONLY_NO_JOINT_MODEL",
+    "source_system": "magerya_api",
+    "horizon_days": 90,
+    "seed": 42,
+    "predicted_outcomes": {},
+    "missing_unsupported_outcomes": [
+      "A::demo::u",
+      "A::missing::u"
+    ],
+    "per_outcome_uncertainty": {},
+    "provider_identity": {},
+    "applicability": "NATURAL_HISTORY_ONLY",
+    "abstention_reasons": [
+      {
+        "outcome_key": "A::demo::u",
+        "reason": "UNSUPPORTED_OR_NO_ACCEPTED_CELL"
+      },
+      {
+        "outcome_key": "A::missing::u",
+        "reason": "UNSUPPORTED_OR_NO_ACCEPTED_CELL"
+      }
+    ],
+    "no_zero_mean_imputation": true,
+    "rejected_encoder_used": false
+  }
+}

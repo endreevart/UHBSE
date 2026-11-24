@@ -1,0 +1,24 @@
+{
+  "version": "0.1.1",
+  "probe": "DISABLED",
+  "accounting": {
+    "network_probe_attempts": 0,
+    "actual_http_requests": 0,
+    "successful_http_responses": 0,
+    "http_errors": 0,
+    "timeouts": 0,
+    "short_circuited_requests": 0,
+    "cache_hits": 0,
+    "cached_failures": 0,
+    "v01_defect_label": "LOGICAL_REQUEST_FAILURES_AFTER_SINGLE_FAILED_PROBE",
+    "v01_defect_note": "Prior release reported network_errors≈974 with network_fetches=0 after a single failed probe; those were short-circuited logical failures, not HTTP attempts."
+  },
+  "policy": "ESKLP_OFFLINE_PRIMARY_NO_487x2_NETWORK_FALLBACK",
+  "v01_defect": {
+    "label": "LOGICAL_REQUEST_FAILURES_AFTER_SINGLE_FAILED_PROBE",
+    "prior_misleading_counters": {
+      "network_errors": 974,
+      "network_fetches": 0
+    }
+  }
+}

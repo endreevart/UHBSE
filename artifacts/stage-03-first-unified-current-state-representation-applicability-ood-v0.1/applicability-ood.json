@@ -1,0 +1,19 @@
+{
+  "version": "0.1",
+  "APPLICABILITY_REFERENCE_STATUS": "BUILT",
+  "APPLICABILITY_OOD_DETECTOR_STATUS": "TECHNICAL_EVALUATED",
+  "CLINICAL_OOD_VALIDATION_STATUS": "NOT_STARTED",
+  "not_a_clinical_safety_detector": true,
+  "test_n_scored": 800,
+  "test_in_support": 611,
+  "test_out_of_support": 189,
+  "test_ood_fraction": 0.23625,
+  "ood_reason_counts": {
+    "feature_range:mask_density": 20,
+    "feature_range:n_observed": 20,
+    "outcome_mask_pattern": 55,
+    "latent_distance": 132
+  },
+  "abstention_behavior": "flag_out_of_support_do_not_claim_clinical_safety",
+  "ok": true
+}

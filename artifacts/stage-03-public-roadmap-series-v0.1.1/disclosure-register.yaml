@@ -1,0 +1,231 @@
+series_title: UHBSE — Building a Human Biology Simulation Engine
+publication_status: PRIVATE_PUBLICATION_REVIEW_REQUIRED
+categories:
+  PUBLIC_FACT:
+    rule: Show fully as aggregates or project statuses.
+    items:
+    - binding_id: subjects_entered
+      displayed_public_value: 43,856
+      episode: Roadmap01
+    - binding_id: subjects_appt_ge3
+      displayed_public_value: 8,588
+      episode: Roadmap01
+    - binding_id: subjects_appt3_and_lab
+      displayed_public_value: 8,262
+      episode: Roadmap01
+    - binding_id: bounded_cohort
+      displayed_public_value: '100'
+      episode: Roadmap01
+    - binding_id: appointments_volume
+      displayed_public_value: 68.1K
+      episode: Roadmap01
+    - binding_id: laboratory_records_volume
+      displayed_public_value: 874K
+      episode: Roadmap01
+    - binding_id: result_items_volume
+      displayed_public_value: 1.37M
+      episode: Roadmap01
+    - binding_id: lab_records_available
+      displayed_public_value: 29,464
+      episode: Roadmap02
+    - binding_id: lab_records_selected
+      displayed_public_value: 4,000
+      episode: Roadmap02
+    - binding_id: result_items_available
+      displayed_public_value: 6,538
+      episode: Roadmap02
+    - binding_id: result_items_selected
+      displayed_public_value: 6,291
+      episode: Roadmap02
+    - binding_id: valid_components
+      displayed_public_value: 5,333
+      episode: Roadmap02
+    - binding_id: reject_missing_source
+      displayed_public_value: '927'
+      episode: Roadmap02
+    - binding_id: reject_invalid_numeric
+      displayed_public_value: '31'
+      episode: Roadmap02
+    - binding_id: source_record
+      displayed_public_value: 12,544
+      episode: Roadmap03
+    - binding_id: subject
+      displayed_public_value: '100'
+      episode: Roadmap03
+    - binding_id: subject_characteristic
+      displayed_public_value: '200'
+      episode: Roadmap03
+    - binding_id: encounter
+      displayed_public_value: 2,153
+      episode: Roadmap03
+    - binding_id: observation
+      displayed_public_value: 4,000
+      episode: Roadmap03
+    - binding_id: observation_component
+      displayed_public_value: 5,333
+      episode: Roadmap03
+    - binding_id: provenance_valid
+      displayed_public_value: 24,331
+      episode: Roadmap03
+    - binding_id: timelines
+      displayed_public_value: '10'
+      episode: Roadmap03
+    - binding_id: timeline_events
+      displayed_public_value: '598'
+      episode: Roadmap03
+    - binding_id: snapshots
+      displayed_public_value: '10'
+      episode: Roadmap03
+    - binding_id: checkpoint_week
+      displayed_public_value: '2'
+      episode: Roadmap04
+    - binding_id: event_week
+      displayed_public_value: '3'
+      episode: Roadmap04
+    - binding_id: first_divergence_week
+      displayed_public_value: '3'
+      episode: Roadmap04
+    - binding_id: changed_variables
+      displayed_public_value: '1'
+      episode: Roadmap04
+    - binding_id: same_checkpoint_hash
+      displayed_public_value: same checkpoint hash
+      episode: Roadmap04
+    - binding_id: final_hashes_differ
+      displayed_public_value: different final state hashes
+      episode: Roadmap04
+    - binding_id: parent_state_unchanged
+      displayed_public_value: parent state unchanged
+      episode: Roadmap04
+    - binding_id: parent_history_unchanged
+      displayed_public_value: parent history unchanged
+      episode: Roadmap04
+    - binding_id: parent_events_unchanged
+      displayed_public_value: parent events unchanged
+      episode: Roadmap04
+    - binding_id: rollback_reproduces
+      displayed_public_value: ROLLBACK FINAL HASH = ORIGINAL FINAL HASH
+      episode: Roadmap04
+    - binding_id: checkpoint_hash_prefix
+      displayed_public_value: 795669a680
+      episode: Roadmap04
+    - binding_id: counterfactual_hash_prefix
+      displayed_public_value: 89c35864d8
+      episode: Roadmap04
+    - binding_id: event_fork_hash_prefix
+      displayed_public_value: 55cb2ee045
+      episode: Roadmap04
+    - binding_id: rollback_hash_prefix
+      displayed_public_value: 89c35864d8
+      episode: Roadmap04
+    - binding_id: clean_room_tests
+      displayed_public_value: '44'
+      episode: Roadmap05
+    - binding_id: future_leakage_excluded
+      displayed_public_value: future-data leakage rejected
+      episode: Roadmap05
+    - binding_id: technical_core_status
+      displayed_public_value: TECHNICAL CORE — VERIFIED
+      episode: Roadmap05
+    - binding_id: clinical_validation_status
+      displayed_public_value: CLINICAL VALIDATION — NOT STARTED
+      episode: Roadmap05
+    - binding_id: persistence_model
+      displayed_public_value: Persistence baseline
+      episode: Roadmap06
+    - binding_id: empirical_trend_model
+      displayed_public_value: Empirical trend
+      episode: Roadmap06
+    - binding_id: first_learned_baseline
+      displayed_public_value: First learned Ridge baseline
+      episode: Roadmap06
+    - binding_id: sdr_n_subjects_with_pairs
+      displayed_public_value: '30'
+      episode: Roadmap06
+    - binding_id: sdr_n_consecutive_pairs
+      displayed_public_value: '40'
+      episode: Roadmap06
+    - binding_id: sdr_test_subjects
+      displayed_public_value: '2'
+      episode: Roadmap06
+    - binding_id: sdr_test_pairs
+      displayed_public_value: '2'
+      episode: Roadmap06
+    - binding_id: metric_persistence_mae
+      displayed_public_value: '1.425'
+      episode: Roadmap06
+    - binding_id: metric_learned_mae
+      displayed_public_value: '0.524'
+      episode: Roadmap06
+    - binding_id: incremental_signal_status
+      displayed_public_value: NO INCREMENTAL SIGNAL CLAIMED
+      episode: Roadmap06
+    - binding_id: uncertainty_calibration_status
+      displayed_public_value: INSUFFICIENT DATA
+      episode: Roadmap06
+    - binding_id: sdr_clinical_validation
+      displayed_public_value: 'CLINICAL VALIDATION: NOT STARTED'
+      episode: Roadmap06
+  CONTROLLED_COMMERCIAL_REVEAL:
+    rule: Shown intentionally to demonstrate technical depth.
+    disclosure_status: OWNER_REVIEW_REQUIRED
+    items:
+    - binding_id: pipeline_source_to_snapshot
+      displayed_public_value: SourceRecord → Canonical Model → EvidenceStateSnapshot
+      disclosure_status: OWNER_REVIEW_REQUIRED
+    - binding_id: state_construction
+      displayed_public_value: state construction (encounters, laboratory observations,
+        temporal order, source references)
+      disclosure_status: OWNER_REVIEW_REQUIRED
+    - binding_id: observed_computed_synthetic
+      displayed_public_value: OBSERVED / COMPUTED / SYNTHETIC layers
+      disclosure_status: OWNER_REVIEW_REQUIRED
+    - binding_id: checkpoint_fork_rollback
+      displayed_public_value: checkpoint / fork / rollback protocol
+      disclosure_status: OWNER_REVIEW_REQUIRED
+    - binding_id: counterfactual_comparison
+      displayed_public_value: comparison of counterfactual continuations
+      disclosure_status: OWNER_REVIEW_REQUIRED
+    - binding_id: provenance_contract
+      displayed_public_value: provenance contract behaviour
+      disclosure_status: OWNER_REVIEW_REQUIRED
+    - binding_id: model_interface_categories
+      displayed_public_value: model interface categories
+      disclosure_status: OWNER_REVIEW_REQUIRED
+    - binding_id: retrospective_backtest_design
+      displayed_public_value: completed exploratory retrospective backtest
+      disclosure_status: OWNER_REVIEW_REQUIRED
+    - binding_id: negative_control_philosophy
+      displayed_public_value: negative-control philosophy
+      disclosure_status: OWNER_REVIEW_REQUIRED
+  FORBIDDEN:
+    rule: Must not appear in videos, captions, fixtures, or the review ZIP.
+    items:
+    - real patient records
+    - raw subject identifiers
+    - opaque subject keys from the working database
+    - names, phones, emails, addresses
+    - real visit dates of an individual
+    - individual laboratory sequences
+    - document bodies
+    - source table and column names
+    - SQL
+    - exact mappings
+    - normalization formulas
+    - feature engineering formulas
+    - thresholds
+    - model parameters and weights
+    - Vault configuration and paths
+    - tokens, credentials, DSN, .env
+    - network topology
+    - private keys
+    - HMAC values
+    - private runtime directories
+    - row-level health records even if de-identified
+synthetic_elements:
+- id: SYNTHETIC_COMPOSITE_TIMELINE
+  episode: Roadmap03
+  rule: Visual timeline is a composite of event-type counts, not a real subject.
+- id: SYNTHETIC_CONTROLLED_EVENT
+  episode: Roadmap04
+  rule: Fork event is a technical synthetic intervention. No biological effect claimed.

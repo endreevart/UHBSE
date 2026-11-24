@@ -1,0 +1,101 @@
+{
+  "$id": "uhbse/stage-05/gate-1a/superseding-decision-record/0.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "attestation": {
+      "const": "accepted"
+    },
+    "attestation_scope": {
+      "const": "WORKFLOW_INTENT_NOT_ROW_LEVEL_PROOF"
+    },
+    "basis": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "closes_question": {
+      "const": false
+    },
+    "decided_at": {
+      "const": "2026-11-07T14:04:00Z"
+    },
+    "decision": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "decision_schema_version": {
+      "const": "0.1.1"
+    },
+    "evidence_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "field_path": {
+      "minLength": 3,
+      "type": "string"
+    },
+    "prior_record_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "prior_reviewer_digest": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "prior_role": {
+      "const": "system_architect"
+    },
+    "proposition": {
+      "minLength": 3,
+      "type": "string"
+    },
+    "question_id": {
+      "enum": [
+        "B_TIMING",
+        "B_PERIOD"
+      ]
+    },
+    "requires_first_vs_repeat_visit_classification": {
+      "type": "boolean"
+    },
+    "reviewer_digest": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "role": {
+      "const": "gate_review"
+    },
+    "row_level_proof": {
+      "const": false
+    },
+    "source_system": {
+      "const": "kgz_raw"
+    },
+    "supersedes_artifact": {
+      "const": "artifacts/stage-05-gate-1a-v0.1/decision-records.json"
+    }
+  },
+  "required": [
+    "question_id",
+    "source_system",
+    "field_path",
+    "proposition",
+    "decision",
+    "role",
+    "reviewer_digest",
+    "prior_role",
+    "prior_reviewer_digest",
+    "decided_at",
+    "basis",
+    "evidence_sha256",
+    "prior_record_sha256",
+    "attestation",
+    "attestation_scope",
+    "closes_question",
+    "row_level_proof",
+    "requires_first_vs_repeat_visit_classification",
+    "decision_schema_version",
+    "supersedes_artifact"
+  ],
+  "type": "object"
+}

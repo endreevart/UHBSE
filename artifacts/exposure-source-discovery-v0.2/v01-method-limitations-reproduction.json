@@ -1,0 +1,66 @@
+{
+  "applies_to": "exposure-source-discovery-v0.1",
+  "claims": [
+    {
+      "claim": 1,
+      "evidence": "discover.py _json_profile calls _flatten_strings on the whole document before _text_profile.",
+      "holds": true,
+      "statement": "Source A pattern rates are computed on every string in the JSON document, not only recommendations[].items."
+    },
+    {
+      "claim": 2,
+      "evidence": "The same whole-document flatten is used, and the frozen key inventory contains both anamnesis and recommendations.",
+      "holds": true,
+      "statement": "document_medicalreport.document pattern hits are not confined to the recommendations block."
+    },
+    {
+      "claim": 3,
+      "evidence": "discover.py compiles catalog names with re.escape joined by '|' and searches the flattened document.",
+      "holds": true,
+      "statement": "catalog_mention_fraction=0.6216 is a substring search without word boundaries and without section localization."
+    },
+    {
+      "claim": 4,
+      "evidence": "SQL a_medicineappointment_to_recommendation_doc_same_day. Frozen fraction 0.0589. Absence in that window is not evidence of no link.",
+      "frozen_fraction": 0.0589,
+      "holds": true,
+      "statement": "The medicine-appointment to recommendation-document link uses only the same patient and created within 86400 seconds."
+    },
+    {
+      "claim": 5,
+      "evidence": "source-b-discovery.json length.p50 and non_empty_fraction.",
+      "holds": true,
+      "statement": "change_drugs and decline_drugs are about 82% non-empty with median length 3."
+    },
+    {
+      "claim": 6,
+      "evidence": "source-b-discovery.json consultations.recommendations. Not interpreted as medication instructions.",
+      "holds": true,
+      "statement": "consultations.recommendations is nearly all pattern hits at median length 5922, which can be a template effect."
+    },
+    {
+      "claim": 7,
+      "evidence": "followup-discovery.json subject_key_assumption and fraction 0.6697.",
+      "holds": true,
+      "statement": "The 67% figure uses the unconfirmed equality feedback.user_id = consultations.patient_id."
+    },
+    {
+      "claim": 8,
+      "evidence": {
+        "direct_identifier_check_requires_string": true,
+        "markdown_not_content_scanned": true,
+        "numeric_patient_id_missed": true,
+        "numeric_patient_id_status": "PASS_AGGREGATE_ONLY",
+        "scanner": "human_simulator.intervention_response_readiness_v01.privacy.scan_public"
+      },
+      "holds": true,
+      "statement": "The v0.1 privacy scanner reads JSON content, misses a numeric patient_id, and does not prove that no patient-level text was published."
+    }
+  ],
+  "functions_present": {
+    "_flatten_strings": true,
+    "_json_profile": true
+  },
+  "not_a_stage_05_v011_defect": true,
+  "ok": true
+}

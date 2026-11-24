@@ -1,0 +1,924 @@
+{
+  "FALSEY_FUTURE_FIELD_REJECTION_STATUS": "PASS",
+  "FUTURE_FIELD_PRESENCE_CONTRACT_STATUS": "PASS",
+  "cases": [
+    {
+      "expect_reason": null,
+      "field": "t1",
+      "http_status": null,
+      "kind": "missing",
+      "ok": true,
+      "reason": null,
+      "status": "OK",
+      "value_repr": "'<absent>'"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0.0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "[]"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "{}"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "nhr_direct_nonempty",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "'2020-01-02T00:00:00Z'"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0.0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "[]"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "{}"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "nhr_direct_nonempty",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "'2020-01-03T00:00:00Z'"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0.0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "[]"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "{}"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "nhr_direct_nonempty",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "[1.0]"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0.0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "[]"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "nhr_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "{}"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "nhr_direct_nonempty",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "90"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t2",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "future_intervals",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "synthetic_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "frozen_ordinary_lep_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "actual_recorded_label_offset_days",
+      "http_status": null,
+      "kind": "reference_probe_direct",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": null,
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "false_allowed_not_proof",
+      "ok": true,
+      "reason": null,
+      "status": "OK",
+      "value_repr": "False"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "true_blocked",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "True"
+    },
+    {
+      "expect_reason": "SCHEMA_INVALID",
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "invalid_type",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "status": "FAIL",
+      "value_repr": "None"
+    },
+    {
+      "expect_reason": "SCHEMA_INVALID",
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "invalid_type",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "status": "FAIL",
+      "value_repr": "0"
+    },
+    {
+      "expect_reason": "SCHEMA_INVALID",
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "invalid_type",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "status": "FAIL",
+      "value_repr": "1"
+    },
+    {
+      "expect_reason": "SCHEMA_INVALID",
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "invalid_type",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "status": "FAIL",
+      "value_repr": "''"
+    },
+    {
+      "expect_reason": "SCHEMA_INVALID",
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "invalid_type",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "status": "FAIL",
+      "value_repr": "'false'"
+    },
+    {
+      "expect_reason": "SCHEMA_INVALID",
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "invalid_type",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "status": "FAIL",
+      "value_repr": "[]"
+    },
+    {
+      "expect_reason": "SCHEMA_INVALID",
+      "field": "has_future_values",
+      "http_status": null,
+      "kind": "invalid_type",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "status": "FAIL",
+      "value_repr": "{}"
+    },
+    {
+      "expect_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "field": "t1+has_future_values=false",
+      "http_status": null,
+      "kind": "false_does_not_cancel",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "status": "FAIL",
+      "value_repr": "0"
+    }
+  ],
+  "infer_called_on_forbidden": 0,
+  "missing_field_proceeds": true,
+  "n_cases": 91,
+  "n_pass": 91,
+  "note": "Direct Python API uses original request dict keys. infer/residual mocks are ROUTING_CONTRACT_ONLY.",
+  "ok": true,
+  "residual_called_on_forbidden": 32,
+  "version": "0.1.5"
+}

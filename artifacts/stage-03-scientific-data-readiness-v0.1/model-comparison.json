@@ -1,0 +1,145 @@
+{
+  "retrospective_backtest_status": "FIRST_RETROSPECTIVE_BACKTEST_PASS",
+  "incremental_signal_status": "NO_INCREMENTAL_SIGNAL_DETECTED",
+  "outperforms_persistence": false,
+  "outperforms_empirical_trend": true,
+  "incremental_min_test_pairs": 5,
+  "small_test_note": null,
+  "persistence": {
+    "n_pairs": 25,
+    "n_subjects": 5,
+    "mae": 2.9892000000000003,
+    "rmse": 5.844842170666373,
+    "median_absolute_error": 0.40000000000000036,
+    "mean_bias": -1.666,
+    "empirical_interval_coverage": 0.0,
+    "horizon_days": {
+      "min": 7.5059998617708334,
+      "median": 35.0,
+      "max": 115.0,
+      "mean": 44.32047998894167
+    },
+    "residual_summary": {
+      "mean": 1.666,
+      "std": 5.602376638534757,
+      "min": -11.3,
+      "max": 15.200000000000001
+    }
+  },
+  "empirical_trend": {
+    "n_pairs": 25,
+    "n_subjects": 5,
+    "mae": 3.8434814576310736,
+    "rmse": 7.8125975619448,
+    "median_absolute_error": 1.0499999999999998,
+    "mean_bias": -0.9321327396823551,
+    "empirical_interval_coverage": 0.4,
+    "horizon_days": {
+      "min": 7.5059998617708334,
+      "median": 35.0,
+      "max": 115.0,
+      "mean": 44.32047998894167
+    },
+    "residual_summary": {
+      "mean": 0.9321327396823551,
+      "std": 7.756791167777956,
+      "min": -28.287500000000005,
+      "max": 15.460000000000003
+    }
+  },
+  "first_learned": {
+    "n_pairs": 25,
+    "n_subjects": 5,
+    "mae": 3.382950883517792,
+    "rmse": 5.963259118580287,
+    "median_absolute_error": 1.4744436891843726,
+    "mean_bias": -2.0792242894618,
+    "empirical_interval_coverage": 0.32,
+    "horizon_days": {
+      "min": 7.5059998617708334,
+      "median": 35.0,
+      "max": 115.0,
+      "mean": 44.32047998894167
+    },
+    "residual_summary": {
+      "mean": 2.0792242894618,
+      "std": 5.589032623759054,
+      "min": -2.649519006497961,
+      "max": 17.147581896509585
+    }
+  },
+  "persistence_ci": {
+    "mae_ci95": [
+      0.28777777777777797,
+      6.160434782608696
+    ],
+    "n_bootstrap": 200,
+    "method": "subject_resample"
+  },
+  "learned_ci": {
+    "mae_ci95": [
+      0.45293242338402667,
+      6.1287727643475725
+    ],
+    "n_bootstrap": 200,
+    "method": "subject_resample"
+  },
+  "horizon_buckets_learned": {
+    "0_30d": {
+      "n_pairs": 9,
+      "n_subjects": 3,
+      "mae": 2.8714434495418892,
+      "rmse": 5.4567072749419285,
+      "median_absolute_error": 1.3965849635157603,
+      "mean_bias": -1.2935171738008353,
+      "empirical_interval_coverage": 0.3333333333333333,
+      "horizon_days": {
+        "min": 7.5059998617708334,
+        "median": 20.0,
+        "max": 21.0,
+        "mean": 16.50066665130787
+      },
+      "residual_summary": {
+        "mean": 1.2935171738008353,
+        "std": 5.301176058714375,
+        "min": -2.649519006497961,
+        "max": 15.806154325995946
+      }
+    },
+    "30_90d": {
+      "n_pairs": 13,
+      "n_subjects": 3,
+      "mae": 4.415184096861847,
+      "rmse": 6.90653680492198,
+      "median_absolute_error": 2.1659502159456494,
+      "mean_bias": -3.205564650400097,
+      "empirical_interval_coverage": 0.23076923076923078,
+      "horizon_days": {
+        "min": 32.0,
+        "median": 52.0,
+        "max": 77.0,
+        "mean": 49.0
+      },
+      "residual_summary": {
+        "mean": 3.205564650400097,
+        "std": 6.1175653580364155,
+        "min": -2.2438089416142626,
+        "max": 17.147581896509585
+      }
+    },
+    "90_365d": {
+      "n_pairs": 3,
+      "status": "insufficient_for_bucket_metrics"
+    },
+    "365d_plus": {
+      "n_pairs": 0,
+      "status": "insufficient_for_bucket_metrics"
+    }
+  },
+  "forbidden_statuses_not_used": [
+    "CLINICALLY_VALIDATED",
+    "CLINICALLY_ACCURATE",
+    "TREATMENT_EFFECT_CONFIRMED",
+    "PRODUCTION_READY"
+  ]
+}

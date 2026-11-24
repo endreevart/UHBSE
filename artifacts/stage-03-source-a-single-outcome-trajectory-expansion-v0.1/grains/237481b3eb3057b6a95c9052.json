@@ -1,0 +1,2481 @@
+{
+  "grain_id": "237481b3eb3057b6a95c9052",
+  "outcome": "АЛТ",
+  "unit": "МЕ/л",
+  "status": "NO_INCREMENTAL_SIGNAL_DETECTED",
+  "active_provider": "persistence",
+  "active_provider_decision_reason": "Lowest validation subject-macro MAE among P0/P1/P2 (persistence=4.6575, trend=7.686431000346685, ridge=4.915275998235662); test unused for selection.",
+  "split_counts": {
+    "train_pairs": 223,
+    "val_pairs": 38,
+    "test_pairs": 40,
+    "train_subjects": 134,
+    "val_subjects": 28,
+    "test_subjects": 30
+  },
+  "subject_overlap_zero": true,
+  "pair_overlap_zero": true,
+  "validation_metrics": {
+    "persistence": {
+      "n_pairs": 38,
+      "n_subjects": 28,
+      "pair_micro_mae": 6.076842105263158,
+      "pair_micro_rmse": 8.798149326929352,
+      "median_absolute_error": 4.6,
+      "mean_bias": 1.2768421052631578,
+      "subject_macro_mae": 4.6575
+    },
+    "empirical_trend": {
+      "n_pairs": 38,
+      "n_subjects": 28,
+      "pair_micro_mae": 16.325211323779616,
+      "pair_micro_rmse": 42.397765269753094,
+      "median_absolute_error": 5.0,
+      "mean_bias": -4.130444612918117,
+      "subject_macro_mae": 7.686431000346685
+    },
+    "ridge": {
+      "n_pairs": 38,
+      "n_subjects": 28,
+      "pair_micro_mae": 6.132063612169058,
+      "pair_micro_rmse": 8.101730601988288,
+      "median_absolute_error": 5.064149969733295,
+      "mean_bias": 0.9309840126050468,
+      "subject_macro_mae": 4.915275998235662
+    }
+  },
+  "test_metrics": {
+    "persistence": {
+      "n_pairs": 40,
+      "n_subjects": 30,
+      "pair_micro_mae": 7.4625,
+      "pair_micro_rmse": 12.021595152058648,
+      "median_absolute_error": 5.700000000000001,
+      "mean_bias": 0.032499999999999904,
+      "subject_macro_mae": 6.288333333333333
+    },
+    "empirical_trend": {
+      "n_pairs": 40,
+      "n_subjects": 30,
+      "pair_micro_mae": 11.193721627435675,
+      "pair_micro_rmse": 24.352787998522306,
+      "median_absolute_error": 5.799999999999997,
+      "mean_bias": 0.6519542179980842,
+      "subject_macro_mae": 7.962365413155887
+    },
+    "ridge": {
+      "n_pairs": 40,
+      "n_subjects": 30,
+      "pair_micro_mae": 7.3828969044056745,
+      "pair_micro_rmse": 12.297045855434261,
+      "median_absolute_error": 4.957643493153073,
+      "mean_bias": -0.22892657459951843,
+      "subject_macro_mae": 6.558356081786771
+    }
+  },
+  "evaluation": {
+    "version": "0.1",
+    "source_a_incremental_signal_status": "NO_INCREMENTAL_SIGNAL_DETECTED",
+    "test_metrics": {
+      "ridge": {
+        "n_pairs": 40,
+        "n_subjects": 30,
+        "pair_micro_mae": 7.3828969044056745,
+        "pair_micro_rmse": 12.297045855434261,
+        "median_absolute_error": 4.957643493153073,
+        "mean_bias": -0.22892657459951843,
+        "subject_macro_mae": 6.558356081786771
+      },
+      "persistence": {
+        "n_pairs": 40,
+        "n_subjects": 30,
+        "pair_micro_mae": 7.4625,
+        "pair_micro_rmse": 12.021595152058648,
+        "median_absolute_error": 5.700000000000001,
+        "mean_bias": 0.032499999999999904,
+        "subject_macro_mae": 6.288333333333333
+      },
+      "empirical_trend": {
+        "n_pairs": 40,
+        "n_subjects": 30,
+        "pair_micro_mae": 11.193721627435675,
+        "pair_micro_rmse": 24.352787998522306,
+        "median_absolute_error": 5.799999999999997,
+        "mean_bias": 0.6519542179980842,
+        "subject_macro_mae": 7.962365413155887
+      },
+      "ridge_minus_persistence_macro_mae": 0.2700227484534379,
+      "relative_improvement_vs_persistence": 0.04294027274637231
+    },
+    "subject_improvement": {
+      "n_subjects": 30,
+      "mean_subject_error_diff_ridge_minus_persistence": 0.2700227484534377,
+      "median_subject_improvement_ridge_minus_persistence": 0.2555425449071871,
+      "fraction_subjects_ridge_better": 0.4666666666666667,
+      "negative_diff_means_ridge_better": true
+    },
+    "bootstrap": {
+      "status": "COMPUTED",
+      "n_iterations": 500,
+      "seed": 42,
+      "resampling_unit": "subject",
+      "mean_diff_ridge_minus_persistence": 0.3002636967216528,
+      "ci_95_lower": -0.5336350142706596,
+      "ci_95_upper": 1.211301195483144,
+      "fraction_negative": 0.252
+    },
+    "shuffle_control": {
+      "n_permutations": 100,
+      "seed": 42,
+      "shuffle_train_labels_only": true,
+      "evaluate_on_fixed_a_only_test": true,
+      "real_ridge_minus_persistence_macro_mae": 0.2700227484534379,
+      "count_shuffles_le_real": 0,
+      "fraction_shuffles_le_real": 0.0,
+      "permutation_p_value": 0.009900990099009901,
+      "permutation_p_value_formula": "(count_shuffles_le_real + 1) / (n_permutations + 1)",
+      "permutation_count_fixed_before_results": true
+    },
+    "horizon_sensitivity": {
+      "lt_1d": {
+        "n_pairs": 0,
+        "ridge": {
+          "n_pairs": 0,
+          "n_subjects": 0,
+          "pair_micro_mae": null,
+          "pair_micro_rmse": null,
+          "median_absolute_error": null,
+          "mean_bias": null,
+          "subject_macro_mae": null
+        },
+        "persistence": {
+          "n_pairs": 0,
+          "n_subjects": 0,
+          "pair_micro_mae": null,
+          "pair_micro_rmse": null,
+          "median_absolute_error": null,
+          "mean_bias": null,
+          "subject_macro_mae": null
+        }
+      },
+      "1_7d": {
+        "n_pairs": 0,
+        "ridge": {
+          "n_pairs": 0,
+          "n_subjects": 0,
+          "pair_micro_mae": null,
+          "pair_micro_rmse": null,
+          "median_absolute_error": null,
+          "mean_bias": null,
+          "subject_macro_mae": null
+        },
+        "persistence": {
+          "n_pairs": 0,
+          "n_subjects": 0,
+          "pair_micro_mae": null,
+          "pair_micro_rmse": null,
+          "median_absolute_error": null,
+          "mean_bias": null,
+          "subject_macro_mae": null
+        }
+      },
+      "7_30d": {
+        "n_pairs": 3,
+        "ridge": {
+          "n_pairs": 3,
+          "n_subjects": 3,
+          "pair_micro_mae": 7.029655461649587,
+          "pair_micro_rmse": 9.153346834439112,
+          "median_absolute_error": 5.330758573164079,
+          "mean_bias": 7.029655461649587,
+          "subject_macro_mae": 7.029655461649587
+        },
+        "persistence": {
+          "n_pairs": 3,
+          "n_subjects": 3,
+          "pair_micro_mae": 6.166666666666667,
+          "pair_micro_rmse": 8.777433185922485,
+          "median_absolute_error": 1.799999999999999,
+          "mean_bias": 6.166666666666667,
+          "subject_macro_mae": 6.166666666666667
+        }
+      },
+      "30_90d": {
+        "n_pairs": 12,
+        "ridge": {
+          "n_pairs": 12,
+          "n_subjects": 10,
+          "pair_micro_mae": 8.80535129890377,
+          "pair_micro_rmse": 11.36635413572317,
+          "median_absolute_error": 7.366990871603953,
+          "mean_bias": 3.0784118562832723,
+          "subject_macro_mae": 9.0239213162223
+        },
+        "persistence": {
+          "n_pairs": 12,
+          "n_subjects": 10,
+          "pair_micro_mae": 8.816666666666666,
+          "pair_micro_rmse": 11.108630278601709,
+          "median_absolute_error": 6.399999999999999,
+          "mean_bias": 1.8999999999999997,
+          "subject_macro_mae": 8.865
+        }
+      },
+      "90_365d": {
+        "n_pairs": 19,
+        "ridge": {
+          "n_pairs": 19,
+          "n_subjects": 15,
+          "pair_micro_mae": 7.294653966194491,
+          "pair_micro_rmse": 14.60044495427061,
+          "median_absolute_error": 4.148356512215031,
+          "mean_bias": -2.267053205838086,
+          "subject_macro_mae": 6.222298013159787
+        },
+        "persistence": {
+          "n_pairs": 19,
+          "n_subjects": 15,
+          "pair_micro_mae": 7.636842105263158,
+          "pair_micro_rmse": 14.240435386602474,
+          "median_absolute_error": 4.5,
+          "mean_bias": -2.236842105263158,
+          "subject_macro_mae": 6.249999999999999
+        }
+      },
+      "gt_365d": {
+        "n_pairs": 6,
+        "ridge": {
+          "n_pairs": 6,
+          "n_subjects": 6,
+          "pair_micro_mae": 4.9940448077896145,
+          "pair_micro_rmse": 5.7260698499118465,
+          "median_absolute_error": 5.9666832208275995,
+          "mean_bias": -4.0188267889008555,
+          "subject_macro_mae": 4.9940448077896145
+        },
+        "persistence": {
+          "n_pairs": 6,
+          "n_subjects": 6,
+          "pair_micro_mae": 4.85,
+          "pair_micro_rmse": 5.9970826240764765,
+          "median_absolute_error": 4.700000000000001,
+          "mean_bias": 0.4166666666666659,
+          "subject_macro_mae": 4.85
+        }
+      }
+    },
+    "signal_gates": {
+      "ridge_macro_lt_persistence": false,
+      "ridge_micro_lt_persistence": true,
+      "bootstrap_ci_upper_lt_0": false,
+      "permutation_p_le_0_05": true
+    }
+  },
+  "uncertainty": {
+    "version": "0.2",
+    "source_a_uncertainty_status": "UNCERTAINTY_CALIBRATION_AND_SHARPNESS_NOT_ESTABLISHED",
+    "uncertainty_interval_construction_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+    "n_test_pairs": 40,
+    "legacy_956_pair_metrics_not_reused": true,
+    "nominal_coverage": 0.9,
+    "observed_coverage": 0.875,
+    "mean_interval_width": 26.65232193052833,
+    "median_interval_width": 26.65232193052833,
+    "interval_width_relative_to_outcome_iqr": 2.9288265857723443,
+    "outcome_iqr": 9.1,
+    "exclusive_starting_value_quartiles": {
+      "bins": {
+        "q1": {
+          "n_pairs": 10,
+          "coverage": 1.0,
+          "mean_width": 26.65232193052833
+        },
+        "q2": {
+          "n_pairs": 10,
+          "coverage": 1.0,
+          "mean_width": 26.65232193052833
+        },
+        "q3": {
+          "n_pairs": 10,
+          "coverage": 0.9,
+          "mean_width": 26.65232193052833
+        },
+        "q4": {
+          "n_pairs": 10,
+          "coverage": 0.6,
+          "mean_width": 26.65232193052833
+        }
+      },
+      "sum_bucket_counts": 40,
+      "sum_equals_n": true,
+      "pairwise_intersection_empty": true,
+      "union_equals_full": true
+    },
+    "coverage_by_horizon": {
+      "lt_7d": {
+        "n_pairs": 0,
+        "coverage": null
+      },
+      "7_30d": {
+        "n_pairs": 3,
+        "coverage": 0.6666666666666666
+      },
+      "30_90d": {
+        "n_pairs": 12,
+        "coverage": 0.75
+      },
+      "90_365d": {
+        "n_pairs": 19,
+        "coverage": 0.9473684210526315
+      },
+      "gt_365d": {
+        "n_pairs": 6,
+        "coverage": 1.0
+      }
+    },
+    "note": "High coverage alone does not imply calibration PASS. Not clinical validation."
+  },
+  "uncertainty_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+  "applicability_reference": {
+    "version": "0.2",
+    "source_a_applicability_reference_status": "BUILT",
+    "n_train_pairs": 223,
+    "scaler_fit_n_rows": 223,
+    "training_pair_manifest_hash": "553a39244b0acb385892edf237be15a74eaf893c46ebe69fbfca3efe3df510f8",
+    "feature_schema_hash": "14303f8d4197b9bf8205bcb912bbb294c75f4ff2f7e22d2ae42290f97c4e29ff",
+    "feature_order": [
+      "y_t0",
+      "horizon_days",
+      "n_prior_measurements",
+      "prior_mean",
+      "prior_last_delta",
+      "days_since_first",
+      "has_prior_history",
+      "prior_mean_missing_flag",
+      "prior_last_delta_missing_flag"
+    ],
+    "horizon_quantiles": {
+      "p01": 2.0,
+      "p05": 5.0,
+      "p25": 37.0,
+      "p50": 86.0,
+      "p75": 138.0,
+      "p95": 391.0,
+      "p99": 648.0,
+      "min": 1.0,
+      "max": 886.0
+    },
+    "max_ood_fraction_declared_before_shadow_metrics": 0.35,
+    "not_production_ood_detector": true,
+    "exploratory_applicability_profile": true,
+    "equalities": {
+      "scaler_fit_n_rows_eq_n_train_pairs": true,
+      "manifest_hash_bound": true
+    }
+  },
+  "applicability_sample": {
+    "version": "0.2",
+    "source_b_applicability_status": "APPLICABILITY_CHECK_PASS",
+    "pass": true,
+    "feature_contract_complete": true,
+    "missing_feature_slots": 0,
+    "horizon_ood": {
+      "status": "COMPUTED",
+      "a_train_p05": 5.0,
+      "a_train_p95": 391.0,
+      "ood_fraction": 0.125
+    },
+    "per_feature_ood": {
+      "y_t0": {
+        "n_violations": 5,
+        "fraction": 0.125
+      },
+      "horizon_days": {
+        "n_violations": 5,
+        "fraction": 0.125
+      },
+      "n_prior_measurements": {
+        "n_violations": 0,
+        "fraction": 0.0
+      },
+      "prior_mean": {
+        "n_violations": 2,
+        "fraction": 0.05
+      },
+      "prior_last_delta": {
+        "n_violations": 4,
+        "fraction": 0.1
+      },
+      "days_since_first": {
+        "n_violations": 2,
+        "fraction": 0.05
+      },
+      "has_prior_history": {
+        "n_violations": 0,
+        "fraction": 0.0
+      },
+      "prior_mean_missing_flag": {
+        "n_violations": 0,
+        "fraction": 0.0
+      },
+      "prior_last_delta_missing_flag": {
+        "n_violations": 0,
+        "fraction": 0.0
+      }
+    },
+    "fraction_pairs_outside_declared_support": 0.35,
+    "n_in_support_pairs": 26,
+    "n_out_of_support_pairs": 14,
+    "n_subjects_in_support": 22,
+    "n_subjects_out_of_support": 10,
+    "max_ood_fraction": 0.35,
+    "threshold_declared_before_shadow_metrics": true,
+    "not_production_ood_detector": true,
+    "not_clinical_ood_detector": true,
+    "_runtime_in_support": [
+      {
+        "pair_id": "acd8c5aba1d7f1599726d652",
+        "opaque_subject_key": "34aab3c66c070a92492e71dcbe0aecdc234aa7753462925be901083a912d208d",
+        "t0": "2023-03-30T00:00:00+00:00",
+        "t1": "2023-08-31T00:00:00+00:00",
+        "y_t0": 13.1,
+        "y_t1": 11.2,
+        "horizon_days": 154.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 13.1,
+          "horizon_days": 154.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-03-30T00:00:00+00:00",
+          "prediction_cutoff": "2023-03-30T00:00:00+00:00",
+          "label_timestamp": "2023-08-31T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 13.1,
+          "horizon_days": 154.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "583391",
+          "t1_component_id": "563896",
+          "t0_observation_id": "510684",
+          "t1_observation_id": "492697",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "790cfc8a5ef2896e1b8d349e",
+        "opaque_subject_key": "3581fd085965955b49468e3dd7d56a103e267cc3b77eb8b12ff9fc9988ccd890",
+        "t0": "2022-08-03T00:00:00+00:00",
+        "t1": "2022-10-18T00:00:00+00:00",
+        "y_t0": 20.3,
+        "y_t1": 11.6,
+        "horizon_days": 76.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 20.3,
+          "horizon_days": 76.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-08-03T00:00:00+00:00",
+          "prediction_cutoff": "2022-08-03T00:00:00+00:00",
+          "label_timestamp": "2022-10-18T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 20.3,
+          "horizon_days": 76.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "138133",
+          "t1_component_id": "189841",
+          "t0_observation_id": "111801",
+          "t1_observation_id": "112218",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "df069bad725b7d35c457f4fc",
+        "opaque_subject_key": "36dcc0951565758709a0eff6914fb11256ddcb665a611233e258e40abfde4181",
+        "t0": "2023-02-16T00:00:00+00:00",
+        "t1": "2023-06-07T00:00:00+00:00",
+        "y_t0": 9.4,
+        "y_t1": 7.8,
+        "horizon_days": 111.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 9.4,
+          "horizon_days": 111.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-02-16T00:00:00+00:00",
+          "prediction_cutoff": "2023-02-16T00:00:00+00:00",
+          "label_timestamp": "2023-06-07T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 9.4,
+          "horizon_days": 111.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "345464",
+          "t1_component_id": "588453",
+          "t0_observation_id": "304167",
+          "t1_observation_id": "514483",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "fdffecd2b0ba8e19add49b7d",
+        "opaque_subject_key": "36dcc0951565758709a0eff6914fb11256ddcb665a611233e258e40abfde4181",
+        "t0": "2023-06-07T00:00:00+00:00",
+        "t1": "2023-10-11T00:00:00+00:00",
+        "y_t0": 7.8,
+        "y_t1": 15.1,
+        "horizon_days": 126.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 1,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 7.8,
+          "horizon_days": 126.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 9.4,
+          "prior_last_delta": -1.6000000000000005,
+          "days_since_first": 111.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-06-07T00:00:00+00:00",
+          "prediction_cutoff": "2023-06-07T00:00:00+00:00",
+          "label_timestamp": "2023-10-11T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 7.8,
+          "horizon_days": 126.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 9.4,
+          "prior_last_delta": -1.6000000000000005,
+          "days_since_first": 111.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "588453",
+          "t1_component_id": "621951",
+          "t0_observation_id": "514483",
+          "t1_observation_id": "541308",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "e94808e38d1c9134452253e4",
+        "opaque_subject_key": "42dc7853a8827bb885e92125ac8de0346b0d5b1015108cafff69d52a9cfa583b",
+        "t0": "2024-05-22T00:00:00+00:00",
+        "t1": "2024-06-17T00:00:00+00:00",
+        "y_t0": 29.0,
+        "y_t1": 14.0,
+        "horizon_days": 26.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 29.0,
+          "horizon_days": 26.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2024-05-22T00:00:00+00:00",
+          "prediction_cutoff": "2024-05-22T00:00:00+00:00",
+          "label_timestamp": "2024-06-17T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 29.0,
+          "horizon_days": 26.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "812927",
+          "t1_component_id": "845257",
+          "t0_observation_id": "688083",
+          "t1_observation_id": "688231",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "2efed5973cc41c5348503520",
+        "opaque_subject_key": "431d5b3d13a03b2e3c3b4cf69ac918483d31683d31ab9f0610d96432ad85ed30",
+        "t0": "2023-01-25T00:00:00+00:00",
+        "t1": "2023-04-26T00:00:00+00:00",
+        "y_t0": 14.6,
+        "y_t1": 15.7,
+        "horizon_days": 91.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 14.6,
+          "horizon_days": 91.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-01-25T00:00:00+00:00",
+          "prediction_cutoff": "2023-01-25T00:00:00+00:00",
+          "label_timestamp": "2023-04-26T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 14.6,
+          "horizon_days": 91.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "280675",
+          "t1_component_id": "386949",
+          "t0_observation_id": "175183",
+          "t1_observation_id": "339774",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "5e8c7a08dc81e0977a39965d",
+        "opaque_subject_key": "431d5b3d13a03b2e3c3b4cf69ac918483d31683d31ab9f0610d96432ad85ed30",
+        "t0": "2023-04-26T00:00:00+00:00",
+        "t1": "2023-07-24T00:00:00+00:00",
+        "y_t0": 15.7,
+        "y_t1": 9.3,
+        "horizon_days": 89.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 1,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 15.7,
+          "horizon_days": 89.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 14.6,
+          "prior_last_delta": 1.0999999999999996,
+          "days_since_first": 91.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-04-26T00:00:00+00:00",
+          "prediction_cutoff": "2023-04-26T00:00:00+00:00",
+          "label_timestamp": "2023-07-24T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 15.7,
+          "horizon_days": 89.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 14.6,
+          "prior_last_delta": 1.0999999999999996,
+          "days_since_first": 91.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "386949",
+          "t1_component_id": "517039",
+          "t0_observation_id": "339774",
+          "t1_observation_id": "451746",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "decf7f5678576f438f8f612f",
+        "opaque_subject_key": "431d5b3d13a03b2e3c3b4cf69ac918483d31683d31ab9f0610d96432ad85ed30",
+        "t0": "2023-07-24T00:00:00+00:00",
+        "t1": "2023-10-20T00:00:00+00:00",
+        "y_t0": 9.3,
+        "y_t1": 15.7,
+        "horizon_days": 88.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 2,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 9.3,
+          "horizon_days": 88.0,
+          "n_prior_measurements": 2.0,
+          "prior_mean": 15.149999999999999,
+          "prior_last_delta": -6.399999999999999,
+          "days_since_first": 180.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-07-24T00:00:00+00:00",
+          "prediction_cutoff": "2023-07-24T00:00:00+00:00",
+          "label_timestamp": "2023-10-20T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 9.3,
+          "horizon_days": 88.0,
+          "n_prior_measurements": 2.0,
+          "prior_mean": 15.149999999999999,
+          "prior_last_delta": -6.399999999999999,
+          "days_since_first": 180.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "517039",
+          "t1_component_id": "630085",
+          "t0_observation_id": "451746",
+          "t1_observation_id": "534118",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "4a045b8c365ba673d44add24",
+        "opaque_subject_key": "4a17af332999e293364941a98997e190aaab446af6a6a2104947d50e549b7476",
+        "t0": "2024-08-27T00:00:00+00:00",
+        "t1": "2024-09-10T00:00:00+00:00",
+        "y_t0": 32.7,
+        "y_t1": 31.0,
+        "horizon_days": 14.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 32.7,
+          "horizon_days": 14.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2024-08-27T00:00:00+00:00",
+          "prediction_cutoff": "2024-08-27T00:00:00+00:00",
+          "label_timestamp": "2024-09-10T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 32.7,
+          "horizon_days": 14.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "921440",
+          "t1_component_id": "921405",
+          "t0_observation_id": "776814",
+          "t1_observation_id": "776797",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "b868837421fa22dd70d89f8c",
+        "opaque_subject_key": "573bcd9a445a65f24d2cca4ff36ee2723a66257437fd440bd9c8c41e59e63bf4",
+        "t0": "2023-11-22T00:00:00+00:00",
+        "t1": "2024-05-31T00:00:00+00:00",
+        "y_t0": 23.8,
+        "y_t1": 23.8,
+        "horizon_days": 191.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 23.8,
+          "horizon_days": 191.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-11-22T00:00:00+00:00",
+          "prediction_cutoff": "2023-11-22T00:00:00+00:00",
+          "label_timestamp": "2024-05-31T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 23.8,
+          "horizon_days": 191.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "658770",
+          "t1_component_id": "821334",
+          "t0_observation_id": "549996",
+          "t1_observation_id": "694978",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "6ab39994399666e9f639c455",
+        "opaque_subject_key": "57e4972aaac02671c4fc59497f80786ebc1f4ce8864d7d4b69cac83b160a3b6c",
+        "t0": "2022-08-25T00:00:00+00:00",
+        "t1": "2022-11-09T00:00:00+00:00",
+        "y_t0": 11.2,
+        "y_t1": 17.3,
+        "horizon_days": 76.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 11.2,
+          "horizon_days": 76.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-08-25T00:00:00+00:00",
+          "prediction_cutoff": "2022-08-25T00:00:00+00:00",
+          "label_timestamp": "2022-11-09T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 11.2,
+          "horizon_days": 76.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "155251",
+          "t1_component_id": "212446",
+          "t0_observation_id": "130320",
+          "t1_observation_id": "137968",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "de598cb2c55cd8710e004aae",
+        "opaque_subject_key": "6e7b2900d448ce82097fe774347e67c2e0f35a21883eae67344fa192c94b2a1e",
+        "t0": "2024-04-05T00:00:00+00:00",
+        "t1": "2024-06-16T00:00:00+00:00",
+        "y_t0": 14.0,
+        "y_t1": 12.6,
+        "horizon_days": 72.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 14.0,
+          "horizon_days": 72.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2024-04-05T00:00:00+00:00",
+          "prediction_cutoff": "2024-04-05T00:00:00+00:00",
+          "label_timestamp": "2024-06-16T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 14.0,
+          "horizon_days": 72.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "834749",
+          "t1_component_id": "834792",
+          "t0_observation_id": "706394",
+          "t1_observation_id": "706473",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "516ef5ef55aa6797712e9262",
+        "opaque_subject_key": "71a7cb8dee5c55e652abe7cdff55d9f41aad32b48092365b81d1d6db35b093a3",
+        "t0": "2023-07-26T00:00:00+00:00",
+        "t1": "2023-10-27T00:00:00+00:00",
+        "y_t0": 34.1,
+        "y_t1": 22.2,
+        "horizon_days": 93.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 34.1,
+          "horizon_days": 93.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-07-26T00:00:00+00:00",
+          "prediction_cutoff": "2023-07-26T00:00:00+00:00",
+          "label_timestamp": "2023-10-27T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 34.1,
+          "horizon_days": 93.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "530779",
+          "t1_component_id": "639232",
+          "t0_observation_id": "461857",
+          "t1_observation_id": "482357",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "9784dcd3dd2991eb85d063a5",
+        "opaque_subject_key": "81d5ca76a86b5655e829df928508335fc312e8a40d588e2777cde70be7f47b78",
+        "t0": "2023-08-25T00:00:00+00:00",
+        "t1": "2023-10-18T00:00:00+00:00",
+        "y_t0": 31.2,
+        "y_t1": 27.4,
+        "horizon_days": 54.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 31.2,
+          "horizon_days": 54.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-08-25T00:00:00+00:00",
+          "prediction_cutoff": "2023-08-25T00:00:00+00:00",
+          "label_timestamp": "2023-10-18T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 31.2,
+          "horizon_days": 54.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "554920",
+          "t1_component_id": "646098",
+          "t0_observation_id": "484768",
+          "t1_observation_id": "558775",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "2a80d264cfd9ff8ebf29342d",
+        "opaque_subject_key": "8e534e24d8d14e1a13b788a00a3307ffae705a4a4a07599e0281dc5d6c00cc35",
+        "t0": "2024-10-14T00:00:00+00:00",
+        "t1": "2024-11-08T00:00:00+00:00",
+        "y_t0": 14.1,
+        "y_t1": 12.3,
+        "horizon_days": 25.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 14.1,
+          "horizon_days": 25.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2024-10-14T00:00:00+00:00",
+          "prediction_cutoff": "2024-10-14T00:00:00+00:00",
+          "label_timestamp": "2024-11-08T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 14.1,
+          "horizon_days": 25.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "967315",
+          "t1_component_id": "974420",
+          "t0_observation_id": "811206",
+          "t1_observation_id": "816771",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "9663a745fe5592fd581b554d",
+        "opaque_subject_key": "ac4d854488ebf1e4e74d33a644dc90208060c4e3c40ba9600d831cbf12fc0d59",
+        "t0": "2024-02-16T00:00:00+00:00",
+        "t1": "2024-06-19T00:00:00+00:00",
+        "y_t0": 29.5,
+        "y_t1": 35.3,
+        "horizon_days": 124.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 29.5,
+          "horizon_days": 124.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2024-02-16T00:00:00+00:00",
+          "prediction_cutoff": "2024-02-16T00:00:00+00:00",
+          "label_timestamp": "2024-06-19T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 29.5,
+          "horizon_days": 124.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "719776",
+          "t1_component_id": "845132",
+          "t0_observation_id": "615226",
+          "t1_observation_id": "714848",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "f690ec38949106d46adb777d",
+        "opaque_subject_key": "b02541e94611324f46d432fdd2887cb5f066dffdef58e2f5b13ddad485e0040b",
+        "t0": "2022-12-06T00:00:00+00:00",
+        "t1": "2023-02-22T00:00:00+00:00",
+        "y_t0": 15.5,
+        "y_t1": 14.6,
+        "horizon_days": 78.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 15.5,
+          "horizon_days": 78.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-12-06T00:00:00+00:00",
+          "prediction_cutoff": "2022-12-06T00:00:00+00:00",
+          "label_timestamp": "2023-02-22T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 15.5,
+          "horizon_days": 78.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "279686",
+          "t1_component_id": "319473",
+          "t0_observation_id": "246958",
+          "t1_observation_id": "281767",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "efc4d90fbeeaf99cc5185401",
+        "opaque_subject_key": "b55f01b9fdfdbc7e65ac24e1d4912364cee9eb7bf8d3eac6ad3a20ebed35bd10",
+        "t0": "2022-10-26T00:00:00+00:00",
+        "t1": "2023-08-11T00:00:00+00:00",
+        "y_t0": 9.7,
+        "y_t1": 20.7,
+        "horizon_days": 289.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 9.7,
+          "horizon_days": 289.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-10-26T00:00:00+00:00",
+          "prediction_cutoff": "2022-10-26T00:00:00+00:00",
+          "label_timestamp": "2023-08-11T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 9.7,
+          "horizon_days": 289.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "197986",
+          "t1_component_id": "536220",
+          "t0_observation_id": "172400",
+          "t1_observation_id": "456023",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "2b4c0d2ea9049db772e628e9",
+        "opaque_subject_key": "ba17b87e4430fd951436b1eba91bc3d4b98ac3152786505c37cc82f008e5e62e",
+        "t0": "2023-09-28T00:00:00+00:00",
+        "t1": "2024-03-05T00:00:00+00:00",
+        "y_t0": 11.9,
+        "y_t1": 13.2,
+        "horizon_days": 159.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 11.9,
+          "horizon_days": 159.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-09-28T00:00:00+00:00",
+          "prediction_cutoff": "2023-09-28T00:00:00+00:00",
+          "label_timestamp": "2024-03-05T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 11.9,
+          "horizon_days": 159.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "680657",
+          "t1_component_id": "738198",
+          "t0_observation_id": "585166",
+          "t1_observation_id": "628947",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "40940ea04e0ad6cc6b676d8a",
+        "opaque_subject_key": "bc3dc83311a7cb6fff19eaa7bda25ae7a92aa8edb45a73c04d5e327f1fdc72b7",
+        "t0": "2022-10-18T00:00:00+00:00",
+        "t1": "2023-03-22T00:00:00+00:00",
+        "y_t0": 14.4,
+        "y_t1": 20.1,
+        "horizon_days": 155.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 14.4,
+          "horizon_days": 155.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-10-18T00:00:00+00:00",
+          "prediction_cutoff": "2022-10-18T00:00:00+00:00",
+          "label_timestamp": "2023-03-22T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 14.4,
+          "horizon_days": 155.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "189011",
+          "t1_component_id": "349884",
+          "t0_observation_id": "164767",
+          "t1_observation_id": "308123",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "a416a83155c7916d5bae37f4",
+        "opaque_subject_key": "bc3dc83311a7cb6fff19eaa7bda25ae7a92aa8edb45a73c04d5e327f1fdc72b7",
+        "t0": "2023-03-22T00:00:00+00:00",
+        "t1": "2023-05-10T00:00:00+00:00",
+        "y_t0": 20.1,
+        "y_t1": 27.8,
+        "horizon_days": 49.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 1,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 20.1,
+          "horizon_days": 49.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 14.4,
+          "prior_last_delta": 5.700000000000001,
+          "days_since_first": 155.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-03-22T00:00:00+00:00",
+          "prediction_cutoff": "2023-03-22T00:00:00+00:00",
+          "label_timestamp": "2023-05-10T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 20.1,
+          "horizon_days": 49.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 14.4,
+          "prior_last_delta": 5.700000000000001,
+          "days_since_first": 155.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "349884",
+          "t1_component_id": "440250",
+          "t0_observation_id": "308123",
+          "t1_observation_id": "384851",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "296968b9aa5a9a31f5ae0f10",
+        "opaque_subject_key": "c51f6be45fc2b45a532adb5587bf0c038f819d25f453917c517ba42bda106161",
+        "t0": "2023-07-29T00:00:00+00:00",
+        "t1": "2023-09-12T00:00:00+00:00",
+        "y_t0": 23.7,
+        "y_t1": 17.3,
+        "horizon_days": 45.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 23.7,
+          "horizon_days": 45.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-07-29T00:00:00+00:00",
+          "prediction_cutoff": "2023-07-29T00:00:00+00:00",
+          "label_timestamp": "2023-09-12T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 23.7,
+          "horizon_days": 45.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "588287",
+          "t1_component_id": "588250",
+          "t0_observation_id": "514353",
+          "t1_observation_id": "514325",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "814634dcdd41a19bfcadea08",
+        "opaque_subject_key": "d671ff5d95efc9b30aa19eb5d7ab8e23b910ab79a4ce358ff28792f111fe258c",
+        "t0": "2023-07-11T00:00:00+00:00",
+        "t1": "2024-02-21T00:00:00+00:00",
+        "y_t0": 20.2,
+        "y_t1": 15.7,
+        "horizon_days": 225.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 20.2,
+          "horizon_days": 225.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-07-11T00:00:00+00:00",
+          "prediction_cutoff": "2023-07-11T00:00:00+00:00",
+          "label_timestamp": "2024-02-21T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 20.2,
+          "horizon_days": 225.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "527139",
+          "t1_component_id": "737232",
+          "t0_observation_id": "458161",
+          "t1_observation_id": "628191",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "2040ce20e6a7fb34509d8f1a",
+        "opaque_subject_key": "db68802d9fe7f96b47e592475c00774be90a109e68114ecbaa0f17ef434c4802",
+        "t0": "2025-10-20T00:00:00+00:00",
+        "t1": "2026-02-27T00:00:00+00:00",
+        "y_t0": 10.5,
+        "y_t1": 10.5,
+        "horizon_days": 130.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 10.5,
+          "horizon_days": 130.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2025-10-20T00:00:00+00:00",
+          "prediction_cutoff": "2025-10-20T00:00:00+00:00",
+          "label_timestamp": "2026-02-27T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 10.5,
+          "horizon_days": 130.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "1415438",
+          "t1_component_id": "1553897",
+          "t0_observation_id": "1070317",
+          "t1_observation_id": "1141028",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "7b7771c9fb65c3db6ca302e5",
+        "opaque_subject_key": "ec0a32ef3537203eb852ae78a9981d98a7bdb038544ea283f7498d2ffbcad8e2",
+        "t0": "2025-07-25T00:00:00+00:00",
+        "t1": "2025-10-25T00:00:00+00:00",
+        "y_t0": 20.1,
+        "y_t1": 10.6,
+        "horizon_days": 92.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 20.1,
+          "horizon_days": 92.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2025-07-25T00:00:00+00:00",
+          "prediction_cutoff": "2025-07-25T00:00:00+00:00",
+          "label_timestamp": "2025-10-25T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 20.1,
+          "horizon_days": 92.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "1266690",
+          "t1_component_id": "1375149",
+          "t0_observation_id": "992464",
+          "t1_observation_id": "1050446",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "be6e6cf324a0c2aa21ec2ace",
+        "opaque_subject_key": "f0add274f1c77278e114bc2f2e377e45875b987a7ebeba53d4a210ab5fe874ba",
+        "t0": "2022-03-02T00:00:00+00:00",
+        "t1": "2023-03-23T00:00:00+00:00",
+        "y_t0": 10.1,
+        "y_t1": 16.3,
+        "horizon_days": 386.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 10.1,
+          "horizon_days": 386.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-03-02T00:00:00+00:00",
+          "prediction_cutoff": "2022-03-02T00:00:00+00:00",
+          "label_timestamp": "2023-03-23T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 10.1,
+          "horizon_days": 386.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "131079",
+          "t1_component_id": "363653",
+          "t0_observation_id": "113717",
+          "t1_observation_id": "319565",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      }
+    ],
+    "_runtime_out_support": [
+      {
+        "pair_id": "235518da0f70c47e12f410f3",
+        "opaque_subject_key": "0105bb66388e57394cf41deb4d6cd88043816356dc1ea3cc5fb319af23851ff8",
+        "t0": "2023-11-14T00:00:00+00:00",
+        "t1": "2025-10-06T00:00:00+00:00",
+        "y_t0": 14.0,
+        "y_t1": 9.8,
+        "horizon_days": 692.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 14.0,
+          "horizon_days": 692.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-11-14T00:00:00+00:00",
+          "prediction_cutoff": "2023-11-14T00:00:00+00:00",
+          "label_timestamp": "2025-10-06T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 14.0,
+          "horizon_days": 692.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "664363",
+          "t1_component_id": "1361957",
+          "t0_observation_id": "546253",
+          "t1_observation_id": "1043751",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "425ca8f85fd97b68a093f857",
+        "opaque_subject_key": "08aa74cd267a2a5e38cd56be14c41b1937f539598d5628453a41295830d79465",
+        "t0": "2023-07-05T00:00:00+00:00",
+        "t1": "2025-12-26T00:00:00+00:00",
+        "y_t0": 11.2,
+        "y_t1": 12.7,
+        "horizon_days": 905.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 11.2,
+          "horizon_days": 905.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-07-05T00:00:00+00:00",
+          "prediction_cutoff": "2023-07-05T00:00:00+00:00",
+          "label_timestamp": "2025-12-26T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 11.2,
+          "horizon_days": 905.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "504741",
+          "t1_component_id": "1533067",
+          "t0_observation_id": "393386",
+          "t1_observation_id": "1129939",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "b7b5d4f32613ed7cd947a59c",
+        "opaque_subject_key": "16a68fd07debb281b50fb0aa343f2185485628956ef061f4c84b6b4b92f4da4a",
+        "t0": "2022-08-02T00:00:00+00:00",
+        "t1": "2024-09-03T00:00:00+00:00",
+        "y_t0": 7.6,
+        "y_t1": 12.3,
+        "horizon_days": 763.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 7.6,
+          "horizon_days": 763.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-08-02T00:00:00+00:00",
+          "prediction_cutoff": "2022-08-02T00:00:00+00:00",
+          "label_timestamp": "2024-09-03T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 7.6,
+          "horizon_days": 763.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "139331",
+          "t1_component_id": "1041442",
+          "t0_observation_id": "121626",
+          "t1_observation_id": "861237",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "fcfd7b897515f0e7457ed188",
+        "opaque_subject_key": "16a68fd07debb281b50fb0aa343f2185485628956ef061f4c84b6b4b92f4da4a",
+        "t0": "2024-09-03T00:00:00+00:00",
+        "t1": "2025-02-05T00:00:00+00:00",
+        "y_t0": 12.3,
+        "y_t1": 10.3,
+        "horizon_days": 155.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 1,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 12.3,
+          "horizon_days": 155.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 7.6,
+          "prior_last_delta": 4.700000000000001,
+          "days_since_first": 763.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2024-09-03T00:00:00+00:00",
+          "prediction_cutoff": "2024-09-03T00:00:00+00:00",
+          "label_timestamp": "2025-02-05T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 12.3,
+          "horizon_days": 155.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 7.6,
+          "prior_last_delta": 4.700000000000001,
+          "days_since_first": 763.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "1041442",
+          "t1_component_id": "1145997",
+          "t0_observation_id": "861237",
+          "t1_observation_id": "923722",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "ce82394924a63559c7b87361",
+        "opaque_subject_key": "16a68fd07debb281b50fb0aa343f2185485628956ef061f4c84b6b4b92f4da4a",
+        "t0": "2025-02-05T00:00:00+00:00",
+        "t1": "2025-08-05T00:00:00+00:00",
+        "y_t0": 10.3,
+        "y_t1": 14.7,
+        "horizon_days": 181.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 2,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 10.3,
+          "horizon_days": 181.0,
+          "n_prior_measurements": 2.0,
+          "prior_mean": 9.95,
+          "prior_last_delta": -2.0,
+          "days_since_first": 918.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2025-02-05T00:00:00+00:00",
+          "prediction_cutoff": "2025-02-05T00:00:00+00:00",
+          "label_timestamp": "2025-08-05T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 10.3,
+          "horizon_days": 181.0,
+          "n_prior_measurements": 2.0,
+          "prior_mean": 9.95,
+          "prior_last_delta": -2.0,
+          "days_since_first": 918.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "1145997",
+          "t1_component_id": "1288584",
+          "t0_observation_id": "923722",
+          "t1_observation_id": "1004569",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "fbfe99f81884ae296b1af632",
+        "opaque_subject_key": "396f1168b871d71cb0d980145c7f51140e3eaa4f8656bc8043c2aa43ba8fca58",
+        "t0": "2025-08-06T00:00:00+00:00",
+        "t1": "2025-09-18T00:00:00+00:00",
+        "y_t0": 48.4,
+        "y_t1": 25.5,
+        "horizon_days": 43.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 48.4,
+          "horizon_days": 43.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2025-08-06T00:00:00+00:00",
+          "prediction_cutoff": "2025-08-06T00:00:00+00:00",
+          "label_timestamp": "2025-09-18T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 48.4,
+          "horizon_days": 43.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "1338498",
+          "t1_component_id": "1338897",
+          "t0_observation_id": "1031243",
+          "t1_observation_id": "1031443",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "461dd64ce48ccb788dc717de",
+        "opaque_subject_key": "396f1168b871d71cb0d980145c7f51140e3eaa4f8656bc8043c2aa43ba8fca58",
+        "t0": "2025-09-18T00:00:00+00:00",
+        "t1": "2025-12-18T00:00:00+00:00",
+        "y_t0": 25.5,
+        "y_t1": 81.1,
+        "horizon_days": 91.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 1,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 25.5,
+          "horizon_days": 91.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 48.4,
+          "prior_last_delta": -22.9,
+          "days_since_first": 43.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2025-09-18T00:00:00+00:00",
+          "prediction_cutoff": "2025-09-18T00:00:00+00:00",
+          "label_timestamp": "2025-12-18T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 25.5,
+          "horizon_days": 91.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 48.4,
+          "prior_last_delta": -22.9,
+          "days_since_first": 43.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "1338897",
+          "t1_component_id": "1368658",
+          "t0_observation_id": "1031443",
+          "t1_observation_id": "1047110",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "510b8017f7ca4a77e4ca586f",
+        "opaque_subject_key": "396f1168b871d71cb0d980145c7f51140e3eaa4f8656bc8043c2aa43ba8fca58",
+        "t0": "2025-12-18T00:00:00+00:00",
+        "t1": "2026-04-01T00:00:00+00:00",
+        "y_t0": 81.1,
+        "y_t1": 66.9,
+        "horizon_days": 104.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 2,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 81.1,
+          "horizon_days": 104.0,
+          "n_prior_measurements": 2.0,
+          "prior_mean": 36.95,
+          "prior_last_delta": 55.599999999999994,
+          "days_since_first": 134.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2025-12-18T00:00:00+00:00",
+          "prediction_cutoff": "2025-12-18T00:00:00+00:00",
+          "label_timestamp": "2026-04-01T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 81.1,
+          "horizon_days": 104.0,
+          "n_prior_measurements": 2.0,
+          "prior_mean": 36.95,
+          "prior_last_delta": 55.599999999999994,
+          "days_since_first": 134.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "1368658",
+          "t1_component_id": "1481889",
+          "t0_observation_id": "1047110",
+          "t1_observation_id": "1104294",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "16c43cc0043f00c3c2027cae",
+        "opaque_subject_key": "44d669176740015c6f6735b2d4c7723e96d3cdbf05f40186febe8b0dfa252e5f",
+        "t0": "2022-10-31T00:00:00+00:00",
+        "t1": "2022-12-29T00:00:00+00:00",
+        "y_t0": 47.4,
+        "y_t1": 68.7,
+        "horizon_days": 59.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 47.4,
+          "horizon_days": 59.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-10-31T00:00:00+00:00",
+          "prediction_cutoff": "2022-10-31T00:00:00+00:00",
+          "label_timestamp": "2022-12-29T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 47.4,
+          "horizon_days": 59.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "241189",
+          "t1_component_id": "262540",
+          "t0_observation_id": "210324",
+          "t1_observation_id": "232690",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "6319d79130195563e5cba495",
+        "opaque_subject_key": "47262a5f5c74d081e8c2a97ac6b612efc45b30540b07a4d27d955f82673b27f5",
+        "t0": "2024-03-20T00:00:00+00:00",
+        "t1": "2024-09-18T00:00:00+00:00",
+        "y_t0": 6.9,
+        "y_t1": 8.5,
+        "horizon_days": 182.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 6.9,
+          "horizon_days": 182.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2024-03-20T00:00:00+00:00",
+          "prediction_cutoff": "2024-03-20T00:00:00+00:00",
+          "label_timestamp": "2024-09-18T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 6.9,
+          "horizon_days": 182.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "767125",
+          "t1_component_id": "944502",
+          "t0_observation_id": "612617",
+          "t1_observation_id": "794086",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "51f66fb86dd1b0f5dba1c5eb",
+        "opaque_subject_key": "71a7cb8dee5c55e652abe7cdff55d9f41aad32b48092365b81d1d6db35b093a3",
+        "t0": "2023-10-27T00:00:00+00:00",
+        "t1": "2024-02-01T00:00:00+00:00",
+        "y_t0": 22.2,
+        "y_t1": 16.5,
+        "horizon_days": 97.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 1,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 22.2,
+          "horizon_days": 97.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 34.1,
+          "prior_last_delta": -11.900000000000002,
+          "days_since_first": 93.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-10-27T00:00:00+00:00",
+          "prediction_cutoff": "2023-10-27T00:00:00+00:00",
+          "label_timestamp": "2024-02-01T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 22.2,
+          "horizon_days": 97.0,
+          "n_prior_measurements": 1.0,
+          "prior_mean": 34.1,
+          "prior_last_delta": -11.900000000000002,
+          "days_since_first": 93.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "639232",
+          "t1_component_id": "707314",
+          "t0_observation_id": "482357",
+          "t1_observation_id": "605199",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "367a590479fae1c7b1744671",
+        "opaque_subject_key": "bc3dc83311a7cb6fff19eaa7bda25ae7a92aa8edb45a73c04d5e327f1fdc72b7",
+        "t0": "2023-05-10T00:00:00+00:00",
+        "t1": "2023-07-07T00:00:00+00:00",
+        "y_t0": 27.8,
+        "y_t1": 14.0,
+        "horizon_days": 58.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 2,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 27.8,
+          "horizon_days": 58.0,
+          "n_prior_measurements": 2.0,
+          "prior_mean": 17.25,
+          "prior_last_delta": 7.699999999999999,
+          "days_since_first": 204.0,
+          "has_prior_history": 1.0,
+          "prior_mean_imputed": false,
+          "prior_last_delta_imputed": false,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-05-10T00:00:00+00:00",
+          "prediction_cutoff": "2023-05-10T00:00:00+00:00",
+          "label_timestamp": "2023-07-07T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 27.8,
+          "horizon_days": 58.0,
+          "n_prior_measurements": 2.0,
+          "prior_mean": 17.25,
+          "prior_last_delta": 7.699999999999999,
+          "days_since_first": 204.0,
+          "has_prior_history": 1.0,
+          "prior_mean_missing_flag": 0.0,
+          "prior_last_delta_missing_flag": 0.0
+        },
+        "provenance": {
+          "t0_component_id": "440250",
+          "t1_component_id": "541578",
+          "t0_observation_id": "384851",
+          "t1_observation_id": "472785",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "f85f06a6c2573f8a4e97ff9a",
+        "opaque_subject_key": "c9e88a50c24fc9cfb07c48ac479b8b15bb48e935953fd4b42d178d757ba4a672",
+        "t0": "2022-01-19T00:00:00+00:00",
+        "t1": "2024-04-27T00:00:00+00:00",
+        "y_t0": 6.2,
+        "y_t1": 7.1,
+        "horizon_days": 829.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 6.2,
+          "horizon_days": 829.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2022-01-19T00:00:00+00:00",
+          "prediction_cutoff": "2022-01-19T00:00:00+00:00",
+          "label_timestamp": "2024-04-27T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 6.2,
+          "horizon_days": 829.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "75639",
+          "t1_component_id": "790344",
+          "t0_observation_id": "66725",
+          "t1_observation_id": "670780",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      },
+      {
+        "pair_id": "4c8a5771919c4df6b8b26f45",
+        "opaque_subject_key": "fa4667bc4fb5b3c29ca7661b38f07f849c3690045bfbf6d5aaacce80552af832",
+        "t0": "2023-03-03T00:00:00+00:00",
+        "t1": "2025-03-26T00:00:00+00:00",
+        "y_t0": 28.9,
+        "y_t1": 17.3,
+        "horizon_days": 754.0,
+        "unit": "МЕ/л",
+        "neighbor_index": 0,
+        "pair_kind": "strict_consecutive",
+        "features": {
+          "y_t0": 28.9,
+          "horizon_days": 754.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": null,
+          "prior_last_delta": null,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_imputed": true,
+          "prior_last_delta_imputed": true,
+          "imputation_method": "none_missing_left_null_with_flags",
+          "feature_max_timestamp": "2023-03-03T00:00:00+00:00",
+          "prediction_cutoff": "2023-03-03T00:00:00+00:00",
+          "label_timestamp": "2025-03-26T00:00:00+00:00"
+        },
+        "model_features": {
+          "y_t0": 28.9,
+          "horizon_days": 754.0,
+          "n_prior_measurements": 0.0,
+          "prior_mean": 0.0,
+          "prior_last_delta": 0.0,
+          "days_since_first": 0.0,
+          "has_prior_history": 0.0,
+          "prior_mean_missing_flag": 1.0,
+          "prior_last_delta_missing_flag": 1.0
+        },
+        "provenance": {
+          "t0_component_id": "355059",
+          "t1_component_id": "1120358",
+          "t0_observation_id": "312887",
+          "t1_observation_id": "908002",
+          "outcome_candidate_id": "237481b3eb3057b6a95c9052",
+          "source_measurement_label": null,
+          "mapping_status": "DOMAIN_REVIEW_PENDING",
+          "scientific_version": "0.1.1.1"
+        }
+      }
+    ]
+  },
+  "medication_features_present": false,
+  "dataset_summary": {
+    "grain_id": "237481b3eb3057b6a95c9052",
+    "outcome": "АЛТ",
+    "unit": "МЕ/л",
+    "n_observations": 1238,
+    "n_subjects": 931,
+    "n_subjects_with_repeats": 195,
+    "n_pairs": 301,
+    "pair_meta": {
+      "schema": {
+        "row_fields": [
+          "pair_id",
+          "opaque_subject_key",
+          "t0",
+          "t1",
+          "y_t0",
+          "y_t1",
+          "horizon_days",
+          "unit",
+          "neighbor_index",
+          "pair_kind",
+          "model_features",
+          "provenance"
+        ],
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "version": "0.1.1.1"
+      },
+      "summary": {
+        "n_subjects_in_series": 931,
+        "n_observations_after_filter": 1238,
+        "n_pairs": 301,
+        "n_subjects_with_pairs": 192,
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "horizon_days": {
+          "n": 301,
+          "min": 1.0,
+          "median": 97.0,
+          "max": 905.0,
+          "mean": 146.2624584717608
+        },
+        "exclusions_by_reason": {
+          "missing_timestamp": 0,
+          "zero_horizon": 1,
+          "negative_horizon": 0,
+          "incompatible_unit": 0,
+          "duplicate_same_timestamp_collapsed": 5,
+          "all_forward_combinations_forbidden": 0
+        },
+        "units": [
+          "МЕ/л"
+        ],
+        "date_coverage": {
+          "t0_min": "2021-09-14T00:00:00+00:00",
+          "t0_max": "2026-04-12T00:00:00+00:00",
+          "t1_min": "2021-11-30T00:00:00+00:00",
+          "t1_max": "2026-06-26T00:00:00+00:00"
+        },
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "dataset_schema_hash": "9a5fde5e8b26931fdc000d1d1ad15a42f4e58c0bd591f772c3802485357278d7",
+        "dataset_build_configuration_hash": "6ebe6968887fd858cf2bc0177af0abdc3cc8f550d016477977bc53be74b87bcd",
+        "missingness": {
+          "prior_mean_null_pairs": 192,
+          "prior_last_delta_null_pairs": 192
+        }
+      },
+      "config": {
+        "version": "0.1",
+        "source_system": "magerya_api"
+      }
+    },
+    "funnel_steps": [
+      {
+        "level": "numeric_observations",
+        "accepted": 1238,
+        "note": "Source A numeric typed values with timestamps"
+      },
+      {
+        "level": "subjects",
+        "accepted": 931
+      },
+      {
+        "level": "subjects_with_repeats",
+        "accepted": 195
+      },
+      {
+        "level": "strict_consecutive_pairs",
+        "accepted": 301,
+        "exclusions": null
+      }
+    ],
+    "unexplained": 0,
+    "source_system": "magerya_api",
+    "medication_features_present": false
+  },
+  "frozen_hashes": {
+    "model_file_hash": "5273fa6ab98a57ef1a136fd28ed683c35f8179dbdbe17268515045da60b79409",
+    "model_identity_hash": "da228fa1f229241775904d48fcaad5b83a4504f32df174d8710cb332fa3fddfb",
+    "active_provider": "persistence"
+  }
+}

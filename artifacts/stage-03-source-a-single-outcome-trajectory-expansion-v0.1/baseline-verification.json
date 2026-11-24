@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "concept_pilot_zip",
+      "ok": true
+    },
+    {
+      "name": "pilot_sidecar",
+      "ok": true
+    },
+    {
+      "name": "pilot_attestation",
+      "ok": true
+    },
+    {
+      "name": "present:private/post-pilot-audit-v01/verification.json",
+      "ok": true
+    },
+    {
+      "name": "present:private/post-pilot-audit-v01/source-a-longitudinal-inventory.json",
+      "ok": true
+    },
+    {
+      "name": "present:private/post-pilot-audit-v01/threshold-options.json",
+      "ok": true
+    },
+    {
+      "name": "source_b_contamination_zero",
+      "ok": true
+    },
+    {
+      "name": "source_a_provenance",
+      "ok": true
+    }
+  ],
+  "no_training_after_audit": true
+}

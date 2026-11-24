@@ -1,0 +1,46 @@
+{
+  "version": "0.1",
+  "ENGINE_REAL_HELDOUT_TRAJECTORY_STATUS": "TECHNICAL_REAL_HELDOUT_PASS",
+  "claim_level": "TECHNICAL_REAL_HELDOUT_ONLY",
+  "not_clinical_validation": true,
+  "checks": {
+    "never_in_train_validation": true,
+    "determinism_ok": true,
+    "horizon_perturbation_changes_output": true,
+    "observed_value_perturbation_changes_output": true,
+    "missing_outcome_reduces_coverage": true,
+    "predictions_in_evidence_history": true,
+    "physiology_unchanged_by_predictions": true,
+    "checkpoint_ok": true,
+    "fork_ok": true,
+    "rollback_ok": true,
+    "parent_isolation_ok": true,
+    "no_medication_selection": true
+  },
+  "split_proof": {
+    "subject_role": "test",
+    "never_in_train_validation": true,
+    "global_split_hash": "ba3579f909712863fe97b1cb752bd5249682c586a9b91bdadc089e06c7f24c06"
+  },
+  "state_hash": "b536bfa30e676f1c69a234c5c97e6c4ac012ad1091ab09729b364f6b7e206b08",
+  "n_predictions": 54,
+  "n_components": 74,
+  "status_counts": {
+    "OUT_OF_SUPPORT": 11,
+    "PREDICTABLE": 54,
+    "MISSING": 6,
+    "OBSERVED": 3
+  },
+  "predictions_hash_run1": "5752dddeaeaa5b63cec26fa3339938c83c7ea6182f23d0eeaee868f65c4a29ca",
+  "predictions_hash_run2": "5752dddeaeaa5b63cec26fa3339938c83c7ea6182f23d0eeaee868f65c4a29ca",
+  "horizon_perturbation_hash": "a3d3317543f0b47dbc072e20eaa8f51e4530e97967bc1ae1ccdcd9ed4b5fcae7",
+  "missing_outcome_n_predictions": 26,
+  "checkpoint": {
+    "checkpoint_id": "global_state_v01_parent-w2",
+    "state_hash": "2cd764fb1e1d51b4aa91a12c07afe7747ac050b294be7c0f623e254fc8c6627a"
+  },
+  "parent_isolation": {
+    "fork_isolation_verified": true
+  },
+  "public_fields_only": true
+}

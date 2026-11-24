@@ -1,0 +1,70 @@
+{
+  "version": "0.1",
+  "DRUG_REFERENCE_PROVIDER_STATUS": "NOT_AVAILABLE",
+  "providers": [
+    {
+      "provider_name": "ESKLP",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": "ESKLP",
+      "source_url_or_local_snapshot": null,
+      "content_hash": null,
+      "retrieval_status": "NOT_AVAILABLE",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "all_until_verified_snapshot"
+      ],
+      "note": "No approved local ESKLP/official Russian medication snapshot found at private/medication-concept-v01/provider-snapshots/esklp/. Place official export + snapshot-manifest.json to enable."
+    },
+    {
+      "provider_name": "RxNorm",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": "RXCUI",
+      "source_url_or_local_snapshot": "https://rxnav.nlm.nih.gov/REST",
+      "content_hash": null,
+      "retrieval_status": "NOT_AVAILABLE",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "all_until_verified_snapshot"
+      ],
+      "note": "Optional. No local RxNorm snapshot at private/medication-concept-v01/provider-snapshots/rxnorm/. Documented API base: https://rxnav.nlm.nih.gov/REST. Absence does not block Source A registry."
+    },
+    {
+      "provider_name": "DailyMed",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": null,
+      "source_url_or_local_snapshot": null,
+      "content_hash": null,
+      "retrieval_status": "DEFERRED",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "all_until_verified_snapshot"
+      ],
+      "note": "Downstream enrichment only after reliable concept ID/name match"
+    },
+    {
+      "provider_name": "openFDA",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": null,
+      "source_url_or_local_snapshot": null,
+      "content_hash": null,
+      "retrieval_status": "DEFERRED",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "adverse_event_as_causal_risk"
+      ],
+      "note": "Adverse-event reports are not proof of causal risk"
+    }
+  ],
+  "paid_api_purchase": false,
+  "api_key_created": false,
+  "secret_provisioning": false,
+  "undocumented_bulk_download": false,
+  "commercial_drugbank": false,
+  "patient_level_data_sent_externally": false,
+  "llm_mappings_remain": "LLM_CANDIDATE_ONLY",
+  "continues_without_provider": true
+}

@@ -1,0 +1,73 @@
+{
+  "version": "0.1",
+  "uis_m1": {
+    "ok": true,
+    "n_uis_providers": 24,
+    "n_with_medication_features": 24,
+    "n_with_horizon_feature": 0,
+    "feature_order_sample": [
+      "days_since_last_event",
+      "n_events_before",
+      "n_obs_before",
+      "n_encounters_before",
+      "n_medications_before",
+      "n_recommendations_before",
+      "n_documents_before",
+      "n_procedures_before",
+      "source_is_a",
+      "source_is_b",
+      "has_lab_history",
+      "has_med_history",
+      "cutoff_ordinal",
+      "longitudinal_age_days",
+      "missingness_lab",
+      "persistence_value",
+      "persistence_missing"
+    ],
+    "medication_feature_in_payload": true,
+    "requested_horizon_compatible": false,
+    "uis_m1_used": false,
+    "reason": "MEDICATION_FEATURES_AND_NO_REQUESTED_HORIZON",
+    "NATURAL_HISTORY_PROVIDER_COMPATIBILITY_STATUS": "UIS_M1_NOT_USED_INCOMPATIBLE",
+    "do_not_retrain_uis_m1": true,
+    "compatible": false
+  },
+  "m0": {
+    "provider_id": "M0_LAST_VALUE_CARRY_FORWARD",
+    "method": "last_value_at_or_before_t0_medication_free",
+    "medication_free": true,
+    "requested_horizon_policy": "horizon_agnostic_persistence; requested horizon is the target window only; no interpolation; no substitution of actual future horizon",
+    "supported_horizons_days": [
+      30,
+      90,
+      180,
+      365
+    ],
+    "forbidden_fields": [
+      "n_medications_before",
+      "has_med_history",
+      "concurrent_count",
+      "polypharmacy",
+      "medicine_id",
+      "medicine_ref_id"
+    ],
+    "version": "0.1",
+    "provider_identity_sha256": "d39547a835ae5532dc3556a8cda23af468ba932bdf028a0e96af0f62a5d1db4b",
+    "feature_order": [
+      "persistence_value"
+    ],
+    "scaler": null,
+    "active_provider": true,
+    "reload_prediction_equality": "identity_function_last_value"
+  },
+  "encoder": {
+    "STATE_ENCODER_STATUS": "NOT_ACCEPTED",
+    "rejected_encoder_used": false,
+    "encoder_file_present_not_loaded": true,
+    "no_retrain": true
+  },
+  "NATURAL_HISTORY_PROVIDER_COMPATIBILITY_STATUS": "M0_LAST_VALUE_MEDICATION_FREE_HORIZON_AGNOSTIC",
+  "ROLE_SAFE_NATURAL_HISTORY_INFERENCE_STATUS": "SUBJECT_OWN_PRE_T0_HISTORY_ONLY",
+  "lep_survival_used": false,
+  "ok": true
+}

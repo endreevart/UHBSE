@@ -1,0 +1,49 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-08-20T11:31:21Z",
+  "ok": true,
+  "duration_sec": 345.78,
+  "statuses": {
+    "THRESHOLD_PROFILE_VERIFICATION_STATUS": "PASS",
+    "OWNER_THRESHOLD_DECISION_STATUS": "RECORDED",
+    "SELECTED_OUTCOME_REGISTRY_STATUS": "PASS",
+    "SINGLE_OUTCOME_DATASET_STATUS": "PASS",
+    "SUBJECT_DISJOINT_SPLIT_STATUS": "PASS",
+    "SINGLE_OUTCOME_TRAJECTORY_EXPANSION_STATUS": "PASS",
+    "UNCERTAINTY_STATUS": "PER_OUTCOME_REPORTED",
+    "APPLICABILITY_STATUS": "PER_OUTCOME_REPORTED",
+    "MODEL_FREEZE_STATUS": "PASS",
+    "TRAJECTORY_ENSEMBLE_STATUS": "PASS",
+    "ENGINE_TRAJECTORY_SHADOW_STATUS": "PASS",
+    "MULTI_OUTCOME_MODEL_STATUS": "NOT_STARTED",
+    "MEDICATION_RESIDUAL_MODEL_STATUS": "NOT_STARTED",
+    "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+    "CLINICAL_VALIDATION_STATUS": "NOT_STARTED",
+    "PRODUCTION_READINESS": "NOT_CLAIMED",
+    "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "PUBLICATION_INTEGRITY_STATUS": "PENDING_PUBLISH"
+  },
+  "aggregate": {
+    "version": "0.1",
+    "n_selected_grains": 104,
+    "n_processed": 104,
+    "successfully_trained": 104,
+    "methodology_incompatible": 0,
+    "insufficient_split_data": 0,
+    "active_persistence": 26,
+    "active_trend": 0,
+    "active_ridge": 78,
+    "outcome_status_counts": {
+      "EXPLORATORY_INCREMENTAL_PREDICTIVE_SIGNAL_SUPPORTED": 44,
+      "NO_INCREMENTAL_SIGNAL_DETECTED": 60
+    },
+    "uncertainty_status_counts": {
+      "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS": 104
+    },
+    "frozen_providers": 104,
+    "engine_available_providers": 104,
+    "no_pooled_mae_across_units": true
+  },
+  "max_grains": null,
+  "registry_hash": "541af0838c92c053c92e58f57ca7399d2c5746355961590b8dcdcbc6d67d6cb8"
+}

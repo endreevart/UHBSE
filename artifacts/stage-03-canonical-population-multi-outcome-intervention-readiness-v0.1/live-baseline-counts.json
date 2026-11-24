@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-08-18T11:55:35Z",
+  "live": {
+    "source_a_eligibility": {
+      "subjects_total": 43856,
+      "subjects_appt_ge2": 13301,
+      "subjects_appt_ge3": 8588,
+      "subjects_appt_ge4": 6050,
+      "subjects_with_lab": 18232,
+      "subjects_appt3_and_lab": 8262,
+      "subjects_appt3_lab3": 8209
+    },
+    "source_a_relation_counts": {
+      "account_patient": 43856,
+      "appointment_appointment": 68128,
+      "document_analysisresult": 874492,
+      "document_analysisresultitem": 1372259,
+      "diagnosis_medicineappointments": 25726
+    },
+    "canonical_subjects_by_system": {
+      "kgz_raw": 49564,
+      "magerya_api": 8262
+    },
+    "canonical_a_encounters": 49927,
+    "canonical_a_observations": 578216,
+    "canonical_a_components": 802327,
+    "canonical_b_encounters": 88867,
+    "canonical_b_observations": 59741,
+    "canonical_b_components": 2132978,
+    "canonical_row_counts": {
+      "source_system": 2,
+      "source_record": 3885993,
+      "subject": 57826,
+      "subject_characteristic": 16509,
+      "encounter": 138794,
+      "observation": 637957,
+      "observation_component": 2935305
+    }
+  },
+  "prompt_reference_comparison": {
+    "account_patient_expected": 43856,
+    "account_patient_live": 43856,
+    "scientific_cohort_8262_live": 8262
+  }
+}

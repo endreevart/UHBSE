@@ -1,0 +1,19 @@
+{
+  "version": "0.1.1",
+  "OWNER_THRESHOLD_DECISION_STATUS": "RECORDED",
+  "profile": "conservative",
+  "source_artifact": "private/post-pilot-audit-v01/threshold-options.json",
+  "source_artifact_sha256": "d9f27e8741beab1972221cdecf372df5bcb203a9d8f514df01e6501ceabecadc",
+  "exact_criteria_copied_from_threshold_options": {
+    "min_subjects_with_ge2": 100,
+    "min_strict_consecutive_pairs": 300,
+    "min_test_subjects_if_split": 30
+  },
+  "expected_count": 104,
+  "scope": "single-outcome-trajectory-expansion-v0.1.1_only",
+  "global_policy_changed": false,
+  "medication_gates_changed": false,
+  "written_into_global_scientific_policy": false,
+  "corrective_release": "0.1.1",
+  "authoritative_thresholds_apply_to": "rebuilt_dataset"
+}

@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "REAL_HELDOUT_STATE_INVENTORY_STATUS": "PASS",
+  "n_test_subjects_considered": 100,
+  "n_test_subjects_with_ge1_valid_state": 100,
+  "n_states": 133,
+  "states_with_ge3_observed_provider_outcomes": 132,
+  "states_with_ge5_observed_provider_outcomes": 130,
+  "states_with_ge10_observed_provider_outcomes": 129,
+  "states_with_ge20_observed_provider_outcomes": 124,
+  "median_observed_outcomes_per_state": 40.0,
+  "median_predictions_per_state": 31.0,
+  "status_distributions": {
+    "MISSING": 617,
+    "PREDICTABLE": 4013,
+    "OUT_OF_SUPPORT": 964,
+    "OBSERVED": 72,
+    "STALE": 4
+  },
+  "n_targets_available_for_backtest": 995,
+  "horizon_days": {
+    "n": 995,
+    "median": 113.0,
+    "min": 1.0,
+    "max": 923.0
+  },
+  "unexplained": 0,
+  "inventory_hash": "d86843366438ffef28ef7140e9f76491c433f3331047535274c09a9e3ed80b3e"
+}

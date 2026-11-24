@@ -1,0 +1,239 @@
+{
+  "catalog": {
+    "analysis_catalog": {
+      "analyses_and_groups": 1612,
+      "analysis_items": 418
+    },
+    "diagnosis_categories": [
+      {
+        "code": "activity",
+        "label": "Образ жизни"
+      },
+      {
+        "code": "data_povtornogo_obrashcheniia",
+        "label": "Дата повторного обращения"
+      },
+      {
+        "code": "inye_rekomendatsii",
+        "label": "Иные рекомендации"
+      },
+      {
+        "code": "nutrition",
+        "label": "Питание"
+      },
+      {
+        "code": "sport",
+        "label": "Спорт"
+      }
+    ],
+    "item_key_counts": {
+      "description": 251595,
+      "name": 251595
+    },
+    "medicine_appointment_link": {
+      "assignment_rows": 25726,
+      "assignments_linked_to_more_than_one_appointment": 2630,
+      "distinct_appointments": 4237,
+      "distinct_appointments_with_recommendation_document": 4237,
+      "link_rows": 28768,
+      "link_rows_resolving_to_assignment": 28768,
+      "link_rows_without_appointment": 0
+    },
+    "medicine_assignment_status_counts": {
+      "added": 24318,
+      "draft": 846,
+      "not_received": 562
+    },
+    "medicine_catalog_by_category": {
+      "drug": 683,
+      "supplements": 197
+    },
+    "recommendation_shape": {
+      "distinct_appointments": 53894,
+      "documents": 53894,
+      "documents_with_backup_column": 1569,
+      "documents_without_appointment": 0,
+      "one_document_per_appointment": true
+    },
+    "section_use": [
+      {
+        "code": "activity",
+        "items": 172716,
+        "sections": 34271
+      },
+      {
+        "code": "data_povtornogo_obrashcheniia",
+        "items": 1360,
+        "sections": 3965
+      },
+      {
+        "code": "Data_povtornogo_obrashcheniia",
+        "items": 0,
+        "sections": 1
+      },
+      {
+        "code": "inye_rekomendatsii",
+        "items": 769,
+        "sections": 3785
+      },
+      {
+        "code": "Inye_rekomendatsii",
+        "items": 0,
+        "sections": 1
+      },
+      {
+        "code": "manipuliatsii",
+        "items": 1,
+        "sections": 1
+      },
+      {
+        "code": "medicines",
+        "items": 2455,
+        "sections": 641
+      },
+      {
+        "code": "napravlenie",
+        "items": 9556,
+        "sections": 9545
+      },
+      {
+        "code": "Napravlenie_k_spetsialistam",
+        "items": 0,
+        "sections": 1
+      },
+      {
+        "code": "napravleniia",
+        "items": 2600,
+        "sections": 3716
+      },
+      {
+        "code": "nutrition",
+        "items": 62136,
+        "sections": 31183
+      },
+      {
+        "code": "obraz_zhizni",
+        "items": 2,
+        "sections": 2
+      },
+      {
+        "code": "Obraz_zhizni",
+        "items": 0,
+        "sections": 1
+      },
+      {
+        "code": "Pitanie",
+        "items": 0,
+        "sections": 1
+      },
+      {
+        "code": "sport",
+        "items": 0,
+        "sections": 3611
+      },
+      {
+        "code": "Sport",
+        "items": 0,
+        "sections": 1
+      }
+    ],
+    "template_categories": [
+      {
+        "code": "activity",
+        "label": "Образ жизни",
+        "prohibit_deletion": false
+      },
+      {
+        "code": "diagnosis",
+        "label": "Диагноз",
+        "prohibit_deletion": true
+      },
+      {
+        "code": "inye_rekomendatsii",
+        "label": "Иные рекомендации",
+        "prohibit_deletion": false
+      },
+      {
+        "code": "manipuliatsii",
+        "label": "Манипуляции",
+        "prohibit_deletion": false
+      },
+      {
+        "code": "medicines",
+        "label": "Медикаменты",
+        "prohibit_deletion": true
+      },
+      {
+        "code": "napravleniia",
+        "label": "Направление к специалистам",
+        "prohibit_deletion": false
+      },
+      {
+        "code": "nutrition",
+        "label": "Питание",
+        "prohibit_deletion": true
+      },
+      {
+        "code": "protsedury",
+        "label": "Процедурный кабинет",
+        "prohibit_deletion": false
+      },
+      {
+        "code": "sport",
+        "label": "Спорт",
+        "prohibit_deletion": false
+      }
+    ]
+  },
+  "code": {
+    "SOURCE_A_CODE_EVIDENCE_STATUS": "AVAILABLE",
+    "files": [
+      {
+        "path": "apps/document/models/recommendation/models.py",
+        "sha256": "1185d5bd280b5ba58b8fbcd4edf71f248184d7c8c99d4bafd34f803918570b12"
+      },
+      {
+        "path": "apps/document/models/recommendation/v1_0.py",
+        "sha256": "9b5cb1c7cedfe9c06c2926dde2ad0c61a347b7c92b3da252e8fea622ac80b1ba"
+      },
+      {
+        "path": "apps/document/lk_doctor/views.py",
+        "sha256": "bf9f28223a4edbfa013418a9109237dcac2ab79f276826235338b8f32c0178c2"
+      },
+      {
+        "path": "apps/document/lk_doctor/serializers.py",
+        "sha256": "9d66f5561f46e9a802d9a36cb96c01549b9d132f2f59c13d917e7a53119ed3e9"
+      },
+      {
+        "path": "apps/document/models/analysis.py",
+        "sha256": "9d6010b025d831a20233ae4dee0ec784922d8298fbf36da88c02c1d4a6805c43"
+      },
+      {
+        "path": "apps/diagnosis/models.py",
+        "sha256": "cd5d9e3a4e48b3e8b7b416f29a7e04f370b5e7e5fbdf4bf37cc1ce26b24bc296"
+      },
+      {
+        "path": "apps/diagnosis/enums.py",
+        "sha256": "5a774496febf72eda9d45de5db247a4bae468020d983e1a07300d930d25b6342"
+      },
+      {
+        "path": "apps/mixin/models/results.py",
+        "sha256": "74124c8299adf6c8a20e91129c5111ae3b7c1a5402c63dc792b1177c6341b968"
+      },
+      {
+        "path": "apps/mixin/enums.py",
+        "sha256": "36beb4c22f2ac2544b440febf8e95c797d25118a930a6801d442d5c7ea09d7bb"
+      },
+      {
+        "path": "apps/appointment/services.py",
+        "sha256": "9ce14b3b8d596b5982f3474e56f5dfe9711fbc71be41cf72b2c82952e57171ea"
+      },
+      {
+        "path": "apps/document/baker_recipes.py",
+        "sha256": "f48effdde23220bf0c8e1ac02b6b885d7c6915414f1a211e7f7f95271bd8322c"
+      }
+    ],
+    "note": "current code may be newer than the dump; code-only facts stay LIKELY until checked against the DB",
+    "repository_label": "magerya django-develop (local working copy)"
+  }
+}

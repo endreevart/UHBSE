@@ -1,0 +1,23 @@
+{
+  "package": "src/human_simulator/unified_v01211/",
+  "modules": [
+    "policy.py",
+    "baseline.py",
+    "frozen_model.py",
+    "consistency.py",
+    "lineage.py",
+    "applicability.py",
+    "transfer.py",
+    "orchestrator.py",
+    "publish.py",
+    "cli.py"
+  ],
+  "tests": [
+    "tests/test_unified_source_expansion_v01211_unit.py"
+  ],
+  "docs": [
+    "docs/current-stage.md",
+    "AGENTS.md"
+  ],
+  "note": "Does not overwrite v0.1 / v0.1.1 / v0.1.2 / v0.1.2.1 review ZIPs."
+}

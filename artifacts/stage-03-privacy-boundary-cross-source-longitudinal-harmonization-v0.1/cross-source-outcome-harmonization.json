@@ -1,0 +1,163 @@
+{
+  "version": "0.1",
+  "CROSS_SOURCE_OUTCOME_HARMONIZATION_STATUS": "PARTIAL_NO_ACCEPTED",
+  "ACCEPTED_COMPARABLE_OUTCOME_COUNT": 0,
+  "n_source_a_providers_considered": 95,
+  "n_mapping_rows": 98,
+  "mapping_status_counts": {
+    "UNKNOWN": 90,
+    "HYPOTHESIS": 8
+  },
+  "accepted_mappings": [],
+  "mappings_public": [
+    {
+      "a_outcome": "Т3 св.",
+      "a_unit": "пг/мл",
+      "b_raw_code": "53",
+      "b_unit": "пг/мл",
+      "mapping_status": "HYPOTHESIS",
+      "domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+      "accepted_for_transfer": false,
+      "failed_checks": [
+        "specimen_material_empty",
+        "method_assay_empty"
+      ],
+      "evidence_hash": "04dfdc6926679f2a625e210acc44cdd6f9d2757471913553a6e9950c74d4b177",
+      "specimen_present": false,
+      "unit_exact": true
+    },
+    {
+      "a_outcome": "Т3 св.",
+      "a_unit": "пмоль/л",
+      "b_raw_code": "53",
+      "b_unit": "пмоль/л",
+      "mapping_status": "HYPOTHESIS",
+      "domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+      "accepted_for_transfer": false,
+      "failed_checks": [
+        "specimen_material_empty",
+        "method_assay_empty"
+      ],
+      "evidence_hash": "a5a97a180526dbb4ee3e12b0a07d20ee3707ee06ffb9826b916ac2255feb958a",
+      "specimen_present": false,
+      "unit_exact": true
+    },
+    {
+      "a_outcome": "ТТГ",
+      "a_unit": "мЕд/л",
+      "b_raw_code": "55",
+      "b_unit": "пмоль/л",
+      "mapping_status": "HYPOTHESIS",
+      "domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+      "accepted_for_transfer": false,
+      "failed_checks": [
+        "unit_not_exact_and_no_verified_transform",
+        "specimen_material_empty",
+        "method_assay_empty"
+      ],
+      "evidence_hash": "3d924f30536a0defc07884c0cd1801971af363e3d498c5a97d02294ee59dc418",
+      "specimen_present": false,
+      "unit_exact": false
+    },
+    {
+      "a_outcome": "ТТГ",
+      "a_unit": "мЕд/л",
+      "b_raw_code": "1",
+      "b_unit": "сек.",
+      "mapping_status": "HYPOTHESIS",
+      "domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+      "accepted_for_transfer": false,
+      "failed_checks": [
+        "unit_not_exact_and_no_verified_transform",
+        "specimen_material_empty",
+        "method_assay_empty"
+      ],
+      "evidence_hash": "0b3c856481aa4f4df770c68d0c794116d1cc7595f74c6f1583cc07d82d5395cd",
+      "specimen_present": false,
+      "unit_exact": false
+    },
+    {
+      "a_outcome": "ТТГ",
+      "a_unit": "мМЕ/л",
+      "b_raw_code": "55",
+      "b_unit": "пмоль/л",
+      "mapping_status": "HYPOTHESIS",
+      "domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+      "accepted_for_transfer": false,
+      "failed_checks": [
+        "unit_not_exact_and_no_verified_transform",
+        "specimen_material_empty",
+        "method_assay_empty"
+      ],
+      "evidence_hash": "dbafd65ed598be3035cf716ea7123354055915bddb4072d321c5f880d89d8de8",
+      "specimen_present": false,
+      "unit_exact": false
+    },
+    {
+      "a_outcome": "ТТГ",
+      "a_unit": "мМЕ/л",
+      "b_raw_code": "1",
+      "b_unit": "сек.",
+      "mapping_status": "HYPOTHESIS",
+      "domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+      "accepted_for_transfer": false,
+      "failed_checks": [
+        "unit_not_exact_and_no_verified_transform",
+        "specimen_material_empty",
+        "method_assay_empty"
+      ],
+      "evidence_hash": "1f1223cc8d742a8950d114e35c8bc7b2cafa3f47ccc9b38d92523614c5ddb2e2",
+      "specimen_present": false,
+      "unit_exact": false
+    },
+    {
+      "a_outcome": "ТТГ",
+      "a_unit": "мкМЕ/мл",
+      "b_raw_code": "55",
+      "b_unit": "пмоль/л",
+      "mapping_status": "HYPOTHESIS",
+      "domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+      "accepted_for_transfer": false,
+      "failed_checks": [
+        "unit_not_exact_and_no_verified_transform",
+        "specimen_material_empty",
+        "method_assay_empty"
+      ],
+      "evidence_hash": "c4ee0ba1692a43d2ad7cdb7bb9a9f290d19d89ce0d45b7f3626c6ccbd44ed44a",
+      "specimen_present": false,
+      "unit_exact": false
+    },
+    {
+      "a_outcome": "ТТГ",
+      "a_unit": "мкМЕ/мл",
+      "b_raw_code": "1",
+      "b_unit": "сек.",
+      "mapping_status": "HYPOTHESIS",
+      "domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+      "accepted_for_transfer": false,
+      "failed_checks": [
+        "unit_not_exact_and_no_verified_transform",
+        "specimen_material_empty",
+        "method_assay_empty"
+      ],
+      "evidence_hash": "5e0c03c970177cb7dc87092fb0efe55da563e669a829eaed65de4329bb5a744c",
+      "specimen_present": false,
+      "unit_exact": false
+    }
+  ],
+  "unknown_without_candidate_count": 90,
+  "prior_t3_status_carried": "DOMAIN_REVIEW_REQUIRED",
+  "forbidden": {
+    "name_only_exact": false,
+    "unverified_unit_conversion": false,
+    "hypothesis_treated_as_accepted": false,
+    "mapping_by_test_performance": false
+  },
+  "missing_evidence_for_acceptance": [
+    "specimen_material_for_candidate_strata",
+    "method_assay_equivalence_A_vs_B",
+    "domain_review_signoff"
+  ],
+  "ok_for_zero_shot": false,
+  "harmonization_hash": "dab23eea28294de2d105d4d1af94647780b917018b28a3de0bde97247129899a"
+}

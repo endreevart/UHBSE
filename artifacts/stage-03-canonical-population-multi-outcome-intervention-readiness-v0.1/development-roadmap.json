@@ -1,0 +1,321 @@
+{
+  "version": "0.1",
+  "components": [
+    {
+      "name": "Personal Baseline Models",
+      "purpose": "Subject-specific expected trajectories",
+      "required_inputs": [
+        "longitudinal pairs",
+        "stable demographics"
+      ],
+      "current_data_readiness": "PARTIAL",
+      "dependencies": [
+        "multi-outcome baselines",
+        "full population accounting"
+      ],
+      "minimum_evidence": "subject-disjoint backtests per outcome",
+      "validation_method": "retrospective held-out + calibration",
+      "output_contract": "per-subject predictive distribution with provenance",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "requires multi-outcome freeze + personalization design"
+    },
+    {
+      "name": "Current State Classifier",
+      "purpose": "Map evidence to current physiological state labels",
+      "required_inputs": [
+        "state snapshot contract",
+        "labeled states"
+      ],
+      "current_data_readiness": "PARTIAL",
+      "dependencies": [
+        "canonical population",
+        "outcome catalog"
+      ],
+      "minimum_evidence": "schema-confirmed state features",
+      "validation_method": "expert-reviewed labels",
+      "output_contract": "state label + confidence + provenance",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "no accepted state label ontology yet"
+    },
+    {
+      "name": "Trajectory Classifier",
+      "purpose": "Classify trajectory patterns over time",
+      "required_inputs": [
+        "multi-outcome pairs",
+        "horizon strata"
+      ],
+      "current_data_readiness": "PARTIAL",
+      "dependencies": [
+        "multi-outcome baselines"
+      ],
+      "minimum_evidence": "stable strata definitions",
+      "validation_method": "retrospective + temporal stability",
+      "output_contract": "trajectory class + evidence links",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "awaiting multi-outcome shortlist freeze"
+    },
+    {
+      "name": "Time-to-Event Model",
+      "purpose": "Estimate time to clinically defined events",
+      "required_inputs": [
+        "event definitions",
+        "censoring rules"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "intervention episodes",
+        "domain event definitions"
+      ],
+      "minimum_evidence": "confirmed event timestamps",
+      "validation_method": "survival metrics with censoring audit",
+      "output_contract": "hazard/survival curves with provenance",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "event definitions unresolved"
+    },
+    {
+      "name": "Applicability/OOD Detector",
+      "purpose": "Detect out-of-support predictions",
+      "required_inputs": [
+        "train feature reference",
+        "threshold policy"
+      ],
+      "current_data_readiness": "PARTIAL",
+      "dependencies": [
+        "frozen models",
+        "applicability reference"
+      ],
+      "minimum_evidence": "declared OOD thresholds before evaluation",
+      "validation_method": "holdout support partitions",
+      "output_contract": "in/out-support flags + tail-risk metrics",
+      "current_status": "PARTIAL",
+      "reason_not_started": "prototype exists in shadow applicability; not productionized"
+    },
+    {
+      "name": "Safety Boundary Classifier",
+      "purpose": "Flag unsafe prediction/action regions",
+      "required_inputs": [
+        "clinical safety rules",
+        "domain review"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "clinical validation",
+        "safety ontology"
+      ],
+      "minimum_evidence": "clinician-approved boundaries",
+      "validation_method": "clinical review",
+      "output_contract": "safety flag + rationale",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "clinical validation not started"
+    },
+    {
+      "name": "Bio-Signature discovery",
+      "purpose": "Discover multi-marker signatures",
+      "required_inputs": [
+        "multi-outcome catalog",
+        "independence policy"
+      ],
+      "current_data_readiness": "PARTIAL",
+      "dependencies": [
+        "catalog",
+        "scientific gates"
+      ],
+      "minimum_evidence": "pre-registered discovery protocol",
+      "validation_method": "locked test + replication",
+      "output_contract": "signature candidates with provenance",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "discovery protocol not authorized this stage"
+    },
+    {
+      "name": "Intervention Response Model",
+      "purpose": "Predict response conditional on intervention",
+      "required_inputs": [
+        "technical episodes",
+        "medication identity"
+      ],
+      "current_data_readiness": "PARTIAL",
+      "dependencies": [
+        "episode dataset",
+        "normalization"
+      ],
+      "minimum_evidence": "verified medication identity + pre/post pairs",
+      "validation_method": "subject-disjoint retrospective; no causal claim without design",
+      "output_contract": "response prediction with non-causal labeling until validated",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "explicitly deferred this stage"
+    },
+    {
+      "name": "drug and supplement knowledge layer",
+      "purpose": "Normalize medications to reference vocabularies",
+      "required_inputs": [
+        "licensed reference sources",
+        "owner approval"
+      ],
+      "current_data_readiness": "EVALUATION_ONLY",
+      "dependencies": [
+        "reference source evaluation"
+      ],
+      "minimum_evidence": "deterministic accepted mappings",
+      "validation_method": "dictionary audit + spot checks",
+      "output_contract": "medication concept ids + confidence",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "no licensed DB integration without owner approval"
+    },
+    {
+      "name": "interaction model",
+      "purpose": "Drug\u2013drug / drug\u2013condition interactions",
+      "required_inputs": [
+        "interaction knowledge base"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "knowledge layer"
+      ],
+      "minimum_evidence": "licensed interaction source",
+      "validation_method": "curated case set",
+      "output_contract": "interaction alerts with provenance",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "deferred"
+    },
+    {
+      "name": "PK/PD modules",
+      "purpose": "Pharmacokinetic/pharmacodynamic simulation",
+      "required_inputs": [
+        "dose/time/route",
+        "PK parameters"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "medication identity",
+        "dose parse"
+      ],
+      "minimum_evidence": "accepted PK parameter sources",
+      "validation_method": "literature benchmarks",
+      "output_contract": "concentration/effect trajectories",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "pkpd_status NOT_STARTED by owner scope"
+    },
+    {
+      "name": "QSP modules",
+      "purpose": "Quantitative systems pharmacology",
+      "required_inputs": [
+        "mechanistic model specs"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "PK/PD",
+        "domain models"
+      ],
+      "minimum_evidence": "reviewed QSP structure",
+      "validation_method": "mechanistic + data hybrid checks",
+      "output_contract": "QSP simulation outputs",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "qsp_status NOT_STARTED by owner scope"
+    },
+    {
+      "name": "hybrid mechanistic-statistical simulation",
+      "purpose": "Combine statistical baselines with mechanistic modules",
+      "required_inputs": [
+        "frozen baselines",
+        "QSP/PKPD"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "baselines",
+        "QSP",
+        "PK/PD"
+      ],
+      "minimum_evidence": "interface contracts",
+      "validation_method": "ablation + residual analysis",
+      "output_contract": "hybrid State_after distributions",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "upstream modules not started"
+    },
+    {
+      "name": "LLM-assisted terminology and evidence retrieval",
+      "purpose": "Assist mapping proposals and documentation",
+      "required_inputs": [
+        "redacted terminology lists only"
+      ],
+      "current_data_readiness": "ASSISTIVE_OPTIONAL",
+      "dependencies": [
+        "deterministic accept layer"
+      ],
+      "minimum_evidence": "no patient data externalized",
+      "validation_method": "human/deterministic acceptance only",
+      "output_contract": "LLM_CANDIDATE mappings never auto-accepted",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "optional; no production LLM service this stage"
+    },
+    {
+      "name": "retrospective validation",
+      "purpose": "Locked retrospective evaluation protocols",
+      "required_inputs": [
+        "frozen models",
+        "held-out sets"
+      ],
+      "current_data_readiness": "PARTIAL",
+      "dependencies": [
+        "multi-outcome baselines"
+      ],
+      "minimum_evidence": "pre-registered metrics",
+      "validation_method": "subject-disjoint backtests",
+      "output_contract": "validation report",
+      "current_status": "PARTIAL",
+      "reason_not_started": "technical backtests running; not clinical retrospective validation"
+    },
+    {
+      "name": "prospective validation",
+      "purpose": "Prospective performance monitoring",
+      "required_inputs": [
+        "deployment channels",
+        "consent"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "retrospective validation",
+        "production readiness"
+      ],
+      "minimum_evidence": "prospective protocol",
+      "validation_method": "time-forward evaluation",
+      "output_contract": "prospective metrics",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "production not claimed"
+    },
+    {
+      "name": "clinical validation",
+      "purpose": "Clinician-reviewed clinical utility assessment",
+      "required_inputs": [
+        "clinical protocol",
+        "IRB/ethics as required"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "scientific interpretability gates"
+      ],
+      "minimum_evidence": "clinical acceptance criteria",
+      "validation_method": "clinical study design",
+      "output_contract": "clinical validation report",
+      "current_status": "NOT_STARTED",
+      "reason_not_started": "clinical_validation_status NOT_STARTED"
+    },
+    {
+      "name": "production readiness",
+      "purpose": "Operate safely in production environments",
+      "required_inputs": [
+        "security stage",
+        "ops runbooks"
+      ],
+      "current_data_readiness": "NOT_READY",
+      "dependencies": [
+        "security remediation",
+        "clinical validation"
+      ],
+      "minimum_evidence": "security ACCEPTED + clinical gates",
+      "validation_method": "ops drills + monitoring",
+      "output_contract": "production readiness checklist",
+      "current_status": "NOT_CLAIMED",
+      "reason_not_started": "production_readiness NOT_CLAIMED; security paused"
+    }
+  ]
+}

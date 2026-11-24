@@ -1,0 +1,99 @@
+{
+  "version": "0.1.1.1",
+  "TARGET_ELIGIBILITY_CONSTRUCTION_STATUS": "PASS",
+  "ROLE_INVARIANT_TARGET_SELECTION_STATUS": "PASS",
+  "PRIMARY_TARGET_IDENTITY_STATUS": "PASS",
+  "TARGET_REUSE_AUDIT_STATUS": "PASS",
+  "STATE_TEMPORAL_LEAKAGE_STATUS": "PASS",
+  "SPLIT_TARGET_BALANCE_STATUS": "PASS",
+  "INDIVIDUAL_STATE_DATASET_STATUS": "REBUILT",
+  "funnel": {
+    "version": "0.1.1.1",
+    "magerya_api": {
+      "all_subjects": 43856,
+      "subjects_with_events": 20948,
+      "longitudinal": 19745,
+      "valid_cutoff_subjects": 12634,
+      "excluded_no_valid_cutoff": 7111,
+      "excluded_not_longitudinal": 1203,
+      "state_rows": 49574,
+      "target_rows": 724288,
+      "primary_target_subjects": 12634,
+      "train_subjects": 8888,
+      "train_targets": 510751,
+      "validation_subjects": 1851,
+      "validation_targets": 106226,
+      "test_subjects": 1895,
+      "test_targets": 107311
+    },
+    "kgz_raw": {
+      "all_subjects": 49564,
+      "subjects_with_events": 49564,
+      "longitudinal": 48987,
+      "excluded_no_valid_cutoff": 37591,
+      "excluded_not_longitudinal": 577,
+      "valid_cutoff_subjects": 11396,
+      "state_rows": 24232,
+      "target_rows": 681868,
+      "primary_target_subjects": 11396,
+      "train_subjects": 7963,
+      "train_targets": 481630,
+      "validation_subjects": 1684,
+      "validation_targets": 95958,
+      "test_subjects": 1749,
+      "test_targets": 104280
+    },
+    "same_timestamp_panel_collapses": 623445,
+    "same_timestamp_transition_exclusions": 0,
+    "no_numeric_target_exclusions": 0,
+    "component_reuse_skipped": 0,
+    "eligible_transitions_by_role": {
+      "train": 51880,
+      "validation": 10882,
+      "test": 11044
+    },
+    "unaccounted": 0,
+    "role_invariant_policy": "all_eligible_consecutive_transitions_all_roles"
+  },
+  "n_state_rows": 73806,
+  "n_primary_target_rows": 1406156,
+  "selected_outcomes_a": [
+    "A::Лимфоциты::%",
+    "A::Моноциты::%",
+    "A::Эозинофилы::%",
+    "A::Нейтрофилы::%",
+    "A::Базофилы::%",
+    "A::Общий белок::г/л",
+    "A::Лейкоциты::*10^9/л",
+    "A::Эритроциты::*10^12/л",
+    "A::Тромбоциты::*10^9/л",
+    "A::Железо::мкмоль/л",
+    "A::25(OH)витамин D::нг/мл",
+    "A::Гемоглобин::г/л"
+  ],
+  "selected_outcomes_b": [
+    "B::mm_1004::%",
+    "B::33::ммоль/л",
+    "B::30::ммоль/л",
+    "B::28::г/л",
+    "B::mm_1002::%",
+    "B::48::мкмоль/л",
+    "B::16::ммоль/л",
+    "B::8::Ед/л",
+    "B::9::Ед/л",
+    "B::32::ммоль/л",
+    "B::928::нг/мл",
+    "B::55::пмоль/л"
+  ],
+  "source_a_heldout_subjects": {
+    "validation": 1851,
+    "test": 1895,
+    "train": 8888
+  },
+  "source_b_heldout_subjects": {
+    "validation": 1684,
+    "test": 1749,
+    "train": 7963
+  },
+  "ok": true
+}

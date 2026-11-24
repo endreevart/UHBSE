@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "access": {
+    "readable": true,
+    "db_user": "kgz_audit_ro",
+    "transaction_read_only": "on",
+    "raw_writes_forbidden": true,
+    "source_system": "kgz_raw"
+  },
+  "profile": {
+    "source_system": "kgz_raw",
+    "schemas": [
+      "public",
+      "quest_digital",
+      "tiger",
+      "tiger_data",
+      "topology"
+    ],
+    "relation_counts": {
+      "public.users": 114748,
+      "public.persons": 0,
+      "public.consultations": 88867,
+      "quest_digital.analyses_catalog": 1886,
+      "quest_digital.analyses_constructor": 2183297
+    },
+    "pii_values_returned": false,
+    "notes": [
+      "Counts are aggregate-only; estimated for relations with reltuples > 500000.",
+      "No patient-level rows returned."
+    ]
+  },
+  "stage_02_artifacts_expected": [
+    "artifacts/stage-02/identity-linkage-assessment.json",
+    "artifacts/stage-02/schema-profile-kgz.json",
+    "artifacts/stage-03/source-b-mapping-draft.yaml"
+  ]
+}

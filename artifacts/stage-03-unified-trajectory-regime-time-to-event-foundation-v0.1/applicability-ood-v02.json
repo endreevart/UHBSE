@@ -1,0 +1,91 @@
+{
+  "version": "0.1",
+  "SOURCE_STRATIFIED_APPLICABILITY_STATUS": "TECHNICAL_EVALUATED",
+  "not_clinical_ood": true,
+  "not_safety_boundary": true,
+  "test_n_scored": 2000,
+  "sampling": {
+    "mode": "stratified_deterministic",
+    "n": 2000,
+    "manifest_sha256": "48fa54bedf0942d1c32eb81ee2fe5acba48a20b661e39e8759b26c046a14955b",
+    "seed": 51
+  },
+  "code_artifact_n_equality": true,
+  "test_in_support": 1572,
+  "test_out_of_support": 428,
+  "test_ood_fraction": 0.214,
+  "ood_reason_counts": {
+    "insufficient_history": 305,
+    "latent_distance": 133,
+    "feature_range:mask_density": 21,
+    "feature_range:n_observed": 21,
+    "feature_range:latent_l2": 19,
+    "feature_range:days_since_last_event": 16,
+    "feature_range:longitudinal_age_days": 4
+  },
+  "validation_calibration_fpr": 0.2625,
+  "reference_public": {
+    "A": {
+      "n_ref": 125,
+      "ranges": {
+        "mask_density": {
+          "lo": -0.016938110749185668,
+          "hi": 0.355700325732899
+        },
+        "n_observed": {
+          "lo": -5.2,
+          "hi": 109.2
+        },
+        "latent_l2": {
+          "lo": -0.7448600920038358,
+          "hi": 16.088063327243958
+        },
+        "longitudinal_age_days": {
+          "lo": -215.60000000000002,
+          "hi": 4527.6
+        },
+        "days_since_last_event": {
+          "lo": -23.814515209980907,
+          "hi": 478.10481940959903
+        }
+      },
+      "latent_distance_p95": 2.778785991070305,
+      "mask_density_p05": 0.0,
+      "latent_dim": 4
+    },
+    "B": {
+      "n_ref": 125,
+      "ranges": {
+        "mask_density": {
+          "lo": -0.010423452768729642,
+          "hi": 0.21889250814332248
+        },
+        "n_observed": {
+          "lo": -3.2,
+          "hi": 67.2
+        },
+        "latent_l2": {
+          "lo": -7.287951324681519,
+          "hi": 153.90218409622253
+        },
+        "longitudinal_age_days": {
+          "lo": -519.2382644675926,
+          "hi": 10904.003553819444
+        },
+        "days_since_last_event": {
+          "lo": -220.17413194444444,
+          "hi": 4601.656770833333
+        }
+      },
+      "latent_distance_p95": 2.4941952912428094,
+      "mask_density_p05": 0.0,
+      "latent_dim": 4
+    },
+    "thresholds_from": "train_fit_source_stratified",
+    "validation_calibration_fpr": 0.2625,
+    "features_basis": "raw_source_aware_state",
+    "CLINICAL_SAFETY_DETECTOR": false,
+    "not_safety_boundary": true
+  },
+  "ok": true
+}

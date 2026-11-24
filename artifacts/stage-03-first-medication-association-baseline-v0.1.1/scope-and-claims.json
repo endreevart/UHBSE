@@ -1,0 +1,32 @@
+{
+  "version": "0.1.1",
+  "clinical_use_prohibited": true,
+  "causal_interpretation_prohibited": true,
+  "authoritative_comparison": "M1_vs_M2C",
+  "policy": {
+    "version": "0.1.1",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "intervention_response_model_status": "NOT_STARTED",
+    "treatment_effect_status": "NOT_EVALUATED",
+    "causal_effect_status": "NOT_EVALUATED",
+    "clinical_validation_status": "NOT_STARTED",
+    "qsp_status": "NOT_STARTED",
+    "pkpd_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "clinical_use": "CLINICAL_USE_PROHIBITED",
+    "causal_interpretation": "CAUSAL_INTERPRETATION_PROHIBITED",
+    "predictive_association_is_not_treatment_response": true,
+    "authoritative_comparison": "M1_vs_M2C",
+    "legacy_ordinal_m2": "LEGACY_ORDINAL_MEDICATION_ENCODING",
+    "m2c_representation": "deterministic_signed_feature_hashing",
+    "m2c_hash_dim": 32,
+    "m2c_hash_seed": 42,
+    "seed": 42,
+    "l2": 0.1,
+    "n_bootstrap": 2000,
+    "n_permutation": 500,
+    "nominal_coverage": 0.9,
+    "permutation_tail": "upper_ge_observed_improvement",
+    "uncertainty_method": "validation_empirical_residual_quantile"
+  }
+}

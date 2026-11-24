@@ -1,0 +1,63 @@
+{
+  "version": "0.1.1",
+  "tables_present": {
+    "diagnosis_medicineappointments": {
+      "columns": [
+        "id",
+        "appointment_date",
+        "status",
+        "created_by_id",
+        "medicine_id",
+        "patient_id",
+        "created",
+        "modified"
+      ],
+      "n_rows": 25726
+    },
+    "diagnosis_medicines": {
+      "columns": [
+        "id",
+        "created",
+        "modified",
+        "name",
+        "unit_of_measurement_id",
+        "form_id",
+        "reception_frequency_id",
+        "description",
+        "category"
+      ],
+      "n_rows": 880
+    },
+    "diagnosis_medicinesform": {
+      "columns": [
+        "id",
+        "name"
+      ],
+      "n_rows": 0
+    },
+    "diagnosis_conditionsmedicines": {
+      "columns": [
+        "id",
+        "name"
+      ],
+      "n_rows": 0
+    },
+    "diagnosis_diagnosis_medicines": {
+      "columns": [
+        "id",
+        "diagnosis_id",
+        "medicines_id"
+      ],
+      "n_rows": 0
+    },
+    "diagnosis_medicines_conditions": {
+      "columns": [
+        "id",
+        "medicines_id",
+        "conditionsmedicines_id"
+      ],
+      "n_rows": 0
+    }
+  },
+  "source_rows": 25726
+}

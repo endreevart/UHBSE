@@ -1,0 +1,35 @@
+{
+  "SOURCE_B_APPLICATION_CODE_ACCESS_STATUS": "NOT_AVAILABLE",
+  "arbitrary_home_scan": false,
+  "repositories": [
+    {
+      "available": true,
+      "backend": true,
+      "commit_sha": "022b1ce0ca5c73a9997fc19e30167dc877c77e5b",
+      "dirty_entry_count": 217,
+      "frontend": false,
+      "link_evidence": "this repository analyses restored database copies and does not contain the clinic application",
+      "mobile": false,
+      "name": "human-simulator",
+      "path": ".",
+      "source_link": "ANALYSIS_REPOSITORY",
+      "worktree": "DIRTY"
+    },
+    {
+      "available": true,
+      "backend": true,
+      "commit_sha": null,
+      "frontend": false,
+      "link_evidence": "configured Magerya checkout used by exposure discovery v0.2.2; not a Source B application",
+      "mobile": false,
+      "name": "django-develop",
+      "path": "UHBSE_MAGERYA_CODE_ROOT",
+      "source_link": "SOURCE_A_CANDIDATE",
+      "worktree": "NOT_A_GIT_REPOSITORY"
+    }
+  ],
+  "roots_considered": [
+    "human-simulator",
+    "django-develop"
+  ]
+}

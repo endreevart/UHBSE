@@ -1,0 +1,84 @@
+{
+  "version": "0.1",
+  "TEMPORAL_EVENT_ACCOUNTING_STATUS": "PASS",
+  "by_event_type": {
+    "encounter": {
+      "source_rows": 156995,
+      "rows_with_timestamp": 156995,
+      "rows_without_timestamp": 0,
+      "materialized_events": 156995,
+      "timestamp_class_counts": {
+        "CLINICAL_OBSERVED": 156995
+      },
+      "excluded_rows": 0,
+      "unexplained": 0
+    },
+    "observation": {
+      "source_rows": 934233,
+      "rows_with_timestamp": 934233,
+      "rows_without_timestamp": 0,
+      "materialized_events": 934233,
+      "timestamp_class_counts": {
+        "CLINICAL_CANDIDATE": 20106,
+        "CLINICAL_OBSERVED": 914127
+      },
+      "excluded_rows": 0,
+      "unexplained": 0
+    },
+    "medication_appointment": {
+      "source_rows": 25726,
+      "rows_with_timestamp": 25726,
+      "rows_without_timestamp": 0,
+      "materialized_events": 25726,
+      "timestamp_class_counts": {
+        "TECHNICAL_CREATED": 846,
+        "CLINICAL_OBSERVED": 24880
+      },
+      "excluded_rows": 0,
+      "unexplained": 0
+    },
+    "recommendation": {
+      "source_rows": 1053500,
+      "rows_with_timestamp": 1053500,
+      "rows_without_timestamp": 0,
+      "materialized_events": 1053500,
+      "timestamp_class_counts": {
+        "TECHNICAL_CREATED": 53894,
+        "CLINICAL_OBSERVED": 999606
+      },
+      "excluded_rows": 0,
+      "unexplained": 0
+    },
+    "procedure": {
+      "source_rows": 98,
+      "rows_with_timestamp": 98,
+      "rows_without_timestamp": 0,
+      "materialized_events": 98,
+      "timestamp_class_counts": {
+        "CLINICAL_OBSERVED": 94,
+        "TECHNICAL_CREATED": 4
+      },
+      "excluded_rows": 0,
+      "unexplained": 0
+    },
+    "document_reference": {
+      "source_rows": 203659,
+      "rows_with_timestamp": 203659,
+      "rows_without_timestamp": 0,
+      "materialized_events": 203659,
+      "timestamp_class_counts": {
+        "TECHNICAL_CREATED": 203659
+      },
+      "excluded_rows": 0,
+      "unexplained": 0
+    }
+  },
+  "global_timestamp_class_counts": {
+    "CLINICAL_OBSERVED": 2095702,
+    "CLINICAL_CANDIDATE": 20106,
+    "TECHNICAL_CREATED": 258403
+  },
+  "events_without_timestamp": 0,
+  "ok": true,
+  "note": "TECHNICAL_CREATED is not clinical event time"
+}

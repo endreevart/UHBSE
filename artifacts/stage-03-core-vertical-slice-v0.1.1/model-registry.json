@@ -1,0 +1,21 @@
+{
+  "persistence": {
+    "MODEL_ID": "persistence_baseline",
+    "MODEL_VERSION": "0.1.1",
+    "MODEL_KIND": "BASELINE_CONTROL",
+    "CLINICAL_VALIDATION": "NOT_CLAIMED"
+  },
+  "heuristic": {
+    "MODEL_ID": "heuristic_drift_baseline",
+    "MODEL_VERSION": "0.1.1",
+    "MODEL_KIND": "HEURISTIC_BASELINE",
+    "CLINICAL_VALIDATION": "NOT_CLAIMED",
+    "NOTE": "Heuristic drift only; not fitted to longitudinal observations; not causal."
+  },
+  "synthetic": {
+    "MODEL_ID": "synthetic_intervention_test",
+    "MODEL_VERSION": "0.1.1",
+    "MODEL_KIND": "SYNTHETIC_ENGINE_TEST",
+    "CLINICAL_USE": "PROHIBITED"
+  }
+}

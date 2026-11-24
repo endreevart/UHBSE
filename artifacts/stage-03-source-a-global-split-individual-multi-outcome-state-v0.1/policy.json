@@ -1,0 +1,50 @@
+{
+  "version": "0.1",
+  "accepted_v011_sha256": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d",
+  "global_split_namespace": "source-a-global-state-v01",
+  "global_split_seed": 42,
+  "bucket_boundaries": {
+    "train": [
+      0.0,
+      0.7
+    ],
+    "validation": [
+      0.7,
+      0.85
+    ],
+    "test": [
+      0.85,
+      1.0
+    ]
+  },
+  "seed": 42,
+  "l2": 0.1,
+  "feature_schema_hash": "14303f8d4197b9bf8205bcb912bbb294c75f4ff2f7e22d2ae42290f97c4e29ff",
+  "feature_order": [
+    "y_t0",
+    "horizon_days",
+    "n_prior_measurements",
+    "prior_mean",
+    "prior_last_delta",
+    "days_since_first",
+    "has_prior_history",
+    "prior_mean_missing_flag",
+    "prior_last_delta_missing_flag"
+  ],
+  "claim_level": "SECONDARY_EXPLORATORY_RETROSPECTIVE_BACKTEST",
+  "not_joint_multi_outcome_ml": true,
+  "not_untouched_external_validation": true,
+  "SCIENTIFIC_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY",
+  "MEDICATION_RESIDUAL_MODEL_STATUS": "NOT_STARTED",
+  "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+  "TREATMENT_EFFECT_STATUS": "NOT_EVALUATED",
+  "CAUSAL_EFFECT_STATUS": "NOT_EVALUATED",
+  "QSP_STATUS": "NOT_STARTED",
+  "PKPD_STATUS": "NOT_STARTED",
+  "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_STARTED",
+  "JOINT_MULTI_OUTCOME_MODEL_STATUS": "NOT_STARTED",
+  "TRAJECTORY_CLASSIFIER_STATUS": "NOT_STARTED",
+  "CLINICAL_VALIDATION_STATUS": "NOT_STARTED",
+  "PRODUCTION_READINESS": "NOT_CLAIMED",
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER"
+}

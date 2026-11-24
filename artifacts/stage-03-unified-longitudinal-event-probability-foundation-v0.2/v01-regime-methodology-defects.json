@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "V01_REGIME_METHODOLOGY_STATUS": "DEFECTS_REPRODUCED",
+  "defects": [
+    {
+      "id": "stability_stable_but_discovery_unstable_confounded",
+      "reproduced": true,
+      "observed": {
+        "stability": "STABLE",
+        "discovery": "CANDIDATE_ONLY_UNSTABLE",
+        "source_ari": 0.5350250312891114
+      }
+    },
+    {
+      "id": "ari_is_simple_rand_index_not_adjusted",
+      "reproduced": true,
+      "note": "_ari docstring claims ARI but implements pair-agreement RI"
+    },
+    {
+      "id": "k_selection_raw_inertia_prefers_larger_k",
+      "reproduced": false,
+      "observed_k": 5
+    },
+    {
+      "id": "regime_features_include_source_flag_and_horizon",
+      "reproduced": true
+    }
+  ],
+  "ok": false
+}

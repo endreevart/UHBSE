@@ -1,0 +1,126 @@
+{
+  "SOURCE_B_TEMPORAL_SEQUENCE_STATUS": "CANDIDATE_COUNTED_IDENTITY_NOT_ESTABLISHED",
+  "feedback_rows": 41407,
+  "out_of_order_relative_to_linked_consultation": 24,
+  "routes": {
+    "candidate_between_unverified_prior_recommendation_and_linked_consultation": {
+      "count": 26066,
+      "fraction": 0.6295,
+      "identity_verification_tier": "NOT_ESTABLISHED",
+      "interval_days": {
+        "n": 26066,
+        "p10": 55.0,
+        "p50": 61.0,
+        "p90": 198.0
+      },
+      "negative_intervals_in_sample": 0,
+      "out_of_order_count": 0,
+      "route": "unverified prior drug recommendation -> feedback created -> linked consultation on or after feedback",
+      "sample_size": 26066,
+      "verified": false,
+      "zero_intervals_in_sample": 0
+    },
+    "drug_recommendation_on_linked_consultation": {
+      "count": 29796,
+      "fraction": 0.7196,
+      "identity_verification_tier": "FK_CONSULTATION_ONLY",
+      "interval_days": {
+        "n": 0,
+        "p10": null,
+        "p50": null,
+        "p90": null
+      },
+      "interval_not_applicable_same_consultation": true,
+      "negative_intervals_in_sample": 0,
+      "out_of_order_count": 0,
+      "sample_size": 0,
+      "this_is_not_a_prior_recommendation": true,
+      "zero_intervals_in_sample": 0
+    },
+    "earlier_drug_recommendation_same_unverified_subject": {
+      "count": 27716,
+      "fraction": 0.6694,
+      "identity_verification_tier": "NOT_ESTABLISHED",
+      "interval_days": {
+        "n": 27716,
+        "p10": 55.0,
+        "p50": 61.0,
+        "p90": 203.0
+      },
+      "negative_intervals_in_sample": 0,
+      "not_a_verified_prior_exposure": true,
+      "out_of_order_count": 0,
+      "sample_size": 27716,
+      "uses_unverified_user_id_equals_patient_id": true,
+      "zero_intervals_in_sample": 0
+    },
+    "feedback_after_linked_consultation": {
+      "count": 24,
+      "fraction": 0.0006,
+      "identity_verification_tier": "FK_CONSULTATION_ONLY",
+      "interval_days": {
+        "n": 24,
+        "p10": 1.0,
+        "p50": 70.0,
+        "p90": 595.0
+      },
+      "negative_intervals_in_sample": 0,
+      "out_of_order_count": 24,
+      "sample_size": 24,
+      "zero_intervals_in_sample": 0
+    },
+    "feedback_before_linked_consultation": {
+      "count": 31271,
+      "fraction": 0.7552,
+      "identity_verification_tier": "FK_CONSULTATION_ONLY",
+      "interval_days": {
+        "n": 31271,
+        "p10": -63.0,
+        "p50": -21.0,
+        "p90": -8.0
+      },
+      "negative_intervals_in_sample": 31271,
+      "out_of_order_count": 0,
+      "sample_size": 31271,
+      "zero_intervals_in_sample": 0
+    },
+    "feedback_without_linked_consultation": {
+      "count": 8034,
+      "fraction": 0.194,
+      "identity_verification_tier": "NOT_APPLICABLE",
+      "interval_days": {
+        "n": 0,
+        "p10": null,
+        "p50": null,
+        "p90": null
+      },
+      "negative_intervals_in_sample": 0,
+      "out_of_order_count": 0,
+      "sample_size": 0,
+      "zero_intervals_in_sample": 0
+    },
+    "linked_consultation_date_missing": {
+      "count": 2007,
+      "fraction": 0.0485
+    },
+    "same_calendar_day_as_linked_consultation": {
+      "count": 7,
+      "fraction": 0.0002,
+      "identity_verification_tier": "FK_CONSULTATION_ONLY",
+      "interval_days": {
+        "n": 7,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0
+      },
+      "interval_is_zero_by_construction": true,
+      "negative_intervals_in_sample": 0,
+      "out_of_order_count": 0,
+      "sample_size": 7,
+      "zero_intervals_in_sample": 7
+    }
+  },
+  "source_system": "kgz_raw",
+  "timezone_contract": "naive_timestamp_without_time_zone",
+  "verified_civil_time": false
+}

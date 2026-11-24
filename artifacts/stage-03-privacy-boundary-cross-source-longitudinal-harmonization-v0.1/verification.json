@@ -1,0 +1,81 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-08-25T11:31:43Z",
+  "ok": true,
+  "duration_sec": 14.42,
+  "statuses": {
+    "BASELINE_VERIFICATION_STATUS": "PASS",
+    "PRIVACY_BOUNDARY_STATUS": "PASS",
+    "DEIDENTIFIED_RESEARCH_VIEW_STATUS": "DEIDENTIFIED_RESEARCH_VIEW",
+    "DIRECT_IDENTIFIER_SCAN_STATUS": "PASS",
+    "REIDENTIFICATION_RISK_ASSESSMENT_STATUS": "PASS_WITH_AGGREGATE_ONLY",
+    "SOURCE_B_LONGITUDINAL_INVENTORY_STATUS": "PASS",
+    "SOURCE_B_GLOBAL_SPLIT_STATUS": "PASS",
+    "CROSS_SOURCE_OUTCOME_HARMONIZATION_STATUS": "PARTIAL_NO_ACCEPTED",
+    "ACCEPTED_COMPARABLE_OUTCOME_COUNT": 0,
+    "UNIFIED_SOURCE_AWARE_STATE_STATUS": "BUILT",
+    "CROSS_SOURCE_IDENTITY_MERGE_STATUS": "NOT_RUN",
+    "CROSS_SOURCE_INDEPENDENCE_STATUS": "INDEPENDENCE_NOT_ESTABLISHED",
+    "A_TO_B_ZERO_SHOT_SHADOW_STATUS": "NOT_RUN_NO_ACCEPTED_MAPPINGS",
+    "APPLICABILITY_ACCOUNTING_STATUS": "PASS_NOT_RUN_NO_ACCEPTED_MAPPINGS",
+    "PARTIAL_SUPPORT_ACCOUNTING_STATUS": "PASS",
+    "SAME_TIMESTAMP_PRESELECTION_AUDIT_STATUS": "PASS",
+    "ENGINE_CROSS_SOURCE_SHADOW_STATUS": "NOT_RUN_NO_ACCEPTED_MAPPINGS",
+    "SCIENTIFIC_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY",
+    "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_STARTED",
+    "JOINT_MULTI_OUTCOME_MODEL_STATUS": "NOT_STARTED",
+    "MEDICATION_RESIDUAL_MODEL_STATUS": "NOT_STARTED",
+    "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+    "TREATMENT_EFFECT_STATUS": "NOT_EVALUATED",
+    "CAUSAL_EFFECT_STATUS": "NOT_EVALUATED",
+    "QSP_STATUS": "NOT_STARTED",
+    "PKPD_STATUS": "NOT_STARTED",
+    "CLINICAL_VALIDATION_STATUS": "NOT_STARTED",
+    "PRODUCTION_READINESS": "NOT_CLAIMED",
+    "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "PUBLIC_DATA_MINIMIZATION_STATUS": "EXTERNAL_ATTESTATION_REQUIRED",
+    "REVIEW_BUNDLE_SELF_CONTAINMENT_STATUS": "EXTERNAL_ATTESTATION_REQUIRED",
+    "PUBLICATION_INTEGRITY_STATUS": "EXTERNAL_ATTESTATION_REQUIRED",
+    "CONTENT_PREPACK_STATUS": "PASS"
+  },
+  "aggregate": {
+    "version": "0.1",
+    "source_a_subjects": 43856,
+    "source_b_subjects": 49564,
+    "accepted_comparable_outcomes": 0,
+    "mapping_status_counts": {
+      "UNKNOWN": 90,
+      "HYPOTHESIS": 8
+    },
+    "b_inventory_counts": {
+      "subjects": 49564,
+      "encounters": 88867,
+      "observations": 59741,
+      "components": 2132978,
+      "dated_numeric_observations": 1753362,
+      "subject_outcome_unit_with_ge2": 315968,
+      "unsupported_or_non_numeric_with_raw_text": 379616
+    },
+    "b_split": {
+      "total": 49564,
+      "train": 34779,
+      "validation": 7463,
+      "test": 7322
+    },
+    "zero_shot_status": "NOT_RUN_NO_ACCEPTED_MAPPINGS",
+    "partial_support_gap": 884,
+    "same_timestamp_preselection_groups": 1210,
+    "t3_pairs": {
+      "n_subjects_with_pairs": 3217,
+      "n_strict_consecutive_pairs": 6065,
+      "horizon_days": {
+        "n": 6065,
+        "min": 0.007361111111111111,
+        "max": 700761.8531712963,
+        "median": 115.21173611111111
+      }
+    }
+  },
+  "readiness_for_current_state_classifier": false,
+  "blocker_for_classifier": "ACCEPTED_COMPARABLE_OUTCOME_COUNT=0; specimen/method/domain-review missing"
+}

@@ -1,0 +1,80 @@
+{
+  "source": "stage-mg-db-1",
+  "definition": "confirmed visit prescription union, most common normalized label",
+  "probe_label": "омега-3 (жизнивек) капсулы – 2 раза",
+  "visits": 8169,
+  "recommendation_visits": 5384,
+  "catalog_visits": 2785,
+  "tie_count": 1,
+  "pairs": 3665,
+  "examination": {
+    "objective_status": {
+      "pairs": 3665,
+      "both_empty": 2268,
+      "only_previous": 459,
+      "only_next": 271,
+      "same_text": 63,
+      "text_changed": 604
+    },
+    "goal": {
+      "pairs": 3665,
+      "both_empty": 18,
+      "only_previous": 304,
+      "only_next": 51,
+      "same_text": 1011,
+      "text_changed": 2281
+    },
+    "local_status": {
+      "pairs": 3665,
+      "both_empty": 2366,
+      "only_previous": 409,
+      "only_next": 296,
+      "same_text": 76,
+      "text_changed": 518
+    },
+    "complaints": {
+      "pairs": 3665,
+      "both_empty": 2050,
+      "only_previous": 453,
+      "only_next": 474,
+      "same_text": 33,
+      "text_changed": 655
+    },
+    "anamnesis": {
+      "pairs": 3665,
+      "both_empty": 2049,
+      "only_previous": 454,
+      "only_next": 474,
+      "same_text": 3,
+      "text_changed": 685
+    }
+  },
+  "shared_lab_pairs": 318,
+  "shared_lab_values_unchanged_pairs": 103,
+  "shared_lab_values_changed_pairs": 215,
+  "GATE_2_STATUS": "CLOSED",
+  "eligible_cells": 0,
+  "effect_claimed": false,
+  "product_url": "https://zhiznivek.ru/catalog/product/omega-3-ultramaks-200ml-60-kap-1500-mg-steklyannaya-banka",
+  "product_identity": "OWNER_CONFIRMED_THIS_SKU_IS_THE_LABEL",
+  "product_confirmed_at": "2026-11-18T07:42:00Z",
+  "label_daily_dose": {
+    "source": "owner-supplied product table 2026-11-18",
+    "wording": "recommended intake provides not less than the stated amount",
+    "adult_omega3_pufa_mg": 4500,
+    "adult_epa_mg": 3000,
+    "adult_dha_mg": 1200,
+    "age_11_to_17_omega3_pufa_mg": 900,
+    "age_11_to_17_epa_plus_dha_mg": 840,
+    "age_11_to_17_epa_plus_dha_reference_as_printed": "250 мл",
+    "clinic_regimen": "1 capsule after lunch and 1 capsule after dinner",
+    "package_strength_mg": 1500,
+    "two_capsule_adult_omega3_pufa_mg": 3000,
+    "two_capsule_adult_epa_mg": 2000,
+    "two_capsule_adult_dha_mg": 800,
+    "pairs_age_18_plus": 3514,
+    "pairs_age_11_to_17": 115,
+    "pairs_under_11": 36,
+    "recommendation_description_variants": 1189
+  }
+}

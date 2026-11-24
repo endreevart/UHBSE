@@ -39,21 +39,24 @@ All modifications are performed in derived datasets.
 
 ## Current stage
 
-Current stage: **STAGE 01 — SINGLE SOURCE AUDIT**.
+Published bundle: **STAGE 05 — INTERVENTION RESPONSE READINESS AND EXPOSURE SEMANTICS v0.1.1**
+(frozen point correction of v0.1 evidence provenance).
 
-The only current objective is to inspect one clinic database and produce
-a reproducible, aggregate, de-identified data audit.
+Active gate: **STAGE 05 GATE 1B EXTRACTOR PILOT v0.1**.
+`GATE_1B_STATUS`=`OPEN`. `GATE_1B_PILOT_STATUS`=`EXECUTED_PRECISION_RECALL_NOT_MEASURED`.
+`GATE_1B_ACCEPTED`=`false`. Not model training. Gates 2 and 3 stay closed.
 
-Do not:
+```bash
+uv run --frozen --no-sync python -m human_simulator.stage05_gate1b_extractor_pilot_v01.orchestrator
+```
 
-- design the simulator;
-- select or train an ML model;
-- introduce Hugging Face models;
-- create a unified database;
-- migrate data to OMOP or FHIR;
-- process multiple clinics;
-- infer undocumented field meanings;
-- invent missing medical semantics.
+Published v0.1.1 bundle:
+
+```bash
+audit --root . intervention-readiness run-v0.1 --no-publish
+audit --root . intervention-readiness verify-v0.1.1
+audit --root . intervention-readiness publish-v0.1.1
+```
 
 ## Required behavior
 

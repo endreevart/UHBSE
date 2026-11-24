@@ -1,0 +1,99 @@
+{
+  "accepted_zip": "stage-03-first-medication-association-baseline-v0.1.1-review.zip",
+  "accepted_sha256_pin": "7c2d1bc1fcf3a96130bc2a8cf944850a88f5727ee7f3be43fca969fa1dcaa963",
+  "zip_exists": true,
+  "zip_sha256": "7c2d1bc1fcf3a96130bc2a8cf944850a88f5727ee7f3be43fca969fa1dcaa963",
+  "zip_sha_matches_pin": true,
+  "sidecar_matches": true,
+  "attestation_sha_matches": true,
+  "attestation_status": "PASS",
+  "attestation_unit_passed": 12,
+  "members": 53,
+  "unique_members": 53,
+  "members_match_pin": true,
+  "members_eq_indexed_plus_1": true,
+  "analytical_payload_files_present": true,
+  "v01_py_modules_in_zip": [
+    "src/human_simulator/intervention_association_v01/models.py"
+  ],
+  "v011_hash_collision_summary": [
+    {
+      "outcome": "\u041b\u0438\u043c\u0444\u043e\u0446\u0438\u0442\u044b",
+      "n_train_medicine_ids": 295,
+      "occupied_buckets": 32,
+      "n_collision_buckets": 32,
+      "hash_dim": 32
+    },
+    {
+      "outcome": "\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u043e\u0431\u044a\u0435\u043c \u044d\u0440\u0438\u0442\u0440\u043e\u0446\u0438\u0442\u043e\u0432 (MCV)",
+      "n_train_medicine_ids": 297,
+      "occupied_buckets": 32,
+      "n_collision_buckets": 32,
+      "hash_dim": 32
+    },
+    {
+      "outcome": "\u041c\u043e\u043d\u043e\u0446\u0438\u0442\u044b",
+      "n_train_medicine_ids": 294,
+      "occupied_buckets": 32,
+      "n_collision_buckets": 32,
+      "hash_dim": 32
+    },
+    {
+      "outcome": "\u041d\u0435\u0439\u0442\u0440\u043e\u0444\u0438\u043b\u044b",
+      "n_train_medicine_ids": 294,
+      "occupied_buckets": 32,
+      "n_collision_buckets": 32,
+      "hash_dim": 32
+    },
+    {
+      "outcome": "\u042d\u043e\u0437\u0438\u043d\u043e\u0444\u0438\u043b\u044b",
+      "n_train_medicine_ids": 294,
+      "occupied_buckets": 32,
+      "n_collision_buckets": 32,
+      "hash_dim": 32
+    }
+  ],
+  "packaging_defects": [
+    {
+      "id": "STALE_PENDING_WRITE_IN_VERIFICATION_JSON",
+      "detail": "verification.json statuses.pre_pack_manifest_status=PENDING_WRITE"
+    },
+    {
+      "id": "STALE_PENDING_PUBLISH_IN_VERIFICATION_JSON",
+      "detail": "verification.json statuses.clean_staging_test_status=PENDING_PUBLISH"
+    },
+    {
+      "id": "REPRODUCE_AUDIT_WITHOUT_CLI",
+      "detail": "REPRODUCE.md invokes audit but ZIP lacks src/human_simulator/cli.py"
+    },
+    {
+      "id": "V01_TEST_WITHOUT_FULL_PACKAGE",
+      "detail": "v01 unit test present; missing modules: ['accounting.py', 'episodes.py', 'evaluate.py', 'policy.py']"
+    },
+    {
+      "id": "CLEAN_EXTRACTION_NARROW_SUITE",
+      "detail": "attestation unit_reproduce.passed=12; does not prove v01 regression or audit CLI"
+    }
+  ],
+  "V011_ANALYTICAL_PAYLOAD_STATUS": "VERIFIED",
+  "V011_REVIEW_BUNDLE_SELF_CONTAINMENT_STATUS": "FAIL",
+  "prior_immutable_zips": {
+    "medication_association_v0.1.1": {
+      "exists": true,
+      "sha256": "7c2d1bc1fcf3a96130bc2a8cf944850a88f5727ee7f3be43fca969fa1dcaa963",
+      "unchanged": true
+    },
+    "medication_association_v0.1": {
+      "exists": true,
+      "sha256": "11975e730197e61792288ac30bd81137c2aa0e05a1b9f07217f26da9336615fc",
+      "unchanged": true
+    },
+    "population_v0.1.1": {
+      "exists": true,
+      "sha256": "35a35dd48612590fedf064e3916aa1ae14ab70bd2626e257889b70c11a55d796",
+      "unchanged": true
+    }
+  },
+  "all_priors_unchanged": true,
+  "ok": true
+}

@@ -1,0 +1,170 @@
+{
+  "version": "0.1",
+  "T3_DOMAIN_REVIEW_STATUS": "DOMAIN_REVIEW_REQUIRED",
+  "code": "53",
+  "catalog_analyte": "free_t3",
+  "catalog_name_ru_expected": "Трийодтиронин свободный",
+  "auto_accepted": false,
+  "n_mapping_strata_code_53": 2,
+  "n_inventory_unit_strata_code_53": 4,
+  "inventory_unit_strata": [
+    {
+      "unit": "пмоль/л",
+      "n_components": 20585,
+      "n_numeric": 19860,
+      "n_subjects": 12697
+    },
+    {
+      "unit": "пг/мл",
+      "n_components": 8220,
+      "n_numeric": 7555,
+      "n_subjects": 5215
+    },
+    {
+      "unit": "undefined",
+      "n_components": 241,
+      "n_numeric": 171,
+      "n_subjects": 229
+    },
+    {
+      "unit": "нг/дл",
+      "n_components": 210,
+      "n_numeric": 156,
+      "n_subjects": 195
+    }
+  ],
+  "specimen_method_note": "analyses_catalog.material is empty for all catalog rows in live Source B; canonical observation has no specimen/method columns usable for mapping. Empty ≠ equivalent. Do not auto-accept T3.",
+  "strata": [
+    {
+      "mapping_id": "7b5d55c1dfa962866de25b68c56dd0a5e96e39c62f3474ad5fdd5472e50ba98a",
+      "a_outcome": "Т3 св.",
+      "a_unit": "пг/мл",
+      "b_raw_code": "53",
+      "b_unit": "пг/мл",
+      "candidate_class": "SPECIMEN_MISSING",
+      "prior_lineage_status": "HYPOTHESIS",
+      "specimen_material": null,
+      "specimen_empty": true,
+      "method_assay": null,
+      "method_empty": true,
+      "volumes": {
+        "n_subjects": 5215,
+        "n_components": 8220,
+        "n_numeric": 7555,
+        "n_dated_numeric": 7555,
+        "n_subjects_with_pairs": 1186,
+        "n_strict_consecutive_pairs": 2083
+      },
+      "decision_include_exclude": {
+        "REJECTED": {
+          "included_subjects": 0,
+          "excluded_subjects": 5215,
+          "included_pairs": 0,
+          "excluded_pairs": 2083
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "included_subjects": 0,
+          "excluded_subjects": 5215,
+          "included_pairs": 0,
+          "excluded_pairs": 2083,
+          "note": "no transfer until evidence complete"
+        },
+        "AMBIGUOUS": {
+          "included_subjects": 0,
+          "excluded_subjects": 5215,
+          "included_pairs": 0,
+          "excluded_pairs": 2083
+        },
+        "ACCEPTED_WITH_RESTRICTIONS": {
+          "included_subjects": 1186,
+          "excluded_subjects": 4029,
+          "included_pairs": 2083,
+          "excluded_pairs": 0,
+          "restrictions": [
+            "specimen_unverified",
+            "method_assay_unverified",
+            "unit_stratum_only:пг/мл"
+          ]
+        },
+        "ACCEPTED_COMPARABLE": {
+          "included_subjects": 1186,
+          "excluded_subjects": 4029,
+          "included_pairs": 2083,
+          "excluded_pairs": 0,
+          "blocked_until": [
+            "specimen_evidence",
+            "method_assay_evidence",
+            "domain_reviewer_accept"
+          ],
+          "machine_auto_accept": false
+        }
+      }
+    },
+    {
+      "mapping_id": "59fbc0a36b3afe3ee6af9d618d416ded8a4bd7ad524bd0b210d383a5c7918956",
+      "a_outcome": "Т3 св.",
+      "a_unit": "пмоль/л",
+      "b_raw_code": "53",
+      "b_unit": "пмоль/л",
+      "candidate_class": "SPECIMEN_MISSING",
+      "prior_lineage_status": "HYPOTHESIS",
+      "specimen_material": null,
+      "specimen_empty": true,
+      "method_assay": null,
+      "method_empty": true,
+      "volumes": {
+        "n_subjects": 12697,
+        "n_components": 20585,
+        "n_numeric": 19860,
+        "n_dated_numeric": 19860,
+        "n_subjects_with_pairs": 3217,
+        "n_strict_consecutive_pairs": 6065
+      },
+      "decision_include_exclude": {
+        "REJECTED": {
+          "included_subjects": 0,
+          "excluded_subjects": 12697,
+          "included_pairs": 0,
+          "excluded_pairs": 6065
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "included_subjects": 0,
+          "excluded_subjects": 12697,
+          "included_pairs": 0,
+          "excluded_pairs": 6065,
+          "note": "no transfer until evidence complete"
+        },
+        "AMBIGUOUS": {
+          "included_subjects": 0,
+          "excluded_subjects": 12697,
+          "included_pairs": 0,
+          "excluded_pairs": 6065
+        },
+        "ACCEPTED_WITH_RESTRICTIONS": {
+          "included_subjects": 3217,
+          "excluded_subjects": 9480,
+          "included_pairs": 6065,
+          "excluded_pairs": 0,
+          "restrictions": [
+            "specimen_unverified",
+            "method_assay_unverified",
+            "unit_stratum_only:пмоль/л"
+          ]
+        },
+        "ACCEPTED_COMPARABLE": {
+          "included_subjects": 3217,
+          "excluded_subjects": 9480,
+          "included_pairs": 6065,
+          "excluded_pairs": 0,
+          "blocked_until": [
+            "specimen_evidence",
+            "method_assay_evidence",
+            "domain_reviewer_accept"
+          ],
+          "machine_auto_accept": false
+        }
+      }
+    }
+  ],
+  "ok": true
+}

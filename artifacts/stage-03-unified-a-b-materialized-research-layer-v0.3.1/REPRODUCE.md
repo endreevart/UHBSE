@@ -1,0 +1,1 @@
+"# Reproduce v0.3.1\n\n```bash\nuv run --frozen audit --root . unified-research-layer run-v0.3.1 --no-publish\nuv run --frozen audit --root . unified-research-layer verify-v0.3.1\nuv run --frozen audit --root . unified-research-layer publish-v0.3.1\n```\n\nPrivate row-level datasets remain under `private/unified-research-layer-v031/`.\n"

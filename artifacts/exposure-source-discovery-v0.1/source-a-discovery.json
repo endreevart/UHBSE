@@ -1,0 +1,330 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-11-06T12:18:45Z",
+  "read_only_sessions": true,
+  "row_values_exported": false,
+  "field_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+  "exposure_tier_note": "Recommendation is not administration. No field is promoted to intake evidence by this run.",
+  "source_system": "magerya_api",
+  "medicine_catalog": {
+    "entries": 880,
+    "names_used_for_matching": "IN_PROCESS_ONLY",
+    "filled": {
+      "rows": 880,
+      "unit_of_measurement_id": 0,
+      "form_id": 0,
+      "reception_frequency_id": 0,
+      "description": 880,
+      "category": 880
+    }
+  },
+  "reception_frequency_catalog_rows": 0,
+  "medicineappointments_linkage": {
+    "rows": 25726,
+    "with_recommendation_document_created_within_1_day_same_patient": 1514,
+    "fraction": 0.0589,
+    "interpretation_status": "UNKNOWN"
+  },
+  "document_recommendation_versions": [
+    {
+      "version": "SUPPRESSED",
+      "rows": 53894
+    }
+  ],
+  "document_recommendation_document": {
+    "rows": 53894,
+    "parsed": 53894,
+    "key_paths_supported": {
+      "diagnosis": 53894,
+      "diagnosis.sections": 53894,
+      "diagnosis.sections.complications": 53894,
+      "diagnosis.sections.complications.items": 53894,
+      "diagnosis.sections.complications.order": 53894,
+      "diagnosis.sections.concomitant": 53894,
+      "diagnosis.sections.concomitant.items": 53894,
+      "diagnosis.sections.concomitant.order": 53894,
+      "diagnosis.sections.main": 53894,
+      "diagnosis.sections.main.items": 53894,
+      "diagnosis.sections.main.order": 53894,
+      "diagnosis.sections.provisional": 53894,
+      "diagnosis.sections.provisional.items": 53894,
+      "diagnosis.sections.provisional.order": 53894,
+      "next_appointment_date": 53894,
+      "recommendations": 53894,
+      "recommendations[].code": 40696,
+      "recommendations[].items": 40696,
+      "recommendations[].title": 40696
+    },
+    "key_paths_suppressed_count": 0,
+    "key_path_policy": "support>=50 and identifier-like name; others suppressed",
+    "string_content": {
+      "rows": 53894,
+      "non_empty": 47243,
+      "non_empty_fraction": 0.8766,
+      "length": {
+        "n": 47243,
+        "p10": 49,
+        "p50": 2029,
+        "p90": 7982,
+        "mean": 3131.2
+      },
+      "pattern_rows": {
+        "dose_amount": 34126,
+        "frequency": 33265,
+        "duration": 31136,
+        "supplement_term": 32454,
+        "route": 9680,
+        "intake_change": 19135
+      },
+      "pattern_fraction_of_non_empty": {
+        "dose_amount": 0.7224,
+        "frequency": 0.7041,
+        "duration": 0.6591,
+        "supplement_term": 0.687,
+        "route": 0.2049,
+        "intake_change": 0.405
+      },
+      "dose_and_frequency_rows": 30997,
+      "semantic_status": "UNKNOWN"
+    },
+    "catalog_mention_docs": 33500,
+    "catalog_mention_fraction": 0.6216
+  },
+  "document_recommendation_schema": {
+    "rows": 53894,
+    "parsed": 53894,
+    "key_paths_supported": {
+      "properties": 53894,
+      "properties.diagnosis": 53894,
+      "properties.diagnosis.properties": 53894,
+      "properties.diagnosis.properties.sections": 53894,
+      "properties.diagnosis.required": 53894,
+      "properties.diagnosis.type": 53894,
+      "properties.next_appointment_date": 53894,
+      "properties.next_appointment_date.format": 53894,
+      "properties.next_appointment_date.type": 53894,
+      "properties.recommendations": 53894,
+      "properties.recommendations.items": 53894,
+      "properties.recommendations.items.properties": 53894,
+      "properties.recommendations.items.required": 53894,
+      "properties.recommendations.items.type": 53894,
+      "properties.recommendations.type": 53894,
+      "required": 53894,
+      "type": 53894
+    },
+    "key_paths_suppressed_count": 6,
+    "key_path_policy": "support>=50 and identifier-like name; others suppressed",
+    "string_content": {
+      "rows": 53894,
+      "non_empty": 53894,
+      "non_empty_fraction": 1.0,
+      "length": {
+        "n": 53894,
+        "p10": 1709,
+        "p50": 1709,
+        "p90": 1865,
+        "mean": 1744.6
+      },
+      "pattern_rows": {
+        "dose_amount": 0,
+        "frequency": 0,
+        "duration": 0,
+        "supplement_term": 0,
+        "route": 0,
+        "intake_change": 0
+      },
+      "pattern_fraction_of_non_empty": {
+        "dose_amount": 0.0,
+        "frequency": 0.0,
+        "duration": 0.0,
+        "supplement_term": 0.0,
+        "route": 0.0,
+        "intake_change": 0.0
+      },
+      "dose_and_frequency_rows": 0,
+      "semantic_status": "UNKNOWN"
+    },
+    "catalog_mention_docs": "NOT_RUN",
+    "catalog_mention_fraction": null
+  },
+  "document_medicalreport_document": {
+    "rows": 45062,
+    "parsed": 45062,
+    "key_paths_supported": {
+      "anamnesis": 45062,
+      "branch": 45062,
+      "branch.id": 45062,
+      "branch.name": 45062,
+      "branch.specialization_genitive": 45062,
+      "complaints": 45062,
+      "complications_diagnoses": 45062,
+      "concomitant_diagnoses": 45062,
+      "consultation_form": 45062,
+      "doctor": 45062,
+      "doctor.employee": 45062,
+      "doctor.employee.first_name": 45062,
+      "doctor.employee.full_name": 45062,
+      "doctor.employee.id": 45062,
+      "doctor.employee.last_name": 45062,
+      "doctor.employee.patronymic": 45062,
+      "doctor.id": 45062,
+      "examination_results": 45062,
+      "formation_date": 45062,
+      "goal": 45062,
+      "local_status": 45062,
+      "main_diagnoses": 45062,
+      "next_appointment_date": 45062,
+      "objective_status": 45062,
+      "patient": 45062,
+      "patient.birthdate": 45062,
+      "patient.first_name": 45062,
+      "patient.full_name": 45062,
+      "patient.id": 45062,
+      "patient.last_name": 45062,
+      "patient.patronymic": 45062,
+      "patient.plural_years": 45062,
+      "provisional_diagnoses": 45062,
+      "recommendations": 45062,
+      "scheduled_analyzes": 45062,
+      "version": 45062,
+      "visit_date": 45062,
+      "functional_examination_results": 43220,
+      "laboratory_examination_results": 43220,
+      "recommendations[].code": 39413,
+      "recommendations[].items": 39413,
+      "recommendations[].title": 39413,
+      "scheduled_analyzes[].code": 30763,
+      "scheduled_analyzes[].id": 30763,
+      "scheduled_analyzes[].name": 30763,
+      "main_diagnoses[].description": 27314,
+      "main_diagnoses[].name": 27314,
+      "functional_examination_results[].analysis": 23629,
+      "functional_examination_results[].analysis.code": 23629,
+      "functional_examination_results[].analysis.id": 23629,
+      "functional_examination_results[].analysis.name": 23629,
+      "functional_examination_results[].results": 23629,
+      "concomitant_diagnoses[].description": 23550,
+      "concomitant_diagnoses[].name": 23550,
+      "main_diagnoses[].id": 21614,
+      "provisional_diagnoses[].description": 19281,
+      "provisional_diagnoses[].name": 19281,
+      "concomitant_diagnoses[].id": 18780,
+      "laboratory_examination_results[].analysis": 17611,
+      "laboratory_examination_results[].analysis.code": 17611,
+      "laboratory_examination_results[].analysis.id": 17611,
+      "laboratory_examination_results[].analysis.name": 17611,
+      "laboratory_examination_results[].results": 17611,
+      "doctor.signature": 16815,
+      "doctor.stamp": 16815,
+      "groups_questions": 16815,
+      "groups_questions[].questions": 16815,
+      "groups_questions[].title": 16815,
+      "provisional_diagnoses[].id": 13853,
+      "doctor.qr_code": 11873,
+      "drugs": 4324,
+      "functional_examination_results_ver6": 4324,
+      "scheduled_functional_studies": 4324,
+      "scheduled_manipulations": 4324,
+      "scheduled_procedures": 4324,
+      "supplements": 4324,
+      "functional_examination_results_ver6[].description": 3032,
+      "functional_examination_results_ver6[].name": 3032,
+      "functional_examination_results_ver6[].sampling_date": 3032,
+      "next_appointment_type": 2961
+    },
+    "key_paths_suppressed_count": 4,
+    "key_path_policy": "support>=50 and identifier-like name; others suppressed",
+    "string_content": {
+      "rows": 45062,
+      "non_empty": 45062,
+      "non_empty_fraction": 1.0,
+      "length": {
+        "n": 45062,
+        "p10": 3182,
+        "p50": 7988,
+        "p90": 16028,
+        "mean": 8845.9
+      },
+      "pattern_rows": {
+        "dose_amount": 42893,
+        "frequency": 39481,
+        "duration": 40348,
+        "supplement_term": 44203,
+        "route": 22262,
+        "intake_change": 19924
+      },
+      "pattern_fraction_of_non_empty": {
+        "dose_amount": 0.9519,
+        "frequency": 0.8761,
+        "duration": 0.8954,
+        "supplement_term": 0.9809,
+        "route": 0.494,
+        "intake_change": 0.4421
+      },
+      "dose_and_frequency_rows": 38395,
+      "semantic_status": "UNKNOWN"
+    },
+    "catalog_mention_docs": 40008,
+    "catalog_mention_fraction": 0.8878
+  },
+  "document_recommendationtemplate_description": {
+    "rows": 15620,
+    "non_empty": 966,
+    "non_empty_fraction": 0.0618,
+    "length": {
+      "n": 966,
+      "p10": 101,
+      "p50": 183,
+      "p90": 492,
+      "mean": 317.4
+    },
+    "pattern_rows": {
+      "dose_amount": 749,
+      "frequency": 629,
+      "duration": 585,
+      "supplement_term": 95,
+      "route": 205,
+      "intake_change": 46
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.7754,
+      "frequency": 0.6511,
+      "duration": 0.6056,
+      "supplement_term": 0.0983,
+      "route": 0.2122,
+      "intake_change": 0.0476
+    },
+    "dose_and_frequency_rows": 528,
+    "semantic_status": "UNKNOWN"
+  },
+  "diagnosis_recommendation_description": {
+    "rows": 103,
+    "non_empty": 103,
+    "non_empty_fraction": 1.0,
+    "length": {
+      "n": 103,
+      "p10": 144,
+      "p50": 606,
+      "p90": 2004,
+      "mean": 1146.9
+    },
+    "pattern_rows": {
+      "dose_amount": 39,
+      "frequency": 25,
+      "duration": 31,
+      "supplement_term": 12,
+      "route": 0,
+      "intake_change": 30
+    },
+    "pattern_fraction_of_non_empty": {
+      "dose_amount": 0.3786,
+      "frequency": 0.2427,
+      "duration": 0.301,
+      "supplement_term": 0.1165,
+      "route": 0.0,
+      "intake_change": 0.2913
+    },
+    "dose_and_frequency_rows": 8,
+    "semantic_status": "UNKNOWN"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "status": "PASS",
+  "manifest_path": "artifacts/stage-03/design-content-manifest.sha256",
+  "manifest_sha256": "cb75fadb06a6d650b27b2136a2df8b9c86b358305cfd24a56589f827d5ab2468",
+  "manifest_self_hash_absent": true,
+  "contracts": {
+    "canonical-model.yaml": {
+      "path": "artifacts/stage-03/canonical-model.yaml",
+      "present": true,
+      "expected_sha256": "54e7ef79a3e730ff9da90c59cff2b7cb78b6f3f759fc37f8c89bf813affc161f",
+      "computed_sha256": "54e7ef79a3e730ff9da90c59cff2b7cb78b6f3f759fc37f8c89bf813affc161f",
+      "matches_manifest": true
+    },
+    "provenance-contract.yaml": {
+      "path": "artifacts/stage-03/provenance-contract.yaml",
+      "present": true,
+      "expected_sha256": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+      "computed_sha256": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+      "matches_manifest": true
+    },
+    "temporal-contract.yaml": {
+      "path": "artifacts/stage-03/temporal-contract.yaml",
+      "present": true,
+      "expected_sha256": "e6c4bc62ed3d8aabfb2e56d2dd3d005854fda26e172d3b98f91fc300896be2c4",
+      "computed_sha256": "e6c4bc62ed3d8aabfb2e56d2dd3d005854fda26e172d3b98f91fc300896be2c4",
+      "matches_manifest": true
+    }
+  },
+  "validator_computed_required_fields": [
+    "computation_method",
+    "computation_version",
+    "confidence",
+    "input_artifact_sha256",
+    "input_record_references",
+    "mapping_status",
+    "record_origin",
+    "transformation_id",
+    "transformation_version",
+    "transformed_at",
+    "uncertainty"
+  ],
+  "contract_computed_required_fields": [
+    "computation_method",
+    "computation_version",
+    "confidence",
+    "input_artifact_sha256",
+    "input_record_references",
+    "mapping_status",
+    "record_origin",
+    "transformation_id",
+    "transformation_version",
+    "transformed_at",
+    "uncertainty"
+  ],
+  "validator_covers_contract_required_fields": true,
+  "validator_weakened_vs_contract": false,
+  "validator_forbidden_fields": [
+    "source_record_locator"
+  ],
+  "yaml_parse_error": null,
+  "check_name": "accepted_design_contracts_present_and_verified"
+}

@@ -1,0 +1,41 @@
+{
+  "version": "0.2",
+  "V011_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "PRIOR_V011_NATURAL_HISTORY_ROLLOUT_FOUNDATION_STATUS": "CORRECTION_REQUIRED",
+  "builtin_hash_in_evaluate": true,
+  "hash_two_processes": {
+    "process_a": "-8373455275039763161",
+    "process_b": "5757277668769696697",
+    "equal": false,
+    "process_dependent": true,
+    "PYTHONHASHSEED_required_for_stability": true
+  },
+  "PROCESS_INDEPENDENT_RNG_STATUS": "FAIL_BUILTIN_HASH",
+  "null_overlap_collapsed_to_empty_string": true,
+  "target_reuse_published_as_pass": "PASS",
+  "train_val_target_rows": 554541,
+  "train_val_duplicate_target_assignment": 86918,
+  "test_target_rows": 97201,
+  "test_duplicate_target_assignment": 14902,
+  "horizon_window": "abs(days-H)/H <= 0.5 and days > 0",
+  "published_horizon_identity": "T0_PLUS_H",
+  "recursive_evaluation": {
+    "single_stochastic_endpoint_for_mae": true,
+    "path_quantiles_without_empirical_path_coverage": true,
+    "direct_coverage_used_for_recursive_gate": true,
+    "recursive_crps_absent": true,
+    "error_growth_imported_not_applied": true,
+    "rng_uses_builtin_hash": true
+  },
+  "recursive_runtime": {
+    "validates_requested_cell_then_runs_increment": true,
+    "composite_increment_payload_in_identity": true,
+    "shadow_direct_not_recursive_route": true,
+    "eligibility_validation_selected_not_recursive": true
+  },
+  "v011_recursive_validation_accepted": 1,
+  "do_not_transfer_single_recursive_cell": true,
+  "v011_one_step_heldout_confirmed": 15,
+  "do_not_copy_84_15_1": true,
+  "ok": true
+}

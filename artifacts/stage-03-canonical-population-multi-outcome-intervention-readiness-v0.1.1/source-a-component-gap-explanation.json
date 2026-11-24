@@ -1,0 +1,31 @@
+{
+  "version": "0.1.1",
+  "raw_document_analysisresultitem": 1372259,
+  "canonical_source_a_observation_component": 1158631,
+  "gap": 213628,
+  "exclusive_categories": {
+    "orphan_no_header": 0,
+    "header_without_patient": 0,
+    "empty_value_with_patient_not_loaded_as_component": 208262,
+    "non_numeric_with_patient": 86972,
+    "non_numeric_with_patient_loaded": 81600,
+    "non_numeric_with_patient_not_loaded": 5372,
+    "numeric_with_patient": 1077025,
+    "numeric_with_patient_loaded": 1077025,
+    "numeric_with_patient_not_loaded": 0
+  },
+  "category_sum_exclusive_raw_buckets": 1372259,
+  "category_sum_equals_source": true,
+  "unexplained_rows": 0,
+  "truncated_rows": 0,
+  "gap_explained_as": {
+    "empty_values": 208262,
+    "unsupported_no_patient_or_orphan": 0,
+    "non_numeric_not_loaded": 5372,
+    "numeric_not_loaded": 0,
+    "sum": 213634,
+    "matches_gap": false
+  },
+  "interpretation": "Primary gap drivers are empty values (not loaded as components) and non-numeric text not fully preserved. Numeric-with-patient not loaded is zero in current live evidence. Not silent truncation.",
+  "source_a_component_gap_status": "PASS"
+}

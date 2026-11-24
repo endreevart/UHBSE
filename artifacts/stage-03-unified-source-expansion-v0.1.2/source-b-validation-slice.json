@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "rollback": true,
+  "counts_before": {
+    "source_system": 2,
+    "source_record": 1695164,
+    "subject": 57826,
+    "subject_characteristic": 16509,
+    "encounter": 138794,
+    "observation": 578294,
+    "observation_component": 804139
+  },
+  "counts_after_rollback": {
+    "source_system": 2,
+    "source_record": 1695164,
+    "subject": 57826,
+    "subject_characteristic": 16509,
+    "encounter": 138794,
+    "observation": 578294,
+    "observation_component": 804139
+  },
+  "counts_unchanged": true,
+  "slice_rows": 80,
+  "insert_stats_before_rollback": {
+    "runtime_count": 0,
+    "candidate_count": 0,
+    "eligible_count": 0,
+    "already_present_count": 26,
+    "newly_loaded_count": 0,
+    "final_canonical_count": 0,
+    "rejected_count": 57,
+    "unsupported_count": 0,
+    "quarantined_count": 0,
+    "source_record_count": 0,
+    "truncated_count": 0,
+    "unexplained_count": 0,
+    "new_observations": 0,
+    "new_observation_components": 0
+  },
+  "typed_value_xor_enforced": true,
+  "migration_0005": false,
+  "no_patient_ids_in_artifact": true
+}

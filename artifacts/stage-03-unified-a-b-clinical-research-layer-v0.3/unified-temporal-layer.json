@@ -1,0 +1,668 @@
+{
+  "version": "0.3",
+  "UNIFIED_TEMPORAL_LAYER_STATUS": "PASS",
+  "structures": [
+    "encounter_time",
+    "observation_time",
+    "medication_candidate_time",
+    "recommendation_time",
+    "diagnosis_time",
+    "document_time",
+    "start_end_interval",
+    "timestamp_source",
+    "timestamp_certainty",
+    "timezone_precision",
+    "same_time_events",
+    "ordering_ambiguity"
+  ],
+  "technical_timestamp_not_auto_clinical_admin_time": true,
+  "source_a_temporal_columns_n": 164,
+  "source_b_temporal_columns_n": 44,
+  "source_a_temporal_columns_sample": [
+    {
+      "schema": "magerya_api",
+      "table": "account_contractor",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_contractor",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "appointment_price_at_clinic_first",
+      "data_type": "numeric",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "appointment_price_at_clinic_repeat",
+      "data_type": "numeric",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "duration_first_at_clinic",
+      "data_type": "smallint",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "duration_repeat_at_clinic",
+      "data_type": "smallint",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "perform_at_clinic",
+      "data_type": "boolean",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "service_price_first_appointment_at_clinic_id",
+      "data_type": "bigint",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "service_price_repeat_appointment_at_clinic_id",
+      "data_type": "bigint",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorfeedback",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorfeedback",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "power_attorney",
+      "data_type": "character varying",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "ended_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "last_heartbeat_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "started_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "archived",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "birthdate",
+      "data_type": "date",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "created_by_id",
+      "data_type": "bigint",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "next_appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "passport_issued_date",
+      "data_type": "date",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "self_delete_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "date_joined",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "last_login",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "last_seen",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "phone_confirmation_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "sms_blocking",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "timezone",
+      "data_type": "character varying",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "archived",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "chat_end_time",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "completed_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    }
+  ],
+  "source_b_temporal_columns_sample": [
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_codes",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_codes",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_codes",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_constructor",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_constructor",
+      "column": "date",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_constructor",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_labs",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_labs",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_labs",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_pool",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_pool",
+      "column": "recommendation_notes",
+      "data_type": "text",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_pool",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_tags",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_tags",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_tags",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_weight",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_weight",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_weight",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_addresses",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_addresses",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_addresses",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral",
+      "column": "finished_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral",
+      "column": "initialized_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_codes",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_codes",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_codes",
+      "column": "reserved_until",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_codes",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_regions",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_regions",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_result",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_category",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_category",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_category",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_list",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_list",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role_hypothesis": "technical_or_unknown",
+      "clinical_administration_time_confirmed": false
+    }
+  ],
+  "canonical_observations": 934233,
+  "canonical_encounters": 156995,
+  "ok": true
+}

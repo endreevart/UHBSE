@@ -1,0 +1,88 @@
+{
+  "baseline_verification_status": "PASS",
+  "ok": true,
+  "checks": {
+    "zip_exists": true,
+    "zip_sha256": "0c1bc7006f684e79bf80a1e02e03158629d8881e8f7f64226a83539f2f25611b",
+    "zip_sha_matches_expected": true,
+    "sidecar_matches_zip": true,
+    "attestation_status": "PASS",
+    "attestation_sha_matches": true,
+    "internal_manifest_mismatches": [],
+    "frozen_identity_sha256": "7d79c4a07127e7c1abb9d40114263c8b51ccadef323ca7ffd1679b8a45505610",
+    "review_index_present": true,
+    "internal_manifest_ok": true,
+    "frozen_file_sha_ok": true,
+    "frozen_identity_sha_ok": true,
+    "prior_immutable": [
+      {
+        "label": "scientific_v02_shadow_v01",
+        "filename": "stage-03-source-a-scientific-baseline-v0.2-shadow-transfer-v0.1-review.zip",
+        "expected": "0c1bc7006f684e79bf80a1e02e03158629d8881e8f7f64226a83539f2f25611b",
+        "got": "0c1bc7006f684e79bf80a1e02e03158629d8881e8f7f64226a83539f2f25611b",
+        "matches": true
+      },
+      {
+        "label": "unified_v0.1.2.1.1",
+        "filename": "stage-03-unified-source-expansion-v0.1.2.1.1-review.zip",
+        "expected": "5f9d10e1e57ed7423b651a0156714ce976b3ec01f5c85306e929f91f7ccdb997",
+        "got": "5f9d10e1e57ed7423b651a0156714ce976b3ec01f5c85306e929f91f7ccdb997",
+        "matches": true
+      },
+      {
+        "label": "unified_v0.1.2.1",
+        "filename": "stage-03-unified-source-expansion-v0.1.2.1-review.zip",
+        "expected": "6f6e906eb8f01e7a6868c4c4eb71857b15670c5ce6db6ce49125a343572cba26",
+        "got": "6f6e906eb8f01e7a6868c4c4eb71857b15670c5ce6db6ce49125a343572cba26",
+        "matches": true
+      },
+      {
+        "label": "unified_v0.1.2",
+        "filename": "stage-03-unified-source-expansion-v0.1.2-review.zip",
+        "expected": "55b92ce7b9762114040233be30eaa4705b03e1aa2d378097e21be4ef2258b269",
+        "got": "55b92ce7b9762114040233be30eaa4705b03e1aa2d378097e21be4ef2258b269",
+        "matches": true
+      },
+      {
+        "label": "unified_v0.1.1",
+        "filename": "stage-03-unified-source-expansion-v0.1.1-review.zip",
+        "expected": "d0e8a973ecbbee6e618cf5976d8a688abf23023ccc477710668fed3b16072faa",
+        "got": "d0e8a973ecbbee6e618cf5976d8a688abf23023ccc477710668fed3b16072faa",
+        "matches": true
+      },
+      {
+        "label": "unified_v0.1",
+        "filename": "stage-03-unified-source-expansion-v0.1-review.zip",
+        "expected": "bf048ed0b7ecfada1d0cdbd522943437d409cdf8aef4b292418b4682cb1a83be",
+        "got": "bf048ed0b7ecfada1d0cdbd522943437d409cdf8aef4b292418b4682cb1a83be",
+        "matches": true
+      },
+      {
+        "label": "core_v0.1.2.1",
+        "filename": "stage-03-core-vertical-slice-v0.1.2.1-review.zip",
+        "expected": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+        "got": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+        "matches": true
+      },
+      {
+        "label": "sdr_v0.1.1.1",
+        "filename": "stage-03-scientific-data-readiness-v0.1.1.1-review.zip",
+        "expected": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+        "got": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+        "matches": true
+      },
+      {
+        "label": "roadmap_v0.1.1",
+        "filename": "stage-03-public-roadmap-series-v0.1.1-review.zip",
+        "expected": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+        "got": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+        "matches": true
+      }
+    ],
+    "prior_all_match": true
+  },
+  "accepted_zip": "stage-03-source-a-scientific-baseline-v0.2-shadow-transfer-v0.1-review.zip",
+  "accepted_sha256": "0c1bc7006f684e79bf80a1e02e03158629d8881e8f7f64226a83539f2f25611b",
+  "expected_frozen_file_sha": "3f47ad41aa8970c8b2efb2887fc235d55f54acd3136dd874993a00471140efa3",
+  "expected_frozen_identity_sha": "7d79c4a07127e7c1abb9d40114263c8b51ccadef323ca7ffd1679b8a45505610"
+}

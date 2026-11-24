@@ -1,0 +1,93 @@
+{
+  "ENGINE_SHADOW_INTEGRATION_STATUS": "TECHNICAL_SHADOW_ONLY",
+  "CLINICAL_USE": "CLINICAL_USE_PROHIBITED",
+  "CAUSAL_INTERPRETATION": "CAUSAL_INTERPRETATION_PROHIBITED",
+  "synthetic_intervention_model_kept_separate": true,
+  "frozen_model_file_sha256": "6c83f69a4ff3a46e8f621dc45e5baf001f39fa8c034873b6920c422a5b79e135",
+  "frozen_model_identity_sha256": "773dbc9174b170a69ea1e04ef161843886aa21873f994818ba33797165097210",
+  "m1_prediction": {
+    "y_pred": 24.83397117648981,
+    "lower": 17.75396161365978,
+    "upper": 31.913980739319843,
+    "branch": "m1"
+  },
+  "m2_prediction": {
+    "y_pred": 25.035863048788652,
+    "lower": 17.96391003941694,
+    "upper": 32.10781605816036,
+    "branch": "m2"
+  },
+  "trajectory_comparison": {
+    "m1_y_pred": 24.83397117648981,
+    "m2_y_pred": 25.035863048788652,
+    "abs_diff": 0.20189187229884098
+  },
+  "checkpoint": {
+    "checkpoint_id": "med_assoc_shadow_parent-w2",
+    "week": 2,
+    "phase": "POST_STEP_CHECKPOINT",
+    "state_hash": "2cd764fb1e1d51b4aa91a12c07afe7747ac050b294be7c0f623e254fc8c6627a"
+  },
+  "fork": {
+    "ok": false,
+    "fork_keys": [
+      "branch_id",
+      "checkpoint_phase",
+      "checkpoint_week",
+      "checkpoints",
+      "continuation_start_week",
+      "counterfactual",
+      "events",
+      "final_state",
+      "final_state_hash",
+      "fork_continuation_starts_after_checkpoint",
+      "fork_effect",
+      "fork_event",
+      "fork_event_time_explicit",
+      "fork_final_state_diff_explained_by_fork_event",
+      "fork_has_no_duplicate_transition",
+      "fork_isolation_verified",
+      "fork_start_state_hash",
+      "fork_start_state_hash_verified",
+      "from_checkpoint",
+      "history",
+      "history_weeks",
+      "label",
+      "ok",
+      "parent_events_unchanged_after_fork",
+      "parent_history_unchanged_after_fork",
+      "parent_isolation",
+      "parent_recomputed_hash_matches_stored_hash",
+      "parent_state_unchanged_after_fork",
+      "source_branch_final_hash",
+      "source_branch_unchanged_after_fork"
+    ]
+  },
+  "rollback_ok": true,
+  "parent_isolation": {
+    "parent_state_unchanged_after_fork": true,
+    "parent_history_unchanged_after_fork": true,
+    "parent_events_unchanged_after_fork": true,
+    "parent_recomputed_hash_matches_stored_hash": true,
+    "fork_isolation_verified": true,
+    "before": {
+      "final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955",
+      "history_hash": "efc9695d4d5e44cb8134120be5b2838d6857ea2fd2bb1b9c3e0eef6a190787af",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7
+    },
+    "after": {
+      "final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955",
+      "history_hash": "efc9695d4d5e44cb8134120be5b2838d6857ea2fd2bb1b9c3e0eef6a190787af",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7,
+      "stored_final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955"
+    }
+  },
+  "determinism": {
+    "hash_run1": "e6b8158c25fda02c4d8a167ca580038c975bcea728749a8f56213f5c3882a874",
+    "hash_run2": "e6b8158c25fda02c4d8a167ca580038c975bcea728749a8f56213f5c3882a874",
+    "identical": true
+  },
+  "no_patient_level_publication": true
+}

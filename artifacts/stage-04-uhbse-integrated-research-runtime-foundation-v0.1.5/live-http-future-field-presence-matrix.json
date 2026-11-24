@@ -1,0 +1,1948 @@
+{
+  "cases": [
+    {
+      "http_status": 200,
+      "kind": "missing",
+      "ok": true,
+      "reason": null,
+      "route": "/research/natural-history/forecast",
+      "status": "OK"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "None"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "False"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "''"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "'2020-01-02T00:00:00Z'"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "None"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "False"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "''"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "'2020-01-03T00:00:00Z'"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "None"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "False"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "''"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "[]"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "{}"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "[1.0]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "None"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "False"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "''"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "[]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "{}"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "90"
+    },
+    {
+      "kind": "missing_vs_null",
+      "missing_status": "OK",
+      "null_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "ok": true,
+      "route": "/research/natural-history/forecast"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_true",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/natural-history/forecast"
+    },
+    {
+      "TEMPORAL_TIMESTAMP_VERIFICATION_STATUS": "NOT_USED",
+      "kind": "has_future_values_false_not_proof",
+      "note": "false is allowed; declared-summary OK is not timestamp proof from the flag",
+      "ok": true,
+      "route": "/research/natural-history/forecast",
+      "status": "OK"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "0"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "'false'"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/natural-history/forecast",
+      "value_repr": "None"
+    },
+    {
+      "http_status": 200,
+      "kind": "missing",
+      "ok": true,
+      "reason": null,
+      "route": "/research/joint-outcome-distribution",
+      "status": "OK"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "None"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "False"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "''"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "'2020-01-02T00:00:00Z'"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "None"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "False"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "''"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "'2020-01-03T00:00:00Z'"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "None"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "False"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "''"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "[]"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "{}"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "[1.0]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "None"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "False"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "''"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "[]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "{}"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "90"
+    },
+    {
+      "kind": "missing_vs_null",
+      "missing_status": "OK",
+      "null_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "ok": true,
+      "route": "/research/joint-outcome-distribution"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_true",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-outcome-distribution"
+    },
+    {
+      "TEMPORAL_TIMESTAMP_VERIFICATION_STATUS": "NOT_USED",
+      "kind": "has_future_values_false_not_proof",
+      "note": "false is allowed; declared-summary OK is not timestamp proof from the flag",
+      "ok": true,
+      "route": "/research/joint-outcome-distribution",
+      "status": "OK"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "0"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "'false'"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/joint-outcome-distribution",
+      "value_repr": "None"
+    },
+    {
+      "http_status": 200,
+      "kind": "missing",
+      "ok": true,
+      "reason": null,
+      "route": "/research/joint-rollout",
+      "status": "OK"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "None"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "False"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "''"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "'2020-01-02T00:00:00Z'"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "None"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "False"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "''"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "'2020-01-03T00:00:00Z'"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "None"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "False"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "''"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "[]"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "{}"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "[1.0]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "None"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "False"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "''"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "[]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "{}"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout",
+      "value_repr": "90"
+    },
+    {
+      "kind": "missing_vs_null",
+      "missing_status": "OK",
+      "null_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "ok": true,
+      "route": "/research/joint-rollout"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_true",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/joint-rollout"
+    },
+    {
+      "TEMPORAL_TIMESTAMP_VERIFICATION_STATUS": "NOT_USED",
+      "kind": "has_future_values_false_not_proof",
+      "note": "false is allowed; declared-summary OK is not timestamp proof from the flag",
+      "ok": true,
+      "route": "/research/joint-rollout",
+      "status": "OK"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/joint-rollout",
+      "value_repr": "0"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/joint-rollout",
+      "value_repr": "'false'"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/joint-rollout",
+      "value_repr": "None"
+    },
+    {
+      "http_status": 200,
+      "kind": "missing",
+      "ok": true,
+      "reason": null,
+      "route": "/research/replay",
+      "status": "OK"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "None"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "False"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "''"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "'2020-01-02T00:00:00Z'"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "None"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "False"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "''"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "'2020-01-03T00:00:00Z'"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "None"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "False"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "''"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "[]"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "{}"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "[1.0]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "None"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "False"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "''"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "[]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "{}"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay",
+      "value_repr": "90"
+    },
+    {
+      "kind": "missing_vs_null",
+      "missing_status": "OK",
+      "null_reason": "FUTURE_INFORMATION_LEAKAGE",
+      "ok": true,
+      "route": "/research/replay"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_true",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/replay"
+    },
+    {
+      "TEMPORAL_TIMESTAMP_VERIFICATION_STATUS": "NOT_USED",
+      "kind": "has_future_values_false_not_proof",
+      "note": "false is allowed; declared-summary OK is not timestamp proof from the flag",
+      "ok": true,
+      "route": "/research/replay",
+      "status": "OK"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/replay",
+      "value_repr": "0"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/replay",
+      "value_repr": "'false'"
+    },
+    {
+      "http_status": 400,
+      "kind": "has_future_values_invalid",
+      "ok": true,
+      "reason": "SCHEMA_INVALID",
+      "route": "/research/replay",
+      "value_repr": "None"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "None"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "False"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "''"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "'2020-01-02T00:00:00Z'"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "None"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "False"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "''"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "'2020-01-03T00:00:00Z'"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "None"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "False"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "''"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "[]"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "{}"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "[1.0]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "None"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "False"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "''"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "[]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "{}"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability",
+      "value_repr": "90"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "None"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "False"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "''"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t1",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "'2020-01-02T00:00:00Z'"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "None"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "False"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "''"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "[]"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "{}"
+    },
+    {
+      "field": "t2",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "'2020-01-03T00:00:00Z'"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "None"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "False"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "''"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "[]"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "{}"
+    },
+    {
+      "field": "future_intervals",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "[1.0]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "None"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "0.0"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "False"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "''"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "[]"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "{}"
+    },
+    {
+      "field": "actual_recorded_label_offset_days",
+      "http_status": 400,
+      "kind": "lep_present",
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "route": "/research/event-probability/reference-probe",
+      "value_repr": "90"
+    }
+  ]
+}

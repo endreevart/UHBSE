@@ -1,0 +1,62 @@
+{
+  "version": "0.3.1",
+  "CROSS_SOURCE_IDENTITY_MERGE_STATUS": "NOT_RUN",
+  "CROSS_SOURCE_OVERLAP_RISK_STATUS": "UNRESOLVED_POTENTIAL_OVERLAP",
+  "GLOBAL_A_B_SPLIT_STATUS": "PASS_SOURCE_GROUPED_CROSS_SOURCE_OVERLAP_RISK_UNRESOLVED",
+  "overlap_aware": false,
+  "overlap_aware_unconditional_forbidden": true,
+  "subject_grouped": true,
+  "source_grouped": true,
+  "namespace": "unified-a-b-research-layer-v031",
+  "seed": 42,
+  "method": "sha256_namespace_hash_fraction_fixed_buckets_source_scoped",
+  "buckets": {
+    "train": [
+      0.0,
+      0.7
+    ],
+    "validation": [
+      0.7,
+      0.85
+    ],
+    "test": [
+      0.85,
+      1.0
+    ]
+  },
+  "repeatable": true,
+  "source_system_in_hash_namespace": true,
+  "roles_may_collide_across_sources_without_implying_same_person": true,
+  "group_role_helper_deterministic": true,
+  "source_balance": {
+    "magerya_api": {
+      "train": 30639,
+      "validation": 6600,
+      "test": 6617
+    },
+    "kgz_raw": {
+      "train": 34682,
+      "validation": 7394,
+      "test": 7488
+    }
+  },
+  "n_subjects_assigned": 93420,
+  "overlap_groups_summary": {
+    "confirmed": 22,
+    "candidate": 2274,
+    "ambiguous": 133,
+    "conflicting": 21,
+    "unlinked": "REMAINDER_UNKNOWN",
+    "pair_lists_in_public": false,
+    "pair_lists_materialized_private": false,
+    "reason": "Stage-02 linkage artifacts are aggregate-only; full private pair rebuild is deferred. Split remains source-grouped with explicit unresolved overlap risk."
+  },
+  "policy": {
+    "confirmed_or_candidate_pairs_must_share_split_or_exclude_heldout": true,
+    "ambiguous_excluded_from_cross_source_heldout": true,
+    "conflicting_remain_separate_with_flag": true,
+    "unlinked_risk_retained": true
+  },
+  "model_training_run": false,
+  "ok": true
+}

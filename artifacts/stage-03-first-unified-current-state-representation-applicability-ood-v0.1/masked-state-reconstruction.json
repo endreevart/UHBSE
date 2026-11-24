@@ -1,0 +1,52 @@
+{
+  "validation": {
+    "role": "validation",
+    "metric_space": "train_normalized_last_value",
+    "no_pooled_raw_mae_across_units": true,
+    "per_source": {
+      "B": {
+        "subject_macro_mae": 0.5873712450119772,
+        "baseline_train_mean_mae": 0.4291285781111115,
+        "n_subjects": 262,
+        "n_states_approx": 2953,
+        "n_masked_entries": 3004,
+        "mask_density_hidden_frac": 0.3
+      },
+      "A": {
+        "subject_macro_mae": 0.6497988456327971,
+        "baseline_train_mean_mae": 0.564104881993306,
+        "n_subjects": 370,
+        "n_states_approx": 5196,
+        "n_masked_entries": 5596,
+        "mask_density_hidden_frac": 0.3
+      }
+    },
+    "n_hidden_total": 8600,
+    "ok": true
+  },
+  "test": {
+    "role": "test",
+    "metric_space": "train_normalized_last_value",
+    "no_pooled_raw_mae_across_units": true,
+    "per_source": {
+      "B": {
+        "subject_macro_mae": 0.6193751502807694,
+        "baseline_train_mean_mae": 0.4498137098387001,
+        "n_subjects": 213,
+        "n_states_approx": 2533,
+        "n_masked_entries": 2613,
+        "mask_density_hidden_frac": 0.3
+      },
+      "A": {
+        "subject_macro_mae": 0.677506857865883,
+        "baseline_train_mean_mae": 0.5828223427056237,
+        "n_subjects": 423,
+        "n_states_approx": 5561,
+        "n_masked_entries": 5887,
+        "mask_density_hidden_frac": 0.3
+      }
+    },
+    "n_hidden_total": 8500,
+    "ok": true
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "buckets": {
+    "lt_1d": {
+      "n_pairs": 7,
+      "n_subjects": 7,
+      "ridge_subject_macro_mae": 0.5115651506460797,
+      "persistence_subject_macro_mae": 0.6357142857142858,
+      "ridge_pair_micro_mae": 0.5115651506460797,
+      "persistence_pair_micro_mae": 0.6357142857142858,
+      "delta_macro_mae": -0.12414913506820613
+    },
+    "1_7d": {
+      "n_pairs": 22,
+      "n_subjects": 21,
+      "ridge_subject_macro_mae": 0.9558854217662852,
+      "persistence_subject_macro_mae": 1.0347619047619048,
+      "ridge_pair_micro_mae": 1.0021151937415302,
+      "persistence_pair_micro_mae": 1.0754545454545454,
+      "delta_macro_mae": -0.07887648299561956
+    },
+    "7_30d": {
+      "n_pairs": 71,
+      "n_subjects": 61,
+      "ridge_subject_macro_mae": 0.8512379128651859,
+      "persistence_subject_macro_mae": 1.303311475409836,
+      "ridge_pair_micro_mae": 0.8552548292333201,
+      "persistence_pair_micro_mae": 1.303943661971831,
+      "delta_macro_mae": -0.45207356254465014
+    },
+    "30_90d": {
+      "n_pairs": 226,
+      "n_subjects": 143,
+      "ridge_subject_macro_mae": 0.7091520637022981,
+      "persistence_subject_macro_mae": 0.8765862470862471,
+      "ridge_pair_micro_mae": 0.6865892363981018,
+      "persistence_pair_micro_mae": 0.8399557522123894,
+      "delta_macro_mae": -0.167434183383949
+    },
+    "90_365d": {
+      "n_pairs": 474,
+      "n_subjects": 293,
+      "ridge_subject_macro_mae": 0.6747355721823575,
+      "persistence_subject_macro_mae": 0.7668810336421257,
+      "ridge_pair_micro_mae": 0.6911068440915329,
+      "persistence_pair_micro_mae": 0.749440928270042,
+      "delta_macro_mae": -0.09214546145976821
+    },
+    "365_730d": {
+      "n_pairs": 101,
+      "n_subjects": 92,
+      "ridge_subject_macro_mae": 0.8837395612359187,
+      "persistence_subject_macro_mae": 1.0434782608695652,
+      "ridge_pair_micro_mae": 0.867003253846224,
+      "persistence_pair_micro_mae": 1.0184158415841584,
+      "delta_macro_mae": -0.1597386996336465
+    },
+    "gt_730d": {
+      "n_pairs": 35,
+      "n_subjects": 35,
+      "ridge_subject_macro_mae": 0.6899780363180302,
+      "persistence_subject_macro_mae": 0.7360000000000001,
+      "ridge_pair_micro_mae": 0.6899780363180302,
+      "persistence_pair_micro_mae": 0.7360000000000001,
+      "delta_macro_mae": -0.04602196368196987
+    }
+  },
+  "secondary": {
+    "exclude_lt_1d": {
+      "n_pairs": 929,
+      "n_subjects": 440,
+      "ridge_subject_macro_mae": 0.6615595292047048,
+      "persistence_subject_macro_mae": 0.7713675939590712,
+      "delta_macro_mae": -0.10980806475436633,
+      "ridge_better_macro": true,
+      "ridge_better_micro": true
+    },
+    "exclude_lt_7d": {
+      "n_pairs": 907,
+      "n_subjects": 437,
+      "ridge_subject_macro_mae": 0.6609536580167029,
+      "persistence_subject_macro_mae": 0.784248387577335,
+      "delta_macro_mae": -0.12329472956063203,
+      "ridge_better_macro": true,
+      "ridge_better_micro": true
+    },
+    "exclude_gt_730d": {
+      "n_pairs": 901,
+      "n_subjects": 424,
+      "ridge_subject_macro_mae": 0.6557882413471776,
+      "persistence_subject_macro_mae": 0.7718843012333578,
+      "delta_macro_mae": -0.11609605988618021,
+      "ridge_better_macro": true,
+      "ridge_better_micro": true
+    },
+    "only_7_365d": {
+      "n_pairs": 772,
+      "n_subjects": 369,
+      "ridge_subject_macro_mae": 0.66458848321561,
+      "persistence_subject_macro_mae": 0.7931030091558547,
+      "delta_macro_mae": -0.1285145259402447,
+      "ridge_better_macro": true,
+      "ridge_better_micro": true
+    }
+  }
+}

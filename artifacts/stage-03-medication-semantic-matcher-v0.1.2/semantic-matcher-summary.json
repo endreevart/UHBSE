@@ -1,0 +1,85 @@
+{
+  "version": "0.1.2",
+  "generated_at": "2026-08-19T15:36:28Z",
+  "SEMANTIC_MATCHER_STATUS": "BUILT",
+  "AUTOMATIC_EXACT_MATCH_AUDIT": "AUTOMATIC_EXACT_MATCH_REVIEW_REQUIRED",
+  "AUTHORITATIVE_ACCEPTED_CONCEPT_COUNT": 1,
+  "HUMAN_ACCEPTED_COUNT": 0,
+  "FIRST_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY",
+  "OVERALL_STATUS": "SEMANTIC_CANDIDATES_READY_FOR_HUMAN_REVIEW",
+  "SUPPLEMENT_REFERENCE_REQUIRED_COUNT": 23,
+  "mapping_counts_before_v011": {
+    "NO_MATCH": 105,
+    "AMBIGUOUS": 381,
+    "EXACT_PROVIDER_MATCH": 1
+  },
+  "mapping_counts_after_v012_semantic": {
+    "AMBIGUOUS": 84,
+    "INSUFFICIENT_SOURCE_DATA": 360,
+    "SUPPLEMENT_REFERENCE_REQUIRED": 23,
+    "PROVIDER_GAP": 19,
+    "SUPPORTED_TRANSFORM": 1
+  },
+  "provider_routing_counts": {
+    "ESKLP": 85,
+    "insufficient_ingredient_evidence": 360,
+    "SUPPLEMENT_REFERENCE_REQUIRED": 23,
+    "PROVIDER_GAP": 19
+  },
+  "candidate_class_counts": {
+    "REGISTERED_DRUG_CANDIDATE": 255,
+    "INSUFFICIENT_SEMANTIC_DATA": 71,
+    "TOPICAL_PRODUCT_CANDIDATE": 40,
+    "DIETARY_SUPPLEMENT_CANDIDATE": 102,
+    "COMBINATION_PRODUCT_CANDIDATE": 19
+  },
+  "n_with_compatible_candidates": 85,
+  "hard_conflict_or_gap_count": 402,
+  "authoritative_product_ready": false,
+  "authoritative_ingredient_form_ready": false,
+  "provisional_any_READY": false,
+  "minimum_human_decisions": {
+    "n_review_decisions": 5,
+    "group_key": "21.20.10.149-000028-1-00079-2000001410348",
+    "source_medicine_ids": [
+      "506",
+      "507",
+      "55",
+      "663",
+      "809"
+    ],
+    "n_would_pass_gates_if_accepted": 5,
+    "why": "Greedy product-level provisional set; human ACCEPT required; not READY until accepted"
+  },
+  "private_review_pack": "private/medication-reference-v012/review-pack",
+  "private_packet_files": [
+    "private/medication-reference-v012/review-pack/priority-review.html",
+    "private/medication-reference-v012/review-pack/priority-review.csv",
+    "private/medication-reference-v012/review-pack/semantic-conflicts.json",
+    "private/medication-reference-v012/review-pack/provider-gap-report.json",
+    "private/medication-reference-v012/review-pack/hierarchical-readiness-impact.json",
+    "private/medication-reference-v012/review-pack/reviewer-instructions.md"
+  ],
+  "hierarchy_path": "private/medication-reference-v012/hierarchy/hierarchical-concepts.private.jsonl",
+  "decision_log_unchanged": true,
+  "no_model_training": true,
+  "no_zip_published": true,
+  "no_automatic_human_accepted": true,
+  "hierarchy_version": "0.1",
+  "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "gates": {
+    "min_subjects": 100,
+    "min_episodes": 300,
+    "min_test_subjects": 30
+  },
+  "intervention_response_model_status": "NOT_STARTED",
+  "treatment_effect_status": "NOT_EVALUATED",
+  "causal_effect_status": "NOT_EVALUATED",
+  "qsp_status": "NOT_STARTED",
+  "pkpd_status": "NOT_STARTED",
+  "clinical_validation_status": "NOT_STARTED",
+  "production_readiness": "NOT_CLAIMED",
+  "association_baseline_status": "NOT_RUN",
+  "appointment_date_semantics": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+  "recorded_medication_association_neq_administration": true
+}

@@ -1,0 +1,25 @@
+{
+  "ledger": "source_row_disposition",
+  "candidate_count": 2183297,
+  "disposition": {
+    "accepted": 2132978,
+    "rejected": 50319,
+    "unsupported": 0,
+    "quarantined": 0
+  },
+  "total": 2183297,
+  "sum": 2183297,
+  "sum_equals_total": true,
+  "unexplained_count": 0,
+  "invariant_ok": true,
+  "status": "PASS",
+  "acceptance_definition": "accepted = live Source B ObservationComponent count (one component per accepted analyses_constructor row)",
+  "historical_load_new_components": 2131166,
+  "historical_newly_loaded_mixed_counter": 2190829,
+  "historical_newly_loaded_defect": {
+    "newly_loaded": 2190829,
+    "candidates": 2183297,
+    "newly_loaded_exceeds_candidates": true,
+    "defect": true
+  }
+}

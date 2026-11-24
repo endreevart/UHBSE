@@ -1,0 +1,65 @@
+{
+  "version": "0.1.2.1",
+  "model_id": "first_learned_baseline",
+  "model_family": "ridge_regression_with_train_only_standardization",
+  "claim_level": "RETROSPECTIVE_BASELINE_ONLY",
+  "clinical_validation": "NOT_CLAIMED",
+  "seed": 42,
+  "l2": 0.1,
+  "coef": [
+    0.4005830324281196,
+    0.04177885609142556,
+    0.08859837325680045,
+    0.4054416405041974,
+    0.05598735742193171,
+    0.06847377677768236,
+    -0.14098669439820558,
+    0.14098669439792857,
+    0.14098669439792852
+  ],
+  "intercept": 4.541861640798226,
+  "residual_std": 1.8174240012386376,
+  "interval_multiplier": 1.6448536269514715,
+  "scaler_means": [
+    4.655973170731707,
+    182.48019652575374,
+    1.5787139689578713,
+    2.6089211285745444,
+    -0.08025764966740576,
+    161.82946076946138,
+    0.5432372505543237,
+    0.4567627494456763,
+    0.4567627494456763
+  ],
+  "scaler_stds": [
+    1.7863939544449678,
+    204.7099616765777,
+    2.586402982142471,
+    2.8329086559068855,
+    1.7221274838540477,
+    251.57530181896178,
+    0.4981270321559578,
+    0.4981270321559578,
+    0.4981270321559578
+  ],
+  "scaler_fit_n_rows": 4510,
+  "feature_order": [
+    "y_t0",
+    "horizon_days",
+    "n_prior_measurements",
+    "prior_mean",
+    "prior_last_delta",
+    "days_since_first",
+    "has_prior_history",
+    "prior_mean_missing_flag",
+    "prior_last_delta_missing_flag"
+  ],
+  "feature_schema_hash": "14303f8d4197b9bf8205bcb912bbb294c75f4ff2f7e22d2ae42290f97c4e29ff",
+  "training_configuration_hash": "1c9b2e3d92487fea50a199d0be6e033c879a685e92d70b51ecb0d0359332572c",
+  "outcome": {
+    "candidate_id": "2685c68a3e247ca4",
+    "label": "\u04223 \u0441\u0432.",
+    "unit": "\u043f\u043c\u043e\u043b\u044c/\u043b"
+  },
+  "frozen_at_version": "0.1.2.1"
+}

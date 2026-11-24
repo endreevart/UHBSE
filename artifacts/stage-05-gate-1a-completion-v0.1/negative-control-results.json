@@ -1,0 +1,70 @@
+{
+  "NEGATIVE_CONTROL_STATUS": "PASS",
+  "baseline_accepted": true,
+  "cases": [
+    {
+      "control": "workflow_decision_text_changed",
+      "reason": "PRIOR_DECISION_STAYS",
+      "rejected": true
+    },
+    {
+      "control": "workflow_scope_closed_as_row_proof",
+      "reason": "SCOPE_IS_NOT_ROW_PROOF",
+      "rejected": true
+    },
+    {
+      "control": "period_without_visit_classification",
+      "reason": "PERIOD_NEEDS_VISIT_CLASS",
+      "rejected": true
+    },
+    {
+      "control": "timing_applied_to_uncomparable_rows",
+      "reason": "UNCOMPARABLE_ROWS_EXCLUDED",
+      "rejected": true
+    },
+    {
+      "control": "period_applied_without_visit_class",
+      "reason": "VISIT_CLASS_REQUIRED",
+      "rejected": true
+    },
+    {
+      "control": "gate_1b_opened_with_open_blockers",
+      "reason": "GATE_1B_STAYS_BLOCKED",
+      "rejected": true
+    },
+    {
+      "control": "readiness_claimed",
+      "reason": "READINESS_STAYS_NOT_READY",
+      "rejected": true
+    },
+    {
+      "control": "eligible_cell_counted",
+      "reason": "ELIGIBLE_CELLS_STAY_ZERO",
+      "rejected": true
+    },
+    {
+      "control": "period_rows_assigned_without_classification",
+      "reason": "NO_ROW_ASSIGNMENT",
+      "rejected": true
+    },
+    {
+      "control": "blocker_accepted_without_new_evidence",
+      "reason": "NO_INVENTED_ACCEPTANCE",
+      "rejected": true
+    },
+    {
+      "control": "code_search_creates_a_decision",
+      "reason": "CODE_MISS_CREATES_NOTHING",
+      "rejected": true
+    },
+    {
+      "control": "missing_code_root_creates_nothing",
+      "reason": "NO_CODE_NO_DECISION",
+      "rejected": true
+    }
+  ],
+  "n_cases": 12,
+  "n_rejected": 12,
+  "ok": true,
+  "privacy_rejects_numeric_identifier": true
+}

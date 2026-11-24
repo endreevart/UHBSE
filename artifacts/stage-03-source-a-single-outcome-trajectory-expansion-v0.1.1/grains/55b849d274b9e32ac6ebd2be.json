@@ -1,0 +1,112 @@
+{
+  "grain_id": "55b849d274b9e32ac6ebd2be",
+  "outcome": "Антитела к вирусу простого герпеса I, II типов, IgG",
+  "unit": "_",
+  "status": "BELOW_AUTHORITATIVE_THRESHOLD",
+  "authoritative_threshold_result": {
+    "eligible": false,
+    "fails": [
+      "strict_consecutive_pairs"
+    ],
+    "criteria_applied_to": "authoritative_rebuilt_dataset"
+  },
+  "dataset_summary": {
+    "grain_id": "55b849d274b9e32ac6ebd2be",
+    "outcome": "Антитела к вирусу простого герпеса I, II типов, IgG",
+    "unit": "_",
+    "n_observations": 1984,
+    "n_subjects": 1634,
+    "n_subjects_with_repeats": 250,
+    "n_pairs": 297,
+    "pair_meta": {
+      "schema": {
+        "version": "0.1.1.1",
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "row_fields_hash": null
+      },
+      "summary": {
+        "n_subjects_in_series": 1634,
+        "n_observations_after_filter": 1984,
+        "n_pairs": 297,
+        "n_subjects_with_pairs": 215,
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "horizon_days": {
+          "n": 297,
+          "min": 1.0,
+          "median": 106.0,
+          "max": 1378.0,
+          "mean": 181.25252525252526
+        },
+        "exclusions_by_reason": {
+          "missing_timestamp": 0,
+          "zero_horizon": 3,
+          "negative_horizon": 0,
+          "incompatible_unit": 0,
+          "duplicate_same_timestamp_collapsed": 50,
+          "all_forward_combinations_forbidden": 0
+        },
+        "units": [
+          "_"
+        ],
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "dataset_schema_hash": "9a5fde5e8b26931fdc000d1d1ad15a42f4e58c0bd591f772c3802485357278d7",
+        "dataset_build_configuration_hash": "c40f185ae688d875398e4706855c9f508b466785a67e17f1f1e7685e70ddd647",
+        "missingness": {
+          "prior_mean_null_pairs": 214,
+          "prior_last_delta_null_pairs": 214
+        },
+        "date_coverage_hash": "98f8dbaad01206254ad68d4e8e1fdc9e194fce2fbc974fe7fa0f0c502ca6b06c"
+      },
+      "config": {
+        "version": "0.1.1",
+        "source_system": "magerya_api"
+      }
+    },
+    "funnel_steps": [
+      {
+        "level": "numeric_observations",
+        "accepted": 1984,
+        "note": "Source A numeric typed values with timestamps"
+      },
+      {
+        "level": "subjects",
+        "accepted": 1634
+      },
+      {
+        "level": "subjects_with_repeats",
+        "accepted": 250
+      },
+      {
+        "level": "strict_consecutive_pairs",
+        "accepted": 297,
+        "exclusions": null
+      }
+    ],
+    "unexplained": 0,
+    "source_system": "magerya_api",
+    "medication_features_present": false
+  },
+  "n_pairs": 297,
+  "medication_features_present": false
+}

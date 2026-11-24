@@ -1,0 +1,118 @@
+{
+  "version": "0.1",
+  "V01_EVIDENCE_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "V01_OOD_CODE_ARTIFACT_REPRODUCIBILITY_STATUS": "FAIL_CODE_ARTIFACT_MISMATCH",
+  "defects": [
+    {
+      "id": "tensor_308_outcomes_167a_141b",
+      "reproduced": true,
+      "observed": {
+        "selected": 308,
+        "a": 167,
+        "b": 141
+      }
+    },
+    {
+      "id": "tensor_rows_73806",
+      "reproduced": true,
+      "observed": 73806
+    },
+    {
+      "id": "vocabulary_train_thresholds_plus_heldout_support",
+      "reproduced": true,
+      "observed": "train_thresholds_plus_heldout_support"
+    },
+    {
+      "id": "encoder_trained_on_1500_states",
+      "reproduced": true,
+      "observed": 1500
+    },
+    {
+      "id": "no_corruption_during_training",
+      "reproduced": true,
+      "note": "reconstruction target visible on encoder input during fit"
+    },
+    {
+      "id": "training_loss_does_not_improve",
+      "reproduced": true,
+      "observed": {
+        "first": 1.3425824478498543,
+        "last": 1.4786201233031206
+      }
+    },
+    {
+      "id": "masked_recon_worse_than_train_mean",
+      "reproduced": true,
+      "observed": {
+        "validation": {
+          "A": {
+            "encoder": 0.6497988456327971,
+            "baseline": 0.564104881993306
+          },
+          "B": {
+            "encoder": 0.5873712450119772,
+            "baseline": 0.4291285781111115
+          }
+        },
+        "test": {
+          "A": {
+            "encoder": 0.677506857865883,
+            "baseline": 0.5828223427056237
+          },
+          "B": {
+            "encoder": 0.6193751502807694,
+            "baseline": 0.4498137098387001
+          }
+        }
+      }
+    },
+    {
+      "id": "trajectory_0_of_24_val_1_of_24_test",
+      "reproduced": true,
+      "observed": {
+        "val_better": 0,
+        "test_better": 1,
+        "n_comparable_test": 24
+      }
+    },
+    {
+      "id": "normalized_skill_uses_heldout_scale_not_train_only",
+      "reproduced": true
+    },
+    {
+      "id": "ood_reference_first_300_train_plus_100_val_no_stratification",
+      "reproduced": true
+    },
+    {
+      "id": "ood_code_artifact_test_n_scored_mismatch",
+      "reproduced": true,
+      "published_test_n_scored": 800,
+      "current_code_has_test_400": true,
+      "current_code_has_test_800": false,
+      "V01_OOD_CODE_ARTIFACT_REPRODUCIBILITY_STATUS": "FAIL_CODE_ARTIFACT_MISMATCH",
+      "note": "Published artifact reports test_n_scored=800; post-publish code uses test[:400]"
+    },
+    {
+      "id": "signatures_400_train_no_stability",
+      "reproduced": true,
+      "observed_n_candidates": 5
+    },
+    {
+      "id": "prior_m2_loader_reads_outcome_keys_at_wrong_level",
+      "reproduced": true,
+      "frozen_m2_structure": {
+        "top_keys": [
+          "meta",
+          "model",
+          "model_identity_sha256",
+          "version"
+        ],
+        "nested_model": true
+      },
+      "note": "Silent skip of prior M2 technical benchmark when outcome_keys nested under model"
+    }
+  ],
+  "n_reproduced": 13,
+  "n_defects": 13,
+  "ok": true
+}

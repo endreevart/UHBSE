@@ -1,0 +1,2433 @@
+{
+  "combined_counts": {
+    "database_dumps": 0,
+    "database_dumps_not_read": 0,
+    "html_templates": 100,
+    "javascript_typescript": 0,
+    "json_yaml_schemas": 3,
+    "large_files_not_read": 0,
+    "mobile": 0,
+    "openapi": 2,
+    "other": 26,
+    "python": 2220,
+    "react_vue": 0,
+    "sql_migrations": 618,
+    "technical_documentation": 12
+  },
+  "coverage_gaps": [
+    {
+      "area": "source_b_application_repository",
+      "consequence": "zero identifier hits in other repositories are not a Source B form conclusion",
+      "searched": false,
+      "status": "NOT_AVAILABLE"
+    },
+    {
+      "area": "javascript_typescript",
+      "files_in_searched_roots": 0,
+      "status": "NO_FILES_IN_SEARCHED_ROOTS"
+    },
+    {
+      "area": "react_vue",
+      "files_in_searched_roots": 0,
+      "status": "NO_FILES_IN_SEARCHED_ROOTS"
+    },
+    {
+      "area": "mobile",
+      "files_in_searched_roots": 0,
+      "status": "NO_FILES_IN_SEARCHED_ROOTS"
+    },
+    {
+      "area": "database_dumps",
+      "reason": "MAY_CONTAIN_ROW_DATA",
+      "status": "NOT_READ"
+    }
+  ],
+  "hit_count": 198,
+  "hits": [
+    {
+      "coverage_class": "python",
+      "file_sha256": "ab42e4c0e79cefa9c446d954b75b44e1b51288c680fe02b58ab5b1949ddeedea",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 21,
+      "line_sha256": "063dfa2a52641caed6a77c5e0c9a0b23de7a2d8539962d50515ffefe615d0699",
+      "path": "src/human_simulator/population_v011/accounting.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e02f8191d019632d9bb55dc0309b41c57f36b378826155fbd505996ec2fe63fd",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 24,
+      "line_sha256": "063dfa2a52641caed6a77c5e0c9a0b23de7a2d8539962d50515ffefe615d0699",
+      "path": "src/human_simulator/population_v011/hierarchy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e76eb8b43a57eaafb6fbfee44561d16726b0840514a6ad0e4e3b2454e6b17e9a",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 26,
+      "line_sha256": "c0be5311cc23c6635bf1bf0a3132371df3b2a58ae42667dd99cd51aa846c7bdc",
+      "path": "src/human_simulator/population_v011/medication.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5a93d7befcdd28566eef1905f32a0e8284fcda6f321272f731b7a476681b2626",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 90,
+      "line_sha256": "c0be5311cc23c6635bf1bf0a3132371df3b2a58ae42667dd99cd51aa846c7bdc",
+      "path": "src/human_simulator/population_v011/lifecycle.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "577bd01d68ddb6a8444bc240f9953f1f8996d013f277abf7c260c8f174d7b577",
+      "identifier": "recommendations[].items",
+      "identifier_group": "exact",
+      "line": 89,
+      "line_sha256": "79f26bd008809e61ef8a3eafe11687b550ed66b5dc0c838baa3d209eae60a7b9",
+      "path": "src/human_simulator/exposure_source_discovery_v022/mutations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 84,
+      "line_sha256": "e880b278d12332a23a452d1ad09eb2d0c8ffe8a60647228f23fb900cd9e6896d",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 138,
+      "line_sha256": "2c0cdedf4c846b8f899d69beb1448c32c0b426ae268ae4e2f208ec8faec5b52c",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 138,
+      "line_sha256": "2c0cdedf4c846b8f899d69beb1448c32c0b426ae268ae4e2f208ec8faec5b52c",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "drugs_first",
+      "identifier_group": "exact",
+      "line": 129,
+      "line_sha256": "e84b78308bc72826803578cbd885e7a250af86c032f4855d4e773db0b1599d0d",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 147,
+      "line_sha256": "f8b87b865ab657c56abc1b6d6d1b18d146899aff77e82f5f1319e93340c38ed4",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 120,
+      "line_sha256": "e4106fd094998e54aad58002c3bf768936475a503579e3be44e9bb0fd06f3dc0",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "feedback.user_id",
+      "identifier_group": "exact",
+      "line": 111,
+      "line_sha256": "c331605908943bd24ffb79f1d31a2f10686f5b18a19a4c28bccb699316b6bc04",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 48,
+      "line_sha256": "c9b68c19631761367bf352ea9322c131565a38d7d0b64a4d42e1359829ffb950",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 75,
+      "line_sha256": "4d65ff9354f055a1e3657f583bcb4e826e953321fd5747cb0d7226fe3806c161",
+      "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "af0a48ff1be65908926a7a3dab2542b06f91b4348b2551023e4e386715147c3a",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 33,
+      "line_sha256": "2167164d9ac8e26fc4fdf97902d3cb18f3fdc4ee7b08f5682f0d1197b3b5d789",
+      "path": "src/human_simulator/exposure_source_discovery_v022/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "af0a48ff1be65908926a7a3dab2542b06f91b4348b2551023e4e386715147c3a",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 37,
+      "line_sha256": "64413484241fd055e51756de412986e72c4690bc58a6b41a686668a4d915609e",
+      "path": "src/human_simulator/exposure_source_discovery_v022/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "52e5fdb9c9bc0d052f10ade1b914a8cda3fec3098fab89ff9fbd621f48c75f73",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 49,
+      "line_sha256": "99372f0e5e5ec1f8c24fa5b3b319cbb67579cdc39ee604be3546200dddd64443",
+      "path": "src/human_simulator/exposure_source_discovery_v022/contract.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "52e5fdb9c9bc0d052f10ade1b914a8cda3fec3098fab89ff9fbd621f48c75f73",
+      "identifier": "recommendations[].items",
+      "identifier_group": "exact",
+      "line": 58,
+      "line_sha256": "1dd31881359935b0f03f348557ccae4764b61a026b50b26993a755cf7d0f4b60",
+      "path": "src/human_simulator/exposure_source_discovery_v022/contract.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "52e5fdb9c9bc0d052f10ade1b914a8cda3fec3098fab89ff9fbd621f48c75f73",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 83,
+      "line_sha256": "4d65ff9354f055a1e3657f583bcb4e826e953321fd5747cb0d7226fe3806c161",
+      "path": "src/human_simulator/exposure_source_discovery_v022/contract.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "81169324ca98f0a396595a0c11979b29c209b673349b1ff9570a47c0a6bf9907",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 20,
+      "line_sha256": "022fbc6996f3d5adbf80848a44f66626fd1593f67ccaafaec8d16eaecb003a44",
+      "path": "src/human_simulator/exposure_source_discovery_v022/evidence.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "81169324ca98f0a396595a0c11979b29c209b673349b1ff9570a47c0a6bf9907",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 43,
+      "line_sha256": "d4a7e680b11b3d8a58ac025d51878843298f5eb2e64a1e84a43be312f1db3cf8",
+      "path": "src/human_simulator/exposure_source_discovery_v022/evidence.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "58bb23cf19f0e4e732b7589915689d022dd605251d94a935a7372c837f21a403",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 84,
+      "line_sha256": "a68b60b56cbbfb6eb89cbb1eb09d2173ba9bc41cfda63ec918b53bf83d25651b",
+      "path": "src/human_simulator/exposure_source_discovery_v022/report.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "58bb23cf19f0e4e732b7589915689d022dd605251d94a935a7372c837f21a403",
+      "identifier": "drugs_first",
+      "identifier_group": "exact",
+      "line": 89,
+      "line_sha256": "61ecef5579b817c5bf1e2e9790d574ddac038c884633e4f2993742cc5b29aa2d",
+      "path": "src/human_simulator/exposure_source_discovery_v022/report.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "58bb23cf19f0e4e732b7589915689d022dd605251d94a935a7372c837f21a403",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 89,
+      "line_sha256": "61ecef5579b817c5bf1e2e9790d574ddac038c884633e4f2993742cc5b29aa2d",
+      "path": "src/human_simulator/exposure_source_discovery_v022/report.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "58bb23cf19f0e4e732b7589915689d022dd605251d94a935a7372c837f21a403",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 91,
+      "line_sha256": "a2377f608562b7a74b5c28cdb6d6f2ce86131ccd33e4d959fccc76f9efcd6460",
+      "path": "src/human_simulator/exposure_source_discovery_v022/report.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5e1852151ba0d88d7307dcc3dff08fde706bf036162ed41499e8dae400bf130a",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 68,
+      "line_sha256": "c0be5311cc23c6635bf1bf0a3132371df3b2a58ae42667dd99cd51aa846c7bdc",
+      "path": "src/human_simulator/core/source_a.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "a2d5996acb02c583c2ae35987c53cf0ddfb436e7ba3a3c4ef9b93e2c56fa535f",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 70,
+      "line_sha256": "024bb16c461a6efce3f664b0c242ceddd5cc3231444c337257c988a7b0e19938",
+      "path": "src/human_simulator/classify/table_roles.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "52f4f4ecfea70c28ce6f5d431bfb6df9d849a0a364fa4d621e1af4481856bdae",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 108,
+      "line_sha256": "1c87ba1d08d45e2e3753a3b411822d9a13a36200c224803d59914a00d1914d22",
+      "path": "src/human_simulator/classify/entities.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c7d78a2f8deaa63272fb207220018be0c4d4e5916c17a52d7bd975d63eef4f72",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 27,
+      "line_sha256": "536b1973cb1ba53abde18ac363241407343c0745fcefe38dcecffd181a7c07bf",
+      "path": "src/human_simulator/medication_knowledge_v01/exposure.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "1aec88c3d28eda5430d97fbe974bb0239784136e0bf5c01db2db5ded0c41fddb",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 89,
+      "line_sha256": "196130b8d81340baaf2781341b5dbf9a093e5b98107048d9f6f85a7029ae811a",
+      "path": "src/human_simulator/medication_knowledge_v01/inventory.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "70cb3c58bba89a1037a629f32917232096aa0612231ff5370d43ff95a2bdd178",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 200,
+      "line_sha256": "74808de1a1f0534722b39b17a026a9e71ec395039ece04964185dd3481a84587",
+      "path": "src/human_simulator/unified_research_layer_v031/classification.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "70cb3c58bba89a1037a629f32917232096aa0612231ff5370d43ff95a2bdd178",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 208,
+      "line_sha256": "685eabb8bda7a4917af165c9d98fd07cdf1d6e78a3657c75b7bbccd9df9e538f",
+      "path": "src/human_simulator/unified_research_layer_v031/classification.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "70cb3c58bba89a1037a629f32917232096aa0612231ff5370d43ff95a2bdd178",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 115,
+      "line_sha256": "61ad6e73a6a2dc1d7cb0cdf50688435007b4e4bb36fc72314f708d6039c375a1",
+      "path": "src/human_simulator/unified_research_layer_v031/classification.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "70cb3c58bba89a1037a629f32917232096aa0612231ff5370d43ff95a2bdd178",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 89,
+      "line_sha256": "d34c24efcf790bca0792734f21c3cbe9580acf593937c7f9eaaebee2b8f48442",
+      "path": "src/human_simulator/unified_research_layer_v031/classification.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "fc486fcf45117b808d5452ad60a6b7aff118741ad7792c0abba6a6712f543b65",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 549,
+      "line_sha256": "e53c51a8a4338fb915e4dd62e3a8dafa74f2a40898631530e3627b0f98b873aa",
+      "path": "src/human_simulator/unified_research_layer_v031/materialize.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "fc486fcf45117b808d5452ad60a6b7aff118741ad7792c0abba6a6712f543b65",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 624,
+      "line_sha256": "0e0bd7e33c76184379dfd11a3d837f499d92aa2aeecbe356515cda5389267ca3",
+      "path": "src/human_simulator/unified_research_layer_v031/materialize.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "fc486fcf45117b808d5452ad60a6b7aff118741ad7792c0abba6a6712f543b65",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 494,
+      "line_sha256": "c566a980e0928a9aa621a8a73198e60564d2a3b37421762dc955939203f4acaf",
+      "path": "src/human_simulator/unified_research_layer_v031/materialize.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "fc486fcf45117b808d5452ad60a6b7aff118741ad7792c0abba6a6712f543b65",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 376,
+      "line_sha256": "536b1973cb1ba53abde18ac363241407343c0745fcefe38dcecffd181a7c07bf",
+      "path": "src/human_simulator/unified_research_layer_v031/materialize.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "b1028c8561217168da4b79cff574e011841f9ef2bc9388b67728df455c7957e2",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 130,
+      "line_sha256": "d1f4034ddb431d502877246971a44d189ca588fe509671c6408c7f05592277f4",
+      "path": "src/human_simulator/unified_research_layer_v031/inventory.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "b1028c8561217168da4b79cff574e011841f9ef2bc9388b67728df455c7957e2",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 131,
+      "line_sha256": "7c258f1f7f1d42f3d827d0b19f1763145a26fbb3428506ee5ce2beaec48c1e55",
+      "path": "src/human_simulator/unified_research_layer_v031/inventory.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "b1028c8561217168da4b79cff574e011841f9ef2bc9388b67728df455c7957e2",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 116,
+      "line_sha256": "2167164d9ac8e26fc4fdf97902d3cb18f3fdc4ee7b08f5682f0d1197b3b5d789",
+      "path": "src/human_simulator/unified_research_layer_v031/inventory.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "b1028c8561217168da4b79cff574e011841f9ef2bc9388b67728df455c7957e2",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 115,
+      "line_sha256": "64413484241fd055e51756de412986e72c4690bc58a6b41a686668a4d915609e",
+      "path": "src/human_simulator/unified_research_layer_v031/inventory.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "e373b82b084c8c7fa1929db57193850bdc3ac5a4bb8958cac64e6b0f804440cc",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 99,
+      "line_sha256": "d8c2a86c44f3f1d63797db13cc9ec5c8385457b0b59357a845b26088d459c491",
+      "path": "src/human_simulator/unified_v012/encounter_audit.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "eca8c94a9dde0d7d6823f1fcc2b08b3530ebf61fea4cba713d1ceb184e886bab",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 47,
+      "line_sha256": "5beb48811a8cbfa95f05caf9192bb5813c5536e5c981433966bd3ede48863a59",
+      "path": "src/human_simulator/unified_v012/observation_contract.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "8bee31b0b0673d187436404c0e1058f254c30087129aec5532973338bc34c7f0",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 219,
+      "line_sha256": "196130b8d81340baaf2781341b5dbf9a093e5b98107048d9f6f85a7029ae811a",
+      "path": "src/human_simulator/medication_concept_v01/concept_registry.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "eedbf12548a0a76fb77d44669fcdd3230e417d0cae18f0f8aea54ef763ac03da",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 30,
+      "line_sha256": "90d423e374b80fabcbb308c8ce1c8c6db5a8306eea31207aa4ec3ec78d2c9720",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/recovery.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "eedbf12548a0a76fb77d44669fcdd3230e417d0cae18f0f8aea54ef763ac03da",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 40,
+      "line_sha256": "5626482f85b93f749ececd192a13a6b14197fa670ef2cf91572ae88fa9b16fa6",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/recovery.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "eedbf12548a0a76fb77d44669fcdd3230e417d0cae18f0f8aea54ef763ac03da",
+      "identifier": "class DoctorFeedback",
+      "identifier_group": "structural_symbol",
+      "line": 40,
+      "line_sha256": "5626482f85b93f749ececd192a13a6b14197fa670ef2cf91572ae88fa9b16fa6",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/recovery.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "bfe25d291a34b68b67eea0a60ba1e910c3724a07413336a3c4f4575d7974ac57",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 13,
+      "line_sha256": "9f10b8224db28c13c0da0dac484e21b9e879ba06beada4a4121e1604f53d4e60",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "bfe25d291a34b68b67eea0a60ba1e910c3724a07413336a3c4f4575d7974ac57",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 25,
+      "line_sha256": "98efc2e86f1b48e470470dd0b2fb6634a34458f310ef8f0a27bb74fe22d43a0a",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "bfe25d291a34b68b67eea0a60ba1e910c3724a07413336a3c4f4575d7974ac57",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 25,
+      "line_sha256": "98efc2e86f1b48e470470dd0b2fb6634a34458f310ef8f0a27bb74fe22d43a0a",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "bfe25d291a34b68b67eea0a60ba1e910c3724a07413336a3c4f4575d7974ac57",
+      "identifier": "drugs_first",
+      "identifier_group": "exact",
+      "line": 25,
+      "line_sha256": "98efc2e86f1b48e470470dd0b2fb6634a34458f310ef8f0a27bb74fe22d43a0a",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "bfe25d291a34b68b67eea0a60ba1e910c3724a07413336a3c4f4575d7974ac57",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 25,
+      "line_sha256": "98efc2e86f1b48e470470dd0b2fb6634a34458f310ef8f0a27bb74fe22d43a0a",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "47d3edae399f90b3f829d61cb62064b6dc2d5181eb5a484287025797d272dae5",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 60,
+      "line_sha256": "4701b2ae76ee18079ed71840edd8c9180a6225becb65fe538700d0b1c2045aab",
+      "path": "src/human_simulator/stage05_gate_1a_completion_v01/report.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "bced3eaf1074a07e003a7b4856d01e7e504b00942738b9640944aec621f032af",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 67,
+      "line_sha256": "5b8244bb67f25cd0105d2088ae6e2bf6cebca63e7a713fe6b6ca0d63a1e564c1",
+      "path": "src/human_simulator/stage05_gate_1a_v01/mutations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4515257655c18ec7c8330e1a5a50e0aed7f585bb12ca676951f4042fdda961df",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 24,
+      "line_sha256": "ea8fde42714c8cc4a5bed4cb533f98bd10ff56815e7bdff5470f07f94ea844fc",
+      "path": "src/human_simulator/stage05_gate_1a_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4515257655c18ec7c8330e1a5a50e0aed7f585bb12ca676951f4042fdda961df",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 152,
+      "line_sha256": "8c5cd82a81856a5a9f08feb6fe41801f564733106fc9fdd7e5678c03980fb091",
+      "path": "src/human_simulator/stage05_gate_1a_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4515257655c18ec7c8330e1a5a50e0aed7f585bb12ca676951f4042fdda961df",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 165,
+      "line_sha256": "3cde0296d1e7422909486adbf05f6b36b4713e78f532e51521a0b7e18154ee40",
+      "path": "src/human_simulator/stage05_gate_1a_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4515257655c18ec7c8330e1a5a50e0aed7f585bb12ca676951f4042fdda961df",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 178,
+      "line_sha256": "f8b87b865ab657c56abc1b6d6d1b18d146899aff77e82f5f1319e93340c38ed4",
+      "path": "src/human_simulator/stage05_gate_1a_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4515257655c18ec7c8330e1a5a50e0aed7f585bb12ca676951f4042fdda961df",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 140,
+      "line_sha256": "4d2c63d00c3aa8b921125136726e5b10116bda5d330bdd77236f17bc85fbaaba",
+      "path": "src/human_simulator/stage05_gate_1a_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4515257655c18ec7c8330e1a5a50e0aed7f585bb12ca676951f4042fdda961df",
+      "identifier": "feedback.user_id",
+      "identifier_group": "exact",
+      "line": 116,
+      "line_sha256": "c331605908943bd24ffb79f1d31a2f10686f5b18a19a4c28bccb699316b6bc04",
+      "path": "src/human_simulator/stage05_gate_1a_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4515257655c18ec7c8330e1a5a50e0aed7f585bb12ca676951f4042fdda961df",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 30,
+      "line_sha256": "c9b68c19631761367bf352ea9322c131565a38d7d0b64a4d42e1359829ffb950",
+      "path": "src/human_simulator/stage05_gate_1a_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4515257655c18ec7c8330e1a5a50e0aed7f585bb12ca676951f4042fdda961df",
+      "identifier": "recommendations[].items",
+      "identifier_group": "exact",
+      "line": 55,
+      "line_sha256": "1dd31881359935b0f03f348557ccae4764b61a026b50b26993a755cf7d0f4b60",
+      "path": "src/human_simulator/stage05_gate_1a_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "871e8bbd3ce4d44029a59f87e98c754ab8c4faebc7c9b8b3814f06a631fe22f8",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 95,
+      "line_sha256": "6cb86f42af8038cf47c3710e5b24601f7c7051a845faf003cc68404c07dec23a",
+      "path": "src/human_simulator/stage05_gate_1a_v01/attest.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "810f618e784330e68223d1bc697af74648f808095a1a783a5f25a62b2aed388c",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 19,
+      "line_sha256": "62c3bd4789b308e5f0afb15eee1619ea24abf3647c51630f9f325005ef10d294",
+      "path": "src/human_simulator/stage05_gate_1a_v01/contract.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "fc3bd4b9ee4f93861e36efe5f7a6df6fdbad96e0ab446caa457cda9966df2d78",
+      "identifier": "recommendations[].items",
+      "identifier_group": "exact",
+      "line": 69,
+      "line_sha256": "60a7a210516868d4e3531846cd349f2e3e2a90c11beb21384579d7f3ed0b408e",
+      "path": "src/human_simulator/stage05_gate_1a_v01/report.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "960ace697d209c8423ec6f1f01e96b3c05c3a8ccdfc6f85d138aab8eaf83904f",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 48,
+      "line_sha256": "1efe0e0c0984b456cc77f7e84301e5471a1acf1ca3c8e255cfe3c836c7e8022d",
+      "path": "src/human_simulator/integrated_research_runtime_v01/qsp.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "25751cb2c2e20207d44d2872364301cc48ec918e18511987f482ff73b1ad0a8c",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 41,
+      "line_sha256": "4a06b9b31e6fdbef9860f1ef8bf61db7619ed2d495e273ee2002b13ea1edcdb5",
+      "path": "src/human_simulator/exposure_source_discovery_v02/mutations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "25751cb2c2e20207d44d2872364301cc48ec918e18511987f482ff73b1ad0a8c",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 76,
+      "line_sha256": "92b52340ae5370f2a4d531e98d51ae2a7e7e7573d411bdba025bd2fd87178f18",
+      "path": "src/human_simulator/exposure_source_discovery_v02/mutations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 12,
+      "line_sha256": "afddf8debf5fb235d3e1b43705a0283720da6ba0dc919b028b8ef79dae2f2b60",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 19,
+      "line_sha256": "082b8097cbf7736e26dd9d2e58cd4d38d6455ebb3d052201a749a010121fde65",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 20,
+      "line_sha256": "c7ecc946d69d864a951488ac9ef62ea5905c8bf982ef6f18988af93f11e30cb0",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "drugs_first",
+      "identifier_group": "exact",
+      "line": 18,
+      "line_sha256": "b858f5adbf3e2e40c5a3ae7e663940f8435211c16287ff86d994c4127b36e946",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 23,
+      "line_sha256": "3e801fd97346bc808963d751ae3773eaf1c03309da5091c7f95932b3e393a7e8",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 18,
+      "line_sha256": "b858f5adbf3e2e40c5a3ae7e663940f8435211c16287ff86d994c4127b36e946",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 16,
+      "line_sha256": "4bc46cf32ce77fa9a124407befd32b8e46475093b2126ce461ea6361235df486",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "feedback.user_id",
+      "identifier_group": "exact",
+      "line": 15,
+      "line_sha256": "912a14ecae43df216c0e3e6ccfe2f67d1b12b7e1a52cbc7e07c1123d12f8a3ed",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 6,
+      "line_sha256": "a93fb649b52c0ab34148c79ff7a6ebce5381d7d304e1cce066431029c90c6356",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad",
+      "identifier": "recommendations[].items",
+      "identifier_group": "exact",
+      "line": 8,
+      "line_sha256": "a591d396a01deca365ac2bf432dd7e01dec59281ac329b4415944b9bd38cb876",
+      "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 15,
+      "line_sha256": "669fc0f42014e3b6be59a27ec863b87f88e52075750aafb69410096b4c4b1078",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 18,
+      "line_sha256": "d1f4034ddb431d502877246971a44d189ca588fe509671c6408c7f05592277f4",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 19,
+      "line_sha256": "7c258f1f7f1d42f3d827d0b19f1763145a26fbb3428506ee5ce2beaec48c1e55",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 23,
+      "line_sha256": "35521fc97643f3cb56a890485cc1aabf969f764dfa42eb95de5c118b99fc50ae",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 23,
+      "line_sha256": "35521fc97643f3cb56a890485cc1aabf969f764dfa42eb95de5c118b99fc50ae",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "drugs_first",
+      "identifier_group": "exact",
+      "line": 24,
+      "line_sha256": "c1319e11010568ceb86a5466dc8e7566c3a422e107cf0c11eecbbab05d4a6ac5",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 23,
+      "line_sha256": "35521fc97643f3cb56a890485cc1aabf969f764dfa42eb95de5c118b99fc50ae",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "outside_doctor_medicine",
+      "identifier_group": "exact",
+      "line": 24,
+      "line_sha256": "c1319e11010568ceb86a5466dc8e7566c3a422e107cf0c11eecbbab05d4a6ac5",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 23,
+      "line_sha256": "35521fc97643f3cb56a890485cc1aabf969f764dfa42eb95de5c118b99fc50ae",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 58,
+      "line_sha256": "6a571fac85738f17f0752b3f8cae8cebb7cb202d07f881584e181c5fe282ea5b",
+      "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 58,
+      "line_sha256": "6a571fac85738f17f0752b3f8cae8cebb7cb202d07f881584e181c5fe282ea5b",
+      "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 59,
+      "line_sha256": "e9910da4807c9c19286676111035507ddc08da001d9732baf6eba6a553db1a48",
+      "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 108,
+      "line_sha256": "cdf2e3e3db3530415a527b239eda31e55302cb7808c2e7878a617ec9bb5fef2b",
+      "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2",
+      "identifier": "feedback.user_id",
+      "identifier_group": "exact",
+      "line": 108,
+      "line_sha256": "cdf2e3e3db3530415a527b239eda31e55302cb7808c2e7878a617ec9bb5fef2b",
+      "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 56,
+      "line_sha256": "125850a9ce40d40e6740ea5d2e0fc2114d621cc60ec64288e4f8727c95dae648",
+      "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2",
+      "identifier": "recommendations[].items",
+      "identifier_group": "exact",
+      "line": 68,
+      "line_sha256": "873ae2d326dee5078d421f71c0be36d85154af913b74e45dc6ce7cd8ebcfa97f",
+      "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4479dcec8df14c0770460fad66d54835963f7a3c186c07e8cc21c925c7c18b9d",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 112,
+      "line_sha256": "e308b45539f40e7ae90fae35e156f9a8899a483a11ed600935039bf9f352c62c",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_a.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "4479dcec8df14c0770460fad66d54835963f7a3c186c07e8cc21c925c7c18b9d",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 253,
+      "line_sha256": "4268c32b29991ff0dc1816f62a52b84c6b5d4167c7bfa122f71e73209832c5c1",
+      "path": "src/human_simulator/exposure_source_discovery_v02/source_a.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 46,
+      "line_sha256": "669fc0f42014e3b6be59a27ec863b87f88e52075750aafb69410096b4c4b1078",
+      "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 49,
+      "line_sha256": "d1f4034ddb431d502877246971a44d189ca588fe509671c6408c7f05592277f4",
+      "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 50,
+      "line_sha256": "7c258f1f7f1d42f3d827d0b19f1763145a26fbb3428506ee5ce2beaec48c1e55",
+      "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 134,
+      "line_sha256": "8b24b958fb3ce56789843230427469cd2780c34271628d99d743c1dc4b92836f",
+      "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 135,
+      "line_sha256": "c48b537951a1bbdb727877f9c94f9b8ff5fa4f00c4eb52926ccdcbb948947ad6",
+      "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 39,
+      "line_sha256": "2167164d9ac8e26fc4fdf97902d3cb18f3fdc4ee7b08f5682f0d1197b3b5d789",
+      "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 41,
+      "line_sha256": "64413484241fd055e51756de412986e72c4690bc58a6b41a686668a4d915609e",
+      "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "ec7522a4ac0feda6d3040f4e794c71fc423f386409ffd6746aa4d4305b012126",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 19,
+      "line_sha256": "b7a6004a5925bbeea1c4d0ce59377349c8baf644f86f6aa749a57fe8ced6f1fe",
+      "path": "src/human_simulator/exposure_source_discovery_v02/privacy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2306523038dbb6517110d34f9cc0bd5367647e9b45b4f7089864ed35dfac892",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 12,
+      "line_sha256": "1b752fb8c9d130f9d4f9900631bb2d1c919bdd1c2e2cd5f942522bceba061a96",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/catalog.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2306523038dbb6517110d34f9cc0bd5367647e9b45b4f7089864ed35dfac892",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 188,
+      "line_sha256": "3c69b586f323712a4c84e410172273ce990e42f959687e1a8dee0026a12d913c",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/catalog.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2306523038dbb6517110d34f9cc0bd5367647e9b45b4f7089864ed35dfac892",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 189,
+      "line_sha256": "3337cf78ad4a500394589f44df5e0095a3ae69e471d0aa3ca142ef57d38b73c3",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/catalog.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2306523038dbb6517110d34f9cc0bd5367647e9b45b4f7089864ed35dfac892",
+      "identifier": "drugs_first",
+      "identifier_group": "exact",
+      "line": 191,
+      "line_sha256": "40cc4a258cd671e7964ebdc66c6090656aaa00f606c85b4e70c544854fd4d51f",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/catalog.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2306523038dbb6517110d34f9cc0bd5367647e9b45b4f7089864ed35dfac892",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 190,
+      "line_sha256": "565b07b0585690f5df4bf46d9061688a3b9570f3fcdbf5a453a558178be6897e",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/catalog.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2306523038dbb6517110d34f9cc0bd5367647e9b45b4f7089864ed35dfac892",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 187,
+      "line_sha256": "dbb366fa80e25889025e8fc7ad944db9bba945972bf2baeb1c3cc82817b710d7",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/catalog.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2306523038dbb6517110d34f9cc0bd5367647e9b45b4f7089864ed35dfac892",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 14,
+      "line_sha256": "2167164d9ac8e26fc4fdf97902d3cb18f3fdc4ee7b08f5682f0d1197b3b5d789",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/catalog.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "ee303d2b63a667e449be3b056760891dbfb9fb9af8079d0c7372cc79fb626873",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 65,
+      "line_sha256": "0338bc714b8d7104189f8b06ac4bcef8eba64e114ecdf70a2d5357475eefb839",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/mutations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "ee303d2b63a667e449be3b056760891dbfb9fb9af8079d0c7372cc79fb626873",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 73,
+      "line_sha256": "c06424395db144c53386124fec2fe908975642c12797c0c88ab0e3d2d52dd3e7",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/mutations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "ee303d2b63a667e449be3b056760891dbfb9fb9af8079d0c7372cc79fb626873",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 65,
+      "line_sha256": "0338bc714b8d7104189f8b06ac4bcef8eba64e114ecdf70a2d5357475eefb839",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/mutations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "cbcebc7d67accb9738752c14722627bf7cf543ab4990910010c40c00f9e580a6",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 29,
+      "line_sha256": "3f73c9f129c1faf1295593e9cbfac54498dda39c9c66b0654d7376e8f1e5860c",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/adjudicate.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 15,
+      "line_sha256": "9f10b8224db28c13c0da0dac484e21b9e879ba06beada4a4121e1604f53d4e60",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 38,
+      "line_sha256": "f8613bba702203c5cdf83e9ed9d8cdf43ff5cc3ccf84515fecb38443e782fc4d",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 39,
+      "line_sha256": "719e1140f57eba9bae794c48862cf44d64c5cf097225595b91c0879b27684bbe",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 35,
+      "line_sha256": "7ade98e127c2bcdb7b765f9b47824612c4c581cf339100f4ec618a6c236e8ac2",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 35,
+      "line_sha256": "7ade98e127c2bcdb7b765f9b47824612c4c581cf339100f4ec618a6c236e8ac2",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "drugs_first",
+      "identifier_group": "exact",
+      "line": 35,
+      "line_sha256": "7ade98e127c2bcdb7b765f9b47824612c4c581cf339100f4ec618a6c236e8ac2",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 35,
+      "line_sha256": "7ade98e127c2bcdb7b765f9b47824612c4c581cf339100f4ec618a6c236e8ac2",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "outside_doctor_medicine",
+      "identifier_group": "exact",
+      "line": 44,
+      "line_sha256": "5922825a097980cba7971bb3931c4c0fa5310f18bb2f7d7c664b56d46b77c0ab",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 35,
+      "line_sha256": "7ade98e127c2bcdb7b765f9b47824612c4c581cf339100f4ec618a6c236e8ac2",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 46,
+      "line_sha256": "adbe55834a04da37f0ec6c400ba3204b20334ac523e40c7b931ee2835d0d5efe",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "feedback.user_id",
+      "identifier_group": "exact",
+      "line": 47,
+      "line_sha256": "8550d432883b12ce6902df1a51600b1077ca987494da216de3bbbecd1e7eeba2",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 48,
+      "line_sha256": "3a6a96887d2652eee58c0d29ab5214250146fa4e621cbff92277e78c5db37698",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "recommendations[].items",
+      "identifier_group": "exact",
+      "line": 49,
+      "line_sha256": "4003ffee9a1624a237cd462b2b25fde1c3e2c6b7f2737605d3b9013f4fb6e2c2",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 50,
+      "line_sha256": "c0be5311cc23c6635bf1bf0a3132371df3b2a58ae42667dd99cd51aa846c7bdc",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 51,
+      "line_sha256": "fa63ab844613dcaaf1e477125c032bd168a4b940b232cde005a6a3e0605c28c9",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "RecommendationItemData",
+      "identifier_group": "structural_symbol",
+      "line": 54,
+      "line_sha256": "c5b0a946983412cbe07aa196da5c1e99b78e092638bb13a5712850dad69a38cb",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "ActiveRelatedAppointmentOrReadOnly",
+      "identifier_group": "structural_symbol",
+      "line": 55,
+      "line_sha256": "06f7dbaca64e8273ef6efd0848c763641502f86c42f6b85fb6df94ca548a0a07",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "class DoctorFeedback",
+      "identifier_group": "structural_symbol",
+      "line": 56,
+      "line_sha256": "1e891d6d1d491e64b255de352674c9a3c81a66f830e55bbed965f516fcec1dc8",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "12db1f46e03e3dde8a7a9fd8967bcd2ca5687447550bef0e0a10c8b0c39d2b73",
+      "identifier": "class Recommendation(",
+      "identifier_group": "structural_symbol",
+      "line": 57,
+      "line_sha256": "12dc3bcdc14ad977a63f581921a1b93d46315136a27abc9fcd32906a140f55fa",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/policy.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "115629ff49299893952061d825bf941bd951fdc480bd704f0b88d6fd4243bee1",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 23,
+      "line_sha256": "45ace763f5a9201a9c56c93eca41becced2f4d0154739a3b40f5e10ab49fc27b",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/limitations.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "8bfa8af8e411f70ba1845557e0bfa53793f5cd5a09ece8cf24a4842b2625d050",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 212,
+      "line_sha256": "d0e66e49fc5d5ec34477f8bdea2ab8322c11b730ec342befca513e35c591c71b",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/orchestrator.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c5884ad13748d628320e90cd4ea670c578a61741c43a886a8601367354643af1",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 56,
+      "line_sha256": "f152e5e96c2fcf84247164b3cbbb45a97a9084fd71e2488ab5bb35208657467b",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/probes.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c5884ad13748d628320e90cd4ea670c578a61741c43a886a8601367354643af1",
+      "identifier": "recommendations[].items",
+      "identifier_group": "exact",
+      "line": 56,
+      "line_sha256": "f152e5e96c2fcf84247164b3cbbb45a97a9084fd71e2488ab5bb35208657467b",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/probes.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c5884ad13748d628320e90cd4ea670c578a61741c43a886a8601367354643af1",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 18,
+      "line_sha256": "281dbcfca8c462e15b30b3603364e8164b55c57460db31a6e836e3fb72a8b7a9",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/probes.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c5884ad13748d628320e90cd4ea670c578a61741c43a886a8601367354643af1",
+      "identifier": "ActiveRelatedAppointmentOrReadOnly",
+      "identifier_group": "structural_symbol",
+      "line": 14,
+      "line_sha256": "8a0885a98e6899e76dc14f2959c86f5c47504c5c7e29f0498b7ee5a9c30f8ff6",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/probes.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c5884ad13748d628320e90cd4ea670c578a61741c43a886a8601367354643af1",
+      "identifier": "class DoctorFeedback",
+      "identifier_group": "structural_symbol",
+      "line": 19,
+      "line_sha256": "ba4318f26f6770dd2d2dae7f93ca1791e6226d82ddbcbfde8c19f7b9254252db",
+      "path": "src/human_simulator/stage05_gate1a_evidence_recovery_v01/probes.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "520fd7246e35ec3e00435421891456ebba73a5411f29434ff35e34fd97079735",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 164,
+      "line_sha256": "0631f8895b1041a31f6a66081cb1689accf56274e4ae2fd7879d38926f033498",
+      "path": "src/human_simulator/stage02/identity_linkage.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "9f41eecbb69fe88fffeee6055d759465006ce1d1787cf3c4783cdc7e256cf7d8",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 321,
+      "line_sha256": "8778c59c6727c755cb22e6e93518cd396c099c11e785893e0489d813738b3daf",
+      "path": "src/human_simulator/stage02/subject_root_analysis.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "0beba895b6cb39751f61fb3369d917b8786349dffcdae94916395e28aebf0580",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 99,
+      "line_sha256": "536b1973cb1ba53abde18ac363241407343c0745fcefe38dcecffd181a7c07bf",
+      "path": "src/human_simulator/population_v01/accounting.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "87066b06cba580ef8752fdeed630bd6688a143a56dc2f4b49dcfe6e735dc56b9",
+      "identifier": "diagnosis_medicineappointments",
+      "identifier_group": "exact",
+      "line": 23,
+      "line_sha256": "178c673d1c6ee00ff76cd3338145bd6e02cda23b8ee2e095b8241d614812b35e",
+      "path": "src/human_simulator/population_v01/intervention.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2024af8953f2c49e195e13d3e2b705726d2f697fbfaacb98aa231df84c6ab24",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 111,
+      "line_sha256": "5922d8cda08f02a9a36781f307f51cc53cb4dac8b6100754e293305eb8c4847a",
+      "path": "src/human_simulator/exposure_source_discovery_v021/accounting.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "f2024af8953f2c49e195e13d3e2b705726d2f697fbfaacb98aa231df84c6ab24",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 112,
+      "line_sha256": "bb567da40518289ee0128472c1ef8e59632239bd004f2627971b2bd945e50f0a",
+      "path": "src/human_simulator/exposure_source_discovery_v021/accounting.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c055841b439d5b614112900001b0c34204739b5a61fe566dd2ed1d29799fb066",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 117,
+      "line_sha256": "d08139fd5c79a875d02bba7c5028229d170562f92ad88474a62d0e5876bbce0b",
+      "path": "src/human_simulator/exposure_source_discovery_v021/report.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "c055841b439d5b614112900001b0c34204739b5a61fe566dd2ed1d29799fb066",
+      "identifier": "feedback.user_id",
+      "identifier_group": "exact",
+      "line": 117,
+      "line_sha256": "d08139fd5c79a875d02bba7c5028229d170562f92ad88474a62d0e5876bbce0b",
+      "path": "src/human_simulator/exposure_source_discovery_v021/report.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "a1013719abcedeb5af6fca8637b83c0bc31df5e8a0e9e8bf98588f7893f0e193",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 150,
+      "line_sha256": "97966ab9496cf71a54700b2b3f4a1900bcc14a32d0e97dd5f1a59e617c3a59a9",
+      "path": "src/human_simulator/unified_v011/source_b_semantics.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5e95c016d21f9adc7681b4a8ba859b7ec3d1de08d44e6186f816146f5895aa14",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 106,
+      "line_sha256": "0ca8daa430546b3fff2a3a606401c5476550167fbd10d59dc4a0a3af0be8bf98",
+      "path": "src/human_simulator/unified_v011/source_b_mapping.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "181c35ed65783d56c784c8b0822fb80b61471b0831d86bc36d445976cbe0e1af",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 109,
+      "line_sha256": "a3a7c3192c4928f722391d7c27ae34556d48fa33678a70f6ba1bbdda87061a4d",
+      "path": "src/human_simulator/unified_individual_state_v01/exact_accounting.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "181c35ed65783d56c784c8b0822fb80b61471b0831d86bc36d445976cbe0e1af",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 145,
+      "line_sha256": "0e0bd7e33c76184379dfd11a3d837f499d92aa2aeecbe356515cda5389267ca3",
+      "path": "src/human_simulator/unified_individual_state_v01/exact_accounting.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "181c35ed65783d56c784c8b0822fb80b61471b0831d86bc36d445976cbe0e1af",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 102,
+      "line_sha256": "5245d2a2fe8f5c22e45cdead12cc6bd1048ad26a22ae2a31485cf04e4ca064d7",
+      "path": "src/human_simulator/unified_individual_state_v01/exact_accounting.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "recommendations_user",
+      "identifier_group": "exact",
+      "line": 340,
+      "line_sha256": "aa78f2565472f5718aa809981302c3f6b9c6f816953640bcdc6a3e48063d273b",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 344,
+      "line_sha256": "e29a14a2bb8b3bd0a867e2c608aa41a7cb897c7db8d2e4c0aff0c7acddceb262",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "change_drugs",
+      "identifier_group": "exact",
+      "line": 323,
+      "line_sha256": "343e942e22973a585eb6c2626193c84750d1f4c063e847c4b6b72ea9890b812f",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "decline_drugs",
+      "identifier_group": "exact",
+      "line": 323,
+      "line_sha256": "343e942e22973a585eb6c2626193c84750d1f4c063e847c4b6b72ea9890b812f",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "drugs_first",
+      "identifier_group": "exact",
+      "line": 323,
+      "line_sha256": "343e942e22973a585eb6c2626193c84750d1f4c063e847c4b6b72ea9890b812f",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "positive_changes",
+      "identifier_group": "exact",
+      "line": 323,
+      "line_sha256": "343e942e22973a585eb6c2626193c84750d1f4c063e847c4b6b72ea9890b812f",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "outside_doctor_medicine",
+      "identifier_group": "exact",
+      "line": 323,
+      "line_sha256": "343e942e22973a585eb6c2626193c84750d1f4c063e847c4b6b72ea9890b812f",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "vitamins",
+      "identifier_group": "exact",
+      "line": 323,
+      "line_sha256": "343e942e22973a585eb6c2626193c84750d1f4c063e847c4b6b72ea9890b812f",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 463,
+      "line_sha256": "c0e4c43821633a9d01e0f0a85dcbf4112d023840cb2eaa01d866621dd2e7f258",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "feedback.user_id",
+      "identifier_group": "exact",
+      "line": 463,
+      "line_sha256": "c0e4c43821633a9d01e0f0a85dcbf4112d023840cb2eaa01d866621dd2e7f258",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+      "identifier": "document_recommendation",
+      "identifier_group": "exact",
+      "line": 264,
+      "line_sha256": "dd9aa74eaee8b05d041a3f6211b54f0a70f80330ce8a19d38523eba998478454",
+      "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "technical_documentation",
+      "file_sha256": "c7e39f8ae0571c5788c99b6199d0c70e4a03e1ddb74404ec5b28ec8fe7168506",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 58,
+      "line_sha256": "296e584514bce2fb7e9c080291d24ab6b7e40a416985d9caa9a36a19848230fa",
+      "path": "docs/current-stage.md",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "02745ffd8a3058093806d3a77ea7ef2af4717a69340e51ae30c41ed3497d2e6f",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 78,
+      "line_sha256": "4bf3b8005bed269bf6ec0120d96110838003d5b52e763ffc2f74e061b0ec0ac1",
+      "path": "tests/test_stage05_gate1a_evidence_recovery_v01.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "02745ffd8a3058093806d3a77ea7ef2af4717a69340e51ae30c41ed3497d2e6f",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 40,
+      "line_sha256": "c3adc1ac00d610be8154aaf041f49f89dce76b6beb3ed0f8e4d7014ffc313309",
+      "path": "tests/test_stage05_gate1a_evidence_recovery_v01.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "6900e31416db8b84dd51b4e639a9299a5d950919dd80f9ea407d9e88fae1807f",
+      "identifier": "consultations.patient_id",
+      "identifier_group": "exact",
+      "line": 83,
+      "line_sha256": "501596833560a25d388bd59417b26e9f4e7460545e6e01885d0ff558d9e5860f",
+      "path": "tests/test_assess_source_relationship.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "b12c76466673105f7e4aa59624c92943450a5e0140ee8bdc0cc79e18bb8ee2d0",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 103,
+      "line_sha256": "9964fbab35ac2417ce0204e469d41ecc79830b0055188ca4255357d16626fe51",
+      "path": "tests/test_exposure_source_discovery_v021.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "6d75fbe315a0d61b9d86f324ce4773c075c1473bccb144b78cbef2b2aea973fd",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 67,
+      "line_sha256": "64202dd3e08196b513bcfe30759bff216a32842448d017ff81064c6f34132b4b",
+      "path": "tests/test_stage02_classify_regression.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "6d75fbe315a0d61b9d86f324ce4773c075c1473bccb144b78cbef2b2aea973fd",
+      "identifier": "outside_doctor_medicine",
+      "identifier_group": "exact",
+      "line": 76,
+      "line_sha256": "51c18ac96ee4526381ba9001758b00c81f282c85e3d45a935d20ce2c0ba6a3dd",
+      "path": "tests/test_stage02_classify_regression.py",
+      "repository": "human-simulator",
+      "source_link": "ANALYSIS_CODE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "9ce14b3b8d596b5982f3474e56f5dfe9711fbc71be41cf72b2c82952e57171ea",
+      "identifier": "recommendations_list",
+      "identifier_group": "exact",
+      "line": 2640,
+      "line_sha256": "d97776e3f3d0bce414be9cd87dbc97e8c564957de7061fe47df44ecbf13b868b",
+      "path": "apps/appointment/services.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "cd5d9e3a4e48b3e8b7b416f29a7e04f370b5e7e5fbdf4bf37cc1ce26b24bc296",
+      "identifier": "class Recommendation(",
+      "identifier_group": "structural_symbol",
+      "line": 121,
+      "line_sha256": "a178ab2e5fcd6580d8c4986fd662500b8602939320ac8582e009e25deaa5f2dc",
+      "path": "apps/diagnosis/models.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "sql_migrations",
+      "file_sha256": "f322fb5950a952b95b12a2033085bd26fbb99dd50c0703523d5095ff7548fa30",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 35,
+      "line_sha256": "a7c7174f86a3796efbef5b7433d1ee1958f6bd1290d45a9186cf11fbc35678cd",
+      "path": "apps/account/migrations/0006_auto_20210816_1553.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "sql_migrations",
+      "file_sha256": "f322fb5950a952b95b12a2033085bd26fbb99dd50c0703523d5095ff7548fa30",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 21,
+      "line_sha256": "7d27cfbe3942a606007a6bc5ce0fb1b5399a019d1d0033a3a4fd998491181f57",
+      "path": "apps/account/migrations/0006_auto_20210816_1553.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "sql_migrations",
+      "file_sha256": "43314bedd3fef3fd40cb3cbec8e617ddc35066496dd0907c5bdf556aaf21c5cf",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 52,
+      "line_sha256": "174f8a62019ac4ab8d085d92d3fc97e480852c51d2c07f279b57eca645e7374d",
+      "path": "apps/account/migrations/0011_auto_20210927_1400.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "39d47783db11f9a42094ab1145cc80a5ab53842224ecb76b08daffdc19fbdabc",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 912,
+      "line_sha256": "82a8eb5d8457fda1a77b27f8772b6e115ac8fc6eaf05babd0df93a6cbcf9e169",
+      "path": "apps/account/back_office/serializers.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "39d47783db11f9a42094ab1145cc80a5ab53842224ecb76b08daffdc19fbdabc",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 14,
+      "line_sha256": "6e2a67ca07a36181abb6c7a2488d29cce45af7f6b290c3a22c99a4183a5f797a",
+      "path": "apps/account/back_office/serializers.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "697256038d8d68d1ec5d37b6f44e2d2215b8ed506144a813600c3c80fd46a1c5",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 592,
+      "line_sha256": "ad7dafd24f018ddd89ded54858b3cac8e8aed194e794bf23379a0f0e99f25aa6",
+      "path": "apps/account/back_office/views.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "6c0a9a30f464e259b49046d9bf41bef8b24141a083021a2948d328187d08bd1a",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 31,
+      "line_sha256": "6e2a67ca07a36181abb6c7a2488d29cce45af7f6b290c3a22c99a4183a5f797a",
+      "path": "apps/account/admin/__init__.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "6c0a9a30f464e259b49046d9bf41bef8b24141a083021a2948d328187d08bd1a",
+      "identifier": "class DoctorFeedback",
+      "identifier_group": "structural_symbol",
+      "line": 102,
+      "line_sha256": "2f33237ca994b65148b0cc65e40ddcd37df350bfd2721a6e89022d102d22eeae",
+      "path": "apps/account/admin/__init__.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2daf42cada2fdbc3cd8635a3740cc51f324867092b60a27a96d56105a2579f95",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 11,
+      "line_sha256": "9bf9cf46975ef6a85251d4cc237645e60fc12f25f438a8d195818f902cc6e191",
+      "path": "apps/account/models/__init__.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5db5b009d105263fa6f1671e26db1b5b1ffc5a5f4d52f1928133ed9fc72eecd6",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 332,
+      "line_sha256": "517e3b63d378afe519c7c682b05e9b840fcaf41c7f1cdb59a4d0c3ef8f53c5fc",
+      "path": "apps/account/models/employee.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5db5b009d105263fa6f1671e26db1b5b1ffc5a5f4d52f1928133ed9fc72eecd6",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 868,
+      "line_sha256": "3388998c4c7a93cf7202dd228d3cf0c8e79c1209c91f7196504967c60bab9f4b",
+      "path": "apps/account/models/employee.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "5db5b009d105263fa6f1671e26db1b5b1ffc5a5f4d52f1928133ed9fc72eecd6",
+      "identifier": "class DoctorFeedback",
+      "identifier_group": "structural_symbol",
+      "line": 868,
+      "line_sha256": "3388998c4c7a93cf7202dd228d3cf0c8e79c1209c91f7196504967c60bab9f4b",
+      "path": "apps/account/models/employee.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "77b0320d08748ad3ca34245b4e32e3660fbf6a9c571c58923659dba8075b1830",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 105,
+      "line_sha256": "93876c8a7100eefafc6090741d569bb8b5a2428ed3aca9cdefff79f4862959b9",
+      "path": "apps/account/site/serializers.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "77b0320d08748ad3ca34245b4e32e3660fbf6a9c571c58923659dba8075b1830",
+      "identifier": "DoctorFeedback",
+      "identifier_group": "exact",
+      "line": 71,
+      "line_sha256": "b27810d8da3ea9aa52679f50a6d84b97c4256318b07f8008a2947bbe6ed02c6c",
+      "path": "apps/account/site/serializers.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "77b0320d08748ad3ca34245b4e32e3660fbf6a9c571c58923659dba8075b1830",
+      "identifier": "class DoctorFeedback",
+      "identifier_group": "structural_symbol",
+      "line": 71,
+      "line_sha256": "b27810d8da3ea9aa52679f50a6d84b97c4256318b07f8008a2947bbe6ed02c6c",
+      "path": "apps/account/site/serializers.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "1eb530e99a0215ac6eb6efaf7591f51c1fb5e8553d9ea78ab9e5d5014b5ee5d5",
+      "identifier": "feedback",
+      "identifier_group": "exact",
+      "line": 48,
+      "line_sha256": "f00171d3460e44876414fe3ea3002acec9fe3cc76817c5fbe728a33bac5b2762",
+      "path": "apps/account/site/views.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "8b82c621c0bece82cd8d23a1a8ebd9795dedecfa3e289a2468c6f1e9e27975fa",
+      "identifier": "ActiveRelatedAppointmentOrReadOnly",
+      "identifier_group": "structural_symbol",
+      "line": 16,
+      "line_sha256": "488f5fb9daa5a393523088a1668c93c2edc0b0e65cc3d50d2b1ae1cd06ae6874",
+      "path": "apps/document/lk_doctor/permissions.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "bf9f28223a4edbfa013418a9109237dcac2ab79f276826235338b8f32c0178c2",
+      "identifier": "ActiveRelatedAppointmentOrReadOnly",
+      "identifier_group": "structural_symbol",
+      "line": 41,
+      "line_sha256": "7916b3e5f06027e72316d8a42fc2a6e5f43d5131d554d6ad8bdd1d07b11bb278",
+      "path": "apps/document/lk_doctor/views.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "13cf5b59f6e5d364c7c3ce43663567b9782d80a1c89d83c625d39b83835088c3",
+      "identifier": "ActiveRelatedAppointmentOrReadOnly",
+      "identifier_group": "structural_symbol",
+      "line": 11,
+      "line_sha256": "fabcfa2db46df4c408732d108ed807646511a89d98972a7a94b9b2fd6da94efd",
+      "path": "apps/document/tests/test_permission_lk_doctor.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "2e539383dbecf5c135a00c8df06624c9e1d6dfce0d8a7da44f759039c7b96ac4",
+      "identifier": "RecommendationItemData",
+      "identifier_group": "structural_symbol",
+      "line": 40,
+      "line_sha256": "e08086acb74c6f29959c00653fd9b672b8619c9defebfcc0661898ab35a7a978",
+      "path": "apps/document/dataclasses/medical_report.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "1185d5bd280b5ba58b8fbcd4edf71f248184d7c8c99d4bafd34f803918570b12",
+      "identifier": "RecommendationItemData",
+      "identifier_group": "structural_symbol",
+      "line": 12,
+      "line_sha256": "63a7724693e0af032aa120f940b5b82447bad818c8aeabc63520b64a84f2663c",
+      "path": "apps/document/models/recommendation/models.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "1185d5bd280b5ba58b8fbcd4edf71f248184d7c8c99d4bafd34f803918570b12",
+      "identifier": "class Recommendation(",
+      "identifier_group": "structural_symbol",
+      "line": 18,
+      "line_sha256": "a178ab2e5fcd6580d8c4986fd662500b8602939320ac8582e009e25deaa5f2dc",
+      "path": "apps/document/models/recommendation/models.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    },
+    {
+      "coverage_class": "python",
+      "file_sha256": "54744a0a043760594ae450db3d7f7ec8160b7e408cc9031d15f87e946780dffe",
+      "identifier": "ActiveRelatedAppointmentOrReadOnly",
+      "identifier_group": "structural_symbol",
+      "line": 10,
+      "line_sha256": "fabcfa2db46df4c408732d108ed807646511a89d98972a7a94b9b2fd6da94efd",
+      "path": "apps/appointment_recordings/lk_doctor/views.py",
+      "repository": "django-develop",
+      "source_link": "SOURCE_A_CANDIDATE"
+    }
+  ],
+  "repositories": [
+    {
+      "counts": {
+        "database_dumps": 0,
+        "database_dumps_not_read": 0,
+        "html_templates": 0,
+        "javascript_typescript": 0,
+        "json_yaml_schemas": 2,
+        "large_files_not_read": 0,
+        "mobile": 0,
+        "openapi": 0,
+        "other": 9,
+        "python": 1116,
+        "react_vue": 0,
+        "sql_migrations": 0,
+        "technical_documentation": 12
+      },
+      "dumps_not_read_reason": "MAY_CONTAIN_ROW_DATA",
+      "identifier_file_counts": [
+        {
+          "files": 37,
+          "identifier": "feedback"
+        },
+        {
+          "files": 9,
+          "identifier": "recommendations_user"
+        },
+        {
+          "files": 9,
+          "identifier": "recommendations_list"
+        },
+        {
+          "files": 10,
+          "identifier": "change_drugs"
+        },
+        {
+          "files": 10,
+          "identifier": "decline_drugs"
+        },
+        {
+          "files": 8,
+          "identifier": "drugs_first"
+        },
+        {
+          "files": 11,
+          "identifier": "positive_changes"
+        },
+        {
+          "files": 4,
+          "identifier": "outside_doctor_medicine"
+        },
+        {
+          "files": 9,
+          "identifier": "vitamins"
+        },
+        {
+          "files": 12,
+          "identifier": "consultations.patient_id"
+        },
+        {
+          "files": 7,
+          "identifier": "feedback.user_id"
+        },
+        {
+          "files": 17,
+          "identifier": "document_recommendation"
+        },
+        {
+          "files": 8,
+          "identifier": "recommendations[].items"
+        },
+        {
+          "files": 28,
+          "identifier": "diagnosis_medicineappointments"
+        },
+        {
+          "files": 8,
+          "identifier": "DoctorFeedback"
+        },
+        {
+          "files": 1,
+          "identifier": "RecommendationItemData"
+        },
+        {
+          "files": 2,
+          "identifier": "ActiveRelatedAppointmentOrReadOnly"
+        },
+        {
+          "files": 3,
+          "identifier": "class DoctorFeedback"
+        },
+        {
+          "files": 1,
+          "identifier": "class Recommendation("
+        }
+      ],
+      "nested_git_checkouts_excluded": false,
+      "repository": "human-simulator",
+      "searched_roots": [
+        "src",
+        "docs",
+        "config",
+        "tests"
+      ]
+    },
+    {
+      "counts": {
+        "database_dumps": 0,
+        "database_dumps_not_read": 0,
+        "html_templates": 100,
+        "javascript_typescript": 0,
+        "json_yaml_schemas": 1,
+        "large_files_not_read": 0,
+        "mobile": 0,
+        "openapi": 2,
+        "other": 17,
+        "python": 1104,
+        "react_vue": 0,
+        "sql_migrations": 618,
+        "technical_documentation": 0
+      },
+      "dumps_not_read_reason": "MAY_CONTAIN_ROW_DATA",
+      "identifier_file_counts": [
+        {
+          "files": 7,
+          "identifier": "feedback"
+        },
+        {
+          "files": 0,
+          "identifier": "recommendations_user"
+        },
+        {
+          "files": 1,
+          "identifier": "recommendations_list"
+        },
+        {
+          "files": 0,
+          "identifier": "change_drugs"
+        },
+        {
+          "files": 0,
+          "identifier": "decline_drugs"
+        },
+        {
+          "files": 0,
+          "identifier": "drugs_first"
+        },
+        {
+          "files": 0,
+          "identifier": "positive_changes"
+        },
+        {
+          "files": 0,
+          "identifier": "outside_doctor_medicine"
+        },
+        {
+          "files": 0,
+          "identifier": "vitamins"
+        },
+        {
+          "files": 0,
+          "identifier": "consultations.patient_id"
+        },
+        {
+          "files": 0,
+          "identifier": "feedback.user_id"
+        },
+        {
+          "files": 0,
+          "identifier": "document_recommendation"
+        },
+        {
+          "files": 0,
+          "identifier": "recommendations[].items"
+        },
+        {
+          "files": 0,
+          "identifier": "diagnosis_medicineappointments"
+        },
+        {
+          "files": 6,
+          "identifier": "DoctorFeedback"
+        },
+        {
+          "files": 2,
+          "identifier": "RecommendationItemData"
+        },
+        {
+          "files": 4,
+          "identifier": "ActiveRelatedAppointmentOrReadOnly"
+        },
+        {
+          "files": 3,
+          "identifier": "class DoctorFeedback"
+        },
+        {
+          "files": 2,
+          "identifier": "class Recommendation("
+        }
+      ],
+      "nested_git_checkouts_excluded": true,
+      "repository": "django-develop",
+      "searched_roots": [
+        "apps"
+      ]
+    }
+  ]
+}

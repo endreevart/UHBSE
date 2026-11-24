@@ -1,0 +1,107 @@
+{
+  "version": "0.2.1.1",
+  "ENGINE_SURVIVAL_INFERENCE_STATUS": "TECHNICAL_SHADOW_PASS",
+  "ENGINE_MODEL_ROUTING_STATUS": "PASS",
+  "ENGINE_SUPPORTED_HORIZON_STATUS": "PASS",
+  "ENGINE_APPLICABILITY_INTEGRATION_STATUS": "PASS",
+  "OOD_ARTIFACT_INTEGRITY_STATUS": "PASS",
+  "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_FUTURE_HORIZON_READ",
+  "used_engine_eligible_cell": true,
+  "ood_detector_invoked": true,
+  "unsupported_365_requested_horizon": 365.0,
+  "fixtures": {
+    "accepted_b": {
+      "ok": true,
+      "abstain": false,
+      "requested_horizon": 90.0,
+      "event_probability": 0.6230985342083534,
+      "survival_probability": 0.37690146579164663,
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "supported_horizon": 90,
+      "model_identity_sha256": "ff2a94b72f36f3572c219823cd9a241bb0110350084cd0b08d2799c918ae6118",
+      "ood_detector_invoked": true,
+      "ood_detector_identity_sha256": "dfa314a0e988aa15548d5479feb83db998e01610ca925f9b3a588687d1b4303f",
+      "not_clinical_claim": true,
+      "not_intervention_recommendation": true,
+      "no_regime_candidate_id": true,
+      "no_future_horizon_read": true,
+      "regime_id": null
+    },
+    "future_poison_identical": true,
+    "rejected_a": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_ENGINE_ELIGIBLE",
+      "validation_gate_status": "FAIL",
+      "horizon_identifiability_status": "PASS",
+      "calibration_evaluation_status": "PASS",
+      "requested_horizon": 30.0
+    },
+    "unsupported_365": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_ENGINE_ELIGIBLE",
+      "validation_gate_status": "FAIL",
+      "horizon_identifiability_status": "NOT_ACCEPTED_ADMINISTRATIVE_BOUNDARY_NON_IDENTIFIABLE",
+      "calibration_evaluation_status": "PASS",
+      "requested_horizon": 365.0
+    },
+    "unsupported_horizon": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_ENGINE_ELIGIBLE",
+      "validation_gate_status": "FAIL",
+      "horizon_identifiability_status": "NOT_ACCEPTED_ADMINISTRATIVE_BOUNDARY_NON_IDENTIFIABLE",
+      "calibration_evaluation_status": "PASS",
+      "requested_horizon": 365.0
+    },
+    "wrong_source": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_ENGINE_ELIGIBLE",
+      "validation_gate_status": "FAIL",
+      "horizon_identifiability_status": "PASS",
+      "calibration_evaluation_status": "PASS",
+      "requested_horizon": 90.0
+    },
+    "source_model_hijack": {
+      "ok": false,
+      "error": "MODEL_SOURCE_MISMATCH"
+    },
+    "wrong_endpoint": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_FOUND",
+      "requested_horizon": 90.0
+    },
+    "wrong_outcome": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_FOUND",
+      "requested_horizon": 90.0
+    },
+    "ood_mutation": {
+      "ok": false,
+      "abstain": false,
+      "error": "OOD_IDENTITY_MISMATCH",
+      "hard_fail": true,
+      "requested_horizon": 90.0
+    },
+    "hash_mismatch": {
+      "ok": false,
+      "error": "MODEL_IDENTITY_HASH_MISMATCH"
+    }
+  },
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "parent_isolation": true,
+    "rollback": true,
+    "predicted_evidence_does_not_drive_synthetic": true
+  },
+  "no_regime_id_emitted": true,
+  "ok": true
+}

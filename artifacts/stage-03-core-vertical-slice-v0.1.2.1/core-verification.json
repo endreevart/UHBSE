@@ -1,0 +1,1077 @@
+{
+  "core_vertical_slice_status": "TECHNICAL_VERTICAL_SLICE_PASS",
+  "technical_vertical_slice_status": "TECHNICAL_VERTICAL_SLICE_PASS",
+  "failed_checks": [],
+  "report_status": "FINAL",
+  "core_slice_version": "0.1.2.1",
+  "checks": {
+    "baseline_v012_untouched": "PASS",
+    "no_clinical_rows_read": "PASS",
+    "canonical_row_counts_unchanged": "PASS",
+    "source_a_readable": "PASS",
+    "canonical_writable_load": "PASS",
+    "extraction_ok": "PASS",
+    "database_provenance_coverage": "PASS",
+    "computed_provenance_coverage": "PASS",
+    "overall_provenance_status": "PASS",
+    "accepted_design_contracts_present_and_verified": "PASS",
+    "three_branches": "PASS",
+    "fork_ok": "PASS",
+    "rollback_ok": "PASS",
+    "fork_final_state_diff_explained_by_fork_event": "PASS",
+    "fork_isolation_verified": "PASS",
+    "parent_state_unchanged_after_fork": "PASS",
+    "parent_history_unchanged_after_fork": "PASS",
+    "parent_events_unchanged_after_fork": "PASS",
+    "parent_recomputed_hash_matches_stored_hash": "PASS",
+    "determinism_in_process": "PASS",
+    "scope_honesty": "PASS",
+    "security_findings_non_blocking": "PASS",
+    "snapshot_contract_carried": "PASS",
+    "temporal_no_future_leakage": "PASS",
+    "idempotent_reload_carried": "PASS",
+    "checkpoint_phase_explicit": "PASS",
+    "fork_continuation_starts_after_checkpoint": "PASS",
+    "fork_event_time_explicit": "PASS",
+    "fork_has_no_duplicate_transition": "PASS",
+    "rollback_reproduces_original_final_state": "PASS",
+    "rollback_continuation_starts_after_checkpoint": "PASS",
+    "source_branch_unchanged_after_fork": "PASS"
+  },
+  "check_details": {
+    "baseline_v012_untouched": {
+      "status": "PASS",
+      "evidence": {
+        "accepted": "d4218dda05cdf8657e03768ce81727e274a691e90abee3ff701bae1018f419f8",
+        "computed": "d4218dda05cdf8657e03768ce81727e274a691e90abee3ff701bae1018f419f8"
+      }
+    },
+    "no_clinical_rows_read": {
+      "status": "PASS",
+      "evidence": {
+        "clinical_rows_read": 0,
+        "raw_db_connections": 0
+      }
+    },
+    "canonical_row_counts_unchanged": {
+      "status": "PASS",
+      "evidence": {
+        "source_system": 1,
+        "source_record": 12544,
+        "subject": 100,
+        "subject_characteristic": 200,
+        "encounter": 2153,
+        "observation": 4000,
+        "observation_component": 5333
+      }
+    },
+    "source_a_readable": {
+      "status": "PASS",
+      "evidence": {
+        "carried_from": "v0.1.2",
+        "access": {
+          "readable": true,
+          "db_user": "mg_audit_ro",
+          "transaction_read_only": "on",
+          "raw_writes_forbidden": true,
+          "relation_counts": {
+            "account_patient": 43856,
+            "appointment_appointment": 68128,
+            "document_analysisresult": 874492,
+            "document_analysisresultitem": 1372259,
+            "diagnosis_medicineappointments": 25726
+          },
+          "security_gate_mode": "ADVISORY_ONLY",
+          "authorised_data_access": true
+        }
+      }
+    },
+    "canonical_writable_load": {
+      "status": "PASS",
+      "evidence": {
+        "carried_from": "v0.1.2"
+      }
+    },
+    "extraction_ok": {
+      "status": "PASS",
+      "evidence": {
+        "carried_cohort": 100
+      }
+    },
+    "database_provenance_coverage": {
+      "status": "PASS",
+      "evidence": {
+        "total_records_evaluated": 24331,
+        "valid_records": 24331,
+        "invalid_records": 0,
+        "invalid_by_entity": {},
+        "per_entity": {
+          "source_system": {
+            "total": 1,
+            "valid": 1,
+            "invalid": 0,
+            "note": "no_provenance_column_identity_row"
+          },
+          "source_record": {
+            "total": 12544,
+            "valid": 12544,
+            "invalid": 0
+          },
+          "subject": {
+            "total": 100,
+            "valid": 100,
+            "invalid": 0
+          },
+          "subject_characteristic": {
+            "total": 200,
+            "valid": 200,
+            "invalid": 0
+          },
+          "encounter": {
+            "total": 2153,
+            "valid": 2153,
+            "invalid": 0
+          },
+          "observation": {
+            "total": 4000,
+            "valid": 4000,
+            "invalid": 0
+          },
+          "observation_component": {
+            "total": 5333,
+            "valid": 5333,
+            "invalid": 0
+          }
+        },
+        "full_coverage": true,
+        "source": "carried_from_accepted_v0.1.2",
+        "denominator_kind": "canonical_db_rows",
+        "clinical_rows_read_this_changeset": 0,
+        "raw_db_connections_this_changeset": 0,
+        "baseline_row_counts": {
+          "source_system": 1,
+          "source_record": 12544,
+          "subject": 100,
+          "subject_characteristic": 200,
+          "encounter": 2153,
+          "observation": 4000,
+          "observation_component": 5333
+        }
+      }
+    },
+    "computed_provenance_coverage": {
+      "status": "PASS",
+      "evidence": {
+        "total_records_evaluated": 7,
+        "valid_records": 7,
+        "invalid_records": 0,
+        "per_entity": {
+          "EvidenceStateSnapshot": {
+            "total": 1,
+            "valid": 1,
+            "invalid": 0
+          },
+          "StateSnapshotComponent": {
+            "total": 1,
+            "valid": 1,
+            "invalid": 0
+          },
+          "ScenarioCheckpoint": {
+            "total": 3,
+            "valid": 3,
+            "invalid": 0
+          },
+          "fork_rollback_computation_evidence": {
+            "total": 2,
+            "valid": 2,
+            "invalid": 0
+          }
+        },
+        "full_coverage": true,
+        "denominator_kind": "in_memory_computed_artifacts"
+      }
+    },
+    "overall_provenance_status": {
+      "status": "PASS",
+      "evidence": {
+        "database_provenance_coverage": {
+          "total_records_evaluated": 24331,
+          "valid_records": 24331,
+          "invalid_records": 0,
+          "invalid_by_entity": {},
+          "per_entity": {
+            "source_system": {
+              "total": 1,
+              "valid": 1,
+              "invalid": 0,
+              "note": "no_provenance_column_identity_row"
+            },
+            "source_record": {
+              "total": 12544,
+              "valid": 12544,
+              "invalid": 0
+            },
+            "subject": {
+              "total": 100,
+              "valid": 100,
+              "invalid": 0
+            },
+            "subject_characteristic": {
+              "total": 200,
+              "valid": 200,
+              "invalid": 0
+            },
+            "encounter": {
+              "total": 2153,
+              "valid": 2153,
+              "invalid": 0
+            },
+            "observation": {
+              "total": 4000,
+              "valid": 4000,
+              "invalid": 0
+            },
+            "observation_component": {
+              "total": 5333,
+              "valid": 5333,
+              "invalid": 0
+            }
+          },
+          "full_coverage": true,
+          "source": "carried_from_accepted_v0.1.2",
+          "denominator_kind": "canonical_db_rows",
+          "clinical_rows_read_this_changeset": 0,
+          "raw_db_connections_this_changeset": 0,
+          "baseline_row_counts": {
+            "source_system": 1,
+            "source_record": 12544,
+            "subject": 100,
+            "subject_characteristic": 200,
+            "encounter": 2153,
+            "observation": 4000,
+            "observation_component": 5333
+          }
+        },
+        "computed_provenance_coverage": {
+          "total_records_evaluated": 7,
+          "valid_records": 7,
+          "invalid_records": 0,
+          "per_entity": {
+            "EvidenceStateSnapshot": {
+              "total": 1,
+              "valid": 1,
+              "invalid": 0
+            },
+            "StateSnapshotComponent": {
+              "total": 1,
+              "valid": 1,
+              "invalid": 0
+            },
+            "ScenarioCheckpoint": {
+              "total": 3,
+              "valid": 3,
+              "invalid": 0
+            },
+            "fork_rollback_computation_evidence": {
+              "total": 2,
+              "valid": 2,
+              "invalid": 0
+            }
+          },
+          "full_coverage": true,
+          "denominator_kind": "in_memory_computed_artifacts"
+        },
+        "overall_provenance_status": "PASS",
+        "note": "DB row denominator carried from accepted v0.1.2; computed artifacts evaluated in-memory in this changeset."
+      }
+    },
+    "accepted_design_contracts_present_and_verified": {
+      "status": "PASS",
+      "evidence": {
+        "ok": true,
+        "status": "PASS",
+        "manifest_path": "artifacts/stage-03/design-content-manifest.sha256",
+        "manifest_sha256": "cb75fadb06a6d650b27b2136a2df8b9c86b358305cfd24a56589f827d5ab2468",
+        "manifest_self_hash_absent": true,
+        "contracts": {
+          "canonical-model.yaml": {
+            "path": "artifacts/stage-03/canonical-model.yaml",
+            "present": true,
+            "expected_sha256": "54e7ef79a3e730ff9da90c59cff2b7cb78b6f3f759fc37f8c89bf813affc161f",
+            "computed_sha256": "54e7ef79a3e730ff9da90c59cff2b7cb78b6f3f759fc37f8c89bf813affc161f",
+            "matches_manifest": true
+          },
+          "provenance-contract.yaml": {
+            "path": "artifacts/stage-03/provenance-contract.yaml",
+            "present": true,
+            "expected_sha256": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+            "computed_sha256": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+            "matches_manifest": true
+          },
+          "temporal-contract.yaml": {
+            "path": "artifacts/stage-03/temporal-contract.yaml",
+            "present": true,
+            "expected_sha256": "e6c4bc62ed3d8aabfb2e56d2dd3d005854fda26e172d3b98f91fc300896be2c4",
+            "computed_sha256": "e6c4bc62ed3d8aabfb2e56d2dd3d005854fda26e172d3b98f91fc300896be2c4",
+            "matches_manifest": true
+          }
+        },
+        "validator_computed_required_fields": [
+          "computation_method",
+          "computation_version",
+          "confidence",
+          "input_artifact_sha256",
+          "input_record_references",
+          "mapping_status",
+          "record_origin",
+          "transformation_id",
+          "transformation_version",
+          "transformed_at",
+          "uncertainty"
+        ],
+        "contract_computed_required_fields": [
+          "computation_method",
+          "computation_version",
+          "confidence",
+          "input_artifact_sha256",
+          "input_record_references",
+          "mapping_status",
+          "record_origin",
+          "transformation_id",
+          "transformation_version",
+          "transformed_at",
+          "uncertainty"
+        ],
+        "validator_covers_contract_required_fields": true,
+        "validator_weakened_vs_contract": false,
+        "validator_forbidden_fields": [
+          "source_record_locator"
+        ],
+        "yaml_parse_error": null,
+        "check_name": "accepted_design_contracts_present_and_verified"
+      }
+    },
+    "three_branches": {
+      "status": "PASS",
+      "evidence": {
+        "n": 3
+      }
+    },
+    "fork_ok": {
+      "status": "PASS",
+      "evidence": {
+        "ok": true,
+        "effect": {
+          "counterfactual_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "event_fork_final_state_hash": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3",
+          "weekly_hashes": {
+            "counterfactual": {
+              "3": "dcedf8e7a408ea6ada6c64de246a45dbbef21819fa4b92ccf1866f7434821be0",
+              "4": "f48143e1badb33c6390fa96afb9ba5c0a4902450239ad14cfb56d61846492e36",
+              "5": "28b9fc9665d6753c6a6e762f228ca1a8da8ab02d40cc5c48f2de2e108ca12c00",
+              "6": "e6e327a32f3e013d0055abe3ee7c7153a76d70e4ad5e3e595364571a18e2d664",
+              "7": "3ac296003f77b3fa289db525a401feef251975cea0fda19825d0bf146284c1fe",
+              "8": "a25b264c59f512f266272b76c638174fdcb2de0d791513450f54c5f60d26ada7",
+              "9": "2056ade4a0780701214971361049aaa9b23302591416a9f78651d53b9afd6ec6",
+              "10": "542a6eab9f828ccb0166b0a4ceefffde18c9abbe5ad08ecde6cda9b2354ea4e9",
+              "11": "104a0406891e76b9265613ece300e8a6d9bdccd4b5e48e30e73cfe11bc7a36a2",
+              "12": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+            },
+            "event_fork": {
+              "3": "aa2d1e0fc70c442c4d5bbf0f178c141cf2fc3ce7e62b2420e0e268b62da434c5",
+              "4": "a2309f62bf164dcaf3ddce3bbfde4c77398e13c08ac533503d1027b80e3455e3",
+              "5": "ada03d085babf2c5e020b56239034473cbed23c7a5415866f8e4058e242a3954",
+              "6": "7f09d42117834ef7853ef2a466c17fadbbd3f1722c8d87b5e51e1572af05a186",
+              "7": "9026eab0d9065aee2c3c3fb8ddd94201006fc5b4451f562631565c2a1363c0e2",
+              "8": "d10ec9f0535b07f52652fbf51d13bcc5c48e9d717ceb7268b89a582e73afc173",
+              "9": "1e06542001fe71ca856a8e728d6162c9fdd5b19494ccdccd81347e5314e8ac9f",
+              "10": "c868167e7c47119cdf7e48562cd82c20dfb902a9d74ca443f8a252e16d1a0744",
+              "11": "02794466180883063bfbdc1d377702cc234b9b26c2ca0ffe676734d39dac98d9",
+              "12": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3"
+            }
+          },
+          "applied_event": {
+            "week": 3,
+            "type": "dose_change",
+            "dose": 1.5,
+            "name": "fork_dose_nudge"
+          },
+          "event_week": 3,
+          "changed_variables": [
+            "metric"
+          ],
+          "first_divergence_week": 3,
+          "both_started_from_same_checkpoint_hash": true,
+          "final_hashes_differ": true,
+          "at_least_one_state_variable_changed": true,
+          "divergence_not_before_event_week": true,
+          "fork_final_state_diff_explained_by_fork_event": true
+        }
+      }
+    },
+    "rollback_ok": {
+      "status": "PASS",
+      "evidence": {
+        "ok": true,
+        "branch_id": "control",
+        "restored_checkpoint": "control-w2",
+        "checkpoint_phase": "POST_STEP_CHECKPOINT",
+        "checkpoint_week": 2,
+        "continuation_start_week": 3,
+        "expected_checkpoint_hash": "795669a680fc4f1515ab713b2e5fe644a845a4e139008dc10253d00ed8fdb0ba",
+        "restored_hash": "795669a680fc4f1515ab713b2e5fe644a845a4e139008dc10253d00ed8fdb0ba",
+        "hash_match_after_rollback": true,
+        "mutated_hash_before_rollback": "af787d62b23650602f789931069123297a10ef5bc4e65e8fba13c8a103e45cdd",
+        "resimulated_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+        "original_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+        "rollback_reproduces_original_final_state": true,
+        "rollback_continuation_starts_after_checkpoint": true,
+        "rollback_history_has_no_duplicate_checkpoint_week": true,
+        "rollback_restores_checkpoint_exactly": true,
+        "history_weeks": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "history_sequence_match": true,
+        "resimulated_history_len": 10,
+        "original_tail_len": 10
+      }
+    },
+    "fork_final_state_diff_explained_by_fork_event": {
+      "status": "PASS",
+      "evidence": {
+        "counterfactual_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+        "event_fork_final_state_hash": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3",
+        "weekly_hashes": {
+          "counterfactual": {
+            "3": "dcedf8e7a408ea6ada6c64de246a45dbbef21819fa4b92ccf1866f7434821be0",
+            "4": "f48143e1badb33c6390fa96afb9ba5c0a4902450239ad14cfb56d61846492e36",
+            "5": "28b9fc9665d6753c6a6e762f228ca1a8da8ab02d40cc5c48f2de2e108ca12c00",
+            "6": "e6e327a32f3e013d0055abe3ee7c7153a76d70e4ad5e3e595364571a18e2d664",
+            "7": "3ac296003f77b3fa289db525a401feef251975cea0fda19825d0bf146284c1fe",
+            "8": "a25b264c59f512f266272b76c638174fdcb2de0d791513450f54c5f60d26ada7",
+            "9": "2056ade4a0780701214971361049aaa9b23302591416a9f78651d53b9afd6ec6",
+            "10": "542a6eab9f828ccb0166b0a4ceefffde18c9abbe5ad08ecde6cda9b2354ea4e9",
+            "11": "104a0406891e76b9265613ece300e8a6d9bdccd4b5e48e30e73cfe11bc7a36a2",
+            "12": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+          },
+          "event_fork": {
+            "3": "aa2d1e0fc70c442c4d5bbf0f178c141cf2fc3ce7e62b2420e0e268b62da434c5",
+            "4": "a2309f62bf164dcaf3ddce3bbfde4c77398e13c08ac533503d1027b80e3455e3",
+            "5": "ada03d085babf2c5e020b56239034473cbed23c7a5415866f8e4058e242a3954",
+            "6": "7f09d42117834ef7853ef2a466c17fadbbd3f1722c8d87b5e51e1572af05a186",
+            "7": "9026eab0d9065aee2c3c3fb8ddd94201006fc5b4451f562631565c2a1363c0e2",
+            "8": "d10ec9f0535b07f52652fbf51d13bcc5c48e9d717ceb7268b89a582e73afc173",
+            "9": "1e06542001fe71ca856a8e728d6162c9fdd5b19494ccdccd81347e5314e8ac9f",
+            "10": "c868167e7c47119cdf7e48562cd82c20dfb902a9d74ca443f8a252e16d1a0744",
+            "11": "02794466180883063bfbdc1d377702cc234b9b26c2ca0ffe676734d39dac98d9",
+            "12": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3"
+          }
+        },
+        "applied_event": {
+          "week": 3,
+          "type": "dose_change",
+          "dose": 1.5,
+          "name": "fork_dose_nudge"
+        },
+        "event_week": 3,
+        "changed_variables": [
+          "metric"
+        ],
+        "first_divergence_week": 3,
+        "both_started_from_same_checkpoint_hash": true,
+        "final_hashes_differ": true,
+        "at_least_one_state_variable_changed": true,
+        "divergence_not_before_event_week": true,
+        "fork_final_state_diff_explained_by_fork_event": true
+      }
+    },
+    "fork_isolation_verified": {
+      "status": "PASS",
+      "evidence": {
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "before": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13
+        },
+        "after": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13,
+          "stored_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+        }
+      }
+    },
+    "parent_state_unchanged_after_fork": {
+      "status": "PASS",
+      "evidence": {
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "before": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13
+        },
+        "after": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13,
+          "stored_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+        }
+      }
+    },
+    "parent_history_unchanged_after_fork": {
+      "status": "PASS",
+      "evidence": {
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "before": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13
+        },
+        "after": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13,
+          "stored_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+        }
+      }
+    },
+    "parent_events_unchanged_after_fork": {
+      "status": "PASS",
+      "evidence": {
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "before": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13
+        },
+        "after": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13,
+          "stored_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+        }
+      }
+    },
+    "parent_recomputed_hash_matches_stored_hash": {
+      "status": "PASS",
+      "evidence": {
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "before": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13
+        },
+        "after": {
+          "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+          "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+          "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+          "history_len": 13,
+          "stored_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+        }
+      }
+    },
+    "determinism_in_process": {
+      "status": "PASS",
+      "evidence": {
+        "in_process_repeat": {
+          "seed": 42,
+          "final_hashes_match": [
+            true,
+            true,
+            true
+          ],
+          "fork_effect_match": true,
+          "event_fork_final_match": true,
+          "counterfactual_final_match": true
+        },
+        "pass": true
+      }
+    },
+    "scope_honesty": {
+      "status": "PASS",
+      "evidence": {
+        "cohort_loaded_subjects": 100,
+        "timelines_built_subjects": 10,
+        "snapshots_built_subjects": 10,
+        "simulated_subjects": 1,
+        "sample_class": "TECHNICAL_COVERAGE_BIASED_SAMPLE",
+        "honesty_note": "v0.1.2.1 reuses accepted v0.1.2 cohort scope; simulation evidence recomputed on synthetic metric state without clinical row reads."
+      }
+    },
+    "security_findings_non_blocking": {
+      "status": "PASS",
+      "evidence": {
+        "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+        "security_findings_status": "RECORDED_NON_BLOCKING",
+        "security_gate_mode": "ADVISORY_ONLY",
+        "core_development_status": "ACTIVE",
+        "authorised_data_access": "ENABLED",
+        "core_slice_version": "0.1.2.1",
+        "deferred_production_hardening": [
+          "initial_root_token_available",
+          "vault_key_custody_decision_required",
+          "pgp_keys_shared_keyring_empty_passphrase",
+          "multi_custodian_separation_absent"
+        ],
+        "closed_security_findings": [
+          "limited_operator_identity_absent",
+          "loader_restart_reauth_procedure_absent"
+        ],
+        "security_blocks_core": false,
+        "clinical_validation_status": "NOT_STARTED",
+        "production_readiness": "NOT_CLAIMED",
+        "clinical_rows_read": 0,
+        "raw_db_connections": 0,
+        "note": "Security findings are advisory only; they must not change core command exit codes"
+      }
+    },
+    "snapshot_contract_carried": {
+      "status": "PASS",
+      "evidence": {
+        "carried_status": "PASS"
+      }
+    },
+    "temporal_no_future_leakage": {
+      "status": "PASS",
+      "evidence": {
+        "injected": true,
+        "excluded_future_count": 1,
+        "marker_present_in_snapshot": false,
+        "pass": true
+      }
+    },
+    "idempotent_reload_carried": {
+      "status": "PASS",
+      "evidence": {
+        "carried_from": "v0.1.2"
+      }
+    },
+    "checkpoint_phase_explicit": {
+      "status": "PASS",
+      "evidence": {
+        "checkpoint_phase_explicit": true,
+        "fork_continuation_starts_after_checkpoint": true,
+        "fork_event_time_explicit": true,
+        "fork_has_no_duplicate_transition": true,
+        "fork_final_state_diff_explained_by_fork_event": true,
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "rollback_reproduces_original_final_state": true,
+        "rollback_continuation_starts_after_checkpoint": true,
+        "source_branch_unchanged_after_fork": true
+      }
+    },
+    "fork_continuation_starts_after_checkpoint": {
+      "status": "PASS",
+      "evidence": {
+        "checkpoint_phase_explicit": true,
+        "fork_continuation_starts_after_checkpoint": true,
+        "fork_event_time_explicit": true,
+        "fork_has_no_duplicate_transition": true,
+        "fork_final_state_diff_explained_by_fork_event": true,
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "rollback_reproduces_original_final_state": true,
+        "rollback_continuation_starts_after_checkpoint": true,
+        "source_branch_unchanged_after_fork": true
+      }
+    },
+    "fork_event_time_explicit": {
+      "status": "PASS",
+      "evidence": {
+        "checkpoint_phase_explicit": true,
+        "fork_continuation_starts_after_checkpoint": true,
+        "fork_event_time_explicit": true,
+        "fork_has_no_duplicate_transition": true,
+        "fork_final_state_diff_explained_by_fork_event": true,
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "rollback_reproduces_original_final_state": true,
+        "rollback_continuation_starts_after_checkpoint": true,
+        "source_branch_unchanged_after_fork": true
+      }
+    },
+    "fork_has_no_duplicate_transition": {
+      "status": "PASS",
+      "evidence": {
+        "checkpoint_phase_explicit": true,
+        "fork_continuation_starts_after_checkpoint": true,
+        "fork_event_time_explicit": true,
+        "fork_has_no_duplicate_transition": true,
+        "fork_final_state_diff_explained_by_fork_event": true,
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "rollback_reproduces_original_final_state": true,
+        "rollback_continuation_starts_after_checkpoint": true,
+        "source_branch_unchanged_after_fork": true
+      }
+    },
+    "rollback_reproduces_original_final_state": {
+      "status": "PASS",
+      "evidence": {
+        "checkpoint_phase_explicit": true,
+        "fork_continuation_starts_after_checkpoint": true,
+        "fork_event_time_explicit": true,
+        "fork_has_no_duplicate_transition": true,
+        "fork_final_state_diff_explained_by_fork_event": true,
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "rollback_reproduces_original_final_state": true,
+        "rollback_continuation_starts_after_checkpoint": true,
+        "source_branch_unchanged_after_fork": true
+      }
+    },
+    "rollback_continuation_starts_after_checkpoint": {
+      "status": "PASS",
+      "evidence": {
+        "checkpoint_phase_explicit": true,
+        "fork_continuation_starts_after_checkpoint": true,
+        "fork_event_time_explicit": true,
+        "fork_has_no_duplicate_transition": true,
+        "fork_final_state_diff_explained_by_fork_event": true,
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "rollback_reproduces_original_final_state": true,
+        "rollback_continuation_starts_after_checkpoint": true,
+        "source_branch_unchanged_after_fork": true
+      }
+    },
+    "source_branch_unchanged_after_fork": {
+      "status": "PASS",
+      "evidence": {
+        "checkpoint_phase_explicit": true,
+        "fork_continuation_starts_after_checkpoint": true,
+        "fork_event_time_explicit": true,
+        "fork_has_no_duplicate_transition": true,
+        "fork_final_state_diff_explained_by_fork_event": true,
+        "parent_state_unchanged_after_fork": true,
+        "parent_history_unchanged_after_fork": true,
+        "parent_events_unchanged_after_fork": true,
+        "parent_recomputed_hash_matches_stored_hash": true,
+        "fork_isolation_verified": true,
+        "rollback_reproduces_original_final_state": true,
+        "rollback_continuation_starts_after_checkpoint": true,
+        "source_branch_unchanged_after_fork": true
+      }
+    }
+  },
+  "policy": {
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "core_development_status": "ACTIVE",
+    "authorised_data_access": "ENABLED",
+    "core_slice_version": "0.1.2.1",
+    "deferred_production_hardening": [
+      "initial_root_token_available",
+      "vault_key_custody_decision_required",
+      "pgp_keys_shared_keyring_empty_passphrase",
+      "multi_custodian_separation_absent"
+    ],
+    "closed_security_findings": [
+      "limited_operator_identity_absent",
+      "loader_restart_reauth_procedure_absent"
+    ],
+    "security_blocks_core": false,
+    "clinical_validation_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "clinical_rows_read": 0,
+    "raw_db_connections": 0,
+    "note": "Security findings are advisory only; they must not change core command exit codes"
+  },
+  "scope": {
+    "cohort_loaded_subjects": 100,
+    "timelines_built_subjects": 10,
+    "snapshots_built_subjects": 10,
+    "simulated_subjects": 1,
+    "sample_class": "TECHNICAL_COVERAGE_BIASED_SAMPLE",
+    "honesty_note": "v0.1.2.1 reuses accepted v0.1.2 cohort scope; simulation evidence recomputed on synthetic metric state without clinical row reads."
+  },
+  "started_at": "2026-08-14T14:06:41.072760+00:00",
+  "finished_at": "2026-08-14T14:06:41.092799+00:00",
+  "canonical_row_counts": {
+    "source_system": 1,
+    "source_record": 12544,
+    "subject": 100,
+    "subject_characteristic": 200,
+    "encounter": 2153,
+    "observation": 4000,
+    "observation_component": 5333
+  },
+  "clinical_rows_read": 0,
+  "raw_db_connections": 0,
+  "fork_effect": {
+    "counterfactual_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+    "event_fork_final_state_hash": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3",
+    "weekly_hashes": {
+      "counterfactual": {
+        "3": "dcedf8e7a408ea6ada6c64de246a45dbbef21819fa4b92ccf1866f7434821be0",
+        "4": "f48143e1badb33c6390fa96afb9ba5c0a4902450239ad14cfb56d61846492e36",
+        "5": "28b9fc9665d6753c6a6e762f228ca1a8da8ab02d40cc5c48f2de2e108ca12c00",
+        "6": "e6e327a32f3e013d0055abe3ee7c7153a76d70e4ad5e3e595364571a18e2d664",
+        "7": "3ac296003f77b3fa289db525a401feef251975cea0fda19825d0bf146284c1fe",
+        "8": "a25b264c59f512f266272b76c638174fdcb2de0d791513450f54c5f60d26ada7",
+        "9": "2056ade4a0780701214971361049aaa9b23302591416a9f78651d53b9afd6ec6",
+        "10": "542a6eab9f828ccb0166b0a4ceefffde18c9abbe5ad08ecde6cda9b2354ea4e9",
+        "11": "104a0406891e76b9265613ece300e8a6d9bdccd4b5e48e30e73cfe11bc7a36a2",
+        "12": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+      },
+      "event_fork": {
+        "3": "aa2d1e0fc70c442c4d5bbf0f178c141cf2fc3ce7e62b2420e0e268b62da434c5",
+        "4": "a2309f62bf164dcaf3ddce3bbfde4c77398e13c08ac533503d1027b80e3455e3",
+        "5": "ada03d085babf2c5e020b56239034473cbed23c7a5415866f8e4058e242a3954",
+        "6": "7f09d42117834ef7853ef2a466c17fadbbd3f1722c8d87b5e51e1572af05a186",
+        "7": "9026eab0d9065aee2c3c3fb8ddd94201006fc5b4451f562631565c2a1363c0e2",
+        "8": "d10ec9f0535b07f52652fbf51d13bcc5c48e9d717ceb7268b89a582e73afc173",
+        "9": "1e06542001fe71ca856a8e728d6162c9fdd5b19494ccdccd81347e5314e8ac9f",
+        "10": "c868167e7c47119cdf7e48562cd82c20dfb902a9d74ca443f8a252e16d1a0744",
+        "11": "02794466180883063bfbdc1d377702cc234b9b26c2ca0ffe676734d39dac98d9",
+        "12": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3"
+      }
+    },
+    "applied_event": {
+      "week": 3,
+      "type": "dose_change",
+      "dose": 1.5,
+      "name": "fork_dose_nudge"
+    },
+    "event_week": 3,
+    "changed_variables": [
+      "metric"
+    ],
+    "first_divergence_week": 3,
+    "both_started_from_same_checkpoint_hash": true,
+    "final_hashes_differ": true,
+    "at_least_one_state_variable_changed": true,
+    "divergence_not_before_event_week": true,
+    "fork_final_state_diff_explained_by_fork_event": true
+  },
+  "parent_isolation": {
+    "parent_state_unchanged_after_fork": true,
+    "parent_history_unchanged_after_fork": true,
+    "parent_events_unchanged_after_fork": true,
+    "parent_recomputed_hash_matches_stored_hash": true,
+    "fork_isolation_verified": true,
+    "before": {
+      "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+      "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 13
+    },
+    "after": {
+      "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+      "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 13,
+      "stored_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+    }
+  },
+  "database_provenance_coverage": {
+    "total_records_evaluated": 24331,
+    "valid_records": 24331,
+    "invalid_records": 0,
+    "invalid_by_entity": {},
+    "per_entity": {
+      "source_system": {
+        "total": 1,
+        "valid": 1,
+        "invalid": 0,
+        "note": "no_provenance_column_identity_row"
+      },
+      "source_record": {
+        "total": 12544,
+        "valid": 12544,
+        "invalid": 0
+      },
+      "subject": {
+        "total": 100,
+        "valid": 100,
+        "invalid": 0
+      },
+      "subject_characteristic": {
+        "total": 200,
+        "valid": 200,
+        "invalid": 0
+      },
+      "encounter": {
+        "total": 2153,
+        "valid": 2153,
+        "invalid": 0
+      },
+      "observation": {
+        "total": 4000,
+        "valid": 4000,
+        "invalid": 0
+      },
+      "observation_component": {
+        "total": 5333,
+        "valid": 5333,
+        "invalid": 0
+      }
+    },
+    "full_coverage": true,
+    "source": "carried_from_accepted_v0.1.2",
+    "denominator_kind": "canonical_db_rows",
+    "clinical_rows_read_this_changeset": 0,
+    "raw_db_connections_this_changeset": 0,
+    "baseline_row_counts": {
+      "source_system": 1,
+      "source_record": 12544,
+      "subject": 100,
+      "subject_characteristic": 200,
+      "encounter": 2153,
+      "observation": 4000,
+      "observation_component": 5333
+    }
+  },
+  "computed_provenance_coverage": {
+    "total_records_evaluated": 7,
+    "valid_records": 7,
+    "invalid_records": 0,
+    "per_entity": {
+      "EvidenceStateSnapshot": {
+        "total": 1,
+        "valid": 1,
+        "invalid": 0
+      },
+      "StateSnapshotComponent": {
+        "total": 1,
+        "valid": 1,
+        "invalid": 0
+      },
+      "ScenarioCheckpoint": {
+        "total": 3,
+        "valid": 3,
+        "invalid": 0
+      },
+      "fork_rollback_computation_evidence": {
+        "total": 2,
+        "valid": 2,
+        "invalid": 0
+      }
+    },
+    "full_coverage": true,
+    "denominator_kind": "in_memory_computed_artifacts"
+  },
+  "overall_provenance_status": "PASS",
+  "accepted_design_contracts": {
+    "ok": true,
+    "status": "PASS",
+    "manifest_path": "artifacts/stage-03/design-content-manifest.sha256",
+    "manifest_sha256": "cb75fadb06a6d650b27b2136a2df8b9c86b358305cfd24a56589f827d5ab2468",
+    "manifest_self_hash_absent": true,
+    "contracts": {
+      "canonical-model.yaml": {
+        "path": "artifacts/stage-03/canonical-model.yaml",
+        "present": true,
+        "expected_sha256": "54e7ef79a3e730ff9da90c59cff2b7cb78b6f3f759fc37f8c89bf813affc161f",
+        "computed_sha256": "54e7ef79a3e730ff9da90c59cff2b7cb78b6f3f759fc37f8c89bf813affc161f",
+        "matches_manifest": true
+      },
+      "provenance-contract.yaml": {
+        "path": "artifacts/stage-03/provenance-contract.yaml",
+        "present": true,
+        "expected_sha256": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+        "computed_sha256": "4783bcd72539651c24ed96552a89bf9bfb763da101d6ddeb33551604070684ee",
+        "matches_manifest": true
+      },
+      "temporal-contract.yaml": {
+        "path": "artifacts/stage-03/temporal-contract.yaml",
+        "present": true,
+        "expected_sha256": "e6c4bc62ed3d8aabfb2e56d2dd3d005854fda26e172d3b98f91fc300896be2c4",
+        "computed_sha256": "e6c4bc62ed3d8aabfb2e56d2dd3d005854fda26e172d3b98f91fc300896be2c4",
+        "matches_manifest": true
+      }
+    },
+    "validator_computed_required_fields": [
+      "computation_method",
+      "computation_version",
+      "confidence",
+      "input_artifact_sha256",
+      "input_record_references",
+      "mapping_status",
+      "record_origin",
+      "transformation_id",
+      "transformation_version",
+      "transformed_at",
+      "uncertainty"
+    ],
+    "contract_computed_required_fields": [
+      "computation_method",
+      "computation_version",
+      "confidence",
+      "input_artifact_sha256",
+      "input_record_references",
+      "mapping_status",
+      "record_origin",
+      "transformation_id",
+      "transformation_version",
+      "transformed_at",
+      "uncertainty"
+    ],
+    "validator_covers_contract_required_fields": true,
+    "validator_weakened_vs_contract": false,
+    "validator_forbidden_fields": [
+      "source_record_locator"
+    ],
+    "yaml_parse_error": null,
+    "check_name": "accepted_design_contracts_present_and_verified"
+  }
+}

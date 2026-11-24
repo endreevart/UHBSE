@@ -1,0 +1,120 @@
+{
+  "version": "0.1.1",
+  "RUNTIME_APPLICABILITY_STATUS": "PASS",
+  "items": [
+    {
+      "name": "ordinary_in_support",
+      "ok": true,
+      "detail": {
+        "version": "0.1.1",
+        "applicability_status": "IN_SUPPORT",
+        "pass": true,
+        "reasons": [],
+        "horizon_ood": false,
+        "ood_features": [],
+        "missing_feature_slots": [],
+        "applicability_reference_hash_present": true,
+        "hash_alone_not_sufficient": true
+      }
+    },
+    {
+      "name": "horizon_ood",
+      "ok": true,
+      "detail": {
+        "version": "0.1.1",
+        "applicability_status": "OUT_OF_SUPPORT",
+        "pass": false,
+        "reasons": [
+          "horizon_ood"
+        ],
+        "horizon_ood": true,
+        "ood_features": [],
+        "missing_feature_slots": [],
+        "applicability_reference_hash_present": true,
+        "hash_alone_not_sufficient": true
+      }
+    },
+    {
+      "name": "value_feature_ood",
+      "ok": true,
+      "detail": {
+        "version": "0.1.1",
+        "applicability_status": "PARTIAL_SUPPORT",
+        "pass": false,
+        "reasons": [
+          "feature_ood:y_t0"
+        ],
+        "horizon_ood": false,
+        "ood_features": [
+          "y_t0"
+        ],
+        "missing_feature_slots": [],
+        "applicability_reference_hash_present": true,
+        "hash_alone_not_sufficient": true
+      }
+    },
+    {
+      "name": "missing_required_value",
+      "ok": true,
+      "detail": {
+        "applicability_status": "UNSUPPORTED_INPUT",
+        "pass": false,
+        "reasons": [
+          "missing_required_y_t0"
+        ],
+        "version": "0.1.1"
+      }
+    },
+    {
+      "name": "zero_numeric_evaluated",
+      "ok": true,
+      "detail": {
+        "version": "0.1.1",
+        "applicability_status": "PARTIAL_SUPPORT",
+        "pass": false,
+        "reasons": [
+          "feature_ood:y_t0"
+        ],
+        "horizon_ood": false,
+        "ood_features": [
+          "y_t0"
+        ],
+        "missing_feature_slots": [],
+        "applicability_reference_hash_present": true,
+        "hash_alone_not_sufficient": true
+      }
+    },
+    {
+      "name": "missing_prior_history_evaluated",
+      "ok": true,
+      "detail": {
+        "version": "0.1.1",
+        "applicability_status": "IN_SUPPORT",
+        "pass": true,
+        "reasons": [],
+        "horizon_ood": false,
+        "ood_features": [],
+        "missing_feature_slots": [],
+        "applicability_reference_hash_present": true,
+        "hash_alone_not_sufficient": true
+      }
+    },
+    {
+      "name": "no_source_b_status_key",
+      "ok": true,
+      "detail": [
+        "version",
+        "source_a_heldout_applicability_status",
+        "pass",
+        "n_pairs",
+        "in_support_fraction",
+        "out_of_support_fraction",
+        "partial_support_fraction",
+        "unsupported_fraction",
+        "horizon_ood_fraction",
+        "ood_fraction_threshold",
+        "note"
+      ]
+    }
+  ]
+}

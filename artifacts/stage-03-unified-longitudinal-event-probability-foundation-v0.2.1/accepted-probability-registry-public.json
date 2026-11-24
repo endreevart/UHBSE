@@ -1,0 +1,3599 @@
+{
+  "version": "0.2.1",
+  "CELL_LEVEL_ACCEPTANCE_REGISTRY_STATUS": "BUILT",
+  "global_status": "PARTIAL_ACCEPTED",
+  "coverage_gate": {
+    "rule": "both_sources_primary_endpoint_share_at_least_one_accepted_horizon",
+    "primary_endpoint": "TIME_TO_NEXT_LAB_PANEL",
+    "source_a_primary_accepted_horizons": [],
+    "source_b_primary_accepted_horizons": [
+      90,
+      180,
+      365
+    ],
+    "shared_horizons": [],
+    "passed": false
+  },
+  "ACCEPTED_PROBABILITY_CELL_COUNT": 9,
+  "SOURCE_A_ACCEPTED_PROBABILITY_CELL_COUNT": 2,
+  "SOURCE_B_ACCEPTED_PROBABILITY_CELL_COUNT": 7,
+  "rejected_cell_count": 35,
+  "not_run_count": 275,
+  "trained_model_count": 12,
+  "frozen_model_count": 12,
+  "unexplained": 0,
+  "one_b_observation_cell_is_not_a_plus_b_foundation": true,
+  "cells": {
+    "magerya_api|TIME_TO_NEXT_LAB_PANEL|null|30": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 30,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.4850656371053686,
+        "slope": 0.8191138141885407,
+        "ece": 0.0783801526158731
+      },
+      "model_file": "frozen-11063152e702d227.json",
+      "model_file_sha256": "5f8157483154510ad4d5fe0c032a7fef4f024f89fb45ebe5d190834c3bca3659",
+      "model_identity_sha256": "c8251ed30765b1149459fd76e2eeb76c9a6bab84e2d787592a611b621b696962",
+      "cell_id_sha256": "11063152e702d22730c5eb4e0f77d1667ef5ad2246d528d2c0434f5a3a602d2d",
+      "calibrator_sha256": "ae9dd267f02a6b499171ec19a23b5cada0cdd4bb64711528cde8276699d55780",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ad9b1794162a4170347e5479a4f808107c77d0070da84316cd6201ca2ce367fd",
+      "censoring_model_sha256": "d9acd328ffaf97dce4095f0bae99c79e7718433794caba81f317f32f1a190fb8",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_NEXT_LAB_PANEL|null|90": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.4850656371053686,
+        "slope": 0.7434359444479981,
+        "ece": 0.046323966767121305
+      },
+      "model_file": "frozen-11063152e702d227.json",
+      "model_file_sha256": "5f8157483154510ad4d5fe0c032a7fef4f024f89fb45ebe5d190834c3bca3659",
+      "model_identity_sha256": "c8251ed30765b1149459fd76e2eeb76c9a6bab84e2d787592a611b621b696962",
+      "cell_id_sha256": "11063152e702d22730c5eb4e0f77d1667ef5ad2246d528d2c0434f5a3a602d2d",
+      "calibrator_sha256": "00307f5cc09ab46361b214bcf301fc96401f51cc5559b31b0ce124e7ee0c863f",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ad9b1794162a4170347e5479a4f808107c77d0070da84316cd6201ca2ce367fd",
+      "censoring_model_sha256": "d9acd328ffaf97dce4095f0bae99c79e7718433794caba81f317f32f1a190fb8",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_NEXT_LAB_PANEL|null|180": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.4850656371053686,
+        "slope": 0.8634668833137551,
+        "ece": 0.026786098114249465
+      },
+      "model_file": "frozen-11063152e702d227.json",
+      "model_file_sha256": "5f8157483154510ad4d5fe0c032a7fef4f024f89fb45ebe5d190834c3bca3659",
+      "model_identity_sha256": "c8251ed30765b1149459fd76e2eeb76c9a6bab84e2d787592a611b621b696962",
+      "cell_id_sha256": "11063152e702d22730c5eb4e0f77d1667ef5ad2246d528d2c0434f5a3a602d2d",
+      "calibrator_sha256": "e07a670e73866e9c0be42c0095ce91d4661140a26c45c2d5a36b54c807e288d9",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ad9b1794162a4170347e5479a4f808107c77d0070da84316cd6201ca2ce367fd",
+      "censoring_model_sha256": "d9acd328ffaf97dce4095f0bae99c79e7718433794caba81f317f32f1a190fb8",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_NEXT_LAB_PANEL|null|365": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.4850656371053686,
+        "slope": 1.2308466053845213,
+        "ece": 0.016143730740569767
+      },
+      "model_file": "frozen-11063152e702d227.json",
+      "model_file_sha256": "5f8157483154510ad4d5fe0c032a7fef4f024f89fb45ebe5d190834c3bca3659",
+      "model_identity_sha256": "c8251ed30765b1149459fd76e2eeb76c9a6bab84e2d787592a611b621b696962",
+      "cell_id_sha256": "11063152e702d22730c5eb4e0f77d1667ef5ad2246d528d2c0434f5a3a602d2d",
+      "calibrator_sha256": "14d1539e8f03004a7cc2cde9530846a41d2de5805b5f507443268e003086066b",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ad9b1794162a4170347e5479a4f808107c77d0070da84316cd6201ca2ce367fd",
+      "censoring_model_sha256": "d9acd328ffaf97dce4095f0bae99c79e7718433794caba81f317f32f1a190fb8",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_NEXT_LAB_PANEL|null|30": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 30,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.6045635885668589,
+        "slope": 1.2270428128622886,
+        "ece": 0.012935819262804708
+      },
+      "model_file": "frozen-9ab0167596f01a96.json",
+      "model_file_sha256": "4c08fa81e5ac6ab648f21b3d802c8952d2e4b935a876a5a9e028cdae75ee72de",
+      "model_identity_sha256": "090931488d091e647c2e46c8c871036c4b288432deefa7153684477e4c383ab1",
+      "cell_id_sha256": "9ab0167596f01a963a8c57d495bdc1fc35b7ea9e4e48e37ce3a9f74326cc237d",
+      "calibrator_sha256": "fd58820fc6b33c7e9858ffd1d2cda0adad9c7716f4f79dee7a2a99e758128bcd",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "3e3c6575dec2b491d053f81aba916ae2a11cf6a741be69e5fda6ffbf657dbff3",
+      "censoring_model_sha256": "1c0d9e00937bce4afc94518b5aaccdb9ce6f68c41064d01298437c4003722d06",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_NEXT_LAB_PANEL|null|90": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.6045635885668589,
+        "slope": 0.8841971178308298,
+        "ece": 0.12037270388824714
+      },
+      "model_file": "frozen-9ab0167596f01a96.json",
+      "model_file_sha256": "4c08fa81e5ac6ab648f21b3d802c8952d2e4b935a876a5a9e028cdae75ee72de",
+      "model_identity_sha256": "090931488d091e647c2e46c8c871036c4b288432deefa7153684477e4c383ab1",
+      "cell_id_sha256": "9ab0167596f01a963a8c57d495bdc1fc35b7ea9e4e48e37ce3a9f74326cc237d",
+      "calibrator_sha256": "e684cdc0757168dcc27545e7814afafddccbf6f0c432c320f8dfa099e779c0f4",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "3e3c6575dec2b491d053f81aba916ae2a11cf6a741be69e5fda6ffbf657dbff3",
+      "censoring_model_sha256": "1c0d9e00937bce4afc94518b5aaccdb9ce6f68c41064d01298437c4003722d06",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_NEXT_LAB_PANEL|null|180": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.6045635885668589,
+        "slope": 0.8024944702167721,
+        "ece": 0.06906394521345463
+      },
+      "model_file": "frozen-9ab0167596f01a96.json",
+      "model_file_sha256": "4c08fa81e5ac6ab648f21b3d802c8952d2e4b935a876a5a9e028cdae75ee72de",
+      "model_identity_sha256": "090931488d091e647c2e46c8c871036c4b288432deefa7153684477e4c383ab1",
+      "cell_id_sha256": "9ab0167596f01a963a8c57d495bdc1fc35b7ea9e4e48e37ce3a9f74326cc237d",
+      "calibrator_sha256": "02f7edff6c1dd865da97f6d817a74ebc7bb69cb2a89c40b8813e574a34160e1f",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "3e3c6575dec2b491d053f81aba916ae2a11cf6a741be69e5fda6ffbf657dbff3",
+      "censoring_model_sha256": "1c0d9e00937bce4afc94518b5aaccdb9ce6f68c41064d01298437c4003722d06",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_NEXT_LAB_PANEL|null|365": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.6045635885668589,
+        "slope": 1.3189316691174195,
+        "ece": 0.01874030951548077
+      },
+      "model_file": "frozen-9ab0167596f01a96.json",
+      "model_file_sha256": "4c08fa81e5ac6ab648f21b3d802c8952d2e4b935a876a5a9e028cdae75ee72de",
+      "model_identity_sha256": "090931488d091e647c2e46c8c871036c4b288432deefa7153684477e4c383ab1",
+      "cell_id_sha256": "9ab0167596f01a963a8c57d495bdc1fc35b7ea9e4e48e37ce3a9f74326cc237d",
+      "calibrator_sha256": "15907bd08c1de1987ca8f9a8a08ebae10c7823f176558aac40b13766c12d42ca",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "3e3c6575dec2b491d053f81aba916ae2a11cf6a741be69e5fda6ffbf657dbff3",
+      "censoring_model_sha256": "1c0d9e00937bce4afc94518b5aaccdb9ce6f68c41064d01298437c4003722d06",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_NEXT_ENCOUNTER|null|30": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 30,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.4620944830754071,
+        "slope": 0.9158089778674928,
+        "ece": 0.09012228769014224
+      },
+      "model_file": "frozen-323214f50d6095e6.json",
+      "model_file_sha256": "970c98f878204f04c9d3d36d88041d36985eb51cbcaa08372dfc58eb3222426d",
+      "model_identity_sha256": "2e5fd873908e8f5759df091eb3b379febe1b909890caecf8f5d59e562a3c2a7a",
+      "cell_id_sha256": "323214f50d6095e62d92f8d9a1ab2a767f4593b119c74a4f0d1d44c569a74c8a",
+      "calibrator_sha256": "c71da6480103b301fb46221b93518c00b4bc153b66e6f8718a3013790ac05a79",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "99919c1d3b4fb227ff81b36c27994da70f14f2dffed7fe28a78bc5521ff96863",
+      "censoring_model_sha256": "ed8ac6b204be7d5dac513023675f157a352305d35a09c97d91817bb8c794ad1a",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_NEXT_ENCOUNTER|null|90": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.4620944830754071,
+        "slope": 0.9446759899660184,
+        "ece": 0.06051755358603188
+      },
+      "model_file": "frozen-323214f50d6095e6.json",
+      "model_file_sha256": "970c98f878204f04c9d3d36d88041d36985eb51cbcaa08372dfc58eb3222426d",
+      "model_identity_sha256": "2e5fd873908e8f5759df091eb3b379febe1b909890caecf8f5d59e562a3c2a7a",
+      "cell_id_sha256": "323214f50d6095e62d92f8d9a1ab2a767f4593b119c74a4f0d1d44c569a74c8a",
+      "calibrator_sha256": "619b2d28a68fd739c327de68758e7fe2e3da6a543a432e81451165539cb93756",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "99919c1d3b4fb227ff81b36c27994da70f14f2dffed7fe28a78bc5521ff96863",
+      "censoring_model_sha256": "ed8ac6b204be7d5dac513023675f157a352305d35a09c97d91817bb8c794ad1a",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_NEXT_ENCOUNTER|null|180": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.4620944830754071,
+        "slope": 1.0434031801196004,
+        "ece": 0.04250869881327438
+      },
+      "model_file": "frozen-323214f50d6095e6.json",
+      "model_file_sha256": "970c98f878204f04c9d3d36d88041d36985eb51cbcaa08372dfc58eb3222426d",
+      "model_identity_sha256": "2e5fd873908e8f5759df091eb3b379febe1b909890caecf8f5d59e562a3c2a7a",
+      "cell_id_sha256": "323214f50d6095e62d92f8d9a1ab2a767f4593b119c74a4f0d1d44c569a74c8a",
+      "calibrator_sha256": "f1db6a09e32bc2993d95d6adeacdf21c2cd479a3e9ef48fb3b42c0244ae52e2d",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "99919c1d3b4fb227ff81b36c27994da70f14f2dffed7fe28a78bc5521ff96863",
+      "censoring_model_sha256": "ed8ac6b204be7d5dac513023675f157a352305d35a09c97d91817bb8c794ad1a",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_NEXT_ENCOUNTER|null|365": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.4620944830754071,
+        "slope": 1.2585444123257463,
+        "ece": 0.028083918200466986
+      },
+      "model_file": "frozen-323214f50d6095e6.json",
+      "model_file_sha256": "970c98f878204f04c9d3d36d88041d36985eb51cbcaa08372dfc58eb3222426d",
+      "model_identity_sha256": "2e5fd873908e8f5759df091eb3b379febe1b909890caecf8f5d59e562a3c2a7a",
+      "cell_id_sha256": "323214f50d6095e62d92f8d9a1ab2a767f4593b119c74a4f0d1d44c569a74c8a",
+      "calibrator_sha256": "9852566903f9c84f484f5a2f8846943b94760adf3c4c514f08156d992bd8a680",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "99919c1d3b4fb227ff81b36c27994da70f14f2dffed7fe28a78bc5521ff96863",
+      "censoring_model_sha256": "ed8ac6b204be7d5dac513023675f157a352305d35a09c97d91817bb8c794ad1a",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_NEXT_ENCOUNTER|null|30": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 30,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.6835538045751615,
+        "slope": 0.9971663292171636,
+        "ece": 0.19123337593764642
+      },
+      "model_file": "frozen-4db49c9ae7354669.json",
+      "model_file_sha256": "c39f46c923c17d91eacc30c7d244c0a2929089e1a1905d16248068e9944f6d83",
+      "model_identity_sha256": "717e28910909508ece92386127920ef44c7b4cc13cf1724f8f3cf94a4c585796",
+      "cell_id_sha256": "4db49c9ae735466989da8ed9b37784d96480a47c0cab0bf1996f614a17ba2e2f",
+      "calibrator_sha256": "670ecb015af80432ecb5f76f780377e38a7f618cbdaeb636b41adaf6ea3a88c5",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "f440e1f24758c4bffe052f2b24cbbd52fe15b19eba9d2255a80d67a563056836",
+      "censoring_model_sha256": "b2c824c1e3e5b72f2efcdf69565dddadaa16d127ff13771225064d5c1d8641db",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_NEXT_ENCOUNTER|null|90": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.6835538045751615,
+        "slope": 0.9375430464915361,
+        "ece": 0.09758985937943837
+      },
+      "model_file": "frozen-4db49c9ae7354669.json",
+      "model_file_sha256": "c39f46c923c17d91eacc30c7d244c0a2929089e1a1905d16248068e9944f6d83",
+      "model_identity_sha256": "717e28910909508ece92386127920ef44c7b4cc13cf1724f8f3cf94a4c585796",
+      "cell_id_sha256": "4db49c9ae735466989da8ed9b37784d96480a47c0cab0bf1996f614a17ba2e2f",
+      "calibrator_sha256": "51fc72ece7ab5fb11791719f5130862298400e709c59fc3614149775a9f503fb",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "f440e1f24758c4bffe052f2b24cbbd52fe15b19eba9d2255a80d67a563056836",
+      "censoring_model_sha256": "b2c824c1e3e5b72f2efcdf69565dddadaa16d127ff13771225064d5c1d8641db",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_NEXT_ENCOUNTER|null|180": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.6835538045751615,
+        "slope": 0.8316659507578684,
+        "ece": 0.0537027040597515
+      },
+      "model_file": "frozen-4db49c9ae7354669.json",
+      "model_file_sha256": "c39f46c923c17d91eacc30c7d244c0a2929089e1a1905d16248068e9944f6d83",
+      "model_identity_sha256": "717e28910909508ece92386127920ef44c7b4cc13cf1724f8f3cf94a4c585796",
+      "cell_id_sha256": "4db49c9ae735466989da8ed9b37784d96480a47c0cab0bf1996f614a17ba2e2f",
+      "calibrator_sha256": "e6f11b1323144a31e02551222b312f6128cd2bf94bf857ae75126c8012d80157",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "f440e1f24758c4bffe052f2b24cbbd52fe15b19eba9d2255a80d67a563056836",
+      "censoring_model_sha256": "b2c824c1e3e5b72f2efcdf69565dddadaa16d127ff13771225064d5c1d8641db",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_NEXT_ENCOUNTER|null|365": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.6835538045751615,
+        "slope": 1.1185408399621284,
+        "ece": 0.005039128910271967
+      },
+      "model_file": "frozen-4db49c9ae7354669.json",
+      "model_file_sha256": "c39f46c923c17d91eacc30c7d244c0a2929089e1a1905d16248068e9944f6d83",
+      "model_identity_sha256": "717e28910909508ece92386127920ef44c7b4cc13cf1724f8f3cf94a4c585796",
+      "cell_id_sha256": "4db49c9ae735466989da8ed9b37784d96480a47c0cab0bf1996f614a17ba2e2f",
+      "calibrator_sha256": "b1be557ab560b9289bcf363ee360e773a40d62f9dbf2ae08d0e7fb98969417d2",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "f440e1f24758c4bffe052f2b24cbbd52fe15b19eba9d2255a80d67a563056836",
+      "censoring_model_sha256": "b2c824c1e3e5b72f2efcdf69565dddadaa16d127ff13771225064d5c1d8641db",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "None|TIME_TO_NEXT_RECORDED_EVENT|null|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_NEXT_RECORDED_EVENT",
+      "outcome_key": null,
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::АСТ::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::АСТ::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Инсулин::мкЕд/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Инсулин::мкЕд/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::25(OH)витамин D::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::25(OH)витамин D::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ЛПНП::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ЛПНП::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Триглицериды::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Триглицериды::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Т3 св.::пмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Т3 св.::пмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ЛПВП::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ЛПВП::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ТТГ::мкМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ТТГ::мкМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Т4 св.::пмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Т4 св.::пмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Железо::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Железо::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Глюкоза::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Глюкоза::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Кортизол::мкг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Кортизол::мкг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::АЛТ::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::АЛТ::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Общий белок::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Общий белок::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Паратгормон::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Паратгормон::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Витамин B12 (цианкобаламин)::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Витамин B12 (цианкобаламин)::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эритроциты::*10^12/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эритроциты::*10^12/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Гемоглобин::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Гемоглобин::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Цветной показатель::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Цветной показатель::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Лейкоциты::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лейкоциты::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Базофилы::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Базофилы::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Тромбоциты::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Тромбоциты::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ЛГ::мМе/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ЛГ::мМе/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эстрадиол::пмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эстрадиол::пмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ФСГ::мМе/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ФСГ::мМе/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Витамин В9 (фолиевая кислота)::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Витамин В9 (фолиевая кислота)::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Ферритин::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Ферритин::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ДГЭА–сульфат::мкг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ДГЭА–сульфат::мкг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Пролактин::мМЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Пролактин::мМЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Тестостерон общий::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Тестостерон общий::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Трансферрин::мг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Трансферрин::мг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ОЖСС::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ОЖСС::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::D–димер::мкг FEU /мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::D–димер::мкг FEU /мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Фибриноген::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Фибриноген::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Гомоцистеин::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Гомоцистеин::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::МНО::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::МНО::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Латентная железосвязывающая способность сыворотки::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Латентная железосвязывающая способность сыворотки::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::АЧТВ::сек|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::АЧТВ::сек",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Ат к ТПО::МЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Ат к ТПО::МЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Прогестерон::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Прогестерон::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Тромбиновое время::сек|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Тромбиновое время::сек",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Протромбиновое время::сек|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Протромбиновое время::сек",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ГГТ::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ГГТ::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Креатинин::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Креатинин::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Мочевина::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Мочевина::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::СОЭ::мм/час|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::СОЭ::мм/час",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Мочевая кислота::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Мочевая кислота::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Медь::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Медь::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Цинк::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Цинк::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Витамин А (ретинол)::мкг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Витамин А (ретинол)::мкг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Фруктозамин::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Фруктозамин::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::pH::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::pH::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Относительная плотность::г/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Относительная плотность::г/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эритроциты::кл/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эритроциты::кл/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Лейкоциты::кл/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лейкоциты::кл/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эпителий плоский::кл/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эпителий плоский::кл/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эпителий переходный::кл/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эпителий переходный::кл/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Цилиндры гиалиновые::Ед/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Цилиндры гиалиновые::Ед/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ПТВ::сек|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ПТВ::сек",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Ревматоидный фактор::МЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Ревматоидный фактор::МЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ЛПОНП::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ЛПОНП::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Антистрептолизин–О::МЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Антистрептолизин–О::МЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::С–реактивный белок::мг/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::С–реактивный белок::мг/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Щелочная фосфатаза::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Щелочная фосфатаза::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Билирубин непрямой::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Билирубин непрямой::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Билирубин прямой::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Билирубин прямой::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Билирубин общий::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Билирубин общий::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Кальций общий::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Кальций общий::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Гликированный гемоглобин::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Гликированный гемоглобин::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Относительная плотность::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Относительная плотность::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Альбумин::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Альбумин::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Общая железосвязывающая способность сыворотки::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Общая железосвязывающая способность сыворотки::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Кальцитонин::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Кальцитонин::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Фосфор неорганический::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Фосфор неорганический::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Магний::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Магний::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Средний объем эритроцитов (MCV)::фл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Средний объем эритроцитов (MCV)::фл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Среднее содержание гемоглобина в эритроците (MCH)::пг/кл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Среднее содержание гемоглобина в эритроците (MCH)::пг/кл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Средняя концентрация гемоглобина в эритроцитах (MCHC)::г/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Средняя концентрация гемоглобина в эритроцитах (MCHC)::г/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Распределение эритроцитов по объему (ст.отклонение) RDW-SD::фл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Распределение эритроцитов по объему (ст.отклонение) RDW-SD::фл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Распределение эритроцитов по объему (коэфф.вариации) RDW-CV::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Распределение эритроцитов по объему (коэфф.вариации) RDW-CV::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эозинофильный катионный белок::мкг/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эозинофильный катионный белок::мкг/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Холестерин общий::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Холестерин общий::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Медь::мкг/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Медь::мкг/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::АМГ::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::АМГ::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Гематокрит::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Гематокрит::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Иммуноглобулин Е::МЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Иммуноглобулин Е::МЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Кальций ионизированный::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Кальций ионизированный::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ГСПГ::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ГСПГ::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Мочевая кислота::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Мочевая кислота::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::РЭА::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::РЭА::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Тестостерон::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Тестостерон::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Дегидроэпиандростерон::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Дегидроэпиандростерон::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Андростендион::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Андростендион::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Кортизол::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Кортизол::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Кортизон::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Кортизон::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эстрадиол::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эстрадиол::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Прогестерон::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Прогестерон::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::17-гидроксипрогестерон::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::17-гидроксипрогестерон::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ЛЖСС::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ЛЖСС::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Гемоглобин::г/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Гемоглобин::г/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Пролактин::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Пролактин::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Инсулин::мкМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Инсулин::мкМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Паратгормон::пмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Паратгормон::пмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Трансферрин::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Трансферрин::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ТТГ::мМЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ТТГ::мМЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Коэффициент насыщения трансферрина железом::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Коэффициент насыщения трансферрина железом::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Среднее содержание гемоглобина в эритроците (MCH)::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Среднее содержание гемоглобина в эритроците (MCH)::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Белок::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Белок::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Средняя концентрация гемоглобина в эритроцитах (MCHC)::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Средняя концентрация гемоглобина в эритроцитах (MCHC)::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::железо::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::железо::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эозинофильный катионный белок::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эозинофильный катионный белок::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Кортизол::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Кортизол::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Т3 св.::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Т3 св.::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Т4 св.::нг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Т4 св.::нг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Ферритин::мкг/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Ферритин::мкг/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ТТГ::мЕд/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ТТГ::мЕд/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Пролактин::мЕд/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Пролактин::мЕд/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Медь::мкг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Медь::мкг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Ат к ТПО::Ед/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Ат к ТПО::Ед/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Лейкоциты::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лейкоциты::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Тромбоциты::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Тромбоциты::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ЛГ::мМЕд/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ЛГ::мМЕд/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ДГЭА–сульфат::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ДГЭА–сульфат::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ФСГ::мМЕд/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ФСГ::мМЕд/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эритроциты::млн/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эритроциты::млн/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Цинк::мкг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Цинк::мкг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Хлор::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Хлор::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Натрий::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Натрий::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Калий::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Калий::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Витамин В9 (фолиевая кислота)::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Витамин В9 (фолиевая кислота)::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Прогестерон::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Прогестерон::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::СОЭ (по Вестергрену)::мм/час|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::СОЭ (по Вестергрену)::мм/час",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::D–димер::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::D–димер::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Молочная кислота (лактат)::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Молочная кислота (лактат)::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Ат к ТГ::МЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Ат к ТГ::МЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Ат к рТТГ::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Ат к рТТГ::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Антитела к вирусу герпеса VI типа, IgG::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Антитела к вирусу герпеса VI типа, IgG::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Антитела к цитомегаловирусу, IgG::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Антитела к цитомегаловирусу, IgG::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Антитела к ядерному антигену вируса Эпштейна–Барр, IgG::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Антитела к ядерному антигену вируса Эпштейна–Барр, IgG::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Антитела к вирусу простого герпеса I, II типов, IgG::_|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Антитела к вирусу простого герпеса I, II типов, IgG::_",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Тестостерон общий::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Тестостерон общий::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Пролактин::мкМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Пролактин::мкМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::АЛТ::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::АЛТ::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::АСТ::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::АСТ::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Альфа-амилаза::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Альфа-амилаза::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::ЛДГ::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::ЛДГ::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Витамин В6 (пиридоксин)::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Витамин В6 (пиридоксин)::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Уробилиноген::мг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Уробилиноген::мг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::61::мЕд/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::61::мЕд/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::48::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::48::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::51::мкг/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::51::мкг/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::32::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::32::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::64::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::64::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::62::пмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::62::пмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::56::мЕд/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::56::мЕд/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::55::пмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::55::пмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::65::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::65::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::164::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::164::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::149::нмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::149::нмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::28::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::28::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::16::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::16::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::172::мкЕд/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::172::мкЕд/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::8::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::8::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::9::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::9::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::53::пмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::53::пмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1001::г/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1001::г/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::139::мм/час|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::139::мм/час",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1047::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1047::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::60::мМЕд/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::60::мМЕд/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::928::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::928::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::58::Ед/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::58::Ед/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::57::МЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::57::МЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::101::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::101::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1055::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1055::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1056::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1056::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1049::фл.|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1049::фл.",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1050::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1050::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1048::млн/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1048::млн/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1052::г/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1052::г/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1053::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1053::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1054::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1054::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1061::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1061::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1051::пг|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1051::пг",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1058::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1058::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1059::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1059::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1060::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1060::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1057::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1057::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1062::тыс/мкл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1062::тыс/мкл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::172::мкМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::172::мкМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::64::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::64::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::101::мкг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::101::мкг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::61::мкМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::61::мкМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1001::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1001::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::56::мМЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::56::мМЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::8::undefined|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::8::undefined",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::9::undefined|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::9::undefined",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::199::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::199::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::30::мг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::30::мг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::118::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::118::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::153::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::153::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::56::мкМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::56::мкМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::58::МЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::58::МЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::59::мМЕд/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::59::мМЕд/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::117::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::117::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::61::мМЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::61::мМЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::65::мкг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::65::мкг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::55::нг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::55::нг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::62::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::62::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::61::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::61::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::53::пг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::53::пг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::66::мМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::66::мМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1048::*10^12/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1048::*10^12/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1053::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1053::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1054::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1054::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1061::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1061::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1051::пг/кл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1051::пг/кл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1058::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1058::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1059::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1059::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1060::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1060::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1063::фл.|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1063::фл.",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1065::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1065::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1064::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1064::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1062::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1062::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1100::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1100::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::1317B12::пмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::1317B12::пмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::51::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::51::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1052::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1052::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1069::undefined|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1069::undefined",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1079::*10^9/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1079::*10^9/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1080::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1080::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::13::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::13::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::15::Ед/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::15::Ед/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::22::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::22::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::26::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::26::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::14::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::14::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::37::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::37::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::40::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::40::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::18::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::18::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::141::нг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::141::нг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1070::фл.|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1070::фл.",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::60::мМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::60::мМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::27::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::27::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::164::мкг feu /мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::164::мкг feu /мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::1::сек.|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::1::сек.",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::172::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::172::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::164::Мкг/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::164::Мкг/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1101::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1101::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1065::фл.|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1065::фл.",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1071::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1071::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::218::ммоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::218::ммоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::32::мг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::32::мг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::33::мг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::33::мг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::16::мг/дл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::16::мг/дл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::8::UI/I|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::8::UI/I",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::9::UI/I|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::9::UI/I",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::56::µIU/mL|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::56::µIU/mL",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::101::µg/dL|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::101::µg/dL",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::43::мг/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::43::мг/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::59::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::59::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::60::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::60::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::8::Е/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::8::Е/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::9::Е/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::9::Е/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::59::мМЕ/мл|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::59::мМЕ/мл",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::m_1085::%|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::m_1085::%",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::B-INPL::мкмоль/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::B-INPL::мкмоль/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::164::мг/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::164::мг/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::8::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::8::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::9::МЕ/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::9::МЕ/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::3::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::3::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "None|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::10::г/л|0": {
+      "source_system": null,
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::10::г/л",
+      "horizon_days": null,
+      "evaluation_status": "NOT_RUN",
+      "acceptance_status": "NOT_RUN",
+      "reason": "NOT_RUN"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Лимфоциты::%|30": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 30,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.5966443961097294,
+        "slope": 1.0279967130037058,
+        "ece": 0.00849767867420965
+      },
+      "model_file": "frozen-091af0681e79c873.json",
+      "model_file_sha256": "41610c743c71ce607ead1263ef85eddbb7efb8d2a5e8db784df56af9cfb83896",
+      "model_identity_sha256": "523eafefe3fd619ca325a2ecf98719e9e53595f38213e1b5c5dda7f171803b9f",
+      "cell_id_sha256": "091af0681e79c873e040588efe5d1d8b7e7ec9f2af90a854ef5cf7d7e2694488",
+      "calibrator_sha256": "3acd966817908fd03feea16b75659e743d4bc7b035096f53cd0aea754e78bd09",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "e3f80b09d16b74a590ef48616ad99a2ff5611ad38809c0e6ec562c2cbab6701e",
+      "censoring_model_sha256": "c32edb0982b66c750834f37e0d67f67f9011a21863ddc1668ec8492526335647",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Лимфоциты::%|90": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.5966443961097294,
+        "slope": 1.0025189095244178,
+        "ece": 0.012209989919645666
+      },
+      "model_file": "frozen-091af0681e79c873.json",
+      "model_file_sha256": "41610c743c71ce607ead1263ef85eddbb7efb8d2a5e8db784df56af9cfb83896",
+      "model_identity_sha256": "523eafefe3fd619ca325a2ecf98719e9e53595f38213e1b5c5dda7f171803b9f",
+      "cell_id_sha256": "091af0681e79c873e040588efe5d1d8b7e7ec9f2af90a854ef5cf7d7e2694488",
+      "calibrator_sha256": "9e80170fd95700028d41fbee09397dc067015f55456e0b2ab2b2283e589f648a",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "e3f80b09d16b74a590ef48616ad99a2ff5611ad38809c0e6ec562c2cbab6701e",
+      "censoring_model_sha256": "c32edb0982b66c750834f37e0d67f67f9011a21863ddc1668ec8492526335647",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Лимфоциты::%|180": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.5966443961097294,
+        "slope": 1.0339944332308206,
+        "ece": 0.018895101074303398
+      },
+      "model_file": "frozen-091af0681e79c873.json",
+      "model_file_sha256": "41610c743c71ce607ead1263ef85eddbb7efb8d2a5e8db784df56af9cfb83896",
+      "model_identity_sha256": "523eafefe3fd619ca325a2ecf98719e9e53595f38213e1b5c5dda7f171803b9f",
+      "cell_id_sha256": "091af0681e79c873e040588efe5d1d8b7e7ec9f2af90a854ef5cf7d7e2694488",
+      "calibrator_sha256": "66d88aee103179a1346bc32822e4625932d077f9a6f2efc851a9f30badc45205",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "e3f80b09d16b74a590ef48616ad99a2ff5611ad38809c0e6ec562c2cbab6701e",
+      "censoring_model_sha256": "c32edb0982b66c750834f37e0d67f67f9011a21863ddc1668ec8492526335647",
+      "supported_horizon": true,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Лимфоциты::%|365": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.5966443961097294,
+        "slope": -0.9594226455206887,
+        "ece": 0.03014761634060802
+      },
+      "model_file": "frozen-091af0681e79c873.json",
+      "model_file_sha256": "41610c743c71ce607ead1263ef85eddbb7efb8d2a5e8db784df56af9cfb83896",
+      "model_identity_sha256": "523eafefe3fd619ca325a2ecf98719e9e53595f38213e1b5c5dda7f171803b9f",
+      "cell_id_sha256": "091af0681e79c873e040588efe5d1d8b7e7ec9f2af90a854ef5cf7d7e2694488",
+      "calibrator_sha256": "9b8fd87b0725bc230ed27400aa869063f4db2f404a255a9163218760a67faa65",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "e3f80b09d16b74a590ef48616ad99a2ff5611ad38809c0e6ec562c2cbab6701e",
+      "censoring_model_sha256": "c32edb0982b66c750834f37e0d67f67f9011a21863ddc1668ec8492526335647",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Моноциты::%|30": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Моноциты::%",
+      "horizon_days": 30,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.48288741411783903,
+        "slope": 1.064439559804403,
+        "ece": 0.00774410521604955
+      },
+      "model_file": "frozen-86de443d25f734c0.json",
+      "model_file_sha256": "fd999112d5f960292ef5b70dbeff55f0c6ebce420a39728df32ec26593437ab4",
+      "model_identity_sha256": "174ac40cd323934a3e6cd384b2ba1ad188d01da4bc38ba82504984201fea65e3",
+      "cell_id_sha256": "86de443d25f734c08034d99a776db01a9fbaf74c0306953faa5df38b8b0b2cc9",
+      "calibrator_sha256": "955281314cb8530b35002feda641c1cc27bb30766f3ba505e2bfa0baa7fe3c0c",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "5de7670f76388284afd4b7aa8281815ad70b4a5e1065e60cbd6eb01bed82b44a",
+      "censoring_model_sha256": "c717805bf354228d3d9498c98a37150dbd69c43b9860de84a1d13d9a6fd43e8b",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Моноциты::%|90": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Моноциты::%",
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.48288741411783903,
+        "slope": 1.085809527304961,
+        "ece": 0.009796754221644392
+      },
+      "model_file": "frozen-86de443d25f734c0.json",
+      "model_file_sha256": "fd999112d5f960292ef5b70dbeff55f0c6ebce420a39728df32ec26593437ab4",
+      "model_identity_sha256": "174ac40cd323934a3e6cd384b2ba1ad188d01da4bc38ba82504984201fea65e3",
+      "cell_id_sha256": "86de443d25f734c08034d99a776db01a9fbaf74c0306953faa5df38b8b0b2cc9",
+      "calibrator_sha256": "181c0e277f4c221b65939f6f2947254ded887f9d6482d5f820bda87c49df5afa",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "5de7670f76388284afd4b7aa8281815ad70b4a5e1065e60cbd6eb01bed82b44a",
+      "censoring_model_sha256": "c717805bf354228d3d9498c98a37150dbd69c43b9860de84a1d13d9a6fd43e8b",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Моноциты::%|180": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Моноциты::%",
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.48288741411783903,
+        "slope": 1.058845093880632,
+        "ece": 0.018931461151918412
+      },
+      "model_file": "frozen-86de443d25f734c0.json",
+      "model_file_sha256": "fd999112d5f960292ef5b70dbeff55f0c6ebce420a39728df32ec26593437ab4",
+      "model_identity_sha256": "174ac40cd323934a3e6cd384b2ba1ad188d01da4bc38ba82504984201fea65e3",
+      "cell_id_sha256": "86de443d25f734c08034d99a776db01a9fbaf74c0306953faa5df38b8b0b2cc9",
+      "calibrator_sha256": "7eb8962cb2e83d73acec4c4167f14fcea08d47db235208e5231104db18857357",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "5de7670f76388284afd4b7aa8281815ad70b4a5e1065e60cbd6eb01bed82b44a",
+      "censoring_model_sha256": "c717805bf354228d3d9498c98a37150dbd69c43b9860de84a1d13d9a6fd43e8b",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Моноциты::%|365": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Моноциты::%",
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.48288741411783903,
+        "slope": -0.9572055816198596,
+        "ece": 0.025178513244855896
+      },
+      "model_file": "frozen-86de443d25f734c0.json",
+      "model_file_sha256": "fd999112d5f960292ef5b70dbeff55f0c6ebce420a39728df32ec26593437ab4",
+      "model_identity_sha256": "174ac40cd323934a3e6cd384b2ba1ad188d01da4bc38ba82504984201fea65e3",
+      "cell_id_sha256": "86de443d25f734c08034d99a776db01a9fbaf74c0306953faa5df38b8b0b2cc9",
+      "calibrator_sha256": "4f132d64a30212b6a92cd3cf6935b9837dc534cdab0b919624b02b00e62da856",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "5de7670f76388284afd4b7aa8281815ad70b4a5e1065e60cbd6eb01bed82b44a",
+      "censoring_model_sha256": "c717805bf354228d3d9498c98a37150dbd69c43b9860de84a1d13d9a6fd43e8b",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эозинофилы::%|30": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эозинофилы::%",
+      "horizon_days": 30,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.41355162485882896,
+        "slope": 1.034076762213252,
+        "ece": 0.004230164624795071
+      },
+      "model_file": "frozen-3ef18246757cf960.json",
+      "model_file_sha256": "a0b4fc86ccd03a66e3611110adbbff8f8950797d0c108f220051eae128fe6d5f",
+      "model_identity_sha256": "e1310ad30b70743f635b5571f601bbc6697d7c38bfb7d6a46ab58f1d819dcd8f",
+      "cell_id_sha256": "3ef18246757cf960a9fd7c77a808bae58b36c4c84e5a30d199202827dc40cc4d",
+      "calibrator_sha256": "d0b21fc82ce1cd4a4ef78cbcfed49a20677d73841ef5b687287a0a1f89b07554",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "826643379104152be560e37aab67a5d0d9bcccda31348cc5c9e7e3301285031a",
+      "censoring_model_sha256": "78fc2e36a93c36f0d3e827b4520235b92ee117f25f0bd61b83506e43fca08fcd",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эозинофилы::%|90": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эозинофилы::%",
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.41355162485882896,
+        "slope": 1.0489206009695804,
+        "ece": 0.00974556577286196
+      },
+      "model_file": "frozen-3ef18246757cf960.json",
+      "model_file_sha256": "a0b4fc86ccd03a66e3611110adbbff8f8950797d0c108f220051eae128fe6d5f",
+      "model_identity_sha256": "e1310ad30b70743f635b5571f601bbc6697d7c38bfb7d6a46ab58f1d819dcd8f",
+      "cell_id_sha256": "3ef18246757cf960a9fd7c77a808bae58b36c4c84e5a30d199202827dc40cc4d",
+      "calibrator_sha256": "a43bce966c370feb7714ec438fe040e8e8373aedc15b96dbc44a6cd5f246b3b6",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "826643379104152be560e37aab67a5d0d9bcccda31348cc5c9e7e3301285031a",
+      "censoring_model_sha256": "78fc2e36a93c36f0d3e827b4520235b92ee117f25f0bd61b83506e43fca08fcd",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эозинофилы::%|180": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эозинофилы::%",
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.41355162485882896,
+        "slope": 0.9808662188082365,
+        "ece": 0.011750410904142134
+      },
+      "model_file": "frozen-3ef18246757cf960.json",
+      "model_file_sha256": "a0b4fc86ccd03a66e3611110adbbff8f8950797d0c108f220051eae128fe6d5f",
+      "model_identity_sha256": "e1310ad30b70743f635b5571f601bbc6697d7c38bfb7d6a46ab58f1d819dcd8f",
+      "cell_id_sha256": "3ef18246757cf960a9fd7c77a808bae58b36c4c84e5a30d199202827dc40cc4d",
+      "calibrator_sha256": "6ddc9b7b598e9929b06dff8fc1f8aae30ccd03d8caf828a6998a6bcc6cbb35a1",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "826643379104152be560e37aab67a5d0d9bcccda31348cc5c9e7e3301285031a",
+      "censoring_model_sha256": "78fc2e36a93c36f0d3e827b4520235b92ee117f25f0bd61b83506e43fca08fcd",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Эозинофилы::%|365": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Эозинофилы::%",
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.41355162485882896,
+        "slope": -0.9447550743995573,
+        "ece": 0.021521829968465838
+      },
+      "model_file": "frozen-3ef18246757cf960.json",
+      "model_file_sha256": "a0b4fc86ccd03a66e3611110adbbff8f8950797d0c108f220051eae128fe6d5f",
+      "model_identity_sha256": "e1310ad30b70743f635b5571f601bbc6697d7c38bfb7d6a46ab58f1d819dcd8f",
+      "cell_id_sha256": "3ef18246757cf960a9fd7c77a808bae58b36c4c84e5a30d199202827dc40cc4d",
+      "calibrator_sha256": "d062d204d3887251e4a056cb24bdb537fa27eefe417ef7bf4baa65632df6be0c",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "826643379104152be560e37aab67a5d0d9bcccda31348cc5c9e7e3301285031a",
+      "censoring_model_sha256": "78fc2e36a93c36f0d3e827b4520235b92ee117f25f0bd61b83506e43fca08fcd",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Нейтрофилы::%|30": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Нейтрофилы::%",
+      "horizon_days": 30,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.3720865883321965,
+        "slope": 1.010408599966261,
+        "ece": 0.006283163884045153
+      },
+      "model_file": "frozen-6ea33b382b59dd7c.json",
+      "model_file_sha256": "cbef58691407aeb0c7fe6489f920852fe9af2e02e751b45601f20a0084f754f7",
+      "model_identity_sha256": "919b150265f708ac6f9940ea02bac77f9daad25a7e53ad05a6b9049c9d86138c",
+      "cell_id_sha256": "6ea33b382b59dd7c329eea1e261baf02f1abfb5e58acb5373e1d2ae41f84c9c5",
+      "calibrator_sha256": "0643b4ead57ef385b3657337a6315db0ff031c912f60fd427f90289f1f85eb57",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ad7d136e85f02b744199dd6ba157fe48ad7c60b5b615d3dc2c46753697abdfc9",
+      "censoring_model_sha256": "f8a74a8d4836185e9d285067caa4ef748f25aa4339c4fbb6b16d304d098bfad2",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Нейтрофилы::%|90": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Нейтрофилы::%",
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.3720865883321965,
+        "slope": 0.9963287417229489,
+        "ece": 0.01352692927115354
+      },
+      "model_file": "frozen-6ea33b382b59dd7c.json",
+      "model_file_sha256": "cbef58691407aeb0c7fe6489f920852fe9af2e02e751b45601f20a0084f754f7",
+      "model_identity_sha256": "919b150265f708ac6f9940ea02bac77f9daad25a7e53ad05a6b9049c9d86138c",
+      "cell_id_sha256": "6ea33b382b59dd7c329eea1e261baf02f1abfb5e58acb5373e1d2ae41f84c9c5",
+      "calibrator_sha256": "cada81e70f0c43428294cffa01e52b151e8d1f35b1181ee4037bf3525dfb0a07",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ad7d136e85f02b744199dd6ba157fe48ad7c60b5b615d3dc2c46753697abdfc9",
+      "censoring_model_sha256": "f8a74a8d4836185e9d285067caa4ef748f25aa4339c4fbb6b16d304d098bfad2",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Нейтрофилы::%|180": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Нейтрофилы::%",
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.3720865883321965,
+        "slope": 0.9794389505883203,
+        "ece": 0.02631086647457523
+      },
+      "model_file": "frozen-6ea33b382b59dd7c.json",
+      "model_file_sha256": "cbef58691407aeb0c7fe6489f920852fe9af2e02e751b45601f20a0084f754f7",
+      "model_identity_sha256": "919b150265f708ac6f9940ea02bac77f9daad25a7e53ad05a6b9049c9d86138c",
+      "cell_id_sha256": "6ea33b382b59dd7c329eea1e261baf02f1abfb5e58acb5373e1d2ae41f84c9c5",
+      "calibrator_sha256": "a1274625f8dace5fdcf993f6b2614680e181778475b343fc621b3761a2aa1e78",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ad7d136e85f02b744199dd6ba157fe48ad7c60b5b615d3dc2c46753697abdfc9",
+      "censoring_model_sha256": "f8a74a8d4836185e9d285067caa4ef748f25aa4339c4fbb6b16d304d098bfad2",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "magerya_api|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|A::Нейтрофилы::%|365": {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Нейтрофилы::%",
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.3720865883321965,
+        "slope": -0.9494716573093445,
+        "ece": 0.022824748894486525
+      },
+      "model_file": "frozen-6ea33b382b59dd7c.json",
+      "model_file_sha256": "cbef58691407aeb0c7fe6489f920852fe9af2e02e751b45601f20a0084f754f7",
+      "model_identity_sha256": "919b150265f708ac6f9940ea02bac77f9daad25a7e53ad05a6b9049c9d86138c",
+      "cell_id_sha256": "6ea33b382b59dd7c329eea1e261baf02f1abfb5e58acb5373e1d2ae41f84c9c5",
+      "calibrator_sha256": "51f7e0ab43cfa55f9c6e8d71733b5ed32a55df7a68f01e98953c7b0bc0e3ab57",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ad7d136e85f02b744199dd6ba157fe48ad7c60b5b615d3dc2c46753697abdfc9",
+      "censoring_model_sha256": "f8a74a8d4836185e9d285067caa4ef748f25aa4339c4fbb6b16d304d098bfad2",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1004::%|30": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1004::%",
+      "horizon_days": 30,
+      "evaluation_status": "NOT_RUN_DUE_TO_FAILED_DATA_GATE",
+      "acceptance_status": "NOT_ACCEPTED",
+      "validation_gates": null,
+      "model_file": "frozen-618bb9761ae30622.json",
+      "model_file_sha256": "0b7a96fb4b4fa9dbeb5740c6157226083adaf85ed97ad7770e91e920fbfcac57",
+      "model_identity_sha256": "2918b32b15d5d248d733a3c7e4723efdb21dfb897785de359b6418a28dd2eb13",
+      "cell_id_sha256": "618bb9761ae30622ac4131cd59ae76691ffd28f91fe0c8ebb49818fd919a7713",
+      "calibrator_sha256": "b4bb0cb7c9c82228bbd6859e41ca548e6e0ea811fcce3a7f99e833e3d28ec098",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "563e99d2ed40619360c84d532d01459f50b28a95cd4869fc96eb8373de2eff4f",
+      "censoring_model_sha256": "29fa849ddb0c93d5bd9231b2b823d4dd4d18335caca9e53a3532ed3a0a50cd9b",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1004::%|90": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1004::%",
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.5158050601944247,
+        "slope": 1.1079293862139636,
+        "ece": 0.013796204344225058
+      },
+      "model_file": "frozen-618bb9761ae30622.json",
+      "model_file_sha256": "0b7a96fb4b4fa9dbeb5740c6157226083adaf85ed97ad7770e91e920fbfcac57",
+      "model_identity_sha256": "2918b32b15d5d248d733a3c7e4723efdb21dfb897785de359b6418a28dd2eb13",
+      "cell_id_sha256": "618bb9761ae30622ac4131cd59ae76691ffd28f91fe0c8ebb49818fd919a7713",
+      "calibrator_sha256": "c7d1e236af32217cda78de0e62b669672c4c9ef862f20d4d0db6febec91edf8f",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "563e99d2ed40619360c84d532d01459f50b28a95cd4869fc96eb8373de2eff4f",
+      "censoring_model_sha256": "29fa849ddb0c93d5bd9231b2b823d4dd4d18335caca9e53a3532ed3a0a50cd9b",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1004::%|180": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1004::%",
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.5158050601944247,
+        "slope": 0.9838434783698131,
+        "ece": 0.014991181700124307
+      },
+      "model_file": "frozen-618bb9761ae30622.json",
+      "model_file_sha256": "0b7a96fb4b4fa9dbeb5740c6157226083adaf85ed97ad7770e91e920fbfcac57",
+      "model_identity_sha256": "2918b32b15d5d248d733a3c7e4723efdb21dfb897785de359b6418a28dd2eb13",
+      "cell_id_sha256": "618bb9761ae30622ac4131cd59ae76691ffd28f91fe0c8ebb49818fd919a7713",
+      "calibrator_sha256": "07247ae9a2cbdce1606f452f5b271cde8f9d0e27f1b8fc1a193205a48a2bb043",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "563e99d2ed40619360c84d532d01459f50b28a95cd4869fc96eb8373de2eff4f",
+      "censoring_model_sha256": "29fa849ddb0c93d5bd9231b2b823d4dd4d18335caca9e53a3532ed3a0a50cd9b",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1004::%|365": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1004::%",
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.5158050601944247,
+        "slope": -0.9637093530136023,
+        "ece": 0.03143222387820343
+      },
+      "model_file": "frozen-618bb9761ae30622.json",
+      "model_file_sha256": "0b7a96fb4b4fa9dbeb5740c6157226083adaf85ed97ad7770e91e920fbfcac57",
+      "model_identity_sha256": "2918b32b15d5d248d733a3c7e4723efdb21dfb897785de359b6418a28dd2eb13",
+      "cell_id_sha256": "618bb9761ae30622ac4131cd59ae76691ffd28f91fe0c8ebb49818fd919a7713",
+      "calibrator_sha256": "a190c58f5c80647d0e8387235d44138daa75fd240b7c4a12fa194b825b429ae0",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "563e99d2ed40619360c84d532d01459f50b28a95cd4869fc96eb8373de2eff4f",
+      "censoring_model_sha256": "29fa849ddb0c93d5bd9231b2b823d4dd4d18335caca9e53a3532ed3a0a50cd9b",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::33::ммоль/л|30": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::33::ммоль/л",
+      "horizon_days": 30,
+      "evaluation_status": "NOT_RUN_DUE_TO_FAILED_DATA_GATE",
+      "acceptance_status": "NOT_ACCEPTED",
+      "validation_gates": null,
+      "model_file": "frozen-52be5b8ad988daab.json",
+      "model_file_sha256": "bc7f3f9ab8f7effc9fe9c9bb3d899546f46fa185c9e10a7b822d2e6510155339",
+      "model_identity_sha256": "cb2aa8fe66c71db154fcdec71f948eca65ebea5861d648024791fa1dc2365884",
+      "cell_id_sha256": "52be5b8ad988daab369df6c0c54d062a4ee14e177cd876e6235b56eb61b5b129",
+      "calibrator_sha256": "0e75090920dfa28ad7a4e65d82c4f71dd7532586f966af18b1697d849b196a81",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "43da96f1cec890c060df6d05ee19a192f152ebccef3798d40475e72a0ba85d89",
+      "censoring_model_sha256": "dd438ae895e897654a42623a71c39344c108ec69a6e06d65dbf321dfb4a1c2cf",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::33::ммоль/л|90": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::33::ммоль/л",
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.5467054712537164,
+        "slope": 0.947900569200255,
+        "ece": 0.02570552343481144
+      },
+      "model_file": "frozen-52be5b8ad988daab.json",
+      "model_file_sha256": "bc7f3f9ab8f7effc9fe9c9bb3d899546f46fa185c9e10a7b822d2e6510155339",
+      "model_identity_sha256": "cb2aa8fe66c71db154fcdec71f948eca65ebea5861d648024791fa1dc2365884",
+      "cell_id_sha256": "52be5b8ad988daab369df6c0c54d062a4ee14e177cd876e6235b56eb61b5b129",
+      "calibrator_sha256": "d338ea49facab6fe65c5fc74e0e4eb00c6d95e7627d4af932a11280a8594b991",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "43da96f1cec890c060df6d05ee19a192f152ebccef3798d40475e72a0ba85d89",
+      "censoring_model_sha256": "dd438ae895e897654a42623a71c39344c108ec69a6e06d65dbf321dfb4a1c2cf",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::33::ммоль/л|180": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::33::ммоль/л",
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.5467054712537164,
+        "slope": 0.8160428123009309,
+        "ece": 0.045418170990481864
+      },
+      "model_file": "frozen-52be5b8ad988daab.json",
+      "model_file_sha256": "bc7f3f9ab8f7effc9fe9c9bb3d899546f46fa185c9e10a7b822d2e6510155339",
+      "model_identity_sha256": "cb2aa8fe66c71db154fcdec71f948eca65ebea5861d648024791fa1dc2365884",
+      "cell_id_sha256": "52be5b8ad988daab369df6c0c54d062a4ee14e177cd876e6235b56eb61b5b129",
+      "calibrator_sha256": "27a8f563c444506157f1b34f7051a51b7d6aac683ffb35bbc1a3bcbd4be57945",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "43da96f1cec890c060df6d05ee19a192f152ebccef3798d40475e72a0ba85d89",
+      "censoring_model_sha256": "dd438ae895e897654a42623a71c39344c108ec69a6e06d65dbf321dfb4a1c2cf",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::33::ммоль/л|365": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::33::ммоль/л",
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.5467054712537164,
+        "slope": -0.9273101630638768,
+        "ece": 0.053006089430764666
+      },
+      "model_file": "frozen-52be5b8ad988daab.json",
+      "model_file_sha256": "bc7f3f9ab8f7effc9fe9c9bb3d899546f46fa185c9e10a7b822d2e6510155339",
+      "model_identity_sha256": "cb2aa8fe66c71db154fcdec71f948eca65ebea5861d648024791fa1dc2365884",
+      "cell_id_sha256": "52be5b8ad988daab369df6c0c54d062a4ee14e177cd876e6235b56eb61b5b129",
+      "calibrator_sha256": "994087312279fbd16b33655c8c7962b618818a376a14303dd3fce403f7ed4437",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "43da96f1cec890c060df6d05ee19a192f152ebccef3798d40475e72a0ba85d89",
+      "censoring_model_sha256": "dd438ae895e897654a42623a71c39344c108ec69a6e06d65dbf321dfb4a1c2cf",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::30::ммоль/л|30": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::30::ммоль/л",
+      "horizon_days": 30,
+      "evaluation_status": "NOT_RUN_DUE_TO_FAILED_DATA_GATE",
+      "acceptance_status": "NOT_ACCEPTED",
+      "validation_gates": null,
+      "model_file": "frozen-2beccd90847ea50e.json",
+      "model_file_sha256": "f3a8c5a9eeadce275e1bd52ed4345dadf93c936ee74586b6aadacf632619a88c",
+      "model_identity_sha256": "eddbbd68d08e618fff079d4f89ab505609eb47e2fa3256b55fe0fe54440363ac",
+      "cell_id_sha256": "2beccd90847ea50eeca616c2900374b2e433c288ddfb9a01160578916a28d35a",
+      "calibrator_sha256": "9a53f4dbc1db022b735426428d464251df4fbd4bd383ed61725fc797238b02a6",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ab406a50490a564fb8497b60f8f708c4cb301a1717fb9da79b658adf0d196615",
+      "censoring_model_sha256": "ef23490ff09da352cacc382ed31b1e4c1adc515012a6872638f0344ae70b6f0f",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::30::ммоль/л|90": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::30::ммоль/л",
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.38072846479532835,
+        "slope": 1.0258049375379257,
+        "ece": 0.014935694556140215
+      },
+      "model_file": "frozen-2beccd90847ea50e.json",
+      "model_file_sha256": "f3a8c5a9eeadce275e1bd52ed4345dadf93c936ee74586b6aadacf632619a88c",
+      "model_identity_sha256": "eddbbd68d08e618fff079d4f89ab505609eb47e2fa3256b55fe0fe54440363ac",
+      "cell_id_sha256": "2beccd90847ea50eeca616c2900374b2e433c288ddfb9a01160578916a28d35a",
+      "calibrator_sha256": "08de0c78c3379317395fbfe5b5c78417830b0904a69067d66ff1280d2bbff7ee",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ab406a50490a564fb8497b60f8f708c4cb301a1717fb9da79b658adf0d196615",
+      "censoring_model_sha256": "ef23490ff09da352cacc382ed31b1e4c1adc515012a6872638f0344ae70b6f0f",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::30::ммоль/л|180": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::30::ммоль/л",
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.38072846479532835,
+        "slope": 0.9682360959267401,
+        "ece": 0.02432159541426658
+      },
+      "model_file": "frozen-2beccd90847ea50e.json",
+      "model_file_sha256": "f3a8c5a9eeadce275e1bd52ed4345dadf93c936ee74586b6aadacf632619a88c",
+      "model_identity_sha256": "eddbbd68d08e618fff079d4f89ab505609eb47e2fa3256b55fe0fe54440363ac",
+      "cell_id_sha256": "2beccd90847ea50eeca616c2900374b2e433c288ddfb9a01160578916a28d35a",
+      "calibrator_sha256": "9f19d02866a821329b0abc4b70c5181fdeb2bb52f0a7c985cdbb7e638fae5150",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ab406a50490a564fb8497b60f8f708c4cb301a1717fb9da79b658adf0d196615",
+      "censoring_model_sha256": "ef23490ff09da352cacc382ed31b1e4c1adc515012a6872638f0344ae70b6f0f",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::30::ммоль/л|365": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::30::ммоль/л",
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.38072846479532835,
+        "slope": -0.9634584574814781,
+        "ece": 0.033962426208698965
+      },
+      "model_file": "frozen-2beccd90847ea50e.json",
+      "model_file_sha256": "f3a8c5a9eeadce275e1bd52ed4345dadf93c936ee74586b6aadacf632619a88c",
+      "model_identity_sha256": "eddbbd68d08e618fff079d4f89ab505609eb47e2fa3256b55fe0fe54440363ac",
+      "cell_id_sha256": "2beccd90847ea50eeca616c2900374b2e433c288ddfb9a01160578916a28d35a",
+      "calibrator_sha256": "c262576c21b163851ebf7192e51f9d4017b41c101ced21777d4a79c25c0bff46",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "ab406a50490a564fb8497b60f8f708c4cb301a1717fb9da79b658adf0d196615",
+      "censoring_model_sha256": "ef23490ff09da352cacc382ed31b1e4c1adc515012a6872638f0344ae70b6f0f",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1002::%|30": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1002::%",
+      "horizon_days": 30,
+      "evaluation_status": "NOT_RUN_DUE_TO_FAILED_DATA_GATE",
+      "acceptance_status": "NOT_ACCEPTED",
+      "validation_gates": null,
+      "model_file": "frozen-108c78ebb9927edd.json",
+      "model_file_sha256": "701172422ce1e01d3e73368309fdeb92f6e720f63032ffe7fb45e9daed3ef373",
+      "model_identity_sha256": "0f0c9a23655c7fc70ca2c1635caae5b3d641ac3b68fc3bcb50a5403a8274ef50",
+      "cell_id_sha256": "108c78ebb9927edde3767d867ab0f4f7ee0c80e9e97324b35a9b7fc09957174e",
+      "calibrator_sha256": "a872f1491a67c4763cc24a8f31dd97477556c6bab17db72d29d96b66ff56efa0",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "3aaf59cec828f7f8110d7dfa4b9f4d7b038ccb8ecfcf8a0fa331e7778643d5b0",
+      "censoring_model_sha256": "6a62a59fcad03661dd8a36f81934b46a549aa82d10ec8de318456de1d95711b4",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1002::%|90": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1002::%",
+      "horizon_days": 90,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.49694973697007205,
+        "slope": 1.1285877052314766,
+        "ece": 0.019506351315044117
+      },
+      "model_file": "frozen-108c78ebb9927edd.json",
+      "model_file_sha256": "701172422ce1e01d3e73368309fdeb92f6e720f63032ffe7fb45e9daed3ef373",
+      "model_identity_sha256": "0f0c9a23655c7fc70ca2c1635caae5b3d641ac3b68fc3bcb50a5403a8274ef50",
+      "cell_id_sha256": "108c78ebb9927edde3767d867ab0f4f7ee0c80e9e97324b35a9b7fc09957174e",
+      "calibrator_sha256": "685f1f8e6a64ed8c5da00a48975bfa5802a161c9dea5a6b9e1b16cf4e5ce17bd",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "3aaf59cec828f7f8110d7dfa4b9f4d7b038ccb8ecfcf8a0fa331e7778643d5b0",
+      "censoring_model_sha256": "6a62a59fcad03661dd8a36f81934b46a549aa82d10ec8de318456de1d95711b4",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1002::%|180": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1002::%",
+      "horizon_days": 180,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": false,
+        "concordance": 0.49694973697007205,
+        "slope": 0.9939520523381952,
+        "ece": 0.028248353856566988
+      },
+      "model_file": "frozen-108c78ebb9927edd.json",
+      "model_file_sha256": "701172422ce1e01d3e73368309fdeb92f6e720f63032ffe7fb45e9daed3ef373",
+      "model_identity_sha256": "0f0c9a23655c7fc70ca2c1635caae5b3d641ac3b68fc3bcb50a5403a8274ef50",
+      "cell_id_sha256": "108c78ebb9927edde3767d867ab0f4f7ee0c80e9e97324b35a9b7fc09957174e",
+      "calibrator_sha256": "6038d07f51ab99041c6a4fede8b9ad1d1eb31c93238b07a536366484a6ef8e13",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "3aaf59cec828f7f8110d7dfa4b9f4d7b038ccb8ecfcf8a0fa331e7778643d5b0",
+      "censoring_model_sha256": "6a62a59fcad03661dd8a36f81934b46a549aa82d10ec8de318456de1d95711b4",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    },
+    "kgz_raw|TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION|B::mm_1002::%|365": {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1002::%",
+      "horizon_days": 365,
+      "evaluation_status": "EVALUATED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED",
+      "validation_gates": {
+        "m1_better_brier": true,
+        "concordance": 0.49694973697007205,
+        "slope": -0.9573917840758633,
+        "ece": 0.03123400526772291
+      },
+      "model_file": "frozen-108c78ebb9927edd.json",
+      "model_file_sha256": "701172422ce1e01d3e73368309fdeb92f6e720f63032ffe7fb45e9daed3ef373",
+      "model_identity_sha256": "0f0c9a23655c7fc70ca2c1635caae5b3d641ac3b68fc3bcb50a5403a8274ef50",
+      "cell_id_sha256": "108c78ebb9927edde3767d867ab0f4f7ee0c80e9e97324b35a9b7fc09957174e",
+      "calibrator_sha256": "a56f8eb44c16bc27489f8f693a097c9980866e46dd6706b369fb680458cbde4b",
+      "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+      "scaler_sha256": "3aaf59cec828f7f8110d7dfa4b9f4d7b038ccb8ecfcf8a0fa331e7778643d5b0",
+      "censoring_model_sha256": "6a62a59fcad03661dd8a36f81934b46a549aa82d10ec8de318456de1d95711b4",
+      "supported_horizon": false,
+      "non_claim_level": "technical_probability_cell_only"
+    }
+  }
+}

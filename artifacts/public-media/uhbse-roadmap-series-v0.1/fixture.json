@@ -1,0 +1,457 @@
+{
+  "schema": "uhbse.public.roadmap.fixture.v1",
+  "series_title": "UHBSE — Building a Human Biology Simulation Engine",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "no_database_connection": true,
+  "synthetic_composite_only": true,
+  "episodes": [
+    {
+      "id": "Roadmap01",
+      "slug": "01-longitudinal-data",
+      "filename": "uhbse-roadmap-01-longitudinal-data-v0.1.mp4",
+      "title": "The longitudinal data problem",
+      "duration_frames": 1200,
+      "capability_status": "WORKING_NOW",
+      "cover_headline": "43,856 entered. 100 made the first testable cohort.",
+      "series_title": "UHBSE — Building a Human Biology Simulation Engine",
+      "disclaimer": "Aggregated counts from one connected pilot source. No patient record is displayed.",
+      "disclosure_label": "Aggregates only · no patient record",
+      "hook": [
+        "43,856 SUBJECTS ENTERED THE PIPELINE",
+        "100 ENTERED THE FIRST BOUNDED TECHNICAL COHORT"
+      ],
+      "funnel": [
+        {
+          "label": "subjects entered the pipeline",
+          "value": "43,856"
+        },
+        {
+          "label": "with 3+ appointments",
+          "value": "8,588"
+        },
+        {
+          "label": "with laboratory history and 3+ appointments",
+          "value": "8,262"
+        },
+        {
+          "label": "bounded technical cohort",
+          "value": "100"
+        }
+      ],
+      "stats": [
+        {
+          "label": "appointments",
+          "value": "68.1K"
+        },
+        {
+          "label": "laboratory result records",
+          "value": "874K"
+        },
+        {
+          "label": "result items",
+          "value": "1.37M"
+        }
+      ],
+      "thesis": "DATA VOLUME IS NOT ENOUGH. LONGITUDINAL STRUCTURE IS WHAT MAKES SIMULATION TESTABLE.",
+      "captions": [
+        {
+          "from": 0,
+          "to": 150,
+          "text": "43,856 subjects entered the pipeline."
+        },
+        {
+          "from": 150,
+          "to": 300,
+          "text": "100 entered the first bounded technical cohort."
+        },
+        {
+          "from": 300,
+          "to": 780,
+          "text": "Eligibility is longitudinal, not just a headcount."
+        },
+        {
+          "from": 780,
+          "to": 1020,
+          "text": "68.1K appointments · 874K lab records · 1.37M result items."
+        },
+        {
+          "from": 1020,
+          "to": 1200,
+          "text": "Volume is not enough. Longitudinal structure makes simulation testable."
+        }
+      ]
+    },
+    {
+      "id": "Roadmap02",
+      "slug": "02-canonicalization",
+      "filename": "uhbse-roadmap-02-canonicalization-v0.1.mp4",
+      "title": "What survives normalization",
+      "duration_frames": 1350,
+      "capability_status": "WORKING_NOW",
+      "cover_headline": "Most of the work happens before the model.",
+      "series_title": "UHBSE — Building a Human Biology Simulation Engine",
+      "disclaimer": "Aggregated counts from one connected pilot source. No patient record is displayed.",
+      "disclosure_label": "Aggregates only · no patient record",
+      "hook": [
+        "MOST OF THE WORK HAPPENS BEFORE THE MODEL."
+      ],
+      "flow": [
+        {
+          "label": "available laboratory records",
+          "value": "29,464"
+        },
+        {
+          "label": "selected for the bounded technical slice",
+          "value": "4,000"
+        },
+        {
+          "label": "available result items",
+          "value": "6,538"
+        },
+        {
+          "label": "selected result items",
+          "value": "6,291"
+        },
+        {
+          "label": "valid canonical components",
+          "value": "5,333"
+        }
+      ],
+      "rejects": [
+        {
+          "label": "missing source values",
+          "value": "927",
+          "tone": "expected"
+        },
+        {
+          "label": "invalid numeric representations",
+          "value": "31",
+          "tone": "expected"
+        }
+      ],
+      "pipeline": [
+        "SOURCE RECORD",
+        "SUBJECT",
+        "ENCOUNTER",
+        "OBSERVATION",
+        "OBSERVATION COMPONENT"
+      ],
+      "thesis": "A CLINICAL DATABASE BECOMES MODEL-READY ONLY AFTER ITS UNCERTAINTY, MISSINGNESS AND PROVENANCE ARE MADE EXPLICIT.",
+      "captions": [
+        {
+          "from": 0,
+          "to": 180,
+          "text": "Most of the work happens before the model."
+        },
+        {
+          "from": 180,
+          "to": 720,
+          "text": "29,464 available labs → 4,000 selected → 5,333 valid components."
+        },
+        {
+          "from": 720,
+          "to": 960,
+          "text": "Rejects are expected: 927 missing values, 31 invalid numerics."
+        },
+        {
+          "from": 960,
+          "to": 1350,
+          "text": "Uncertainty, missingness and provenance must be explicit."
+        }
+      ]
+    },
+    {
+      "id": "Roadmap03",
+      "slug": "03-evidence-state",
+      "filename": "uhbse-roadmap-03-evidence-state-v0.1.mp4",
+      "title": "From history to state",
+      "duration_frames": 1500,
+      "capability_status": "WORKING_NOW",
+      "cover_headline": "A computer needs a state before it can simulate a future.",
+      "series_title": "UHBSE — Building a Human Biology Simulation Engine",
+      "disclaimer": "SYNTHETIC_COMPOSITE timeline. No real subject and no laboratory values are shown.",
+      "disclosure_label": "Aggregates only · no patient record",
+      "hook": [
+        "BEFORE WE SIMULATE A FUTURE, WE NEED A STATE THE COMPUTER CAN UNDERSTAND."
+      ],
+      "counts": [
+        {
+          "label": "SourceRecord",
+          "value": "12,544"
+        },
+        {
+          "label": "Subject",
+          "value": "100"
+        },
+        {
+          "label": "SubjectCharacteristic",
+          "value": "200"
+        },
+        {
+          "label": "Encounter",
+          "value": "2,153"
+        },
+        {
+          "label": "Observation",
+          "value": "4,000"
+        },
+        {
+          "label": "ObservationComponent",
+          "value": "5,333"
+        }
+      ],
+      "extras": [
+        {
+          "label": "records with valid provenance",
+          "value": "24,331"
+        },
+        {
+          "label": "timelines",
+          "value": "10"
+        },
+        {
+          "label": "timeline events",
+          "value": "598"
+        },
+        {
+          "label": "starting-state snapshots",
+          "value": "10"
+        }
+      ],
+      "layers": [
+        "OBSERVED",
+        "COMPUTED",
+        "SYNTHETIC"
+      ],
+      "composite_label": "SYNTHETIC_COMPOSITE",
+      "snapshot_label": "EvidenceStateSnapshot",
+      "thesis": "EVERY COMPUTED STATE MUST REMAIN TRACEABLE TO THE EVIDENCE THAT CREATED IT.",
+      "captions": [
+        {
+          "from": 0,
+          "to": 210,
+          "text": "Before we simulate a future, we need a state the computer can understand."
+        },
+        {
+          "from": 210,
+          "to": 630,
+          "text": "12,544 source records · 100 subjects · 24,331 with valid provenance."
+        },
+        {
+          "from": 630,
+          "to": 1080,
+          "text": "A SYNTHETIC_COMPOSITE timeline from 10 histories and 598 events."
+        },
+        {
+          "from": 1080,
+          "to": 1500,
+          "text": "Observed, computed and synthetic stay in separate layers."
+        }
+      ]
+    },
+    {
+      "id": "Roadmap04",
+      "slug": "04-counterfactual-branching",
+      "filename": "uhbse-roadmap-04-counterfactual-branching-v0.1.mp4",
+      "title": "Forking a biological state",
+      "duration_frames": 1500,
+      "capability_status": "WORKING_NOW",
+      "cover_headline": "Same starting state. One controlled change. Two continuations.",
+      "series_title": "UHBSE — Building a Human Biology Simulation Engine",
+      "disclaimer": "Technical synthetic intervention test. No biological or clinical effect is claimed.",
+      "disclosure_label": "Aggregates only · no patient record",
+      "hook": [
+        "WE CAN NOW FORK A BIOLOGICAL STATE WITHOUT CHANGING ITS ORIGINAL HISTORY."
+      ],
+      "checkpoint_label": "POST-STEP CHECKPOINT · WEEK 2",
+      "checkpoint_hash": "795669a680",
+      "branches": [
+        "COUNTERFACTUAL CONTINUATION",
+        "CONTROLLED EVENT BRANCH"
+      ],
+      "event_label": "SYNTHETIC CONTROLLED EVENT",
+      "event_week": "3",
+      "divergence_week": "3",
+      "changed_variables": "1",
+      "hashes": {
+        "checkpoint": "795669a680",
+        "counterfactual": "89c35864d8",
+        "event_fork": "55cb2ee045",
+        "rollback": "89c35864d8"
+      },
+      "isolation": [
+        "parent state unchanged",
+        "parent history unchanged",
+        "parent events unchanged"
+      ],
+      "rollback_label": "ROLLBACK FINAL HASH = ORIGINAL FINAL HASH",
+      "thesis": "SAME STARTING STATE. ONE CONTROLLED CHANGE. TWO TRACEABLE CONTINUATIONS.",
+      "captions": [
+        {
+          "from": 0,
+          "to": 180,
+          "text": "Fork a biological state without changing its original history."
+        },
+        {
+          "from": 180,
+          "to": 480,
+          "text": "Checkpoint week 2. Same hash 795669a680."
+        },
+        {
+          "from": 480,
+          "to": 960,
+          "text": "Week 3: synthetic controlled event. Divergence week 3."
+        },
+        {
+          "from": 960,
+          "to": 1260,
+          "text": "Parent state, history and events stay unchanged."
+        },
+        {
+          "from": 1260,
+          "to": 1500,
+          "text": "Rollback reproduces the original final hash."
+        }
+      ]
+    },
+    {
+      "id": "Roadmap05",
+      "slug": "05-engine-verification",
+      "filename": "uhbse-roadmap-05-engine-verification-v0.1.mp4",
+      "title": "How we test the engine",
+      "duration_frames": 1200,
+      "capability_status": "WORKING_NOW",
+      "cover_headline": "A simulation should be able to fail.",
+      "series_title": "UHBSE — Building a Human Biology Simulation Engine",
+      "disclaimer": "Technical core tests. Clinical validation has not started.",
+      "disclosure_label": "Aggregates only · no patient record",
+      "hook": [
+        "A SIMULATION SHOULD BE ABLE TO FAIL."
+      ],
+      "tests": [
+        "future-data leakage rejected",
+        "parent-state mutation detected",
+        "parent-history mutation detected",
+        "no-op event produces no fork effect",
+        "same seed produces the same trajectory",
+        "rollback reproduces the original continuation",
+        "provenance without required fields rejected",
+        "modified contract hash rejected",
+        "44 clean-room tests passed"
+      ],
+      "statuses": [
+        {
+          "label": "TECHNICAL CORE",
+          "value": "VERIFIED"
+        },
+        {
+          "label": "CLINICAL VALIDATION",
+          "value": "NOT STARTED"
+        }
+      ],
+      "thesis": "WE TEST FAILURE MODES BEFORE WE TRUST PERFORMANCE.",
+      "captions": [
+        {
+          "from": 0,
+          "to": 150,
+          "text": "A simulation should be able to fail."
+        },
+        {
+          "from": 150,
+          "to": 780,
+          "text": "PASS is shown only after the check runs. Expected FAIL is part of the design."
+        },
+        {
+          "from": 780,
+          "to": 1020,
+          "text": "44 clean-room tests passed."
+        },
+        {
+          "from": 1020,
+          "to": 1200,
+          "text": "Technical core verified. Clinical validation not started."
+        }
+      ]
+    },
+    {
+      "id": "Roadmap06",
+      "slug": "06-first-scientific-test-next",
+      "filename": "uhbse-roadmap-06-first-scientific-test-next-v0.1.mp4",
+      "title": "The first scientific test",
+      "duration_frames": 1200,
+      "capability_status": "IN_RETROSPECTIVE_TESTING",
+      "cover_headline": "The next question is whether it can predict a real follow-up.",
+      "series_title": "UHBSE — Building a Human Biology Simulation Engine",
+      "disclaimer": "IN RETROSPECTIVE TESTING. No performance metric is claimed.",
+      "disclosure_label": "Aggregates only · no patient record",
+      "hook": [
+        "THE NEXT QUESTION IS NOT WHETHER THE ENGINE RUNS.",
+        "IT IS WHETHER IT CAN PREDICT A REAL FOLLOW-UP."
+      ],
+      "status_badge": "IN RETROSPECTIVE TESTING",
+      "method": [
+        "Observed state at t0",
+        "Prediction",
+        "Real follow-up at t1",
+        "Measured error"
+      ],
+      "models": [
+        {
+          "label": "Persistence baseline",
+          "status": "WORKING_NOW"
+        },
+        {
+          "label": "Empirical trend",
+          "status": "WORKING_NOW"
+        },
+        {
+          "label": "First learned baseline",
+          "status": "IN_RETROSPECTIVE_TESTING"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "MAE",
+          "value": "PENDING EVIDENCE"
+        },
+        {
+          "label": "RMSE",
+          "value": "PENDING EVIDENCE"
+        },
+        {
+          "label": "bias",
+          "value": "PENDING EVIDENCE"
+        },
+        {
+          "label": "uncertainty coverage",
+          "value": "PENDING EVIDENCE"
+        }
+      ],
+      "thesis": "TECHNICAL PIPELINE: VERIFIED\nSCIENTIFIC PERFORMANCE: BEING MEASURED",
+      "captions": [
+        {
+          "from": 0,
+          "to": 210,
+          "text": "The next question is not whether the engine runs."
+        },
+        {
+          "from": 210,
+          "to": 420,
+          "text": "It is whether it can predict a real follow-up."
+        },
+        {
+          "from": 420,
+          "to": 840,
+          "text": "Observed state, prediction, real follow-up, measured error."
+        },
+        {
+          "from": 840,
+          "to": 1200,
+          "text": "MAE, RMSE, bias and coverage remain PENDING EVIDENCE."
+        }
+      ]
+    }
+  ]
+}

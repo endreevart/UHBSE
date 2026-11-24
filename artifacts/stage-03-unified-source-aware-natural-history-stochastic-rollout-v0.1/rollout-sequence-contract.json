@@ -1,0 +1,59 @@
+{
+  "version": "0.1",
+  "roles": [
+    "train",
+    "validation"
+  ],
+  "funnel": {
+    "subjects": 15563,
+    "sequences": 149580,
+    "transitions": 305677,
+    "sequence_length_min": 2,
+    "sequence_length_max": 17,
+    "one_step_targets": 149580,
+    "two_step_targets": 68455,
+    "three_step_targets": 36565,
+    "four_or_more_step_targets": 20652,
+    "excluded": {
+      "lt_2_observations": 287176
+    }
+  },
+  "cross_role_target_reuse": 0,
+  "unexplained_count": 0,
+  "ROLLOUT_TEMPORAL_LEAKAGE_STATUS": "PASS_STRICT_INCREASING_NO_POST_T0_IN_T0_FEATURES",
+  "ROLLOUT_SPLIT_ISOLATION_STATUS": "PASS",
+  "ROLLOUT_TARGET_REUSE_STATUS": "PASS",
+  "ok": true,
+  "series_meta": {
+    "observations_scanned_in_roles": 2797490,
+    "same_timestamp_collapses": 27367,
+    "missing_numeric": 391489,
+    "unexplained_count": 134
+  },
+  "test_public": {
+    "version": "0.1",
+    "roles": [
+      "test"
+    ],
+    "funnel": {
+      "subjects": 2775,
+      "sequences": 26657,
+      "transitions": 54000,
+      "sequence_length_min": 2,
+      "sequence_length_max": 19,
+      "one_step_targets": 26657,
+      "two_step_targets": 12324,
+      "three_step_targets": 6281,
+      "four_or_more_step_targets": 3398,
+      "excluded": {
+        "lt_2_observations": 50200
+      }
+    },
+    "cross_role_target_reuse": 0,
+    "unexplained_count": 0,
+    "ROLLOUT_TEMPORAL_LEAKAGE_STATUS": "PASS_STRICT_INCREASING_NO_POST_T0_IN_T0_FEATURES",
+    "ROLLOUT_SPLIT_ISOLATION_STATUS": "PASS",
+    "ROLLOUT_TARGET_REUSE_STATUS": "PASS",
+    "ok": true
+  }
+}

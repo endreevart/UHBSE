@@ -1,0 +1,92 @@
+{
+  "code": {
+    "ambiguities": [
+      "the doctor serializer replaces the whole document",
+      "description is unconstrained text",
+      "document_analysis.items is a different object and is not evidence here"
+    ],
+    "analysis_items_used": false,
+    "applicability": "STRUCTURE_ONLY",
+    "closes_question": false,
+    "database_binding": false,
+    "level": "E2",
+    "object": "document_recommendation.document.recommendations[].items",
+    "observed_contract": "name_and_description",
+    "question_id": "A_RECOMMENDATION_ITEMS",
+    "unambiguous_production": false
+  },
+  "probes": [
+    {
+      "applicability": "SOURCE_A_CODE",
+      "file_sha256": "9b5cb1c7cedfe9c06c2926dde2ad0c61a347b7c92b3da252e8fea622ac80b1ba",
+      "found": true,
+      "line": 49,
+      "path": "apps/document/models/recommendation/v1_0.py",
+      "production_applicable": true,
+      "symbol": "ITEM_NAME_AND_DESCRIPTION"
+    },
+    {
+      "applicability": "SOURCE_A_CODE",
+      "file_sha256": "1185d5bd280b5ba58b8fbcd4edf71f248184d7c8c99d4bafd34f803918570b12",
+      "found": true,
+      "line": 19,
+      "path": "apps/document/models/recommendation/models.py",
+      "production_applicable": true,
+      "symbol": "ONE_DOCUMENT_PER_APPOINTMENT"
+    },
+    {
+      "applicability": "SOURCE_A_CODE",
+      "file_sha256": "bf9f28223a4edbfa013418a9109237dcac2ab79f276826235338b8f32c0178c2",
+      "found": true,
+      "line": 41,
+      "path": "apps/document/lk_doctor/views.py",
+      "production_applicable": true,
+      "symbol": "EDITABLE_WHILE_APPOINTMENT_ACTIVE"
+    },
+    {
+      "applicability": "SOURCE_A_CODE",
+      "file_sha256": "9d66f5561f46e9a802d9a36cb96c01549b9d132f2f59c13d917e7a53119ed3e9",
+      "found": true,
+      "line": 55,
+      "path": "apps/document/lk_doctor/serializers.py",
+      "production_applicable": true,
+      "symbol": "WHOLE_DOCUMENT_REPLACE"
+    },
+    {
+      "applicability": "SOURCE_A_CODE",
+      "file_sha256": "9ce14b3b8d596b5982f3474e56f5dfe9711fbc71be41cf72b2c82952e57171ea",
+      "found": true,
+      "line": 2643,
+      "path": "apps/appointment/services.py",
+      "production_applicable": true,
+      "symbol": "ITEMS_COPIED_FROM_TEMPLATES"
+    },
+    {
+      "applicability": "TEST_FIXTURE",
+      "file_sha256": "f48effdde23220bf0c8e1ac02b6b885d7c6915414f1a211e7f7f95271bd8322c",
+      "found": true,
+      "line": 84,
+      "path": "apps/document/baker_recipes.py",
+      "production_applicable": false,
+      "symbol": "ACTIVITY_LABEL_FIXTURE"
+    },
+    {
+      "applicability": "SOURCE_A_CODE",
+      "file_sha256": "39d47783db11f9a42094ab1145cc80a5ab53842224ecb76b08daffdc19fbdabc",
+      "found": true,
+      "line": 902,
+      "path": "apps/account/back_office/serializers.py",
+      "production_applicable": true,
+      "symbol": "DOCTOR_FEEDBACK_OBJECT"
+    },
+    {
+      "applicability": "SOURCE_A_CODE",
+      "file_sha256": "5db5b009d105263fa6f1671e26db1b5b1ffc5a5f4d52f1928133ed9fc72eecd6",
+      "found": true,
+      "line": 868,
+      "path": "apps/account/models/employee.py",
+      "production_applicable": true,
+      "symbol": "DOCTOR_FEEDBACK_MODEL"
+    }
+  ]
+}

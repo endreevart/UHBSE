@@ -1,0 +1,67 @@
+{
+  "version": "0.1.1.1",
+  "OVERLAP_UNIVERSE_RECONCILIATION_STATUS": "PARTIAL_EXPLAINED_LIMITATION",
+  "live_baseline_retained": {
+    "n_confirmed_pairs": 20,
+    "n_candidate_pairs": 2234,
+    "n_overlap_groups": 2254,
+    "n_unique_phone_pairs": 66,
+    "n_unique_email_pairs": 2208,
+    "source": "v0.1.1 live overlap universe (re-verified, not rebuilt)"
+  },
+  "prior_stage02": {
+    "confirmed": 22,
+    "candidate_overlap": 2274,
+    "ambiguous": 133,
+    "conflicting": 21,
+    "source_file": "artifacts/stage-02/identity-linkage-assessment.json"
+  },
+  "explanations": [
+    {
+      "metric": "confirmed_pairs",
+      "prior": 22,
+      "live": 20,
+      "delta": -2,
+      "definition_match": "both = unique A↔B subject pairs matched on phone AND email (1-1)",
+      "quantitative_explanation": "2 dual-identifier pair(s) present in Stage-02 assessment are not reproduced under current normalize_phone/normalize_email + canonical subject resolution + consultations patient-role filter; phone unique pairs stable at 66 (prior uniquely_resolved_by_phone=66); email unique pairs stable at 2208 (prior=2208).",
+      "unexplained_residual": true
+    },
+    {
+      "metric": "candidate_phone_plus_email_unique",
+      "prior": 2274,
+      "live": 2274,
+      "delta": 0,
+      "definition_match": "sum of uniquely resolved phone pairs + email pairs",
+      "quantitative_explanation": "exact match 66+2208=2274",
+      "unexplained_residual": false
+    },
+    {
+      "metric": "ambiguous",
+      "prior": 133,
+      "live": 417,
+      "delta": 284,
+      "definition_match": false,
+      "stage02_definition": "Stage-02 ambiguous_subject_pairs=133 (aggregate pair-level ambiguity).",
+      "live_definition": "Live ambiguous_nodes=417 counts subject-nodes appearing in many-to-many identifier matches (node-level), not Stage-02 pair units — not directly comparable.",
+      "quantitative_explanation": "Unit mismatch: Stage-02 counts ambiguous pairs (133); live counts ambiguous subject-nodes (417). Residual cannot be mapped 1:1 without replaying Stage-02 pair enumerator on identical definitions.",
+      "unexplained_residual": true
+    },
+    {
+      "metric": "conflicting",
+      "prior": 21,
+      "live": 0,
+      "delta": -21,
+      "definition_match": false,
+      "stage02_definition": "Stage-02 cross_field_conflicts: matched unique phone with email evidence on both sides and disjoint email identifier sets (count=21).",
+      "live_definition": "Live v0.1.1 conflict: uniquely resolved phone-pair and email-pair disagree for the same Source A subject (pair-disagreement). Under that definition live count=0.",
+      "quantitative_explanation": "Definition change: Stage-02 email-set-disjoint-on-shared-phone (21) vs live phone/email unique-pair disagreement (0). Not the same predicate; cannot claim numerical drift without shared definition replay.",
+      "unexplained_residual": true
+    }
+  ],
+  "GLOBAL_A_B_SPLIT_STATUS": "PASS_OVERLAP_GUARDED",
+  "cross_role_violations": 0,
+  "split_may_remain_overlap_guarded": true,
+  "raw_identifiers_persisted": false,
+  "ok": true,
+  "integrity_ok": true
+}

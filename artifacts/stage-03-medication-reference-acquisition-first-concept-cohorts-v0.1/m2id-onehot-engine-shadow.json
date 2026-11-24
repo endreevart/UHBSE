@@ -1,0 +1,256 @@
+{
+  "version": "0.1",
+  "M2ID_ONEHOT_ENGINE_SHADOW_STATUS": "PASS",
+  "ENGINE_SHADOW_EXECUTION_STATUS": "PASS",
+  "ENGINE_SHADOW_CLAIM_LEVEL": "TECHNICAL_SHADOW_ONLY",
+  "prior_m1_m2c_shadow_not_used_as_proof": true,
+  "onehot_demo_insufficient": true,
+  "real_m2id_onehot_inference_executed": true,
+  "n_frozen_models_loaded": 5,
+  "n_inferences": 5,
+  "inferences": [
+    {
+      "outcome": "\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u043e\u0431\u044a\u0435\u043c \u044d\u0440\u0438\u0442\u0440\u043e\u0446\u0438\u0442\u043e\u0432 (MCV)",
+      "unit": "\u0444\u043b",
+      "file_sha256": "6749e960027ff424b35c035d467453c97fdf2e3313b65c15853a128aa30b4a7d",
+      "model_identity_sha256": "b817984322fe1587e18f1ae29f0fec62c35f6326fd01eba2c3a7ca3971c8cbac",
+      "vocab_hash": "db938e43ce94c386a439279465b44e97936f0dd616ead40f5bbfb6d225705b7f",
+      "feature_order_hash": "f4353a797743c9d86cbc9bf133592fac22839b95700c721fdc37a45026aa6234",
+      "m1_y_pred": 30.23051705914253,
+      "m2id_onehot_y_pred": 31.664670033434184,
+      "oov": true,
+      "padding_truncation": false,
+      "provenance": {
+        "record_origin": "DERIVED",
+        "input_record_references": [
+          {
+            "entity_type": "FrozenM2IDOneHotModel",
+            "entity_id": "b817984322fe1587e18f1ae29f0fec62c35f6326fd01eba2c3a7ca3971c8cbac",
+            "role": "predictor"
+          }
+        ],
+        "computation_method": "m2id_onehot_engine_shadow_v0.1",
+        "computation_version": "0.1.2.1",
+        "uncertainty": {
+          "kind": "none",
+          "note": "point estimate from latest eligible source-backed evidence"
+        },
+        "transformation_id": "core_vertical_slice_v0.1.2.1",
+        "transformation_version": "0.1.2.1",
+        "transformed_at": "2026-08-19T13:36:50Z",
+        "input_artifact_sha256": "6749e960027ff424b35c035d467453c97fdf2e3313b65c15853a128aa30b4a7d",
+        "confidence": "CANDIDATE",
+        "mapping_status": "CANDIDATE",
+        "selection_policy_version": "0.1.2",
+        "snapshot_builder_version": "0.1.2.1",
+        "source_system_context": "magerya_api"
+      }
+    },
+    {
+      "outcome": "\u041d\u0435\u0439\u0442\u0440\u043e\u0444\u0438\u043b\u044b",
+      "unit": "%",
+      "file_sha256": "80ee556ff3bc8a6ece9c0487361b1d269c5dd0eadff782b60bda0dcfc847f7e4",
+      "model_identity_sha256": "094706a3d45d231ff58742aadf0dee56ea3e12a91c95871699ffeec13c3d3427",
+      "vocab_hash": "62a0816deeb67bc7d5fe9921af232366b4668360216ef34d977cf310bbd2f6d3",
+      "feature_order_hash": "06205ff1ba7b21e3dfd0f80b4450b702ab0e526dceea61ecf40a9fccb221503a",
+      "m1_y_pred": 27.899605102222797,
+      "m2id_onehot_y_pred": 30.04483673293977,
+      "oov": true,
+      "padding_truncation": false,
+      "provenance": {
+        "record_origin": "DERIVED",
+        "input_record_references": [
+          {
+            "entity_type": "FrozenM2IDOneHotModel",
+            "entity_id": "094706a3d45d231ff58742aadf0dee56ea3e12a91c95871699ffeec13c3d3427",
+            "role": "predictor"
+          }
+        ],
+        "computation_method": "m2id_onehot_engine_shadow_v0.1",
+        "computation_version": "0.1.2.1",
+        "uncertainty": {
+          "kind": "none",
+          "note": "point estimate from latest eligible source-backed evidence"
+        },
+        "transformation_id": "core_vertical_slice_v0.1.2.1",
+        "transformation_version": "0.1.2.1",
+        "transformed_at": "2026-08-19T13:36:50Z",
+        "input_artifact_sha256": "80ee556ff3bc8a6ece9c0487361b1d269c5dd0eadff782b60bda0dcfc847f7e4",
+        "confidence": "CANDIDATE",
+        "mapping_status": "CANDIDATE",
+        "selection_policy_version": "0.1.2",
+        "snapshot_builder_version": "0.1.2.1",
+        "source_system_context": "magerya_api"
+      }
+    },
+    {
+      "outcome": "\u041b\u0438\u043c\u0444\u043e\u0446\u0438\u0442\u044b",
+      "unit": "%",
+      "file_sha256": "7ce14b43c1960a6011032bbd2c266ed5d80c57bca0ca646226bf01dff5989a18",
+      "model_identity_sha256": "8cee91c6c2b98e974e9c600269972073dfb8ca0bf1b641707a1b9d2b06e9a302",
+      "vocab_hash": "878c6c9a1b6380ab4056430c2ab352958da803ebf62fb8cf7354d93df17552fe",
+      "feature_order_hash": "a4133260c33d09aeb4cca53597d00e133da62a433957152f30d3afdba85d5fa5",
+      "m1_y_pred": 22.038301698417925,
+      "m2id_onehot_y_pred": 20.269374379269955,
+      "oov": true,
+      "padding_truncation": false,
+      "provenance": {
+        "record_origin": "DERIVED",
+        "input_record_references": [
+          {
+            "entity_type": "FrozenM2IDOneHotModel",
+            "entity_id": "8cee91c6c2b98e974e9c600269972073dfb8ca0bf1b641707a1b9d2b06e9a302",
+            "role": "predictor"
+          }
+        ],
+        "computation_method": "m2id_onehot_engine_shadow_v0.1",
+        "computation_version": "0.1.2.1",
+        "uncertainty": {
+          "kind": "none",
+          "note": "point estimate from latest eligible source-backed evidence"
+        },
+        "transformation_id": "core_vertical_slice_v0.1.2.1",
+        "transformation_version": "0.1.2.1",
+        "transformed_at": "2026-08-19T13:36:50Z",
+        "input_artifact_sha256": "7ce14b43c1960a6011032bbd2c266ed5d80c57bca0ca646226bf01dff5989a18",
+        "confidence": "CANDIDATE",
+        "mapping_status": "CANDIDATE",
+        "selection_policy_version": "0.1.2",
+        "snapshot_builder_version": "0.1.2.1",
+        "source_system_context": "magerya_api"
+      }
+    },
+    {
+      "outcome": "\u041c\u043e\u043d\u043e\u0446\u0438\u0442\u044b",
+      "unit": "%",
+      "file_sha256": "faa1c56915ee1d12b12c14120aab2b84d72d2aeee5e6f6231b4073c40777f37a",
+      "model_identity_sha256": "e202f4bf8c88fa9717d799d1df2973078449974c2d4061e40d5a8ed97b700acf",
+      "vocab_hash": "f145d16d1402e1deb4c93a4b7fb23531bc7d6461868b0e607785091ffb154339",
+      "feature_order_hash": "5703a36043ebc9c9db0e138df7d98b3ba0adfc7cd1fe0f0cebbd6e8119483435",
+      "m1_y_pred": 10.117196722300946,
+      "m2id_onehot_y_pred": 10.083208268286674,
+      "oov": true,
+      "padding_truncation": false,
+      "provenance": {
+        "record_origin": "DERIVED",
+        "input_record_references": [
+          {
+            "entity_type": "FrozenM2IDOneHotModel",
+            "entity_id": "e202f4bf8c88fa9717d799d1df2973078449974c2d4061e40d5a8ed97b700acf",
+            "role": "predictor"
+          }
+        ],
+        "computation_method": "m2id_onehot_engine_shadow_v0.1",
+        "computation_version": "0.1.2.1",
+        "uncertainty": {
+          "kind": "none",
+          "note": "point estimate from latest eligible source-backed evidence"
+        },
+        "transformation_id": "core_vertical_slice_v0.1.2.1",
+        "transformation_version": "0.1.2.1",
+        "transformed_at": "2026-08-19T13:36:50Z",
+        "input_artifact_sha256": "faa1c56915ee1d12b12c14120aab2b84d72d2aeee5e6f6231b4073c40777f37a",
+        "confidence": "CANDIDATE",
+        "mapping_status": "CANDIDATE",
+        "selection_policy_version": "0.1.2",
+        "snapshot_builder_version": "0.1.2.1",
+        "source_system_context": "magerya_api"
+      }
+    },
+    {
+      "outcome": "\u042d\u043e\u0437\u0438\u043d\u043e\u0444\u0438\u043b\u044b",
+      "unit": "%",
+      "file_sha256": "a792a0183f3f3e63656ffa467fbb15d1fcb40f85026c66b9fec821a53b28e787",
+      "model_identity_sha256": "9a96368bef8b2def778e74bea73ba4f78e90b9e94c6bb8222ab78ba3271adb65",
+      "vocab_hash": "bbb0da49b588e1274cede982f8a7b56cf83fd04582f617e5b0fdf87275b66bc1",
+      "feature_order_hash": "8ec08550ae3e4f4559eeae6fc45e601e3da8fb8babca2e88a65f2db465ff6790",
+      "m1_y_pred": 7.9821600054834905,
+      "m2id_onehot_y_pred": 8.437790096093673,
+      "oov": true,
+      "padding_truncation": false,
+      "provenance": {
+        "record_origin": "DERIVED",
+        "input_record_references": [
+          {
+            "entity_type": "FrozenM2IDOneHotModel",
+            "entity_id": "9a96368bef8b2def778e74bea73ba4f78e90b9e94c6bb8222ab78ba3271adb65",
+            "role": "predictor"
+          }
+        ],
+        "computation_method": "m2id_onehot_engine_shadow_v0.1",
+        "computation_version": "0.1.2.1",
+        "uncertainty": {
+          "kind": "none",
+          "note": "point estimate from latest eligible source-backed evidence"
+        },
+        "transformation_id": "core_vertical_slice_v0.1.2.1",
+        "transformation_version": "0.1.2.1",
+        "transformed_at": "2026-08-19T13:36:50Z",
+        "input_artifact_sha256": "a792a0183f3f3e63656ffa467fbb15d1fcb40f85026c66b9fec821a53b28e787",
+        "confidence": "CANDIDATE",
+        "mapping_status": "CANDIDATE",
+        "selection_policy_version": "0.1.2",
+        "snapshot_builder_version": "0.1.2.1",
+        "source_system_context": "magerya_api"
+      }
+    }
+  ],
+  "evidence_state_snapshot": {
+    "snapshot_id": "m2id-onehot-shadow-snap",
+    "subject_id": "opaque-technical-fixture-only",
+    "snapshot_kind": "technical_shadow",
+    "components": [
+      {
+        "variable_key": "recorded_outcome_prediction_m1",
+        "numeric_value": 30.23051705914253,
+        "record_origin": "PREDICTED"
+      },
+      {
+        "variable_key": "recorded_outcome_prediction_m2id_onehot",
+        "numeric_value": 31.664670033434184,
+        "record_origin": "PREDICTED"
+      }
+    ],
+    "model_identity": "b817984322fe1587e18f1ae29f0fec62c35f6326fd01eba2c3a7ca3971c8cbac",
+    "input_feature_order_hash": "f4353a797743c9d86cbc9bf133592fac22839b95700c721fdc37a45026aa6234",
+    "vocabulary_hash": "db938e43ce94c386a439279465b44e97936f0dd616ead40f5bbfb6d225705b7f",
+    "CLINICAL_USE": "CLINICAL_USE_PROHIBITED",
+    "CAUSAL_INTERPRETATION": "CAUSAL_INTERPRETATION_PROHIBITED"
+  },
+  "medication_prediction_does_not_drive_synthetic_physiology": true,
+  "CLINICAL_USE": "CLINICAL_USE_PROHIBITED",
+  "CAUSAL_INTERPRETATION": "CAUSAL_INTERPRETATION_PROHIBITED",
+  "checkpoint": {
+    "checkpoint_id": "m2id_parent-w2",
+    "state_hash": "3847c86aa4b01733532ec14af3124d97ad082efe80f90447cb1159700bd7f301"
+  },
+  "fork": {
+    "ok": true
+  },
+  "parent_isolation": {
+    "parent_state_unchanged_after_fork": true,
+    "parent_history_unchanged_after_fork": true,
+    "parent_events_unchanged_after_fork": true,
+    "parent_recomputed_hash_matches_stored_hash": true,
+    "fork_isolation_verified": true,
+    "before": {
+      "final_state_hash": "85d68adcaf2a5fa5b9ad43ada9511b85f4a2d0b911e1496a3f15a3debfaea04b",
+      "history_hash": "8298ed00f23376829269a4bcc01ad5a0a1e07df5ae64b022ace8f1d90e12c5df",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7
+    },
+    "after": {
+      "final_state_hash": "85d68adcaf2a5fa5b9ad43ada9511b85f4a2d0b911e1496a3f15a3debfaea04b",
+      "history_hash": "8298ed00f23376829269a4bcc01ad5a0a1e07df5ae64b022ace8f1d90e12c5df",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7,
+      "stored_final_state_hash": "85d68adcaf2a5fa5b9ad43ada9511b85f4a2d0b911e1496a3f15a3debfaea04b"
+    }
+  },
+  "rollback_ok": true,
+  "determinism": {
+    "inference_repeat_ok": true,
+    "fork_hashes_identical": true
+  },
+  "no_padding_truncation": true
+}

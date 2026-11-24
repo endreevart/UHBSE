@@ -1,0 +1,19 @@
+{
+  "version": "0.1.2.1",
+  "name": "CROSS_SOURCE_TRANSFER_EXPLORATION",
+  "b_cannot_tune_a": true,
+  "external_clinical_validation": false,
+  "claim": "Exploratory frozen-model external-source transfer only \u2014 not clinical validation.",
+  "allowed_result_statuses": [
+    "NOT_RUN_DUE_TO_FAILED_GATE",
+    "EXECUTED_EXPLORATORY_FROZEN_MODEL_TRANSFER",
+    "INSUFFICIENT_SOURCE_B_PAIRS",
+    "APPLICABILITY_FAIL",
+    "FROZEN_MODEL_UNAVAILABLE"
+  ],
+  "executed": false,
+  "cross_source_transfer_status": "NOT_RUN_DUE_TO_FAILED_GATE",
+  "failed_checks": [
+    "t3_harmonization_allows_transfer"
+  ]
+}

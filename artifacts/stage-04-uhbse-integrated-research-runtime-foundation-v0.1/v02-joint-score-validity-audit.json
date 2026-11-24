@@ -1,0 +1,20 @@
+{
+  "defects": [
+    {
+      "claim": "Energy Score uses Euclidean distance on raw mixed-unit values",
+      "energy_on_raw": true,
+      "evaluate_joint_raw": true,
+      "has_euclid": true,
+      "id": 3,
+      "reproduced": true
+    },
+    {
+      "claim": "Variogram Score subtracts different clinical analytes in native units",
+      "id": 4,
+      "reproduced": true,
+      "variogram_subtracts": true
+    }
+  ],
+  "ok": true,
+  "version": "0.1"
+}

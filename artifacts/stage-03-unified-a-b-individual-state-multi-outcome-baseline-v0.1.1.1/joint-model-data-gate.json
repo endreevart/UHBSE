@@ -1,0 +1,94 @@
+{
+  "version": "0.1.1.1",
+  "JOINT_MODEL_DATA_GATE_STATUS": "PASS",
+  "computed": true,
+  "hard_coded": false,
+  "checks": [
+    {
+      "name": "train_states",
+      "actual": 51880,
+      "threshold": 100,
+      "ok": true
+    },
+    {
+      "name": "validation_states",
+      "actual": 10882,
+      "threshold": 50,
+      "ok": true
+    },
+    {
+      "name": "test_states",
+      "actual": 11044,
+      "threshold": 50,
+      "ok": true
+    },
+    {
+      "name": "outcomes_a",
+      "actual": 12,
+      "threshold": 2,
+      "ok": true
+    },
+    {
+      "name": "outcomes_b",
+      "actual": 12,
+      "threshold": 2,
+      "ok": true
+    },
+    {
+      "name": "states_ge2_targets",
+      "actual": 45658,
+      "threshold": 50,
+      "ok": true
+    },
+    {
+      "name": "subjects_ge2_outcomes",
+      "actual": 21225,
+      "threshold": 50,
+      "ok": true
+    },
+    {
+      "name": "mask_density",
+      "actual": 0.257489,
+      "threshold": 0.001,
+      "ok": true
+    },
+    {
+      "name": "val_support_a",
+      "actual": 1558,
+      "threshold": 20,
+      "ok": true
+    },
+    {
+      "name": "val_support_b",
+      "actual": 1682,
+      "threshold": 20,
+      "ok": true
+    },
+    {
+      "name": "test_support_a",
+      "actual": 1610,
+      "threshold": 30,
+      "ok": true
+    },
+    {
+      "name": "test_support_b",
+      "actual": 1747,
+      "threshold": 30,
+      "ok": true
+    },
+    {
+      "name": "target_reuse_pass",
+      "actual": true,
+      "threshold": true,
+      "ok": true
+    },
+    {
+      "name": "overlap_split_pass",
+      "actual": true,
+      "threshold": true,
+      "ok": true
+    }
+  ],
+  "failed_checks": [],
+  "ok": true
+}

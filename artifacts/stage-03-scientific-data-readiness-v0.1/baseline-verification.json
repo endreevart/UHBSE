@@ -1,0 +1,56 @@
+{
+  "check_name": "accepted_core_v0121_baseline",
+  "expected_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "zip_present": true,
+  "sidecar_present": true,
+  "attestation_present": true,
+  "computed_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "sha_matches": true,
+  "sidecar_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "sidecar_matches": true,
+  "attestation_status": "PASS",
+  "members": 205,
+  "indexed_members": 204,
+  "zip_member_count": 205,
+  "review_index_present": true,
+  "internal_manifest_paths": [
+    "artifacts/stage-03-core-vertical-slice-v0.1.2.1/accepted-design-contracts/design-content-manifest.sha256",
+    "artifacts/stage-03-core-vertical-slice-v0.1.2.1/manifest.sha256"
+  ],
+  "prior_zips": {
+    "v0.1": {
+      "present": true,
+      "sha256": "933c34bee1f03af9e22c54be2fb5aa4022228bb7353a35ad2f7e93d3793cb67c",
+      "untouched": true
+    },
+    "v0.1.1": {
+      "present": true,
+      "sha256": "13fbf307fd03eb8ed419a800ff7fed254a8159240482e8ac4b28b5f391941128",
+      "untouched": true
+    },
+    "v0.1.2": {
+      "present": true,
+      "sha256": "d4218dda05cdf8657e03768ce81727e274a691e90abee3ff701bae1018f419f8",
+      "untouched": true
+    },
+    "v0.1.2.1": {
+      "present": true,
+      "sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+      "untouched": true
+    }
+  },
+  "ok": true,
+  "policy": {
+    "scientific_version": "0.1",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "security_blocks_core": false,
+    "clinical_validation_status": "NOT_STARTED",
+    "intervention_response_model_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "accepted_core_baseline_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f"
+  },
+  "security_stage_paused": true,
+  "clinical_validation": "NOT_STARTED"
+}

@@ -1,0 +1,187 @@
+{
+  "version": "0.2.1",
+  "baseline_zip": "stage-03-unified-longitudinal-event-probability-foundation-v0.2-review.zip",
+  "baseline_sha256": "4a92d40dafeaece94cde0a5c29b170c39c000bed1f44793ee8294fdddc88b8d6",
+  "V02_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "n_reproduced": 24,
+  "n_required": 24,
+  "defects": [
+    {
+      "id": 1,
+      "claim": "only_validation_accepted_result_is_kgz_raw_TIME_TO_NEXT_RECORDED_EVENT_30_90_180",
+      "reproduced": true,
+      "observed": {
+        "n_accepted": 1,
+        "supported_horizons_validation": [
+          30,
+          90,
+          180
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "claim": "source_a_observation_EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_OR_CALIBRATED_SIGNAL",
+      "reproduced": true,
+      "observed": "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_OR_CALIBRATED_SIGNAL"
+    },
+    {
+      "id": 3,
+      "claim": "all_four_evaluated_excursion_models_EVALUATED_NOT_ACCEPTED",
+      "reproduced": true,
+      "observed": [
+        "B::mm_1004::%",
+        "B::33::ммоль/л",
+        "B::30::ммоль/л",
+        "B::mm_1002::%"
+      ]
+    },
+    {
+      "id": 4,
+      "claim": "source_a_excursion_landmarks_eq_0",
+      "reproduced": true,
+      "observed": 0
+    },
+    {
+      "id": 5,
+      "claim": "engine_used_rejected_source_a_observation_model",
+      "reproduced": true,
+      "observed": "b6a6d2471f6eb43af351ccdf815237bf6663384500497fcd298f74883206ca98"
+    },
+    {
+      "id": 6,
+      "claim": "accepted_source_b_observation_model_not_used_by_engine",
+      "reproduced": true,
+      "observed": {
+        "accepted_b_hash": "69cc7375257943b30bb087f579c551104abbc7eb6ffeb13d27a3bb89d1c1dce3",
+        "engine_b_fixture_hash": "b6a6d2471f6eb43af351ccdf815237bf6663384500497fcd298f74883206ca98"
+      }
+    },
+    {
+      "id": 7,
+      "claim": "one_a_model_applied_to_source_a_and_source_b_fixtures",
+      "reproduced": true
+    },
+    {
+      "id": 8,
+      "claim": "engine_does_not_check_source_endpoint_outcome_cell_acceptance_horizon",
+      "reproduced": true,
+      "code_markers": [
+        "in_support: bool",
+        "pick any frozen model"
+      ]
+    },
+    {
+      "id": 9,
+      "claim": "engine_publishes_365_as_supported_though_accepted_b_cell_was_30_90_180",
+      "reproduced": true,
+      "observed_supported_horizons": [
+        30.0,
+        90.0,
+        180.0,
+        365.0
+      ]
+    },
+    {
+      "id": 10,
+      "claim": "applicability_passed_as_ready_boolean_frozen_ood_not_invoked",
+      "reproduced": true
+    },
+    {
+      "id": 11,
+      "claim": "calibration_slope_is_ols_bin_rate_on_raw_probability",
+      "reproduced": true
+    },
+    {
+      "id": 12,
+      "claim": "censored_before_horizon_dropped_from_ece_without_ipcw",
+      "reproduced": true
+    },
+    {
+      "id": 13,
+      "claim": "ipcw_brier_self_normalized_uses_G_t_not_G_t_minus_no_reference_test",
+      "reproduced": true,
+      "note": "self-normalized weighted MSE; G(t) not G(t-); no hand-calc test"
+    },
+    {
+      "id": 14,
+      "claim": "global_status_accepted_if_any_one_result_accepted",
+      "reproduced": true
+    },
+    {
+      "id": 15,
+      "claim": "observation_process_a_event_rate_and_micro_followup",
+      "reproduced": true,
+      "observed": {
+        "event_rate": 0.9955420179933029,
+        "followup_q25": 3.2225115740740738e-06
+      },
+      "risk": "same_episode_documentation_event_domination"
+    },
+    {
+      "id": 16,
+      "claim": "excursion_selection_b_only_8_datasets_4_models_a_rows_0",
+      "reproduced": true,
+      "observed": {
+        "selected": [
+          "B::mm_1004::%",
+          "B::33::ммоль/л",
+          "B::30::ммоль/л",
+          "B::mm_1002::%",
+          "B::28::г/л",
+          "B::48::мкмоль/л",
+          "B::8::Ед/л",
+          "B::9::Ед/л"
+        ],
+        "evaluated": 4
+      }
+    },
+    {
+      "id": 17,
+      "claim": "excursion_future_timestamp_approximate_via_state_lineage",
+      "reproduced": true
+    },
+    {
+      "id": 18,
+      "claim": "target_event_reuse_not_published",
+      "reproduced": true
+    },
+    {
+      "id": 19,
+      "claim": "excursion_model_payloads_not_separate_frozen_files",
+      "reproduced": true,
+      "observed_frozen_files": [
+        "frozen-models-index.json",
+        "frozen-obs_A.json",
+        "frozen-obs_B.json"
+      ]
+    },
+    {
+      "id": 20,
+      "claim": "excursion_model_keys_use_process_randomized_python_hash",
+      "reproduced": true
+    },
+    {
+      "id": 21,
+      "claim": "regime_t0_only_contract_broken_by_transition_features",
+      "reproduced": true
+    },
+    {
+      "id": 22,
+      "claim": "ood_sampling_unstratified_undeclared_size_no_manifest_engine_unused",
+      "reproduced": true
+    },
+    {
+      "id": 23,
+      "claim": "only_status_string_tests_missing_required_regressions",
+      "reproduced": true,
+      "note": "unit file has 4 tests; contracts/live skip without artifacts; no estimator/engine routing regressions"
+    },
+    {
+      "id": 24,
+      "claim": "stage_report_published_as_DRAFT",
+      "reproduced": true
+    }
+  ],
+  "ok": true
+}

@@ -1,0 +1,27 @@
+{
+  "per_patient_limit": 40,
+  "per_result_limit": 15,
+  "cohort_subject_count": 100,
+  "relations": {
+    "appointment_appointment": {
+      "available_rows": 2153,
+      "selected_rows": 2153,
+      "truncated_rows": 0,
+      "coverage_percentage": 100.0,
+      "note": "all appointments for cohort subjects loaded (no per-patient encounter cap)"
+    },
+    "document_analysisresult": {
+      "available_rows": 29464,
+      "selected_rows": 4000,
+      "truncated_rows": 25464,
+      "coverage_percentage": 13.5759
+    },
+    "document_analysisresultitem": {
+      "available_rows": 6538,
+      "selected_rows": 6291,
+      "truncated_rows": 247,
+      "coverage_percentage": 96.2221,
+      "note": "available_rows counted only for selected analysisresult parents"
+    }
+  }
+}

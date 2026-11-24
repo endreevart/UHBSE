@@ -1,0 +1,60 @@
+{
+  "version": "0.1",
+  "TIME_TO_EVENT_DATASET_STATUS": "BUILT",
+  "OBSERVATION_PROCESS_TTE_STATUS": "EVALUATED",
+  "OUTCOME_EXCURSION_TTE_STATUS": "EVALUATED",
+  "TIME_TO_EVENT_BASELINE_STATUS": "EVALUATED",
+  "accounting": {
+    "observation_process": {
+      "n_rows": 73806,
+      "events": 49776,
+      "censored": 24030,
+      "zero_negative_excluded": 0,
+      "unexplained": 0
+    },
+    "outcome_excursion": {
+      "n_rows": 259314,
+      "events": 5090,
+      "censored": 254224,
+      "zero_negative_excluded": 0,
+      "n_outcomes": 12,
+      "unexplained": 0
+    }
+  },
+  "use_encoder_features": false,
+  "ok": true,
+  "observation_process_eval_summary": {
+    "status": "EVALUATED",
+    "by_source_status": {
+      "A": "EVALUATED",
+      "B": "EVALUATED"
+    },
+    "A": {
+      "validation_concordance": 0.49732232591529074,
+      "test_concordance": 0.5070521453292208,
+      "encoder_used": false
+    },
+    "B": {
+      "validation_concordance": 0.6089126559714795,
+      "test_concordance": 0.5990517651179664,
+      "encoder_used": false
+    }
+  },
+  "outcome_excursion_eval_summary": {
+    "status": "EVALUATED",
+    "by_source_status": {
+      "A": "EVALUATED",
+      "B": "EVALUATED"
+    },
+    "A": {
+      "validation_concordance": 0.49499807618314734,
+      "test_concordance": 0.5457627118644067,
+      "encoder_used": false
+    },
+    "B": {
+      "validation_concordance": 0.8335980937251787,
+      "test_concordance": 0.5722972972972973,
+      "encoder_used": false
+    }
+  }
+}

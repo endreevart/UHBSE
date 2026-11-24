@@ -1,0 +1,32 @@
+# Unified A+B Individual State + Multi-Outcome Baseline v0.1.1
+
+Generated: 2026-08-27T08:25:06Z
+
+## Summary
+
+Corrective release over published v0.1 — overlap identity, target reuse, metrics, Ridge,
+M2 gate, freeze identity recomputation, and real engine shadow.
+
+- TECHNICAL_PASS=False
+- V01_METHODOLOGY_DEFECT_REPRODUCTION_STATUS=PASS
+- CANONICAL_SUBJECT_ID_RESOLUTION_STATUS=PASS
+- GLOBAL_A_B_SPLIT_STATUS=PASS_OVERLAP_GUARDED
+- INDIVIDUAL_STATE_DATASET_STATUS=REBUILT
+- TARGET_REUSE_AUDIT_STATUS=PASS
+- SOURCE_A_INCREMENTAL_SIGNAL_STATUS=MIXED_OUTCOME_SPECIFIC_RESULTS
+- SOURCE_B_INCREMENTAL_SIGNAL_STATUS=MIXED_OUTCOME_SPECIFIC_RESULTS
+- OVERALL_SOURCE_AWARE_BASELINE_STATUS=MIXED_OUTCOME_SPECIFIC_RESULTS
+- JOINT_MULTI_OUTCOME_MODEL_STATUS=TECHNICAL_MASKED_MULTI_OUTPUT_EVALUATED
+- ENGINE_UNIFIED_STATE_SHADOW_STATUS=NOT_RUN
+- DOMAIN_ACCEPTED_MAPPING_COUNT=0
+- SCIENTIFIC_CROSS_SOURCE_PASS=false
+- SECURITY_STAGE_STATUS=PAUSED_NOT_ACCEPTED_BY_OWNER
+
+## Non-claims
+
+No clinical validation, treatment effect, causal effect, QSP/PKPD, or production readiness.
+No identity merge A↔B. No pooled raw MAE across outcome units.
+
+## Private datasets
+
+Row-level Parquet remains under `private/unified-individual-state-v011/` (not in ZIP).

@@ -1,0 +1,72 @@
+{
+  "check_name": "unified_source_expansion_baselines_v0.1.2",
+  "expected_unified_v011_sha256": "d0e8a973ecbbee6e618cf5976d8a688abf23023ccc477710668fed3b16072faa",
+  "expected_unified_v011_members": 256,
+  "expected_unified_v011_index_rows": 255,
+  "unified_v011_present": true,
+  "computed_unified_v011_sha256": "d0e8a973ecbbee6e618cf5976d8a688abf23023ccc477710668fed3b16072faa",
+  "unified_v011_sha_matches": true,
+  "unified_v011_zip_member_count": 256,
+  "unified_v011_review_index_present": true,
+  "unified_v011_review_index_entry_count": 255,
+  "unified_v011_attestation_indexed_members_defect": true,
+  "unified_v011_attestation_present": true,
+  "unified_v011_attestation_members": 256,
+  "unified_v011_attestation_indexed_members": 256,
+  "unified_v011_indexed_copied_from_members": true,
+  "prior_zips": {
+    "unified_v0.1.1": {
+      "present": true,
+      "sha256": "d0e8a973ecbbee6e618cf5976d8a688abf23023ccc477710668fed3b16072faa",
+      "untouched": true
+    },
+    "unified_v0.1": {
+      "present": true,
+      "sha256": "bf048ed0b7ecfada1d0cdbd522943437d409cdf8aef4b292418b4682cb1a83be",
+      "untouched": true
+    },
+    "core_v0.1.2.1": {
+      "present": true,
+      "sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+      "untouched": true
+    },
+    "sdr_v0.1.1.1": {
+      "present": true,
+      "sha256": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+      "untouched": true
+    },
+    "roadmap_v0.1.1": {
+      "present": true,
+      "sha256": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+      "untouched": true
+    }
+  },
+  "ok": true,
+  "policy": {
+    "unified_version": "0.1.2",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "security_blocks_core": false,
+    "clinical_validation_status": "NOT_STARTED",
+    "intervention_response_model_status": "NOT_STARTED",
+    "treatment_effect_status": "NOT_EVALUATED",
+    "production_readiness": "NOT_CLAIMED",
+    "accepted_unified_v011_sha256": "d0e8a973ecbbee6e618cf5976d8a688abf23023ccc477710668fed3b16072faa",
+    "accepted_unified_v01_sha256": "bf048ed0b7ecfada1d0cdbd522943437d409cdf8aef4b292418b4682cb1a83be",
+    "accepted_core_baseline_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+    "accepted_sdr_v0111_sha256": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+    "accepted_roadmap_v011_sha256": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+    "fixed_outcome_candidate_id": "2685c68a3e247ca4",
+    "shuffle_perms": 500,
+    "shuffle_finite_sample_formula": "(n_extreme + 1) / (n_permutations + 1)",
+    "source_b_obs_batch_size": 2000,
+    "seed": 42,
+    "source_a_system_id": "magerya_api",
+    "source_b_system_id": "kgz_raw",
+    "identity_merge": false,
+    "migration_0005": false
+  },
+  "security_stage_paused": true,
+  "clinical_validation": "NOT_STARTED"
+}

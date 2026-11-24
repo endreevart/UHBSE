@@ -1,0 +1,422 @@
+{
+  "version": "0.1",
+  "FIRST_SOURCE_AWARE_MULTI_OUTCOME_BASELINE_STATUS": "TECHNICAL_SOURCE_AWARE_BASELINE_EVALUATED",
+  "JOINT_MULTI_OUTCOME_MODEL_STATUS": "NOT_RUN_DUE_TO_FAILED_DATA_GATE",
+  "SOURCE_AWARE_MODEL_FREEZE_STATUS": "FROZEN",
+  "ENGINE_UNIFIED_STATE_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+  "claim": "NO_INCREMENTAL_SIGNAL_DETECTED",
+  "m0_vs_m1": {
+    "test_micro_mae_m0": 5.907782545934225,
+    "test_micro_mae_m1": 9.66102347694709,
+    "bootstrap": {
+      "n_bootstrap": 200,
+      "delta_mae_mean": -3.772222723952479,
+      "p_value": 1.0
+    }
+  },
+  "metrics": {
+    "by_outcome": {
+      "A::Лимфоциты::%": {
+        "validation": {
+          "n": 1078,
+          "pair_micro_mae_m0": 6.716274944089144,
+          "pair_micro_mae_m1": 7.190064255237658,
+          "subject_macro_mae_m0": 6.716274944089144,
+          "subject_macro_mae_m1": 7.190064255237658
+        },
+        "test": {
+          "n": 1115,
+          "pair_micro_mae_m0": 6.758566545489579,
+          "pair_micro_mae_m1": 7.290153054303341,
+          "subject_macro_mae_m0": 6.758566545489579,
+          "subject_macro_mae_m1": 7.290153054303341
+        }
+      },
+      "A::Эозинофилы::%": {
+        "validation": {
+          "n": 1059,
+          "pair_micro_mae_m0": 1.3113277326318753,
+          "pair_micro_mae_m1": 1.3485480851977074,
+          "subject_macro_mae_m0": 1.3113277326318753,
+          "subject_macro_mae_m1": 1.3485480851977074
+        },
+        "test": {
+          "n": 1102,
+          "pair_micro_mae_m0": 1.3306640018790434,
+          "pair_micro_mae_m1": 1.339893846527149,
+          "subject_macro_mae_m0": 1.3306640018790434,
+          "subject_macro_mae_m1": 1.339893846527149
+        }
+      },
+      "A::Общий белок::г/л": {
+        "validation": {
+          "n": 944,
+          "pair_micro_mae_m0": 3.6074111627068137,
+          "pair_micro_mae_m1": 3.6161866201601587,
+          "subject_macro_mae_m0": 3.6074111627068137,
+          "subject_macro_mae_m1": 3.6161866201601587
+        },
+        "test": {
+          "n": 992,
+          "pair_micro_mae_m0": 3.654194396297741,
+          "pair_micro_mae_m1": 3.5392480516283373,
+          "subject_macro_mae_m0": 3.654194396297741,
+          "subject_macro_mae_m1": 3.5392480516283373
+        }
+      },
+      "A::25(OH)витамин D::нг/мл": {
+        "validation": {
+          "n": 885,
+          "pair_micro_mae_m0": 18.81998834165566,
+          "pair_micro_mae_m1": 14.36844087417856,
+          "subject_macro_mae_m0": 18.81998834165566,
+          "subject_macro_mae_m1": 14.36844087417856
+        },
+        "test": {
+          "n": 948,
+          "pair_micro_mae_m0": 18.71975150593831,
+          "pair_micro_mae_m1": 14.497974395825098,
+          "subject_macro_mae_m0": 18.71975150593831,
+          "subject_macro_mae_m1": 14.497974395825098
+        }
+      },
+      "A::Железо::мкмоль/л": {
+        "validation": {
+          "n": 926,
+          "pair_micro_mae_m0": 5.943944509255718,
+          "pair_micro_mae_m1": 5.562532896995282,
+          "subject_macro_mae_m0": 5.943944509255718,
+          "subject_macro_mae_m1": 5.562532896995282
+        },
+        "test": {
+          "n": 987,
+          "pair_micro_mae_m0": 5.997766087550146,
+          "pair_micro_mae_m1": 5.411766277714295,
+          "subject_macro_mae_m0": 5.997766087550146,
+          "subject_macro_mae_m1": 5.411766277714295
+        }
+      },
+      "A::Эритроциты::*10^12/л": {
+        "validation": {
+          "n": 971,
+          "pair_micro_mae_m0": 0.2821249720727369,
+          "pair_micro_mae_m1": 0.3536828387272385,
+          "subject_macro_mae_m0": 0.2821249720727369,
+          "subject_macro_mae_m1": 0.3536828387272385
+        },
+        "test": {
+          "n": 1011,
+          "pair_micro_mae_m0": 0.2509481642578518,
+          "pair_micro_mae_m1": 0.3219244825475073,
+          "subject_macro_mae_m0": 0.2509481642578518,
+          "subject_macro_mae_m1": 0.3219244825475073
+        }
+      },
+      "A::Гемоглобин::г/л": {
+        "validation": {
+          "n": 951,
+          "pair_micro_mae_m0": 12.407573715219266,
+          "pair_micro_mae_m1": 14.2372043995507,
+          "subject_macro_mae_m0": 12.407573715219266,
+          "subject_macro_mae_m1": 14.2372043995507
+        },
+        "test": {
+          "n": 987,
+          "pair_micro_mae_m0": 12.02677551323015,
+          "pair_micro_mae_m1": 14.142926982253794,
+          "subject_macro_mae_m0": 12.02677551323015,
+          "subject_macro_mae_m1": 14.142926982253794
+        }
+      },
+      "A::Лейкоциты::*10^9/л": {
+        "validation": {
+          "n": 974,
+          "pair_micro_mae_m0": 1.2715652879528259,
+          "pair_micro_mae_m1": 1.3624183600208144,
+          "subject_macro_mae_m0": 1.2715652879528259,
+          "subject_macro_mae_m1": 1.3624183600208144
+        },
+        "test": {
+          "n": 1010,
+          "pair_micro_mae_m0": 1.3014442055609041,
+          "pair_micro_mae_m1": 1.3976130472179882,
+          "subject_macro_mae_m0": 1.3014442055609041,
+          "subject_macro_mae_m1": 1.3976130472179882
+        }
+      },
+      "A::Нейтрофилы::%": {
+        "validation": {
+          "n": 1061,
+          "pair_micro_mae_m0": 7.689579887016326,
+          "pair_micro_mae_m1": 8.087084986869312,
+          "subject_macro_mae_m0": 7.689579887016326,
+          "subject_macro_mae_m1": 8.087084986869312
+        },
+        "test": {
+          "n": 1101,
+          "pair_micro_mae_m0": 7.656148547256399,
+          "pair_micro_mae_m1": 8.337309162694716,
+          "subject_macro_mae_m0": 7.656148547256399,
+          "subject_macro_mae_m1": 8.337309162694716
+        }
+      },
+      "A::Базофилы::%": {
+        "validation": {
+          "n": 1045,
+          "pair_micro_mae_m0": 0.29616288117773115,
+          "pair_micro_mae_m1": 0.26741368103277446,
+          "subject_macro_mae_m0": 0.29616288117773115,
+          "subject_macro_mae_m1": 0.26741368103277446
+        },
+        "test": {
+          "n": 1091,
+          "pair_micro_mae_m0": 0.30093965963756486,
+          "pair_micro_mae_m1": 0.27096592242302053,
+          "subject_macro_mae_m0": 0.30093965963756486,
+          "subject_macro_mae_m1": 0.27096592242302053
+        }
+      },
+      "A::Моноциты::%": {
+        "validation": {
+          "n": 1071,
+          "pair_micro_mae_m0": 1.6335849247919276,
+          "pair_micro_mae_m1": 1.6387826063107955,
+          "subject_macro_mae_m0": 1.6335849247919276,
+          "subject_macro_mae_m1": 1.6387826063107955
+        },
+        "test": {
+          "n": 1110,
+          "pair_micro_mae_m0": 1.6092920668060182,
+          "pair_micro_mae_m1": 1.603616297217021,
+          "subject_macro_mae_m0": 1.6092920668060182,
+          "subject_macro_mae_m1": 1.603616297217021
+        }
+      },
+      "A::Тромбоциты::*10^9/л": {
+        "validation": {
+          "n": 972,
+          "pair_micro_mae_m0": 38.516983467635015,
+          "pair_micro_mae_m1": 49.131783456726474,
+          "subject_macro_mae_m0": 38.516983467635015,
+          "subject_macro_mae_m1": 49.131783456726474
+        },
+        "test": {
+          "n": 1013,
+          "pair_micro_mae_m0": 41.08731882060278,
+          "pair_micro_mae_m1": 47.447695964752484,
+          "subject_macro_mae_m0": 41.08731882060278,
+          "subject_macro_mae_m1": 47.447695964752484
+        }
+      },
+      "B::30::ммоль/л": {
+        "validation": {
+          "n": 1653,
+          "pair_micro_mae_m0": 0.316756529529691,
+          "pair_micro_mae_m1": 0.2977801379047453,
+          "subject_macro_mae_m0": 0.316756529529691,
+          "subject_macro_mae_m1": 0.2977801379047453
+        },
+        "test": {
+          "n": 1601,
+          "pair_micro_mae_m0": 0.3073324073124412,
+          "pair_micro_mae_m1": 0.29572943772838567,
+          "subject_macro_mae_m0": 0.3073324073124412,
+          "subject_macro_mae_m1": 0.29572943772838567
+        }
+      },
+      "B::48::мкмоль/л": {
+        "validation": {
+          "n": 1570,
+          "pair_micro_mae_m0": 6.081947314672366,
+          "pair_micro_mae_m1": 5.029260927163071,
+          "subject_macro_mae_m0": 6.081947314672366,
+          "subject_macro_mae_m1": 5.029260927163071
+        },
+        "test": {
+          "n": 1510,
+          "pair_micro_mae_m0": 6.133372578168662,
+          "pair_micro_mae_m1": 4.964378197554467,
+          "subject_macro_mae_m0": 6.133372578168662,
+          "subject_macro_mae_m1": 4.964378197554467
+        }
+      },
+      "B::32::ммоль/л": {
+        "validation": {
+          "n": 1364,
+          "pair_micro_mae_m0": 0.21723686444502532,
+          "pair_micro_mae_m1": 0.28003620107421584,
+          "subject_macro_mae_m0": 0.21723686444502532,
+          "subject_macro_mae_m1": 0.28003620107421584
+        },
+        "test": {
+          "n": 1350,
+          "pair_micro_mae_m0": 0.2853459941833214,
+          "pair_micro_mae_m1": 0.3577394080975441,
+          "subject_macro_mae_m0": 0.2853459941833214,
+          "subject_macro_mae_m1": 0.3577394080975441
+        }
+      },
+      "B::33::ммоль/л": {
+        "validation": {
+          "n": 1674,
+          "pair_micro_mae_m0": 0.563940868693158,
+          "pair_micro_mae_m1": 0.6943616936760685,
+          "subject_macro_mae_m0": 0.563940868693158,
+          "subject_macro_mae_m1": 0.6943616936760685
+        },
+        "test": {
+          "n": 1596,
+          "pair_micro_mae_m0": 0.5333714289744516,
+          "pair_micro_mae_m1": 0.6735644505666218,
+          "subject_macro_mae_m0": 0.5333714289744516,
+          "subject_macro_mae_m1": 0.6735644505666218
+        }
+      },
+      "B::55::пмоль/л": {
+        "validation": {
+          "n": 1351,
+          "pair_micro_mae_m0": 1.650607988848714,
+          "pair_micro_mae_m1": 1.7278453634131554,
+          "subject_macro_mae_m0": 1.650607988848714,
+          "subject_macro_mae_m1": 1.7278453634131554
+        },
+        "test": {
+          "n": 1311,
+          "pair_micro_mae_m0": 1.768020840242325,
+          "pair_micro_mae_m1": 1.7756701806226398,
+          "subject_macro_mae_m0": 1.768020840242325,
+          "subject_macro_mae_m1": 1.7756701806226398
+        }
+      },
+      "B::28::г/л": {
+        "validation": {
+          "n": 1626,
+          "pair_micro_mae_m0": 4.412152492241847,
+          "pair_micro_mae_m1": 80.53854013063119,
+          "subject_macro_mae_m0": 4.412152492241847,
+          "subject_macro_mae_m1": 80.53854013063119
+        },
+        "test": {
+          "n": 1560,
+          "pair_micro_mae_m0": 4.490774147918091,
+          "pair_micro_mae_m1": 79.01754949603867,
+          "subject_macro_mae_m0": 4.490774147918091,
+          "subject_macro_mae_m1": 79.01754949603867
+        }
+      },
+      "B::16::ммоль/л": {
+        "validation": {
+          "n": 1516,
+          "pair_micro_mae_m0": 0.3827053661459142,
+          "pair_micro_mae_m1": 0.3916922816093296,
+          "subject_macro_mae_m0": 0.3827053661459142,
+          "subject_macro_mae_m1": 0.3916922816093296
+        },
+        "test": {
+          "n": 1462,
+          "pair_micro_mae_m0": 0.8527847006696028,
+          "pair_micro_mae_m1": 0.5022654142106658,
+          "subject_macro_mae_m0": 0.8527847006696028,
+          "subject_macro_mae_m1": 0.5022654142106658
+        }
+      },
+      "B::8::Ед/л": {
+        "validation": {
+          "n": 1513,
+          "pair_micro_mae_m0": 8.120251298743952,
+          "pair_micro_mae_m1": 7.627818289470448,
+          "subject_macro_mae_m0": 8.120251298743952,
+          "subject_macro_mae_m1": 7.627818289470448
+        },
+        "test": {
+          "n": 1434,
+          "pair_micro_mae_m0": 8.450075623041956,
+          "pair_micro_mae_m1": 7.350212767343632,
+          "subject_macro_mae_m0": 8.450075623041956,
+          "subject_macro_mae_m1": 7.350212767343632
+        }
+      },
+      "B::9::Ед/л": {
+        "validation": {
+          "n": 1508,
+          "pair_micro_mae_m0": 5.328348133172511,
+          "pair_micro_mae_m1": 5.232647140667929,
+          "subject_macro_mae_m0": 5.328348133172511,
+          "subject_macro_mae_m1": 5.232647140667929
+        },
+        "test": {
+          "n": 1429,
+          "pair_micro_mae_m0": 5.702935307657006,
+          "pair_micro_mae_m1": 5.168652643841453,
+          "subject_macro_mae_m0": 5.702935307657006,
+          "subject_macro_mae_m1": 5.168652643841453
+        }
+      },
+      "B::mm_1004::%": {
+        "validation": {
+          "n": 1679,
+          "pair_micro_mae_m0": 6.036184466594135,
+          "pair_micro_mae_m1": 5.960134628554788,
+          "subject_macro_mae_m0": 6.036184466594135,
+          "subject_macro_mae_m1": 5.960134628554788
+        },
+        "test": {
+          "n": 1608,
+          "pair_micro_mae_m0": 6.056022372886197,
+          "pair_micro_mae_m1": 5.957110597081874,
+          "subject_macro_mae_m0": 6.056022372886197,
+          "subject_macro_mae_m1": 5.957110597081874
+        }
+      },
+      "B::mm_1002::%": {
+        "validation": {
+          "n": 1593,
+          "pair_micro_mae_m0": 1.2840038102055022,
+          "pair_micro_mae_m1": 1.2579739135109427,
+          "subject_macro_mae_m0": 1.2840038102055022,
+          "subject_macro_mae_m1": 1.2579739135109427
+        },
+        "test": {
+          "n": 1520,
+          "pair_micro_mae_m0": 1.174034492742386,
+          "pair_micro_mae_m1": 1.1506672846759314,
+          "subject_macro_mae_m0": 1.174034492742386,
+          "subject_macro_mae_m1": 1.1506672846759314
+        }
+      },
+      "B::928::нг/мл": {
+        "validation": {
+          "n": 1320,
+          "pair_micro_mae_m0": 17.62966449034192,
+          "pair_micro_mae_m1": 14.313825732311251,
+          "subject_macro_mae_m0": 17.62966449034192,
+          "subject_macro_mae_m1": 14.313825732311251
+        },
+        "test": {
+          "n": 1236,
+          "pair_micro_mae_m0": 18.189858768035034,
+          "pair_micro_mae_m1": 14.816814518765021,
+          "subject_macro_mae_m0": 18.189858768035034,
+          "subject_macro_mae_m1": 14.816814518765021
+        }
+      }
+    },
+    "by_source": {
+      "magerya_api": {
+        "n_test": 12467,
+        "mae_m0": 26.493078286676827,
+        "mae_m1": 8.600077473145777
+      },
+      "kgz_raw": {
+        "n_test": 17617,
+        "mae_m0": 5.878317278764829,
+        "mae_m1": 10.411821787067483
+      }
+    }
+  },
+  "n_outcomes": 24,
+  "no_hpo_on_test": true,
+  "test_opened_once": true,
+  "domain_accepted_mapping_count": 0,
+  "ok": true
+}

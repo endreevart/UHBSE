@@ -1,0 +1,88 @@
+{
+  "version": "0.1",
+  "EXTERNAL_MEDICATION_REFERENCE_STATUS": "NOT_CONFIGURED",
+  "candidate_providers": [
+    "RxNorm/RxNav",
+    "DailyMed/openFDA",
+    "ATC/DDD",
+    "PubChem",
+    "ChEMBL"
+  ],
+  "providers": [
+    {
+      "provider_name": "RxNorm/RxNav",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": null,
+      "source_url_or_local_snapshot": null,
+      "content_hash": null,
+      "retrieval_status": "NOT_CONFIGURED",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "all"
+      ],
+      "note": "Candidate only; not assumed connected"
+    },
+    {
+      "provider_name": "DailyMed/openFDA",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": null,
+      "source_url_or_local_snapshot": null,
+      "content_hash": null,
+      "retrieval_status": "NOT_CONFIGURED",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "all"
+      ],
+      "note": "Candidate only; not assumed connected"
+    },
+    {
+      "provider_name": "ATC/DDD",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": null,
+      "source_url_or_local_snapshot": null,
+      "content_hash": null,
+      "retrieval_status": "NOT_CONFIGURED",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "all"
+      ],
+      "note": "Candidate only; not assumed connected"
+    },
+    {
+      "provider_name": "PubChem",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": null,
+      "source_url_or_local_snapshot": null,
+      "content_hash": null,
+      "retrieval_status": "NOT_CONFIGURED",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "all"
+      ],
+      "note": "Candidate only; not assumed connected"
+    },
+    {
+      "provider_name": "ChEMBL",
+      "dataset_api_version_or_retrieval_date": null,
+      "licensing_usage_status": "NOT_CONFIGURED",
+      "identifier_system": null,
+      "source_url_or_local_snapshot": null,
+      "content_hash": null,
+      "retrieval_status": "NOT_CONFIGURED",
+      "fields_used": [],
+      "fields_explicitly_not_trusted": [
+        "all"
+      ],
+      "note": "Candidate only; not assumed connected"
+    }
+  ],
+  "paid_api_purchase": false,
+  "api_key_created": false,
+  "secret_provisioning": false,
+  "uncontrolled_bulk_download": false,
+  "continues_with_source_derived_registry": true
+}

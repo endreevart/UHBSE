@@ -1,0 +1,1865 @@
+{
+  "core_vertical_slice_status": "TECHNICAL_VERTICAL_SLICE_PASS",
+  "core_slice_version": "0.1.1",
+  "checks": {
+    "source_a_readable": "PASS",
+    "canonical_writable_load": "PASS",
+    "extraction_ok": "PASS",
+    "provenance_present": "PASS",
+    "source_record_coverage": "PASS",
+    "timeline_built": "PASS",
+    "starting_state_built": "PASS",
+    "temporal_no_future_leakage": "PASS",
+    "three_branches": "PASS",
+    "baseline_ran": "PASS",
+    "synthetic_ran": "PASS",
+    "dose_change_isolated": "PASS",
+    "checkpoint_ok": "PASS",
+    "fork_ok": "PASS",
+    "rollback_ok": "PASS",
+    "branch_isolation": "PASS",
+    "uncertainty_present": "PASS",
+    "idempotent_reload": "PASS",
+    "rejects_handled": "PASS",
+    "truncation_accounted": "PASS",
+    "pii_excluded_from_artifacts": "PASS",
+    "scope_honesty": "PASS",
+    "determinism_in_process": "PASS",
+    "security_findings_non_blocking": "PASS"
+  },
+  "check_details": {
+    "source_a_readable": {
+      "status": "PASS",
+      "evidence": {
+        "readable": true,
+        "db_user": "mg_audit_ro",
+        "transaction_read_only": "on",
+        "raw_writes_forbidden": true
+      }
+    },
+    "canonical_writable_load": {
+      "status": "PASS",
+      "evidence": {
+        "write_error_count": 0,
+        "subject_rows": 100,
+        "subjects_attempted": 100
+      }
+    },
+    "extraction_ok": {
+      "status": "PASS",
+      "evidence": {
+        "n": 100
+      }
+    },
+    "provenance_present": {
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "sampled": 20,
+        "missing_required_keys": 0,
+        "required_keys": [
+          "record_origin",
+          "source_system",
+          "source_record_locator",
+          "transformation_id"
+        ]
+      }
+    },
+    "source_record_coverage": {
+      "status": "PASS",
+      "evidence": {
+        "every_evidence_has_source_record": true,
+        "missing_total": 0,
+        "per_entity": [
+          {
+            "entity": "subject",
+            "missing_source_record": 0,
+            "ok": true
+          },
+          {
+            "entity": "subject_characteristic",
+            "missing_source_record": 0,
+            "ok": true
+          },
+          {
+            "entity": "encounter",
+            "missing_source_record": 0,
+            "ok": true
+          },
+          {
+            "entity": "observation",
+            "missing_source_record": 0,
+            "ok": true
+          },
+          {
+            "entity": "observation_component",
+            "missing_source_record": 0,
+            "ok": true
+          }
+        ],
+        "source_record_counts_by_relation": {
+          "account_patient": 100,
+          "appointment_appointment": 2153,
+          "document_analysisresult": 4000,
+          "document_analysisresultitem": 6291
+        }
+      }
+    },
+    "timeline_built": {
+      "status": "PASS",
+      "evidence": {
+        "built": 10,
+        "cap": 10
+      }
+    },
+    "starting_state_built": {
+      "status": "PASS",
+      "evidence": {
+        "built": 10
+      }
+    },
+    "temporal_no_future_leakage": {
+      "status": "PASS",
+      "evidence": {
+        "injected": true,
+        "excluded_future_count": 1,
+        "marker_present_in_snapshot": false,
+        "pass": true
+      }
+    },
+    "three_branches": {
+      "status": "PASS",
+      "evidence": {
+        "n": 3
+      }
+    },
+    "baseline_ran": {
+      "status": "PASS",
+      "evidence": [
+        "persistence",
+        "heuristic",
+        "synthetic"
+      ]
+    },
+    "synthetic_ran": {
+      "status": "PASS",
+      "evidence": [
+        "persistence",
+        "heuristic",
+        "synthetic"
+      ]
+    },
+    "dose_change_isolated": {
+      "status": "PASS",
+      "evidence": {
+        "control": "663d18c7696dab645909cab4a5b8ca3163a685ecb28d0a963b1218af63614109",
+        "intervention_a": "aa8f30d34baa6b7f94388d6e75f5d7c2016495dd89f139fb1c3a37ca03ecb688",
+        "intervention_a_dose_change": "50d4110007463b86b49f222bc9ae7c322a5aae3c60860e20d6c73c2da3316838"
+      }
+    },
+    "checkpoint_ok": {
+      "status": "PASS",
+      "evidence": {
+        "n": 3
+      }
+    },
+    "fork_ok": {
+      "status": "PASS",
+      "evidence": {
+        "branch_id": "fork_from_control_w2",
+        "label": "Fork from control-w2",
+        "events": [
+          {
+            "week": 2,
+            "type": "fork",
+            "from_checkpoint": "control-w2"
+          }
+        ],
+        "history": [
+          {
+            "week": 2,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 126.91769438292548,
+                  "unit": null,
+                  "lower": 126.91769438292548,
+                  "upper": 126.91769438292548,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 14.266214968424963,
+                  "unit": null,
+                  "lower": 14.266214968424963,
+                  "upper": 14.266214968424963,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 4.641982194592149,
+                  "unit": null,
+                  "lower": 4.641982194592149,
+                  "upper": 4.641982194592149,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 8.186651772616655,
+                  "unit": null,
+                  "lower": 8.186651772616655,
+                  "upper": 8.186651772616655,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 234.1382222854905,
+                  "unit": null,
+                  "lower": 234.1382222854905,
+                  "upper": 234.1382222854905,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 126.05902813673649,
+                  "unit": null,
+                  "lower": 119.7131424175902,
+                  "upper": 132.40491385588277,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 14.122840059337138,
+                  "unit": null,
+                  "lower": 13.40952831091589,
+                  "upper": 14.836151807758386,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 4.613362808764493,
+                  "unit": null,
+                  "lower": 4.3812626990348855,
+                  "upper": 4.845462918494101,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 8.075431951578368,
+                  "unit": null,
+                  "lower": 7.666098362947535,
+                  "upper": 8.484765540209201,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 234.99520122818294,
+                  "unit": null,
+                  "lower": 223.2882891139084,
+                  "upper": 246.70211334245747,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 125.86129488701975,
+                  "unit": null,
+                  "lower": 123.86129488701975,
+                  "upper": 127.86129488701975,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 13.251265558416536,
+                  "unit": null,
+                  "lower": 11.251265558416536,
+                  "upper": 15.251265558416536,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 3.570901548887979,
+                  "unit": null,
+                  "lower": 1.5709015488879792,
+                  "upper": 5.57090154888798,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 7.15380238159461,
+                  "unit": null,
+                  "lower": 5.15380238159461,
+                  "upper": 9.153802381594609,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 233.233662722521,
+                  "unit": null,
+                  "lower": 231.233662722521,
+                  "upper": 235.233662722521,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "0f48681c46d5ddb8bf4027269361af6257766130667c85886991634376e0d042"
+          },
+          {
+            "week": 3,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 125.86129488701975,
+                  "unit": null,
+                  "lower": 125.86129488701975,
+                  "upper": 125.86129488701975,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 13.251265558416536,
+                  "unit": null,
+                  "lower": 13.251265558416536,
+                  "upper": 13.251265558416536,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 3.570901548887979,
+                  "unit": null,
+                  "lower": 3.570901548887979,
+                  "upper": 3.570901548887979,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 7.15380238159461,
+                  "unit": null,
+                  "lower": 7.15380238159461,
+                  "upper": 7.15380238159461,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 233.233662722521,
+                  "unit": null,
+                  "lower": 233.233662722521,
+                  "upper": 233.233662722521,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 126.1526492886,
+                  "unit": null,
+                  "lower": 119.85958354424902,
+                  "upper": 132.445715032951,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 13.140697506567834,
+                  "unit": null,
+                  "lower": 12.478133228647007,
+                  "upper": 13.803261784488662,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 3.5463334318431317,
+                  "unit": null,
+                  "lower": 3.367787354398733,
+                  "upper": 3.7248795092875304,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 7.158882269153969,
+                  "unit": null,
+                  "lower": 6.801191150074239,
+                  "upper": 7.516573388233699,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 230.2586715020645,
+                  "unit": null,
+                  "lower": 218.59698736593845,
+                  "upper": 241.92035563819053,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 124.33571618788504,
+                  "unit": null,
+                  "lower": 122.33571618788504,
+                  "upper": 126.33571618788504,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 11.681253792097323,
+                  "unit": null,
+                  "lower": 9.681253792097323,
+                  "upper": 13.681253792097323,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 2.1635788656265884,
+                  "unit": null,
+                  "lower": 0.1635788656265884,
+                  "upper": 4.163578865626588,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 5.6721095243001205,
+                  "unit": null,
+                  "lower": 3.6721095243001205,
+                  "upper": 7.6721095243001205,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 231.79825193766072,
+                  "unit": null,
+                  "lower": 229.79825193766072,
+                  "upper": 233.79825193766072,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "b124c4f8db5aac6978ab72ad31fd8e35fd1baa5038c817676845b2618faf6e59"
+          },
+          {
+            "week": 4,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 124.33571618788504,
+                  "unit": null,
+                  "lower": 124.33571618788504,
+                  "upper": 124.33571618788504,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 11.681253792097323,
+                  "unit": null,
+                  "lower": 11.681253792097323,
+                  "upper": 11.681253792097323,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 2.1635788656265884,
+                  "unit": null,
+                  "lower": 2.1635788656265884,
+                  "upper": 2.1635788656265884,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 5.6721095243001205,
+                  "unit": null,
+                  "lower": 5.6721095243001205,
+                  "upper": 5.6721095243001205,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 231.79825193766072,
+                  "unit": null,
+                  "lower": 231.79825193766072,
+                  "upper": 231.79825193766072,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 123.08577782956228,
+                  "unit": null,
+                  "lower": 116.86899102016802,
+                  "upper": 129.30256463895654,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 11.529748238045954,
+                  "unit": null,
+                  "lower": 10.945684548441088,
+                  "upper": 12.11381192765082,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 2.148576065727633,
+                  "unit": null,
+                  "lower": 2.0403961224463036,
+                  "upper": 2.2567560090089622,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 5.621120001003159,
+                  "unit": null,
+                  "lower": 5.337513524788153,
+                  "upper": 5.904726477218165,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 232.08377690210997,
+                  "unit": null,
+                  "lower": 220.49386330522694,
+                  "upper": 243.673690498993,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 122.36350139522801,
+                  "unit": null,
+                  "lower": 120.36350139522801,
+                  "upper": 124.36350139522801,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 9.617219789935954,
+                  "unit": null,
+                  "lower": 7.6172197899359535,
+                  "upper": 11.617219789935954,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 0.08799140767494068,
+                  "unit": null,
+                  "lower": -1.9120085923250594,
+                  "upper": 2.0879914076749406,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 3.634016131226366,
+                  "unit": null,
+                  "lower": 1.6340161312263661,
+                  "upper": 5.634016131226366,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 229.858394322904,
+                  "unit": null,
+                  "lower": 227.858394322904,
+                  "upper": 231.858394322904,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "f44ec39134969c132a00b4e7f3a962ebc28b7ca363563b7cd5b1a8b53afad262"
+          },
+          {
+            "week": 5,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 122.36350139522801,
+                  "unit": null,
+                  "lower": 122.36350139522801,
+                  "upper": 122.36350139522801,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 9.617219789935954,
+                  "unit": null,
+                  "lower": 9.617219789935954,
+                  "upper": 9.617219789935954,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 0.08799140767494068,
+                  "unit": null,
+                  "lower": 0.08799140767494068,
+                  "upper": 0.08799140767494068,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 3.634016131226366,
+                  "unit": null,
+                  "lower": 3.634016131226366,
+                  "upper": 3.634016131226366,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 229.858394322904,
+                  "unit": null,
+                  "lower": 229.858394322904,
+                  "upper": 229.858394322904,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 120.33403266332323,
+                  "unit": null,
+                  "lower": 114.21585659356182,
+                  "upper": 126.45220873308463,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 9.432320545234337,
+                  "unit": null,
+                  "lower": 8.951458555737538,
+                  "upper": 9.913182534731135,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": 0.0862524609142214,
+                  "unit": null,
+                  "lower": 0.08185189053047436,
+                  "upper": 0.09065303129796844,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 3.5871770686329816,
+                  "unit": null,
+                  "lower": 3.405475262071663,
+                  "upper": 3.7688788751943,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 225.54652847920983,
+                  "unit": null,
+                  "lower": 214.05360776306463,
+                  "upper": 237.03944919535502,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 119.82437362007603,
+                  "unit": null,
+                  "lower": 117.82437362007603,
+                  "upper": 121.82437362007603,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 7.024819323140668,
+                  "unit": null,
+                  "lower": 5.024819323140668,
+                  "upper": 9.024819323140669,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -2.3214981720307297,
+                  "unit": null,
+                  "lower": -4.321498172030729,
+                  "upper": -0.3214981720307297,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 1.1235169516197165,
+                  "unit": null,
+                  "lower": -0.8764830483802835,
+                  "upper": 3.1235169516197168,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 227.33793569466272,
+                  "unit": null,
+                  "lower": 225.33793569466272,
+                  "upper": 229.33793569466272,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "4d560e6dfc3d1bd2302f1de6770f27e6d66bb05abeb5f8a5f4d83242e00b9fb7"
+          },
+          {
+            "week": 6,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 119.82437362007603,
+                  "unit": null,
+                  "lower": 119.82437362007603,
+                  "upper": 119.82437362007603,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 7.024819323140668,
+                  "unit": null,
+                  "lower": 7.024819323140668,
+                  "upper": 7.024819323140668,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -2.3214981720307297,
+                  "unit": null,
+                  "lower": -2.3214981720307297,
+                  "upper": -2.3214981720307297,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 1.1235169516197165,
+                  "unit": null,
+                  "lower": 1.1235169516197165,
+                  "upper": 1.1235169516197165,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 227.33793569466272,
+                  "unit": null,
+                  "lower": 227.33793569466272,
+                  "upper": 227.33793569466272,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 117.41391564551509,
+                  "unit": null,
+                  "lower": 111.42269596451129,
+                  "upper": 123.40513532651889,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 6.878119366680112,
+                  "unit": null,
+                  "lower": 6.5268774005230785,
+                  "upper": 7.229361332837145,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -2.31433144116855,
+                  "unit": null,
+                  "lower": -2.4304073497700864,
+                  "upper": -2.1982555325670132,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": 1.099589608738658,
+                  "unit": null,
+                  "lower": 1.0434127611576722,
+                  "upper": 1.155766456319644,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 223.8953306289988,
+                  "unit": null,
+                  "lower": 212.52843284426567,
+                  "upper": 235.26222841373195,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 116.75189210206058,
+                  "unit": null,
+                  "lower": 114.75189210206058,
+                  "upper": 118.75189210206058,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 3.98754001041917,
+                  "unit": null,
+                  "lower": 1.98754001041917,
+                  "upper": 5.9875400104191705,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -5.2371313757585956,
+                  "unit": null,
+                  "lower": -7.2371313757585956,
+                  "upper": -3.2371313757585956,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -1.8747700201893573,
+                  "unit": null,
+                  "lower": -3.8747700201893576,
+                  "upper": 0.12522997981064266,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 224.41713827701852,
+                  "unit": null,
+                  "lower": 222.41713827701852,
+                  "upper": 226.41713827701852,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "b9eafaa60c7a5249040a02f7b63478f1d54b61898b31eee3f00f7bf2e30233bf"
+          },
+          {
+            "week": 7,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 116.75189210206058,
+                  "unit": null,
+                  "lower": 116.75189210206058,
+                  "upper": 116.75189210206058,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 3.98754001041917,
+                  "unit": null,
+                  "lower": 3.98754001041917,
+                  "upper": 3.98754001041917,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -5.2371313757585956,
+                  "unit": null,
+                  "lower": -5.2371313757585956,
+                  "upper": -5.2371313757585956,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -1.8747700201893573,
+                  "unit": null,
+                  "lower": -1.8747700201893573,
+                  "upper": -1.8747700201893573,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 224.41713827701852,
+                  "unit": null,
+                  "lower": 224.41713827701852,
+                  "upper": 224.41713827701852,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 114.7800031980482,
+                  "unit": null,
+                  "lower": 108.94240759294517,
+                  "upper": 120.61759880315124,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 3.9619381312593,
+                  "unit": null,
+                  "lower": 3.762560130738341,
+                  "upper": 4.161316131780258,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -5.157402561816252,
+                  "unit": null,
+                  "lower": -5.419260130604181,
+                  "upper": -4.895544993028322,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -1.8352513288889376,
+                  "unit": null,
+                  "lower": -1.9289908298984055,
+                  "upper": -1.7415118278794697,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 223.38184014722745,
+                  "unit": null,
+                  "lower": 212.16098223337653,
+                  "upper": 234.60269806107837,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 113.27085650024621,
+                  "unit": null,
+                  "lower": 111.27085650024621,
+                  "upper": 115.27085650024621,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 0.5203498069266498,
+                  "unit": null,
+                  "lower": -1.47965019307335,
+                  "upper": 2.52034980692665,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -8.7237346075409,
+                  "unit": null,
+                  "lower": -10.7237346075409,
+                  "upper": -6.7237346075409,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -5.352180961779628,
+                  "unit": null,
+                  "lower": -7.352180961779628,
+                  "upper": -3.352180961779628,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 221.00551051882272,
+                  "unit": null,
+                  "lower": 219.00551051882272,
+                  "upper": 223.00551051882272,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "f598edda510c3b3f56275ae4e90627768c383688da9358c5ee0e0735369d53a2"
+          },
+          {
+            "week": 8,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 113.27085650024621,
+                  "unit": null,
+                  "lower": 113.27085650024621,
+                  "upper": 113.27085650024621,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 0.5203498069266498,
+                  "unit": null,
+                  "lower": 0.5203498069266498,
+                  "upper": 0.5203498069266498,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -8.7237346075409,
+                  "unit": null,
+                  "lower": -8.7237346075409,
+                  "upper": -8.7237346075409,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -5.352180961779628,
+                  "unit": null,
+                  "lower": -5.352180961779628,
+                  "upper": -5.352180961779628,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 221.00551051882272,
+                  "unit": null,
+                  "lower": 221.00551051882272,
+                  "upper": 221.00551051882272,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 111.10785281049839,
+                  "unit": null,
+                  "lower": 105.44430898548607,
+                  "upper": 116.7713966355107,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": 0.5123132081044617,
+                  "unit": null,
+                  "lower": 0.4862947177581292,
+                  "upper": 0.5383316984507942,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -8.535648316738158,
+                  "unit": null,
+                  "lower": -8.971836047115202,
+                  "upper": -8.099460586361113,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -5.259793399023367,
+                  "unit": null,
+                  "lower": -5.5274034471123485,
+                  "upper": -4.992183350934386,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 218.39992679250662,
+                  "unit": null,
+                  "lower": 207.34965026656548,
+                  "upper": 229.45020331844776,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 109.32943224684885,
+                  "unit": null,
+                  "lower": 107.32943224684885,
+                  "upper": 111.32943224684885,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -3.411545340495071,
+                  "unit": null,
+                  "lower": -5.411545340495071,
+                  "upper": -1.411545340495071,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -12.74405144920229,
+                  "unit": null,
+                  "lower": -14.74405144920229,
+                  "upper": -10.74405144920229,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -9.323427903272432,
+                  "unit": null,
+                  "lower": -11.323427903272432,
+                  "upper": -7.323427903272432,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 217.03018480616845,
+                  "unit": null,
+                  "lower": 215.03018480616845,
+                  "upper": 219.03018480616845,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "78d6d7a703f82d836126795c0a194d4d9e9ffd39c4d29467606490bfe51e2295"
+          },
+          {
+            "week": 9,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 109.32943224684885,
+                  "unit": null,
+                  "lower": 109.32943224684885,
+                  "upper": 109.32943224684885,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -3.411545340495071,
+                  "unit": null,
+                  "lower": -3.411545340495071,
+                  "upper": -3.411545340495071,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -12.74405144920229,
+                  "unit": null,
+                  "lower": -12.74405144920229,
+                  "upper": -12.74405144920229,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -9.323427903272432,
+                  "unit": null,
+                  "lower": -9.323427903272432,
+                  "upper": -9.323427903272432,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 217.03018480616845,
+                  "unit": null,
+                  "lower": 217.03018480616845,
+                  "upper": 217.03018480616845,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 107.82667293181738,
+                  "unit": null,
+                  "lower": 102.36020031947494,
+                  "upper": 113.29314554415983,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -3.3246514032551,
+                  "unit": null,
+                  "lower": -3.4952296702798535,
+                  "upper": -3.154073136230346,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -12.58346156211105,
+                  "unit": null,
+                  "lower": -13.220665134571165,
+                  "upper": -11.946257989650936,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -9.226254775549522,
+                  "unit": null,
+                  "lower": -9.692427170713144,
+                  "upper": -8.760082380385901,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 213.3010669262914,
+                  "unit": null,
+                  "lower": 202.449556685983,
+                  "upper": 224.15257716659983,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 104.91150899339175,
+                  "unit": null,
+                  "lower": 102.91150899339175,
+                  "upper": 106.91150899339175,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -7.870314283329395,
+                  "unit": null,
+                  "lower": -9.870314283329396,
+                  "upper": -5.870314283329395,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -17.195362302756745,
+                  "unit": null,
+                  "lower": -19.195362302756745,
+                  "upper": -15.195362302756745,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -13.855006696487775,
+                  "unit": null,
+                  "lower": -15.855006696487775,
+                  "upper": -11.855006696487775,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 212.43697514239025,
+                  "unit": null,
+                  "lower": 210.43697514239025,
+                  "upper": 214.43697514239025,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "c2ee9770fcb1be83d76ba45e4504cae888ccf3967d2e067b068d2482d79e5392"
+          },
+          {
+            "week": 10,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 104.91150899339175,
+                  "unit": null,
+                  "lower": 104.91150899339175,
+                  "upper": 104.91150899339175,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -7.870314283329395,
+                  "unit": null,
+                  "lower": -7.870314283329395,
+                  "upper": -7.870314283329395,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -17.195362302756745,
+                  "unit": null,
+                  "lower": -17.195362302756745,
+                  "upper": -17.195362302756745,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -13.855006696487775,
+                  "unit": null,
+                  "lower": -13.855006696487775,
+                  "upper": -13.855006696487775,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 212.43697514239025,
+                  "unit": null,
+                  "lower": 212.43697514239025,
+                  "upper": 212.43697514239025,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 102.68251188672838,
+                  "unit": null,
+                  "lower": 97.43693543705879,
+                  "upper": 107.92808833639796,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -7.643238742284751,
+                  "unit": null,
+                  "lower": -8.036755456451221,
+                  "upper": -7.249722028118281,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -16.727481703210955,
+                  "unit": null,
+                  "lower": -17.587250818348792,
+                  "upper": -15.867712588073118,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -13.64353018124736,
+                  "unit": null,
+                  "lower": -14.336281516071748,
+                  "upper": -12.950778846422972,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 207.675983180848,
+                  "unit": null,
+                  "lower": 197.05413342372847,
+                  "upper": 218.2978329379675,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 99.84357662190696,
+                  "unit": null,
+                  "lower": 97.84357662190696,
+                  "upper": 101.84357662190696,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -12.867152524971985,
+                  "unit": null,
+                  "lower": -14.867152524971985,
+                  "upper": -10.867152524971985,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -22.143617019443976,
+                  "unit": null,
+                  "lower": -24.143617019443976,
+                  "upper": -20.143617019443976,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -18.93316286554028,
+                  "unit": null,
+                  "lower": -20.93316286554028,
+                  "upper": -16.93316286554028,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 207.47295084526033,
+                  "unit": null,
+                  "lower": 205.47295084526033,
+                  "upper": 209.47295084526033,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "922a965e706dbcd2185d8c82f82a99092daa2fd78ff8ae6fab306ce2cb897e2b"
+          },
+          {
+            "week": 11,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 99.84357662190696,
+                  "unit": null,
+                  "lower": 99.84357662190696,
+                  "upper": 99.84357662190696,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -12.867152524971985,
+                  "unit": null,
+                  "lower": -12.867152524971985,
+                  "upper": -12.867152524971985,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -22.143617019443976,
+                  "unit": null,
+                  "lower": -22.143617019443976,
+                  "upper": -22.143617019443976,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -18.93316286554028,
+                  "unit": null,
+                  "lower": -18.93316286554028,
+                  "upper": -18.93316286554028,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 207.47295084526033,
+                  "unit": null,
+                  "lower": 207.47295084526033,
+                  "upper": 207.47295084526033,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 97.24708812925002,
+                  "unit": null,
+                  "lower": 92.25490829815467,
+                  "upper": 102.23926796034536,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -12.667939397209429,
+                  "unit": null,
+                  "lower": -13.311298023458027,
+                  "upper": -12.02458077096083,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -21.475007247369156,
+                  "unit": null,
+                  "lower": -22.582189098341356,
+                  "upper": -20.367825396396956,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -18.47263217897585,
+                  "unit": null,
+                  "lower": -19.419291322252864,
+                  "upper": -17.525973035698836,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 201.0292923798401,
+                  "unit": null,
+                  "lower": 190.65564383757706,
+                  "upper": 211.4029409221031,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 94.42315934825355,
+                  "unit": null,
+                  "lower": 92.42315934825355,
+                  "upper": 96.42315934825355,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -18.367269237024136,
+                  "unit": null,
+                  "lower": -20.367269237024136,
+                  "upper": -16.367269237024136,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -27.56111285569203,
+                  "unit": null,
+                  "lower": -29.56111285569203,
+                  "upper": -25.56111285569203,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -24.382147656882204,
+                  "unit": null,
+                  "lower": -26.382147656882204,
+                  "upper": -22.382147656882204,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 202.0536597320898,
+                  "unit": null,
+                  "lower": 200.0536597320898,
+                  "upper": 204.0536597320898,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "c14facbb22af49f95e6339c243a527319016001a9e89dd81ca7bba4693f02726"
+          },
+          {
+            "week": 12,
+            "dose": 1.0,
+            "predicted": {
+              "persistence": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 94.42315934825355,
+                  "unit": null,
+                  "lower": 94.42315934825355,
+                  "upper": 94.42315934825355,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -18.367269237024136,
+                  "unit": null,
+                  "lower": -18.367269237024136,
+                  "upper": -18.367269237024136,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -27.56111285569203,
+                  "unit": null,
+                  "lower": -27.56111285569203,
+                  "upper": -27.56111285569203,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -24.382147656882204,
+                  "unit": null,
+                  "lower": -24.382147656882204,
+                  "upper": -24.382147656882204,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 202.0536597320898,
+                  "unit": null,
+                  "lower": 202.0536597320898,
+                  "upper": 202.0536597320898,
+                  "status": "PREDICTED"
+                }
+              },
+              "heuristic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 92.2093485534672,
+                  "unit": null,
+                  "lower": 87.48818958605452,
+                  "upper": 96.93050752087987,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -17.77822973058261,
+                  "unit": null,
+                  "lower": -18.696594192433817,
+                  "upper": -16.8598652687314,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -26.97318111286905,
+                  "unit": null,
+                  "lower": -28.35123775565365,
+                  "upper": -25.59512447008445,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -24.027627848319728,
+                  "unit": null,
+                  "lower": -25.246736231163837,
+                  "upper": -22.80851946547562,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 198.62918990604868,
+                  "unit": null,
+                  "lower": 188.5265059194442,
+                  "upper": 208.73187389265317,
+                  "status": "PREDICTED"
+                }
+              },
+              "synthetic": {
+                "\u0413\u0421\u041f\u0413": {
+                  "name": "\u0413\u0421\u041f\u0413",
+                  "value": 88.50001802413631,
+                  "unit": null,
+                  "lower": 86.50001802413631,
+                  "upper": 90.50001802413631,
+                  "status": "PREDICTED"
+                },
+                "\u0416\u0435\u043b\u0435\u0437\u043e": {
+                  "name": "\u0416\u0435\u043b\u0435\u0437\u043e",
+                  "value": -24.315815219842246,
+                  "unit": null,
+                  "lower": -26.315815219842246,
+                  "upper": -22.315815219842246,
+                  "status": "PREDICTED"
+                },
+                "\u041b\u0413": {
+                  "name": "\u041b\u0413",
+                  "value": -33.526794116312715,
+                  "unit": null,
+                  "lower": -35.526794116312715,
+                  "upper": -31.526794116312715,
+                  "status": "PREDICTED"
+                },
+                "\u0424\u0421\u0413": {
+                  "name": "\u0424\u0421\u0413",
+                  "value": -30.305526613255395,
+                  "unit": null,
+                  "lower": -32.305526613255395,
+                  "upper": -28.305526613255395,
+                  "status": "PREDICTED"
+                },
+                "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": {
+                  "name": "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b",
+                  "value": 196.04647425860892,
+                  "unit": null,
+                  "lower": 194.04647425860892,
+                  "upper": 198.04647425860892,
+                  "status": "PREDICTED"
+                }
+              }
+            },
+            "state_hash": "fdf3438435e64cbded70cbcb70a01522ee4619e143ecebc2449919f162340889"
+          }
+        ],
+        "final_state": {
+          "\u0413\u0421\u041f\u0413": 88.50001802413631,
+          "\u0416\u0435\u043b\u0435\u0437\u043e": -24.315815219842246,
+          "\u041b\u0413": -33.526794116312715,
+          "\u0424\u0421\u0413": -30.305526613255395,
+          "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": 196.04647425860892
+        },
+        "final_state_hash": "fdf3438435e64cbded70cbcb70a01522ee4619e143ecebc2449919f162340889",
+        "checkpoints": [
+          {
+            "checkpoint_id": "fork_from_control_w2-w2",
+            "branch_id": "fork_from_control_w2",
+            "week": 2,
+            "state": {
+              "\u0413\u0421\u041f\u0413": 125.86129488701975,
+              "\u0416\u0435\u043b\u0435\u0437\u043e": 13.251265558416536,
+              "\u041b\u0413": 3.570901548887979,
+              "\u0424\u0421\u0413": 7.15380238159461,
+              "\u042d\u0441\u0442\u0440\u0430\u0434\u0438\u043e\u043b": 233.233662722521
+            },
+            "state_hash": "0f48681c46d5ddb8bf4027269361af6257766130667c85886991634376e0d042",
+            "created_at": "2026-08-12T14:49:50.775564+00:00"
+          }
+        ],
+        "ok": true,
+        "from_checkpoint": "control-w2",
+        "fork_start_state_hash": "39aeaa283bfa7c7e4c853aa5cbc1a838b1309feb8ecd65a80ab30b8e0de21364",
+        "fork_start_state_hash_verified": true
+      }
+    },
+    "rollback_ok": {
+      "status": "PASS",
+      "evidence": {
+        "ok": true,
+        "branch_id": "control",
+        "restored_checkpoint": "control-w2",
+        "restored_week": 2,
+        "expected_checkpoint_hash": "39aeaa283bfa7c7e4c853aa5cbc1a838b1309feb8ecd65a80ab30b8e0de21364",
+        "restored_hash": "39aeaa283bfa7c7e4c853aa5cbc1a838b1309feb8ecd65a80ab30b8e0de21364",
+        "hash_match_after_rollback": true,
+        "mutated_hash_before_rollback": "ba8e3cc65029f1e89b0bab95120bca457b840c8ae496a2fe08e916f00e0de01e",
+        "resimulated_final_state_hash": "dc2eff9c3aa44b859fcfd1c7cc9701342dfc0d1bc4ff6fb6efa23b69d4395120",
+        "resimulated_history_len": 11
+      }
+    },
+    "branch_isolation": {
+      "status": "PASS",
+      "evidence": {
+        "control_recompute_matches": true,
+        "control_differs_from_intervention": true,
+        "dose_change_differs_from_intervention": true,
+        "crn_policy": "shared_noise_by_week_and_variable"
+      }
+    },
+    "uncertainty_present": {
+      "status": "PASS",
+      "evidence": {
+        "computed": true
+      }
+    },
+    "idempotent_reload": {
+      "status": "PASS",
+      "evidence": {
+        "all_seven_tables_zero_insert_on_reload": true,
+        "per_table_zero_insert": {
+          "source_system": true,
+          "source_record": true,
+          "subject": true,
+          "subject_characteristic": true,
+          "encounter": true,
+          "observation": true,
+          "observation_component": true
+        },
+        "row_counts_unchanged": true,
+        "row_counts_after_second_load": {
+          "source_system": 1,
+          "source_record": 12544,
+          "subject": 100,
+          "subject_characteristic": 200,
+          "encounter": 2153,
+          "observation": 4000,
+          "observation_component": 5333
+        },
+        "idempotent": true
+      }
+    },
+    "rejects_handled": {
+      "status": "PASS",
+      "evidence": {
+        "reject_count": 958
+      }
+    },
+    "truncation_accounted": {
+      "status": "PASS",
+      "evidence": {
+        "per_patient_limit": 40,
+        "per_result_limit": 15,
+        "cohort_subject_count": 100,
+        "relations": {
+          "appointment_appointment": {
+            "available_rows": 2153,
+            "selected_rows": 2153,
+            "truncated_rows": 0,
+            "coverage_percentage": 100.0,
+            "note": "all appointments for cohort subjects loaded (no per-patient encounter cap)"
+          },
+          "document_analysisresult": {
+            "available_rows": 29464,
+            "selected_rows": 4000,
+            "truncated_rows": 25464,
+            "coverage_percentage": 13.5759
+          },
+          "document_analysisresultitem": {
+            "available_rows": 6538,
+            "selected_rows": 6291,
+            "truncated_rows": 247,
+            "coverage_percentage": 96.2221,
+            "note": "available_rows counted only for selected analysisresult parents"
+          }
+        }
+      }
+    },
+    "pii_excluded_from_artifacts": {
+      "status": "PASS",
+      "evidence": {
+        "ok": true,
+        "hits": []
+      }
+    },
+    "scope_honesty": {
+      "status": "PASS",
+      "evidence": {
+        "cohort_loaded_subjects": 100,
+        "requested_limit": 100,
+        "sample_class": "TECHNICAL_COVERAGE_BIASED_SAMPLE",
+        "forbidden_for_model_quality_evaluation": true,
+        "criteria": [
+          "account_patient",
+          ">=3 appointments",
+          ">=1 lab panel",
+          "densest_first"
+        ],
+        "timelines_built_subjects_cap": 10,
+        "snapshots_built_subjects_cap": 10,
+        "simulated_subjects_cap": 1,
+        "timelines_built_subjects": 10,
+        "snapshots_built_subjects": 10,
+        "simulated_subjects": 1,
+        "honesty_note": "Loaded 100 subjects; built timelines for 10; snapshots for 10; simulated 1 subject(s) only."
+      }
+    },
+    "determinism_in_process": {
+      "status": "PASS",
+      "evidence": {
+        "input_state_hash_match": true,
+        "configuration_hash_match": true,
+        "branch_final_hashes_match": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "security_findings_non_blocking": {
+      "status": "PASS",
+      "evidence": {
+        "security_blocks_core": false
+      }
+    }
+  },
+  "policy": {
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "core_development_status": "ACTIVE",
+    "authorised_data_access": "ENABLED",
+    "core_slice_version": "0.1.1",
+    "deferred_production_hardening": [
+      "initial_root_token_available",
+      "vault_key_custody_decision_required",
+      "pgp_keys_shared_keyring_empty_passphrase",
+      "multi_custodian_separation_absent"
+    ],
+    "closed_security_findings": [
+      "limited_operator_identity_absent",
+      "loader_restart_reauth_procedure_absent"
+    ],
+    "security_blocks_core": false,
+    "clinical_validation_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "note": "Security findings are advisory only; they must not change core command exit codes"
+  },
+  "scope": {
+    "cohort_loaded_subjects": 100,
+    "requested_limit": 100,
+    "sample_class": "TECHNICAL_COVERAGE_BIASED_SAMPLE",
+    "forbidden_for_model_quality_evaluation": true,
+    "criteria": [
+      "account_patient",
+      ">=3 appointments",
+      ">=1 lab panel",
+      "densest_first"
+    ],
+    "timelines_built_subjects_cap": 10,
+    "snapshots_built_subjects_cap": 10,
+    "simulated_subjects_cap": 1,
+    "timelines_built_subjects": 10,
+    "snapshots_built_subjects": 10,
+    "simulated_subjects": 1,
+    "honesty_note": "Loaded 100 subjects; built timelines for 10; snapshots for 10; simulated 1 subject(s) only."
+  },
+  "started_at": "2026-08-12T14:49:28.178321+00:00",
+  "finished_at": "2026-08-12T14:49:50.792084+00:00",
+  "canonical_row_counts": {
+    "source_system": 1,
+    "source_record": 12544,
+    "subject": 100,
+    "subject_characteristic": 200,
+    "encounter": 2153,
+    "observation": 4000,
+    "observation_component": 5333
+  }
+}

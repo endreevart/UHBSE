@@ -1,0 +1,3903 @@
+{
+  "version": "0.3.1",
+  "UNIFIED_TEMPORAL_EVENT_LAYER_STATUS": "PASS",
+  "materialized_event_rows": 2374211,
+  "classification_rule": "sql_data_type_primary_plus_curated_role",
+  "substring_only_upgrade_forbidden": true,
+  "false_positive_controls": [
+    "appointment_price_at_clinic",
+    "appointment_price_at_clinic_id",
+    "perform_at_clinic",
+    "power_attorney",
+    "recommendation_notes",
+    "service_price_at_clinic_id",
+    "service_price_online_at_clinic_id"
+  ],
+  "a_timestamp_columns": [
+    {
+      "schema": "magerya_api",
+      "table": "account_contractor",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_contractor",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorfeedback",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorfeedback",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "ended_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "last_heartbeat_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_methodologistpatientsession",
+      "column": "started_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "archived",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "birthdate",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "next_appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "passport_issued_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "self_delete_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "date_joined",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "last_login",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "last_seen",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "phone_confirmation_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_user",
+      "column": "sms_blocking",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "archived",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "chat_end_time",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "completed_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointment",
+      "column": "next_appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointmentrequest",
+      "column": "archived",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointmentrequest",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointmentrequest",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointmentrequest",
+      "column": "payment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointmentrequest",
+      "column": "payment_expiration",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_appointmentrequest",
+      "column": "refunded_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_callbackrequest",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "appointment_callbackrequest",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_actiontoken",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_actiontoken",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_blacklist",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_blacklist",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_smscode",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_smscode",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_whitelistphone",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_whitelistphone",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authtoken_token",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "bonus_program_bonusprofile",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "bonus_program_bonusprofile",
+      "column": "enroll_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "bonus_program_bonusprofile",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "bonus_program_bonustransaction",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "bonus_program_bonustransaction",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "bonus_program_programsegment",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "bonus_program_programsegment",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificate",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificate",
+      "column": "expiration_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificate",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificate",
+      "column": "payment_expiration",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificate",
+      "column": "start_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificatebatch",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificatebatch",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificatetransaction",
+      "column": "canceled_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificatetransaction",
+      "column": "confirmed_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificatetransaction",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificatetransaction",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "certificates_certificatetransaction",
+      "column": "refunded_at",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_channel",
+      "column": "last_seen",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_chatroom",
+      "column": "archived",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_chatroom",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_chatroom",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_chatroommember",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_chatroommember",
+      "column": "last_reading",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_chatroommember",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_message",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_message",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "chat_message",
+      "column": "sending_time",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_clinicdocument",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_clinicdocument",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_contentdocs",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_contentdocs",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_documentcategory",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_documentcategory",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_news",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_news",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_newsimage",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_newsimage",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_vacancy",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "content_vacancy",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_contract",
+      "column": "contract_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_contract",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_contract",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_estimate",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_estimate",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_estimate",
+      "column": "payment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_estimate",
+      "column": "refunded_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_refundorder",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_refundorder",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_saleorder",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "contract_saleorder",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "coupon_management_coupon",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "coupon_management_validityrule",
+      "column": "expiration_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_appointrecommendation",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_appointrecommendation",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_appointrecommendationresult",
+      "column": "appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_appointrecommendationresult",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_appointrecommendationresult",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_appointrecommendationresult",
+      "column": "sampling_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_diagnosis",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_diagnosis",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_functionalstudies",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_functionalstudies",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_functionalstudiesresult",
+      "column": "appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_functionalstudiesresult",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_functionalstudiesresult",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_functionalstudiesresult",
+      "column": "sampling_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_manipulations",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_manipulations",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_manipulationsresult",
+      "column": "appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_manipulationsresult",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_manipulationsresult",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_manipulationsresult",
+      "column": "sampling_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_medicineappointments",
+      "column": "appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_medicineappointments",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_medicineappointments",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_medicines",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_medicines",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_procedures",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_procedures",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_proceduresresult",
+      "column": "appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_proceduresresult",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_proceduresresult",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_proceduresresult",
+      "column": "sampling_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_recommendation",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_recommendation",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_recommendationcategory",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "diagnosis_recommendationcategory",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "django_admin_log",
+      "column": "action_time",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "django_migrations",
+      "column": "applied",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "django_session",
+      "column": "expire_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_analysis",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_analysis",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_analysisresult",
+      "column": "appointment_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_analysisresult",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_analysisresult",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_analysisresult",
+      "column": "sampling_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_appointmentanalysisresult",
+      "column": "added_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_appointmentanalysisresult",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_appointmentanalysisresult",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_appointmentanalysisresult",
+      "column": "not_received_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_doctorquestion",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_doctorquestion",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_doctorquestiongroup",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_doctorquestiongroup",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_doctorquestionnaire",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_doctorquestionnaire",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_doctorquestionnairetemplate",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_doctorquestionnairetemplate",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_document",
+      "column": "archived",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_document",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_document",
+      "column": "date",
+      "data_type": "date",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_document",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_informationform",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_informationform",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_manipulationreport",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_manipulationreport",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_medicalreport",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_medicalreport",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_patientquestion",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_patientquestion",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_patientquestionnaire",
+      "column": "completed_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_patientquestionnaire",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_patientquestionnaire",
+      "column": "declined_date",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_patientquestionnaire",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_patientquestionnairetemplate",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_patientquestionnairetemplate",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_procedurelist",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_procedurelist",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_questionnairefilledtemplate",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_questionnairefilledtemplate",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_recommendation",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_recommendation",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_recommendationtemplate",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_recommendationtemplate",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_recommendationtemplatecategory",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_recommendationtemplatecategory",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_suggestion",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_suggestion",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_unit",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_unit",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "easy_thumbnails_source",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "easy_thumbnails_thumbnail",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "evotor_evotororder",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "evotor_evotororder",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "fcm_django_fcmdevice",
+      "column": "date_created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "knowledge_base_article",
+      "column": "created",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "magerya_api",
+      "table": "knowledge_base_article",
+      "column": "modified",
+      "data_type": "timestamp with time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    }
+  ],
+  "b_timestamp_columns": [
+    {
+      "schema": "public",
+      "table": "abac_rules",
+      "column": "createdat",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "abac_rules",
+      "column": "deletedat",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "abac_rules",
+      "column": "updatedat",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "address",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "address",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "affiliates",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "affiliates",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "black_list_users",
+      "column": "blocked_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "black_list_users",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "black_list_users",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "calls_log",
+      "column": "call_start",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "calls_log",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "calls_log",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "calls_settings",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "calls_settings",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "chat_notifier",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "chat_notifier",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "cities",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "cities",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "cities",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "company",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "company",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultation_service_changes",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultation_service_changes",
+      "column": "deleted_at",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultation_service_changes",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "cancel_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "complete_anketa_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "confirmed_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "date",
+      "data_type": "date",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "next_consultation_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "payed_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "success_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "time",
+      "data_type": "time without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations_timeline",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations_timeline",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations_timeline_settings",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "consultations_timeline_settings",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "countries",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "countries",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "countries",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "disable_sms_notifications",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "disable_sms_notifications",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "disable_sms_notifications",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "doctrine_migration_versions",
+      "column": "executed_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "document_types",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "document_types",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "documents",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "documents",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "email_confirmation",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "email_confirmation",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "email_confirmation",
+      "column": "used_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "failed_jobs",
+      "column": "failed_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "feedback",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "feedback",
+      "column": "date",
+      "data_type": "date",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "feedback",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "feedback_support",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "feedback_support",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_notification",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_notification",
+      "column": "delivered_time",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_notification",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_notify_requests",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_notify_requests",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_sms",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_sms",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_sms",
+      "column": "gateway_status_updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_sms",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_validation_exception",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_validation_exception",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "log_validation_exception",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "message_file",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "message_file",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "message_file",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "message_read",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "message_read",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "message_read",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "message_type",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "message_type",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "messages",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "messages",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "messages",
+      "column": "notify_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "messages",
+      "column": "read_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "messages",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "migration_versions",
+      "column": "executed_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "read_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "oauth_global",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "oauth_global",
+      "column": "expires_date",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "oauth_global",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "password_confirmation",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "password_confirmation",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "password_confirmation",
+      "column": "used_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "password_resets",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "password_resets",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_balance",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_balance",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_invoices",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_invoices",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_invoices",
+      "column": "payed_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_invoices",
+      "column": "payment_confirmed_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_invoices",
+      "column": "promo_code_sent_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_invoices",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_promo_code",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_promo_code",
+      "column": "expired_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_promo_code",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_sberbank_orders",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_sberbank_orders",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_transactions",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "payment_transactions",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "permissions",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "permissions",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "persons",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "persons",
+      "column": "date_birth",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "persons",
+      "column": "identity_document_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "persons",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "phone_confirmation",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "phone_confirmation",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "phone_confirmation",
+      "column": "used_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_analyses",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_analyses",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_analyses",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_profile",
+      "column": "birthdate",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_profile",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_profile",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_profile",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_users",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_users",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "profilaxys_users",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "promo_notification",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "promo_notification",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "push_notification_devices",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "push_notification_devices",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "push_notification_devices",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "push_notification_log",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "push_notification_log",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "questionnaire",
+      "column": "birth_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "questionnaire",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "questionnaire",
+      "column": "date",
+      "data_type": "date",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "questionnaire",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "register_promo_marks",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "register_promo_marks",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "reviews",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "reviews",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "reviews",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "roles",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "roles",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "rooms",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "rooms",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "schedule_events",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "schedule_events",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "schedule_events",
+      "column": "end_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "schedule_events",
+      "column": "start_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "schedule_events",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "service_products",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "service_products",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "service_products",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "speed_analyst_beacons",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "speed_analyst_beacons",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "states",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "states",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "user_pregnants",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "user_pregnants",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users",
+      "column": "api_token_lifetime",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users",
+      "column": "confirmed_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users",
+      "column": "room_key_lifetime",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_address",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_address",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_company",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_company",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_notification",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_notification",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_persons",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_persons",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_profile",
+      "column": "birth_date",
+      "data_type": "date",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_profile",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_profile",
+      "column": "from_time",
+      "data_type": "time without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_profile",
+      "column": "to_time",
+      "data_type": "time without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_profile",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_rating",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "users_rating",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "vacancies",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "vacancies",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "vacancies_feedback",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "public",
+      "table": "vacancies_feedback",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_codes",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_codes",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_codes",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_constructor",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_constructor",
+      "column": "date",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "clinical_event_candidate",
+      "clinical_or_technical": "clinical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_constructor",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_labs",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_labs",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_labs",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_pool",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_pool",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_tags",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_tags",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_tags",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_weight",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_weight",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_weight",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_addresses",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_addresses",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_addresses",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral",
+      "column": "finished_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral",
+      "column": "initialized_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_codes",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_codes",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_codes",
+      "column": "reserved_until",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_codes",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_regions",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_referral_regions",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "lab_result",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_category",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_category",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_category",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_list",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_list",
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_or_unknown",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_list",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_user",
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    },
+    {
+      "schema": "quest_digital",
+      "table": "recommendations_user",
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "timestamp_role": "technical_audit",
+      "clinical_or_technical": "technical",
+      "clinical_administration_time_confirmed": false
+    }
+  ],
+  "rejected_false_positives": [
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "appointment_price_at_clinic_first",
+      "data_type": "numeric",
+      "reason": "false_positive_control"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "appointment_price_at_clinic_repeat",
+      "data_type": "numeric",
+      "reason": "false_positive_control"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_doctorbranch",
+      "column": "perform_at_clinic",
+      "data_type": "boolean",
+      "reason": "false_positive_control"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "power_attorney",
+      "data_type": "character varying",
+      "reason": "false_positive_control"
+    }
+  ],
+  "ok": true
+}

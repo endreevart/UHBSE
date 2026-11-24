@@ -1,0 +1,66 @@
+{
+  "CLASSIFIER_DOMAIN_REVIEW_WORKBENCH_STATUS": "BUILT",
+  "CLASSIFIER_LABEL_ONTOLOGY_STATUS": "BUILT",
+  "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_ACCEPTED",
+  "TRAJECTORY_EVENT_CLASSIFIER_STATUS": "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_SIGNAL",
+  "by_source": {
+    "kgz_raw": {
+      "auprc": 0.12284265854781583,
+      "auroc": 0.5443170964869034,
+      "bootstrap": {
+        "hi": 0.5569575420624419,
+        "lo": 0.5290034530107262,
+        "n_groups": 1609
+      },
+      "brier": 0.2702766506971634,
+      "brier_baseline": 0.08777430484243924,
+      "incremental_vs_probability_baseline": false,
+      "n_train": 256856,
+      "n_val": 50099,
+      "prevalence": 0.09722748957065011,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "threshold_predeclared": 0.5,
+      "threshold_selected_on_test": false
+    },
+    "magerya_api": {
+      "auprc": 0.10646074973816422,
+      "auroc": 0.49948861946246087,
+      "bootstrap": {
+        "hi": 0.5207615365086499,
+        "lo": 0.4749733178580741,
+        "n_groups": 883
+      },
+      "brier": 0.2698262961846629,
+      "brier_baseline": 0.0902778458865451,
+      "incremental_vs_probability_baseline": false,
+      "n_train": 120375,
+      "n_val": 26478,
+      "prevalence": 0.10034745826724073,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "threshold_predeclared": 0.5,
+      "threshold_selected_on_test": false
+    }
+  },
+  "label": "NEXT_RECORDED_SOURCE_SPECIFIC_OUTCOME_EXCURSION_WITHIN_HORIZON",
+  "not_a_diagnosis": true,
+  "ok": true,
+  "registry_public": [
+    {
+      "clinical": false,
+      "definition": "Recorded source-specific outcome residual exceeds train-only 90th absolute residual at the requested horizon.",
+      "evidence_hash": "0762404bd49a692e672d3a87bc486e3c89b35d775ba32b8c8341827b4fb4c073",
+      "label_id": "NEXT_RECORDED_SOURCE_SPECIFIC_OUTCOME_EXCURSION_WITHIN_HORIZON",
+      "label_type": "RECORDED_EVENT",
+      "reviewer": "runtime_v0.1",
+      "source_applicability": "A_and_B_separately",
+      "status": "CANDIDATE_TECHNICAL_LABEL",
+      "supersedes": null,
+      "technical": true,
+      "timestamp": "2026-09-10T08:40:29.971488+00:00"
+    }
+  ],
+  "technical_cannot_become_clinical": true,
+  "version": "0.1"
+}

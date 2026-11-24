@@ -1,0 +1,24 @@
+{
+  "version": "0.3",
+  "DIRECT_IDENTIFIER_SCAN_STATUS": "PASS",
+  "HASHED_IDENTIFIER_SCAN_STATUS": "PASS",
+  "LOW_ENTROPY_HASH_SCAN_STATUS": "PASS",
+  "ROW_DERIVED_VALUE_SCAN_STATUS": "PASS",
+  "SENSITIVE_COLUMN_SAMPLE_SCAN_STATUS": "PASS",
+  "UNSTRUCTURED_TEXT_LEAKAGE_STATUS": "PASS",
+  "PRIVATE_PATH_SCAN_STATUS": "PASS",
+  "PUBLIC_DATA_MINIMIZATION_STATUS": "PASS_AGGREGATE_ONLY",
+  "PRIVACY_BOUNDARY_STATUS": "PASS",
+  "full_array_walk": true,
+  "array_walk_truncated_at_200": false,
+  "n_hits": {
+    "direct": 0,
+    "hashed": 0,
+    "low_entropy": 0,
+    "row_derived": 0,
+    "sensitive": 0,
+    "private": 0,
+    "unstructured": 0
+  },
+  "ok": true
+}

@@ -1,0 +1,74 @@
+{
+  "version": "0.1",
+  "SOURCE_A_COMPONENT_RECONCILIATION_STATUS": "PASS",
+  "raw_document_analysisresultitem": 1372259,
+  "canonical_source_a_observation_component": 1158631,
+  "gap": 213628,
+  "exclusive_raw_buckets": {
+    "orphan_no_header": 0,
+    "header_without_patient": 0,
+    "empty_with_patient": 208262,
+    "non_numeric_with_patient": 86972,
+    "numeric_with_patient_regex": 1077025,
+    "sum": 1372259,
+    "sum_equals_raw": true
+  },
+  "canonical_buckets": {
+    "total": 1158631,
+    "numeric_value_present": 1077031,
+    "numeric_value_null": 81600,
+    "numeric_raw_matches_accounting_regex": 1077025,
+    "numeric_raw_beyond_accounting_regex": 6
+  },
+  "six_row_discrepancy_origin": {
+    "description": "Exactly six canonical components have numeric_value set whose raw_value fails the v0.1.1 accounting regex but is accepted by loader float(value.replace(',','.').strip()). Observed forms include leading '+' and trailing comma ('19,' \u2192 '19.').",
+    "count": 6,
+    "samples": [
+      {
+        "raw_value_prefix": "+3",
+        "n": 2
+      },
+      {
+        "raw_value_prefix": "+10",
+        "n": 1
+      },
+      {
+        "raw_value_prefix": "19,",
+        "n": 1
+      },
+      {
+        "raw_value_prefix": "+2",
+        "n": 1
+      },
+      {
+        "raw_value_prefix": "+7",
+        "n": 1
+      }
+    ],
+    "loader_path": "human_simulator.core.load (float after comma\u2192dot)",
+    "accounting_regex": "^-?[0-9]+([.,][0-9]+)?$",
+    "examples": [
+      "+3",
+      "+10",
+      "+2",
+      "+7",
+      "19,"
+    ]
+  },
+  "gap_explained_as": {
+    "empty_values": 208262,
+    "unsupported_no_patient_or_orphan": 0,
+    "non_numeric_not_loaded": 5366,
+    "numeric_regex_not_loaded": 0,
+    "sum": 213628,
+    "matches_gap": true
+  },
+  "invariant_explained_gap_equals_raw_minus_canonical": true,
+  "pass_forbidden_when_matches_gap_false": true,
+  "v011_defect": {
+    "reported_explanation_sum": 213634,
+    "actual_gap": 213628,
+    "delta": 6,
+    "cause": "non_numeric_not_loaded overstated by loader_beyond_regex count"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "version": "0.1.1",
+  "ENGINE_SHADOW_EXECUTION_STATUS": "PASS",
+  "ENGINE_SHADOW_CLAIM_LEVEL": "TECHNICAL_SHADOW_ONLY",
+  "CLINICAL_USE": "CLINICAL_USE_PROHIBITED",
+  "CAUSAL_INTERPRETATION": "CAUSAL_INTERPRETATION_PROHIBITED",
+  "synthetic_intervention_model_kept_separate": true,
+  "medication_association_models_not_used_in_fork_probe": true,
+  "checkpoint": {
+    "checkpoint_id": "v011_shadow_parent-w2",
+    "week": 2,
+    "phase": "POST_STEP_CHECKPOINT",
+    "state_hash": "7e1f78dcd3b94e3e9c2f42587f288342f77387f72a6d7d360834e4ab05931904",
+    "continue_from_week": 3
+  },
+  "fork": {
+    "ok": true,
+    "fork_event": {
+      "week": 3,
+      "type": "dose_change",
+      "dose": 2.5,
+      "name": "technical_shadow_synthetic_divergence"
+    },
+    "continuation_start_week": 3,
+    "final_state_hash": "a776de15da3408a97790a7716419203c48657974cffbe0acb782fee02d9fa6d2",
+    "fork_effect": {
+      "counterfactual_final_state_hash": "29be9858f12baf07794e7052df10554670965e2b3debab8bc7fb37da87c73315",
+      "event_fork_final_state_hash": "a776de15da3408a97790a7716419203c48657974cffbe0acb782fee02d9fa6d2",
+      "weekly_hashes": {
+        "counterfactual": {
+          "3": "83a89e9f230d8087f3460deaf7fdfd7a4d53ba29216c9d96519b0291ee616135",
+          "4": "833ab4d1f12bd28593a763f6c092a09fe6bd74a7eb4898d877bd08f196f7d9b2",
+          "5": "62711ce2e9e3f5e0b79715eb2d6ee19f044470e80edeb51967966c73397d5e89",
+          "6": "29be9858f12baf07794e7052df10554670965e2b3debab8bc7fb37da87c73315"
+        },
+        "event_fork": {
+          "3": "4daf1430840bf127fa3739ef9417b8e977d6d6aec133ecd21a2eaaf460f33bd7",
+          "4": "a0dd1219ceb30a068d56cdbdd2d3256845036d4ca9242dcccd52e311d72f059a",
+          "5": "02447da68cb4ca026111fd89f09c18f15e708e5442c0ed8289298758872d94b3",
+          "6": "a776de15da3408a97790a7716419203c48657974cffbe0acb782fee02d9fa6d2"
+        }
+      },
+      "applied_event": {
+        "week": 3,
+        "type": "dose_change",
+        "dose": 2.5,
+        "name": "technical_shadow_synthetic_divergence"
+      },
+      "event_week": 3,
+      "changed_variables": [
+        "metric"
+      ],
+      "first_divergence_week": 3,
+      "both_started_from_same_checkpoint_hash": true,
+      "final_hashes_differ": true,
+      "at_least_one_state_variable_changed": true,
+      "divergence_not_before_event_week": true,
+      "fork_final_state_diff_explained_by_fork_event": true
+    },
+    "synthetic_reason": "dose_change_2.5_vs_counterfactual_same_checkpoint"
+  },
+  "parent_isolation": {
+    "parent_state_unchanged_after_fork": true,
+    "parent_history_unchanged_after_fork": true,
+    "parent_events_unchanged_after_fork": true,
+    "parent_recomputed_hash_matches_stored_hash": true,
+    "fork_isolation_verified": true,
+    "before": {
+      "final_state_hash": "29be9858f12baf07794e7052df10554670965e2b3debab8bc7fb37da87c73315",
+      "history_hash": "600b154eb0dc724729139c7f524ac61f9182a1250dcee8c1a25a6ad26231ec0d",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7
+    },
+    "after": {
+      "final_state_hash": "29be9858f12baf07794e7052df10554670965e2b3debab8bc7fb37da87c73315",
+      "history_hash": "600b154eb0dc724729139c7f524ac61f9182a1250dcee8c1a25a6ad26231ec0d",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7,
+      "stored_final_state_hash": "29be9858f12baf07794e7052df10554670965e2b3debab8bc7fb37da87c73315"
+    }
+  },
+  "rollback_ok": true,
+  "determinism": {
+    "hash_run1": "7e9aef0f3f7a2419d0d6955829a45bb4d944823a077a0a421b855b241d1e55f9",
+    "hash_run2": "7e9aef0f3f7a2419d0d6955829a45bb4d944823a077a0a421b855b241d1e55f9",
+    "identical": true
+  },
+  "v01_defect": "v0.1 used dose=0.0 fork_event yielding fork.ok=false; corrected",
+  "medication_prediction_attached": true,
+  "n_frozen_models_available": 5
+}

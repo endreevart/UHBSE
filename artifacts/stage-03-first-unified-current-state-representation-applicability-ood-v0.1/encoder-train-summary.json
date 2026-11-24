@@ -1,0 +1,50 @@
+{
+  "model_name": "UnifiedSourceAwareStateEncoderV01",
+  "architecture": {
+    "type": "UnifiedSourceAwareStateEncoderV01",
+    "shared_context_encoder": true,
+    "source_specific_lab_blocks": [
+      "A",
+      "B"
+    ],
+    "source_specific_forecast_heads": true,
+    "rank_per_block": 8,
+    "latent_dim": 24,
+    "epochs": 5,
+    "lr": 0.03,
+    "l2": 0.05,
+    "activation": "tanh",
+    "no_mixed_persistence_channel": true
+  },
+  "n_outcomes": 308,
+  "n_train_states_used": 1500,
+  "final_train_masked_mse": 1.4786201233031206,
+  "train_loss_history": [
+    {
+      "epoch": 0,
+      "masked_mse": 1.3425824478498543,
+      "n_obs": 78529
+    },
+    {
+      "epoch": 1,
+      "masked_mse": 1.4670051114320057,
+      "n_obs": 78529
+    },
+    {
+      "epoch": 2,
+      "masked_mse": 1.452883022570587,
+      "n_obs": 78529
+    },
+    {
+      "epoch": 3,
+      "masked_mse": 1.4557456536533788,
+      "n_obs": 78529
+    },
+    {
+      "epoch": 4,
+      "masked_mse": 1.4786201233031206,
+      "n_obs": 78529
+    }
+  ],
+  "vocabulary_hash": "94a29418171f0e5c129735c0e8bea7977c147415bb2ee1ab08475ba9c5e2ffcf"
+}

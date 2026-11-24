@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "SAME_TIMESTAMP_PRESELECTION_AUDIT_STATUS": "PASS",
+  "grain": {
+    "raw_code": "53",
+    "unit": "пмоль/л"
+  },
+  "audit_before_target_selection": true,
+  "n_same_timestamp_groups_preselection": 1210,
+  "resolution_policy": "last_component_id_lexicographic_within_timestamp",
+  "pair_summary": {
+    "n_subjects_with_pairs": 3217,
+    "n_strict_consecutive_pairs": 6065,
+    "horizon_days": {
+      "n": 6065,
+      "min": 0.007361111111111111,
+      "max": 700761.8531712963,
+      "median": 115.21173611111111
+    }
+  },
+  "note": "Duplicates counted before collapsing same-timestamp observations; n_duplicate_same_time_targets=0 after selection is insufficient alone.",
+  "ok": true
+}

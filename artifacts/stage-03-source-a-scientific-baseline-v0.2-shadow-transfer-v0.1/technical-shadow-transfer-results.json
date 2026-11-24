@@ -1,0 +1,97 @@
+{
+  "version": "0.2",
+  "executed": true,
+  "technical_shadow_transfer_status": "TECHNICAL_SHADOW_TRANSFER_EXECUTED",
+  "scientifically_interpretable": true,
+  "interpretation_label": "exploratory_technical_shadow_scoring",
+  "source_b_tuned": false,
+  "refit_on_b": false,
+  "applicability_status": "APPLICABILITY_CHECK_PASS",
+  "all_pairs": {
+    "ridge": {
+      "n_pairs": 6065,
+      "n_subjects": 3217,
+      "subject_macro_mae": 0.6766983995560446,
+      "pair_micro_mae": 0.6662161729605209,
+      "rmse": 2.2220325761653243,
+      "median_absolute_error": 0.477095243495671,
+      "mean_bias": 0.13885823423924043,
+      "uncertainty_coverage": 0.986479802143446,
+      "mean_interval_width": 5.975485787556725
+    },
+    "persistence": {
+      "n_pairs": 6065,
+      "n_subjects": 3217,
+      "subject_macro_mae": 0.7315828489974433,
+      "pair_micro_mae": 0.7196911788953009,
+      "rmse": 1.495437261902649,
+      "median_absolute_error": 0.45999999999999996,
+      "mean_bias": 0.09615614179719703,
+      "uncertainty_coverage": 0.03841714756801319,
+      "mean_interval_width": 0.0
+    },
+    "ridge_minus_persistence_macro_mae": -0.0548844494413987,
+    "relative_delta": -0.07502150920652666,
+    "fraction_subjects_ridge_better": 0.5421199875660553
+  },
+  "in_support_pairs": {
+    "ridge": {
+      "n_pairs": 4726,
+      "n_subjects": 2815,
+      "subject_macro_mae": 0.6022629840311456,
+      "pair_micro_mae": 0.5722394000578296,
+      "rmse": 1.0457483630430737,
+      "median_absolute_error": 0.4424007587562615,
+      "mean_bias": 0.08670162302107742,
+      "uncertainty_coverage": 0.9925941599661448,
+      "mean_interval_width": 5.975485787556725
+    },
+    "persistence": {
+      "n_pairs": 4726,
+      "n_subjects": 2815,
+      "subject_macro_mae": 0.6261431176520341,
+      "pair_micro_mae": 0.5879280575539568,
+      "rmse": 1.073409378781553,
+      "median_absolute_error": 0.40000000000000036,
+      "mean_bias": 0.008507829030892923,
+      "uncertainty_coverage": 0.03999153618281845,
+      "mean_interval_width": 0.0
+    },
+    "ridge_minus_persistence_macro_mae": -0.023880133620888477,
+    "relative_delta": -0.03813845900029418,
+    "fraction_subjects_ridge_better": 0.5278863232682061
+  },
+  "out_of_support_pairs": {
+    "ridge": {
+      "n_pairs": 1339,
+      "n_subjects": 835,
+      "subject_macro_mae": 0.9779696913362775,
+      "pair_micro_mae": 0.9979071578284217,
+      "rmse": 4.301657534732546,
+      "median_absolute_error": 0.6345315240667841,
+      "mean_bias": 0.3229449740577903,
+      "uncertainty_coverage": 0.9648991784914115,
+      "mean_interval_width": 5.975485787556725
+    },
+    "persistence": {
+      "n_pairs": 1339,
+      "n_subjects": 835,
+      "subject_macro_mae": 1.1640058959005066,
+      "pair_micro_mae": 1.184749066467513,
+      "rmse": 2.4622654342511474,
+      "median_absolute_error": 0.5999999999999996,
+      "mean_bias": 0.4055108289768484,
+      "uncertainty_coverage": 0.03286034353995519,
+      "mean_interval_width": 0.0
+    },
+    "ridge_minus_persistence_macro_mae": -0.1860362045642291,
+    "relative_delta": -0.15982410846837372,
+    "fraction_subjects_ridge_better": 0.5808383233532934
+  },
+  "individual_predictions_omitted": true,
+  "subject_ids_omitted": true,
+  "pair_ids_omitted": true,
+  "raw_values_omitted": true,
+  "claim": "Technical shadow scoring of frozen Source A Ridge v0.2 on provisional Source B T3 stratum \u2014 not scientific cross-source transfer, not clinical validation.",
+  "cross_source_independence_status": "INDEPENDENCE_NOT_ESTABLISHED"
+}

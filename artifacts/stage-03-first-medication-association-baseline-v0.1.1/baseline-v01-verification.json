@@ -1,0 +1,43 @@
+{
+  "accepted_zip": "stage-03-first-medication-association-baseline-v0.1-review.zip",
+  "accepted_sha256_pin": "11975e730197e61792288ac30bd81137c2aa0e05a1b9f07217f26da9336615fc",
+  "zip_exists": true,
+  "zip_sha256": "11975e730197e61792288ac30bd81137c2aa0e05a1b9f07217f26da9336615fc",
+  "zip_sha_matches_pin": true,
+  "sidecar_matches_zip": true,
+  "attestation_status": "PASS",
+  "attestation_sha_matches": true,
+  "attestation_members": 57,
+  "attestation_indexed": 56,
+  "members": 57,
+  "unique_members": 57,
+  "no_duplicates": true,
+  "members_match_pin": true,
+  "members_eq_indexed_plus_1": true,
+  "internal_publication_integrity_status": "PENDING",
+  "internal_vs_external_lifecycle_note": "v0.1 internal status-contract had PENDING while external attestation PASS; v0.1.1 separates pre-pack vs post-pack fields.",
+  "review_index_hash_mismatches": [],
+  "evidence_manifest_mismatches": [],
+  "review_index_ok": true,
+  "evidence_manifest_ok": true,
+  "prior_immutable_zips": {
+    "medication_association_v0.1": {
+      "exists": true,
+      "sha256": "11975e730197e61792288ac30bd81137c2aa0e05a1b9f07217f26da9336615fc",
+      "unchanged": true
+    },
+    "population_v0.1.1": {
+      "exists": true,
+      "sha256": "35a35dd48612590fedf064e3916aa1ae14ab70bd2626e257889b70c11a55d796",
+      "unchanged": true
+    },
+    "population_v0.1": {
+      "exists": true,
+      "sha256": "58c6b6d6a13b6da17da4eee3cbe1840b91228deed869b74ca4138ef7ef98af1f",
+      "unchanged": true
+    }
+  },
+  "all_priors_unchanged": true,
+  "ok": true,
+  "BASELINE_VERIFICATION_STATUS": "PASS"
+}

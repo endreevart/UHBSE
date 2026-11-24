@@ -1,0 +1,46 @@
+{
+  "DECISION_SCHEMA_VALIDATION_STATUS": "PASS",
+  "answer_count": 15,
+  "decision_count": 9,
+  "evidence_hash_errors": [],
+  "non_deciding_answer_count": 6,
+  "ok": true,
+  "per_decision": [
+    {
+      "errors": [],
+      "field_path": "document_recommendation.document.recommendations[].code=medicines"
+    },
+    {
+      "errors": [],
+      "field_path": "document_analysis.items->document_analysisitem"
+    },
+    {
+      "errors": [],
+      "field_path": "public.feedback"
+    },
+    {
+      "errors": [],
+      "field_path": "public.feedback.created_at"
+    },
+    {
+      "errors": [],
+      "field_path": "public.feedback"
+    },
+    {
+      "errors": [],
+      "field_path": "public.feedback.user_id"
+    },
+    {
+      "errors": [],
+      "field_path": "public.feedback.drugs,public.feedback.vitamins"
+    },
+    {
+      "errors": [],
+      "field_path": "public.feedback.change_drugs,public.feedback.decline_drugs"
+    },
+    {
+      "errors": [],
+      "field_path": "public.feedback.created_at,public.consultations.date"
+    }
+  ]
+}

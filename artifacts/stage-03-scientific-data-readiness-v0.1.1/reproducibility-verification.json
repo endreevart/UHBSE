@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "exact_reproduce_commands_executed": true,
+  "commands": [
+    {
+      "literal_command": "uv sync --frozen --extra dev",
+      "exit_code": 0,
+      "duration_seconds": 11.963,
+      "execution_environment": {
+        "working_directory": "isolated_staging_root",
+        "UV_CACHE_DIR": "<tmp>/uv-cache",
+        "UV_PROJECT_ENVIRONMENT": "<tmp>/venv"
+      },
+      "collected": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null
+    },
+    {
+      "literal_command": "uv run --frozen pytest tests/test_scientific_data_readiness_unit.py tests/test_scientific_dataset_builder.py tests/test_scientific_temporal_leakage.py tests/test_scientific_splits.py tests/test_scientific_baselines.py tests/test_scientific_backtest.py tests/test_scientific_engine_integration.py tests/test_scientific_v011_methodology.py -q",
+      "exit_code": 0,
+      "duration_seconds": 1.597,
+      "execution_environment": {
+        "working_directory": "isolated_staging_root",
+        "UV_CACHE_DIR": "<tmp>/uv-cache",
+        "UV_PROJECT_ENVIRONMENT": "<tmp>/venv"
+      },
+      "collected": null,
+      "passed": 39,
+      "failed": null,
+      "skipped": null
+    },
+    {
+      "literal_command": "uv run --frozen audit --root . scientific-data-readiness verify",
+      "exit_code": 0,
+      "duration_seconds": 11.108,
+      "execution_environment": {
+        "working_directory": "isolated_staging_root",
+        "UV_CACHE_DIR": "<tmp>/uv-cache",
+        "UV_PROJECT_ENVIRONMENT": "<tmp>/venv"
+      },
+      "collected": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null
+    }
+  ]
+}

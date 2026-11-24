@@ -1,0 +1,268 @@
+{
+  "version": "0.2",
+  "n_grains": 24,
+  "n_cells_selected": 96,
+  "grains_are_not_cells": true,
+  "no_unit_conversion": true,
+  "no_a_b_equivalence": true,
+  "SOURCE_A_FROZEN_PROVIDER_CONSUMPTION_STATUS": "NOT_USED_INCOMPATIBLE_MEDICATION_FEATURES_AND_NO_REQUESTED_HORIZON",
+  "series_accounting": {
+    "observations_scanned": 3291609,
+    "categories": {
+      "missing_numeric": 391489,
+      "not_selected_outcome": 1635788,
+      "kept_pre_collapse": 769800,
+      "role_filtered": 494119,
+      "invalid_timestamp": 52,
+      "timestamp_outside_reliable_window": 361,
+      "same_timestamp_collapse": 27367,
+      "kept_post_collapse": 742433
+    },
+    "same_timestamp_collapses": 27367,
+    "unexplained_count": 0,
+    "ok": true
+  },
+  "grains": [
+    {
+      "source": "A",
+      "outcome_key": "A::25(OH)витамин D::нг/мл",
+      "unique_subjects": 3329,
+      "effective_groups": 3329,
+      "target_rows": 8365,
+      "train_subjects": 2756,
+      "validation_subjects": 573,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Базофилы::%",
+      "unique_subjects": 4213,
+      "effective_groups": 4213,
+      "target_rows": 13536,
+      "train_subjects": 3486,
+      "validation_subjects": 727,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Гемоглобин::г/л",
+      "unique_subjects": 3807,
+      "effective_groups": 3807,
+      "target_rows": 11690,
+      "train_subjects": 3151,
+      "validation_subjects": 656,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Железо::мкмоль/л",
+      "unique_subjects": 3408,
+      "effective_groups": 3408,
+      "target_rows": 9485,
+      "train_subjects": 2814,
+      "validation_subjects": 594,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Лейкоциты::*10^9/л",
+      "unique_subjects": 3959,
+      "effective_groups": 3959,
+      "target_rows": 12303,
+      "train_subjects": 3277,
+      "validation_subjects": 682,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Лимфоциты::%",
+      "unique_subjects": 4378,
+      "effective_groups": 4378,
+      "target_rows": 14304,
+      "train_subjects": 3631,
+      "validation_subjects": 747,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Моноциты::%",
+      "unique_subjects": 4330,
+      "effective_groups": 4330,
+      "target_rows": 14026,
+      "train_subjects": 3591,
+      "validation_subjects": 739,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Нейтрофилы::%",
+      "unique_subjects": 4281,
+      "effective_groups": 4281,
+      "target_rows": 13815,
+      "train_subjects": 3548,
+      "validation_subjects": 733,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Общий белок::г/л",
+      "unique_subjects": 3711,
+      "effective_groups": 3711,
+      "target_rows": 10950,
+      "train_subjects": 3080,
+      "validation_subjects": 631,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Тромбоциты::*10^9/л",
+      "unique_subjects": 3952,
+      "effective_groups": 3952,
+      "target_rows": 12240,
+      "train_subjects": 3268,
+      "validation_subjects": 684,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Эозинофилы::%",
+      "unique_subjects": 4288,
+      "effective_groups": 4288,
+      "target_rows": 13855,
+      "train_subjects": 3550,
+      "validation_subjects": 738,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "A",
+      "outcome_key": "A::Эритроциты::*10^12/л",
+      "unique_subjects": 3964,
+      "effective_groups": 3964,
+      "target_rows": 12284,
+      "train_subjects": 3281,
+      "validation_subjects": 683,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::16::ммоль/л",
+      "unique_subjects": 7791,
+      "effective_groups": 7791,
+      "target_rows": 23460,
+      "train_subjects": 6420,
+      "validation_subjects": 1371,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::28::г/л",
+      "unique_subjects": 8435,
+      "effective_groups": 8435,
+      "target_rows": 28531,
+      "train_subjects": 6936,
+      "validation_subjects": 1499,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::30::ммоль/л",
+      "unique_subjects": 8626,
+      "effective_groups": 8626,
+      "target_rows": 30313,
+      "train_subjects": 7107,
+      "validation_subjects": 1519,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::32::ммоль/л",
+      "unique_subjects": 6746,
+      "effective_groups": 6746,
+      "target_rows": 23505,
+      "train_subjects": 5578,
+      "validation_subjects": 1168,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::33::ммоль/л",
+      "unique_subjects": 8638,
+      "effective_groups": 8638,
+      "target_rows": 30394,
+      "train_subjects": 7130,
+      "validation_subjects": 1508,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::48::мкмоль/л",
+      "unique_subjects": 7710,
+      "effective_groups": 7710,
+      "target_rows": 26260,
+      "train_subjects": 6367,
+      "validation_subjects": 1343,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::55::пмоль/л",
+      "unique_subjects": 6776,
+      "effective_groups": 6776,
+      "target_rows": 23258,
+      "train_subjects": 5598,
+      "validation_subjects": 1178,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::8::Ед/л",
+      "unique_subjects": 7415,
+      "effective_groups": 7415,
+      "target_rows": 25077,
+      "train_subjects": 6095,
+      "validation_subjects": 1320,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::928::нг/мл",
+      "unique_subjects": 5512,
+      "effective_groups": 5512,
+      "target_rows": 14261,
+      "train_subjects": 4547,
+      "validation_subjects": 965,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::9::Ед/л",
+      "unique_subjects": 7400,
+      "effective_groups": 7400,
+      "target_rows": 25034,
+      "train_subjects": 6085,
+      "validation_subjects": 1315,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::mm_1002::%",
+      "unique_subjects": 8066,
+      "effective_groups": 8066,
+      "target_rows": 26796,
+      "train_subjects": 6662,
+      "validation_subjects": 1404,
+      "n_horizon_cells": 4
+    },
+    {
+      "source": "B",
+      "outcome_key": "B::mm_1004::%",
+      "unique_subjects": 8718,
+      "effective_groups": 8718,
+      "target_rows": 30066,
+      "train_subjects": 7190,
+      "validation_subjects": 1528,
+      "n_horizon_cells": 4
+    }
+  ],
+  "ok": true
+}

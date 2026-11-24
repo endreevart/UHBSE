@@ -1,0 +1,2082 @@
+{
+  "version": "0.2",
+  "roles": [
+    "train",
+    "validation"
+  ],
+  "funnel": {
+    "subjects": 14406,
+    "effective_groups": 14171,
+    "sequences": 436756,
+    "observations": 742433,
+    "target_rows": 453808,
+    "duplicate_row_identity": 49270,
+    "target_events_in_multiple_landmarks": 118078,
+    "target_events_in_multiple_horizons": 100985,
+    "target_events_in_multiple_outcomes": 0,
+    "cross_role_target_reuse": 0,
+    "max_reuse_multiplicity": 11,
+    "excluded": {
+      "no_future_observation": 436756,
+      "unsupported_horizon_no_aligned_target": 19011
+    }
+  },
+  "by_role": {
+    "train": {
+      "subjects": 11914,
+      "effective_groups": 11718,
+      "target_rows": 377231,
+      "grains": 24,
+      "cells": 96
+    },
+    "validation": {
+      "subjects": 2492,
+      "effective_groups": 2453,
+      "target_rows": 76577,
+      "grains": 24,
+      "cells": 96
+    }
+  },
+  "by_source_subjects": {
+    "A": 5212,
+    "B": 9194,
+    "not_summed_as_unique_people": true
+  },
+  "alignment": {
+    "TARGET_ALIGNMENT_CONTRACT_STATUS": "WINDOW_ALIGNED_RECORDED_SOURCE_SPECIFIC_OUTCOME",
+    "REQUESTED_HORIZON_RUNTIME_STATUS": "PASS_REQUEST_PARAMETER_T0_PLUS_H",
+    "not_latent_biological_state": true,
+    "window": "abs(days-H)/H <= 0.5 and days > 0",
+    "unique_horizon_rule": "closest_then_smaller_H",
+    "tie_break": [
+      "closest_to_H",
+      "smaller_horizon",
+      "earliest_timestamp",
+      "entity_id_asc"
+    ],
+    "actual_recorded_label_offset_in_runtime_features": false,
+    "requested_prediction_offset_days": "request_parameter",
+    "predeclared_absolute_grid_days": [
+      30,
+      90,
+      180,
+      365
+    ]
+  },
+  "alignment_error_aggregates": [
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::16::ммоль/л",
+      "horizon_days": 30,
+      "n": 156,
+      "mean": 2.8960860339506174,
+      "q05": -11.304652777777779,
+      "q50": 3.839236111111113,
+      "q95": 13.696851851851854
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::16::ммоль/л",
+      "horizon_days": 90,
+      "n": 9020,
+      "mean": 1.527463215744847,
+      "q05": -25.358564814814812,
+      "q50": -2.1524537037036993,
+      "q95": 38.13422453703703
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::16::ммоль/л",
+      "horizon_days": 180,
+      "n": 8328,
+      "mean": 7.853802632295781,
+      "q05": -39.230625,
+      "q50": 2.348958333333343,
+      "q95": 74.12828703703704
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::16::ммоль/л",
+      "horizon_days": 365,
+      "n": 5956,
+      "mean": 2.7961752115824687,
+      "q05": -84.78836805555557,
+      "q50": -6.013726851851857,
+      "q95": 131.5019212962963
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::28::г/л",
+      "horizon_days": 30,
+      "n": 147,
+      "mean": 3.7139185720584535,
+      "q05": -9.759791666666668,
+      "q50": 4.437465277777775,
+      "q95": 14.108657407407406
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::28::г/л",
+      "horizon_days": 90,
+      "n": 11939,
+      "mean": 0.48360148269133524,
+      "q05": -25.178287037037038,
+      "q50": -3.542754629629627,
+      "q95": 36.81168981481481
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::28::г/л",
+      "horizon_days": 180,
+      "n": 9657,
+      "mean": 6.175467832535601,
+      "q05": -39.13520833333334,
+      "q50": 0.9174421296296202,
+      "q95": 71.21515046296295
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::28::г/л",
+      "horizon_days": 365,
+      "n": 6788,
+      "mean": 0.9059131838729564,
+      "q05": -84.62711805555557,
+      "q50": -6.6844675925925685,
+      "q95": 126.38354166666664
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::30::ммоль/л",
+      "horizon_days": 30,
+      "n": 186,
+      "mean": 3.370584864097969,
+      "q05": -11.146828703703704,
+      "q50": 3.96515046296296,
+      "q95": 14.108657407407406
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::30::ммоль/л",
+      "horizon_days": 90,
+      "n": 12739,
+      "mean": 0.22651113306178455,
+      "q05": -25.44288194444445,
+      "q50": -3.868182870370376,
+      "q95": 36.61347222222223
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::30::ммоль/л",
+      "horizon_days": 180,
+      "n": 10320,
+      "mean": 5.250473037566394,
+      "q05": -39.13487268518517,
+      "q50": 0.002893518518504834,
+      "q95": 69.98716435185185
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::30::ммоль/л",
+      "horizon_days": 365,
+      "n": 7068,
+      "mean": 0.37973340165115566,
+      "q05": -84.37550925925927,
+      "q50": -7.058217592592598,
+      "q95": 125.37498842592595
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::32::ммоль/л",
+      "horizon_days": 30,
+      "n": 135,
+      "mean": 3.4589174382716052,
+      "q05": -10.332800925925927,
+      "q50": 3.9354166666666686,
+      "q95": 14.135983796296294
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::32::ммоль/л",
+      "horizon_days": 90,
+      "n": 9704,
+      "mean": 0.15655813586798872,
+      "q05": -25.43619212962963,
+      "q50": -3.9234143518518465,
+      "q95": 36.37813657407408
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::32::ммоль/л",
+      "horizon_days": 180,
+      "n": 8042,
+      "mean": 5.669550869221311,
+      "q05": -39.210300925925935,
+      "q50": 0.5578240740740625,
+      "q95": 70.08399305555557
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::32::ммоль/л",
+      "horizon_days": 365,
+      "n": 5624,
+      "mean": 1.090179233509825,
+      "q05": -83.90386574074074,
+      "q50": -5.960833333333312,
+      "q95": 124.19156249999997
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::33::ммоль/л",
+      "horizon_days": 30,
+      "n": 187,
+      "mean": 3.6088161021984555,
+      "q05": -11.146828703703704,
+      "q50": 4.437465277777775,
+      "q95": 14.108657407407406
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::33::ммоль/л",
+      "horizon_days": 90,
+      "n": 12782,
+      "mean": 0.1892209974457715,
+      "q05": -25.334039351851857,
+      "q50": -3.9053935185185225,
+      "q95": 36.55114583333334
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::33::ммоль/л",
+      "horizon_days": 180,
+      "n": 10366,
+      "mean": 5.322031828368742,
+      "q05": -39.146886574074074,
+      "q50": 0.1076736111111245,
+      "q95": 70.10346064814814
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::33::ммоль/л",
+      "horizon_days": 365,
+      "n": 7059,
+      "mean": 0.22956244130162146,
+      "q05": -84.42552083333334,
+      "q50": -7.032256944444441,
+      "q95": 124.83880787037037
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::48::мкмоль/л",
+      "horizon_days": 30,
+      "n": 163,
+      "mean": 3.313314090547603,
+      "q05": -11.291250000000002,
+      "q50": 4.036215277777778,
+      "q95": 13.593055555555559
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::48::мкмоль/л",
+      "horizon_days": 90,
+      "n": 10922,
+      "mean": 0.09340605437886144,
+      "q05": -25.715312499999996,
+      "q50": -4.0460185185185225,
+      "q95": 36.71320601851852
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::48::мкмоль/л",
+      "horizon_days": 180,
+      "n": 8940,
+      "mean": 5.71170214107424,
+      "q05": -39.146886574074074,
+      "q50": 0.27194444444444343,
+      "q95": 71.04479166666667
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::48::мкмоль/л",
+      "horizon_days": 365,
+      "n": 6235,
+      "mean": 0.8745154853128988,
+      "q05": -84.62711805555557,
+      "q50": -6.910960648148148,
+      "q95": 127.29511574074075
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::55::пмоль/л",
+      "horizon_days": 30,
+      "n": 151,
+      "mean": 2.7557530046602894,
+      "q05": -11.291250000000002,
+      "q50": 3.54409722222222,
+      "q95": 13.946087962962963
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::55::пмоль/л",
+      "horizon_days": 90,
+      "n": 9667,
+      "mean": 0.16891945775816156,
+      "q05": -25.730138888888888,
+      "q50": -3.8856481481481495,
+      "q95": 36.5367824074074
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::55::пмоль/л",
+      "horizon_days": 180,
+      "n": 7927,
+      "mean": 5.68186990869228,
+      "q05": -39.26583333333335,
+      "q50": 0.7260532407407538,
+      "q95": 71.2218287037037
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::55::пмоль/л",
+      "horizon_days": 365,
+      "n": 5513,
+      "mean": 1.130850097160919,
+      "q05": -84.28496527777776,
+      "q50": -6.2618171296296055,
+      "q95": 126.30292824074075
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::8::Ед/л",
+      "horizon_days": 30,
+      "n": 144,
+      "mean": 3.4830291923868315,
+      "q05": -11.146828703703704,
+      "q50": 4.142905092592592,
+      "q95": 14.108657407407406
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::8::Ед/л",
+      "horizon_days": 90,
+      "n": 10431,
+      "mean": 0.2988448694596235,
+      "q05": -25.282581018518513,
+      "q50": -3.9353009259259295,
+      "q95": 36.91828703703703
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::8::Ед/л",
+      "horizon_days": 180,
+      "n": 8554,
+      "mean": 5.599274256574788,
+      "q05": -39.16216435185186,
+      "q50": 0.25062500000001364,
+      "q95": 70.95446759259258
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::8::Ед/л",
+      "horizon_days": 365,
+      "n": 5948,
+      "mean": 0.7883808282896206,
+      "q05": -84.68922453703703,
+      "q50": -6.961435185185167,
+      "q95": 127.91962962962964
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::928::нг/мл",
+      "horizon_days": 30,
+      "n": 82,
+      "mean": 2.5685522527100275,
+      "q05": -11.291250000000002,
+      "q50": 3.54409722222222,
+      "q95": 13.946087962962963
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::928::нг/мл",
+      "horizon_days": 90,
+      "n": 4438,
+      "mean": 4.4340481510690495,
+      "q05": -25.134861111111107,
+      "q50": 1.7746527777777743,
+      "q95": 40.59283564814814
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::928::нг/мл",
+      "horizon_days": 180,
+      "n": 5689,
+      "mean": 9.694998702011029,
+      "q05": -39.20962962962963,
+      "q50": 4.093819444444449,
+      "q95": 76.6758564814815
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::928::нг/мл",
+      "horizon_days": 365,
+      "n": 4052,
+      "mean": 3.6986516346522973,
+      "q05": -84.4174537037037,
+      "q50": -4.847534722222235,
+      "q95": 131.94711805555556
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::9::Ед/л",
+      "horizon_days": 30,
+      "n": 142,
+      "mean": 3.456892442618675,
+      "q05": -11.146828703703704,
+      "q50": 4.142905092592592,
+      "q95": 14.108657407407406
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::9::Ед/л",
+      "horizon_days": 90,
+      "n": 10400,
+      "mean": 0.28110653490028487,
+      "q05": -25.308055555555555,
+      "q50": -3.939050925925926,
+      "q95": 36.91072916666667
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::9::Ед/л",
+      "horizon_days": 180,
+      "n": 8550,
+      "mean": 5.623419096545375,
+      "q05": -39.18855324074073,
+      "q50": 0.3740393518518488,
+      "q95": 71.15289351851851
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::9::Ед/л",
+      "horizon_days": 365,
+      "n": 5942,
+      "mean": 0.7950329243645359,
+      "q05": -84.68922453703703,
+      "q50": -6.965381944444459,
+      "q95": 126.90033564814814
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::mm_1002::%",
+      "horizon_days": 30,
+      "n": 170,
+      "mean": 3.365819580610022,
+      "q05": -10.149074074074075,
+      "q50": 3.8490740740740748,
+      "q95": 14.135983796296294
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::mm_1002::%",
+      "horizon_days": 90,
+      "n": 11140,
+      "mean": 0.45603063804940486,
+      "q05": -25.213946759259258,
+      "q50": -3.6560995370370364,
+      "q95": 36.8125
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::mm_1002::%",
+      "horizon_days": 180,
+      "n": 9128,
+      "mean": 5.913920422154462,
+      "q05": -39.210300925925935,
+      "q50": 0.5812962962963013,
+      "q95": 71.15289351851851
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::mm_1002::%",
+      "horizon_days": 365,
+      "n": 6358,
+      "mean": 1.361369887601505,
+      "q05": -84.59692129629627,
+      "q50": -6.7567824074074,
+      "q95": 127.9298263888889
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::mm_1004::%",
+      "horizon_days": 30,
+      "n": 173,
+      "mean": 3.6112932187968316,
+      "q05": -10.149074074074075,
+      "q50": 4.273090277777776,
+      "q95": 14.108657407407406
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::mm_1004::%",
+      "horizon_days": 90,
+      "n": 12558,
+      "mean": 0.48867930211227306,
+      "q05": -25.334039351851857,
+      "q50": -3.4541782407407453,
+      "q95": 36.87365740740741
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::mm_1004::%",
+      "horizon_days": 180,
+      "n": 10233,
+      "mean": 5.8375797313792335,
+      "q05": -39.204629629629636,
+      "q50": 0.6261689814814702,
+      "q95": 70.94943287037037
+    },
+    {
+      "source_system": "kgz_raw",
+      "outcome_key": "B::mm_1004::%",
+      "horizon_days": 365,
+      "n": 7102,
+      "mean": 0.6143928272030827,
+      "q05": -84.45409722222223,
+      "q50": -6.96893518518516,
+      "q95": 125.47145833333332
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::25(OH)витамин D::нг/мл",
+      "horizon_days": 30,
+      "n": 436,
+      "mean": -0.598845760718681,
+      "q05": -13.365487162141203,
+      "q50": -1.6315505881597225,
+      "q95": 13.45511348571759
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::25(OH)витамин D::нг/мл",
+      "horizon_days": 90,
+      "n": 2744,
+      "mean": 5.087989791166219,
+      "q05": -33.38629193332176,
+      "q50": 5.871980906388885,
+      "q95": 40.95490098067131
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::25(OH)витамин D::нг/мл",
+      "horizon_days": 180,
+      "n": 2692,
+      "mean": 12.51075331895177,
+      "q05": -40.0,
+      "q50": 7.73531080092593,
+      "q95": 79.39551913033563
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::25(OH)витамин D::нг/мл",
+      "horizon_days": 365,
+      "n": 2493,
+      "mean": 12.696946577575586,
+      "q05": -84.94490119089124,
+      "q50": 2.222249163958338,
+      "q95": 148.37277071243057
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Базофилы::%",
+      "horizon_days": 30,
+      "n": 1424,
+      "mean": -0.8785200231430521,
+      "q05": -13.875,
+      "q50": -1.6598660334490773,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Базофилы::%",
+      "horizon_days": 90,
+      "n": 4654,
+      "mean": 1.7786372944826112,
+      "q05": -37.0,
+      "q50": 1.875,
+      "q95": 39.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Базофилы::%",
+      "horizon_days": 180,
+      "n": 4069,
+      "mean": 10.984177888575088,
+      "q05": -39.33736453052083,
+      "q50": 5.0,
+      "q95": 76.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Базофилы::%",
+      "horizon_days": 365,
+      "n": 3389,
+      "mean": 8.50686095620759,
+      "q05": -83.63553034599539,
+      "q50": 0.0,
+      "q95": 139.70806002025466
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Гемоглобин::г/л",
+      "horizon_days": 30,
+      "n": 1325,
+      "mean": -0.9182102228272013,
+      "q05": -13.875,
+      "q50": -1.2957953254745327,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Гемоглобин::г/л",
+      "horizon_days": 90,
+      "n": 4015,
+      "mean": 1.2432727565217327,
+      "q05": -37.70832696425926,
+      "q50": 1.0729246070254561,
+      "q95": 38.724118433449064
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Гемоглобин::г/л",
+      "horizon_days": 180,
+      "n": 3441,
+      "mean": 9.943245308192687,
+      "q05": -39.94862638207175,
+      "q50": 3.690406759606475,
+      "q95": 75.43128461126156
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Гемоглобин::г/л",
+      "horizon_days": 365,
+      "n": 2909,
+      "mean": 9.321657642617845,
+      "q05": -84.15634087874997,
+      "q50": -0.5873449090162239,
+      "q95": 146.49625241349537
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Железо::мкмоль/л",
+      "horizon_days": 30,
+      "n": 892,
+      "mean": -1.469300964708546,
+      "q05": -14.0,
+      "q50": -2.0,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Железо::мкмоль/л",
+      "horizon_days": 90,
+      "n": 3196,
+      "mean": 3.2635943088645636,
+      "q05": -35.19712314780092,
+      "q50": 3.0,
+      "q95": 40.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Железо::мкмоль/л",
+      "horizon_days": 180,
+      "n": 2879,
+      "mean": 11.109880392117075,
+      "q05": -39.739423914780104,
+      "q50": 5.359659320081022,
+      "q95": 77.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Железо::мкмоль/л",
+      "horizon_days": 365,
+      "n": 2518,
+      "mean": 11.183666994914788,
+      "q05": -84.4934375209375,
+      "q50": 2.0,
+      "q95": 146.55455747271992
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Лейкоциты::*10^9/л",
+      "horizon_days": 30,
+      "n": 1445,
+      "mean": -0.9418258006868513,
+      "q05": -14.0,
+      "q50": -1.376959521967592,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Лейкоциты::*10^9/л",
+      "horizon_days": 90,
+      "n": 4245,
+      "mean": 1.0665759344493386,
+      "q05": -37.64346711261574,
+      "q50": 1.0,
+      "q95": 38.511522245312506
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Лейкоциты::*10^9/л",
+      "horizon_days": 180,
+      "n": 3591,
+      "mean": 10.190472116736975,
+      "q05": -39.9442158801389,
+      "q50": 4.0,
+      "q95": 76.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Лейкоциты::*10^9/л",
+      "horizon_days": 365,
+      "n": 3022,
+      "mean": 9.574018625518512,
+      "q05": -84.15634087874997,
+      "q50": -0.6618341284838039,
+      "q95": 148.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 30,
+      "n": 1576,
+      "mean": -0.9795022144569219,
+      "q05": -14.0,
+      "q50": -1.7508307287037042,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 90,
+      "n": 4910,
+      "mean": 1.5709545043230935,
+      "q05": -37.0,
+      "q50": 1.4529129350000005,
+      "q95": 39.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 180,
+      "n": 4266,
+      "mean": 10.713038995499643,
+      "q05": -39.34383248745371,
+      "q50": 5.0,
+      "q95": 76.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 365,
+      "n": 3552,
+      "mean": 8.354891507493287,
+      "q05": -83.50401422160883,
+      "q50": -0.875,
+      "q95": 139.70806002025466
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Моноциты::%",
+      "horizon_days": 30,
+      "n": 1535,
+      "mean": -0.9095064154956719,
+      "q05": -14.0,
+      "q50": -1.6309322498495362,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Моноциты::%",
+      "horizon_days": 90,
+      "n": 4817,
+      "mean": 1.6145372337200257,
+      "q05": -37.0,
+      "q50": 1.4503374187152787,
+      "q95": 39.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Моноциты::%",
+      "horizon_days": 180,
+      "n": 4190,
+      "mean": 10.767330342880129,
+      "q05": -39.33736453052083,
+      "q50": 5.0,
+      "q95": 76.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Моноциты::%",
+      "horizon_days": 365,
+      "n": 3484,
+      "mean": 8.362940432276202,
+      "q05": -83.61749576232637,
+      "q50": -0.5873449090162239,
+      "q95": 141.125
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Нейтрофилы::%",
+      "horizon_days": 30,
+      "n": 1472,
+      "mean": -0.9201546699118499,
+      "q05": -14.0,
+      "q50": -1.7207549613078719,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Нейтрофилы::%",
+      "horizon_days": 90,
+      "n": 4751,
+      "mean": 1.7521929328897181,
+      "q05": -37.0,
+      "q50": 1.637690314629637,
+      "q95": 39.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Нейтрофилы::%",
+      "horizon_days": 180,
+      "n": 4144,
+      "mean": 10.744570960712158,
+      "q05": -39.33862709505789,
+      "q50": 5.0,
+      "q95": 76.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Нейтрофилы::%",
+      "horizon_days": 365,
+      "n": 3448,
+      "mean": 8.257865584174905,
+      "q05": -83.76199860248846,
+      "q50": -0.9299830851273327,
+      "q95": 141.3627317157754
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Общий белок::г/л",
+      "horizon_days": 30,
+      "n": 876,
+      "mean": -0.9322666530816104,
+      "q05": -14.0,
+      "q50": -1.875,
+      "q95": 13.362702403020833
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Общий белок::г/л",
+      "horizon_days": 90,
+      "n": 3709,
+      "mean": 3.583303698464586,
+      "q05": -34.39442117431713,
+      "q50": 3.9318832168402764,
+      "q95": 39.57908143123842
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Общий белок::г/л",
+      "horizon_days": 180,
+      "n": 3420,
+      "mean": 11.94566316340686,
+      "q05": -39.875,
+      "q50": 6.0,
+      "q95": 79.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Общий белок::г/л",
+      "horizon_days": 365,
+      "n": 2945,
+      "mean": 12.473365654508074,
+      "q05": -83.5092622906713,
+      "q50": 4.498105038865731,
+      "q95": 148.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Тромбоциты::*10^9/л",
+      "horizon_days": 30,
+      "n": 1424,
+      "mean": -0.9806758459725312,
+      "q05": -14.0,
+      "q50": -1.6315505881597225,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Тромбоциты::*10^9/л",
+      "horizon_days": 90,
+      "n": 4223,
+      "mean": 1.1909482030285512,
+      "q05": -37.488146424374996,
+      "q50": 1.0482630007060152,
+      "q95": 38.63277983835647
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Тромбоциты::*10^9/л",
+      "horizon_days": 180,
+      "n": 3581,
+      "mean": 10.223792138904615,
+      "q05": -39.92122847805555,
+      "q50": 4.0,
+      "q95": 75.86411037829859
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Тромбоциты::*10^9/л",
+      "horizon_days": 365,
+      "n": 3012,
+      "mean": 9.3265949031069,
+      "q05": -84.41685185396994,
+      "q50": -0.9299830851273327,
+      "q95": 146.55455747271992
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Эозинофилы::%",
+      "horizon_days": 30,
+      "n": 1475,
+      "mean": -0.8763325967165411,
+      "q05": -14.0,
+      "q50": -1.6888372138078722,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Эозинофилы::%",
+      "horizon_days": 90,
+      "n": 4765,
+      "mean": 1.7683212109554407,
+      "q05": -37.0,
+      "q50": 1.6239437287615743,
+      "q95": 39.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Эозинофилы::%",
+      "horizon_days": 180,
+      "n": 4166,
+      "mean": 10.674679033297776,
+      "q05": -39.403353218078706,
+      "q50": 4.927301210347224,
+      "q95": 76.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Эозинофилы::%",
+      "horizon_days": 365,
+      "n": 3449,
+      "mean": 8.31540711013464,
+      "q05": -83.61849822180557,
+      "q50": -0.5873449090162239,
+      "q95": 139.70806002025466
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Эритроциты::*10^12/л",
+      "horizon_days": 30,
+      "n": 1448,
+      "mean": -0.9441020221962446,
+      "q05": -14.0,
+      "q50": -1.4709639538657413,
+      "q95": 13.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Эритроциты::*10^12/л",
+      "horizon_days": 90,
+      "n": 4240,
+      "mean": 1.2130546816793955,
+      "q05": -37.67500774605324,
+      "q50": 1.1648325319560229,
+      "q95": 38.63277983835647
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Эритроциты::*10^12/л",
+      "horizon_days": 180,
+      "n": 3583,
+      "mean": 10.194221532997307,
+      "q05": -39.9442158801389,
+      "q50": 4.0,
+      "q95": 76.0
+    },
+    {
+      "source_system": "magerya_api",
+      "outcome_key": "A::Эритроциты::*10^12/л",
+      "horizon_days": 365,
+      "n": 3013,
+      "mean": 9.580043944463151,
+      "q05": -84.15634087874997,
+      "q50": -0.875,
+      "q95": 146.6788027362963
+    }
+  ],
+  "unexplained_count": 0,
+  "CROSS_ROLE_TARGET_REUSE_STATUS": "PASS",
+  "WITHIN_ROLE_REPEATED_LANDMARK_STATUS": "ACCOUNTED",
+  "CROSS_HORIZON_TARGET_REUSE_STATUS": "ACCOUNTED_NONZERO",
+  "TARGET_REUSE_UNCERTAINTY_ACCOUNTING_STATUS": "EFFECTIVE_GROUP_BOOTSTRAP_REQUIRED",
+  "TARGET_ALIGNMENT_CONTRACT_STATUS": "WINDOW_ALIGNED_RECORDED_SOURCE_SPECIFIC_OUTCOME",
+  "TARGET_ALIGNMENT_ERROR_ACCOUNTING_STATUS": "PUBLISHED_AGGREGATE",
+  "REQUESTED_HORIZON_RUNTIME_STATUS": "PASS_REQUEST_PARAMETER_T0_PLUS_H",
+  "ok": true,
+  "series_meta": {
+    "observations_scanned": 3291609,
+    "categories": {
+      "missing_numeric": 391489,
+      "not_selected_outcome": 1635788,
+      "kept_pre_collapse": 769800,
+      "role_filtered": 494119,
+      "invalid_timestamp": 52,
+      "timestamp_outside_reliable_window": 361,
+      "same_timestamp_collapse": 27367,
+      "kept_post_collapse": 742433
+    },
+    "same_timestamp_collapses": 27367,
+    "unexplained_count": 0,
+    "ok": true
+  },
+  "test_public": {
+    "version": "0.2",
+    "roles": [
+      "test"
+    ],
+    "funnel": {
+      "subjects": 2581,
+      "effective_groups": 2546,
+      "sequences": 76857,
+      "observations": 130857,
+      "target_rows": 79205,
+      "duplicate_row_identity": 8624,
+      "target_events_in_multiple_landmarks": 20426,
+      "target_events_in_multiple_horizons": 17360,
+      "target_events_in_multiple_outcomes": 0,
+      "cross_role_target_reuse": 0,
+      "max_reuse_multiplicity": 9,
+      "excluded": {
+        "no_future_observation": 76857,
+        "unsupported_horizon_no_aligned_target": 3437
+      }
+    },
+    "by_role": {
+      "test": {
+        "subjects": 2581,
+        "effective_groups": 2546,
+        "target_rows": 79205,
+        "grains": 24,
+        "cells": 96
+      }
+    },
+    "by_source_subjects": {
+      "A": 921,
+      "B": 1660,
+      "not_summed_as_unique_people": true
+    },
+    "alignment": {
+      "TARGET_ALIGNMENT_CONTRACT_STATUS": "WINDOW_ALIGNED_RECORDED_SOURCE_SPECIFIC_OUTCOME",
+      "REQUESTED_HORIZON_RUNTIME_STATUS": "PASS_REQUEST_PARAMETER_T0_PLUS_H",
+      "not_latent_biological_state": true,
+      "window": "abs(days-H)/H <= 0.5 and days > 0",
+      "unique_horizon_rule": "closest_then_smaller_H",
+      "tie_break": [
+        "closest_to_H",
+        "smaller_horizon",
+        "earliest_timestamp",
+        "entity_id_asc"
+      ],
+      "actual_recorded_label_offset_in_runtime_features": false,
+      "requested_prediction_offset_days": "request_parameter",
+      "predeclared_absolute_grid_days": [
+        30,
+        90,
+        180,
+        365
+      ]
+    },
+    "alignment_error_aggregates": [
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::16::ммоль/л",
+        "horizon_days": 30,
+        "n": 32,
+        "mean": 3.3625835503472223,
+        "q05": -13.223611111111111,
+        "q50": 5.528576388888887,
+        "q95": 14.375740740740738
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::16::ммоль/л",
+        "horizon_days": 90,
+        "n": 1579,
+        "mean": 2.37337323786738,
+        "q05": -26.15114583333333,
+        "q50": -1.216400462962966,
+        "q95": 39.75901620370371
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::16::ммоль/л",
+        "horizon_days": 180,
+        "n": 1440,
+        "mean": 8.122908613040122,
+        "q05": -39.60388888888889,
+        "q50": 2.698495370370381,
+        "q95": 73.87556712962962
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::16::ммоль/л",
+        "horizon_days": 365,
+        "n": 1070,
+        "mean": 2.84436763369678,
+        "q05": -84.78841435185183,
+        "q50": -4.767673611111093,
+        "q95": 130.30116898148145
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::28::г/л",
+        "horizon_days": 30,
+        "n": 30,
+        "mean": 3.7731697530864197,
+        "q05": -11.574791666666666,
+        "q50": 5.99974537037037,
+        "q95": 13.885416666666664
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::28::г/л",
+        "horizon_days": 90,
+        "n": 2097,
+        "mean": 1.5462388785125136,
+        "q05": -25.769618055555554,
+        "q50": -2.3373379629629625,
+        "q95": 38.819756944444435
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::28::г/л",
+        "horizon_days": 180,
+        "n": 1688,
+        "mean": 5.773508384347025,
+        "q05": -39.56562500000001,
+        "q50": 0.5371643518518567,
+        "q95": 71.4076388888889
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::28::г/л",
+        "horizon_days": 365,
+        "n": 1222,
+        "mean": 0.5540522708674307,
+        "q05": -84.08335648148147,
+        "q50": -6.456180555555534,
+        "q95": 118.12703703703704
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::30::ммоль/л",
+        "horizon_days": 30,
+        "n": 42,
+        "mean": 3.3130561067019397,
+        "q05": -11.943969907407407,
+        "q50": 5.918043981481482,
+        "q95": 13.885416666666664
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::30::ммоль/л",
+        "horizon_days": 90,
+        "n": 2242,
+        "mean": 1.0058982142267157,
+        "q05": -25.769618055555554,
+        "q50": -2.911608796296292,
+        "q95": 38.2545601851852
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::30::ммоль/л",
+        "horizon_days": 180,
+        "n": 1799,
+        "mean": 4.982577673038519,
+        "q05": -39.54664351851852,
+        "q50": 0.009803240740751562,
+        "q95": 69.83681712962962
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::30::ммоль/л",
+        "horizon_days": 365,
+        "n": 1279,
+        "mean": 0.7361095003330149,
+        "q05": -83.42401620370373,
+        "q50": -6.285162037037026,
+        "q95": 118.29064814814814
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::32::ммоль/л",
+        "horizon_days": 30,
+        "n": 33,
+        "mean": 3.586273849607183,
+        "q05": -13.223611111111111,
+        "q50": 5.918043981481482,
+        "q95": 14.375740740740738
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::32::ммоль/л",
+        "horizon_days": 90,
+        "n": 1694,
+        "mean": 1.2729802625825353,
+        "q05": -25.769618055555554,
+        "q50": -2.827395833333327,
+        "q95": 39.09587962962962
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::32::ммоль/л",
+        "horizon_days": 180,
+        "n": 1382,
+        "mean": 5.670628542571153,
+        "q05": -39.78260416666666,
+        "q50": 0.9100810185185253,
+        "q95": 70.41403935185184
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::32::ммоль/л",
+        "horizon_days": 365,
+        "n": 1013,
+        "mean": 1.8910222089685933,
+        "q05": -84.26354166666664,
+        "q50": -5.13072916666664,
+        "q95": 121.14442129629629
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::33::ммоль/л",
+        "horizon_days": 30,
+        "n": 40,
+        "mean": 3.7014710648148146,
+        "q05": -13.223611111111111,
+        "q50": 5.99974537037037,
+        "q95": 14.375740740740738
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::33::ммоль/л",
+        "horizon_days": 90,
+        "n": 2242,
+        "mean": 1.1652355494432882,
+        "q05": -25.42063657407408,
+        "q50": -2.686296296296291,
+        "q95": 38.29592592592593
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::33::ммоль/л",
+        "horizon_days": 180,
+        "n": 1813,
+        "mean": 4.962878477967764,
+        "q05": -39.473888888888894,
+        "q50": -0.1651273148148107,
+        "q95": 69.79857638888888
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::33::ммоль/л",
+        "horizon_days": 365,
+        "n": 1290,
+        "mean": 0.33973475631639416,
+        "q05": -83.90261574074071,
+        "q50": -6.352893518518499,
+        "q95": 118.12703703703704
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::48::мкмоль/л",
+        "horizon_days": 30,
+        "n": 38,
+        "mean": 3.263150889376218,
+        "q05": -11.943969907407407,
+        "q50": 5.99974537037037,
+        "q95": 14.375740740740738
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::48::мкмоль/л",
+        "horizon_days": 90,
+        "n": 1915,
+        "mean": 1.120833756406537,
+        "q05": -26.067303240740742,
+        "q50": -2.827395833333327,
+        "q95": 38.29592592592593
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::48::мкмоль/л",
+        "horizon_days": 180,
+        "n": 1554,
+        "mean": 5.53068712313504,
+        "q05": -39.473888888888894,
+        "q50": 0.958958333333328,
+        "q95": 69.93092592592592
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::48::мкмоль/л",
+        "horizon_days": 365,
+        "n": 1120,
+        "mean": 1.8770563306051586,
+        "q05": -83.20835648148147,
+        "q50": -5.722129629629649,
+        "q95": 125.16987268518517
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::55::пмоль/л",
+        "horizon_days": 30,
+        "n": 35,
+        "mean": 2.461343915343915,
+        "q05": -13.223611111111111,
+        "q50": 5.302916666666668,
+        "q95": 13.252245370370368
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::55::пмоль/л",
+        "horizon_days": 90,
+        "n": 1702,
+        "mean": 1.1854565298994648,
+        "q05": -25.637824074074075,
+        "q50": -2.8532870370370347,
+        "q95": 38.08892361111111
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::55::пмоль/л",
+        "horizon_days": 180,
+        "n": 1353,
+        "mean": 6.825622476458351,
+        "q05": -39.25515046296297,
+        "q50": 2.089780092592605,
+        "q95": 70.18619212962963
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::55::пмоль/л",
+        "horizon_days": 365,
+        "n": 980,
+        "mean": -0.29508143187830704,
+        "q05": -84.15961805555554,
+        "q50": -6.24436342592594,
+        "q95": 116.22475694444444
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::8::Ед/л",
+        "horizon_days": 30,
+        "n": 36,
+        "mean": 2.791828060699588,
+        "q05": -13.223611111111111,
+        "q50": 5.528576388888887,
+        "q95": 14.375740740740738
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::8::Ед/л",
+        "horizon_days": 90,
+        "n": 1828,
+        "mean": 1.0984395007699166,
+        "q05": -25.769618055555554,
+        "q50": -2.911608796296292,
+        "q95": 38.3995486111111
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::8::Ед/л",
+        "horizon_days": 180,
+        "n": 1511,
+        "mean": 5.4085443476236,
+        "q05": -39.60388888888889,
+        "q50": 0.11927083333333144,
+        "q95": 69.97739583333333
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::8::Ед/л",
+        "horizon_days": 365,
+        "n": 1099,
+        "mean": 0.5303996267650727,
+        "q05": -83.48041666666666,
+        "q50": -6.736041666666665,
+        "q95": 121.14442129629629
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::928::нг/мл",
+        "horizon_days": 30,
+        "n": 16,
+        "mean": 0.6116427951388888,
+        "q05": -11.361562500000002,
+        "q50": -0.9824305555555561,
+        "q95": 12.942187500000003
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::928::нг/мл",
+        "horizon_days": 90,
+        "n": 757,
+        "mean": 4.721863685845687,
+        "q05": -25.325393518518524,
+        "q50": 1.3265624999999943,
+        "q95": 42.02549768518517
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::928::нг/мл",
+        "horizon_days": 180,
+        "n": 956,
+        "mean": 8.489467447311327,
+        "q05": -40.1708449074074,
+        "q50": 3.3358333333333405,
+        "q95": 72.74420138888888
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::928::нг/мл",
+        "horizon_days": 365,
+        "n": 738,
+        "mean": 4.825185530211784,
+        "q05": -84.47864583333336,
+        "q50": -6.456180555555534,
+        "q95": 137.64363425925927
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::9::Ед/л",
+        "horizon_days": 30,
+        "n": 36,
+        "mean": 2.791828060699588,
+        "q05": -13.223611111111111,
+        "q50": 5.528576388888887,
+        "q95": 14.375740740740738
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::9::Ед/л",
+        "horizon_days": 90,
+        "n": 1810,
+        "mean": 1.0474656230816453,
+        "q05": -25.699513888888887,
+        "q50": -3.1076157407407408,
+        "q95": 39.20502314814814
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::9::Ед/л",
+        "horizon_days": 180,
+        "n": 1503,
+        "mean": 5.669664582871294,
+        "q05": -39.56562500000001,
+        "q50": 0.5371643518518567,
+        "q95": 70.82105324074075
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::9::Ед/л",
+        "horizon_days": 365,
+        "n": 1091,
+        "mean": 0.31531120574057114,
+        "q05": -83.28042824074072,
+        "q50": -6.964479166666649,
+        "q95": 122.05222222222221
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::mm_1002::%",
+        "horizon_days": 30,
+        "n": 33,
+        "mean": 3.3502577861952862,
+        "q05": -11.574791666666666,
+        "q50": 5.528576388888887,
+        "q95": 13.885416666666664
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::mm_1002::%",
+        "horizon_days": 90,
+        "n": 1952,
+        "mean": 1.4278321261194595,
+        "q05": -25.281145833333326,
+        "q50": -2.3127893518518476,
+        "q95": 39.09587962962962
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::mm_1002::%",
+        "horizon_days": 180,
+        "n": 1571,
+        "mean": 5.473658040997713,
+        "q05": -39.38721064814814,
+        "q50": 0.5615972222222183,
+        "q95": 70.82105324074075
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::mm_1002::%",
+        "horizon_days": 365,
+        "n": 1116,
+        "mean": 0.35865190038829187,
+        "q05": -84.17223379629627,
+        "q50": -6.89075231481479,
+        "q95": 120.93915509259261
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::mm_1004::%",
+        "horizon_days": 30,
+        "n": 37,
+        "mean": 2.734035598098098,
+        "q05": -11.943969907407407,
+        "q50": 5.302916666666668,
+        "q95": 13.885416666666664
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::mm_1004::%",
+        "horizon_days": 90,
+        "n": 2188,
+        "mean": 1.5490989043774124,
+        "q05": -25.42063657407408,
+        "q50": -2.1601851851851848,
+        "q95": 38.855555555555554
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::mm_1004::%",
+        "horizon_days": 180,
+        "n": 1767,
+        "mean": 5.4480392195392895,
+        "q05": -39.25515046296297,
+        "q50": 0.3316319444444389,
+        "q95": 70.41403935185184
+      },
+      {
+        "source_system": "kgz_raw",
+        "outcome_key": "B::mm_1004::%",
+        "horizon_days": 365,
+        "n": 1260,
+        "mean": 0.22859525646678433,
+        "q05": -83.96480324074076,
+        "q50": -6.89075231481479,
+        "q95": 115.94285879629632
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::25(OH)витамин D::нг/мл",
+        "horizon_days": 30,
+        "n": 83,
+        "mean": -0.1635542564450857,
+        "q05": -12.886536616539352,
+        "q50": 0.3300555556828719,
+        "q95": 11.33490548604167
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::25(OH)витамин D::нг/мл",
+        "horizon_days": 90,
+        "n": 499,
+        "mean": 4.605820514991533,
+        "q05": -34.0,
+        "q50": 5.0,
+        "q95": 40.56208501778934
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::25(OH)витамин D::нг/мл",
+        "horizon_days": 180,
+        "n": 484,
+        "mean": 11.917142396430618,
+        "q05": -39.0,
+        "q50": 7.05601922398148,
+        "q95": 75.59108061238425
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::25(OH)витамин D::нг/мл",
+        "horizon_days": 365,
+        "n": 430,
+        "mean": 10.959458752428375,
+        "q05": -86.49474159618057,
+        "q50": -1.671444052847221,
+        "q95": 141.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Базофилы::%",
+        "horizon_days": 30,
+        "n": 254,
+        "mean": -0.2970735652324384,
+        "q05": -13.0,
+        "q50": -0.6831787469212998,
+        "q95": 13.587592334247681
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Базофилы::%",
+        "horizon_days": 90,
+        "n": 802,
+        "mean": 1.6971029479102013,
+        "q05": -37.0,
+        "q50": 1.8587964229976848,
+        "q95": 37.42372063028934
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Базофилы::%",
+        "horizon_days": 180,
+        "n": 686,
+        "mean": 7.7508631890598005,
+        "q05": -39.76774715966434,
+        "q50": 1.6339798044444365,
+        "q95": 74.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Базофилы::%",
+        "horizon_days": 365,
+        "n": 536,
+        "mean": 10.587156164375346,
+        "q05": -82.0,
+        "q50": -1.0,
+        "q95": 145.3185012412963
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Гемоглобин::г/л",
+        "horizon_days": 30,
+        "n": 209,
+        "mean": -0.7492592342615851,
+        "q05": -13.50511862693287,
+        "q50": -1.0,
+        "q95": 14.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Гемоглобин::г/л",
+        "horizon_days": 90,
+        "n": 691,
+        "mean": 2.1240668364395066,
+        "q05": -36.550121585752315,
+        "q50": 2.0,
+        "q95": 38.384645307453695
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Гемоглобин::г/л",
+        "horizon_days": 180,
+        "n": 590,
+        "mean": 9.144063380435833,
+        "q05": -39.391008945023145,
+        "q50": 2.468454996377318,
+        "q95": 74.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Гемоглобин::г/л",
+        "horizon_days": 365,
+        "n": 475,
+        "mean": 9.986500105048782,
+        "q05": -82.38217750701392,
+        "q50": 1.5871642962731585,
+        "q95": 137.68343639295142
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Железо::мкмоль/л",
+        "horizon_days": 30,
+        "n": 170,
+        "mean": -0.7658367346546839,
+        "q05": -14.0,
+        "q50": -1.0,
+        "q95": 13.379313066631944
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Железо::мкмоль/л",
+        "horizon_days": 90,
+        "n": 574,
+        "mean": 0.9922074341573509,
+        "q05": -38.0,
+        "q50": 2.0,
+        "q95": 38.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Железо::мкмоль/л",
+        "horizon_days": 180,
+        "n": 495,
+        "mean": 12.805890028793163,
+        "q05": -40.099094647650475,
+        "q50": 9.0,
+        "q95": 78.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Железо::мкмоль/л",
+        "horizon_days": 365,
+        "n": 372,
+        "mean": 8.265533690581877,
+        "q05": -79.42138908979166,
+        "q50": -4.0,
+        "q95": 136.21769129528934
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Лейкоциты::*10^9/л",
+        "horizon_days": 30,
+        "n": 244,
+        "mean": -0.90237956652071,
+        "q05": -13.490302273275464,
+        "q50": -1.0,
+        "q95": 13.686300855636574
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Лейкоциты::*10^9/л",
+        "horizon_days": 90,
+        "n": 734,
+        "mean": 1.5619151106219409,
+        "q05": -37.0,
+        "q50": 1.025187963043976,
+        "q95": 38.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Лейкоциты::*10^9/л",
+        "horizon_days": 180,
+        "n": 645,
+        "mean": 8.909985879223244,
+        "q05": -39.104293242511574,
+        "q50": 2.2798339739004803,
+        "q95": 74.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Лейкоциты::*10^9/л",
+        "horizon_days": 365,
+        "n": 506,
+        "mean": 11.017991788118138,
+        "q05": -82.0,
+        "q50": 1.5005741610301015,
+        "q95": 145.3185012412963
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Лимфоциты::%",
+        "horizon_days": 30,
+        "n": 284,
+        "mean": -0.5288439070168232,
+        "q05": -13.0,
+        "q50": -1.0,
+        "q95": 13.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Лимфоциты::%",
+        "horizon_days": 90,
+        "n": 839,
+        "mean": 1.5527332947976535,
+        "q05": -37.499265040486115,
+        "q50": 1.363042116296299,
+        "q95": 37.42372063028934
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Лимфоциты::%",
+        "horizon_days": 180,
+        "n": 724,
+        "mean": 7.771044301402845,
+        "q05": -39.76774715966434,
+        "q50": 1.125,
+        "q95": 73.1991806456713
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Лимфоциты::%",
+        "horizon_days": 365,
+        "n": 561,
+        "mean": 10.851080636685111,
+        "q05": -82.0,
+        "q50": -1.0,
+        "q95": 146.36307916356486
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Моноциты::%",
+        "horizon_days": 30,
+        "n": 280,
+        "mean": -0.42860971503988926,
+        "q05": -13.30604667747685,
+        "q50": -0.6831787469212998,
+        "q95": 13.587592334247681
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Моноциты::%",
+        "horizon_days": 90,
+        "n": 833,
+        "mean": 1.5072807375229953,
+        "q05": -37.46956256596064,
+        "q50": 1.363042116296299,
+        "q95": 37.42372063028934
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Моноциты::%",
+        "horizon_days": 180,
+        "n": 719,
+        "mean": 7.884055201285044,
+        "q05": -40.0,
+        "q50": 1.4952912175925803,
+        "q95": 74.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Моноциты::%",
+        "horizon_days": 365,
+        "n": 558,
+        "mean": 10.964264628433186,
+        "q05": -82.38217750701392,
+        "q50": -1.0,
+        "q95": 146.36307916356486
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Нейтрофилы::%",
+        "horizon_days": 30,
+        "n": 267,
+        "mean": -0.42790578986557604,
+        "q05": -13.30604667747685,
+        "q50": -1.0,
+        "q95": 13.587592334247681
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Нейтрофилы::%",
+        "horizon_days": 90,
+        "n": 814,
+        "mean": 1.4990525887712,
+        "q05": -37.499265040486115,
+        "q50": 1.363042116296299,
+        "q95": 38.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Нейтрофилы::%",
+        "horizon_days": 180,
+        "n": 699,
+        "mean": 8.335613113275695,
+        "q05": -40.0,
+        "q50": 2.0,
+        "q95": 74.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Нейтрофилы::%",
+        "horizon_days": 365,
+        "n": 546,
+        "mean": 10.736722140098168,
+        "q05": -82.0,
+        "q50": -1.4696193916898324,
+        "q95": 145.3185012412963
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Общий белок::г/л",
+        "horizon_days": 30,
+        "n": 151,
+        "mean": 0.038260067862322174,
+        "q05": -12.886536616539352,
+        "q50": 0.0,
+        "q95": 13.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Общий белок::г/л",
+        "horizon_days": 90,
+        "n": 709,
+        "mean": 2.1343601553490013,
+        "q05": -36.0,
+        "q50": 1.8587964229976848,
+        "q95": 36.47794185284721
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Общий белок::г/л",
+        "horizon_days": 180,
+        "n": 610,
+        "mean": 7.955023078098703,
+        "q05": -40.69416901909722,
+        "q50": 2.5207296684374967,
+        "q95": 72.49926504048608
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Общий белок::г/л",
+        "horizon_days": 365,
+        "n": 503,
+        "mean": 10.152040588666912,
+        "q05": -83.0,
+        "q50": -1.0,
+        "q95": 149.125
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Тромбоциты::*10^9/л",
+        "horizon_days": 30,
+        "n": 245,
+        "mean": -0.9499093070876795,
+        "q05": -13.391005562118057,
+        "q50": -1.0,
+        "q95": 13.686300855636574
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Тромбоциты::*10^9/л",
+        "horizon_days": 90,
+        "n": 737,
+        "mean": 1.6788815180490695,
+        "q05": -36.59858305303241,
+        "q50": 1.0366828837268542,
+        "q95": 38.205675236134255
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Тромбоциты::*10^9/л",
+        "horizon_days": 180,
+        "n": 644,
+        "mean": 8.861549907827525,
+        "q05": -39.104293242511574,
+        "q50": 2.2798339739004803,
+        "q95": 74.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Тромбоциты::*10^9/л",
+        "horizon_days": 365,
+        "n": 509,
+        "mean": 10.582575533286922,
+        "q05": -82.38217750701392,
+        "q50": 1.3108284563078882,
+        "q95": 145.3185012412963
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Эозинофилы::%",
+        "horizon_days": 30,
+        "n": 265,
+        "mean": -0.30146578933363904,
+        "q05": -13.0,
+        "q50": -1.0,
+        "q95": 13.587592334247681
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Эозинофилы::%",
+        "horizon_days": 90,
+        "n": 817,
+        "mean": 1.6153900370015497,
+        "q05": -37.46956256596064,
+        "q50": 1.4259241864120327,
+        "q95": 37.42372063028934
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Эозинофилы::%",
+        "horizon_days": 180,
+        "n": 704,
+        "mean": 8.233983197361455,
+        "q05": -39.76774715966434,
+        "q50": 2.0,
+        "q95": 74.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Эозинофилы::%",
+        "horizon_days": 365,
+        "n": 550,
+        "mean": 10.476538353890279,
+        "q05": -82.38217750701392,
+        "q50": -1.3333486965624957,
+        "q95": 145.3185012412963
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Эритроциты::*10^12/л",
+        "horizon_days": 30,
+        "n": 247,
+        "mean": -0.9001769141005492,
+        "q05": -13.490302273275464,
+        "q50": -1.0,
+        "q95": 13.686300855636574
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Эритроциты::*10^12/л",
+        "horizon_days": 90,
+        "n": 735,
+        "mean": 1.6149410629569947,
+        "q05": -37.0,
+        "q50": 1.0234934451736137,
+        "q95": 38.205675236134255
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Эритроциты::*10^12/л",
+        "horizon_days": 180,
+        "n": 643,
+        "mean": 9.057921728253522,
+        "q05": -39.104293242511574,
+        "q50": 2.383673892893512,
+        "q95": 74.0
+      },
+      {
+        "source_system": "magerya_api",
+        "outcome_key": "A::Эритроциты::*10^12/л",
+        "horizon_days": 365,
+        "n": 504,
+        "mean": 10.449815638414835,
+        "q05": -82.0,
+        "q50": 1.3108284563078882,
+        "q95": 145.29264379020833
+      }
+    ],
+    "unexplained_count": 0,
+    "CROSS_ROLE_TARGET_REUSE_STATUS": "PASS",
+    "WITHIN_ROLE_REPEATED_LANDMARK_STATUS": "ACCOUNTED",
+    "CROSS_HORIZON_TARGET_REUSE_STATUS": "ACCOUNTED_NONZERO",
+    "TARGET_REUSE_UNCERTAINTY_ACCOUNTING_STATUS": "EFFECTIVE_GROUP_BOOTSTRAP_REQUIRED",
+    "TARGET_ALIGNMENT_CONTRACT_STATUS": "WINDOW_ALIGNED_RECORDED_SOURCE_SPECIFIC_OUTCOME",
+    "TARGET_ALIGNMENT_ERROR_ACCOUNTING_STATUS": "PUBLISHED_AGGREGATE",
+    "REQUESTED_HORIZON_RUNTIME_STATUS": "PASS_REQUEST_PARAMETER_T0_PLUS_H",
+    "ok": true
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "version": "0.2",
+  "model_id": "source_a_ridge_v0.2",
+  "model_family": "ridge_regression_with_train_only_standardization",
+  "claim_level": "RETROSPECTIVE_BASELINE_ONLY",
+  "clinical_validation": "NOT_CLAIMED",
+  "seed": 42,
+  "l2": 0.1,
+  "coef": [
+    0.4010408266951344,
+    0.04331552803307002,
+    0.08926543432658407,
+    0.40530026141216896,
+    0.05598112141980908,
+    0.06832304841630461,
+    -0.14132583918489036,
+    0.14132583918472716,
+    0.14132583918472716
+  ],
+  "intercept": 4.539654441007512,
+  "residual_std": 1.8164187042683952,
+  "interval_multiplier": 1.6448536269514715,
+  "scaler_means": [
+    4.654290543526292,
+    182.595057617057,
+    1.5766681396376492,
+    2.6070071343064947,
+    -0.08085550154661954,
+    161.66798052000084,
+    0.5430844012372956,
+    0.4569155987627044,
+    0.4569155987627044
+  ],
+  "scaler_stds": [
+    1.7847559280470002,
+    205.47074764501176,
+    2.5830823953116573,
+    2.8311326745071526,
+    1.7196887169314705,
+    251.33664518008527,
+    0.49814027579590847,
+    0.49814027579590847,
+    0.49814027579590847
+  ],
+  "scaler_fit_n_rows": 4526,
+  "feature_order": [
+    "y_t0",
+    "horizon_days",
+    "n_prior_measurements",
+    "prior_mean",
+    "prior_last_delta",
+    "days_since_first",
+    "has_prior_history",
+    "prior_mean_missing_flag",
+    "prior_last_delta_missing_flag"
+  ],
+  "feature_schema_hash": "14303f8d4197b9bf8205bcb912bbb294c75f4ff2f7e22d2ae42290f97c4e29ff",
+  "training_configuration_hash": "09a399ef644c9af83bd39139048cc046e46144f13bef55689ca6999b2ba450ab",
+  "training_split_hash": "8686b0acb2e8c7058c3354963c637a261b5e7e49a3c72ebd5327ab6449e11587",
+  "training_pair_manifest_hash": "c4e3210de561c752110310786777764869e2c842ece3a1c008febc936cc448d1",
+  "outcome_contract_hash": "1bbd341d974ad05206e9a86e23b72bb16730147a6a5be0b04cecd138dddb2a97",
+  "code_hash": "b470b0459b5bb4f2ef930544c807d3d83049c9d2a2a99a979f098b8f3009f995",
+  "outcome": {
+    "candidate_id": "2685c68a3e247ca4",
+    "label": "\u04223 \u0441\u0432.",
+    "unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+    "medical_domain_interpretation": "DOMAIN_REVIEW_PENDING"
+  },
+  "frozen_at_version": "0.2"
+}

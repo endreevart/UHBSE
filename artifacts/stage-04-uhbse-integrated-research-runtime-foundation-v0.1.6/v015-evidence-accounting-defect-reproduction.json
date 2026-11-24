@@ -1,0 +1,59 @@
+{
+  "V015_EXPECTED_SHA256": "71b30884b2ab527af41df2edd828a31b3ac1f31a1da48fde0872d0c2f2ca5300",
+  "V015_REVIEW_EVIDENCE_STATUS": "CORRECTION_REQUIRED",
+  "V015_RUNTIME_FUTURE_FIELD_CONTRACT_STATUS": "PASS",
+  "artifact_dir": "artifacts/stage-04-uhbse-integrated-research-runtime-foundation-v0.1.6",
+  "defects": [
+    {
+      "V015_FORBIDDEN_EXECUTION_AUDIT_STATUS": "CORRECTION_REQUIRED",
+      "V015_RUNTIME_FUTURE_FIELD_CONTRACT_STATUS": "PASS",
+      "claim": "v0.1.5 residual_called_on_forbidden attributes allowed NHR control residual sampling to forbidden payloads",
+      "id": 1,
+      "independent_counter_deltas": {
+        "infer_calls_on_forbidden": 0,
+        "residual_calls_on_allowed_false_flag_control": 16,
+        "residual_calls_on_allowed_missing_control": 16,
+        "residual_calls_on_forbidden": 0
+      },
+      "note": "Forbidden t1=0 does not sample residual. The published 32 count is allowed missing/false-flag NHR.",
+      "packed_zip_residual_called_on_forbidden": 32,
+      "published_ok_ignores_residual_on_leak": true,
+      "published_residual_called_on_forbidden": 32,
+      "reproduced": true,
+      "source_mislabels_total_call_count": true
+    },
+    {
+      "V015_HTTP_FROZEN_ORDINARY_MATRIX_STATUS": "NOT_PROVEN",
+      "V015_HTTP_PRESENCE_MATRIX_CLAIM_STATUS": "CORRECTION_REQUIRED",
+      "claim": "v0.1.5 HTTP presence matrix posts syn_lep to ordinary /research/event-probability and omits frozen ordinary identity",
+      "id": 2,
+      "identity_fields_present_in_source": {
+        "presence_kind": false,
+        "provider_class": false,
+        "scenario_class": false
+      },
+      "n_frozen_ordinary_identified_cases": 0,
+      "n_ordinary_lep_cases": 32,
+      "note": "220/220 cannot prove frozen-source ordinary LEP coverage because ordinary LEP rows are synthetic.",
+      "ordinary_url_uses_syn_lep": true,
+      "published_n_cases": 220,
+      "reproduced": true
+    },
+    {
+      "V015_FINAL_REPORT_STATUS_RECONCILIATION": "FAIL",
+      "V015_REVIEW_EVIDENCE_STATUS": "CORRECTION_REQUIRED",
+      "claim": "v0.1.5 packed FINAL stage-report.md retains PUBLIC_DATA_MINIMIZATION_STATUS=PENDING_SCAN",
+      "id": 3,
+      "privacy_scan": "PASS_AGGREGATE_ONLY",
+      "report_line": "- `PUBLIC_DATA_MINIMIZATION_STATUS`=PENDING_SCAN",
+      "report_status": "FINAL",
+      "reproduced": true,
+      "status_contract": "PASS_AGGREGATE_ONLY"
+    }
+  ],
+  "n_defects": 3,
+  "n_reproduced": 3,
+  "no_v016_zip_overwrite": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.6-review.zip",
+  "note": "v0.1.5 evidence/accounting defects on unmodified published code. v0.1.5 ZIP is not rewritten.",
+  "version": "0.1.6"
+}

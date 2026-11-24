@@ -1,0 +1,44 @@
+{
+  "accepted": [
+    "A_MEDICATION_CODE_MEDICINES",
+    "B_AUTHOR",
+    "B_TIMING",
+    "B_PERIOD"
+  ],
+  "insufficient": [
+    "A_MEDICATION_CODE_SET",
+    "A_RECOMMENDATION_ITEMS",
+    "A_DOCUMENT_FINAL",
+    "B_IDENTITY",
+    "B_DRUGS",
+    "B_VITAMINS",
+    "B_CHANGE",
+    "B_DECLINE",
+    "B_POSITIVE",
+    "B_SHORT"
+  ],
+  "outside_gate": [
+    {
+      "answer_key": "A4",
+      "certainty": "DEFERRED_TO_CODE",
+      "field_path": "diagnosis_medicineappointments->appointment"
+    },
+    {
+      "answer_key": "B6",
+      "certainty": "NOT_REMEMBERED",
+      "field_path": "public.feedback.drugs_first"
+    },
+    {
+      "answer_key": "B10",
+      "certainty": "NOT_KNOWN",
+      "field_path": "public.consultations.date"
+    },
+    {
+      "answer_key": "B11",
+      "certainty": "STATED",
+      "field_path": "public.feedback.created_at,public.consultations.date"
+    }
+  ],
+  "rejected": [],
+  "version": "0.1"
+}

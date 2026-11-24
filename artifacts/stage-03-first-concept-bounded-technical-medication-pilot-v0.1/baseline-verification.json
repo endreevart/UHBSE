@@ -1,0 +1,78 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "v014_summary_present",
+      "ok": true,
+      "n_compatible": 85,
+      "n_strict": 69,
+      "n_capable": 43,
+      "scientifically_usable_accepted": 0,
+      "readiness": "ZERO_READY",
+      "no_model_training": true
+    },
+    {
+      "name": "compatible_85",
+      "ok": true
+    },
+    {
+      "name": "strict_clusters_69",
+      "ok": true
+    },
+    {
+      "name": "capable_clusters_43",
+      "ok": true
+    },
+    {
+      "name": "human_accepted_zero_scientific",
+      "ok": true,
+      "scientifically_usable_accepted": 0
+    },
+    {
+      "name": "scientific_readiness_zero",
+      "ok": true
+    },
+    {
+      "name": "no_training_after_v014",
+      "ok": true
+    },
+    {
+      "name": "scientific_gates_100_300_30",
+      "ok": true,
+      "gates": {
+        "min_subjects": 100,
+        "min_episodes": 300,
+        "min_test_subjects": 30
+      }
+    },
+    {
+      "name": "v014_clusters_file",
+      "ok": true,
+      "n_clusters": 69
+    },
+    {
+      "name": "decision_log_integrity",
+      "ok": true,
+      "n_entries": 6,
+      "sha256_match": true
+    },
+    {
+      "name": "no_human_accepted_in_v011_log",
+      "ok": true
+    },
+    {
+      "name": "prior_zips_immutable",
+      "ok": true,
+      "hashes": {
+        "stage-03-first-medication-association-baseline-v0.1.1-review.zip": "7c2d1bc1fcf3a96130bc2a8cf944850a88f5727ee7f3be43fca969fa1dcaa963",
+        "stage-03-medication-reference-acquisition-first-concept-cohorts-v0.1-review.zip": "d45c57b3ee35a3a3bae560b79a101343c8d0e1ed9c64e36228c455932eff7534"
+      }
+    },
+    {
+      "name": "no_source_b_medication_transfer",
+      "ok": true,
+      "note": "pilot uses Source A episodes only; no Source B medicine transfer executed"
+    }
+  ],
+  "SCIENTIFIC_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY"
+}

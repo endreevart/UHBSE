@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "scientific_cross_source_gate_status": "FAIL",
+  "t3_domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+  "scientific_cross_source_transfer_status": "NOT_RUN_DOMAIN_REVIEW_REQUIRED",
+  "failed_checks": [
+    "t3_analyte_equivalence_confirmed",
+    "specimen_material_confirmed",
+    "assay_method_policy_accepted",
+    "unit_semantics_accepted",
+    "cross_source_independence_policy_accepted"
+  ],
+  "checks": {
+    "t3_analyte_equivalence_confirmed": false,
+    "specimen_material_confirmed": false,
+    "assay_method_policy_accepted": false,
+    "unit_semantics_accepted": false,
+    "applicability_pass": true,
+    "cross_source_independence_policy_accepted": false,
+    "no_source_b_tuning": true
+  },
+  "domain_review_not_closed_programmatically": true
+}

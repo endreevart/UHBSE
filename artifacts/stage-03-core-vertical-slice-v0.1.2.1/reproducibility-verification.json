@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "verification_mode": "isolated_staging_before_final_pack",
+  "exact_reproduce_commands_executed": true,
+  "environment_exports": {
+    "UV_CACHE_DIR": "<tmp>/uv-cache",
+    "UV_PROJECT_ENVIRONMENT": "<tmp>/venv"
+  },
+  "commands": [
+    {
+      "literal_command": "uv sync --frozen --extra dev",
+      "exit_code": 0,
+      "collected": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "duration_seconds": 10.66,
+      "execution_environment": {
+        "working_directory": "isolated_staging_root",
+        "UV_CACHE_DIR": "<tmp>/uv-cache",
+        "UV_PROJECT_ENVIRONMENT": "<tmp>/venv",
+        "network_and_dependency_mode": "uv_frozen"
+      }
+    },
+    {
+      "literal_command": "uv run --frozen pytest tests/test_core_vertical_slice_unit.py tests/test_core_vertical_slice_v011.py tests/test_core_vertical_slice_v012.py tests/test_core_vertical_slice_v0121.py -q",
+      "exit_code": 0,
+      "collected": 44,
+      "passed": 44,
+      "failed": null,
+      "skipped": null,
+      "duration_seconds": 2.749,
+      "execution_environment": {
+        "working_directory": "isolated_staging_root",
+        "UV_CACHE_DIR": "<tmp>/uv-cache",
+        "UV_PROJECT_ENVIRONMENT": "<tmp>/venv",
+        "network_and_dependency_mode": "uv_frozen"
+      }
+    },
+    {
+      "literal_command": "uv run --frozen audit --root . core verify",
+      "exit_code": 0,
+      "collected": null,
+      "passed": null,
+      "failed": null,
+      "skipped": null,
+      "duration_seconds": 11.315,
+      "execution_environment": {
+        "working_directory": "isolated_staging_root",
+        "UV_CACHE_DIR": "<tmp>/uv-cache",
+        "UV_PROJECT_ENVIRONMENT": "<tmp>/venv",
+        "network_and_dependency_mode": "uv_frozen"
+      }
+    }
+  ]
+}

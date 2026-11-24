@@ -1,0 +1,621 @@
+stage: "03"
+phase: design
+title: Canonical Clinical Event Model
+version: "0.6.1"
+designed_at: "2026-08-01T23:30:00+00:00"
+
+data_level_enum:
+  - PATIENT_EVENT
+  - OBSERVATION_HEADER
+  - OBSERVATION_VALUE
+  - ATTRIBUTE_CONTAINER
+  - REFERENCE_CATALOG
+  - WORKFLOW
+  - PAYLOAD
+  - UNKNOWN
+
+design_principles:
+  - preserve provenance, time, uncertainty, and raw source values
+  - source-local subject identity only
+  - strict separation of evidence, simulation scenario, and prediction layers
+  - catalog facts are not patient facts
+  - mappings validated against Stage 01/02 schema profiles
+
+layers:
+  evidence:
+    record_origins: [OBSERVED, CORRECTED, NORMALIZED, ANNOTATED, DERIVED, IMPUTED]
+    forbidden_origins: [SYNTHETIC, PREDICTED]
+  simulation_scenario:
+    required_origin: SYNTHETIC
+  prediction:
+    required_origin: PREDICTED
+
+catalog_vs_patient_facts:
+  strict_separation: true
+
+future_entities_not_in_minimal_model:
+  IdentityLinkEvidence:
+    activation: deferred
+
+constraints:
+  forbid_derived_in_simulation_scenario: true
+  evidence_state_snapshot_origins: [DERIVED, IMPUTED]
+  scenario_checkpoint_origin: SYNTHETIC
+  branch_baseline_xor: baseline_snapshot_id XOR checkpoint_id
+  simulation_run_input_xor: input_evidence_snapshot_id XOR input_checkpoint_id
+  snapshot_component_value_constraint:
+    observed_or_imputed: exactly_one_typed_value
+    missing_or_not_applicable: no_typed_value_and_missingness_reason_required
+  predicted_state_value_constraint:
+    produced: exactly_one_typed_value
+    unavailable: no_typed_value_and_failure_reason_required
+  variable_identity_required: concept_id OR raw_code OR variable_key
+  scenario_intervention_identity: concept_id OR raw_name
+  scenario_event_effective_at_required: true
+  scenario_event_effective_until_gte_effective_at: true
+  predicted_state_target_at_gte_generated_at: true
+  uncertainty_bounds_order: uncertainty_lower <= numeric_value <= uncertainty_upper
+  simulation_run_completed_requires:
+    - model_id
+    - model_version
+    - model_artifact_hash
+    - configuration_hash
+    - completed_at
+  simulation_run_random_seed_optional_only_if_deterministic: true
+  extension_payload_requires_namespace: true
+  subject_characteristic_identity:
+    rule: at least one of characteristic_code or concept_id required
+    both_allowed: true
+    characteristic_code_semantics: preserves source/local identity
+    concept_id_semantics: optional additional normalization when evidenced
+    forbidden: XOR-only identity constraint
+  subject_characteristic_value_constraint:
+    exactly_one_typed_value: [date_value, numeric_value, text_value, categorical_value, boolean_value]
+    raw_value_preserved: true
+  subject_characteristic_no_auto_sex_normalization: true
+  subject_characteristic_cross_source_consolidation_forbidden: true
+  subject_characteristic_no_cross_source_overwrite: true
+  scenario_event_precedence_contract:
+    intervention_holds_identity_and_defaults: true
+    start_activates_defaults_or_event_overrides: true
+    dose_change_modifies_dose_with_effective_at: true
+    schedule_change_modifies_frequency: true
+    adherence_change_modifies_adherence_pattern: true
+    stop_ends_exposure: true
+    missing_event_field_inherits_last_active_value: true
+    event_override_priority_over_intervention_default: true
+    events_not_rewritten: true
+    effective_timeline_reconstructed_deterministically: true
+  provenance_profile_by_entity:
+    Scenario: [scenario_id]
+    ScenarioBranch: [scenario_id, branch_id]
+    ScenarioIntervention: [branch_id, scenario_intervention_id]
+    ScenarioEvent: [branch_id, scenario_event_id]
+    SimulationRun: [scenario_id, branch_id, simulation_run_id]
+    ScenarioCheckpoint: [branch_id, simulation_run_id, checkpoint_id]
+    ScenarioCheckpointState: [checkpoint_id, checkpoint_state_id]
+    PredictedState: [simulation_run_id, branch_id, predicted_state_id]
+
+external_references:
+  SimulationRun.model_id:
+    reason: external model registry identifier outside canonical entity graph
+  SourceSystem.audit_stage_reference:
+    reason: stage artifact path reference, not an entity FK
+
+entities:
+  SourceSystem:
+    layer: evidence
+    requires_provenance: false
+    fields:
+      source_system_id: {type: string, nullable: false, semantics: stable source identifier}
+      source_label: {type: string, nullable: false, semantics: human-readable label}
+      audit_stage_reference: {type: string, nullable: true, semantics: Stage artifact reference}
+
+  SourceRecord:
+    layer: evidence
+    requires_provenance: true
+    fields:
+      source_record_id: {type: string, nullable: false, semantics: canonical source record identifier}
+      source_system_id: {type: string, nullable: false, semantics: owning SourceSystem}
+      source_schema: {type: string, nullable: false, semantics: source schema name}
+      source_relation: {type: string, nullable: false, semantics: source table name}
+      source_record_locator: {type: string, nullable: false, semantics: deterministic HMAC locator}
+      locator_scheme: {type: string, nullable: false, semantics: locator algorithm identifier}
+      locator_key_version: {type: string, nullable: false, semantics: HMAC key version reference}
+      source_created_at: {type: datetime, nullable: true, semantics: source row creation time}
+      source_updated_at: {type: datetime, nullable: true, semantics: source row last modification time}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  Subject:
+    layer: evidence
+    requires_provenance: true
+    identity:
+      scope: source_local
+      key: [source_system_id, source_subject_key]
+      forbidden: [global_subject_id, cross_source_merge, treating_potential_overlap_as_equality]
+    fields:
+      subject_id: {type: string, nullable: false, semantics: canonical subject identifier}
+      source_system_id: {type: string, nullable: false, semantics: owning source}
+      source_subject_key: {type: string, nullable: false, semantics: opaque source-local subject key}
+      subject_role_hint: {type: string, nullable: true, semantics: non-authoritative role hint}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  SubjectCharacteristic:
+    layer: evidence
+    requires_provenance: true
+    fields:
+      characteristic_id: {type: string, nullable: false, semantics: canonical characteristic row identifier}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      characteristic_code: {type: string, nullable: true, semantics: stable local code; at least one of characteristic_code or concept_id required}
+      concept_id: {type: string, nullable: true, semantics: optional Concept reference; may coexist with characteristic_code}
+      raw_code: {type: string, nullable: false, semantics: source column or local code name}
+      raw_value: {type: string, nullable: false, semantics: raw serialized source value preserved in parallel}
+      date_value: {type: date, nullable: true, semantics: typed date representation}
+      numeric_value: {type: number, nullable: true, semantics: typed numeric representation}
+      text_value: {type: string, nullable: true, semantics: typed text representation}
+      categorical_value: {type: string, nullable: true, semantics: typed categorical representation}
+      boolean_value: {type: boolean, nullable: true, semantics: typed boolean representation}
+      raw_unit: {type: string, nullable: true, semantics: raw unit string from source}
+      normalized_unit: {type: string, nullable: true, semantics: nullable Unit reference; only with confirmed conversion rule}
+      effective_at: {type: datetime, nullable: true, semantics: when characteristic became effective if evidenced}
+      recorded_at: {type: datetime, nullable: true, semantics: source record time; system time not clinical time}
+      status: {type: string, nullable: false, semantics: candidate/hypothesis/confirmed schema mapping status mirror}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  Provider:
+    layer: evidence
+    requires_provenance: true
+    fields:
+      provider_id: {type: string, nullable: false, semantics: canonical provider identifier}
+      source_system_id: {type: string, nullable: false, semantics: owning source}
+      source_provider_key: {type: string, nullable: false, semantics: opaque source-local provider key}
+      provider_role_hint: {type: string, nullable: true, semantics: staff role hint when known}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  Encounter:
+    layer: evidence
+    requires_provenance: true
+    temporal_contract: required
+    fields:
+      encounter_id: {type: string, nullable: false, semantics: canonical encounter identifier}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      provider_id: {type: string, nullable: true, semantics: provider reference}
+      encounter_type: {type: string, nullable: true, semantics: visit/consultation/appointment type}
+      occurred_at: {type: datetime, nullable: true, semantics: clinical encounter time when evidenced}
+      recorded_at: {type: datetime, nullable: true, semantics: source system record time}
+      completed_at: {type: datetime, nullable: true, semantics: completion status timestamp}
+      cancelled_at: {type: datetime, nullable: true, semantics: cancellation status timestamp}
+      confirmed_at: {type: datetime, nullable: true, semantics: confirmation status timestamp}
+      status: {type: string, nullable: true, semantics: encounter lifecycle status}
+      data_level: {type: enum, nullable: false, semantics: data level enum value}
+      missingness_reason: {type: string, nullable: true, semantics: why occurred_at absent}
+      temporal_precision: {type: enum, nullable: false, semantics: precision of clinical time when evidenced; unknown when clinical time absent}
+      sequence_when_time_unknown: {type: integer, nullable: true, semantics: optional ordering among events with unknown clinical time; not a substitute for occurred_at}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  Observation:
+    layer: evidence
+    requires_provenance: true
+    temporal_contract: required
+    fields:
+      observation_id: {type: string, nullable: false, semantics: canonical observation identifier}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      encounter_id: {type: string, nullable: true, semantics: optional encounter reference}
+      observed_at: {type: datetime, nullable: true, semantics: when specimen measured or clinically observed}
+      specimen_collected_at: {type: datetime, nullable: true, semantics: specimen collection time}
+      result_available_at: {type: datetime, nullable: true, semantics: when result became available}
+      recorded_at: {type: datetime, nullable: true, semantics: source record time}
+      status: {type: string, nullable: true, semantics: preliminary/final/corrected/cancelled}
+      data_level: {type: enum, nullable: false, semantics: OBSERVATION_HEADER or grouped header}
+      raw_code: {type: string, nullable: true, semantics: source code or test name}
+      normalized_concept: {type: string, nullable: true, semantics: nullable Concept reference}
+      raw_value: {type: string, nullable: true, semantics: raw serialized value when header-level}
+      raw_unit: {type: string, nullable: true, semantics: raw unit string}
+      normalized_unit: {type: string, nullable: true, semantics: nullable Unit reference}
+      reference_range: {type: object, nullable: true, semantics: structured reference interval}
+      abnormal_flag: {type: string, nullable: true, semantics: abnormal/normal/unknown flag}
+      uncertainty: {type: object, nullable: true, semantics: structured uncertainty metadata}
+      missingness_reason: {type: string, nullable: true, semantics: documented absence reason}
+      temporal_precision: {type: enum, nullable: false, semantics: precision of clinical time when evidenced; unknown when clinical time absent}
+      sequence_when_time_unknown: {type: integer, nullable: true, semantics: optional ordering among observations with unknown clinical time; not a substitute for observed_at}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  ObservationComponent:
+    layer: evidence
+    requires_provenance: true
+    fields:
+      component_id: {type: string, nullable: false, semantics: component identifier}
+      observation_id: {type: string, nullable: false, semantics: parent observation reference}
+      raw_code: {type: string, nullable: true, semantics: component analyte/code name}
+      raw_value: {type: string, nullable: true, semantics: raw value text}
+      numeric_value: {type: number, nullable: true, semantics: parsed numeric value}
+      text_value: {type: string, nullable: true, semantics: text interpretation or note}
+      categorical_value: {type: string, nullable: true, semantics: categorical representation}
+      boolean_value: {type: boolean, nullable: true, semantics: boolean representation}
+      raw_unit: {type: string, nullable: true, semantics: raw unit string}
+      normalized_unit: {type: string, nullable: true, semantics: nullable Unit reference}
+      reference_range: {type: object, nullable: true, semantics: ref low/high structure}
+      abnormal_flag: {type: string, nullable: true, semantics: flag from source}
+      sequence_order: {type: integer, nullable: true, semantics: ordering within observation}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  ClinicalAssertion:
+    layer: evidence
+    requires_provenance: true
+    temporal_contract: required
+    fields:
+      assertion_id: {type: string, nullable: false, semantics: assertion identifier}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      encounter_id: {type: string, nullable: true, semantics: optional encounter reference}
+      assertion_type: {type: string, nullable: true, semantics: diagnosis/finding/assessment}
+      raw_code: {type: string, nullable: true, semantics: source code or name}
+      normalized_concept: {type: string, nullable: true, semantics: nullable Concept reference}
+      asserted_at: {type: datetime, nullable: true, semantics: clinical assertion time}
+      status: {type: string, nullable: true, semantics: assertion status}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  Intervention:
+    layer: evidence
+    requires_provenance: true
+    temporal_contract: required
+    fields:
+      intervention_id: {type: string, nullable: false, semantics: intervention identifier}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      encounter_id: {type: string, nullable: true, semantics: optional encounter reference}
+      intervention_type: {type: string, nullable: false, semantics: medication/supplement/nutrition/activity/other}
+      raw_name: {type: string, nullable: true, semantics: source intervention name}
+      normalized_concept: {type: string, nullable: true, semantics: nullable Concept reference}
+      dose_value: {type: number, nullable: true, semantics: dose amount}
+      dose_unit: {type: string, nullable: true, semantics: dose unit}
+      frequency: {type: string, nullable: true, semantics: schedule frequency}
+      route: {type: string, nullable: true, semantics: administration route}
+      intervention_started_at: {type: datetime, nullable: true, semantics: action start time}
+      intervention_ended_at: {type: datetime, nullable: true, semantics: action end time}
+      status: {type: string, nullable: true, semantics: active/completed/cancelled}
+      intent: {type: string, nullable: true, semantics: order/plan/actual/discontinuation}
+      adherence_status: {type: string, nullable: true, semantics: adherence classification}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  MedicationExposure:
+    layer: evidence
+    extends: Intervention
+    intervention_type: medication
+    requires_provenance: true
+    fields:
+      intervention_id: {type: string, nullable: false, semantics: inherited from Intervention}
+
+  SupplementExposure:
+    layer: evidence
+    extends: Intervention
+    intervention_type: supplement
+    requires_provenance: true
+    fields:
+      intervention_id: {type: string, nullable: false, semantics: inherited from Intervention}
+
+  NutritionExposure:
+    layer: evidence
+    extends: Intervention
+    intervention_type: nutrition
+    requires_provenance: true
+    fields:
+      intervention_id: {type: string, nullable: false, semantics: inherited from Intervention}
+
+  ActivityExposure:
+    layer: evidence
+    extends: Intervention
+    intervention_type: activity
+    requires_provenance: true
+    fields:
+      intervention_id: {type: string, nullable: false, semantics: inherited from Intervention}
+
+  Procedure:
+    layer: evidence
+    requires_provenance: true
+    temporal_contract: required
+    fields:
+      procedure_id: {type: string, nullable: false, semantics: procedure identifier}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      encounter_id: {type: string, nullable: true, semantics: optional encounter reference}
+      raw_code: {type: string, nullable: true, semantics: source procedure code/name}
+      normalized_concept: {type: string, nullable: true, semantics: nullable Concept reference}
+      occurred_at: {type: datetime, nullable: true, semantics: when procedure performed}
+      status: {type: string, nullable: true, semantics: procedure status}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  ClinicalDocument:
+    layer: evidence
+    requires_provenance: true
+    temporal_contract: required
+    fields:
+      document_id: {type: string, nullable: false, semantics: document identifier}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      encounter_id: {type: string, nullable: true, semantics: optional encounter reference}
+      document_type: {type: string, nullable: true, semantics: document type code/name}
+      raw_title: {type: string, nullable: true, semantics: source title or filename}
+      authored_at: {type: datetime, nullable: true, semantics: clinical authorship time}
+      recorded_at: {type: datetime, nullable: true, semantics: source record time}
+      status: {type: string, nullable: true, semantics: document status}
+      content_locator: {type: string, nullable: true, semantics: protected content reference}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  Concept:
+    layer: evidence
+    requires_provenance: true
+    fields:
+      concept_id: {type: string, nullable: false, semantics: canonical concept identifier}
+      source_concept_key: {type: string, nullable: false, semantics: source-local catalog key}
+      raw_code: {type: string, nullable: true, semantics: source code when present}
+      display_name: {type: string, nullable: true, semantics: human-readable label}
+      concept_system: {type: string, nullable: true, semantics: coding system identifier}
+      normalized_code: {type: string, nullable: true, semantics: nullable normalized code}
+      normalization_status: {type: string, nullable: false, semantics: uncoded/candidate/normalized}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  Unit:
+    layer: evidence
+    requires_provenance: true
+    fields:
+      unit_id: {type: string, nullable: false, semantics: canonical unit identifier}
+      source_unit_key: {type: string, nullable: false, semantics: source-local unit key}
+      raw_unit: {type: string, nullable: true, semantics: raw unit string from source}
+      normalized_code: {type: string, nullable: true, semantics: nullable UCUM or internal code}
+      display_symbol: {type: string, nullable: true, semantics: display symbol}
+      normalization_status: {type: string, nullable: false, semantics: uncoded/candidate/normalized}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  Provenance:
+    layer: cross_cutting
+    requires_provenance: false
+    embedded: true
+
+  Scenario:
+    layer: simulation_scenario
+    requires_provenance: true
+    record_origin: SYNTHETIC
+    fields:
+      scenario_id: {type: string, nullable: false, semantics: scenario identifier}
+      name: {type: string, nullable: false, semantics: scenario label}
+      created_at: {type: datetime, nullable: false, semantics: scenario creation time}
+      branch_policy: {type: string, nullable: true, semantics: branching policy reference}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with SCENARIO profile}
+
+  ScenarioBranch:
+    layer: simulation_scenario
+    requires_provenance: true
+    record_origin: SYNTHETIC
+    fields:
+      branch_id: {type: string, nullable: false, semantics: branch identifier}
+      scenario_id: {type: string, nullable: false, semantics: parent scenario}
+      parent_branch_id: {type: string, nullable: true, semantics: parent branch for nesting or fork source}
+      created_at: {type: datetime, nullable: false, semantics: system time branch record created}
+      forked_at_timeline: {type: datetime, nullable: true, semantics: simulation timeline fork point}
+      baseline_snapshot_id: {type: string, nullable: true, semantics: EvidenceStateSnapshot baseline reference}
+      checkpoint_id: {type: string, nullable: true, semantics: ScenarioCheckpoint baseline reference}
+      forked_from_event_id: {type: string, nullable: true, semantics: ScenarioEvent that triggered fork}
+      branch_status: {type: string, nullable: true, semantics: active/archived/failed}
+      label: {type: string, nullable: true, semantics: branch label}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with SCENARIO profile}
+
+  ScenarioIntervention:
+    layer: simulation_scenario
+    requires_provenance: true
+    record_origin: SYNTHETIC
+    semantics: >
+      Holds virtual intervention identity and default parameters (quantity, frequency, route, duration).
+      Does not encode timeline changes; ScenarioEvent applies overrides with precedence over defaults.
+    fields:
+      scenario_intervention_id: {type: string, nullable: false, semantics: virtual intervention identifier}
+      branch_id: {type: string, nullable: false, semantics: owning branch}
+      intervention_kind: {type: enum, nullable: false, semantics: MEDICATION|SUPPLEMENT|NUTRITION|ACTIVITY|OTHER}
+      concept_id: {type: string, nullable: true, semantics: Concept reference when coded}
+      raw_name: {type: string, nullable: true, semantics: free-text intervention name}
+      route: {type: string, nullable: true, semantics: administration route}
+      quantity: {type: number, nullable: true, semantics: default dose or amount}
+      quantity_unit: {type: string, nullable: true, semantics: default unit for quantity}
+      frequency: {type: string, nullable: true, semantics: default schedule frequency}
+      duration: {type: string, nullable: true, semantics: planned duration descriptor}
+      based_on_evidence_intervention_id: {type: string, nullable: true, semantics: evidence Intervention when modeling change to observed therapy}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with SCENARIO profile}
+
+  ScenarioEvent:
+    layer: simulation_scenario
+    requires_provenance: true
+    record_origin: SYNTHETIC
+    semantics: >
+      Timeline mutation for a ScenarioIntervention. START activates defaults or explicit overrides.
+      DOSE_CHANGE/SCHEDULE_CHANGE/ADHERENCE_CHANGE apply at effective_at. STOP ends exposure.
+      Absent event fields inherit the last active value; event overrides beat intervention defaults.
+      Prior events are never rewritten; effective timeline is reconstructed deterministically.
+    fields:
+      scenario_event_id: {type: string, nullable: false, semantics: scenario event identifier}
+      branch_id: {type: string, nullable: false, semantics: owning branch}
+      scenario_intervention_id: {type: string, nullable: false, semantics: target ScenarioIntervention reference}
+      event_action: {type: enum, nullable: false, semantics: START|STOP|DOSE_CHANGE|SCHEDULE_CHANGE|ADHERENCE_CHANGE}
+      dose: {type: number, nullable: true, semantics: dose override for action; inherits last active when absent}
+      dose_unit: {type: string, nullable: true, semantics: dose unit override}
+      frequency: {type: string, nullable: true, semantics: schedule override; inherits last active when absent}
+      adherence_pattern: {type: string, nullable: true, semantics: adherence override; inherits last active when absent}
+      effective_at: {type: datetime, nullable: false, semantics: when exposure becomes effective}
+      effective_until: {type: datetime, nullable: true, semantics: when exposure ends; must be >= effective_at}
+      replaces_event_id: {type: string, nullable: true, semantics: prior event superseded by this event without rewriting history}
+      extension_payload: {type: object, nullable: true, semantics: namespaced extension payload only}
+      extension_namespace: {type: string, nullable: true, semantics: required when extension_payload present}
+      extension_schema_version: {type: string, nullable: true, semantics: required when extension_payload present}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with SCENARIO profile}
+
+  SimulationRun:
+    layer: simulation_scenario
+    requires_provenance: true
+    record_origin: SYNTHETIC
+    fields:
+      simulation_run_id: {type: string, nullable: false, semantics: run identifier}
+      scenario_id: {type: string, nullable: false, semantics: scenario reference}
+      branch_id: {type: string, nullable: false, semantics: branch being simulated}
+      input_evidence_snapshot_id: {type: string, nullable: true, semantics: EvidenceStateSnapshot input; XOR with input_checkpoint_id}
+      input_checkpoint_id: {type: string, nullable: true, semantics: ScenarioCheckpoint input for rollback/fork runs}
+      model_id: {type: string, nullable: true, semantics: external model identifier}
+      model_version: {type: string, nullable: true, semantics: model version}
+      model_artifact_hash: {type: string, nullable: true, semantics: hash of model artifact}
+      configuration_hash: {type: string, nullable: true, semantics: hash of run configuration}
+      deterministic_model: {type: boolean, nullable: true, semantics: when true random_seed may be absent}
+      random_seed: {type: string, nullable: true, semantics: reproducibility seed; required unless deterministic_model}
+      started_at: {type: datetime, nullable: true, semantics: run start time}
+      completed_at: {type: datetime, nullable: true, semantics: run completion time}
+      run_status: {type: string, nullable: true, semantics: pending/running/completed/failed}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with SCENARIO profile}
+
+  EvidenceStateSnapshot:
+    layer: evidence
+    requires_provenance: true
+    record_origin: DERIVED
+    allowed_record_origins: [DERIVED, IMPUTED]
+    fields:
+      snapshot_id: {type: string, nullable: false, semantics: evidence snapshot identifier}
+      subject_id: {type: string, nullable: false, semantics: subject whose observed state is captured}
+      snapshot_at: {type: datetime, nullable: false, semantics: as-of time for observed state}
+      snapshot_kind: {type: string, nullable: false, semantics: baseline/intermediate/final}
+      source_event_cutoff: {type: datetime, nullable: true, semantics: exclude source events after this time}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with COMPUTED profile}
+
+  StateSnapshotComponent:
+    layer: evidence
+    requires_provenance: true
+    record_origin: DERIVED
+    allowed_record_origins: [DERIVED, IMPUTED]
+    fields:
+      component_id: {type: string, nullable: false, semantics: snapshot component identifier}
+      snapshot_id: {type: string, nullable: false, semantics: parent EvidenceStateSnapshot reference}
+      concept_id: {type: string, nullable: true, semantics: Concept reference for measured variable}
+      raw_code: {type: string, nullable: true, semantics: source or local code for biological variable}
+      variable_key: {type: string, nullable: true, semantics: stable local key when concept not coded}
+      raw_value: {type: string, nullable: true, semantics: raw serialized component value}
+      numeric_value: {type: number, nullable: true, semantics: numeric representation}
+      text_value: {type: string, nullable: true, semantics: text representation}
+      categorical_value: {type: string, nullable: true, semantics: categorical representation}
+      boolean_value: {type: boolean, nullable: true, semantics: boolean representation}
+      raw_unit: {type: string, nullable: true, semantics: raw unit string}
+      normalized_unit: {type: string, nullable: true, semantics: nullable Unit reference}
+      source_observation_ids: {type: array, nullable: true, semantics: contributing Observation/ObservationComponent ids}
+      missingness_status: {type: string, nullable: true, semantics: observed/imputed/missing/not_applicable}
+      missingness_reason: {type: string, nullable: true, semantics: required when missing or not_applicable}
+      confidence: {type: string, nullable: true, semantics: confidence in component value}
+      uncertainty: {type: object, nullable: true, semantics: structured uncertainty metadata}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block}
+
+  ScenarioCheckpoint:
+    layer: simulation_scenario
+    requires_provenance: true
+    record_origin: SYNTHETIC
+    fields:
+      checkpoint_id: {type: string, nullable: false, semantics: scenario checkpoint identifier}
+      simulation_run_id: {type: string, nullable: false, semantics: SimulationRun that produced checkpoint}
+      branch_id: {type: string, nullable: false, semantics: branch context}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      checkpoint_at: {type: datetime, nullable: false, semantics: simulation timeline checkpoint time}
+      rollback_supported: {type: boolean, nullable: false, semantics: whether branch rollback can use this checkpoint}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with SCENARIO profile}
+
+  ScenarioCheckpointState:
+    layer: simulation_scenario
+    requires_provenance: true
+    record_origin: SYNTHETIC
+    fields:
+      checkpoint_state_id: {type: string, nullable: false, semantics: checkpoint state row identifier}
+      checkpoint_id: {type: string, nullable: false, semantics: parent ScenarioCheckpoint reference}
+      predicted_state_id: {type: string, nullable: false, semantics: captured PredictedState reference}
+      sequence_order: {type: integer, nullable: true, semantics: ordering within checkpoint}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with SCENARIO profile}
+
+  PredictedState:
+    layer: prediction
+    requires_provenance: true
+    record_origin: PREDICTED
+    temporal_contract: required
+    fields:
+      predicted_state_id: {type: string, nullable: false, semantics: predicted state identifier}
+      simulation_run_id: {type: string, nullable: false, semantics: owning SimulationRun}
+      branch_id: {type: string, nullable: false, semantics: scenario branch context}
+      subject_id: {type: string, nullable: false, semantics: subject reference}
+      concept_id: {type: string, nullable: true, semantics: predicted variable Concept reference}
+      raw_code: {type: string, nullable: true, semantics: source or local code for biological variable}
+      variable_key: {type: string, nullable: true, semantics: stable local key when concept not coded}
+      generated_at: {type: datetime, nullable: false, semantics: when prediction was generated}
+      target_at: {type: datetime, nullable: false, semantics: forecast target time; must be >= generated_at}
+      prediction_horizon: {type: string, nullable: true, semantics: horizon descriptor}
+      prediction_status: {type: string, nullable: false, semantics: produced/unavailable}
+      failure_reason: {type: string, nullable: true, semantics: required when prediction_status=unavailable}
+      numeric_value: {type: number, nullable: true, semantics: numeric point estimate}
+      text_value: {type: string, nullable: true, semantics: text estimate}
+      categorical_value: {type: string, nullable: true, semantics: categorical estimate}
+      boolean_value: {type: boolean, nullable: true, semantics: boolean estimate}
+      normalized_unit: {type: string, nullable: true, semantics: unit of predicted value}
+      uncertainty_lower: {type: number, nullable: true, semantics: lower uncertainty bound}
+      uncertainty_upper: {type: number, nullable: true, semantics: upper uncertainty bound}
+      distribution_type: {type: string, nullable: true, semantics: distribution family name}
+      distribution_parameters: {type: object, nullable: true, semantics: distribution parameters}
+      model_version: {type: string, nullable: false, semantics: model version used}
+      provenance: {type: Provenance, nullable: false, semantics: provenance block with MODEL_OUTPUT profile}
+
+relationships:
+  - {from: SourceRecord, from_field: source_system_id, to: SourceSystem, to_field: source_system_id, cardinality: many_to_one}
+  - {from: Subject, from_field: source_system_id, to: SourceSystem, to_field: source_system_id, cardinality: many_to_one}
+  - {from: SubjectCharacteristic, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: SubjectCharacteristic, from_field: concept_id, to: Concept, to_field: concept_id, cardinality: many_to_one}
+  - {from: SubjectCharacteristic, from_field: normalized_unit, to: Unit, to_field: unit_id, cardinality: many_to_one}
+  - {from: Provider, from_field: source_system_id, to: SourceSystem, to_field: source_system_id, cardinality: many_to_one}
+  - {from: Encounter, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: Encounter, from_field: provider_id, to: Provider, to_field: provider_id, cardinality: many_to_one}
+  - {from: Observation, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: Observation, from_field: encounter_id, to: Encounter, to_field: encounter_id, cardinality: many_to_one}
+  - {from: Observation, from_field: normalized_concept, to: Concept, to_field: concept_id, cardinality: many_to_one}
+  - {from: Observation, from_field: normalized_unit, to: Unit, to_field: unit_id, cardinality: many_to_one}
+  - {from: ObservationComponent, from_field: observation_id, to: Observation, to_field: observation_id, cardinality: many_to_one}
+  - {from: ObservationComponent, from_field: normalized_unit, to: Unit, to_field: unit_id, cardinality: many_to_one}
+  - {from: ClinicalAssertion, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: ClinicalAssertion, from_field: encounter_id, to: Encounter, to_field: encounter_id, cardinality: many_to_one}
+  - {from: ClinicalAssertion, from_field: normalized_concept, to: Concept, to_field: concept_id, cardinality: many_to_one}
+  - {from: Intervention, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: Intervention, from_field: encounter_id, to: Encounter, to_field: encounter_id, cardinality: many_to_one}
+  - {from: Intervention, from_field: normalized_concept, to: Concept, to_field: concept_id, cardinality: many_to_one}
+  - {from: Procedure, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: Procedure, from_field: encounter_id, to: Encounter, to_field: encounter_id, cardinality: many_to_one}
+  - {from: Procedure, from_field: normalized_concept, to: Concept, to_field: concept_id, cardinality: many_to_one}
+  - {from: ClinicalDocument, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: ClinicalDocument, from_field: encounter_id, to: Encounter, to_field: encounter_id, cardinality: many_to_one}
+  - {from: ScenarioBranch, from_field: scenario_id, to: Scenario, to_field: scenario_id, cardinality: many_to_one}
+  - {from: ScenarioBranch, from_field: parent_branch_id, to: ScenarioBranch, to_field: branch_id, cardinality: many_to_one}
+  - {from: ScenarioBranch, from_field: baseline_snapshot_id, to: EvidenceStateSnapshot, to_field: snapshot_id, cardinality: many_to_one}
+  - {from: ScenarioBranch, from_field: checkpoint_id, to: ScenarioCheckpoint, to_field: checkpoint_id, cardinality: many_to_one}
+  - {from: ScenarioBranch, from_field: forked_from_event_id, to: ScenarioEvent, to_field: scenario_event_id, cardinality: many_to_one}
+  - {from: ScenarioIntervention, from_field: branch_id, to: ScenarioBranch, to_field: branch_id, cardinality: many_to_one}
+  - {from: ScenarioIntervention, from_field: concept_id, to: Concept, to_field: concept_id, cardinality: many_to_one}
+  - {from: ScenarioIntervention, from_field: based_on_evidence_intervention_id, to: Intervention, to_field: intervention_id, cardinality: many_to_one}
+  - {from: ScenarioEvent, from_field: branch_id, to: ScenarioBranch, to_field: branch_id, cardinality: many_to_one}
+  - {from: ScenarioEvent, from_field: scenario_intervention_id, to: ScenarioIntervention, to_field: scenario_intervention_id, cardinality: many_to_one}
+  - {from: ScenarioEvent, from_field: replaces_event_id, to: ScenarioEvent, to_field: scenario_event_id, cardinality: many_to_one}
+  - {from: SimulationRun, from_field: scenario_id, to: Scenario, to_field: scenario_id, cardinality: many_to_one}
+  - {from: SimulationRun, from_field: branch_id, to: ScenarioBranch, to_field: branch_id, cardinality: many_to_one}
+  - {from: SimulationRun, from_field: input_evidence_snapshot_id, to: EvidenceStateSnapshot, to_field: snapshot_id, cardinality: many_to_one}
+  - {from: SimulationRun, from_field: input_checkpoint_id, to: ScenarioCheckpoint, to_field: checkpoint_id, cardinality: many_to_one}
+  - {from: EvidenceStateSnapshot, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: StateSnapshotComponent, from_field: snapshot_id, to: EvidenceStateSnapshot, to_field: snapshot_id, cardinality: many_to_one}
+  - {from: StateSnapshotComponent, from_field: concept_id, to: Concept, to_field: concept_id, cardinality: many_to_one}
+  - {from: StateSnapshotComponent, from_field: normalized_unit, to: Unit, to_field: unit_id, cardinality: many_to_one}
+  - {from: ScenarioCheckpoint, from_field: simulation_run_id, to: SimulationRun, to_field: simulation_run_id, cardinality: many_to_one}
+  - {from: ScenarioCheckpoint, from_field: branch_id, to: ScenarioBranch, to_field: branch_id, cardinality: many_to_one}
+  - {from: ScenarioCheckpoint, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: ScenarioCheckpointState, from_field: checkpoint_id, to: ScenarioCheckpoint, to_field: checkpoint_id, cardinality: many_to_one}
+  - {from: ScenarioCheckpointState, from_field: predicted_state_id, to: PredictedState, to_field: predicted_state_id, cardinality: many_to_one}
+  - {from: PredictedState, from_field: simulation_run_id, to: SimulationRun, to_field: simulation_run_id, cardinality: many_to_one}
+  - {from: PredictedState, from_field: branch_id, to: ScenarioBranch, to_field: branch_id, cardinality: many_to_one}
+  - {from: PredictedState, from_field: subject_id, to: Subject, to_field: subject_id, cardinality: many_to_one}
+  - {from: PredictedState, from_field: concept_id, to: Concept, to_field: concept_id, cardinality: many_to_one}
+  - {from: PredictedState, from_field: normalized_unit, to: Unit, to_field: unit_id, cardinality: many_to_one}
+
+forbidden_in_design_phase:
+  - canonical_database
+  - sql_ddl
+  - etl_execution
+  - row_migration
+  - global_patient_id
+  - cross_source_subject_merge

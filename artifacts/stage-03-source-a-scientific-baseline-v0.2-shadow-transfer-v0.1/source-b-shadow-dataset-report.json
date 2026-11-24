@@ -1,0 +1,33 @@
+{
+  "version": "0.2",
+  "source_b_shadow_dataset_status": "BUILT",
+  "stratum": {
+    "source_system": "kgz_raw",
+    "source_catalog_code": "53",
+    "raw_unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+    "provisional": true
+  },
+  "n_numeric_components": 19860,
+  "n_subjects_with_pairs": 3217,
+  "n_strict_consecutive_pairs": 6065,
+  "all_horizons_positive": true,
+  "source_a_subjects_in_b_pairs": 0,
+  "identity_merge": false,
+  "horizon_histogram": {
+    "lt_1d": 7,
+    "1_7d": 10,
+    "7_30d": 37,
+    "30_90d": 1960,
+    "90_365d": 3379,
+    "365_730d": 494,
+    "gt_730d": 178
+  },
+  "exclusions": {
+    "non_numeric": 0,
+    "header_only_excluded": 0,
+    "undefined_unit": 0,
+    "wrong_unit": 0,
+    "horizon_le_0": 1360,
+    "single_point_subjects": 8640
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "$id": "uhbse/stage-05/gate-1a/decision-record/0.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "affects_feedback": {
+      "type": "boolean"
+    },
+    "affects_identity": {
+      "type": "boolean"
+    },
+    "affects_intake": {
+      "type": "boolean"
+    },
+    "attestation": {
+      "enum": [
+        "accepted",
+        "rejected",
+        "insufficient"
+      ]
+    },
+    "basis": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "closes_question": {
+      "type": "boolean"
+    },
+    "decided_at": {
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*Z$",
+      "type": "string"
+    },
+    "decision": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "decision_schema_version": {
+      "const": "0.1"
+    },
+    "evidence_applicability": {
+      "enum": [
+        "ADDRESSES_QUESTION",
+        "PARTIAL",
+        "DOES_NOT_ADDRESS_QUESTION",
+        "NO_DECISION"
+      ]
+    },
+    "evidence_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "field_path": {
+      "minLength": 3,
+      "type": "string"
+    },
+    "proposition": {
+      "minLength": 3,
+      "type": "string"
+    },
+    "question_id": {
+      "minLength": 3,
+      "type": "string"
+    },
+    "reviewer_digest": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "role": {
+      "minLength": 2,
+      "type": "string"
+    },
+    "source_system": {
+      "enum": [
+        "magerya_api",
+        "kgz_raw"
+      ]
+    }
+  },
+  "required": [
+    "question_id",
+    "source_system",
+    "field_path",
+    "proposition",
+    "decision",
+    "role",
+    "reviewer_digest",
+    "decided_at",
+    "basis",
+    "evidence_sha256",
+    "evidence_applicability",
+    "attestation",
+    "closes_question",
+    "affects_feedback",
+    "affects_identity",
+    "affects_intake",
+    "decision_schema_version"
+  ],
+  "type": "object"
+}

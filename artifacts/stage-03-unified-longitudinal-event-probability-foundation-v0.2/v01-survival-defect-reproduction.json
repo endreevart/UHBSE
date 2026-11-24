@@ -1,0 +1,42 @@
+{
+  "version": "0.2",
+  "V01_SURVIVAL_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "defects": [
+    {
+      "id": "censor_fixed_90_days",
+      "reproduced": true,
+      "code_marker": "window = 90.0"
+    },
+    {
+      "id": "excursion_nearest_target_as_censor_not_first_future_search",
+      "reproduced": true,
+      "note": "Each target row is a landmark; non-excursion nearest result coded event=0 without searching later observations"
+    },
+    {
+      "id": "bootstrap_by_rows_not_subjects",
+      "reproduced": true
+    },
+    {
+      "id": "km_tied_time_sequential_not_grouped",
+      "reproduced": true,
+      "note": "No aggregation of d_i/n_i at tied timestamps"
+    },
+    {
+      "id": "m1_mean_difference_not_discrete_hazard",
+      "reproduced": true
+    },
+    {
+      "id": "sigmoid_untrained_uncalibrated",
+      "reproduced": true
+    },
+    {
+      "id": "brier_excludes_censored_no_ipcw",
+      "reproduced": true
+    },
+    {
+      "id": "excursions_aggregated_across_outcomes",
+      "reproduced": true
+    }
+  ],
+  "ok": true
+}

@@ -1,0 +1,55 @@
+{
+  "version": "0.1",
+  "PRIOR_M2_IMPLEMENTATION_STATUS": "REAL_TECHNICAL_PROTOTYPE",
+  "PRIOR_M2_FEATURE_CONTRACT_STATUS": "NOT_ACCEPTED_MIXED_OUTCOME_CHANNEL",
+  "PRIOR_M2_COMPARATOR_STATUS": "CORRECTION_REQUIRED",
+  "PRIOR_M2_FOUNDATION_ACCEPTANCE_STATUS": "NOT_ACCEPTED",
+  "defects": [
+    {
+      "id": "mixed_persistence_channel_first_available",
+      "code_marker": true,
+      "reproduced": true
+    },
+    {
+      "id": "mixed_analyte_unit_in_single_feature_channel",
+      "defect": "single persistence_value feature channel shared across outcomes",
+      "reproduced": true
+    },
+    {
+      "id": "comparator_persistence_semantics_differ_from_train",
+      "reproduced": true
+    },
+    {
+      "id": "comparator_always_m1_not_active_provider",
+      "reproduced": true,
+      "note": "comparator block computes pred1 via Ridge provider weights always",
+      "code_has_ridge_only_comparator": true
+    },
+    {
+      "id": "m2_better_than_m1_count",
+      "n_outcomes_compared": 24,
+      "n_m2_better": 1,
+      "expected_about": 1,
+      "reproduced": true,
+      "observed": 1
+    },
+    {
+      "id": "m2_train_subsample_2500",
+      "code_marker": true,
+      "reproduced": true,
+      "note": "deterministic subsample from full train state design matrix"
+    },
+    {
+      "id": "m2_test_micro_mae_not_subject_macro_comparator",
+      "sample_keys": [
+        "micro_mae",
+        "n"
+      ],
+      "has_micro_mae": true,
+      "has_subject_macro": false,
+      "reproduced": true
+    }
+  ],
+  "m0_m1_and_state_dataset_remain_valid": true,
+  "ok": true
+}

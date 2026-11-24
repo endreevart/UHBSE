@@ -1,0 +1,527 @@
+{
+  "version": "0.2.1.1",
+  "OBSERVATION_PROCESS_LANDMARK_DATASET_STATUS": "BUILT",
+  "OUTCOME_EXCURSION_LANDMARK_DATASET_STATUS": "BUILT",
+  "OUTCOME_EXCURSION_TIMESTAMP_LINEAGE_STATUS": "EXACT_PROVENANCE",
+  "TARGET_EVENT_REUSE_ACCOUNTING_STATUS": "PUBLISHED",
+  "LANDMARK_TEMPORAL_LEAKAGE_STATUS": "PASS",
+  "CENSORING_CONTRACT_STATUS": "PASS",
+  "primary_observation_endpoint": "TIME_TO_NEXT_LAB_PANEL",
+  "observation_endpoints": {
+    "TIME_TO_NEXT_LAB_PANEL": {
+      "file": "landmark_lab_panel.parquet",
+      "n": 73792,
+      "exclusions": {
+        "missing_cutoff": 14
+      },
+      "accounting": {
+        "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+        "n_landmarks": 73792,
+        "n_subjects": 24023,
+        "subjects_with_repeated_landmarks": 14474,
+        "repeated_landmarks_explicit": true,
+        "bootstrap_must_resample_subjects_or_overlap_groups": true,
+        "by_source": {
+          "A": {
+            "n_landmarks": 49574,
+            "n_subjects": 12634,
+            "events": 48714,
+            "censored": 860,
+            "event_rate": 0.9826521967160204,
+            "median_followup": 12.497374490243057,
+            "followup_q25": 3.452400661157408,
+            "followup_q75": 42.0,
+            "by_role": {
+              "train": {
+                "n_landmarks": 34758,
+                "n_subjects": 8888,
+                "events": 34138,
+                "censored": 620,
+                "event_rate": 0.9821623798837678
+              },
+              "validation": {
+                "n_landmarks": 7449,
+                "n_subjects": 1851,
+                "events": 7323,
+                "censored": 126,
+                "event_rate": 0.9830849778493758
+              },
+              "test": {
+                "n_landmarks": 7367,
+                "n_subjects": 1895,
+                "events": 7253,
+                "censored": 114,
+                "event_rate": 0.9845255870775078
+              }
+            }
+          },
+          "B": {
+            "n_landmarks": 24218,
+            "n_subjects": 11389,
+            "events": 22371,
+            "censored": 1847,
+            "event_rate": 0.9237344124205137,
+            "median_followup": 102.29123842592593,
+            "followup_q25": 78.40228009259259,
+            "followup_q75": 157.1022800925926,
+            "by_role": {
+              "train": {
+                "n_landmarks": 17113,
+                "n_subjects": 7958,
+                "events": 15829,
+                "censored": 1284,
+                "event_rate": 0.9249693215683983
+              },
+              "validation": {
+                "n_landmarks": 3432,
+                "n_subjects": 1683,
+                "events": 3150,
+                "censored": 282,
+                "event_rate": 0.9178321678321678
+              },
+              "test": {
+                "n_landmarks": 3673,
+                "n_subjects": 1748,
+                "events": 3392,
+                "censored": 281,
+                "event_rate": 0.9234957800163354
+              }
+            }
+          }
+        },
+        "unexplained": 0
+      },
+      "split_leakage": {
+        "subject_leak": 0,
+        "group_leak": 0
+      },
+      "is_primary": true,
+      "diagnostic_only": false
+    },
+    "TIME_TO_NEXT_ENCOUNTER": {
+      "file": "landmark_encounter.parquet",
+      "n": 73792,
+      "exclusions": {
+        "missing_cutoff": 14
+      },
+      "accounting": {
+        "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+        "n_landmarks": 73792,
+        "n_subjects": 24023,
+        "subjects_with_repeated_landmarks": 14474,
+        "repeated_landmarks_explicit": true,
+        "bootstrap_must_resample_subjects_or_overlap_groups": true,
+        "by_source": {
+          "A": {
+            "n_landmarks": 49574,
+            "n_subjects": 12634,
+            "events": 48393,
+            "censored": 1181,
+            "event_rate": 0.9761770282809538,
+            "median_followup": 9.752944014618055,
+            "followup_q25": 6.133171296296296e-06,
+            "followup_q75": 32.66582831630787,
+            "by_role": {
+              "train": {
+                "n_landmarks": 34758,
+                "n_subjects": 8888,
+                "events": 33906,
+                "censored": 852,
+                "event_rate": 0.9754876575176937
+              },
+              "validation": {
+                "n_landmarks": 7449,
+                "n_subjects": 1851,
+                "events": 7275,
+                "censored": 174,
+                "event_rate": 0.9766411598872332
+              },
+              "test": {
+                "n_landmarks": 7367,
+                "n_subjects": 1895,
+                "events": 7212,
+                "censored": 155,
+                "event_rate": 0.9789602280439799
+              }
+            }
+          },
+          "B": {
+            "n_landmarks": 24218,
+            "n_subjects": 11389,
+            "events": 23736,
+            "censored": 482,
+            "event_rate": 0.9800974481790404,
+            "median_followup": 4.604479166666667,
+            "followup_q25": 1.9054976851851853,
+            "followup_q75": 14.43050925925926,
+            "by_role": {
+              "train": {
+                "n_landmarks": 17113,
+                "n_subjects": 7958,
+                "events": 16775,
+                "censored": 338,
+                "event_rate": 0.9802489335592824
+              },
+              "validation": {
+                "n_landmarks": 3432,
+                "n_subjects": 1683,
+                "events": 3354,
+                "censored": 78,
+                "event_rate": 0.9772727272727273
+              },
+              "test": {
+                "n_landmarks": 3673,
+                "n_subjects": 1748,
+                "events": 3607,
+                "censored": 66,
+                "event_rate": 0.9820310372992105
+              }
+            }
+          }
+        },
+        "unexplained": 0
+      },
+      "split_leakage": {
+        "subject_leak": 0,
+        "group_leak": 0
+      },
+      "is_primary": false,
+      "diagnostic_only": false
+    },
+    "TIME_TO_NEXT_RECORDED_EVENT": {
+      "file": "landmark_recorded_event_diagnostic.parquet",
+      "n": 73792,
+      "exclusions": {
+        "missing_cutoff": 14
+      },
+      "accounting": {
+        "endpoint": "TIME_TO_NEXT_RECORDED_EVENT",
+        "n_landmarks": 73792,
+        "n_subjects": 24023,
+        "subjects_with_repeated_landmarks": 14474,
+        "repeated_landmarks_explicit": true,
+        "bootstrap_must_resample_subjects_or_overlap_groups": true,
+        "by_source": {
+          "A": {
+            "n_landmarks": 49574,
+            "n_subjects": 12634,
+            "events": 49353,
+            "censored": 221,
+            "event_rate": 0.9955420179933029,
+            "median_followup": 4.242304211226852,
+            "followup_q25": 3.2225115740740738e-06,
+            "followup_q75": 16.0,
+            "by_role": {
+              "train": {
+                "n_landmarks": 34758,
+                "n_subjects": 8888,
+                "events": 34601,
+                "censored": 157,
+                "event_rate": 0.9954830542608896
+              },
+              "validation": {
+                "n_landmarks": 7449,
+                "n_subjects": 1851,
+                "events": 7414,
+                "censored": 35,
+                "event_rate": 0.9953013827359377
+              },
+              "test": {
+                "n_landmarks": 7367,
+                "n_subjects": 1895,
+                "events": 7338,
+                "censored": 29,
+                "event_rate": 0.9960635265372607
+              }
+            }
+          },
+          "B": {
+            "n_landmarks": 24218,
+            "n_subjects": 11389,
+            "events": 23781,
+            "censored": 437,
+            "event_rate": 0.9819555702370137,
+            "median_followup": 3.9247337962962963,
+            "followup_q25": 1.8075347222222222,
+            "followup_q75": 10.812314814814815,
+            "by_role": {
+              "train": {
+                "n_landmarks": 17113,
+                "n_subjects": 7958,
+                "events": 16806,
+                "censored": 307,
+                "event_rate": 0.9820604219014784
+              },
+              "validation": {
+                "n_landmarks": 3432,
+                "n_subjects": 1683,
+                "events": 3361,
+                "censored": 71,
+                "event_rate": 0.9793123543123543
+              },
+              "test": {
+                "n_landmarks": 3673,
+                "n_subjects": 1748,
+                "events": 3614,
+                "censored": 59,
+                "event_rate": 0.9839368363735366
+              }
+            }
+          }
+        },
+        "unexplained": 0
+      },
+      "split_leakage": {
+        "subject_leak": 0,
+        "group_leak": 0
+      },
+      "is_primary": false,
+      "diagnostic_only": true
+    }
+  },
+  "feature_order": [
+    "longitudinal_age_days",
+    "days_since_last_event",
+    "n_events_before",
+    "n_obs_before",
+    "n_encounters_before",
+    "n_medications_before",
+    "n_recommendations_before",
+    "n_documents_before",
+    "n_procedures_before",
+    "source_is_a",
+    "source_is_b",
+    "missingness_lab",
+    "has_lab_history",
+    "has_med_history",
+    "cutoff_ordinal"
+  ],
+  "exclusions_excursion": {
+    "no_pre_t0_outcome_history": 141269,
+    "censored_at_last_recorded_measurement": 105845,
+    "no_post_t0_ascertainment_opportunity": 38771,
+    "missing_cutoff": 14
+  },
+  "excursion_accounting": {
+    "endpoint": "TIME_TO_FIRST_RECORDED_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+    "n_landmarks": 115128,
+    "n_subjects": 9014,
+    "subjects_with_repeated_landmarks": 8975,
+    "repeated_landmarks_explicit": true,
+    "bootstrap_must_resample_subjects_or_overlap_groups": true,
+    "by_source": {
+      "A": {
+        "n_landmarks": 69337,
+        "n_subjects": 3890,
+        "events": 5475,
+        "censored": 63862,
+        "event_rate": 0.0789621702698415,
+        "median_followup": 144.759791454294,
+        "followup_q25": 66.73553830383102,
+        "followup_q75": 254.2380872607639,
+        "by_role": {
+          "train": {
+            "n_landmarks": 48769,
+            "n_subjects": 2753,
+            "events": 3675,
+            "censored": 45094,
+            "event_rate": 0.07535524616047079
+          },
+          "validation": {
+            "n_landmarks": 10500,
+            "n_subjects": 556,
+            "events": 816,
+            "censored": 9684,
+            "event_rate": 0.07771428571428571
+          },
+          "test": {
+            "n_landmarks": 10068,
+            "n_subjects": 581,
+            "events": 984,
+            "censored": 9084,
+            "event_rate": 0.09773539928486293
+          }
+        }
+      },
+      "B": {
+        "n_landmarks": 45791,
+        "n_subjects": 5124,
+        "events": 3808,
+        "censored": 41983,
+        "event_rate": 0.0831604463759254,
+        "median_followup": 182.60467592592593,
+        "followup_q25": 104.89741898148148,
+        "followup_q75": 278.1845949074074,
+        "by_role": {
+          "train": {
+            "n_landmarks": 32716,
+            "n_subjects": 3618,
+            "events": 2664,
+            "censored": 30052,
+            "event_rate": 0.08142804743856218
+          },
+          "validation": {
+            "n_landmarks": 6200,
+            "n_subjects": 725,
+            "events": 528,
+            "censored": 5672,
+            "event_rate": 0.08516129032258064
+          },
+          "test": {
+            "n_landmarks": 6875,
+            "n_subjects": 781,
+            "events": 616,
+            "censored": 6259,
+            "event_rate": 0.0896
+          }
+        }
+      }
+    },
+    "unexplained": 0
+  },
+  "excursion_per_outcome": {
+    "A::Лимфоциты::%": {
+      "n": 17636,
+      "events": 1485,
+      "censored": 16151,
+      "source_system": "magerya_api"
+    },
+    "A::Моноциты::%": {
+      "n": 17398,
+      "events": 1373,
+      "censored": 16025,
+      "source_system": "magerya_api"
+    },
+    "A::Эозинофилы::%": {
+      "n": 17156,
+      "events": 1166,
+      "censored": 15990,
+      "source_system": "magerya_api"
+    },
+    "A::Нейтрофилы::%": {
+      "n": 17147,
+      "events": 1451,
+      "censored": 15696,
+      "source_system": "magerya_api"
+    },
+    "B::mm_1004::%": {
+      "n": 11685,
+      "events": 1033,
+      "censored": 10652,
+      "source_system": "kgz_raw"
+    },
+    "B::33::ммоль/л": {
+      "n": 11668,
+      "events": 866,
+      "censored": 10802,
+      "source_system": "kgz_raw"
+    },
+    "B::30::ммоль/л": {
+      "n": 11618,
+      "events": 1117,
+      "censored": 10501,
+      "source_system": "kgz_raw"
+    },
+    "B::mm_1002::%": {
+      "n": 10820,
+      "events": 792,
+      "censored": 10028,
+      "source_system": "kgz_raw"
+    }
+  },
+  "excursion_feature_order": [
+    "longitudinal_age_days",
+    "days_since_last_event",
+    "n_events_before",
+    "n_obs_before",
+    "n_encounters_before",
+    "n_medications_before",
+    "n_recommendations_before",
+    "n_documents_before",
+    "n_procedures_before",
+    "source_is_a",
+    "source_is_b",
+    "missingness_lab",
+    "has_lab_history",
+    "has_med_history",
+    "cutoff_ordinal",
+    "outcome_last_value",
+    "outcome_last_value_train_z",
+    "days_since_last_outcome",
+    "n_prior_outcome_measurements",
+    "outcome_prev_value",
+    "outcome_delta_t0",
+    "outcome_history_mask"
+  ],
+  "excursion_endpoint": "TIME_TO_FIRST_RECORDED_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+  "recorded_laboratory_excursion_not_latent_biology": true,
+  "observation_process_coupling": "event is first recorded source-specific excursion after t0; absence of subsequent measurement is not proof of biological non-excursion; censoring is at last post-t0 recorded measurement of that outcome",
+  "no_pre_t0_outcome_history": {
+    "n_landmarks_excluded": 141269,
+    "n_subjects_A": 12634,
+    "n_subjects_B": 11388
+  },
+  "no_post_t0_ascertainment_opportunity": {
+    "n_landmarks_excluded": 38771,
+    "n_subjects_A": 4878,
+    "n_subjects_B": 1350
+  },
+  "train_only_outcome_last_value_z": {
+    "A::Нейтрофилы::%": {
+      "mean": 53.159059623517706,
+      "sd": 10.508980670427308
+    },
+    "B::mm_1002::%": {
+      "mean": 2.9090887340301976,
+      "sd": 2.4528125892493153
+    },
+    "B::33::ммоль/л": {
+      "mean": 3.3129643501262476,
+      "sd": 0.9985940224154765
+    },
+    "A::Лимфоциты::%": {
+      "mean": 35.94138764497423,
+      "sd": 9.377998120795594
+    },
+    "A::Моноциты::%": {
+      "mean": 7.328495915032679,
+      "sd": 2.1809872930324317
+    },
+    "A::Эозинофилы::%": {
+      "mean": 2.6546308279409323,
+      "sd": 2.1185096980891984
+    },
+    "B::mm_1004::%": {
+      "mean": 36.52679313232831,
+      "sd": 8.664247730142556
+    },
+    "B::30::ммоль/л": {
+      "mean": 0.8772184032802702,
+      "sd": 0.5143076868026106
+    }
+  },
+  "source_a_excursion_landmarks": 69337,
+  "source_a_excursion_forced": false,
+  "split_leakage_excursion": {
+    "subject_leak": 0,
+    "group_leak": 0
+  },
+  "n_states_with_cutoff": 73792,
+  "target_timestamp_join": {
+    "n_targets": 1406156,
+    "n_exact": 1406076,
+    "n_missing_excluded": 80,
+    "missing_targets_excluded_not_used": true
+  },
+  "reuse": {
+    "unique_trigger_events": 3276,
+    "reused_trigger_events": 1899,
+    "maximum_reuse": 48,
+    "n_event_landmarks": 9283,
+    "unique_searched_observations": 20824,
+    "unexplained": 0,
+    "TARGET_EVENT_REUSE_ACCOUNTING_STATUS": "PUBLISHED"
+  },
+  "approximate_reconstructed_timestamp_accepted": false,
+  "ok": true
+}

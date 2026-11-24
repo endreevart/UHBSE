@@ -1,0 +1,7 @@
+{
+  "suite": "unit/static",
+  "literal_command": "uv run --frozen pytest tests/test_unified_source_expansion_v0121_unit.py -q",
+  "exit_code": 0,
+  "output_tail": "..................                                                       [100%]\n=============================== warnings summary ===============================\n.venv/lib/python3.13/site-packages/_pytest/cacheprovider.py:469\n  /Volumes/Siska/DEVELOP/Human simulator/.venv/lib/python3.13/site-packages/_pytest/cacheprovider.py:469: PytestCacheWarning: cache could not write path /Volumes/Siska/DEVELOP/Human simulator/.pytest_cache/v/cache/nodeids: [Errno 1] Operation not permitted: '/Volumes/Siska/DEVELOP/Human simulator/.pytest_cache/v/cache/nodeids'\n    config.cache.set(\"cache/nodeids\", sorted(self.cached_nodeids))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n18 passed, 1 warning in 0.10s\n",
+  "status": "PASS"
+}

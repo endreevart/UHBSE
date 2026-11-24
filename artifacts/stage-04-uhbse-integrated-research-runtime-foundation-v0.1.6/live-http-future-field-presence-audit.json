@@ -1,0 +1,55 @@
+{
+  "FALSEY_FUTURE_FIELD_REJECTION_STATUS": "PASS",
+  "FORBIDDEN_REQUEST_MODEL_EXECUTION_AUDIT_STATUS": "PASS",
+  "HTTP_EXPLICIT_FIELD_PRESENCE_STATUS": "PASS",
+  "HTTP_FROZEN_ORDINARY_FUTURE_FIELD_MATRIX_STATUS": "PASS",
+  "HTTP_PRESENCE_SCENARIO_IDENTITY_STATUS": "PASS",
+  "frozen_controls": {
+    "frozen_provider_available": true,
+    "ordinary_adapter_abstention_control": {
+      "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+      "http_status": 422,
+      "infer_call_delta": 0,
+      "model_execution_delta": 0,
+      "ok": true,
+      "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+      "residual_call_delta": 0,
+      "status": "ABSTAIN"
+    },
+    "ordinary_future_field_pre_adapter": {
+      "http_status": 400,
+      "infer_call_delta": 0,
+      "model_execution_delta": 0,
+      "ok": true,
+      "reason": "FUTURE_INFORMATION_LEAKAGE",
+      "residual_call_delta": 0,
+      "status": "FAIL"
+    },
+    "reference_probe_control": {
+      "http_status": 200,
+      "infer_call_delta": 1,
+      "model_execution_delta": 1,
+      "ok": true,
+      "reason": null,
+      "residual_call_delta": 0,
+      "status": "OK"
+    }
+  },
+  "infer_calls_on_forbidden": 0,
+  "model_execution_calls_on_forbidden": 0,
+  "n_cases": 315,
+  "n_pass": 315,
+  "ok": true,
+  "residual_calls_on_allowed_false_flag_control": 64,
+  "residual_calls_on_allowed_missing_control": 64,
+  "residual_calls_on_forbidden": 0,
+  "scenario_classes": [
+    "frozen_ordinary_lep",
+    "frozen_reference_probe",
+    "nhr_forecast",
+    "nhr_joint",
+    "nhr_replay",
+    "nhr_rollout",
+    "synthetic_ordinary_lep"
+  ]
+}

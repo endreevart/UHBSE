@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "RECURSIVE_RUNTIME_COMPOSITE_IDENTITY_STATUS": "MISSING_INCREMENT_PAYLOAD",
+  "engine": {
+    "validates_requested_cell_then_runs_increment": true,
+    "composite_increment_payload_in_identity": true,
+    "shadow_direct_not_recursive_route": true,
+    "eligibility_validation_selected_not_recursive": true
+  },
+  "evaluation": {
+    "single_stochastic_endpoint_for_mae": true,
+    "path_quantiles_without_empirical_path_coverage": true,
+    "direct_coverage_used_for_recursive_gate": true,
+    "recursive_crps_absent": true,
+    "error_growth_imported_not_applied": true,
+    "rng_uses_builtin_hash": true
+  },
+  "ok": true
+}

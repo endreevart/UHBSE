@@ -1,0 +1,83 @@
+{
+  "version": "0.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "baseline_before": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+  "baseline_after": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+  "baseline_before_equals_after": true,
+  "gs011_sha256": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d",
+  "members": 540,
+  "indexed_members": 539,
+  "prior_mapping_status_counts": {
+    "UNKNOWN": 90,
+    "HYPOTHESIS": 8
+  },
+  "checks": [
+    {
+      "name": "privacy_xs_zip_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "privacy_xs_sha256",
+      "ok": true,
+      "detail": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231"
+    },
+    {
+      "name": "privacy_xs_sidecar",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "attestation_pass",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "members_indexed_540_539",
+      "ok": true,
+      "detail": {
+        "members": 540,
+        "indexed": 539
+      }
+    },
+    {
+      "name": "zip_member_count",
+      "ok": true,
+      "detail": 540
+    },
+    {
+      "name": "REVIEW_INDEX",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "evidence_manifest",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "gs011_unchanged",
+      "ok": true,
+      "detail": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+    },
+    {
+      "name": "prior_accepted_zero",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "prior_mapping_rows_98",
+      "ok": true,
+      "detail": 98
+    },
+    {
+      "name": "prior_unknown_90_hypothesis_8",
+      "ok": true,
+      "detail": {
+        "UNKNOWN": 90,
+        "HYPOTHESIS": 8
+      }
+    }
+  ],
+  "ok": true
+}

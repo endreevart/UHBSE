@@ -1,0 +1,88 @@
+{
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "PRIOR_ZIP_PHYSICAL_REHASH_STATUS": "PASS_PUBLISHER_WORKSPACE",
+  "PRIOR_ZIP_REHASH_CLEAN_EXTRACTION_STATUS": "NOT_RUN_PRIOR_BYTES_NOT_PACKED",
+  "independent_clean_extraction_rehash": false,
+  "naming": {
+    "STAGE_NAMING_AUTHORITY_STATUS": "PASS_PUBLISHER_WORKSPACE",
+    "conflicts": [],
+    "ok": true,
+    "scope": "publisher_workspace_contract_value"
+  },
+  "note": "Prior ZIP bytes are not in this tree. Status repeats the publisher-workspace snapshot and does not rehash it.",
+  "ok": true,
+  "publisher_workspace_prior_zip_rehash": {
+    "PRIOR_ZIP_PHYSICAL_REHASH_STATUS": "PASS_PUBLISHER_WORKSPACE",
+    "independent_clean_extraction_rehash": false,
+    "scope": "publisher_workspace",
+    "v01_review_zip": {
+      "crc_ok": true,
+      "duplicate_members": false,
+      "expected_sha256": "6605a4b643ea68ae893d6b52d0a0a196e1e2ad2ec505adad5691a41df70cf992",
+      "indexed_expected": 1024,
+      "members": 1025,
+      "members_ok": true,
+      "ok": true,
+      "path": "stage-05-intervention-response-readiness-and-exposure-semantics-v0.1-review.zip",
+      "present": true,
+      "sha256": "6605a4b643ea68ae893d6b52d0a0a196e1e2ad2ec505adad5691a41df70cf992"
+    },
+    "zips": {
+      "irr_v01": {
+        "expected_sha256": "62e3e46d12b6098b631c1d71e47e3c9ad26c49554521b080b63c831dd2fce93a",
+        "ok": true,
+        "path": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1-review.zip",
+        "present": true,
+        "sha256": "62e3e46d12b6098b631c1d71e47e3c9ad26c49554521b080b63c831dd2fce93a"
+      },
+      "irr_v011": {
+        "expected_sha256": "e940199fdbf978241ad2dc1db22d7def015942a5d42f82cb842360d094fbeeb6",
+        "ok": true,
+        "path": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.1-review.zip",
+        "present": true,
+        "sha256": "e940199fdbf978241ad2dc1db22d7def015942a5d42f82cb842360d094fbeeb6"
+      },
+      "irr_v012": {
+        "expected_sha256": "2e0e7e8efa6b563c4363b34e4b040738c7d8e58de864c1ee83a819cd57ead7e3",
+        "ok": true,
+        "path": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.2-review.zip",
+        "present": true,
+        "sha256": "2e0e7e8efa6b563c4363b34e4b040738c7d8e58de864c1ee83a819cd57ead7e3"
+      },
+      "irr_v013": {
+        "expected_sha256": "351febd77c018dacf1f04117d2a9a11d6022749d8c34b9f1f4a0c3514eaafa65",
+        "ok": true,
+        "path": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.3-review.zip",
+        "present": true,
+        "sha256": "351febd77c018dacf1f04117d2a9a11d6022749d8c34b9f1f4a0c3514eaafa65"
+      },
+      "irr_v014": {
+        "expected_sha256": "1c3d8ed10c069fb46f75fbd5052b7cb398e6f4697be34e24c9e3e3e5bd15ebf7",
+        "ok": true,
+        "path": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.4-review.zip",
+        "present": true,
+        "sha256": "1c3d8ed10c069fb46f75fbd5052b7cb398e6f4697be34e24c9e3e3e5bd15ebf7"
+      },
+      "irr_v015": {
+        "expected_sha256": "71b30884b2ab527af41df2edd828a31b3ac1f31a1da48fde0872d0c2f2ca5300",
+        "ok": true,
+        "path": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.5-review.zip",
+        "present": true,
+        "sha256": "71b30884b2ab527af41df2edd828a31b3ac1f31a1da48fde0872d0c2f2ca5300"
+      },
+      "irr_v016": {
+        "crc_ok": true,
+        "duplicate_members": false,
+        "expected_sha256": "3c856824a2856fe5b85c4186dd2c0134954e5c6930df2ab655a784ffaa38be4a",
+        "indexed_expected": 1022,
+        "members": 1023,
+        "members_ok": true,
+        "ok": true,
+        "path": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.6-review.zip",
+        "present": true,
+        "sha256": "3c856824a2856fe5b85c4186dd2c0134954e5c6930df2ab655a784ffaa38be4a"
+      }
+    }
+  },
+  "rehash_performed_this_run": false
+}

@@ -1,0 +1,268 @@
+{
+  "version": "0.3.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "prior_sha_before": {
+    "v03": "d78d23bbd8a3984375bcc3891cc2f7f59b17c2c0fb4bdc4f19a92aa3e405eb73",
+    "v0211": "3214b5414f533e59bba620ed8bcfa3fd23e7197de557583a0c0cb257e9dc9066",
+    "v021": "d10c0a0202a9590d41105e6e56ec406980076a30c953535300d8277212fe5c13",
+    "v02": "5e2ebf7a45b5dec207d333e515c635a5323074e8b9b01f774b51386304f0d99d",
+    "v011": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0",
+    "v01": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f",
+    "privacy": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+    "gs011": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+  },
+  "prior_sha_after": {
+    "v03": "d78d23bbd8a3984375bcc3891cc2f7f59b17c2c0fb4bdc4f19a92aa3e405eb73",
+    "v0211": "3214b5414f533e59bba620ed8bcfa3fd23e7197de557583a0c0cb257e9dc9066",
+    "v021": "d10c0a0202a9590d41105e6e56ec406980076a30c953535300d8277212fe5c13",
+    "v02": "5e2ebf7a45b5dec207d333e515c635a5323074e8b9b01f774b51386304f0d99d",
+    "v011": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0",
+    "v01": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f",
+    "privacy": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+    "gs011": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+  },
+  "v03": {
+    "label": "v03",
+    "sha256": "d78d23bbd8a3984375bcc3891cc2f7f59b17c2c0fb4bdc4f19a92aa3e405eb73",
+    "members": 615,
+    "indexed": 614,
+    "cache_entries": 0,
+    "checks": [
+      {
+        "name": "v03_sha",
+        "ok": true,
+        "detail": "d78d23bbd8a3984375bcc3891cc2f7f59b17c2c0fb4bdc4f19a92aa3e405eb73"
+      },
+      {
+        "name": "v03_review_index",
+        "ok": true,
+        "detail": {
+          "ok": true,
+          "members": 615,
+          "indexed_members": 614,
+          "self_excluded": true,
+          "duplicate_paths": [],
+          "unindexed_members": [],
+          "extra_indexed": [],
+          "hash_mismatches": [],
+          "REVIEW_INDEX_ACCOUNTING_STATUS": "PASS"
+        }
+      },
+      {
+        "name": "v03_members",
+        "ok": true,
+        "detail": 615
+      },
+      {
+        "name": "v03_indexed",
+        "ok": true,
+        "detail": 614
+      },
+      {
+        "name": "v03_manifest",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "v03_mutation",
+        "ok": true,
+        "detail": {
+          "after_mutation_ok": false,
+          "after_restore_ok": true,
+          "ok": true
+        }
+      }
+    ],
+    "ok": true
+  },
+  "v0211": {
+    "label": "v0211",
+    "sha256": "3214b5414f533e59bba620ed8bcfa3fd23e7197de557583a0c0cb257e9dc9066",
+    "members": 602,
+    "indexed": 601,
+    "cache_entries": 0,
+    "checks": [
+      {
+        "name": "v0211_sha",
+        "ok": true,
+        "detail": "3214b5414f533e59bba620ed8bcfa3fd23e7197de557583a0c0cb257e9dc9066"
+      },
+      {
+        "name": "v0211_review_index",
+        "ok": true,
+        "detail": {
+          "ok": true,
+          "members": 602,
+          "indexed_members": 601,
+          "self_excluded": true,
+          "duplicate_paths": [],
+          "unindexed_members": [],
+          "extra_indexed": [],
+          "hash_mismatches": [],
+          "REVIEW_INDEX_ACCOUNTING_STATUS": "PASS"
+        }
+      },
+      {
+        "name": "v0211_members",
+        "ok": true,
+        "detail": 602
+      },
+      {
+        "name": "v0211_indexed",
+        "ok": true,
+        "detail": 601
+      },
+      {
+        "name": "v0211_manifest",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "v0211_mutation",
+        "ok": true,
+        "detail": {
+          "after_mutation_ok": false,
+          "after_restore_ok": true,
+          "ok": true
+        }
+      }
+    ],
+    "ok": true
+  },
+  "checks": [
+    {
+      "name": "v03_sha_before",
+      "ok": true,
+      "detail": "d78d23bbd8a3984375bcc3891cc2f7f59b17c2c0fb4bdc4f19a92aa3e405eb73"
+    },
+    {
+      "name": "v0211_sha_before",
+      "ok": true,
+      "detail": "3214b5414f533e59bba620ed8bcfa3fd23e7197de557583a0c0cb257e9dc9066"
+    },
+    {
+      "name": "v021_sha_before",
+      "ok": true,
+      "detail": "d10c0a0202a9590d41105e6e56ec406980076a30c953535300d8277212fe5c13"
+    },
+    {
+      "name": "v02_sha_before",
+      "ok": true,
+      "detail": "5e2ebf7a45b5dec207d333e515c635a5323074e8b9b01f774b51386304f0d99d"
+    },
+    {
+      "name": "v011_sha_before",
+      "ok": true,
+      "detail": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0"
+    },
+    {
+      "name": "v01_sha_before",
+      "ok": true,
+      "detail": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f"
+    },
+    {
+      "name": "privacy_sha_before",
+      "ok": true,
+      "detail": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231"
+    },
+    {
+      "name": "gs011_sha_before",
+      "ok": true,
+      "detail": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+    },
+    {
+      "name": "v03_sha",
+      "ok": true,
+      "detail": "d78d23bbd8a3984375bcc3891cc2f7f59b17c2c0fb4bdc4f19a92aa3e405eb73"
+    },
+    {
+      "name": "v03_review_index",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "members": 615,
+        "indexed_members": 614,
+        "self_excluded": true,
+        "duplicate_paths": [],
+        "unindexed_members": [],
+        "extra_indexed": [],
+        "hash_mismatches": [],
+        "REVIEW_INDEX_ACCOUNTING_STATUS": "PASS"
+      }
+    },
+    {
+      "name": "v03_members",
+      "ok": true,
+      "detail": 615
+    },
+    {
+      "name": "v03_indexed",
+      "ok": true,
+      "detail": 614
+    },
+    {
+      "name": "v03_manifest",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "v03_mutation",
+      "ok": true,
+      "detail": {
+        "after_mutation_ok": false,
+        "after_restore_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "name": "v0211_sha",
+      "ok": true,
+      "detail": "3214b5414f533e59bba620ed8bcfa3fd23e7197de557583a0c0cb257e9dc9066"
+    },
+    {
+      "name": "v0211_review_index",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "members": 602,
+        "indexed_members": 601,
+        "self_excluded": true,
+        "duplicate_paths": [],
+        "unindexed_members": [],
+        "extra_indexed": [],
+        "hash_mismatches": [],
+        "REVIEW_INDEX_ACCOUNTING_STATUS": "PASS"
+      }
+    },
+    {
+      "name": "v0211_members",
+      "ok": true,
+      "detail": 602
+    },
+    {
+      "name": "v0211_indexed",
+      "ok": true,
+      "detail": 601
+    },
+    {
+      "name": "v0211_manifest",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "v0211_mutation",
+      "ok": true,
+      "detail": {
+        "after_mutation_ok": false,
+        "after_restore_ok": true,
+        "ok": true
+      }
+    },
+    {
+      "name": "v03_attestation",
+      "ok": true,
+      "detail": "stage-03-unified-a-b-clinical-research-layer-v0.3-review.attestation.json"
+    }
+  ],
+  "ok": true
+}

@@ -1,0 +1,72 @@
+{
+  "version": "0.1.1",
+  "V01_METHODOLOGY_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "defects": [
+    {
+      "id": "2.1_source_b_subject_id_double_hmac",
+      "observed_n_confirmed_pairs": 0,
+      "observed_n_candidate_pairs": 0,
+      "observed_n_overlap_groups": 0,
+      "observed_GLOBAL_A_B_SPLIT_STATUS": "PASS_OVERLAP_GUARDED",
+      "defect": "overlap_guard applied entity_id(Subject, skey) after loader opaque _opaque_b(patient_id)=HMAC(Subject,kgz_raw,[uid]); canonical B subject_id equals single HMAC; double form is absent → empty overlap while status PASS",
+      "pass_with_zero_overlap_universe_forbidden": true,
+      "reproduced": true,
+      "live_probe": {
+        "ran": true,
+        "single_hmac_in_research_subjects": true,
+        "double_hmac_in_research_subjects": false
+      },
+      "collateral_a_opaque_vs_subject_id": "v0.1 also compared opaque_subject_key to research subject_id for Source A"
+    },
+    {
+      "id": "2.2_target_identity_reuse",
+      "n_target_rows_v01": 8471281,
+      "missing_target_observation_id": true,
+      "missing_target_component_id": true,
+      "missing_target_event_id": true,
+      "missing_target_timestamp_identity": true,
+      "defect": "individual_state_target lacked observation/component/event identity; one future observation reused across many train cutoffs; 8,471,281 target_rows are not independent target events",
+      "reproduced": true
+    },
+    {
+      "id": "2.3_invalid_pooled_raw_mae",
+      "pooled_m0": 5.907782545934225,
+      "pooled_m1": 9.66102347694709,
+      "claim": "NO_INCREMENTAL_SIGNAL_DETECTED",
+      "defect": "pooled raw MAE across 24 outcomes/units used for global claim",
+      "reproduced": true
+    },
+    {
+      "id": "2.4_ridge_implementation",
+      "no_train_only_scaler": true,
+      "no_intercept": true,
+      "l2_fixed": 1.0,
+      "custom_gaussian_elim_without_pivoting": true,
+      "no_validation_provider_selection": true,
+      "example_outcome": "B::28::г/л",
+      "example_note": "M1 MAE ~79 vs M0 ~4.49 in v0.1 evaluation",
+      "reproduced": true
+    },
+    {
+      "id": "2.5_m2_gate_hardcoded",
+      "JOINT_MULTI_OUTCOME_MODEL_STATUS": "NOT_RUN_DUE_TO_FAILED_DATA_GATE",
+      "defect": "status hard-coded; numerical gate not computed; failed checks unpublished",
+      "reproduced": true,
+      "joint_model_data_gate_artifact_absent_in_v01": true
+    },
+    {
+      "id": "2.6_freeze_identity_not_recomputed",
+      "defect": "reload compared stored model_identity_sha256 field only; did not recompute identity from weights/feature order/scaler/intercept/config",
+      "reproduced": true
+    },
+    {
+      "id": "2.7_engine_shadow_dictionary_hash_only",
+      "ENGINE_UNIFIED_STATE_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+      "defect": "shadow re-hashed one prediction dictionary; no real checkpoint/fork/parent isolation/rollback/repeat inference",
+      "reproduced": true
+    }
+  ],
+  "n_defects": 7,
+  "ok": true,
+  "note_opaque_a": "opaque_subject_key"
+}

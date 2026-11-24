@@ -1,0 +1,234 @@
+{
+  "version": "0.1.1",
+  "FIRST_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY",
+  "READY_COHORTS": [],
+  "PARTIAL_COHORTS": [],
+  "BLOCKED_COHORTS": [
+    {
+      "grain": "accepted_drug_concept × outcome × unit",
+      "accepted_drug_concept": "esklp_group_20260812.xlsx:1667",
+      "source_medicine_id": "813",
+      "drug_concept_status": "EXACT_PROVIDER_MATCH",
+      "provider": "ESKLP",
+      "outcome": "Лимфоциты",
+      "unit": "%",
+      "n_subjects": 3,
+      "n_episodes": 3,
+      "splits": {
+        "train": {
+          "n_episodes": 2,
+          "n_subjects": 2
+        },
+        "validation": {
+          "n_episodes": 0,
+          "n_subjects": 0
+        },
+        "test": {
+          "n_episodes": 1,
+          "n_subjects": 1
+        }
+      },
+      "gates": {
+        "accepted_drug_concept_mapping": true,
+        "min_subjects": false,
+        "min_episodes": false,
+        "subject_disjoint_split": true,
+        "min_test_subjects": false,
+        "no_unit_conflict": true,
+        "no_identity_or_locator_overlap": true
+      },
+      "block_reasons": [
+        "min_subjects",
+        "min_episodes",
+        "min_test_subjects"
+      ],
+      "timestamp_status": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+      "medication_concept_provenance": {
+        "provider_evidence_hash": "2c4be96779c70e2c3d829118616355a3d07e89b3a111cd5e6164a379ede262fe",
+        "status": "EXACT_PROVIDER_MATCH"
+      }
+    },
+    {
+      "grain": "accepted_drug_concept × outcome × unit",
+      "accepted_drug_concept": "esklp_group_20260812.xlsx:1667",
+      "source_medicine_id": "813",
+      "drug_concept_status": "EXACT_PROVIDER_MATCH",
+      "provider": "ESKLP",
+      "outcome": "Средний объем эритроцитов (MCV)",
+      "unit": "фл",
+      "n_subjects": 3,
+      "n_episodes": 3,
+      "splits": {
+        "train": {
+          "n_episodes": 2,
+          "n_subjects": 2
+        },
+        "validation": {
+          "n_episodes": 0,
+          "n_subjects": 0
+        },
+        "test": {
+          "n_episodes": 1,
+          "n_subjects": 1
+        }
+      },
+      "gates": {
+        "accepted_drug_concept_mapping": true,
+        "min_subjects": false,
+        "min_episodes": false,
+        "subject_disjoint_split": true,
+        "min_test_subjects": false,
+        "no_unit_conflict": true,
+        "no_identity_or_locator_overlap": true
+      },
+      "block_reasons": [
+        "min_subjects",
+        "min_episodes",
+        "min_test_subjects"
+      ],
+      "timestamp_status": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+      "medication_concept_provenance": {
+        "provider_evidence_hash": "2c4be96779c70e2c3d829118616355a3d07e89b3a111cd5e6164a379ede262fe",
+        "status": "EXACT_PROVIDER_MATCH"
+      }
+    },
+    {
+      "grain": "accepted_drug_concept × outcome × unit",
+      "accepted_drug_concept": "esklp_group_20260812.xlsx:1667",
+      "source_medicine_id": "813",
+      "drug_concept_status": "EXACT_PROVIDER_MATCH",
+      "provider": "ESKLP",
+      "outcome": "Моноциты",
+      "unit": "%",
+      "n_subjects": 3,
+      "n_episodes": 3,
+      "splits": {
+        "train": {
+          "n_episodes": 2,
+          "n_subjects": 2
+        },
+        "validation": {
+          "n_episodes": 0,
+          "n_subjects": 0
+        },
+        "test": {
+          "n_episodes": 1,
+          "n_subjects": 1
+        }
+      },
+      "gates": {
+        "accepted_drug_concept_mapping": true,
+        "min_subjects": false,
+        "min_episodes": false,
+        "subject_disjoint_split": true,
+        "min_test_subjects": false,
+        "no_unit_conflict": true,
+        "no_identity_or_locator_overlap": true
+      },
+      "block_reasons": [
+        "min_subjects",
+        "min_episodes",
+        "min_test_subjects"
+      ],
+      "timestamp_status": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+      "medication_concept_provenance": {
+        "provider_evidence_hash": "2c4be96779c70e2c3d829118616355a3d07e89b3a111cd5e6164a379ede262fe",
+        "status": "EXACT_PROVIDER_MATCH"
+      }
+    },
+    {
+      "grain": "accepted_drug_concept × outcome × unit",
+      "accepted_drug_concept": "esklp_group_20260812.xlsx:1667",
+      "source_medicine_id": "813",
+      "drug_concept_status": "EXACT_PROVIDER_MATCH",
+      "provider": "ESKLP",
+      "outcome": "Нейтрофилы",
+      "unit": "%",
+      "n_subjects": 3,
+      "n_episodes": 3,
+      "splits": {
+        "train": {
+          "n_episodes": 2,
+          "n_subjects": 2
+        },
+        "validation": {
+          "n_episodes": 0,
+          "n_subjects": 0
+        },
+        "test": {
+          "n_episodes": 1,
+          "n_subjects": 1
+        }
+      },
+      "gates": {
+        "accepted_drug_concept_mapping": true,
+        "min_subjects": false,
+        "min_episodes": false,
+        "subject_disjoint_split": true,
+        "min_test_subjects": false,
+        "no_unit_conflict": true,
+        "no_identity_or_locator_overlap": true
+      },
+      "block_reasons": [
+        "min_subjects",
+        "min_episodes",
+        "min_test_subjects"
+      ],
+      "timestamp_status": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+      "medication_concept_provenance": {
+        "provider_evidence_hash": "2c4be96779c70e2c3d829118616355a3d07e89b3a111cd5e6164a379ede262fe",
+        "status": "EXACT_PROVIDER_MATCH"
+      }
+    },
+    {
+      "grain": "accepted_drug_concept × outcome × unit",
+      "accepted_drug_concept": "esklp_group_20260812.xlsx:1667",
+      "source_medicine_id": "813",
+      "drug_concept_status": "EXACT_PROVIDER_MATCH",
+      "provider": "ESKLP",
+      "outcome": "Эозинофилы",
+      "unit": "%",
+      "n_subjects": 3,
+      "n_episodes": 3,
+      "splits": {
+        "train": {
+          "n_episodes": 2,
+          "n_subjects": 2
+        },
+        "validation": {
+          "n_episodes": 0,
+          "n_subjects": 0
+        },
+        "test": {
+          "n_episodes": 1,
+          "n_subjects": 1
+        }
+      },
+      "gates": {
+        "accepted_drug_concept_mapping": true,
+        "min_subjects": false,
+        "min_episodes": false,
+        "subject_disjoint_split": true,
+        "min_test_subjects": false,
+        "no_unit_conflict": true,
+        "no_identity_or_locator_overlap": true
+      },
+      "block_reasons": [
+        "min_subjects",
+        "min_episodes",
+        "min_test_subjects"
+      ],
+      "timestamp_status": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+      "medication_concept_provenance": {
+        "provider_evidence_hash": "2c4be96779c70e2c3d829118616355a3d07e89b3a111cd5e6164a379ede262fe",
+        "status": "EXACT_PROVIDER_MATCH"
+      }
+    }
+  ],
+  "n_accepted_concepts": 1,
+  "clinical_intervention_cohort_not_claimed": true,
+  "thresholds_not_lowered_after_results": true,
+  "grain": "accepted_drug_concept × outcome × unit",
+  "no_broad_class_merge": true,
+  "engineering_readiness_only": true
+}

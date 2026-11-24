@@ -1,0 +1,132 @@
+{
+  "version": "0.2.1",
+  "OBSERVATION_EVENT_IDENTITY_STATUS": "BUILT",
+  "OBSERVATION_MICROINTERVAL_AUDIT_STATUS": "PUBLISHED",
+  "synthetic_state_rows_used_as_events": 0,
+  "synthetic_state_rows_excluded": true,
+  "collapse": {
+    "n_raw_event_rows": 2374211,
+    "n_after_same_timestamp_type_identity": 774212,
+    "n_collapsed_duplicate_same_timestamp_type": 1599972,
+    "collapse_reasons": [
+      "same_subject_same_timestamp_same_event_type",
+      "lab_panel_same_subject_same_timestamp",
+      "encounter_id_grouping_audit"
+    ],
+    "microintervals_retained_as_distinct_when_timestamps_differ": true
+  },
+  "by_source": {
+    "kgz_raw": {
+      "n_raw_events": 1351873,
+      "n_null_timestamps": 0,
+      "n_unreliable_timestamps": 27,
+      "event_type_counts": {
+        "encounter": 88867,
+        "observation": 59741,
+        "recommendation": 999606,
+        "document_reference": 203659
+      },
+      "n_unique_recorded_timestamps": 349019,
+      "n_unique_lab_panels": 59714,
+      "n_unique_encounters": 88859,
+      "n_panels_with_multiple_rows": 0,
+      "n_encounters_with_multiple_event_rows": 59542,
+      "panel_row_count_max": 1,
+      "recorded_interval_audit": {
+        "n_subjects_with_2plus": 48981,
+        "n_consecutive_pairs": 299455,
+        "n_interval_lt_1_second": 0,
+        "n_interval_lt_1_minute": 4864,
+        "n_interval_lt_1_hour": 13501,
+        "fraction_lt_1_second": 0.0,
+        "fraction_lt_1_minute": 0.01624284116144329,
+        "fraction_lt_1_hour": 0.04508523818269857,
+        "microintervals_not_silently_deleted": true
+      },
+      "lab_panel_interval_audit": {
+        "n_subjects_with_2plus": 11828,
+        "n_consecutive_pairs": 25031,
+        "n_interval_lt_1_second": 0,
+        "n_interval_lt_1_minute": 0,
+        "n_interval_lt_1_hour": 9,
+        "fraction_lt_1_second": 0.0,
+        "fraction_lt_1_minute": 0.0,
+        "fraction_lt_1_hour": 0.0003595541528504654,
+        "microintervals_not_silently_deleted": true
+      },
+      "encounter_interval_audit": {
+        "n_subjects_with_2plus": 18058,
+        "n_consecutive_pairs": 39295,
+        "n_interval_lt_1_second": 0,
+        "n_interval_lt_1_minute": 39,
+        "n_interval_lt_1_hour": 148,
+        "fraction_lt_1_second": 0.0,
+        "fraction_lt_1_minute": 0.0009924926835475252,
+        "fraction_lt_1_hour": 0.003766382491411121,
+        "microintervals_not_silently_deleted": true
+      }
+    },
+    "magerya_api": {
+      "n_raw_events": 1022338,
+      "n_null_timestamps": 0,
+      "n_unreliable_timestamps": 0,
+      "event_type_counts": {
+        "encounter": 68128,
+        "observation": 874492,
+        "medication_appointment": 25726,
+        "recommendation": 53894,
+        "procedure": 98
+      },
+      "n_unique_recorded_timestamps": 171457,
+      "n_unique_lab_panels": 102195,
+      "n_unique_encounters": 68120,
+      "n_panels_with_multiple_rows": 65491,
+      "n_encounters_with_multiple_event_rows": 53886,
+      "panel_row_count_max": 99,
+      "recorded_interval_audit": {
+        "n_subjects_with_2plus": 18626,
+        "n_consecutive_pairs": 150509,
+        "n_interval_lt_1_second": 35582,
+        "n_interval_lt_1_minute": 48934,
+        "n_interval_lt_1_hour": 54781,
+        "fraction_lt_1_second": 0.23641111162787606,
+        "fraction_lt_1_minute": 0.3251234145466384,
+        "fraction_lt_1_hour": 0.3639715897388196,
+        "microintervals_not_silently_deleted": true
+      },
+      "lab_panel_interval_audit": {
+        "n_subjects_with_2plus": 14649,
+        "n_consecutive_pairs": 83963,
+        "n_interval_lt_1_second": 4116,
+        "n_interval_lt_1_minute": 16063,
+        "n_interval_lt_1_hour": 18308,
+        "fraction_lt_1_second": 0.04902159284446721,
+        "fraction_lt_1_minute": 0.191310458178007,
+        "fraction_lt_1_hour": 0.21804842609244549,
+        "microintervals_not_silently_deleted": true
+      },
+      "encounter_interval_audit": {
+        "n_subjects_with_2plus": 13299,
+        "n_consecutive_pairs": 47561,
+        "n_interval_lt_1_second": 3023,
+        "n_interval_lt_1_minute": 4069,
+        "n_interval_lt_1_hour": 6813,
+        "fraction_lt_1_second": 0.06356048022539476,
+        "fraction_lt_1_minute": 0.08555328945985156,
+        "fraction_lt_1_hour": 0.14324761884737494,
+        "microintervals_not_silently_deleted": true
+      }
+    }
+  },
+  "TIME_TO_NEXT_RECORDED_EVENT_is_diagnostic": true,
+  "primary_endpoint": "TIME_TO_NEXT_LAB_PANEL",
+  "primary_endpoint_selection_before_test": true,
+  "primary_endpoint_selection_used_model_performance": false,
+  "primary_endpoint_reason": "Lab panels are source-local observation groups with explicit event_time; mixed TIME_TO_NEXT_RECORDED_EVENT includes heterogeneous document_reference rows and is diagnostic-only. Selection used timestamp identity quality (lab max fraction_lt_1s=0.049022 vs recorded 0.236411; encounter 0.063560), not model performance.",
+  "endpoints": {
+    "TIME_TO_NEXT_LAB_PANEL": "first subsequent unique observation-panel timestamp after t0",
+    "TIME_TO_NEXT_ENCOUNTER": "first subsequent unique encounter timestamp after t0",
+    "TIME_TO_NEXT_RECORDED_EVENT": "diagnostic mixed recorded stream including documents; not primary"
+  },
+  "ok": true
+}

@@ -1,0 +1,12 @@
+{
+  "version": "0.1",
+  "PRIOR_STATE_TENSOR_FOUNDATION_STATUS": "ACCEPTED_TECHNICAL_INPUT",
+  "PRIOR_STATE_ENCODER_FOUNDATION_STATUS": "NOT_ACCEPTED_WEAK_OR_NEGATIVE_EVIDENCE",
+  "rationale": {
+    "tensor": "source-aware per-outcome channels + train-only scalers + no temporal leakage verified",
+    "encoder": "no train-time corruption; loss non-improving; recon worse than train-mean; 0/24 val trajectory wins; FROZEN alone is not foundation",
+    "do_not_rewrite_v01_zip": true
+  },
+  "defect_reproduction_ok": true,
+  "ok": true
+}

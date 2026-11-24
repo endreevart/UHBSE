@@ -1,0 +1,68 @@
+{
+  "TEMPORAL_ELIGIBILITY_STATUS": "BLOCKED",
+  "administration_timestamp_verified": false,
+  "appointment_date_semantics": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+  "checks": [
+    {
+      "field": "appointment_date",
+      "issue": "technical_timestamp_as_t0",
+      "reason": "appointment_date_created_modified_are_not_administration_without_direct_evidence",
+      "status": "BLOCK"
+    },
+    {
+      "issue": "timezone_aware_timestamps",
+      "reason": "TIMEZONE_CONTRACT_NOT_ESTABLISHED",
+      "status": "BLOCK"
+    },
+    {
+      "issue": "date_only_precision",
+      "reason": "DATE_ONLY_OR_UNVERIFIED",
+      "status": "BLOCK"
+    },
+    {
+      "issue": "ambiguous_ordering",
+      "reason": "NOT_ESTABLISHED",
+      "status": "BLOCK"
+    },
+    {
+      "issue": "same_day_ambiguity",
+      "reason": "UNRESOLVED",
+      "status": "BLOCK"
+    },
+    {
+      "issue": "exposure_after_outcome",
+      "reason": "NO_VERIFIED_ADMINISTRATION_T0",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "issue": "exposure_overlapping_target_horizon",
+      "reason": "NO_VERIFIED_START_END",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "issue": "future_information_in_features",
+      "reason": "INTERVENTION_T0_NOT_ESTABLISHED",
+      "status": "BLOCK"
+    },
+    {
+      "issue": "repeated_outcomes_target_reuse",
+      "reason": "NO_IR_CELL",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "issue": "patient_overlap_between_splits",
+      "reason": "IR_SPLIT_NOT_OPENED",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "issue": "polypharmacy_simultaneous_recorded_medicines",
+      "published_aggregate_patient_days_gt1": 3574,
+      "reason": "UNRESOLVED",
+      "status": "BLOCK"
+    }
+  ],
+  "clinical_event_time_status": "CANDIDATE_ONLY",
+  "live_row_recount_status": "NOT_RUN_SOURCE_UNAVAILABLE",
+  "temporally_eligible_intervention_cell_count": 0,
+  "unresolved_ambiguity_blocks_readiness_lanes": true
+}

@@ -1,0 +1,33 @@
+{
+  "version": "0.2.1.1",
+  "v021_accepted_cell_count_not_transferred": true,
+  "v021_accepted_count_was": 9,
+  "audit_expectations_not_hard_coded_final": [
+    {
+      "cell": "B lab 90",
+      "expectation": "validation accepted, held-out not confirmed"
+    },
+    {
+      "cell": "B lab 180",
+      "expectation": "validation accepted, held-out candidate for confirmation"
+    },
+    {
+      "cell": "B lab 365",
+      "expectation": "boundary review required"
+    },
+    {
+      "cell": "B encounter 30/90/180",
+      "expectation": "held-out candidate for confirmation"
+    },
+    {
+      "cell": "B encounter 365",
+      "expectation": "boundary review required"
+    },
+    {
+      "cell": "A Lymphocytes 90/180",
+      "expectation": "outcome-risk-set correction required"
+    }
+  ],
+  "recalculate_on_corrected_data": true,
+  "ok": true
+}

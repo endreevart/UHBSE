@@ -1,0 +1,804 @@
+{
+  "version": "0.2.1",
+  "FULL_SOURCE_A_PROVIDER_INVENTORY_STATUS": "PASS",
+  "SOURCE_A_METADATA_RECOVERY_STATUS": "PASS_WITH_GAPS",
+  "A_PROVIDER_GRAINS_EVALUATED": 95,
+  "n_provider_grains": 95,
+  "metadata_lineage": {
+    "specimen": {
+      "status": "MISSING_SOURCE_DOCUMENTATION_REQUIRED",
+      "probes": [],
+      "query_hash": "77e01b241571343f1777eecf1c14b85b2029da225d63cd6798ce62ece3a971c6"
+    },
+    "assay": {
+      "status": "AVAILABLE_FROM_SOURCE",
+      "probes": [
+        {
+          "schema": "magerya_api",
+          "table": "document_document",
+          "column": "methodologist_document_status"
+        },
+        {
+          "schema": "magerya_api",
+          "table": "logg_apilogentry",
+          "column": "request_method"
+        }
+      ],
+      "query_hash": "4fd678f9887a92ab500a52716e73418d0661060ceb3bf62ede847a46bc598e41"
+    },
+    "reference_range": {
+      "status": "MISSING_SOURCE_DOCUMENTATION_REQUIRED",
+      "probes": [],
+      "query_hash": "d169a2c464b9a36fe2577896ac11296622249a358e2b9d514e4d7b6afba51449"
+    },
+    "connection": "OK"
+  },
+  "note": "Absence of specimen/assay in provider registry is NOT proof of absence in Source A; see metadata_lineage probes.",
+  "inventory_hash": "eeaa3c25daaea1a8097ea76356bf2fdb915315440ea3cdfb68321ff1320cccdf",
+  "truncated": 0,
+  "unexplained": 0,
+  "ok": true,
+  "SOURCE_A_RAW_METADATA_PROBE_STATUS": "PASS",
+  "grains_public": [
+    {
+      "grain_id": "21e65a6b77533f2130fb5272",
+      "outcome": "25(OH)витамин D",
+      "unit": "нг/мл",
+      "n_subjects": 13494,
+      "n_subjects_with_ge2": 4395,
+      "stratum_hash": "b4ce1bb8f0067281d04ba8dd641311245720e0288b4d91a269845538344d9c94"
+    },
+    {
+      "grain_id": "680d9f5a1cd6d46052c81228",
+      "outcome": "D–димер",
+      "unit": "нг/мл",
+      "n_subjects": 2026,
+      "n_subjects_with_ge2": 235,
+      "stratum_hash": "c8150dca6808da3ba7ea1cc1a0757611d5c582afe2356c6c7877d4b02c0beb8f"
+    },
+    {
+      "grain_id": "b6c63a93b05f2c2d62615409",
+      "outcome": "pH",
+      "unit": "_",
+      "n_subjects": 3031,
+      "n_subjects_with_ge2": 596,
+      "stratum_hash": "8492cc8ba236538ccede30fcf1fde8bbfce8f20199ee5366a92bc6ebacc2d0b4"
+    },
+    {
+      "grain_id": "793aa5157f9905ddea501114",
+      "outcome": "АЛТ",
+      "unit": "Ед/л",
+      "n_subjects": 12396,
+      "n_subjects_with_ge2": 3767,
+      "stratum_hash": "dbc25d5cbe1f55f35efa86afbde85544999723dda0db83107dc332a2e13f4e3e"
+    },
+    {
+      "grain_id": "237481b3eb3057b6a95c9052",
+      "outcome": "АЛТ",
+      "unit": "МЕ/л",
+      "n_subjects": 931,
+      "n_subjects_with_ge2": 195,
+      "stratum_hash": "8fe04af7c7ef6792d89c0586061243ad85948924ff63476bee9e4a7638992367"
+    },
+    {
+      "grain_id": "253e5cb1bcf4e6d4f9532b67",
+      "outcome": "АСТ",
+      "unit": "Ед/л",
+      "n_subjects": 11990,
+      "n_subjects_with_ge2": 3510,
+      "stratum_hash": "47bdc427041208a5e7399696cd840426cd2eb1e8d313c61c79bed3d743121bf2"
+    },
+    {
+      "grain_id": "28b405d088baa8dcd449f4f3",
+      "outcome": "АЧТВ",
+      "unit": "сек",
+      "n_subjects": 2290,
+      "n_subjects_with_ge2": 466,
+      "stratum_hash": "6712b492cddb29ff51026f82793b0b867210a485043be291fcc8645d33c8f372"
+    },
+    {
+      "grain_id": "d4a61663d882a3003d617da9",
+      "outcome": "Альбумин",
+      "unit": "г/л",
+      "n_subjects": 1915,
+      "n_subjects_with_ge2": 306,
+      "stratum_hash": "fcef4be443276744dd7fa72ec4ce76fe09e2e6576d386d16dfb0435400cc812f"
+    },
+    {
+      "grain_id": "54a9741340e64c00965a9f80",
+      "outcome": "Ат к ТГ",
+      "unit": "МЕ/мл",
+      "n_subjects": 7314,
+      "n_subjects_with_ge2": 1321,
+      "stratum_hash": "02d4dc459c2a14a76619303824f33bddf4292fa704dfa84b0d4a5ac7a38cee2a"
+    },
+    {
+      "grain_id": "2d1f2a6629dd192aa95c933f",
+      "outcome": "Ат к ТПО",
+      "unit": "МЕ/мл",
+      "n_subjects": 10599,
+      "n_subjects_with_ge2": 2186,
+      "stratum_hash": "84a3bfdf006f304593f593029307675ec1bbd26fc22fcad2027254f034f9da13"
+    },
+    {
+      "grain_id": "4f8f23c75288ad8d762a0f99",
+      "outcome": "Ат к рТТГ",
+      "unit": "МЕ/л",
+      "n_subjects": 2721,
+      "n_subjects_with_ge2": 400,
+      "stratum_hash": "23f7d87e1cb98d62d4386e86a580156b6d547bb57d058d4eb83d9b55c745af98"
+    },
+    {
+      "grain_id": "89a68b13e406fa081f794c84",
+      "outcome": "Базофилы",
+      "unit": "%",
+      "n_subjects": 14071,
+      "n_subjects_with_ge2": 5588,
+      "stratum_hash": "d81ffda2d4090f27a35c7c405b40bc88f88daab0f84fd9324045c3cd16e03f4e"
+    },
+    {
+      "grain_id": "aeb8cef61652cc7b2dbff5a9",
+      "outcome": "Билирубин общий",
+      "unit": "мкмоль/л",
+      "n_subjects": 6066,
+      "n_subjects_with_ge2": 1432,
+      "stratum_hash": "c7668df0493963db0d6d2cce68e085adfa0020a85b7ff6c7b8d7af9ed553e35c"
+    },
+    {
+      "grain_id": "e3546280c2a862bbd9c37ef5",
+      "outcome": "Билирубин прямой",
+      "unit": "мкмоль/л",
+      "n_subjects": 3495,
+      "n_subjects_with_ge2": 590,
+      "stratum_hash": "e7a123e4788bb7f5be2a4285900b4c5c0ae0ca0bee5a3f8a6be3e32b42e642d0"
+    },
+    {
+      "grain_id": "74a3757c482706afbbaadc4e",
+      "outcome": "Витамин B12 (цианкобаламин)",
+      "unit": "пг/мл",
+      "n_subjects": 12053,
+      "n_subjects_with_ge2": 3293,
+      "stratum_hash": "5dc46c12d89b62a26e356dc8a65234f76ecb19f25ad6f8c9766355c69a37aab8"
+    },
+    {
+      "grain_id": "4a5e3e3f043e91b945176b1c",
+      "outcome": "Витамин В9 (фолиевая кислота)",
+      "unit": "нг/мл",
+      "n_subjects": 11096,
+      "n_subjects_with_ge2": 3128,
+      "stratum_hash": "d556442ccd405cee2d9c74ca3f0fca8ef4146bd73771b289d9ffaf25354af860"
+    },
+    {
+      "grain_id": "3dff60cf0bbb90be3a0d5490",
+      "outcome": "ГГТ",
+      "unit": "Ед/л",
+      "n_subjects": 2155,
+      "n_subjects_with_ge2": 318,
+      "stratum_hash": "2ca72c68885418643ff984b32bbbbef777fe673f72281588468d467d382a6db7"
+    },
+    {
+      "grain_id": "d4e96f4d34473e2d38cd7e83",
+      "outcome": "ГСПГ",
+      "unit": "нмоль/л",
+      "n_subjects": 4090,
+      "n_subjects_with_ge2": 647,
+      "stratum_hash": "f56916f4ebbf5ab023a850d777ae47a3fcf6429f4ae615c69874e9b6a1e8c27e"
+    },
+    {
+      "grain_id": "4c2f271a7b32117589672693",
+      "outcome": "Гематокрит",
+      "unit": "%",
+      "n_subjects": 4204,
+      "n_subjects_with_ge2": 1296,
+      "stratum_hash": "9b571c5dfce4844d357c6116dec594d6008913511e46a874ae6748e4d5c7f75a"
+    },
+    {
+      "grain_id": "5ef24901893d30b26ed99948",
+      "outcome": "Гемоглобин",
+      "unit": "г/дл",
+      "n_subjects": 2592,
+      "n_subjects_with_ge2": 746,
+      "stratum_hash": "1405c8c39c276a8ae1ed9f3fd6dfeb8b4767b9ae8d70c0cf292942e78cae0454"
+    },
+    {
+      "grain_id": "555f9ae6487af1d52b7436bf",
+      "outcome": "Гемоглобин",
+      "unit": "г/л",
+      "n_subjects": 13349,
+      "n_subjects_with_ge2": 5082,
+      "stratum_hash": "8698db0a2b416d27e083f221c70ff305d6953752d22467b042f0af9ac275613d"
+    },
+    {
+      "grain_id": "89b23da0bc18bda9a2658507",
+      "outcome": "Гликированный гемоглобин",
+      "unit": "%",
+      "n_subjects": 6452,
+      "n_subjects_with_ge2": 1243,
+      "stratum_hash": "166345245961780b6e52feb31dab9a6efea4ad63fda811c9e835af53b5ebc9b8"
+    },
+    {
+      "grain_id": "df891adcd79c48f79df36168",
+      "outcome": "Глюкоза",
+      "unit": "ммоль/л",
+      "n_subjects": 13014,
+      "n_subjects_with_ge2": 4163,
+      "stratum_hash": "602eb25bb07f88f8f3929f73add621472f55e07a36784de9b6e76146a4c26e3f"
+    },
+    {
+      "grain_id": "d292917cfd1ceaa554dcf723",
+      "outcome": "Гомоцистеин",
+      "unit": "мкмоль/л",
+      "n_subjects": 10107,
+      "n_subjects_with_ge2": 2918,
+      "stratum_hash": "d19a5cec04877b570d7fb1ff22e1f49d2b9b3c926d3dc4b826518a4691d6292b"
+    },
+    {
+      "grain_id": "fe6da163750f93b2046bbaa2",
+      "outcome": "ДГЭА–сульфат",
+      "unit": "мкг/дл",
+      "n_subjects": 3771,
+      "n_subjects_with_ge2": 547,
+      "stratum_hash": "936b2e0c85f110b89dcaa70eabb51631859094fd6cdfdbe7495893d78f74ed57"
+    },
+    {
+      "grain_id": "669fa365da7c605750a77d94",
+      "outcome": "Железо",
+      "unit": "мкмоль/л",
+      "n_subjects": 13538,
+      "n_subjects_with_ge2": 5144,
+      "stratum_hash": "8501c750fcdcedf05f9d324c31edc7e2bf8d7aeb81406ea4249c5e1944f9b7f4"
+    },
+    {
+      "grain_id": "8393c9903807b11de0d69f73",
+      "outcome": "Инсулин",
+      "unit": "мкЕд/мл",
+      "n_subjects": 7582,
+      "n_subjects_with_ge2": 1753,
+      "stratum_hash": "6ee144188d6061c191f74367758df7201d53d23986d0f0c114368f28917fe4b3"
+    },
+    {
+      "grain_id": "9b0e6d951675dbe6b3f25a59",
+      "outcome": "Инсулин",
+      "unit": "мкМЕ/мл",
+      "n_subjects": 4697,
+      "n_subjects_with_ge2": 1098,
+      "stratum_hash": "39b99bf432e50311757759c6c250382731f06e2bb57cff12a3339a33292b4da6"
+    },
+    {
+      "grain_id": "7d534c7074b97e2d379b47ab",
+      "outcome": "Кальций общий",
+      "unit": "ммоль/л",
+      "n_subjects": 2923,
+      "n_subjects_with_ge2": 496,
+      "stratum_hash": "3a924133306754a7bda633d5bb56045fb93c57c2eddf3a19b9ffb64d635c618b"
+    },
+    {
+      "grain_id": "1629c568257248aa4c8f614f",
+      "outcome": "Кортизол",
+      "unit": "мкг/дл",
+      "n_subjects": 4538,
+      "n_subjects_with_ge2": 702,
+      "stratum_hash": "9b2ca469394abf71a1fea84b9042576bfc0fdc304afe2921dc69f71fb3ebe362"
+    },
+    {
+      "grain_id": "f05441d07d1a03f76c49dc56",
+      "outcome": "Кортизол",
+      "unit": "нмоль/л",
+      "n_subjects": 3078,
+      "n_subjects_with_ge2": 596,
+      "stratum_hash": "c4e6d5e5820820e08a158e98827ed6d0ac1f24a2fb624ca9c8709e4d43a41ec1"
+    },
+    {
+      "grain_id": "51813e2ffef7f0cc04bc5421",
+      "outcome": "Коэффициент насыщения трансферрина железом",
+      "unit": "%",
+      "n_subjects": 2278,
+      "n_subjects_with_ge2": 425,
+      "stratum_hash": "fafd06c853fa1a040b9198e44077e23ab29216d9976123a4e09cd1c4de5128a9"
+    },
+    {
+      "grain_id": "238701fc66be44476291a5a8",
+      "outcome": "Креатинин",
+      "unit": "мкмоль/л",
+      "n_subjects": 8990,
+      "n_subjects_with_ge2": 2124,
+      "stratum_hash": "27152a4526038b3dbdd186226069f22462bcfc7172a47bc8e63292b8d59ff1e9"
+    },
+    {
+      "grain_id": "7f05ceba292b740a68acbb2e",
+      "outcome": "ЛГ",
+      "unit": "мМе/мл",
+      "n_subjects": 5199,
+      "n_subjects_with_ge2": 1071,
+      "stratum_hash": "c9a359acf5317a097dab17b27bdf3486dfe41bb91e18f413c476a57532960a99"
+    },
+    {
+      "grain_id": "e2abb6bb21bbfdaae73f3219",
+      "outcome": "ЛДГ",
+      "unit": "Ед/л",
+      "n_subjects": 2227,
+      "n_subjects_with_ge2": 229,
+      "stratum_hash": "814dca7092c60219f00001c7171478c5c21b846585299977342f8c163052888c"
+    },
+    {
+      "grain_id": "a6a7b54d256977615bf09bfc",
+      "outcome": "ЛПВП",
+      "unit": "ммоль/л",
+      "n_subjects": 12153,
+      "n_subjects_with_ge2": 3608,
+      "stratum_hash": "2b96c040c68e6a2a0c0e2d3d1ebbf4d1e939211e8912798ad3734f6ff1940f64"
+    },
+    {
+      "grain_id": "ba8281562f62c3e73845dee8",
+      "outcome": "ЛПНП",
+      "unit": "ммоль/л",
+      "n_subjects": 12157,
+      "n_subjects_with_ge2": 3602,
+      "stratum_hash": "a7f3e8c4203863dc62ac2edd694ff0186f5f0f05c42588e07e3f367f3f4464a5"
+    },
+    {
+      "grain_id": "857fa19906f340172a77ae1a",
+      "outcome": "Латентная железосвязывающая способность сыворотки",
+      "unit": "мкмоль/л",
+      "n_subjects": 5818,
+      "n_subjects_with_ge2": 1456,
+      "stratum_hash": "0684b1512b8365a8b8fd12e07489d7f01e996a699213988225a093c36a7fbb9f"
+    },
+    {
+      "grain_id": "315b74a7b3d2090cf24339e6",
+      "outcome": "Лейкоциты",
+      "unit": "*10^9/л",
+      "n_subjects": 13639,
+      "n_subjects_with_ge2": 5299,
+      "stratum_hash": "afe55334884ae6b7814945330eb88a6ce127fccc7161e0d3b3f35025a223006c"
+    },
+    {
+      "grain_id": "288c39a98b573b54b555d4b8",
+      "outcome": "Лейкоциты",
+      "unit": "тыс/мкл",
+      "n_subjects": 1795,
+      "n_subjects_with_ge2": 545,
+      "stratum_hash": "9138cb17b71116987422a7e0c620dcb047bec7a08db88927da96a71b8bf6323f"
+    },
+    {
+      "grain_id": "939aceb9740534f349c36a0b",
+      "outcome": "Лимфоциты",
+      "unit": "%",
+      "n_subjects": 14321,
+      "n_subjects_with_ge2": 5843,
+      "stratum_hash": "e5b01c773aa0783c95bfa6e19c52784227c4b951dff77623ec15624c2ddf24d5"
+    },
+    {
+      "grain_id": "faa53ed13837614b96683b4e",
+      "outcome": "МНО",
+      "unit": "_",
+      "n_subjects": 2438,
+      "n_subjects_with_ge2": 470,
+      "stratum_hash": "d36e723f30e3a60d170150628a663013a4d3d4ffe11dd3048a5f6d27d9590f29"
+    },
+    {
+      "grain_id": "166d068a774b06dedb8e7f5f",
+      "outcome": "Магний",
+      "unit": "ммоль/л",
+      "n_subjects": 2751,
+      "n_subjects_with_ge2": 391,
+      "stratum_hash": "79357e1f48cf9b00569c3a98157d0fe242d75b13fac388daac5cc77b393a97ba"
+    },
+    {
+      "grain_id": "1972c3e829ae23d3dc6c8ad4",
+      "outcome": "Медь",
+      "unit": "мкмоль/л",
+      "n_subjects": 3533,
+      "n_subjects_with_ge2": 636,
+      "stratum_hash": "98bfbb5714933151c4d58d94d64886b97390a8c8dc65674c0e54bd3314c90450"
+    },
+    {
+      "grain_id": "7b928316a7e3df7f5e5361aa",
+      "outcome": "Молочная кислота (лактат)",
+      "unit": "ммоль/л",
+      "n_subjects": 2619,
+      "n_subjects_with_ge2": 617,
+      "stratum_hash": "ff98783c5613ddcf982efba8a079c12d8270c3b71d51621867e95cd5ed636f16"
+    },
+    {
+      "grain_id": "129e2456cb20264950e02c02",
+      "outcome": "Моноциты",
+      "unit": "%",
+      "n_subjects": 14248,
+      "n_subjects_with_ge2": 5777,
+      "stratum_hash": "294412ee5b5a31dce16830e47ee723ef6e2ad6b89d7541eddef6f50d9d7a8c54"
+    },
+    {
+      "grain_id": "47616f758330a9b0a7e80ec4",
+      "outcome": "Мочевая кислота",
+      "unit": "мкмоль/л",
+      "n_subjects": 5302,
+      "n_subjects_with_ge2": 1155,
+      "stratum_hash": "f44229748196e5d7bec96250433fd8fd5659dbfc4ef5fb39293dfea6bcb9a404"
+    },
+    {
+      "grain_id": "958513d40cd979d5b32bce08",
+      "outcome": "Мочевая кислота",
+      "unit": "ммоль/л",
+      "n_subjects": 3232,
+      "n_subjects_with_ge2": 335,
+      "stratum_hash": "925b6a425d45f1018c85dd8859227b1e3317a776c56790f7a61c53abe43ac7e3"
+    },
+    {
+      "grain_id": "4827a1f7bdfef3d05e37e39e",
+      "outcome": "Мочевина",
+      "unit": "ммоль/л",
+      "n_subjects": 5073,
+      "n_subjects_with_ge2": 1087,
+      "stratum_hash": "8679f675bc3422929865d7946c8f74ec63d220435313733752f022a3e6808e5a"
+    },
+    {
+      "grain_id": "50fb700d4ba02d6ba121a33e",
+      "outcome": "Нейтрофилы",
+      "unit": "%",
+      "n_subjects": 14161,
+      "n_subjects_with_ge2": 5674,
+      "stratum_hash": "fffd3e7c6435156df0e88ef78d31d97aa16cc3379c4636e5c4dfd55cc33a7571"
+    },
+    {
+      "grain_id": "ef1d5f1e32407532f0a57581",
+      "outcome": "Общая железосвязывающая способность сыворотки",
+      "unit": "мкмоль/л",
+      "n_subjects": 6098,
+      "n_subjects_with_ge2": 1547,
+      "stratum_hash": "4cfd0391ce503485fedd7d513e5fdcc9cc1d8baded22e7aa2a96e9b1a5c2f6a5"
+    },
+    {
+      "grain_id": "be26a2a29658d188c2a4fb20",
+      "outcome": "Общий белок",
+      "unit": "г/л",
+      "n_subjects": 14015,
+      "n_subjects_with_ge2": 4890,
+      "stratum_hash": "495a1d14d982e184a9689e9a73f20e0f2093aeda65e33c9b665b86709a31c1c9"
+    },
+    {
+      "grain_id": "05c245639d527f62b630f014",
+      "outcome": "Паратгормон",
+      "unit": "пг/мл",
+      "n_subjects": 1380,
+      "n_subjects_with_ge2": 245,
+      "stratum_hash": "0bca03a701c99f01a8e3d991256a0229ec72ac0b4e2c6418f1eb6d6c2565088f"
+    },
+    {
+      "grain_id": "c3fe06459111b5019a0b9b14",
+      "outcome": "Пролактин",
+      "unit": "мЕд/л",
+      "n_subjects": 1260,
+      "n_subjects_with_ge2": 328,
+      "stratum_hash": "898c5ab5c51f635d94835b76dca670b141bb890f36a24496ac4540a826d84e95"
+    },
+    {
+      "grain_id": "5fc0c793e10ff22e2aba3a80",
+      "outcome": "Пролактин",
+      "unit": "мМЕ/л",
+      "n_subjects": 7468,
+      "n_subjects_with_ge2": 1814,
+      "stratum_hash": "ab97f90138b89ddc8f62a4c5e21f14fdc373eb753e50b79b4ce42b575e616490"
+    },
+    {
+      "grain_id": "567329e3a9b7719315ddfe3f",
+      "outcome": "Пролактин",
+      "unit": "мкМЕ/мл",
+      "n_subjects": 1102,
+      "n_subjects_with_ge2": 267,
+      "stratum_hash": "4842368d59336e39e1d50abc5e8d458c81d809b13611c8ea13f44206ee40e14d"
+    },
+    {
+      "grain_id": "e1694c982e4f944b1779149f",
+      "outcome": "Пролактин",
+      "unit": "нг/мл",
+      "n_subjects": 1399,
+      "n_subjects_with_ge2": 335,
+      "stratum_hash": "7fa3d8873cce227bf020170a227ae75f39e42a21a6af5a5073ae47c69f2c69d4"
+    },
+    {
+      "grain_id": "1556e1ecff27ac6ece7794d3",
+      "outcome": "Распределение эритроцитов по объему (коэфф.вариации) RDW-CV",
+      "unit": "%",
+      "n_subjects": 4239,
+      "n_subjects_with_ge2": 1340,
+      "stratum_hash": "5fc540aae832b7485a804ea1d216d67fb4d4585192458d5c71b6701f16501ad1"
+    },
+    {
+      "grain_id": "0b9fcafe4d76be3c295953ec",
+      "outcome": "Распределение эритроцитов по объему (ст.отклонение) RDW-SD",
+      "unit": "фл",
+      "n_subjects": 3309,
+      "n_subjects_with_ge2": 984,
+      "stratum_hash": "610156a60a4a359d45bb313e43fe9f18484e0d8f892eed844a2651a23776e000"
+    },
+    {
+      "grain_id": "d727af74cc3b67a11a372fbd",
+      "outcome": "СОЭ",
+      "unit": "мм/час",
+      "n_subjects": 12236,
+      "n_subjects_with_ge2": 4514,
+      "stratum_hash": "d61e6f84aa0b2771383fda8f362ea98b7085c4cf1e79dc000185dac7eef7c591"
+    },
+    {
+      "grain_id": "8a3191251bd4795ed0276290",
+      "outcome": "СОЭ (по Вестергрену)",
+      "unit": "мм/час",
+      "n_subjects": 1147,
+      "n_subjects_with_ge2": 266,
+      "stratum_hash": "4ccc986af645d0c218919b8152f6766a122bc873c2ac03d34b3ab0a9520365cc"
+    },
+    {
+      "grain_id": "4b15422c41da270df9565f1d",
+      "outcome": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "unit": "_",
+      "n_subjects": 2397,
+      "n_subjects_with_ge2": 575,
+      "stratum_hash": "06ca6f5258c7d48b6ef6e908681850d57c54e784c63eb3c8fd3cbc318b3b1595"
+    },
+    {
+      "grain_id": "aae7ba9f03903620ebe9c3a9",
+      "outcome": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "unit": "пг/кл",
+      "n_subjects": 3743,
+      "n_subjects_with_ge2": 1020,
+      "stratum_hash": "138107e6e1f97a9e3aa9ffb3e2e97cde531bdfd000e29fd155cf3a617d3a0579"
+    },
+    {
+      "grain_id": "0fe1617240bfd9c9f713cbde",
+      "outcome": "Средний объем эритроцитов (MCV)",
+      "unit": "фл",
+      "n_subjects": 5193,
+      "n_subjects_with_ge2": 1887,
+      "stratum_hash": "06bf85ba5071e16044cf526bd51f95643292a8e4645fb32ae13536dd10ca5d82"
+    },
+    {
+      "grain_id": "0e4e3c20e01290d3c6bffa53",
+      "outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "unit": "г/дл",
+      "n_subjects": 3723,
+      "n_subjects_with_ge2": 1106,
+      "stratum_hash": "7b42e22c33ddb57882bf3fad7a589e7e54f86a78ae112815143ddd6f11e5f238"
+    },
+    {
+      "grain_id": "33a544d0acc02a3b999d2a5b",
+      "outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "unit": "г/л",
+      "n_subjects": 1952,
+      "n_subjects_with_ge2": 572,
+      "stratum_hash": "d9e50689e2d185d9e89e0e56c659b744bc99c9b16242017b6292fe2eaa176f30"
+    },
+    {
+      "grain_id": "c6985486de338084189d3860",
+      "outcome": "С–реактивный белок",
+      "unit": "мг/л",
+      "n_subjects": 3031,
+      "n_subjects_with_ge2": 583,
+      "stratum_hash": "40e8f3115061684992bd688c7e64c1a4e0db1ea266c36e457fe278bbc4c19a03"
+    },
+    {
+      "grain_id": "c67a0f547161327f54d66290",
+      "outcome": "Т3 св.",
+      "unit": "пг/мл",
+      "n_subjects": 1770,
+      "n_subjects_with_ge2": 472,
+      "stratum_hash": "91e29161e74fae1db653baec6b6b5502c83cf485a0bbd3163c21ee46e1de150b"
+    },
+    {
+      "grain_id": "eb3769c87b7e0ee064e5f52e",
+      "outcome": "Т3 св.",
+      "unit": "пмоль/л",
+      "n_subjects": 11307,
+      "n_subjects_with_ge2": 3366,
+      "stratum_hash": "94f916dd2016c5263ef92c057296fcd28ee3e39f9730f20c68e1e2bc26e2cb26"
+    },
+    {
+      "grain_id": "09bcc9e8c8044bac1db8fcb8",
+      "outcome": "Т4 св.",
+      "unit": "нг/дл",
+      "n_subjects": 1798,
+      "n_subjects_with_ge2": 512,
+      "stratum_hash": "18f81af8735c17139cea3de57956b215b4fc53a3dce478a1e37cd2dffdaf00ac"
+    },
+    {
+      "grain_id": "4fa47bfb963e75a77d8917a7",
+      "outcome": "Т4 св.",
+      "unit": "пмоль/л",
+      "n_subjects": 11794,
+      "n_subjects_with_ge2": 3669,
+      "stratum_hash": "5cd7780db7bb12525dea4ad62c562c13b2c2b1049c1598adafc1471729ac4c92"
+    },
+    {
+      "grain_id": "ab651a8ef741ad2f7bb7efe4",
+      "outcome": "ТТГ",
+      "unit": "мЕд/л",
+      "n_subjects": 1808,
+      "n_subjects_with_ge2": 555,
+      "stratum_hash": "33837d0cdf008db2edb1111f3ebf0137e1174470dd49084c6a236ca5c82cc8c5"
+    },
+    {
+      "grain_id": "6cd1eb0a1f482ec93b7b336d",
+      "outcome": "ТТГ",
+      "unit": "мМЕ/л",
+      "n_subjects": 1613,
+      "n_subjects_with_ge2": 401,
+      "stratum_hash": "ae94937f738961808f2b514ac46b2db1453cfa5377376dff3889f89e699f5578"
+    },
+    {
+      "grain_id": "2b3b834bd354cc27cabbcf12",
+      "outcome": "ТТГ",
+      "unit": "мкМЕ/мл",
+      "n_subjects": 11423,
+      "n_subjects_with_ge2": 3773,
+      "stratum_hash": "ff8416b30c52366fea9b20e497ca6cf3f3d4d3ac4975aa164543df35cdb2b31d"
+    },
+    {
+      "grain_id": "081d8285069229b1c5675125",
+      "outcome": "Тестостерон общий",
+      "unit": "нмоль/л",
+      "n_subjects": 5322,
+      "n_subjects_with_ge2": 1022,
+      "stratum_hash": "132285e45f6d2b8a66dc65cd5807d8dcf6cee0e64e3e08f55614f162799a14d1"
+    },
+    {
+      "grain_id": "023fffe24918483998f6ac37",
+      "outcome": "Трансферрин",
+      "unit": "г/л",
+      "n_subjects": 4512,
+      "n_subjects_with_ge2": 1024,
+      "stratum_hash": "68dd204b798bf7db040d27b577a2d6ba27763cc33c497fd60f45fd5b98bedb39"
+    },
+    {
+      "grain_id": "c89daba6243cfa057d39975a",
+      "outcome": "Триглицериды",
+      "unit": "ммоль/л",
+      "n_subjects": 12095,
+      "n_subjects_with_ge2": 3527,
+      "stratum_hash": "7d766897120665de53dd419534b056fc7413588ff589cc6fd231d67d0f01be83"
+    },
+    {
+      "grain_id": "7128dcc839efce2b21632bc4",
+      "outcome": "Тромбоциты",
+      "unit": "*10^9/л",
+      "n_subjects": 13613,
+      "n_subjects_with_ge2": 5293,
+      "stratum_hash": "59e8bbcb0ce8360b79a24d5cb9380d8dd1732dc97879001c09642bea258ecf15"
+    },
+    {
+      "grain_id": "7e59a7d7a621b1a06a811a81",
+      "outcome": "Тромбоциты",
+      "unit": "тыс/мкл",
+      "n_subjects": 1785,
+      "n_subjects_with_ge2": 534,
+      "stratum_hash": "adca347be357bb62c2f27e1ec33813492eae36981a87b2a7e5d895e8a5bc9702"
+    },
+    {
+      "grain_id": "1447348ffe256f6ec66e0f48",
+      "outcome": "ФСГ",
+      "unit": "мМе/мл",
+      "n_subjects": 5275,
+      "n_subjects_with_ge2": 1196,
+      "stratum_hash": "1e1b10ac5ddc51549a315785fc2f2de547ba31db7f3fe918191d9ffc5ea32136"
+    },
+    {
+      "grain_id": "d2fb8ac88f06f219ea557114",
+      "outcome": "Ферритин",
+      "unit": "мкг/л",
+      "n_subjects": 6407,
+      "n_subjects_with_ge2": 2075,
+      "stratum_hash": "db82675be1373e6b6e8d904fd41622fa78967b6b66548b44473ec5505d25a5ff"
+    },
+    {
+      "grain_id": "8f807fe735bfa4f3d20d3543",
+      "outcome": "Ферритин",
+      "unit": "нг/мл",
+      "n_subjects": 9494,
+      "n_subjects_with_ge2": 2582,
+      "stratum_hash": "90a7b0d7017cd6ae17b549cab115a2772174598a832e7aaedc6ed9f73d38a7b9"
+    },
+    {
+      "grain_id": "d45ffcb98dfb4c34cd611335",
+      "outcome": "Фибриноген",
+      "unit": "г/л",
+      "n_subjects": 2397,
+      "n_subjects_with_ge2": 491,
+      "stratum_hash": "6496cdcdcba04c05253f8ffa180edf3cd47d5c805a59c5d7a1979d7d8a43459f"
+    },
+    {
+      "grain_id": "013e06b8c48aedf9c1224fe1",
+      "outcome": "Фруктозамин",
+      "unit": "мкмоль/л",
+      "n_subjects": 2309,
+      "n_subjects_with_ge2": 557,
+      "stratum_hash": "a0afd9c9ae36a063a1a87e06bf93498a973d1a6c41b959923077c33c746fba35"
+    },
+    {
+      "grain_id": "1491d981e846918085276594",
+      "outcome": "Холестерин общий",
+      "unit": "ммоль/л",
+      "n_subjects": 2454,
+      "n_subjects_with_ge2": 391,
+      "stratum_hash": "6330a54880a0b79e3cd3b87f2d4127a034f81d8b0e9f2fddc9ce6943ef2746f8"
+    },
+    {
+      "grain_id": "d199b56c10bc09b36195156f",
+      "outcome": "Цветной показатель",
+      "unit": "_",
+      "n_subjects": 7594,
+      "n_subjects_with_ge2": 1862,
+      "stratum_hash": "9a61f958cb274a59799d35e067df0c199536fe7041d89c5de04984e0f67e4fe0"
+    },
+    {
+      "grain_id": "914915c57af794624367b9b9",
+      "outcome": "Цинк",
+      "unit": "мкмоль/л",
+      "n_subjects": 4405,
+      "n_subjects_with_ge2": 861,
+      "stratum_hash": "35d1137777e3983d67b66a447b3cb6f4252f22d235b3c9fb352ecf4d827a6b76"
+    },
+    {
+      "grain_id": "809de8830b2e3d96c6ee09d0",
+      "outcome": "Щелочная фосфатаза",
+      "unit": "Ед/л",
+      "n_subjects": 2513,
+      "n_subjects_with_ge2": 363,
+      "stratum_hash": "20da180dff7ffcbad2e2706ad7581f8e995a5bdd51176dcc9cc8c7d3b8a98cad"
+    },
+    {
+      "grain_id": "a2bd145402b2684def8e6db5",
+      "outcome": "Эозинофилы",
+      "unit": "%",
+      "n_subjects": 14191,
+      "n_subjects_with_ge2": 5713,
+      "stratum_hash": "497d3ba4be863f93ee9734ebd915dba0632e84914ef8e4135aa1b6ca89ecda52"
+    },
+    {
+      "grain_id": "4c311d84671db627ac9a94ec",
+      "outcome": "Эозинофильный катионный белок",
+      "unit": "мкг/л",
+      "n_subjects": 1764,
+      "n_subjects_with_ge2": 269,
+      "stratum_hash": "0746540d2423724b42b048100c83ec2bb9662618cd136c32e1757b95c7372b68"
+    },
+    {
+      "grain_id": "5fa5ffd9eb930281043cba75",
+      "outcome": "Эозинофильный катионный белок",
+      "unit": "нг/мл",
+      "n_subjects": 1906,
+      "n_subjects_with_ge2": 342,
+      "stratum_hash": "e7f3a4ae111e125d945b6e82004d456ea0786ed408b0f7c452a5bf00f2b46fd9"
+    },
+    {
+      "grain_id": "acb0477d681443ba75e343d3",
+      "outcome": "Эритроциты",
+      "unit": "*10^12/л",
+      "n_subjects": 13616,
+      "n_subjects_with_ge2": 5306,
+      "stratum_hash": "ea4eee3f15d67bf850bc9bd1969eff84d9c42eea848e332ecba24671f7041fa1"
+    },
+    {
+      "grain_id": "6b9ad16512760f31c435f2a1",
+      "outcome": "Эритроциты",
+      "unit": "млн/мкл",
+      "n_subjects": 1781,
+      "n_subjects_with_ge2": 551,
+      "stratum_hash": "d88827c61596af8eb9099f5160b35f229f7e7158ed070c8008131f2d0955049b"
+    },
+    {
+      "grain_id": "d5674894adfb3f3d4dbc3204",
+      "outcome": "Эстрадиол",
+      "unit": "пг/мл",
+      "n_subjects": 2916,
+      "n_subjects_with_ge2": 626,
+      "stratum_hash": "5852645d9b699dadd7327bd8ff661a597ffc0a7d866b08ac0ef5099b8081a711"
+    },
+    {
+      "grain_id": "c6a8f217199dc47380a99307",
+      "outcome": "Эстрадиол",
+      "unit": "пмоль/л",
+      "n_subjects": 3549,
+      "n_subjects_with_ge2": 663,
+      "stratum_hash": "8e5c0f7f6414d140266a8fd5fe785d6813e5fff08d8c2f4d3001e56a55b9bd5b"
+    }
+  ]
+}

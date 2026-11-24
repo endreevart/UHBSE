@@ -1,0 +1,131 @@
+{
+  "started_at": "2026-08-18T14:55:46Z",
+  "finished_at": "2026-08-18T14:55:46Z",
+  "source_a_full_canonical_population_status": "PASS",
+  "source_a_idempotency_status": "PASS",
+  "n_account_patient": 43856,
+  "n_already_present_subjects_at_start": 43856,
+  "n_missing_at_start": 0,
+  "n_still_missing_subjects": 0,
+  "n_batches_total": 0,
+  "n_batches_completed": 0,
+  "complete": true,
+  "truncated_rows_total": 0,
+  "relation_accounting": {
+    "account_patient": {
+      "runtime_count": 43856,
+      "candidate_count": 0,
+      "eligible_count": 0,
+      "loaded_count": 0,
+      "source_record_count": 0,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0,
+      "already_present_rows": 43856
+    },
+    "appointment_appointment": {
+      "runtime_count": 0,
+      "candidate_count": 0,
+      "eligible_count": 0,
+      "loaded_count": 0,
+      "source_record_count": 0,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    },
+    "document_analysisresult": {
+      "runtime_count": 0,
+      "candidate_count": 0,
+      "eligible_count": 0,
+      "loaded_count": 0,
+      "source_record_count": 0,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    },
+    "document_analysisresultitem": {
+      "runtime_count": 0,
+      "candidate_count": 0,
+      "eligible_count": 0,
+      "loaded_count": 0,
+      "source_record_count": 0,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    }
+  },
+  "reject_totals": {},
+  "inserted_totals": {},
+  "eligibility_snapshot": {
+    "subjects_total": 43856,
+    "subjects_appt3_and_lab": 8262,
+    "note": "canonical_population != scientific_cohort"
+  },
+  "source_relation_snapshot": {
+    "account_patient": 43856,
+    "appointment_appointment": 68128,
+    "document_analysisresult": 874492,
+    "document_analysisresultitem": 1372259,
+    "diagnosis_medicineappointments": 25726
+  },
+  "opaque_population_fingerprint": "f8c0c4f673441a8432d2b629f7e42a71da6471650a82b4396ea095b570f40e18",
+  "batches_processed_this_run": 0,
+  "batch_size": 500,
+  "workers": 1,
+  "skip_existing_enabled": true,
+  "note": "expand skipped for new inserts; coverage verified complete via checkpoint",
+  "relation_accounting_publication": {
+    "account_patient": {
+      "source_rows_considered": 43856,
+      "candidate_rows": 0,
+      "inserted_rows": 0,
+      "already_present_rows": 43856,
+      "rejected_rows": 0,
+      "unsupported_rows": 0,
+      "quarantined_rows": 0,
+      "truncated_rows": 0,
+      "unexplained_rows": 0
+    },
+    "appointment_appointment": {
+      "source_rows_considered": 0,
+      "candidate_rows": 0,
+      "inserted_rows": 0,
+      "already_present_rows": 0,
+      "rejected_rows": 0,
+      "unsupported_rows": 0,
+      "quarantined_rows": 0,
+      "truncated_rows": 0,
+      "unexplained_rows": 0
+    },
+    "document_analysisresult": {
+      "source_rows_considered": 0,
+      "candidate_rows": 0,
+      "inserted_rows": 0,
+      "already_present_rows": 0,
+      "rejected_rows": 0,
+      "unsupported_rows": 0,
+      "quarantined_rows": 0,
+      "truncated_rows": 0,
+      "unexplained_rows": 0
+    },
+    "document_analysisresultitem": {
+      "source_rows_considered": 0,
+      "candidate_rows": 0,
+      "inserted_rows": 0,
+      "already_present_rows": 0,
+      "rejected_rows": 0,
+      "unsupported_rows": 0,
+      "quarantined_rows": 0,
+      "truncated_rows": 0,
+      "unexplained_rows": 0
+    }
+  }
+}

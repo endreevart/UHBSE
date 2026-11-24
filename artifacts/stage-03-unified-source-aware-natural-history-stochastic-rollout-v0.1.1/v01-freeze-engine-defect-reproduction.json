@@ -1,0 +1,31 @@
+{
+  "version": "0.1.1",
+  "V01_FREEZE_COMPLETENESS_STATUS": "INCOMPLETE",
+  "V01_ENGINE_REAL_STATE_CONTRACT_STATUS": "SCALAR_T0_SYNTHETIC_HISTORY",
+  "V01_ENGINE_REQUESTED_HORIZON_IDENTITY_STATUS": "FAIL_N_STEPS_TIMES_H",
+  "V01_MODEL_IDENTITY_STATUS": "P1_PAYLOAD_NOT_ACTIVE_RUNTIME",
+  "freeze": {
+    "covers_frozen_glob_and_train_parquet": true,
+    "omits_pre_test_cells": true,
+    "self_hash_rewritten": true,
+    "self_hash_not_validated": true
+  },
+  "engine": {
+    "simulate_paths_default_n_steps_2": true,
+    "repeats_same_horizon": true,
+    "request_90_endpoint_is_180": true,
+    "scalar_t0_value_only": true,
+    "synthetic_history_depth_1": true,
+    "identity_hash_optional": true,
+    "feature_vector_length_checked_but_unused": true,
+    "in_memory_cells_full": true,
+    "vary_or_true": true
+  },
+  "identity": {
+    "identity_is_p1_payload_only": true,
+    "p0_cells_publish_p1_identity": true,
+    "n_p0_active": 8,
+    "omits_active_provider_residual_horizon": true
+  },
+  "ok": true
+}

@@ -1,0 +1,246 @@
+{
+  "CLINICAL_SOURCE_CONNECTOR_COUNT": 2,
+  "CLINICAL_SOURCE_SYSTEM_COUNT": 2,
+  "ESKLP_CONNECTOR_STATUS": "CONNECTED_FROZEN_SNAPSHOT",
+  "FROZEN_MODEL_REGISTRY_COUNT": 2,
+  "MATERIALIZED_LAYER_COUNT": 2,
+  "MODEL_PROVIDER_REGISTRY_COUNT": 2,
+  "REFERENCE_SOURCE_CONNECTOR_COUNT": 1,
+  "SOURCE_A_CONNECTOR_STATUS": "CONNECTED_MATERIALIZED_READ_ONLY",
+  "SOURCE_B_CONNECTOR_STATUS": "CONNECTED_MATERIALIZED_READ_ONLY",
+  "SOURCE_CONNECTOR_FILTERED_READ_STATUS": "PASS",
+  "SOURCE_CONNECTOR_REGISTRY_STATUS": "BUILT",
+  "clinical": [
+    {
+      "availability_status": "CONNECTED_MATERIALIZED_READ_ONLY",
+      "category": "clinical_research_data",
+      "contains_patient_data": true,
+      "health": {
+        "expected_source_present": true,
+        "filter_contract": "source_system == magerya_api",
+        "foreign_source_not_returned_as_this_connector": true,
+        "n_distinct_sources": 1,
+        "n_rows_expected_source": 1158631,
+        "n_rows_other_sources": 0,
+        "n_rows_returned": 1158631,
+        "ok": true,
+        "read_is_source_filtered": true,
+        "row_values_disclosed": false,
+        "shared_parquet_snapshot": true
+      },
+      "last_verified_at": "2026-09-20T12:15:36.818504+00:00",
+      "not_raw_database_connector": true,
+      "ok": true,
+      "outbound_transfer_allowed": false,
+      "provenance": {
+        "category": "clinical_research_data"
+      },
+      "schema_contract": "unified-research-layer-v0.3.1/research_observation_component.source_system==magerya_api",
+      "snapshot_sha256": "2383521b0492744b82c2c19161d07df0b71ae80e2c2c4df76887d57d80733c34",
+      "source_id": "source_a_clinical_research_plane",
+      "source_system": "magerya_api",
+      "source_type": "clinical_research_plane"
+    },
+    {
+      "availability_status": "CONNECTED_MATERIALIZED_READ_ONLY",
+      "category": "clinical_research_data",
+      "contains_patient_data": true,
+      "health": {
+        "expected_source_present": true,
+        "filter_contract": "source_system == kgz_raw",
+        "foreign_source_not_returned_as_this_connector": true,
+        "n_distinct_sources": 1,
+        "n_rows_expected_source": 2132978,
+        "n_rows_other_sources": 0,
+        "n_rows_returned": 2132978,
+        "ok": true,
+        "read_is_source_filtered": true,
+        "row_values_disclosed": false,
+        "shared_parquet_snapshot": true
+      },
+      "last_verified_at": "2026-09-20T12:15:36.984335+00:00",
+      "not_raw_database_connector": true,
+      "ok": true,
+      "outbound_transfer_allowed": false,
+      "provenance": {
+        "category": "clinical_research_data"
+      },
+      "schema_contract": "unified-research-layer-v0.3.1/research_observation_component.source_system==kgz_raw",
+      "snapshot_sha256": "2383521b0492744b82c2c19161d07df0b71ae80e2c2c4df76887d57d80733c34",
+      "source_id": "source_b_clinical_research_plane",
+      "source_system": "kgz_raw",
+      "source_type": "clinical_research_plane"
+    }
+  ],
+  "future_not_configured": [
+    {
+      "availability_status": "NOT_CONFIGURED",
+      "category": "reference_knowledge",
+      "connected": false,
+      "health": {
+        "detail": "intentionally unconnected",
+        "ok": true
+      },
+      "ok": true,
+      "source_id": "laboratory_reference_ontology"
+    },
+    {
+      "availability_status": "NOT_CONFIGURED",
+      "category": "reference_knowledge",
+      "connected": false,
+      "health": {
+        "detail": "intentionally unconnected",
+        "ok": true
+      },
+      "ok": true,
+      "source_id": "drug_labels"
+    },
+    {
+      "availability_status": "NOT_CONFIGURED",
+      "category": "reference_knowledge",
+      "connected": false,
+      "health": {
+        "detail": "intentionally unconnected",
+        "ok": true
+      },
+      "ok": true,
+      "source_id": "supplements"
+    },
+    {
+      "availability_status": "NOT_CONFIGURED",
+      "category": "reference_knowledge",
+      "connected": false,
+      "health": {
+        "detail": "intentionally unconnected",
+        "ok": true
+      },
+      "ok": true,
+      "source_id": "nutrition"
+    },
+    {
+      "availability_status": "NOT_CONFIGURED",
+      "category": "reference_knowledge",
+      "connected": false,
+      "health": {
+        "detail": "intentionally unconnected",
+        "ok": true
+      },
+      "ok": true,
+      "source_id": "activity_wearables"
+    },
+    {
+      "availability_status": "NOT_CONFIGURED",
+      "category": "reference_knowledge",
+      "connected": false,
+      "health": {
+        "detail": "intentionally unconnected",
+        "ok": true
+      },
+      "ok": true,
+      "source_id": "diagnoses_anamnesis"
+    },
+    {
+      "availability_status": "NOT_CONFIGURED",
+      "category": "reference_knowledge",
+      "connected": false,
+      "health": {
+        "detail": "intentionally unconnected",
+        "ok": true
+      },
+      "ok": true,
+      "source_id": "biomedical_knowledge"
+    },
+    {
+      "availability_status": "NOT_CONFIGURED",
+      "category": "reference_knowledge",
+      "connected": false,
+      "health": {
+        "detail": "intentionally unconnected",
+        "ok": true
+      },
+      "ok": true,
+      "source_id": "external_governed_validation_datasets"
+    }
+  ],
+  "identity": "72bfd173357eb36e82e4790423142e4309c1fded4e7de215d749abbf19d491a4",
+  "materialized_layers": [
+    {
+      "availability_status": "CONNECTED_MATERIALIZED_READ_ONLY",
+      "category": "materialized_layer",
+      "layer_id": "unified_materialized_state_layer",
+      "not_an_independent_clinical_source": true,
+      "snapshot_sha256": "bab35969a21c5fa5d86126a86e013a3608f080bab485bd7320dd792d40c43b67"
+    },
+    {
+      "availability_status": "CONNECTED_MATERIALIZED_READ_ONLY",
+      "category": "materialized_layer",
+      "layer_id": "unified_research_observation_component",
+      "not_an_independent_clinical_source": true,
+      "shared_by_source_a_and_source_b": true,
+      "snapshot_sha256": "2383521b0492744b82c2c19161d07df0b71ae80e2c2c4df76887d57d80733c34"
+    }
+  ],
+  "model_providers": [
+    {
+      "availability_status": "CONNECTED_FROZEN_SNAPSHOT",
+      "category": "frozen_model_provider",
+      "contains_patient_data": false,
+      "execution_not_implied_by_registry": true,
+      "health": {
+        "ok": true,
+        "row_values_disclosed": false
+      },
+      "last_verified_at": "2026-09-20T12:15:37.120749+00:00",
+      "ok": true,
+      "provenance": {
+        "category": "frozen_model_provider"
+      },
+      "schema_contract": "natural-history-rollout-v011/pre-test-cells.json",
+      "snapshot_sha256": "6046a09d2e1a68cc00898ed953a4db4947c2ee1614d9a7803e9512cf2fbdcff1",
+      "source_id": "frozen_natural_history_marginal_providers"
+    },
+    {
+      "availability_status": "CONNECTED_FROZEN_SNAPSHOT",
+      "category": "frozen_model_provider",
+      "execution_not_implied_by_registry": true,
+      "health": {
+        "ok": true,
+        "row_values_disclosed": false
+      },
+      "last_verified_at": "2026-09-20T12:15:37.121017+00:00",
+      "ok": true,
+      "provenance": {
+        "category": "frozen_model_provider"
+      },
+      "schema_contract": "accepted-probability-registry-public.json",
+      "snapshot_sha256": "f567e921f5c2bbd438d7951d788da4aaf258d8683ed7fac318dd6ba1aeaf7490",
+      "source_id": "frozen_probability_provider_v0211"
+    }
+  ],
+  "model_providers_not_counted_as_clinical_sources": true,
+  "reference": [
+    {
+      "availability_status": "CONNECTED_FROZEN_SNAPSHOT",
+      "category": "reference_knowledge",
+      "contains_patient_data": false,
+      "health": {
+        "index_present": true,
+        "ok": true,
+        "row_values_disclosed": false
+      },
+      "last_verified_at": "2026-09-20T12:15:37.114101+00:00",
+      "ok": true,
+      "provenance": {
+        "category": "reference_knowledge"
+      },
+      "schema_contract": "esklp-archive-and-index.json",
+      "scientifically_usable_medication_mapping": false,
+      "snapshot_sha256": "c7ec99bffe4463fff355d5fe7782da9b15db287292be8fc5a2c187d177a5fa8e",
+      "source_id": "esklp_private_snapshot_index"
+    }
+  ],
+  "separate_source_a_probe": true,
+  "separate_source_b_probe": true,
+  "unified_layer_not_a_third_clinical_source": true,
+  "version": "0.1.2"
+}

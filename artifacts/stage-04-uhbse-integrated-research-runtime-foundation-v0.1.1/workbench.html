@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>UHBSE Research Workbench v0.1.1</title>
+<style>
+:root { --ink:#1b1b1b; --lab:#f1f5f8; --warn:#8a1f1f; --a:#2c4a6e; --b:#6a4a2c; }
+body { margin:0; font:15px/1.45 ui-sans-serif,system-ui; color:var(--ink); }
+header { padding:1rem 1.5rem; border-bottom:1px solid #ddd; }
+.warn { background:#fff3f1; color:var(--warn); padding:.75rem 1.5rem; font-weight:600; }
+nav { display:flex; flex-wrap:wrap; gap:.6rem 1rem; padding:1rem 1.5rem; background:var(--lab); }
+section { padding:1.2rem 1.5rem; border-bottom:1px solid #eee; }
+.chip { display:inline-block; padding:.15rem .5rem; border:1px solid #ccc; margin-right:.4rem; }
+.source-a { color:var(--a); border-color:var(--a); }
+.source-b { color:var(--b); border-color:var(--b); }
+.sandbox { outline:2px dashed #6a4a2c; background:#fbf7f1; }
+pre { background:#f7f7f7; padding:.75rem; overflow:auto; }
+button { margin:.25rem .4rem .25rem 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>UHBSE Integrated Research Runtime v0.1.1</h1>
+  <p>Default mode: <strong>SYNTHETIC_FIXTURE</strong>. Bind 127.0.0.1. Not production.</p>
+</header>
+<div class="warn">Not a clinical product. D1 is not accepted. Output is a distribution at one requested horizon, not a coherent trajectory.</div>
+<nav><a href="#s1">Sources</a><a href="#s2">Individual State</a><a href="#s3">Longitudinal History</a><a href="#s4">Natural-History Forecast</a><a href="#s5">Event Probability</a><a href="#s6">Joint Outcome Distribution</a><a href="#s7">Classifier Evidence</a><a href="#s8">QSP/PKPD Synthetic Sandbox</a><a href="#s9">Applicability and Abstention</a><a href="#s10">Provenance and Model Evidence</a><a href="#s11">Deterministic Replay</a><a href="#s12">External Validation Readiness</a></nav>
+<section id="s1"><h2>1. Sources</h2>
+  <p><span class="chip source-a">Source A</span> distinct from <span class="chip source-b">Source B</span>.</p>
+  <pre id="sources-out">loading…</pre>
+</section>
+<section id="s2"><h2>2. Individual State</h2>
+  <label>alpha <input id="alpha" type="number" value="1"/></label>
+  <label>beta <input id="beta" type="number" value="2"/></label>
+</section>
+<section id="s3"><h2>3. Longitudinal History</h2>
+  <p>Synthetic history depth is derived from the t0 state. Units shown on every outcome.</p>
+</section>
+<section id="s4"><h2>4. Natural-History Forecast</h2>
+  <button id="btn-nh" type="button">Run forecast</button>
+  <pre id="nh-out"></pre>
+</section>
+<section id="s5"><h2>5. Event Probability</h2>
+  <button id="btn-ev" type="button">Run event probability</button>
+  <pre id="ev-out"></pre>
+</section>
+<section id="s6"><h2>6. Joint Outcome Distribution</h2>
+  <p>Route D0. D1 unavailable because accepted route count = 0.</p>
+  <button id="btn-jd" type="button">Run joint distribution</button>
+  <pre id="jd-out"></pre>
+</section>
+<section id="s7"><h2>7. Classifier Evidence</h2>
+  <p>TRAJECTORY_EVENT_CLASSIFIER_STATUS=EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_SIGNAL. Not a diagnosis. Decision log is REVIEW_VIEW_ONLY.</p>
+</section>
+<section id="s8" class="sandbox"><h2>8. QSP/PKPD Synthetic Sandbox</h2>
+  <p>Visually separated from patient natural history. Synthetic only.</p>
+  <button id="btn-qsp" type="button">Run synthetic QSP</button>
+  <pre id="qsp-out"></pre>
+</section>
+<section id="s9"><h2>9. Applicability and Abstention</h2>
+  <pre id="abs-out">Abstention and hashes appear in forecast responses.</pre>
+</section>
+<section id="s10"><h2>10. Provenance and Model Evidence</h2>
+  <pre id="models-out">loading…</pre>
+</section>
+<section id="s11"><h2>11. Deterministic Replay</h2>
+  <button id="btn-rp" type="button">Replay same state/seed</button>
+  <pre id="rp-out"></pre>
+</section>
+<section id="s12"><h2>12. External Validation Readiness</h2>
+  <p>OWNER_REPORTED_IROS_CONTACT_STATUS=RESPONSE_RECEIVED_PENDING_REPOSITORY_EVIDENCE. AUTOMATED_EXTERNAL_CONTACT_STATUS=NOT_RUN. IROS_PROVIDER_COMMITMENT_STATUS=NOT_ESTABLISHED.</p>
+</section>
+<script>
+const API = '';
+async function jget(p) {
+  const r = await fetch(API + p);
+  return r.json();
+}
+async function jpost(p, body) {
+  const r = await fetch(API + p, { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body) });
+  return r.json();
+}
+function commonBody() {
+  const a = Number(document.getElementById('alpha').value);
+  const b = Number(document.getElementById('beta').value);
+  return {
+    source_system: 'synthetic',
+    requested_horizon_days: 90,
+    outcome_keys: ['SYN::alpha::au', 'SYN::beta::au'],
+    state_at_t0: { 'SYN::alpha::au': a, 'SYN::beta::au': b, history_depth: 2 },
+    cutoff_t0: 'synthetic-t0',
+    model_id: window.__foHash,
+    feature_order_sha256: window.__foHash,
+    n_paths: 8,
+    seed: 42,
+    replay_key: 'workbench'
+  };
+}
+async function boot() {
+  const h = await jget('/health');
+  const s = await jget('/research/sources');
+  const m = await jget('/research/models');
+  window.__foHash = m.feature_order_sha256;
+  document.getElementById('sources-out').textContent = JSON.stringify({ health: h, sources: s }, null, 2);
+  document.getElementById('models-out').textContent = JSON.stringify(m, null, 2);
+}
+document.getElementById('btn-nh').onclick = async () => {
+  const out = await jpost('/research/natural-history/forecast', commonBody());
+  document.getElementById('nh-out').textContent = JSON.stringify(out, null, 2);
+  document.getElementById('abs-out').textContent = JSON.stringify({ status: out.status, reason: out.reason, hashes: out.feature_order_sha256, d1: out.D1_JOINT_DEPENDENCE_STATUS }, null, 2);
+};
+document.getElementById('btn-ev').onclick = async () => {
+  const b = commonBody();
+  b.endpoint = 'TIME_TO_NEXT_LAB_PANEL';
+  b.model_id = 'synthetic-lep-fixture-v011';
+  document.getElementById('ev-out').textContent = JSON.stringify(await jpost('/research/event-probability', b), null, 2);
+};
+document.getElementById('btn-jd').onclick = async () => {
+  document.getElementById('jd-out').textContent = JSON.stringify(await jpost('/research/joint-outcome-distribution', commonBody()), null, 2);
+};
+document.getElementById('btn-qsp').onclick = async () => {
+  document.getElementById('qsp-out').textContent = JSON.stringify(await jpost('/research/qsp/reference-run', { model_id: 'SYNTHETIC_REFERENCE_COMPOUND_X_PKPD', synthetic_only: true }), null, 2);
+};
+document.getElementById('btn-rp').onclick = async () => {
+  const b = commonBody();
+  const a = await jpost('/research/replay', b);
+  const c = await jpost('/research/replay', b);
+  document.getElementById('rp-out').textContent = JSON.stringify({ same_median: JSON.stringify(a.per_outcome) === JSON.stringify(c.per_outcome), a, hashes: a.feature_order_sha256 }, null, 2);
+};
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+{
+  "version": "0.1.1",
+  "V01_ROLLOUT_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "V01_ONE_STEP_HELDOUT_CLAIM_STATUS": "NOT_ACCEPTED_FINITE_ONLY",
+  "V01_RECURSIVE_ACCEPTANCE_RECONCILIATION_STATUS": "PASS",
+  "V01_HORIZON_ALIGNMENT_STATUS": "DEFECT_MIXED_HORIZON_STEPS",
+  "V01_FUTURE_SCHEDULE_LEAKAGE_STATUS": "DEFECT_FUTURE_INTERVALS_IN_FEATURES",
+  "V01_ENGINE_REQUESTED_HORIZON_IDENTITY_STATUS": "FAIL_N_STEPS_TIMES_H",
+  "V01_FREEZE_COMPLETENESS_STATUS": "INCOMPLETE",
+  "V01_MODEL_IDENTITY_STATUS": "P1_PAYLOAD_NOT_ACTIVE_RUNTIME",
+  "V01_ENGINE_REAL_STATE_CONTRACT_STATUS": "SCALAR_T0_SYNTHETIC_HISTORY",
+  "V01_BOOTSTRAP_STATUS": "SUBJECT_GROUPING_LABELLED_OVERLAP",
+  "V01_RESIDUAL_PROCESS_STATUS": "PREFIX_INDEPENDENT_NOT_BLOCK",
+  "V01_MULTI_OUTCOME_EVIDENCE_STATUS": "DEMO_ONLY_A_DEMO_U",
+  "PRIOR_ROLLOUT_SEQUENCE_DATASET_STATUS": "ACCEPTED_TECHNICAL_INPUT_AFTER_RECONCILIATION",
+  "PRIOR_ONE_STEP_HELDOUT_CONFIRMATION_STATUS": "NOT_ACCEPTED_FINITE_ONLY",
+  "PRIOR_RECURSIVE_ROLLOUT_FOUNDATION_STATUS": "NOT_ACCEPTED_HORIZON_AND_FREEZE_DEFECTS",
+  "PRIOR_ENGINE_ROLLOUT_STATUS": "NOT_ACCEPTED_HORIZON_IDENTITY_AND_STATE_CONTRACT_DEFECTS",
+  "PRIOR_NATURAL_HISTORY_ROLLOUT_FOUNDATION_STATUS": "CORRECTION_REQUIRED",
+  "grain_cell_terminology": {
+    "v01_inventory_n_grains": 24,
+    "v01_cells": 96,
+    "v01_48_plus_48_were_cells_not_grains": true
+  },
+  "one_step": {
+    "data_gate_implies_accepted": true,
+    "heldout_finite_only": true,
+    "ONE_STEP_HELDOUT_CONFIRMED_CELL_COUNT_v01": 84,
+    "cannot_transfer_as_quality_confirmation": true
+  },
+  "horizon": {
+    "seq_match_any_step_in_horizon": true,
+    "evaluate_up_to_four_steps": true,
+    "requested_horizon_from_future_step": true,
+    "future_intervals_in_features": true,
+    "not_future_value_leak_in_recursive": true,
+    "future_schedule_leakage": true,
+    "backtest_not_engine_fixed_grid": true
+  },
+  "engine": {
+    "simulate_paths_default_n_steps_2": true,
+    "repeats_same_horizon": true,
+    "request_90_endpoint_is_180": true,
+    "scalar_t0_value_only": true,
+    "synthetic_history_depth_1": true,
+    "identity_hash_optional": true,
+    "feature_vector_length_checked_but_unused": true,
+    "in_memory_cells_full": true,
+    "vary_or_true": true
+  },
+  "freeze": {
+    "covers_frozen_glob_and_train_parquet": true,
+    "omits_pre_test_cells": true,
+    "self_hash_rewritten": true,
+    "self_hash_not_validated": true
+  },
+  "identity": {
+    "identity_is_p1_payload_only": true,
+    "p0_cells_publish_p1_identity": true,
+    "n_p0_active": 8,
+    "omits_active_provider_residual_horizon": true
+  },
+  "residuals": {
+    "bootstrap_groups_by_subject": true,
+    "public_label_overlap_group_or_subject": true,
+    "residual_prefix_4000": true,
+    "independent_step_sample": true,
+    "method_name_subject_block_compatible": true,
+    "rollout_rng_none": true,
+    "not_actual_block_sampling": true
+  },
+  "multi_outcome_demo": true,
+  "demo_outcome_key_present": true,
+  "reconciliation": {
+    "n_grains": 24,
+    "grains_A": 12,
+    "grains_B": 12,
+    "n_cells": 96,
+    "cells_are_not_grains": true,
+    "one_step": {
+      "NOT_RUN_FAILED_DATA_GATE": 12,
+      "ONE_STEP_VALIDATION_ACCEPTED": 84
+    },
+    "heldout": {
+      "NOT_RUN_FAILED_DATA_GATE": 12,
+      "HELDOUT_TEST_CONFIRMED": 84
+    },
+    "validation_rollout": {
+      "NOT_RUN_FAILED_SEQUENCE_GATE": 12,
+      "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_SIGNAL": 3,
+      "STOCHASTIC_ROLLOUT_CELL_ACCEPTED": 79,
+      "EVALUATED_NOT_ACCEPTED_RECURSIVE_DEGRADATION": 2
+    },
+    "test_rollout": {
+      "None": 12,
+      "STOCHASTIC_ROLLOUT_CELL_ACCEPTED": 80,
+      "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_SIGNAL": 2,
+      "EVALUATED_NOT_ACCEPTED_RECURSIVE_DEGRADATION": 2
+    },
+    "validation_accepted": 79,
+    "test_accepted": 80,
+    "intersection": 76,
+    "validation_accepted_not_test": 3,
+    "test_accepted_not_validation": 4,
+    "active_among_one_step": {
+      "P1": 76,
+      "P0": 8
+    },
+    "unexplained_count_inventory": 134,
+    "sequence_accounting_pass_despite_unexplained": true
+  },
+  "do_not_rewrite_v01_zip": true,
+  "ok": true
+}

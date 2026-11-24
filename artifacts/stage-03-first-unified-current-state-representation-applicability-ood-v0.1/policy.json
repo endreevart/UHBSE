@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "model_name": "UnifiedSourceAwareStateEncoderV01",
+  "no_a_b_semantic_merge": true,
+  "no_unit_conversion": true,
+  "no_clinical_current_state_classifier": true,
+  "no_medication_residual": true,
+  "prior_m2_not_accepted_foundation": true,
+  "DOMAIN_ACCEPTED_MAPPING_COUNT_default": 0,
+  "SCIENTIFIC_CROSS_SOURCE_PASS": false,
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "seed": 42,
+  "vocabulary_thresholds": {
+    "MIN_TRAIN_SUBJECTS": 100,
+    "MIN_TRAIN_TARGETS": 300,
+    "MIN_VAL_SUBJECTS": 20,
+    "MIN_TEST_SUBJECTS": 30
+  },
+  "outcome_channels": [
+    "last_norm",
+    "mask",
+    "time_since",
+    "n_prior",
+    "prev_norm",
+    "delta_norm",
+    "slope_norm",
+    "var_norm"
+  ]
+}

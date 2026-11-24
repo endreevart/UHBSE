@@ -1,0 +1,15 @@
+{
+  "eligibility": {
+    "subjects_total": 43856,
+    "subjects_appt_ge2": 13301,
+    "subjects_appt_ge3": 8588,
+    "subjects_appt_ge4": 6050,
+    "subjects_with_lab": 18232,
+    "subjects_appt3_and_lab": 8262,
+    "subjects_appt3_lab3": 8209
+  },
+  "selected_domain": "document_analysisresult + appointment_appointment",
+  "selection_rule": "n_appt>=3 AND n_lab>=1 ORDER BY density DESC",
+  "default_subject_limit": 100,
+  "requested_limit": 100
+}

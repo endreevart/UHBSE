@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "CURRENT_STATE_TENSOR_STATUS": "BUILT",
+  "CURRENT_STATE_FEATURE_CONTRACT_STATUS": "PASS",
+  "CURRENT_STATE_TEMPORAL_LEAKAGE_STATUS": "PASS",
+  "CURRENT_STATE_MISSINGNESS_CONTRACT_STATUS": "PASS",
+  "n_tensors": 73806,
+  "n_outcomes": 308,
+  "n_matched_cutoffs": 70815,
+  "n_unmatched_panel_cutoffs": 22,
+  "feature_contract": {
+    "per_outcome_channels": [
+      "last_norm",
+      "mask",
+      "time_since",
+      "n_prior",
+      "prev_norm",
+      "delta_norm",
+      "slope_norm",
+      "var_norm"
+    ],
+    "no_mixed_analyte_unit_scalar": true,
+    "train_only_scalers": true,
+    "missing_mask_separate": true,
+    "same_policy_all_roles": true,
+    "no_post_cutoff_features": true
+  },
+  "ok": true
+}

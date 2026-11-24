@@ -1,0 +1,38 @@
+{
+  "version": "0.1",
+  "source_a_subjects": 43856,
+  "source_b_subjects": 49564,
+  "accepted_comparable_outcomes": 0,
+  "mapping_status_counts": {
+    "UNKNOWN": 90,
+    "HYPOTHESIS": 8
+  },
+  "b_inventory_counts": {
+    "subjects": 49564,
+    "encounters": 88867,
+    "observations": 59741,
+    "components": 2132978,
+    "dated_numeric_observations": 1753362,
+    "subject_outcome_unit_with_ge2": 315968,
+    "unsupported_or_non_numeric_with_raw_text": 379616
+  },
+  "b_split": {
+    "total": 49564,
+    "train": 34779,
+    "validation": 7463,
+    "test": 7322
+  },
+  "zero_shot_status": "NOT_RUN_NO_ACCEPTED_MAPPINGS",
+  "partial_support_gap": 884,
+  "same_timestamp_preselection_groups": 1210,
+  "t3_pairs": {
+    "n_subjects_with_pairs": 3217,
+    "n_strict_consecutive_pairs": 6065,
+    "horizon_days": {
+      "n": 6065,
+      "min": 0.007361111111111111,
+      "max": 700761.8531712963,
+      "median": 115.21173611111111
+    }
+  }
+}

@@ -1,0 +1,31 @@
+# UHBSE Integrated Research Runtime Foundation v0.1.1
+
+Report status: FINAL
+
+State-conditioned end-to-end composition. Not a clinical product. Not production.
+Single-horizon output is a source-specific joint outcome distribution, not a trajectory.
+
+## Phase 0 v0.1 defects
+
+- `V01_ENGINE_STATE_CONDITIONING_DEFECT_STATUS`=CONFIRMED
+- `V01_ENGINE_RESIDUAL_ONLY_OUTPUT_DEFECT_STATUS`=CONFIRMED
+- `V01_HTTP_RUNTIME_STATUS`=NOT_IMPLEMENTED
+
+## Runtime
+
+- `END_TO_END_STATE_CONDITIONED_RUNTIME_STATUS`=PASS
+- `STATE_CONDITIONED_JOINT_COMPOSITION_STATUS`=PASS
+- `D1_JOINT_DEPENDENCE_STATUS`=NOT_ACCEPTED
+- `CROSS_HORIZON_DEPENDENCE_STATUS`=NOT_ESTABLISHED
+- `HTTP_RESEARCH_API_STATUS`=BUILT
+- `RESEARCH_WORKBENCH_STATUS`=BUILT
+- `JOINT_VALIDATION_ACCEPTED_ROUTE_COUNT`=0
+- `OWNER_REPORTED_IROS_CONTACT_STATUS`=RESPONSE_RECEIVED_PENDING_REPOSITORY_EVIDENCE
+- `IROS_PROVIDER_COMMITMENT_STATUS`=NOT_ESTABLISHED
+- `PRODUCTION_READINESS`=NOT_CLAIMED
+- `SECURITY_STAGE_STATUS`=PAUSED_NOT_ACCEPTED_BY_OWNER
+
+## Non-claims
+
+No A↔B merge, no unit conversion, no D1 acceptance, no real-drug PKPD, no causal effect, no clinical validation.
+IROS did not grant a dataset. Automated contact was not run.

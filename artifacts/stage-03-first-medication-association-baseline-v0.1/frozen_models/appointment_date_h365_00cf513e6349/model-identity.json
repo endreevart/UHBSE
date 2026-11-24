@@ -1,0 +1,32 @@
+{
+  "version": "0.1",
+  "timestamp_hypothesis": "appointment_date",
+  "horizon_days": 365,
+  "outcome": "\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u043e\u0431\u044a\u0435\u043c \u044d\u0440\u0438\u0442\u0440\u043e\u0446\u0438\u0442\u043e\u0432 (MCV)",
+  "unit": "\u0444\u043b",
+  "m1_feature_order": [
+    "pre_value",
+    "n_prior_measurements",
+    "prior_slope",
+    "days_since_previous",
+    "horizon_days",
+    "prior_slope_missing",
+    "days_since_previous_missing"
+  ],
+  "m2_feature_order": [
+    "pre_value",
+    "n_prior_measurements",
+    "prior_slope",
+    "days_since_previous",
+    "horizon_days",
+    "prior_slope_missing",
+    "days_since_previous_missing",
+    "medicine_id_hash",
+    "polypharmacy_flag",
+    "concurrent_med_count"
+  ],
+  "m1_coef_hash": "010820cef0f6a93b61e05ff91ac20278ffa878f8e0376dacec7a6ad6c09477e2",
+  "m2_coef_hash": "d6bece6b6197640a460d93e19e522e033748d1ae775f161d302686feb4082471",
+  "file_sha256": "6c83f69a4ff3a46e8f621dc45e5baf001f39fa8c034873b6920c422a5b79e135",
+  "model_identity_sha256": "773dbc9174b170a69ea1e04ef161843886aa21873f994818ba33797165097210"
+}

@@ -1,0 +1,63 @@
+{
+  "version": "0.1.1.1",
+  "ENGINE_M1_PROVIDER_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+  "does_not_confirm_m2": true,
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "parent_isolation": true,
+    "rollback": true
+  },
+  "deterministic_inference": true,
+  "evidence_sample": {
+    "record_origin": "PREDICTED",
+    "provider": "M1",
+    "outcome_key": "A::25(OH)витамин D::нг/мл",
+    "predictions_do_not_drive_physiology": true
+  },
+  "ok": true,
+  "ENGINE_M2_MULTI_OUTPUT_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+  "m1": {
+    "ENGINE_M1_PROVIDER_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+    "does_not_confirm_m2": true,
+    "lifecycle": {
+      "ok": true,
+      "checkpoint": true,
+      "fork": true,
+      "parent_isolation": true,
+      "rollback": true
+    },
+    "deterministic_inference": true,
+    "evidence_sample": {
+      "record_origin": "PREDICTED",
+      "provider": "M1",
+      "outcome_key": "A::25(OH)витамин D::нг/мл",
+      "predictions_do_not_drive_physiology": true
+    },
+    "ok": true
+  },
+  "m2": {
+    "ENGINE_M2_MULTI_OUTPUT_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+    "lifecycle": {
+      "ok": true,
+      "checkpoint": true,
+      "fork": true,
+      "parent_isolation": true,
+      "rollback": true
+    },
+    "deterministic_repeat": true,
+    "missing_output_masks_applied": true,
+    "a_and_b_fixtures": true,
+    "multi_outcome_predicted_evidence": {
+      "record_origin": "PREDICTED",
+      "n_a_predictions": 12,
+      "n_b_predictions": 12,
+      "predictions_do_not_drive_physiology": true,
+      "medication_context_not_intervention_effect": true
+    },
+    "model_file_sha_match": true,
+    "ok": true
+  },
+  "m1_pass_does_not_imply_m2_pass": true
+}

@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "model_name": "DenoisingSourceAwareStateEncoderV01",
+  "no_a_b_semantic_merge": true,
+  "no_unit_conversion": true,
+  "no_identity_merge": true,
+  "prior_encoder_not_accepted_initialization": true,
+  "foundation_gates": {
+    "GATE_RECON_BEAT_TRAIN_MEAN_BOTH_SOURCES": true,
+    "GATE_MIN_TRAJECTORY_BETTER_THAN_ACTIVE": 3
+  },
+  "SCIENTIFIC_CROSS_SOURCE_PASS": false,
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "seed": 42,
+  "corruption_frac": 0.35,
+  "vocabulary_train_only_inclusion": true
+}

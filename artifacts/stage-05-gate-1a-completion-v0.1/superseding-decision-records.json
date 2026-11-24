@@ -1,0 +1,49 @@
+{
+  "responses": [
+    {
+      "attestation": "accepted",
+      "attestation_scope": "WORKFLOW_INTENT_NOT_ROW_LEVEL_PROOF",
+      "basis": "artifacts/stage-05-gate-1a-v0.1/decision-records.json#B_TIMING; workflow rule only; excludes CONSULTATION_TARGET_FOUND_TIME_UNCOMPARABLE count=2071",
+      "closes_question": false,
+      "decided_at": "2026-11-07T14:04:00Z",
+      "decision": "FILLED_BEFORE_CONSULTATION",
+      "decision_schema_version": "0.1.1",
+      "evidence_sha256": "bf66418b8dd4b6458c0d55e004e8996db1902e5a64d5ebab513442555a805a7d",
+      "field_path": "public.feedback.created_at",
+      "prior_record_sha256": "66e3f084e875baf87b8149b556db0ae82199cf8d07c129f06c506c2c1eb69b7f",
+      "prior_reviewer_digest": "42487641f54106eedef42133516ce7be202bf3f458ae29695b641c50d501a57a",
+      "prior_role": "system_architect",
+      "proposition": "FILLED_BEFORE_THE_NEXT_CONSULTATION",
+      "question_id": "B_TIMING",
+      "requires_first_vs_repeat_visit_classification": false,
+      "reviewer_digest": "6a5c02f5d9f105d485c8f3f6c67fb3ac071ef9d12a29490f7f2518afa0ca6af0",
+      "role": "gate_review",
+      "row_level_proof": false,
+      "source_system": "kgz_raw",
+      "supersedes_artifact": "artifacts/stage-05-gate-1a-v0.1/decision-records.json"
+    },
+    {
+      "attestation": "accepted",
+      "attestation_scope": "WORKFLOW_INTENT_NOT_ROW_LEVEL_PROOF",
+      "basis": "artifacts/stage-05-gate-1a-v0.1/decision-records.json#B_PERIOD; workflow rule only; excludes CONSULTATION_TARGET_FOUND_TIME_UNCOMPARABLE count=2071",
+      "closes_question": false,
+      "decided_at": "2026-11-07T14:04:00Z",
+      "decision": "FIRST_VISIT_GENERAL_HISTORY_REPEAT_VISIT_SINCE_PREVIOUS_VISIT",
+      "decision_schema_version": "0.1.1",
+      "evidence_sha256": "12f48bfdd329d6591162f4ded3642cccc44527510334fdb7f9ed88fc07bee4c5",
+      "field_path": "public.feedback",
+      "prior_record_sha256": "9889e3f1becacd47b63206f8c9e0561f1795fde5b63613f1d41f910bb248d330",
+      "prior_reviewer_digest": "42487641f54106eedef42133516ce7be202bf3f458ae29695b641c50d501a57a",
+      "prior_role": "system_architect",
+      "proposition": "PERIOD_DESCRIBED_BY_FEEDBACK",
+      "question_id": "B_PERIOD",
+      "requires_first_vs_repeat_visit_classification": true,
+      "reviewer_digest": "6a5c02f5d9f105d485c8f3f6c67fb3ac071ef9d12a29490f7f2518afa0ca6af0",
+      "role": "gate_review",
+      "row_level_proof": false,
+      "source_system": "kgz_raw",
+      "supersedes_artifact": "artifacts/stage-05-gate-1a-v0.1/decision-records.json"
+    }
+  ],
+  "version": "0.1"
+}

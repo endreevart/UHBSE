@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "candidate_grouping_keys": {
+    "consultation_id": {
+      "present": true,
+      "distinct_non_null": 59737,
+      "null_rows": 0,
+      "total_rows": 2183297
+    },
+    "pool_id": {
+      "present": true,
+      "distinct_non_null": 59741,
+      "null_rows": 0,
+      "total_rows": 2183297
+    },
+    "date": {
+      "present": true,
+      "distinct_non_null": 647911,
+      "null_rows": 50981,
+      "total_rows": 2183297
+    }
+  },
+  "accepted_without_runtime_evidence": false,
+  "note": "Grouping candidates listed as aggregates only; synthetic Observation headers require deterministic evidence before acceptance.",
+  "pii_values_returned": false
+}

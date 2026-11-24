@@ -1,0 +1,95 @@
+{
+  "version": "0.1.1",
+  "MARGINAL_MULTI_OUTCOME_ASSEMBLY_CONTRACT_STATUS": "MARGINAL_SOURCE_SPECIFIC_MULTI_OUTCOME_ROLLOUT",
+  "MULTI_OUTCOME_DEPENDENCE_STATUS": "MARGINAL_ONLY_NO_JOINT_MODEL",
+  "source_system": "kgz_raw",
+  "horizon_days": 90,
+  "seed": 42,
+  "n_predicted": 12,
+  "n_missing": 0,
+  "predicted_outcome_keys": [
+    "B::16::ммоль/л",
+    "B::28::г/л",
+    "B::30::ммоль/л",
+    "B::32::ммоль/л",
+    "B::33::ммоль/л",
+    "B::48::мкмоль/л",
+    "B::55::пмоль/л",
+    "B::8::Ед/л",
+    "B::928::нг/мл",
+    "B::9::Ед/л",
+    "B::mm_1002::%",
+    "B::mm_1004::%"
+  ],
+  "missing_unsupported_outcomes": [],
+  "per_outcome_uncertainty": {
+    "B::16::ммоль/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::28::г/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::30::ммоль/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::32::ммоль/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::33::ммоль/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::48::мкмоль/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::55::пмоль/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::8::Ед/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::928::нг/мл": {
+      "q05": null,
+      "q95": null
+    },
+    "B::9::Ед/л": {
+      "q05": null,
+      "q95": null
+    },
+    "B::mm_1002::%": {
+      "q05": null,
+      "q95": null
+    },
+    "B::mm_1004::%": {
+      "q05": null,
+      "q95": null
+    }
+  },
+  "provider_identity": {
+    "B::16::ммоль/л": "frozen",
+    "B::28::г/л": "frozen",
+    "B::30::ммоль/л": "frozen",
+    "B::32::ммоль/л": "frozen",
+    "B::33::ммоль/л": "frozen",
+    "B::48::мкмоль/л": "frozen",
+    "B::55::пмоль/л": "frozen",
+    "B::8::Ед/л": "frozen",
+    "B::928::нг/мл": "frozen",
+    "B::9::Ед/л": "frozen",
+    "B::mm_1002::%": "frozen",
+    "B::mm_1004::%": "frozen"
+  },
+  "no_zero_mean_imputation": true,
+  "rejected_encoder_used": false,
+  "demo_outcome_used": false,
+  "MARGINAL_MULTI_OUTCOME_HELDOUT_EVALUATION_STATUS": "EVALUATED_MARGINAL_COUNTS_ONLY",
+  "n_source_specific_outcomes_on_shared_subject": 12,
+  "no_subject_id_published": true
+}

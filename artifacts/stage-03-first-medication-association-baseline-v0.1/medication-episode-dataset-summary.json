@@ -1,0 +1,266 @@
+{
+  "version": "0.1",
+  "MEDICATION_EPISODE_DATASET_STATUS": "BUILT",
+  "MEDICATION_EVENT_TIMESTAMP_STATUS": "TECHNICAL_HYPOTHESES_EVALUATED_DOMAIN_CONFIRMATION_PENDING",
+  "workspace_only": true,
+  "not_in_review_zip": true,
+  "hypotheses": {
+    "appointment_date": {
+      "timestamp_hypothesis": "appointment_date",
+      "timestamp_status": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+      "role": "primary_candidate",
+      "level_counts": {
+        "level0": 25726,
+        "level1": 24880,
+        "level2": 9969,
+        "level3_pairs": 212456,
+        "level3_events": 7965,
+        "level3_subjects": 878,
+        "polypharmacy_event_days": 3574
+      },
+      "horizons": {
+        "30": {
+          "n_episodes": 10264,
+          "n_subjects": 231,
+          "n_outcome_units": 135,
+          "polypharmacy_episodes": 10005,
+          "same_time_seen_but_pre_post_strict": 0,
+          "workspace_path": null,
+          "materialised": false,
+          "in_review_zip": false
+        },
+        "90": {
+          "n_episodes": 82794,
+          "n_subjects": 568,
+          "n_outcome_units": 264,
+          "polypharmacy_episodes": 81446,
+          "same_time_seen_but_pre_post_strict": 0,
+          "workspace_path": null,
+          "materialised": false,
+          "in_review_zip": false
+        },
+        "180": {
+          "n_episodes": 176187,
+          "n_subjects": 798,
+          "n_outcome_units": 335,
+          "polypharmacy_episodes": 174044,
+          "same_time_seen_but_pre_post_strict": 0,
+          "workspace_path": null,
+          "materialised": false,
+          "in_review_zip": false
+        },
+        "365": {
+          "n_episodes": 202374,
+          "n_subjects": 844,
+          "n_outcome_units": 354,
+          "polypharmacy_episodes": 199781,
+          "same_time_seen_but_pre_post_strict": 0,
+          "workspace_path": "private/intervention-association-v01/episodes/episodes_appointment_date_h365.jsonl",
+          "materialised": true,
+          "in_review_zip": false
+        }
+      },
+      "primary": {
+        "n_episodes": 202374,
+        "n_subjects": 844,
+        "n_outcome_units": 354,
+        "polypharmacy_episodes": 199781,
+        "same_time_seen_but_pre_post_strict": 0,
+        "workspace_path": "private/intervention-association-v01/episodes/episodes_appointment_date_h365.jsonl",
+        "materialised": true,
+        "in_review_zip": false
+      },
+      "hierarchy": {
+        "version": "0.1",
+        "timestamp_hypothesis": "appointment_date",
+        "levels": {
+          "0_source_medication_rows": 25726,
+          "1_subject_medicine_id_timestamp": 24880,
+          "2_any_pre_and_post_measurement": 9969,
+          "3_medication_event_x_outcome_unit_candidates": {
+            "pairs": 212456,
+            "events": 7965,
+            "subjects": 878,
+            "label": "medication events with at least one same-outcome numeric pre/post candidate"
+          },
+          "4_materialised_outcome_specific_episodes": {
+            "episodes": 202374,
+            "subjects": 844
+          },
+          "5_model_eligible_after_gates": {
+            "episodes": 24558,
+            "subjects": 844
+          }
+        },
+        "level4_not_copied_from_level3": true,
+        "polypharmacy_event_days": 3574,
+        "gates": {
+          "semantic_timestamp": {
+            "name": "semantic_timestamp_gate",
+            "status": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+            "passed": true
+          },
+          "episode_construction": {
+            "name": "episode_construction_gate",
+            "status": "PASS",
+            "passed": true,
+            "level4_episodes": 202374,
+            "note": "Level 4 counted from materialised episodes, not copied from Level 3"
+          },
+          "cohort_size": {
+            "name": "cohort_size_gate",
+            "min_subjects": 200,
+            "min_episodes": 500,
+            "level4_subjects": 844,
+            "level4_episodes": 202374,
+            "passed": true,
+            "evaluated_on": "materialised_level4_before_test_split"
+          },
+          "test_size": {
+            "name": "test_size_gate",
+            "min_test_subjects": 50,
+            "min_test_episodes": 100,
+            "note": "Filled after split in modeling stage",
+            "passed": true
+          },
+          "leakage": {
+            "name": "leakage_gate",
+            "strict_pre_lt_event_lt_post": true,
+            "same_time_excluded": 0,
+            "passed": true
+          }
+        }
+      }
+    },
+    "created": {
+      "timestamp_hypothesis": "created",
+      "timestamp_status": "RECORD_CREATION_TIMESTAMP_SENSITIVITY_CONTROL",
+      "role": "sensitivity_control",
+      "level_counts": {
+        "level0": 25726,
+        "level1": 25726,
+        "level2": 4408,
+        "level3_pairs": 51620,
+        "level3_events": 2096,
+        "level3_subjects": 195,
+        "polypharmacy_event_days": 2795
+      },
+      "horizons": {
+        "30": {
+          "n_episodes": 4277,
+          "n_subjects": 44,
+          "n_outcome_units": 88,
+          "polypharmacy_episodes": 4238,
+          "same_time_seen_but_pre_post_strict": 0,
+          "workspace_path": null,
+          "materialised": false,
+          "in_review_zip": false
+        },
+        "90": {
+          "n_episodes": 22790,
+          "n_subjects": 117,
+          "n_outcome_units": 145,
+          "polypharmacy_episodes": 22708,
+          "same_time_seen_but_pre_post_strict": 0,
+          "workspace_path": null,
+          "materialised": false,
+          "in_review_zip": false
+        },
+        "180": {
+          "n_episodes": 39396,
+          "n_subjects": 170,
+          "n_outcome_units": 174,
+          "polypharmacy_episodes": 39260,
+          "same_time_seen_but_pre_post_strict": 0,
+          "workspace_path": null,
+          "materialised": false,
+          "in_review_zip": false
+        },
+        "365": {
+          "n_episodes": 48039,
+          "n_subjects": 188,
+          "n_outcome_units": 186,
+          "polypharmacy_episodes": 47890,
+          "same_time_seen_but_pre_post_strict": 0,
+          "workspace_path": "private/intervention-association-v01/episodes/episodes_created_h365.jsonl",
+          "materialised": true,
+          "in_review_zip": false
+        }
+      },
+      "primary": {
+        "n_episodes": 48039,
+        "n_subjects": 188,
+        "n_outcome_units": 186,
+        "polypharmacy_episodes": 47890,
+        "same_time_seen_but_pre_post_strict": 0,
+        "workspace_path": "private/intervention-association-v01/episodes/episodes_created_h365.jsonl",
+        "materialised": true,
+        "in_review_zip": false
+      },
+      "hierarchy": {
+        "version": "0.1",
+        "timestamp_hypothesis": "created",
+        "levels": {
+          "0_source_medication_rows": 25726,
+          "1_subject_medicine_id_timestamp": 25726,
+          "2_any_pre_and_post_measurement": 4408,
+          "3_medication_event_x_outcome_unit_candidates": {
+            "pairs": 51620,
+            "events": 2096,
+            "subjects": 195,
+            "label": "medication events with at least one same-outcome numeric pre/post candidate"
+          },
+          "4_materialised_outcome_specific_episodes": {
+            "episodes": 48039,
+            "subjects": 188
+          },
+          "5_model_eligible_after_gates": {
+            "episodes": 0,
+            "subjects": 0
+          }
+        },
+        "level4_not_copied_from_level3": true,
+        "polypharmacy_event_days": 2795,
+        "gates": {
+          "semantic_timestamp": {
+            "name": "semantic_timestamp_gate",
+            "status": "RECORD_CREATION_TIMESTAMP_SENSITIVITY_CONTROL",
+            "passed": true
+          },
+          "episode_construction": {
+            "name": "episode_construction_gate",
+            "status": "PASS",
+            "passed": true,
+            "level4_episodes": 48039,
+            "note": "Level 4 counted from materialised episodes, not copied from Level 3"
+          },
+          "cohort_size": {
+            "name": "cohort_size_gate",
+            "min_subjects": 200,
+            "min_episodes": 500,
+            "level4_subjects": 188,
+            "level4_episodes": 48039,
+            "passed": false,
+            "evaluated_on": "materialised_level4_before_test_split"
+          },
+          "test_size": {
+            "name": "test_size_gate",
+            "min_test_subjects": 50,
+            "min_test_episodes": 100,
+            "note": "Filled after split in modeling stage",
+            "passed": null
+          },
+          "leakage": {
+            "name": "leakage_gate",
+            "strict_pre_lt_event_lt_post": true,
+            "same_time_excluded": 0,
+            "passed": true
+          }
+        }
+      }
+    }
+  },
+  "same_time_policy": "excluded_from_pre_and_post_selection; flagged if observed",
+  "strict_temporal_order": "pre < event < post",
+  "population": "full Source A account_patient considered via medicine rows"
+}

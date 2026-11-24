@@ -1,0 +1,341 @@
+{
+  "ASYNCHRONOUS_VECTOR_DATASET_STATUS": "DIAGNOSTIC_ONLY",
+  "JOINT_PANEL_ACCOUNTING_STATUS": "PASS",
+  "STRICT_JOINT_PANEL_DATASET_STATUS": "BUILT",
+  "async": {
+    "contract": "ASYNCHRONOUS_HORIZON_ALIGNED_OUTCOME_VECTOR",
+    "n_panels": 6293,
+    "ok": true,
+    "unexplained": 0,
+    "version": "0.1"
+  },
+  "async_by_source_horizon_split": [
+    {
+      "effective_groups": 210,
+      "horizon_days": 90,
+      "median_outcomes_per_panel": 10,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 10462,
+      "panels": 259,
+      "source_system": "kgz_raw",
+      "split_role": "train",
+      "subjects": 210
+    },
+    {
+      "effective_groups": 32,
+      "horizon_days": 90,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 1486,
+      "panels": 38,
+      "source_system": "kgz_raw",
+      "split_role": "validation",
+      "subjects": 32
+    },
+    {
+      "effective_groups": 706,
+      "horizon_days": 180,
+      "median_outcomes_per_panel": 10,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 40224,
+      "panels": 1000,
+      "source_system": "kgz_raw",
+      "split_role": "train",
+      "subjects": 706
+    },
+    {
+      "effective_groups": 138,
+      "horizon_days": 180,
+      "median_outcomes_per_panel": 10,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 7657,
+      "panels": 189,
+      "source_system": "kgz_raw",
+      "split_role": "validation",
+      "subjects": 138
+    },
+    {
+      "effective_groups": 733,
+      "horizon_days": 365,
+      "median_outcomes_per_panel": 10,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 44872,
+      "panels": 1109,
+      "source_system": "kgz_raw",
+      "split_role": "train",
+      "subjects": 733
+    },
+    {
+      "effective_groups": 129,
+      "horizon_days": 365,
+      "median_outcomes_per_panel": 10,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 8340,
+      "panels": 199,
+      "source_system": "kgz_raw",
+      "split_role": "validation",
+      "subjects": 129
+    },
+    {
+      "effective_groups": 90,
+      "horizon_days": 30,
+      "median_outcomes_per_panel": 7,
+      "n_outcomes": 9,
+      "pairwise_coobservation_pairs": 1640,
+      "panels": 98,
+      "source_system": "magerya_api",
+      "split_role": "train",
+      "subjects": 90
+    },
+    {
+      "effective_groups": 33,
+      "horizon_days": 30,
+      "median_outcomes_per_panel": 7,
+      "n_outcomes": 9,
+      "pairwise_coobservation_pairs": 643,
+      "panels": 41,
+      "source_system": "magerya_api",
+      "split_role": "validation",
+      "subjects": 33
+    },
+    {
+      "effective_groups": 658,
+      "horizon_days": 90,
+      "median_outcomes_per_panel": 8,
+      "n_outcomes": 10,
+      "pairwise_coobservation_pairs": 21500,
+      "panels": 817,
+      "source_system": "magerya_api",
+      "split_role": "train",
+      "subjects": 658
+    },
+    {
+      "effective_groups": 164,
+      "horizon_days": 90,
+      "median_outcomes_per_panel": 8,
+      "n_outcomes": 10,
+      "pairwise_coobservation_pairs": 5696,
+      "panels": 217,
+      "source_system": "magerya_api",
+      "split_role": "validation",
+      "subjects": 164
+    },
+    {
+      "effective_groups": 675,
+      "horizon_days": 180,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 31140,
+      "panels": 936,
+      "source_system": "magerya_api",
+      "split_role": "train",
+      "subjects": 675
+    },
+    {
+      "effective_groups": 156,
+      "horizon_days": 180,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 6981,
+      "panels": 214,
+      "source_system": "magerya_api",
+      "split_role": "validation",
+      "subjects": 156
+    },
+    {
+      "effective_groups": 620,
+      "horizon_days": 365,
+      "median_outcomes_per_panel": 10,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 34001,
+      "panels": 956,
+      "source_system": "magerya_api",
+      "split_role": "train",
+      "subjects": 620
+    },
+    {
+      "effective_groups": 135,
+      "horizon_days": 365,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 7446,
+      "panels": 220,
+      "source_system": "magerya_api",
+      "split_role": "validation",
+      "subjects": 135
+    }
+  ],
+  "async_not_used_for_dependence_acceptance": true,
+  "duplicate_targets": 44536,
+  "excluded_single_outcome_groups": 5886,
+  "n_async_vectors": 6293,
+  "n_raw_origin_rows": 453808,
+  "n_strict_panels": 43085,
+  "ok": true,
+  "strict": {
+    "contract": "STRICT_COOBSERVED_TARGET_PANEL",
+    "n_panels": 43085,
+    "ok": true,
+    "unexplained": 0,
+    "version": "0.1"
+  },
+  "strict_by_source_horizon_split": [
+    {
+      "effective_groups": 5592,
+      "horizon_days": 90,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 368412,
+      "panels": 11159,
+      "source_system": "kgz_raw",
+      "split_role": "train",
+      "subjects": 5592
+    },
+    {
+      "effective_groups": 1138,
+      "horizon_days": 90,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 74662,
+      "panels": 2243,
+      "source_system": "kgz_raw",
+      "split_role": "validation",
+      "subjects": 1138
+    },
+    {
+      "effective_groups": 4336,
+      "horizon_days": 180,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 292342,
+      "panels": 8313,
+      "source_system": "kgz_raw",
+      "split_role": "train",
+      "subjects": 4336
+    },
+    {
+      "effective_groups": 933,
+      "horizon_days": 180,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 58193,
+      "panels": 1639,
+      "source_system": "kgz_raw",
+      "split_role": "validation",
+      "subjects": 933
+    },
+    {
+      "effective_groups": 2840,
+      "horizon_days": 365,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 193177,
+      "panels": 5330,
+      "source_system": "kgz_raw",
+      "split_role": "train",
+      "subjects": 2840
+    },
+    {
+      "effective_groups": 554,
+      "horizon_days": 365,
+      "median_outcomes_per_panel": 9,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 36201,
+      "panels": 982,
+      "source_system": "kgz_raw",
+      "split_role": "validation",
+      "subjects": 554
+    },
+    {
+      "effective_groups": 1040,
+      "horizon_days": 30,
+      "median_outcomes_per_panel": 6,
+      "n_outcomes": 9,
+      "pairwise_coobservation_pairs": 19548,
+      "panels": 1397,
+      "source_system": "magerya_api",
+      "split_role": "train",
+      "subjects": 1040
+    },
+    {
+      "effective_groups": 219,
+      "horizon_days": 30,
+      "median_outcomes_per_panel": 6,
+      "n_outcomes": 9,
+      "pairwise_coobservation_pairs": 3888,
+      "panels": 281,
+      "source_system": "magerya_api",
+      "split_role": "validation",
+      "subjects": 219
+    },
+    {
+      "effective_groups": 2328,
+      "horizon_days": 90,
+      "median_outcomes_per_panel": 7,
+      "n_outcomes": 10,
+      "pairwise_coobservation_pairs": 87932,
+      "panels": 3983,
+      "source_system": "magerya_api",
+      "split_role": "train",
+      "subjects": 2328
+    },
+    {
+      "effective_groups": 461,
+      "horizon_days": 90,
+      "median_outcomes_per_panel": 7,
+      "n_outcomes": 10,
+      "pairwise_coobservation_pairs": 18752,
+      "panels": 842,
+      "source_system": "magerya_api",
+      "split_role": "validation",
+      "subjects": 461
+    },
+    {
+      "effective_groups": 1628,
+      "horizon_days": 180,
+      "median_outcomes_per_panel": 8,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 90542,
+      "panels": 3203,
+      "source_system": "magerya_api",
+      "split_role": "train",
+      "subjects": 1628
+    },
+    {
+      "effective_groups": 338,
+      "horizon_days": 180,
+      "median_outcomes_per_panel": 8,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 20369,
+      "panels": 690,
+      "source_system": "magerya_api",
+      "split_role": "validation",
+      "subjects": 338
+    },
+    {
+      "effective_groups": 1187,
+      "horizon_days": 365,
+      "median_outcomes_per_panel": 8,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 73298,
+      "panels": 2497,
+      "source_system": "magerya_api",
+      "split_role": "train",
+      "subjects": 1187
+    },
+    {
+      "effective_groups": 239,
+      "horizon_days": 365,
+      "median_outcomes_per_panel": 8,
+      "n_outcomes": 11,
+      "pairwise_coobservation_pairs": 14905,
+      "panels": 526,
+      "source_system": "magerya_api",
+      "split_role": "validation",
+      "subjects": 239
+    }
+  ],
+  "timestamp_conflicts": 6293,
+  "unexplained": 0,
+  "version": "0.1"
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "source_system": "kgz_raw",
+  "analyses_catalog": {
+    "exact_row_count": 1886,
+    "columns": [
+      "id",
+      "code",
+      "name_ru",
+      "name_en",
+      "material",
+      "weight_id",
+      "created_at",
+      "updated_at",
+      "name_alt",
+      "priority",
+      "deleted_at",
+      "type"
+    ],
+    "controlled_labels_units_allowed_in_artifacts": true
+  },
+  "analyses_constructor": {
+    "columns": [
+      "id",
+      "user_id",
+      "consultation_id",
+      "pool_id",
+      "created_at",
+      "updated_at",
+      "catalog_id",
+      "weight_id",
+      "date",
+      "status",
+      "value",
+      "extra",
+      "has_result"
+    ],
+    "exact_row_count": 2183297,
+    "consultation_id_non_null_rate": 1.0,
+    "catalog_id_non_null_rate": 1.0,
+    "pool_id_non_null_rate": 1.0,
+    "value_non_null_rate": 0.9787184244745447,
+    "has_result_true_rate": 0.9767709111495138,
+    "consultation_fk_non_null": 2183297,
+    "consultation_fk_resolved": 2183297,
+    "value_numeric_parseability_among_non_null": 0.2317663570339844,
+    "patient_values_in_artifact": false
+  }
+}

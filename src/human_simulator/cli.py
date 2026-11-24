@@ -213,7 +213,60 @@ def main(argv: list[str] | None = None) -> int:
         help="Explicit confirmation required; verifiers, suites and the publisher never call this",
     )
 
+    irr = sub.add_parser("integrated-runtime", help="Integrated Research Runtime Foundation")
+    irr_sub = irr.add_subparsers(dest="irr_command", required=True)
+    irr_run = irr_sub.add_parser("run-v0.1.6", help="Run Integrated Research Runtime v0.1.6")
+    irr_run.add_argument("--no-publish", action="store_true", default=True)
+    irr_sub.add_parser("open-test-v0.1.6", help="Consume frozen upstream held-out without recomputing gates")
+    irr_sub.add_parser("verify-v0.1.6", help="Print v0.1.6 verification.json")
+    irr_sub.add_parser("publish-v0.1.6", help="Publish the immutable v0.1.6 review ZIP")
+    irr_run15 = irr_sub.add_parser("run-v0.1.5", help="Run Integrated Research Runtime v0.1.5")
+    irr_run15.add_argument("--no-publish", action="store_true", default=True)
+    irr_sub.add_parser("open-test-v0.1.5", help="Consume frozen upstream held-out without recomputing gates")
+    irr_sub.add_parser("verify-v0.1.5", help="Print v0.1.5 verification.json")
+    irr_sub.add_parser("publish-v0.1.5", help="Publish the immutable v0.1.5 review ZIP")
+
+    irr05 = sub.add_parser(
+        "intervention-readiness",
+        help="Stage 05 Gate 0 — Intervention Response Readiness and Exposure Semantics",
+    )
+    irr05_sub = irr05.add_subparsers(dest="irr05_command", required=True)
+    irr05_run = irr05_sub.add_parser(
+        "run-v0.1",
+        help="Run the v0.1.1 corrected readiness audit (frozen v0.1 code stays in its review ZIP)",
+    )
+    irr05_run.add_argument("--no-publish", action="store_true", default=True)
+    irr05_sub.add_parser("verify-v0.1", help="Print the frozen v0.1 verification.json")
+    irr05_sub.add_parser("publish-v0.1", help="Refuse to overwrite the published v0.1 review ZIP")
+    irr05_run11 = irr05_sub.add_parser("run-v0.1.1", help="Run the v0.1.1 corrected readiness audit")
+    irr05_run11.add_argument("--no-publish", action="store_true", default=True)
+    irr05_sub.add_parser("verify-v0.1.1", help="Print v0.1.1 verification.json")
+    irr05_sub.add_parser("publish-v0.1.1", help="Publish the immutable v0.1.1 review ZIP")
+
     args = parser.parse_args(argv)
+    if args.command == "intervention-readiness":
+        cmd = str(args.irr05_command or "")
+        if cmd in {"run-v0.1", "run-v0.1.1", "verify-v0.1.1", "publish-v0.1.1"}:
+            from human_simulator.intervention_response_readiness_v011.cli import (
+                dispatch_intervention_readiness_v011,
+            )
+
+            return dispatch_intervention_readiness_v011(args.root, cmd, args)
+        from human_simulator.intervention_response_readiness_v01.cli import (
+            dispatch_intervention_readiness_v01,
+        )
+
+        return dispatch_intervention_readiness_v01(args.root, cmd, args)
+    if args.command == "integrated-runtime":
+        cmd = str(args.irr_command or "")
+        if cmd.endswith("v0.1.6"):
+            from human_simulator.integrated_research_runtime_v016.cli import dispatch_integrated_runtime_v016
+
+            return dispatch_integrated_runtime_v016(args.root, cmd, args)
+        from human_simulator.integrated_research_runtime_v015.cli import dispatch_integrated_runtime_v015
+
+        return dispatch_integrated_runtime_v015(args.root, args.irr_command, args)
+
     settings = AuditSettings.from_repo(args.root)
 
     if args.command == "restore-preflight":

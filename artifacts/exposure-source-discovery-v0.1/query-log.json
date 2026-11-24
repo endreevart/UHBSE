@@ -1,0 +1,160 @@
+{
+  "version": "0.1",
+  "queries": [
+    {
+      "query": "a_medicine_catalog_names",
+      "source": "magerya_api",
+      "duration_seconds": 0.026
+    },
+    {
+      "query": "a_medicine_catalog_fk_fill",
+      "source": "magerya_api",
+      "duration_seconds": 0.016
+    },
+    {
+      "query": "a_reception_frequency_rows",
+      "source": "magerya_api",
+      "duration_seconds": 0.004
+    },
+    {
+      "query": "a_medicineappointment_to_recommendation_doc_same_day",
+      "source": "magerya_api",
+      "duration_seconds": 2.053
+    },
+    {
+      "query": "a_recommendation_doc_versions",
+      "source": "magerya_api",
+      "duration_seconds": 0.089
+    },
+    {
+      "query": "a_rec_document",
+      "source": "magerya_api",
+      "duration_seconds": 37.818
+    },
+    {
+      "query": "a_rec_schema",
+      "source": "magerya_api",
+      "duration_seconds": 3.533
+    },
+    {
+      "query": "a_medreport_document",
+      "source": "magerya_api",
+      "duration_seconds": 86.823
+    },
+    {
+      "query": "a_rec_template_text",
+      "source": "magerya_api",
+      "duration_seconds": 0.151
+    },
+    {
+      "query": "a_diag_rec_text",
+      "source": "magerya_api",
+      "duration_seconds": 0.048
+    },
+    {
+      "query": "b_feedback_drugs",
+      "source": "kgz_raw",
+      "duration_seconds": 1.21
+    },
+    {
+      "query": "b_feedback_change_drugs",
+      "source": "kgz_raw",
+      "duration_seconds": 0.437
+    },
+    {
+      "query": "b_feedback_decline_drugs",
+      "source": "kgz_raw",
+      "duration_seconds": 0.693
+    },
+    {
+      "query": "b_feedback_vitamins",
+      "source": "kgz_raw",
+      "duration_seconds": 2.102
+    },
+    {
+      "query": "b_feedback_positive_changes",
+      "source": "kgz_raw",
+      "duration_seconds": 1.681
+    },
+    {
+      "query": "b_feedback_outside_doctor_medicine",
+      "source": "kgz_raw",
+      "duration_seconds": 0.538
+    },
+    {
+      "query": "b_feedback_drugs_first",
+      "source": "kgz_raw",
+      "duration_seconds": 0.345
+    },
+    {
+      "query": "b_feedback_complaints",
+      "source": "kgz_raw",
+      "duration_seconds": 2.565
+    },
+    {
+      "query": "b_questionnaire_medicines",
+      "source": "kgz_raw",
+      "duration_seconds": 0.544
+    },
+    {
+      "query": "b_questionnaire_drugs",
+      "source": "kgz_raw",
+      "duration_seconds": 0.051
+    },
+    {
+      "query": "b_questionnaire_drugs_first",
+      "source": "kgz_raw",
+      "duration_seconds": 0.581
+    },
+    {
+      "query": "b_questionnaire_drugs_second",
+      "source": "kgz_raw",
+      "duration_seconds": 1.092
+    },
+    {
+      "query": "b_questionnaire_drugs_third",
+      "source": "kgz_raw",
+      "duration_seconds": 1.243
+    },
+    {
+      "query": "b_questionnaire_outside_doctor_medicine",
+      "source": "kgz_raw",
+      "duration_seconds": 1.079
+    },
+    {
+      "query": "b_questionnaire_preview_treatment",
+      "source": "kgz_raw",
+      "duration_seconds": 0.815
+    },
+    {
+      "query": "b_consultations_recommendations",
+      "source": "kgz_raw",
+      "duration_seconds": 85.65
+    },
+    {
+      "query": "b_rec_user_description",
+      "source": "kgz_raw",
+      "duration_seconds": 122.637
+    },
+    {
+      "query": "b_rec_list_text",
+      "source": "kgz_raw",
+      "duration_seconds": 0.053
+    },
+    {
+      "query": "b_rec_user_by_category",
+      "source": "kgz_raw",
+      "duration_seconds": 0.916
+    },
+    {
+      "query": "b_feedback_consultation_linkage",
+      "source": "kgz_raw",
+      "duration_seconds": 0.107
+    },
+    {
+      "query": "b_feedback_to_prior_recommendation",
+      "source": "kgz_raw",
+      "duration_seconds": 0.162
+    }
+  ]
+}

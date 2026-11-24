@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "verification": {
+    "scientific_data_readiness_status": "SCIENTIFIC_DATA_READINESS_PASS",
+    "technical_pipeline_status": "TECHNICAL_PIPELINE_PASS",
+    "retrospective_backtest_status": "FIRST_RETROSPECTIVE_BACKTEST_PASS",
+    "incremental_signal_status": "NO_INCREMENTAL_SIGNAL_DETECTED",
+    "clinical_validation_status": "NOT_STARTED",
+    "intervention_response_model_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "checks": {
+      "baseline_ok": "PASS",
+      "outcome_selected": "PASS",
+      "leakage_ok": "PASS",
+      "split_ok": "PASS",
+      "engine_ok": "PASS",
+      "scope_ok": "PASS",
+      "schema_hash_present": "PASS",
+      "repro_splits": "PASS",
+      "raw_db_writes_zero": "PASS",
+      "constant_gate": "PASS"
+    },
+    "failed_checks": [],
+    "selected_outcome": {
+      "candidate_id": "2685c68a3e247ca4",
+      "source_measurement_label": "\u04223 \u0441\u0432.",
+      "medical_interpretation_status": "DOMAIN_REVIEW_PENDING"
+    },
+    "n_subjects_with_pairs": 30,
+    "n_pairs": 56,
+    "split_counts": {
+      "train": 27,
+      "validation": 4,
+      "test": 25,
+      "total": 56
+    },
+    "clinical_rows_read": 114,
+    "raw_db_writes": 0,
+    "started_at": "2026-08-14T15:11:53.509848+00:00",
+    "finished_at": "2026-08-14T15:11:53.598572+00:00",
+    "policy": {
+      "scientific_version": "0.1",
+      "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+      "security_findings_status": "RECORDED_NON_BLOCKING",
+      "security_gate_mode": "ADVISORY_ONLY",
+      "security_blocks_core": false,
+      "clinical_validation_status": "NOT_STARTED",
+      "intervention_response_model_status": "NOT_STARTED",
+      "production_readiness": "NOT_CLAIMED",
+      "accepted_core_baseline_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f"
+    }
+  },
+  "baseline": {
+    "sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+    "ok": true
+  }
+}

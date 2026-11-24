@@ -1,0 +1,57 @@
+{
+  "version": "0.2.1",
+  "SOURCE_B_RAW_METADATA_PROBE_STATUS": "PASS",
+  "connection": "OK",
+  "fields": [
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "material",
+      "fk_lineage": [],
+      "non_null_count": 0,
+      "distinct_count": null,
+      "sample_category_hashes": [],
+      "accepted_usability_status": "COLUMN_EXISTS_ALL_NULL"
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "material",
+      "fk_lineage": [],
+      "non_null_count": 0,
+      "distinct_count": 0,
+      "sample_category_hashes": [],
+      "accepted_usability_status": "COLUMN_EXISTS_ALL_NULL"
+    }
+  ],
+  "queries": [
+    {
+      "name": "b_analyses_catalog_material",
+      "query_hash": "b9e19e6041ec26946f779ac6a4c77bc1fee094a317125b1646932dc7baf0e602",
+      "n_rows": 1882,
+      "n_material_nonempty": 0
+    },
+    {
+      "name": "b_metadata_column_scan",
+      "query_hash": "563f063465be306b634458685dfc7c3571e832b47b5aedb9657074eca6d50602",
+      "n_hits": 108
+    },
+    {
+      "name": "b_lab_fk_scan",
+      "query_hash": "14d8fb3d8f41591b820666d712342b9e69aef4d469f2cda92655d4862f3df546",
+      "n_hits": 0
+    }
+  ],
+  "analyses_catalog_rows": 1882,
+  "material_column_exists": true,
+  "material_non_null": 0,
+  "ok": true,
+  "catalog_material_all_empty": true,
+  "SOURCE_B_SPECIMEN_METADATA_STATUS": "NOT_AVAILABLE_IN_SOURCE",
+  "SOURCE_B_ASSAY_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+  "SOURCE_B_METADATA_RECOVERY_STATUS": "PASS_MATERIAL_EMPTY_ASSAY_GAPS",
+  "provider_input_required": true,
+  "n_lab_fks": 0,
+  "n_metadata_columns": 108,
+  "probe_hash": "b7f4c323c582f524e03c370dcae60e90bfa8b17af1f6635a01dfbd9dab6c41b2"
+}

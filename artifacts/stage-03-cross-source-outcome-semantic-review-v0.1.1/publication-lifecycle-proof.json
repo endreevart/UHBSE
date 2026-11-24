@@ -1,0 +1,33 @@
+{
+  "POST_TEST_MANIFEST_STATUS": "PASS",
+  "POST_PACK_MANIFEST_STATUS": "PASS",
+  "CACHE_MEMBER_SCAN_STATUS": "PASS",
+  "FINAL_ZIP_CONTENT_STATUS": "PASS",
+  "post_test": {
+    "ok": true,
+    "checked": 16,
+    "mismatches": [],
+    "tests_json_in_manifest": true
+  },
+  "post_pack": {
+    "ok": true,
+    "checked": 16,
+    "mismatches": [],
+    "tests_json_in_manifest": true
+  },
+  "cache_scan": {
+    "ok": true,
+    "n_hits": 0,
+    "hits": [],
+    "CACHE_MEMBER_SCAN_STATUS": "PASS"
+  },
+  "final_content": {
+    "FINAL_ZIP_CONTENT_STATUS": "PASS",
+    "members": 557,
+    "indexed_members": 556,
+    "cache_members": 0,
+    "tests_json_in_manifest": true,
+    "not_privacy_540_539": true,
+    "ok": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "V02_JOINT_DEFECT_REPRODUCTION_STATUS": "REPRODUCED",
+  "defects": [
+    {
+      "claim": "run_engine_shadow performs scalar marginal infer() and does not use copula",
+      "copula_in_shadow": false,
+      "id": 1,
+      "infer_called_in_shadow": true,
+      "load_joint_payload_called_in_shadow": false,
+      "load_joint_payload_exists": true,
+      "published_ENGINE_JOINT_ROLLOUT_STATUS": "TECHNICAL_SHADOW_PASS",
+      "reproduced": true
+    },
+    {
+      "claim": "load_joint_payload exists but is unused by shadow inference",
+      "id": 2,
+      "reproduced": true
+    },
+    {
+      "claim": "PASS_SAME_PROCESS_DETERMINISTIC is not cross-process replay",
+      "id": 11,
+      "published": "PASS_SAME_PROCESS_DETERMINISTIC",
+      "reproduced": true,
+      "subprocess_in_shadow": false
+    }
+  ],
+  "ok": true,
+  "version": "0.1"
+}

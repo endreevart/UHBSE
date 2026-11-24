@@ -1,0 +1,250 @@
+{
+  "version": "0.1",
+  "EXACT_MULTI_DOMAIN_ACCOUNTING_STATUS": "PASS",
+  "UNACCOUNTED_COUNT": 0,
+  "problems": [],
+  "grains": {
+    "research_subject": {
+      "raw_rows_considered": 93420,
+      "eligible": 93420,
+      "materialized": 93420,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "denominator_source": "v031_parquet_equals_canonical_count_star"
+    },
+    "research_encounter": {
+      "raw_rows_considered": 156995,
+      "eligible": 156995,
+      "materialized": 156995,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "denominator_source": "v031_parquet_equals_canonical_count_star"
+    },
+    "research_observation": {
+      "raw_rows_considered": 934233,
+      "eligible": 934233,
+      "materialized": 934233,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "denominator_source": "v031_parquet_equals_canonical_count_star"
+    },
+    "research_observation_component": {
+      "raw_rows_considered": 3291609,
+      "eligible": 3291609,
+      "materialized": 3291609,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "denominator_source": "v031_parquet_equals_canonical_count_star"
+    },
+    "research_provenance": {
+      "raw_rows_considered": 4689885,
+      "eligible": 4689885,
+      "materialized": 4689885,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "denominator_source": "v031_parquet_equals_canonical_count_star"
+    },
+    "research_diagnosis": {
+      "raw_rows_considered": 0,
+      "eligible": 0,
+      "materialized": 0,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "note": "no structured patient diagnosis facts confirmed in v0.3.1",
+      "denominator_source": "structured_absent_zero"
+    },
+    "research_condition_history": {
+      "raw_rows_considered": 0,
+      "eligible": 0,
+      "materialized": 0,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "note": "no structured patient diagnosis facts confirmed in v0.3.1",
+      "denominator_source": "structured_absent_zero"
+    },
+    "research_medication_record": {
+      "raw_rows_considered": 25726,
+      "eligible": 25726,
+      "materialized": 25726,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "denominator_source": "COUNT(*) magerya_api.diagnosis_medicineappointments"
+    },
+    "research_recommendation_source_a": {
+      "raw_rows_considered": 53894,
+      "eligible": 53894,
+      "materialized": 53894,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "denominator_source": "COUNT(*) magerya_api.document_recommendation"
+    },
+    "research_recommendation_source_b": {
+      "raw_rows_considered": 999606,
+      "eligible": 999606,
+      "materialized": 999606,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "denominator_source": "COUNT(*) quest_digital.recommendations_user"
+    },
+    "research_procedure": {
+      "raw_rows_considered": 98,
+      "eligible": 98,
+      "materialized": 98,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "by_relation": {
+        "diagnosis_proceduresresult": 4,
+        "diagnosis_manipulationsresult": 94
+      },
+      "denominator_source": "COUNT(*) per diagnosis_*result relation"
+    },
+    "research_document_reference": {
+      "raw_rows_considered": 262916,
+      "eligible": 203659,
+      "materialized": 203659,
+      "rejected": 59257,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "gap_decomposition": {
+        "missing_user": 0,
+        "non_patient_user": 59257,
+        "missing_canonical_subject": 0,
+        "duplicate_conflict": 0,
+        "unsupported": 0,
+        "other": 0
+      },
+      "denominator_source": "COUNT(*) public.documents (live)",
+      "live_raw_confirmed": true
+    },
+    "research_event": {
+      "raw_rows_considered": 2374211,
+      "eligible": 2374211,
+      "materialized": 2374211,
+      "rejected": 0,
+      "unsupported": 0,
+      "duplicate_conflict": 0,
+      "missing_subject_ownership": 0,
+      "missing_timestamp": 0,
+      "retained_unresolved": 0,
+      "truncated": 0,
+      "unaccounted": 0,
+      "by_event_type": {
+        "encounter": {
+          "source_rows": 156995,
+          "materialized_events": 156995,
+          "eligible": 156995,
+          "rejected": 0,
+          "unaccounted": 0
+        },
+        "observation": {
+          "source_rows": 934233,
+          "materialized_events": 934233,
+          "eligible": 934233,
+          "rejected": 0,
+          "unaccounted": 0
+        },
+        "medication_appointment": {
+          "source_rows": 25726,
+          "materialized_events": 25726,
+          "eligible": 25726,
+          "rejected": 0,
+          "unaccounted": 0
+        },
+        "recommendation": {
+          "source_rows": 1053500,
+          "materialized_events": 1053500,
+          "eligible": 1053500,
+          "rejected": 0,
+          "unaccounted": 0
+        },
+        "procedure": {
+          "source_rows": 98,
+          "materialized_events": 98,
+          "eligible": 98,
+          "rejected": 0,
+          "unaccounted": 0
+        },
+        "document_reference": {
+          "source_rows": 203659,
+          "materialized_events": 203659,
+          "eligible": 203659,
+          "rejected": 0,
+          "unaccounted": 0
+        }
+      },
+      "denominator_source": "sum of independent domain materialized counts"
+    }
+  },
+  "ok": true
+}

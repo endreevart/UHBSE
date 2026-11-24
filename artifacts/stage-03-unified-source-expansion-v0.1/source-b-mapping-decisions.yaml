@@ -1,0 +1,473 @@
+source_system: kgz_raw
+draft_path: artifacts/stage-03/source-b-mapping-draft.yaml
+decision_counts:
+  EXACT: 3
+  SUPPORTED_TRANSFORMATION: 0
+  HYPOTHESIS: 33
+  UNKNOWN: 5
+  INCOMPATIBLE: 0
+decisions:
+- section: catalog
+  source_relation: quest_digital.analyses_catalog
+  source_column: id
+  canonical_entity: Concept
+  canonical_field: source_concept_key
+  draft_mapping_status: CONFIRMED_SCHEMA
+  decision: EXACT
+  data_level: REFERENCE_CATALOG
+  may_populate_semantic_canonical_field: true
+  evidence: FK from analyses_constructor.catalog_id
+  unresolved_reason: null
+- section: catalog
+  source_relation: quest_digital.analyses_catalog
+  source_column: name_ru
+  canonical_entity: Concept
+  canonical_field: display_name
+  draft_mapping_status: CONFIRMED_SCHEMA
+  decision: EXACT
+  data_level: REFERENCE_CATALOG
+  may_populate_semantic_canonical_field: true
+  evidence: catalog display column
+  unresolved_reason: null
+- section: catalog
+  source_relation: quest_digital.analyses_catalog
+  source_column: code
+  canonical_entity: Concept
+  canonical_field: raw_code
+  draft_mapping_status: CONFIRMED_SCHEMA
+  decision: EXACT
+  data_level: REFERENCE_CATALOG
+  may_populate_semantic_canonical_field: true
+  evidence: catalog code column
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.persons
+  source_column: id
+  canonical_entity: Subject
+  canonical_field: source_subject_key
+  draft_mapping_status: NOT_MAPPED
+  decision: UNKNOWN
+  data_level: UNKNOWN
+  may_populate_semantic_canonical_field: false
+  evidence: persons_hypothesis_verdict=NO_SUBJECT_ROOT; table empty (0 rows)
+  unresolved_reason: patients:None->public.persons
+- section: clinical
+  source_relation: public.users
+  source_column: id
+  canonical_entity: Subject
+  canonical_field: source_subject_key
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: ATTRIBUTE_CONTAINER
+  may_populate_semantic_canonical_field: false
+  evidence: consultations.patient_id has 100% coverage of users.id; SUBJECT_ROOT_CANDIDATE
+    path
+  unresolved_reason: users multi-role container; staff/patient separation unclear
+- section: clinical
+  source_relation: public.users
+  source_column: id
+  canonical_entity: Provider
+  canonical_field: source_provider_key
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: ATTRIBUTE_CONTAINER
+  may_populate_semantic_canonical_field: false
+  evidence: consultations.doctor_id references users; is_doctor flag present but not
+    confirmed sole role
+  unresolved_reason: users multi-role; provider role not exclusively confirmed
+- section: clinical
+  source_relation: public.consultations
+  source_column: id
+  canonical_entity: Encounter
+  canonical_field: encounter_id
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: PATIENT_EVENT
+  may_populate_semantic_canonical_field: false
+  evidence: Stage 02 visits crosswalk hypothesis
+  unresolved_reason: visits:magerya_api.appointment_appointment->public.consultations
+- section: clinical
+  source_relation: public.consultations
+  source_column: patient_id
+  canonical_entity: Encounter
+  canonical_field: subject_id
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: PATIENT_EVENT
+  may_populate_semantic_canonical_field: false
+  evidence: schema-profile patient_id; 100% coverage users.id
+  unresolved_reason: subject resolution via multi-role users
+- section: clinical
+  source_relation: public.consultations
+  source_column: doctor_id
+  canonical_entity: Encounter
+  canonical_field: provider_id
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: PATIENT_EVENT
+  may_populate_semantic_canonical_field: false
+  evidence: schema-profile doctor_id
+  unresolved_reason: provider role via multi-role users
+- section: clinical
+  source_relation: public.consultations
+  source_column:
+  - date
+  - time
+  canonical_entity: Encounter
+  canonical_field: occurred_at
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: PATIENT_EVENT
+  may_populate_semantic_canonical_field: false
+  evidence: separate date and time columns in schema profile
+  unresolved_reason: clinical occurrence semantics unconfirmed
+- section: clinical
+  source_relation: public.consultations
+  source_column: created_at
+  canonical_entity: Encounter
+  canonical_field: recorded_at
+  draft_mapping_status: CANDIDATE
+  decision: HYPOTHESIS
+  data_level: PATIENT_EVENT
+  may_populate_semantic_canonical_field: false
+  evidence: schema-profile created_at
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.consultations
+  source_column: success_at
+  canonical_entity: Encounter
+  canonical_field: completed_at
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: PATIENT_EVENT
+  may_populate_semantic_canonical_field: false
+  evidence: success status timestamp
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.consultations
+  source_column: cancel_at
+  canonical_entity: Encounter
+  canonical_field: cancelled_at
+  draft_mapping_status: CANDIDATE
+  decision: HYPOTHESIS
+  data_level: PATIENT_EVENT
+  may_populate_semantic_canonical_field: false
+  evidence: cancellation timestamp column
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.consultations
+  source_column: confirmed_at
+  canonical_entity: Encounter
+  canonical_field: confirmed_at
+  draft_mapping_status: CANDIDATE
+  decision: HYPOTHESIS
+  data_level: PATIENT_EVENT
+  may_populate_semantic_canonical_field: false
+  evidence: confirmation timestamp column
+  unresolved_reason: null
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: id
+  canonical_entity: ObservationComponent
+  canonical_field: component_id
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: Stage 02 laboratory_results crosswalk hypothesis
+  unresolved_reason: no confirmed Source B observation header table
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: consultation_id
+  canonical_entity: ObservationComponent
+  canonical_field: observation_id
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: FK to consultations; used in grouping rule
+  unresolved_reason: maps to synthetic Observation header key not a source row
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: pool_id
+  canonical_entity: ObservationComponent
+  canonical_field: observation_id
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: pool_id participates in grouping rule
+  unresolved_reason: header grouping hypothesis only
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: catalog_id
+  canonical_entity: ObservationComponent
+  canonical_field: raw_code
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: FK to analyses_catalog
+  unresolved_reason: null
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: date
+  canonical_entity: ObservationComponent
+  canonical_field: observation_id
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: date used in grouping rule
+  unresolved_reason: header grouping hypothesis only
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: value
+  canonical_entity: ObservationComponent
+  canonical_field: raw_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: schema-profile value column (not result)
+  unresolved_reason: equivalence to Source A analysisresultitem unproven
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: status
+  canonical_entity: ObservationComponent
+  canonical_field: text_value
+  draft_mapping_status: CANDIDATE
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: schema-profile status
+  unresolved_reason: null
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: extra
+  canonical_entity: ObservationComponent
+  canonical_field: text_value
+  draft_mapping_status: UNRESOLVED
+  decision: UNKNOWN
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: extra payload column present
+  unresolved_reason: payload schema unknown
+- section: clinical
+  source_relation: quest_digital.analyses_constructor
+  source_column: has_result
+  canonical_entity: ObservationComponent
+  canonical_field: abnormal_flag
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: boolean result availability flag
+  unresolved_reason: null
+- section: clinical
+  source_relation: quest_digital.lab_result
+  source_column: id
+  canonical_entity: Observation
+  canonical_field: observation_id
+  draft_mapping_status: UNRESOLVED
+  decision: UNKNOWN
+  data_level: PAYLOAD
+  may_populate_semantic_canonical_field: false
+  evidence: Stage 02 laboratory_results B-only candidate
+  unresolved_reason: laboratory_results:None->quest_digital.lab_result
+- section: clinical
+  source_relation: quest_digital.lab_result
+  source_column: body
+  canonical_entity: Observation
+  canonical_field: raw_value
+  draft_mapping_status: UNRESOLVED
+  decision: UNKNOWN
+  data_level: PAYLOAD
+  may_populate_semantic_canonical_field: false
+  evidence: body column stores payload
+  unresolved_reason: payload structure unknown
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: user_id
+  canonical_entity: Subject
+  canonical_field: source_subject_key
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: ATTRIBUTE_CONTAINER
+  may_populate_semantic_canonical_field: false
+  evidence: profilaxys_profile.user_id references public.users; users not confirmed
+    sole subject root
+  unresolved_reason: users multi-role container; subject root hypothesis only
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: id
+  canonical_entity: Observation
+  canonical_field: observation_id
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_HEADER
+  may_populate_semantic_canonical_field: false
+  evidence: profilaxys_profile row as wellness measurement container
+  unresolved_reason: measurements:None->public.profilaxys_profile
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: birthdate
+  canonical_entity: SubjectCharacteristic
+  canonical_field: date_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: ATTRIBUTE_CONTAINER
+  may_populate_semantic_canonical_field: false
+  evidence: stable profile birthdate; not merged with users_profile birth_date
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: sex
+  canonical_entity: SubjectCharacteristic
+  canonical_field: categorical_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: ATTRIBUTE_CONTAINER
+  may_populate_semantic_canonical_field: false
+  evidence: raw sex column; not biological_sex normalization
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: weight
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: dynamic wellness indicator on profile row
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: height
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: dynamic wellness indicator on profile row
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: pregnant
+  canonical_entity: ObservationComponent
+  canonical_field: categorical_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: pregnant stored as raw categorical varchar
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: kok
+  canonical_entity: ObservationComponent
+  canonical_field: boolean_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: boolean kok flag; not OCP use without semantic confirmation
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: height_decreased
+  canonical_entity: ObservationComponent
+  canonical_field: boolean_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: boolean height_decreased flag
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: cigarettes
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: integer cigarettes column; not per-day count without documentation
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: temperature
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: double precision temperature; unit not stored or confirmed
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_profile
+  source_column: sleep
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: integer sleep column; not hours without documentation
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.profilaxys_analyses
+  source_column: id
+  canonical_entity: ObservationComponent
+  canonical_field: component_id
+  draft_mapping_status: UNRESOLVED
+  decision: UNKNOWN
+  data_level: OBSERVATION_VALUE
+  may_populate_semantic_canonical_field: false
+  evidence: Stage 02 measurements candidate
+  unresolved_reason: measurements:None->public.profilaxys_analyses
+- section: clinical
+  source_relation: public.users_profile
+  source_column: user_id
+  canonical_entity: Subject
+  canonical_field: source_subject_key
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: ATTRIBUTE_CONTAINER
+  may_populate_semantic_canonical_field: false
+  evidence: users_profile.user_id references public.users; users multi-role; Subject
+    B CANDIDATE
+  unresolved_reason: measurements:None->public.users_profile
+- section: clinical
+  source_relation: public.users_profile
+  source_column: birth_date
+  canonical_entity: SubjectCharacteristic
+  canonical_field: date_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: ATTRIBUTE_CONTAINER
+  may_populate_semantic_canonical_field: false
+  evidence: users_profile birth_date; not merged with profilaxys_profile birthdate
+  unresolved_reason: null
+- section: clinical
+  source_relation: public.users_profile
+  source_column: gender
+  canonical_entity: SubjectCharacteristic
+  canonical_field: categorical_value
+  draft_mapping_status: HYPOTHESIS
+  decision: HYPOTHESIS
+  data_level: ATTRIBUTE_CONTAINER
+  may_populate_semantic_canonical_field: false
+  evidence: users_profile gender column; not biological_sex normalization
+  unresolved_reason: null
+clinical_exact_or_supported_transform_count: 0
+invented_exact_clinical_mappings: false
+notes:
+- HYPOTHESIS/UNKNOWN/CANDIDATE/UNRESOLVED are preserved — not promoted to EXACT.
+- CONFIRMED_SCHEMA is structural only; clinical entities stay non-EXACT unless draft
+  says EXACT.
+- Only EXACT/SUPPORTED_TRANSFORM may populate semantic Subject/Observation fields.

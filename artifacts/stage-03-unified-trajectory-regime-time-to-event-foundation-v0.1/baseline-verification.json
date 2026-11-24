@@ -1,0 +1,85 @@
+{
+  "version": "0.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "accepted_csr_sha256": "5ba19fbd465f6e41ef5d3d3b0923c073aaf78189bc1046316aba8ec24df4af69",
+  "accepted_v0111_sha256": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88",
+  "members": 686,
+  "indexed": 685,
+  "prior_sha_before": {
+    "csr_v01": "5ba19fbd465f6e41ef5d3d3b0923c073aaf78189bc1046316aba8ec24df4af69",
+    "v0111": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88",
+    "v011": "b1ae73f6f2b971be904a853f32c378352e61f0122712dbcb4810e0090abb2f57",
+    "v01": "751f63eea364424ba50cc5c6cbde2104a511b3e829eff85360bca9a5e5b0c1a3"
+  },
+  "prior_sha_after": {
+    "csr_v01": "5ba19fbd465f6e41ef5d3d3b0923c073aaf78189bc1046316aba8ec24df4af69",
+    "v0111": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88",
+    "v011": "b1ae73f6f2b971be904a853f32c378352e61f0122712dbcb4810e0090abb2f57",
+    "v01": "751f63eea364424ba50cc5c6cbde2104a511b3e829eff85360bca9a5e5b0c1a3"
+  },
+  "checks": [
+    {
+      "name": "csr_v01_sha",
+      "ok": true,
+      "detail": "5ba19fbd465f6e41ef5d3d3b0923c073aaf78189bc1046316aba8ec24df4af69"
+    },
+    {
+      "name": "v0111_sha",
+      "ok": true,
+      "detail": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88"
+    },
+    {
+      "name": "v011_sha",
+      "ok": true,
+      "detail": "b1ae73f6f2b971be904a853f32c378352e61f0122712dbcb4810e0090abb2f57"
+    },
+    {
+      "name": "v01_sha",
+      "ok": true,
+      "detail": "751f63eea364424ba50cc5c6cbde2104a511b3e829eff85360bca9a5e5b0c1a3"
+    },
+    {
+      "name": "csr_sidecar",
+      "ok": true
+    },
+    {
+      "name": "csr_attestation",
+      "ok": true
+    },
+    {
+      "name": "csr_members",
+      "ok": true,
+      "detail": 686
+    },
+    {
+      "name": "csr_no_parquet",
+      "ok": true
+    },
+    {
+      "name": "csr_indexed",
+      "ok": true,
+      "detail": 685
+    },
+    {
+      "name": "csr_manifest",
+      "ok": true
+    },
+    {
+      "name": "csr_mutation",
+      "ok": true
+    },
+    {
+      "name": "v0111_sha",
+      "ok": true
+    },
+    {
+      "name": "private_csr_tensor",
+      "ok": true
+    },
+    {
+      "name": "prior_before_after",
+      "ok": true
+    }
+  ],
+  "ok": true
+}

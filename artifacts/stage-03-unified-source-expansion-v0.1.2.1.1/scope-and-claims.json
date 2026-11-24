@@ -1,0 +1,55 @@
+{
+  "changeset": "Unified Source Expansion v0.1.2.1.1 \u2014 Publication and Scientific Evidence Integrity Correction",
+  "version": "0.1.2.1.1",
+  "claims": [
+    "Fix stale publication statuses in internal final documents.",
+    "Separate frozen model file SHA from canonical identity SHA.",
+    "Explain and correct Source A population lineage (41,492 defect).",
+    "PARTIAL applicability must not open transfer gate."
+  ],
+  "non_claims": [
+    "Not clinical validation.",
+    "No Ridge retrain.",
+    "No A\u2192B transfer execution.",
+    "No T3 domain approval.",
+    "Security remains PAUSED."
+  ],
+  "policy": {
+    "unified_version": "0.1.2.1.1",
+    "changeset": "Publication and Scientific Evidence Integrity Correction",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "security_blocks_core": false,
+    "clinical_validation_status": "NOT_STARTED",
+    "intervention_response_model_status": "NOT_STARTED",
+    "treatment_effect_status": "NOT_EVALUATED",
+    "production_readiness": "NOT_CLAIMED",
+    "accepted_unified_v0121_sha256": "6f6e906eb8f01e7a6868c4c4eb71857b15670c5ce6db6ce49125a343572cba26",
+    "accepted_unified_v012_sha256": "55b92ce7b9762114040233be30eaa4705b03e1aa2d378097e21be4ef2258b269",
+    "accepted_unified_v011_sha256": "d0e8a973ecbbee6e618cf5976d8a688abf23023ccc477710668fed3b16072faa",
+    "accepted_unified_v01_sha256": "bf048ed0b7ecfada1d0cdbd522943437d409cdf8aef4b292418b4682cb1a83be",
+    "accepted_core_baseline_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+    "accepted_sdr_v0111_sha256": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+    "accepted_roadmap_v011_sha256": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+    "fixed_outcome_candidate_id": "2685c68a3e247ca4",
+    "preferred_b_code": "53",
+    "preferred_b_unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+    "source_a_system_id": "magerya_api",
+    "source_b_system_id": "kgz_raw",
+    "feature_order": [
+      "y_t0",
+      "horizon_days",
+      "n_prior_measurements",
+      "prior_mean",
+      "prior_last_delta",
+      "days_since_first",
+      "has_prior_history",
+      "prior_mean_missing_flag",
+      "prior_last_delta_missing_flag"
+    ],
+    "applicability_max_ood_fraction": 0.35,
+    "no_retrain": true,
+    "no_transfer_execution": true
+  }
+}

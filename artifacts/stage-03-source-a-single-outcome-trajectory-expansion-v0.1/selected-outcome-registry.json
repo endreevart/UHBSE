@@ -1,0 +1,3444 @@
+{
+  "version": "0.1",
+  "SELECTED_OUTCOME_REGISTRY_STATUS": "PASS",
+  "profile": "conservative",
+  "n_selected": 104,
+  "expected": 104,
+  "registry_hash": "541af0838c92c053c92e58f57ca7399d2c5746355961590b8dcdcbc6d67d6cb8",
+  "selection_basis": "conservative_profile_only",
+  "model_performance_used": false,
+  "grains": [
+    {
+      "grain_id": "939aceb9740534f349c36a0b",
+      "source_code": "Лимфоциты",
+      "normalized_label": "Лимфоциты",
+      "unit": "%",
+      "n_subjects": 14211,
+      "n_subjects_with_repeats": 5809,
+      "n_observations": 26556,
+      "n_strict_consecutive_pairs": 12345,
+      "temporal_coverage": {
+        "min_ts": "2021-05-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7874,
+      "numeric_validity": {
+        "n_numeric": 26556,
+        "n_non_numeric": 7171,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "129e2456cb20264950e02c02",
+      "source_code": "Моноциты",
+      "normalized_label": "Моноциты",
+      "unit": "%",
+      "n_subjects": 14138,
+      "n_subjects_with_repeats": 5739,
+      "n_observations": 26256,
+      "n_strict_consecutive_pairs": 12118,
+      "temporal_coverage": {
+        "min_ts": "2021-05-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7855,
+      "numeric_validity": {
+        "n_numeric": 26256,
+        "n_non_numeric": 7170,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "a2bd145402b2684def8e6db5",
+      "source_code": "Эозинофилы",
+      "normalized_label": "Эозинофилы",
+      "unit": "%",
+      "n_subjects": 14077,
+      "n_subjects_with_repeats": 5676,
+      "n_observations": 26008,
+      "n_strict_consecutive_pairs": 11931,
+      "temporal_coverage": {
+        "min_ts": "2021-05-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7837,
+      "numeric_validity": {
+        "n_numeric": 26008,
+        "n_non_numeric": 7179,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "50fb700d4ba02d6ba121a33e",
+      "source_code": "Нейтрофилы",
+      "normalized_label": "Нейтрофилы",
+      "unit": "%",
+      "n_subjects": 14053,
+      "n_subjects_with_repeats": 5642,
+      "n_observations": 25873,
+      "n_strict_consecutive_pairs": 11820,
+      "temporal_coverage": {
+        "min_ts": "2021-05-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7826,
+      "numeric_validity": {
+        "n_numeric": 25873,
+        "n_non_numeric": 7188,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "89a68b13e406fa081f794c84",
+      "source_code": "Базофилы",
+      "normalized_label": "Базофилы",
+      "unit": "%",
+      "n_subjects": 13937,
+      "n_subjects_with_repeats": 5551,
+      "n_observations": 25537,
+      "n_strict_consecutive_pairs": 11600,
+      "temporal_coverage": {
+        "min_ts": "2021-05-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7789,
+      "numeric_validity": {
+        "n_numeric": 25537,
+        "n_non_numeric": 7247,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "315b74a7b3d2090cf24339e6",
+      "source_code": "Лейкоциты",
+      "normalized_label": "Лейкоциты",
+      "unit": "*10^9/л",
+      "n_subjects": 13545,
+      "n_subjects_with_repeats": 5256,
+      "n_observations": 24313,
+      "n_strict_consecutive_pairs": 10768,
+      "temporal_coverage": {
+        "min_ts": "2021-01-30T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7767,
+      "numeric_validity": {
+        "n_numeric": 24313,
+        "n_non_numeric": 6988,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "acb0477d681443ba75e343d3",
+      "source_code": "Эритроциты",
+      "normalized_label": "Эритроциты",
+      "unit": "*10^12/л",
+      "n_subjects": 13531,
+      "n_subjects_with_repeats": 5264,
+      "n_observations": 24293,
+      "n_strict_consecutive_pairs": 10762,
+      "temporal_coverage": {
+        "min_ts": "2021-01-30T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7771,
+      "numeric_validity": {
+        "n_numeric": 24293,
+        "n_non_numeric": 6967,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "7128dcc839efce2b21632bc4",
+      "source_code": "Тромбоциты",
+      "normalized_label": "Тромбоциты",
+      "unit": "*10^9/л",
+      "n_subjects": 13537,
+      "n_subjects_with_repeats": 5252,
+      "n_observations": 24277,
+      "n_strict_consecutive_pairs": 10740,
+      "temporal_coverage": {
+        "min_ts": "2021-01-30T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7768,
+      "numeric_validity": {
+        "n_numeric": 24277,
+        "n_non_numeric": 6977,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "555f9ae6487af1d52b7436bf",
+      "source_code": "Гемоглобин",
+      "normalized_label": "Гемоглобин",
+      "unit": "г/л",
+      "n_subjects": 13270,
+      "n_subjects_with_repeats": 5049,
+      "n_observations": 23498,
+      "n_strict_consecutive_pairs": 10228,
+      "temporal_coverage": {
+        "min_ts": "2021-05-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7714,
+      "numeric_validity": {
+        "n_numeric": 23498,
+        "n_non_numeric": 6962,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "be26a2a29658d188c2a4fb20",
+      "source_code": "Общий белок",
+      "normalized_label": "Общий белок",
+      "unit": "г/л",
+      "n_subjects": 14012,
+      "n_subjects_with_repeats": 4887,
+      "n_observations": 23691,
+      "n_strict_consecutive_pairs": 9679,
+      "temporal_coverage": {
+        "min_ts": "2021-07-22T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9184,
+      "numeric_validity": {
+        "n_numeric": 23691,
+        "n_non_numeric": 2104,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "669fa365da7c605750a77d94",
+      "source_code": "Железо",
+      "normalized_label": "Железо",
+      "unit": "мкмоль/л",
+      "n_subjects": 13011,
+      "n_subjects_with_repeats": 4758,
+      "n_observations": 22070,
+      "n_strict_consecutive_pairs": 9059,
+      "temporal_coverage": {
+        "min_ts": "2021-01-08T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9673,
+      "numeric_validity": {
+        "n_numeric": 22070,
+        "n_non_numeric": 745,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "d727af74cc3b67a11a372fbd",
+      "source_code": "СОЭ",
+      "normalized_label": "СОЭ",
+      "unit": "мм/час",
+      "n_subjects": 12166,
+      "n_subjects_with_repeats": 4499,
+      "n_observations": 20888,
+      "n_strict_consecutive_pairs": 8722,
+      "temporal_coverage": {
+        "min_ts": "2021-05-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7611,
+      "numeric_validity": {
+        "n_numeric": 20888,
+        "n_non_numeric": 6558,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "21e65a6b77533f2130fb5272",
+      "source_code": "25(OH)витамин D",
+      "normalized_label": "25(OH)витамин D",
+      "unit": "нг/мл",
+      "n_subjects": 13492,
+      "n_subjects_with_repeats": 4396,
+      "n_observations": 21377,
+      "n_strict_consecutive_pairs": 7885,
+      "temporal_coverage": {
+        "min_ts": "2021-01-08T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8993,
+      "numeric_validity": {
+        "n_numeric": 21377,
+        "n_non_numeric": 2395,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "2b3b834bd354cc27cabbcf12",
+      "source_code": "ТТГ",
+      "normalized_label": "ТТГ",
+      "unit": "мкМЕ/мл",
+      "n_subjects": 11423,
+      "n_subjects_with_repeats": 3774,
+      "n_observations": 19130,
+      "n_strict_consecutive_pairs": 7707,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9028,
+      "numeric_validity": {
+        "n_numeric": 19130,
+        "n_non_numeric": 2060,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "4fa47bfb963e75a77d8917a7",
+      "source_code": "Т4 св.",
+      "normalized_label": "Т4 св.",
+      "unit": "пмоль/л",
+      "n_subjects": 11794,
+      "n_subjects_with_repeats": 3670,
+      "n_observations": 19357,
+      "n_strict_consecutive_pairs": 7563,
+      "temporal_coverage": {
+        "min_ts": "2020-05-29T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9073,
+      "numeric_validity": {
+        "n_numeric": 19357,
+        "n_non_numeric": 1977,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "df891adcd79c48f79df36168",
+      "source_code": "Глюкоза",
+      "normalized_label": "Глюкоза",
+      "unit": "ммоль/л",
+      "n_subjects": 12808,
+      "n_subjects_with_repeats": 4162,
+      "n_observations": 20315,
+      "n_strict_consecutive_pairs": 7507,
+      "temporal_coverage": {
+        "min_ts": "2010-06-11T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.825,
+      "numeric_validity": {
+        "n_numeric": 20315,
+        "n_non_numeric": 4309,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "eb3769c87b7e0ee064e5f52e",
+      "source_code": "Т3 св.",
+      "normalized_label": "Т3 св.",
+      "unit": "пмоль/л",
+      "n_subjects": 11307,
+      "n_subjects_with_repeats": 3367,
+      "n_observations": 18207,
+      "n_strict_consecutive_pairs": 6900,
+      "temporal_coverage": {
+        "min_ts": "2021-07-08T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9007,
+      "numeric_validity": {
+        "n_numeric": 18207,
+        "n_non_numeric": 2008,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "793aa5157f9905ddea501114",
+      "source_code": "АЛТ",
+      "normalized_label": "АЛТ",
+      "unit": "Ед/л",
+      "n_subjects": 12395,
+      "n_subjects_with_repeats": 3766,
+      "n_observations": 19230,
+      "n_strict_consecutive_pairs": 6835,
+      "temporal_coverage": {
+        "min_ts": "2021-04-16T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9242,
+      "numeric_validity": {
+        "n_numeric": 19230,
+        "n_non_numeric": 1577,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "a6a7b54d256977615bf09bfc",
+      "source_code": "ЛПВП",
+      "normalized_label": "ЛПВП",
+      "unit": "ммоль/л",
+      "n_subjects": 12153,
+      "n_subjects_with_repeats": 3609,
+      "n_observations": 18732,
+      "n_strict_consecutive_pairs": 6579,
+      "temporal_coverage": {
+        "min_ts": "2021-03-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9108,
+      "numeric_validity": {
+        "n_numeric": 18732,
+        "n_non_numeric": 1834,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "ba8281562f62c3e73845dee8",
+      "source_code": "ЛПНП",
+      "normalized_label": "ЛПНП",
+      "unit": "ммоль/л",
+      "n_subjects": 12156,
+      "n_subjects_with_repeats": 3603,
+      "n_observations": 18700,
+      "n_strict_consecutive_pairs": 6544,
+      "temporal_coverage": {
+        "min_ts": "2021-03-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9079,
+      "numeric_validity": {
+        "n_numeric": 18700,
+        "n_non_numeric": 1896,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "253e5cb1bcf4e6d4f9532b67",
+      "source_code": "АСТ",
+      "normalized_label": "АСТ",
+      "unit": "Ед/л",
+      "n_subjects": 11989,
+      "n_subjects_with_repeats": 3510,
+      "n_observations": 18390,
+      "n_strict_consecutive_pairs": 6401,
+      "temporal_coverage": {
+        "min_ts": "2021-08-03T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.93,
+      "numeric_validity": {
+        "n_numeric": 18390,
+        "n_non_numeric": 1384,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "c89daba6243cfa057d39975a",
+      "source_code": "Триглицериды",
+      "normalized_label": "Триглицериды",
+      "unit": "ммоль/л",
+      "n_subjects": 12094,
+      "n_subjects_with_repeats": 3526,
+      "n_observations": 18217,
+      "n_strict_consecutive_pairs": 6123,
+      "temporal_coverage": {
+        "min_ts": "2021-01-18T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9195,
+      "numeric_validity": {
+        "n_numeric": 18217,
+        "n_non_numeric": 1595,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "74a3757c482706afbbaadc4e",
+      "source_code": "Витамин B12 (цианкобаламин)",
+      "normalized_label": "Витамин B12 (цианкобаламин)",
+      "unit": "пг/мл",
+      "n_subjects": 12052,
+      "n_subjects_with_repeats": 3294,
+      "n_observations": 17511,
+      "n_strict_consecutive_pairs": 5459,
+      "temporal_coverage": {
+        "min_ts": "2021-04-15T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9097,
+      "numeric_validity": {
+        "n_numeric": 17511,
+        "n_non_numeric": 1739,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "4a5e3e3f043e91b945176b1c",
+      "source_code": "Витамин В9 (фолиевая кислота)",
+      "normalized_label": "Витамин В9 (фолиевая кислота)",
+      "unit": "нг/мл",
+      "n_subjects": 11094,
+      "n_subjects_with_repeats": 3129,
+      "n_observations": 16451,
+      "n_strict_consecutive_pairs": 5357,
+      "temporal_coverage": {
+        "min_ts": "2021-09-08T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8943,
+      "numeric_validity": {
+        "n_numeric": 16451,
+        "n_non_numeric": 1944,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "d292917cfd1ceaa554dcf723",
+      "source_code": "Гомоцистеин",
+      "normalized_label": "Гомоцистеин",
+      "unit": "мкмоль/л",
+      "n_subjects": 10107,
+      "n_subjects_with_repeats": 2919,
+      "n_observations": 15105,
+      "n_strict_consecutive_pairs": 4998,
+      "temporal_coverage": {
+        "min_ts": "2020-07-30T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8586,
+      "numeric_validity": {
+        "n_numeric": 15105,
+        "n_non_numeric": 2488,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "8f807fe735bfa4f3d20d3543",
+      "source_code": "Ферритин",
+      "normalized_label": "Ферритин",
+      "unit": "нг/мл",
+      "n_subjects": 9493,
+      "n_subjects_with_repeats": 2583,
+      "n_observations": 14077,
+      "n_strict_consecutive_pairs": 4584,
+      "temporal_coverage": {
+        "min_ts": "2020-11-26T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8575,
+      "numeric_validity": {
+        "n_numeric": 14077,
+        "n_non_numeric": 2339,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "d2fb8ac88f06f219ea557114",
+      "source_code": "Ферритин",
+      "normalized_label": "Ферритин",
+      "unit": "мкг/л",
+      "n_subjects": 6406,
+      "n_subjects_with_repeats": 2075,
+      "n_observations": 10349,
+      "n_strict_consecutive_pairs": 3943,
+      "temporal_coverage": {
+        "min_ts": "2021-05-21T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9996,
+      "numeric_validity": {
+        "n_numeric": 10349,
+        "n_non_numeric": 4,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "2d1f2a6629dd192aa95c933f",
+      "source_code": "Ат к ТПО",
+      "normalized_label": "Ат к ТПО",
+      "unit": "МЕ/мл",
+      "n_subjects": 10592,
+      "n_subjects_with_repeats": 2186,
+      "n_observations": 14325,
+      "n_strict_consecutive_pairs": 3733,
+      "temporal_coverage": {
+        "min_ts": "2019-10-23T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9358,
+      "numeric_validity": {
+        "n_numeric": 14325,
+        "n_non_numeric": 983,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "d199b56c10bc09b36195156f",
+      "source_code": "Цветной показатель",
+      "normalized_label": "Цветной показатель",
+      "unit": "_",
+      "n_subjects": 7367,
+      "n_subjects_with_repeats": 1855,
+      "n_observations": 10717,
+      "n_strict_consecutive_pairs": 3350,
+      "temporal_coverage": {
+        "min_ts": "2021-01-30T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.5962,
+      "numeric_validity": {
+        "n_numeric": 10717,
+        "n_non_numeric": 7260,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "238701fc66be44476291a5a8",
+      "source_code": "Креатинин",
+      "normalized_label": "Креатинин",
+      "unit": "мкмоль/л",
+      "n_subjects": 8990,
+      "n_subjects_with_repeats": 2124,
+      "n_observations": 12315,
+      "n_strict_consecutive_pairs": 3325,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9406,
+      "numeric_validity": {
+        "n_numeric": 12315,
+        "n_non_numeric": 778,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "0fe1617240bfd9c9f713cbde",
+      "source_code": "Средний объем эритроцитов (MCV)",
+      "normalized_label": "Средний объем эритроцитов (MCV)",
+      "unit": "фл",
+      "n_subjects": 5193,
+      "n_subjects_with_repeats": 1888,
+      "n_observations": 8426,
+      "n_strict_consecutive_pairs": 3233,
+      "temporal_coverage": {
+        "min_ts": "2021-10-26T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.759,
+      "numeric_validity": {
+        "n_numeric": 8426,
+        "n_non_numeric": 2676,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "5fc0c793e10ff22e2aba3a80",
+      "source_code": "Пролактин",
+      "normalized_label": "Пролактин",
+      "unit": "мМЕ/л",
+      "n_subjects": 7456,
+      "n_subjects_with_repeats": 1800,
+      "n_observations": 10570,
+      "n_strict_consecutive_pairs": 3114,
+      "temporal_coverage": {
+        "min_ts": "2021-05-04T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9993,
+      "numeric_validity": {
+        "n_numeric": 10570,
+        "n_non_numeric": 7,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "8393c9903807b11de0d69f73",
+      "source_code": "Инсулин",
+      "normalized_label": "Инсулин",
+      "unit": "мкЕд/мл",
+      "n_subjects": 7582,
+      "n_subjects_with_repeats": 1752,
+      "n_observations": 10491,
+      "n_strict_consecutive_pairs": 2909,
+      "temporal_coverage": {
+        "min_ts": "2021-08-09T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.856,
+      "numeric_validity": {
+        "n_numeric": 10491,
+        "n_non_numeric": 1765,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "ef1d5f1e32407532f0a57581",
+      "source_code": "Общая железосвязывающая способность сыворотки",
+      "normalized_label": "Общая железосвязывающая способность сыворотки",
+      "unit": "мкмоль/л",
+      "n_subjects": 6091,
+      "n_subjects_with_repeats": 1548,
+      "n_observations": 8753,
+      "n_strict_consecutive_pairs": 2662,
+      "temporal_coverage": {
+        "min_ts": "2021-10-06T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8207,
+      "numeric_validity": {
+        "n_numeric": 8753,
+        "n_non_numeric": 1912,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "857fa19906f340172a77ae1a",
+      "source_code": "Латентная железосвязывающая способность сыворотки",
+      "normalized_label": "Латентная железосвязывающая способность сыворотки",
+      "unit": "мкмоль/л",
+      "n_subjects": 5745,
+      "n_subjects_with_repeats": 1431,
+      "n_observations": 8202,
+      "n_strict_consecutive_pairs": 2457,
+      "temporal_coverage": {
+        "min_ts": "2021-10-06T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9477,
+      "numeric_validity": {
+        "n_numeric": 8202,
+        "n_non_numeric": 453,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "54a9741340e64c00965a9f80",
+      "source_code": "Ат к ТГ",
+      "normalized_label": "Ат к ТГ",
+      "unit": "МЕ/мл",
+      "n_subjects": 7309,
+      "n_subjects_with_repeats": 1322,
+      "n_observations": 9551,
+      "n_strict_consecutive_pairs": 2242,
+      "temporal_coverage": {
+        "min_ts": "2020-10-20T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9136,
+      "numeric_validity": {
+        "n_numeric": 9551,
+        "n_non_numeric": 903,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "1556e1ecff27ac6ece7794d3",
+      "source_code": "Распределение эритроцитов по объему (коэфф.вариации) RDW-CV",
+      "normalized_label": "Распределение эритроцитов по объему (коэфф.вариации) RDW-CV",
+      "unit": "%",
+      "n_subjects": 4239,
+      "n_subjects_with_repeats": 1342,
+      "n_observations": 6400,
+      "n_strict_consecutive_pairs": 2161,
+      "temporal_coverage": {
+        "min_ts": "2024-06-26T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7089,
+      "numeric_validity": {
+        "n_numeric": 6400,
+        "n_non_numeric": 2628,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "aeb8cef61652cc7b2dbff5a9",
+      "source_code": "Билирубин общий",
+      "normalized_label": "Билирубин общий",
+      "unit": "мкмоль/л",
+      "n_subjects": 6034,
+      "n_subjects_with_repeats": 1417,
+      "n_observations": 8172,
+      "n_strict_consecutive_pairs": 2138,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9286,
+      "numeric_validity": {
+        "n_numeric": 8172,
+        "n_non_numeric": 628,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "4c2f271a7b32117589672693",
+      "source_code": "Гематокрит",
+      "normalized_label": "Гематокрит",
+      "unit": "%",
+      "n_subjects": 4065,
+      "n_subjects_with_repeats": 1273,
+      "n_observations": 5942,
+      "n_strict_consecutive_pairs": 1877,
+      "temporal_coverage": {
+        "min_ts": "2021-01-30T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7712,
+      "numeric_validity": {
+        "n_numeric": 5942,
+        "n_non_numeric": 1763,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "1447348ffe256f6ec66e0f48",
+      "source_code": "ФСГ",
+      "normalized_label": "ФСГ",
+      "unit": "мМе/мл",
+      "n_subjects": 5275,
+      "n_subjects_with_repeats": 1196,
+      "n_observations": 7143,
+      "n_strict_consecutive_pairs": 1868,
+      "temporal_coverage": {
+        "min_ts": "2020-01-16T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8882,
+      "numeric_validity": {
+        "n_numeric": 7143,
+        "n_non_numeric": 899,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "47616f758330a9b0a7e80ec4",
+      "source_code": "Мочевая кислота",
+      "normalized_label": "Мочевая кислота",
+      "unit": "мкмоль/л",
+      "n_subjects": 5302,
+      "n_subjects_with_repeats": 1154,
+      "n_observations": 7137,
+      "n_strict_consecutive_pairs": 1835,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 0.999,
+      "numeric_validity": {
+        "n_numeric": 7137,
+        "n_non_numeric": 7,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "0e4e3c20e01290d3c6bffa53",
+      "source_code": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "normalized_label": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "unit": "г/дл",
+      "n_subjects": 3723,
+      "n_subjects_with_repeats": 1107,
+      "n_observations": 5507,
+      "n_strict_consecutive_pairs": 1784,
+      "temporal_coverage": {
+        "min_ts": "2021-11-27T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.6766,
+      "numeric_validity": {
+        "n_numeric": 5507,
+        "n_non_numeric": 2632,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "89b23da0bc18bda9a2658507",
+      "source_code": "Гликированный гемоглобин",
+      "normalized_label": "Гликированный гемоглобин",
+      "unit": "%",
+      "n_subjects": 6452,
+      "n_subjects_with_repeats": 1244,
+      "n_observations": 8200,
+      "n_strict_consecutive_pairs": 1748,
+      "temporal_coverage": {
+        "min_ts": "2021-09-04T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9225,
+      "numeric_validity": {
+        "n_numeric": 8200,
+        "n_non_numeric": 689,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "9b0e6d951675dbe6b3f25a59",
+      "source_code": "Инсулин",
+      "normalized_label": "Инсулин",
+      "unit": "мкМЕ/мл",
+      "n_subjects": 4695,
+      "n_subjects_with_repeats": 1098,
+      "n_observations": 6442,
+      "n_strict_consecutive_pairs": 1747,
+      "temporal_coverage": {
+        "min_ts": "2021-07-27T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9992,
+      "numeric_validity": {
+        "n_numeric": 6442,
+        "n_non_numeric": 5,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "4827a1f7bdfef3d05e37e39e",
+      "source_code": "Мочевина",
+      "normalized_label": "Мочевина",
+      "unit": "ммоль/л",
+      "n_subjects": 5073,
+      "n_subjects_with_repeats": 1087,
+      "n_observations": 6717,
+      "n_strict_consecutive_pairs": 1644,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9732,
+      "numeric_validity": {
+        "n_numeric": 6717,
+        "n_non_numeric": 185,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "7f05ceba292b740a68acbb2e",
+      "source_code": "ЛГ",
+      "normalized_label": "ЛГ",
+      "unit": "мМе/мл",
+      "n_subjects": 5199,
+      "n_subjects_with_repeats": 1071,
+      "n_observations": 6788,
+      "n_strict_consecutive_pairs": 1589,
+      "temporal_coverage": {
+        "min_ts": "2020-01-16T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.877,
+      "numeric_validity": {
+        "n_numeric": 6788,
+        "n_non_numeric": 952,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "0b9fcafe4d76be3c295953ec",
+      "source_code": "Распределение эритроцитов по объему (ст.отклонение) RDW-SD",
+      "normalized_label": "Распределение эритроцитов по объему (ст.отклонение) RDW-SD",
+      "unit": "фл",
+      "n_subjects": 3309,
+      "n_subjects_with_repeats": 985,
+      "n_observations": 4837,
+      "n_strict_consecutive_pairs": 1528,
+      "temporal_coverage": {
+        "min_ts": "2024-06-26T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.6474,
+      "numeric_validity": {
+        "n_numeric": 4837,
+        "n_non_numeric": 2635,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "aae7ba9f03903620ebe9c3a9",
+      "source_code": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "normalized_label": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "unit": "пг/кл",
+      "n_subjects": 3743,
+      "n_subjects_with_repeats": 1022,
+      "n_observations": 5238,
+      "n_strict_consecutive_pairs": 1495,
+      "temporal_coverage": {
+        "min_ts": "2021-10-26T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.6619,
+      "numeric_validity": {
+        "n_numeric": 5238,
+        "n_non_numeric": 2676,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "023fffe24918483998f6ac37",
+      "source_code": "Трансферрин",
+      "normalized_label": "Трансферрин",
+      "unit": "г/л",
+      "n_subjects": 4511,
+      "n_subjects_with_repeats": 1023,
+      "n_observations": 5946,
+      "n_strict_consecutive_pairs": 1435,
+      "temporal_coverage": {
+        "min_ts": "2021-05-21T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9365,
+      "numeric_validity": {
+        "n_numeric": 5946,
+        "n_non_numeric": 403,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "081d8285069229b1c5675125",
+      "source_code": "Тестостерон общий",
+      "normalized_label": "Тестостерон общий",
+      "unit": "нмоль/л",
+      "n_subjects": 5261,
+      "n_subjects_with_repeats": 993,
+      "n_observations": 6675,
+      "n_strict_consecutive_pairs": 1414,
+      "temporal_coverage": {
+        "min_ts": "2021-07-23T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9222,
+      "numeric_validity": {
+        "n_numeric": 6675,
+        "n_non_numeric": 563,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "5ef24901893d30b26ed99948",
+      "source_code": "Гемоглобин",
+      "normalized_label": "Гемоглобин",
+      "unit": "г/дл",
+      "n_subjects": 2558,
+      "n_subjects_with_repeats": 732,
+      "n_observations": 3899,
+      "n_strict_consecutive_pairs": 1341,
+      "temporal_coverage": {
+        "min_ts": "2021-08-03T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9519,
+      "numeric_validity": {
+        "n_numeric": 3899,
+        "n_non_numeric": 197,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "914915c57af794624367b9b9",
+      "source_code": "Цинк",
+      "normalized_label": "Цинк",
+      "unit": "мкмоль/л",
+      "n_subjects": 4404,
+      "n_subjects_with_repeats": 861,
+      "n_observations": 5663,
+      "n_strict_consecutive_pairs": 1259,
+      "temporal_coverage": {
+        "min_ts": "2021-09-30T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8348,
+      "numeric_validity": {
+        "n_numeric": 5663,
+        "n_non_numeric": 1121,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "ab651a8ef741ad2f7bb7efe4",
+      "source_code": "ТТГ",
+      "normalized_label": "ТТГ",
+      "unit": "мЕд/л",
+      "n_subjects": 1808,
+      "n_subjects_with_repeats": 555,
+      "n_observations": 2997,
+      "n_strict_consecutive_pairs": 1189,
+      "temporal_coverage": {
+        "min_ts": "2021-01-20T00:00:00+00:00",
+        "max_ts": "2026-05-15T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9993,
+      "numeric_validity": {
+        "n_numeric": 2997,
+        "n_non_numeric": 2,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "c6a8f217199dc47380a99307",
+      "source_code": "Эстрадиол",
+      "normalized_label": "Эстрадиол",
+      "unit": "пмоль/л",
+      "n_subjects": 3547,
+      "n_subjects_with_repeats": 663,
+      "n_observations": 4556,
+      "n_strict_consecutive_pairs": 1009,
+      "temporal_coverage": {
+        "min_ts": "2021-07-24T00:00:00+00:00",
+        "max_ts": "2026-06-29T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8829,
+      "numeric_validity": {
+        "n_numeric": 4556,
+        "n_non_numeric": 604,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "6b9ad16512760f31c435f2a1",
+      "source_code": "Эритроциты",
+      "normalized_label": "Эритроциты",
+      "unit": "млн/мкл",
+      "n_subjects": 1781,
+      "n_subjects_with_repeats": 550,
+      "n_observations": 2786,
+      "n_strict_consecutive_pairs": 1005,
+      "temporal_coverage": {
+        "min_ts": "2021-10-09T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9349,
+      "numeric_validity": {
+        "n_numeric": 2786,
+        "n_non_numeric": 194,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "288c39a98b573b54b555d4b8",
+      "source_code": "Лейкоциты",
+      "normalized_label": "Лейкоциты",
+      "unit": "тыс/мкл",
+      "n_subjects": 1795,
+      "n_subjects_with_repeats": 544,
+      "n_observations": 2796,
+      "n_strict_consecutive_pairs": 1001,
+      "temporal_coverage": {
+        "min_ts": "2021-10-09T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9348,
+      "numeric_validity": {
+        "n_numeric": 2796,
+        "n_non_numeric": 195,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "7e59a7d7a621b1a06a811a81",
+      "source_code": "Тромбоциты",
+      "normalized_label": "Тромбоциты",
+      "unit": "тыс/мкл",
+      "n_subjects": 1784,
+      "n_subjects_with_repeats": 532,
+      "n_observations": 2770,
+      "n_strict_consecutive_pairs": 986,
+      "temporal_coverage": {
+        "min_ts": "2021-10-09T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9342,
+      "numeric_validity": {
+        "n_numeric": 2770,
+        "n_non_numeric": 195,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "1629c568257248aa4c8f614f",
+      "source_code": "Кортизол",
+      "normalized_label": "Кортизол",
+      "unit": "мкг/дл",
+      "n_subjects": 4537,
+      "n_subjects_with_repeats": 702,
+      "n_observations": 5494,
+      "n_strict_consecutive_pairs": 957,
+      "temporal_coverage": {
+        "min_ts": "2021-05-11T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9151,
+      "numeric_validity": {
+        "n_numeric": 5494,
+        "n_non_numeric": 510,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "f05441d07d1a03f76c49dc56",
+      "source_code": "Кортизол",
+      "normalized_label": "Кортизол",
+      "unit": "нмоль/л",
+      "n_subjects": 3078,
+      "n_subjects_with_repeats": 596,
+      "n_observations": 4031,
+      "n_strict_consecutive_pairs": 953,
+      "temporal_coverage": {
+        "min_ts": "2021-09-11T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 0.998,
+      "numeric_validity": {
+        "n_numeric": 4031,
+        "n_non_numeric": 8,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "09bcc9e8c8044bac1db8fcb8",
+      "source_code": "Т4 св.",
+      "normalized_label": "Т4 св.",
+      "unit": "нг/дл",
+      "n_subjects": 1798,
+      "n_subjects_with_repeats": 512,
+      "n_observations": 2751,
+      "n_strict_consecutive_pairs": 953,
+      "temporal_coverage": {
+        "min_ts": "2021-05-06T00:00:00+00:00",
+        "max_ts": "2026-06-29T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9989,
+      "numeric_validity": {
+        "n_numeric": 2751,
+        "n_non_numeric": 3,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "7b928316a7e3df7f5e5361aa",
+      "source_code": "Молочная кислота (лактат)",
+      "normalized_label": "Молочная кислота (лактат)",
+      "unit": "ммоль/л",
+      "n_subjects": 2618,
+      "n_subjects_with_repeats": 617,
+      "n_observations": 3542,
+      "n_strict_consecutive_pairs": 924,
+      "temporal_coverage": {
+        "min_ts": "2021-09-24T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9129,
+      "numeric_validity": {
+        "n_numeric": 3542,
+        "n_non_numeric": 338,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "b6c63a93b05f2c2d62615409",
+      "source_code": "pH",
+      "normalized_label": "pH",
+      "unit": "_",
+      "n_subjects": 2960,
+      "n_subjects_with_repeats": 596,
+      "n_observations": 3872,
+      "n_strict_consecutive_pairs": 912,
+      "temporal_coverage": {
+        "min_ts": "2019-03-02T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7753,
+      "numeric_validity": {
+        "n_numeric": 3872,
+        "n_non_numeric": 1122,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "1972c3e829ae23d3dc6c8ad4",
+      "source_code": "Медь",
+      "normalized_label": "Медь",
+      "unit": "мкмоль/л",
+      "n_subjects": 3533,
+      "n_subjects_with_repeats": 636,
+      "n_observations": 4445,
+      "n_strict_consecutive_pairs": 912,
+      "temporal_coverage": {
+        "min_ts": "2021-10-21T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8044,
+      "numeric_validity": {
+        "n_numeric": 4445,
+        "n_non_numeric": 1081,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "d5674894adfb3f3d4dbc3204",
+      "source_code": "Эстрадиол",
+      "normalized_label": "Эстрадиол",
+      "unit": "пг/мл",
+      "n_subjects": 2836,
+      "n_subjects_with_repeats": 606,
+      "n_observations": 3748,
+      "n_strict_consecutive_pairs": 912,
+      "temporal_coverage": {
+        "min_ts": "2021-05-11T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8861,
+      "numeric_validity": {
+        "n_numeric": 3748,
+        "n_non_numeric": 482,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "c67a0f547161327f54d66290",
+      "source_code": "Т3 св.",
+      "normalized_label": "Т3 св.",
+      "unit": "пг/мл",
+      "n_subjects": 1770,
+      "n_subjects_with_repeats": 472,
+      "n_observations": 2658,
+      "n_strict_consecutive_pairs": 888,
+      "temporal_coverage": {
+        "min_ts": "2021-05-06T00:00:00+00:00",
+        "max_ts": "2026-06-29T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9992,
+      "numeric_validity": {
+        "n_numeric": 2658,
+        "n_non_numeric": 2,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "33a544d0acc02a3b999d2a5b",
+      "source_code": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "normalized_label": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "unit": "г/л",
+      "n_subjects": 1952,
+      "n_subjects_with_repeats": 573,
+      "n_observations": 2830,
+      "n_strict_consecutive_pairs": 878,
+      "temporal_coverage": {
+        "min_ts": "2021-12-12T00:00:00+00:00",
+        "max_ts": "2026-06-29T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9837,
+      "numeric_validity": {
+        "n_numeric": 2830,
+        "n_non_numeric": 47,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "c6985486de338084189d3860",
+      "source_code": "С–реактивный белок",
+      "normalized_label": "С–реактивный белок",
+      "unit": "мг/л",
+      "n_subjects": 3024,
+      "n_subjects_with_repeats": 583,
+      "n_observations": 3868,
+      "n_strict_consecutive_pairs": 844,
+      "temporal_coverage": {
+        "min_ts": "2021-07-24T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9278,
+      "numeric_validity": {
+        "n_numeric": 3868,
+        "n_non_numeric": 301,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "d4e96f4d34473e2d38cd7e83",
+      "source_code": "ГСПГ",
+      "normalized_label": "ГСПГ",
+      "unit": "нмоль/л",
+      "n_subjects": 4056,
+      "n_subjects_with_repeats": 631,
+      "n_observations": 4898,
+      "n_strict_consecutive_pairs": 842,
+      "temporal_coverage": {
+        "min_ts": "2021-10-02T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9123,
+      "numeric_validity": {
+        "n_numeric": 4898,
+        "n_non_numeric": 471,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "e3546280c2a862bbd9c37ef5",
+      "source_code": "Билирубин прямой",
+      "normalized_label": "Билирубин прямой",
+      "unit": "мкмоль/л",
+      "n_subjects": 3454,
+      "n_subjects_with_repeats": 581,
+      "n_observations": 4276,
+      "n_strict_consecutive_pairs": 822,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9052,
+      "numeric_validity": {
+        "n_numeric": 4276,
+        "n_non_numeric": 448,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "4b15422c41da270df9565f1d",
+      "source_code": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "normalized_label": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "unit": "_",
+      "n_subjects": 2397,
+      "n_subjects_with_repeats": 575,
+      "n_observations": 3193,
+      "n_strict_consecutive_pairs": 796,
+      "temporal_coverage": {
+        "min_ts": "2021-12-07T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 1.0,
+      "numeric_validity": {
+        "n_numeric": 3193,
+        "n_non_numeric": 0,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "013e06b8c48aedf9c1224fe1",
+      "source_code": "Фруктозамин",
+      "normalized_label": "Фруктозамин",
+      "unit": "мкмоль/л",
+      "n_subjects": 2309,
+      "n_subjects_with_repeats": 557,
+      "n_observations": 3087,
+      "n_strict_consecutive_pairs": 778,
+      "temporal_coverage": {
+        "min_ts": "2022-01-04T00:00:00+00:00",
+        "max_ts": "2026-06-28T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7741,
+      "numeric_validity": {
+        "n_numeric": 3087,
+        "n_non_numeric": 901,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "7d534c7074b97e2d379b47ab",
+      "source_code": "Кальций общий",
+      "normalized_label": "Кальций общий",
+      "unit": "ммоль/л",
+      "n_subjects": 2923,
+      "n_subjects_with_repeats": 496,
+      "n_observations": 3671,
+      "n_strict_consecutive_pairs": 748,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-06-28T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9372,
+      "numeric_validity": {
+        "n_numeric": 3671,
+        "n_non_numeric": 246,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "6cd1eb0a1f482ec93b7b336d",
+      "source_code": "ТТГ",
+      "normalized_label": "ТТГ",
+      "unit": "мМЕ/л",
+      "n_subjects": 1613,
+      "n_subjects_with_repeats": 401,
+      "n_observations": 2357,
+      "n_strict_consecutive_pairs": 744,
+      "temporal_coverage": {
+        "min_ts": "2021-01-08T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 1.0,
+      "numeric_validity": {
+        "n_numeric": 2357,
+        "n_non_numeric": 0,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "fe6da163750f93b2046bbaa2",
+      "source_code": "ДГЭА–сульфат",
+      "normalized_label": "ДГЭА–сульфат",
+      "unit": "мкг/дл",
+      "n_subjects": 3771,
+      "n_subjects_with_repeats": 547,
+      "n_observations": 4499,
+      "n_strict_consecutive_pairs": 728,
+      "temporal_coverage": {
+        "min_ts": "2021-09-13T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 1.0,
+      "numeric_validity": {
+        "n_numeric": 4499,
+        "n_non_numeric": 0,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "4f8f23c75288ad8d762a0f99",
+      "source_code": "Ат к рТТГ",
+      "normalized_label": "Ат к рТТГ",
+      "unit": "МЕ/л",
+      "n_subjects": 2699,
+      "n_subjects_with_repeats": 400,
+      "n_observations": 3408,
+      "n_strict_consecutive_pairs": 709,
+      "temporal_coverage": {
+        "min_ts": "2021-05-08T00:00:00+00:00",
+        "max_ts": "2026-06-27T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9488,
+      "numeric_validity": {
+        "n_numeric": 3408,
+        "n_non_numeric": 184,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "28b405d088baa8dcd449f4f3",
+      "source_code": "АЧТВ",
+      "normalized_label": "АЧТВ",
+      "unit": "сек",
+      "n_subjects": 2205,
+      "n_subjects_with_repeats": 439,
+      "n_observations": 2868,
+      "n_strict_consecutive_pairs": 663,
+      "temporal_coverage": {
+        "min_ts": "2021-01-13T00:00:00+00:00",
+        "max_ts": "2026-06-27T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9512,
+      "numeric_validity": {
+        "n_numeric": 2868,
+        "n_non_numeric": 147,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "d45ffcb98dfb4c34cd611335",
+      "source_code": "Фибриноген",
+      "normalized_label": "Фибриноген",
+      "unit": "г/л",
+      "n_subjects": 2281,
+      "n_subjects_with_repeats": 444,
+      "n_observations": 2936,
+      "n_strict_consecutive_pairs": 655,
+      "temporal_coverage": {
+        "min_ts": "2021-01-13T00:00:00+00:00",
+        "max_ts": "2026-06-27T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9582,
+      "numeric_validity": {
+        "n_numeric": 2936,
+        "n_non_numeric": 128,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "faa53ed13837614b96683b4e",
+      "source_code": "МНО",
+      "normalized_label": "МНО",
+      "unit": "_",
+      "n_subjects": 2312,
+      "n_subjects_with_repeats": 432,
+      "n_observations": 2947,
+      "n_strict_consecutive_pairs": 635,
+      "temporal_coverage": {
+        "min_ts": "2021-01-13T00:00:00+00:00",
+        "max_ts": "2026-06-27T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9452,
+      "numeric_validity": {
+        "n_numeric": 2947,
+        "n_non_numeric": 171,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "c3fe06459111b5019a0b9b14",
+      "source_code": "Пролактин",
+      "normalized_label": "Пролактин",
+      "unit": "мЕд/л",
+      "n_subjects": 1253,
+      "n_subjects_with_repeats": 324,
+      "n_observations": 1888,
+      "n_strict_consecutive_pairs": 635,
+      "temporal_coverage": {
+        "min_ts": "2021-09-11T00:00:00+00:00",
+        "max_ts": "2025-11-22T00:00:00+00:00"
+      },
+      "unit_dominance": 0.5997,
+      "numeric_validity": {
+        "n_numeric": 1888,
+        "n_non_numeric": 1260,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "51813e2ffef7f0cc04bc5421",
+      "source_code": "Коэффициент насыщения трансферрина железом",
+      "normalized_label": "Коэффициент насыщения трансферрина железом",
+      "unit": "%",
+      "n_subjects": 2278,
+      "n_subjects_with_repeats": 425,
+      "n_observations": 2847,
+      "n_strict_consecutive_pairs": 569,
+      "temporal_coverage": {
+        "min_ts": "2022-01-11T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7832,
+      "numeric_validity": {
+        "n_numeric": 2847,
+        "n_non_numeric": 788,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "166d068a774b06dedb8e7f5f",
+      "source_code": "Магний",
+      "normalized_label": "Магний",
+      "unit": "ммоль/л",
+      "n_subjects": 2751,
+      "n_subjects_with_repeats": 391,
+      "n_observations": 3318,
+      "n_strict_consecutive_pairs": 567,
+      "temporal_coverage": {
+        "min_ts": "2021-05-01T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9863,
+      "numeric_validity": {
+        "n_numeric": 3318,
+        "n_non_numeric": 46,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "e1694c982e4f944b1779149f",
+      "source_code": "Пролактин",
+      "normalized_label": "Пролактин",
+      "unit": "нг/мл",
+      "n_subjects": 1395,
+      "n_subjects_with_repeats": 328,
+      "n_observations": 1960,
+      "n_strict_consecutive_pairs": 565,
+      "temporal_coverage": {
+        "min_ts": "2021-05-11T00:00:00+00:00",
+        "max_ts": "2026-06-29T00:00:00+00:00"
+      },
+      "unit_dominance": 0.999,
+      "numeric_validity": {
+        "n_numeric": 1960,
+        "n_non_numeric": 2,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "1491d981e846918085276594",
+      "source_code": "Холестерин общий",
+      "normalized_label": "Холестерин общий",
+      "unit": "ммоль/л",
+      "n_subjects": 2452,
+      "n_subjects_with_repeats": 391,
+      "n_observations": 2979,
+      "n_strict_consecutive_pairs": 527,
+      "temporal_coverage": {
+        "min_ts": "2010-06-11T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9682,
+      "numeric_validity": {
+        "n_numeric": 2979,
+        "n_non_numeric": 98,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "809de8830b2e3d96c6ee09d0",
+      "source_code": "Щелочная фосфатаза",
+      "normalized_label": "Щелочная фосфатаза",
+      "unit": "Ед/л",
+      "n_subjects": 2513,
+      "n_subjects_with_repeats": 363,
+      "n_observations": 3011,
+      "n_strict_consecutive_pairs": 498,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9267,
+      "numeric_validity": {
+        "n_numeric": 3011,
+        "n_non_numeric": 238,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "958513d40cd979d5b32bce08",
+      "source_code": "Мочевая кислота",
+      "normalized_label": "Мочевая кислота",
+      "unit": "ммоль/л",
+      "n_subjects": 3232,
+      "n_subjects_with_repeats": 336,
+      "n_observations": 3725,
+      "n_strict_consecutive_pairs": 493,
+      "temporal_coverage": {
+        "min_ts": "2021-10-04T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.843,
+      "numeric_validity": {
+        "n_numeric": 3725,
+        "n_non_numeric": 694,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "567329e3a9b7719315ddfe3f",
+      "source_code": "Пролактин",
+      "normalized_label": "Пролактин",
+      "unit": "мкМЕ/мл",
+      "n_subjects": 1086,
+      "n_subjects_with_repeats": 263,
+      "n_observations": 1570,
+      "n_strict_consecutive_pairs": 484,
+      "temporal_coverage": {
+        "min_ts": "2021-10-19T00:00:00+00:00",
+        "max_ts": "2026-06-25T00:00:00+00:00"
+      },
+      "unit_dominance": 1.0,
+      "numeric_validity": {
+        "n_numeric": 1570,
+        "n_non_numeric": 0,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "5fa5ffd9eb930281043cba75",
+      "source_code": "Эозинофильный катионный белок",
+      "normalized_label": "Эозинофильный катионный белок",
+      "unit": "нг/мл",
+      "n_subjects": 1906,
+      "n_subjects_with_repeats": 342,
+      "n_observations": 2360,
+      "n_strict_consecutive_pairs": 454,
+      "temporal_coverage": {
+        "min_ts": "2021-01-08T00:00:00+00:00",
+        "max_ts": "2026-06-27T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9996,
+      "numeric_validity": {
+        "n_numeric": 2360,
+        "n_non_numeric": 1,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "d4a61663d882a3003d617da9",
+      "source_code": "Альбумин",
+      "normalized_label": "Альбумин",
+      "unit": "г/л",
+      "n_subjects": 1914,
+      "n_subjects_with_repeats": 303,
+      "n_observations": 2349,
+      "n_strict_consecutive_pairs": 435,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-06-22T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9518,
+      "numeric_validity": {
+        "n_numeric": 2349,
+        "n_non_numeric": 119,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "3dff60cf0bbb90be3a0d5490",
+      "source_code": "ГГТ",
+      "normalized_label": "ГГТ",
+      "unit": "Ед/л",
+      "n_subjects": 2155,
+      "n_subjects_with_repeats": 318,
+      "n_observations": 2589,
+      "n_strict_consecutive_pairs": 434,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-06-30T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9411,
+      "numeric_validity": {
+        "n_numeric": 2589,
+        "n_non_numeric": 162,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "8a3191251bd4795ed0276290",
+      "source_code": "СОЭ (по Вестергрену)",
+      "normalized_label": "СОЭ (по Вестергрену)",
+      "unit": "мм/час",
+      "n_subjects": 1140,
+      "n_subjects_with_repeats": 266,
+      "n_observations": 1568,
+      "n_strict_consecutive_pairs": 428,
+      "temporal_coverage": {
+        "min_ts": "2021-10-23T00:00:00+00:00",
+        "max_ts": "2026-04-10T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8824,
+      "numeric_validity": {
+        "n_numeric": 1568,
+        "n_non_numeric": 209,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "4c311d84671db627ac9a94ec",
+      "source_code": "Эозинофильный катионный белок",
+      "normalized_label": "Эозинофильный катионный белок",
+      "unit": "мкг/л",
+      "n_subjects": 1764,
+      "n_subjects_with_repeats": 269,
+      "n_observations": 2148,
+      "n_strict_consecutive_pairs": 384,
+      "temporal_coverage": {
+        "min_ts": "2021-11-06T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.6094,
+      "numeric_validity": {
+        "n_numeric": 2148,
+        "n_non_numeric": 1377,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "05c245639d527f62b630f014",
+      "source_code": "Паратгормон",
+      "normalized_label": "Паратгормон",
+      "unit": "пг/мл",
+      "n_subjects": 1379,
+      "n_subjects_with_repeats": 245,
+      "n_observations": 1759,
+      "n_strict_consecutive_pairs": 380,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-06-25T00:00:00+00:00"
+      },
+      "unit_dominance": 1.0,
+      "numeric_validity": {
+        "n_numeric": 1759,
+        "n_non_numeric": 0,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "55b849d274b9e32ac6ebd2be",
+      "source_code": "Антитела к вирусу простого герпеса I, II типов, IgG",
+      "normalized_label": "Антитела к вирусу простого герпеса I, II типов, IgG",
+      "unit": "_",
+      "n_subjects": 1634,
+      "n_subjects_with_repeats": 250,
+      "n_observations": 1984,
+      "n_strict_consecutive_pairs": 350,
+      "temporal_coverage": {
+        "min_ts": "2021-08-10T00:00:00+00:00",
+        "max_ts": "2026-06-29T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9506,
+      "numeric_validity": {
+        "n_numeric": 1984,
+        "n_non_numeric": 103,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "c60869e0396b2612359b34b9",
+      "source_code": "ДГЭА–сульфат",
+      "normalized_label": "ДГЭА–сульфат",
+      "unit": "мкмоль/л",
+      "n_subjects": 1685,
+      "n_subjects_with_repeats": 245,
+      "n_observations": 2031,
+      "n_strict_consecutive_pairs": 346,
+      "temporal_coverage": {
+        "min_ts": "2021-05-11T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8865,
+      "numeric_validity": {
+        "n_numeric": 2031,
+        "n_non_numeric": 260,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "ebfd016b23225ad1b621980f",
+      "source_code": "Антитела к цитомегаловирусу, IgG",
+      "normalized_label": "Антитела к цитомегаловирусу, IgG",
+      "unit": "_",
+      "n_subjects": 1663,
+      "n_subjects_with_repeats": 246,
+      "n_observations": 2001,
+      "n_strict_consecutive_pairs": 338,
+      "temporal_coverage": {
+        "min_ts": "2021-04-27T00:00:00+00:00",
+        "max_ts": "2026-06-29T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9809,
+      "numeric_validity": {
+        "n_numeric": 2001,
+        "n_non_numeric": 39,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "c7a7e9d6951a051f4ec95d08",
+      "source_code": "Витамин В9 (фолиевая кислота)",
+      "normalized_label": "Витамин В9 (фолиевая кислота)",
+      "unit": "нмоль/л",
+      "n_subjects": 1146,
+      "n_subjects_with_repeats": 218,
+      "n_observations": 1482,
+      "n_strict_consecutive_pairs": 336,
+      "temporal_coverage": {
+        "min_ts": "2021-05-21T00:00:00+00:00",
+        "max_ts": "2026-06-25T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9993,
+      "numeric_validity": {
+        "n_numeric": 1482,
+        "n_non_numeric": 1,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "86da5bd0b36076840706f796",
+      "source_code": "ФСГ",
+      "normalized_label": "ФСГ",
+      "unit": "мМЕд/мл",
+      "n_subjects": 1000,
+      "n_subjects_with_repeats": 208,
+      "n_observations": 1336,
+      "n_strict_consecutive_pairs": 336,
+      "temporal_coverage": {
+        "min_ts": "2020-11-21T00:00:00+00:00",
+        "max_ts": "2026-06-28T00:00:00+00:00"
+      },
+      "unit_dominance": 1.0,
+      "numeric_validity": {
+        "n_numeric": 1336,
+        "n_non_numeric": 0,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "583d0732404e1d9657c0c976",
+      "source_code": "Кортизол",
+      "normalized_label": "Кортизол",
+      "unit": "нг/мл",
+      "n_subjects": 1744,
+      "n_subjects_with_repeats": 237,
+      "n_observations": 2070,
+      "n_strict_consecutive_pairs": 326,
+      "temporal_coverage": {
+        "min_ts": "2021-09-02T00:00:00+00:00",
+        "max_ts": "2026-06-27T00:00:00+00:00"
+      },
+      "unit_dominance": 0.8099,
+      "numeric_validity": {
+        "n_numeric": 2070,
+        "n_non_numeric": 486,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "50b798414d93d78f90dcfd42",
+      "source_code": "ЛГ",
+      "normalized_label": "ЛГ",
+      "unit": "мМЕд/мл",
+      "n_subjects": 982,
+      "n_subjects_with_repeats": 201,
+      "n_observations": 1298,
+      "n_strict_consecutive_pairs": 316,
+      "temporal_coverage": {
+        "min_ts": "2020-11-21T00:00:00+00:00",
+        "max_ts": "2026-06-29T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9992,
+      "numeric_validity": {
+        "n_numeric": 1298,
+        "n_non_numeric": 1,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "680d9f5a1cd6d46052c81228",
+      "source_code": "D–димер",
+      "normalized_label": "D–димер",
+      "unit": "нг/мл",
+      "n_subjects": 2026,
+      "n_subjects_with_repeats": 235,
+      "n_observations": 2338,
+      "n_strict_consecutive_pairs": 312,
+      "temporal_coverage": {
+        "min_ts": "2021-01-13T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 1.0,
+      "numeric_validity": {
+        "n_numeric": 2338,
+        "n_non_numeric": 0,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "237481b3eb3057b6a95c9052",
+      "source_code": "АЛТ",
+      "normalized_label": "АЛТ",
+      "unit": "МЕ/л",
+      "n_subjects": 931,
+      "n_subjects_with_repeats": 195,
+      "n_observations": 1238,
+      "n_strict_consecutive_pairs": 307,
+      "temporal_coverage": {
+        "min_ts": "2021-02-10T00:00:00+00:00",
+        "max_ts": "2026-06-26T00:00:00+00:00"
+      },
+      "unit_dominance": 1.0,
+      "numeric_validity": {
+        "n_numeric": 1238,
+        "n_non_numeric": 0,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "e2abb6bb21bbfdaae73f3219",
+      "source_code": "ЛДГ",
+      "normalized_label": "ЛДГ",
+      "unit": "Ед/л",
+      "n_subjects": 2227,
+      "n_subjects_with_repeats": 229,
+      "n_observations": 2534,
+      "n_strict_consecutive_pairs": 307,
+      "temporal_coverage": {
+        "min_ts": "2021-09-24T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.962,
+      "numeric_validity": {
+        "n_numeric": 2534,
+        "n_non_numeric": 100,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "5b00d91058af5a552a5b166a",
+      "source_code": "Трансферрин",
+      "normalized_label": "Трансферрин",
+      "unit": "мг/дл",
+      "n_subjects": 2307,
+      "n_subjects_with_repeats": 214,
+      "n_observations": 2613,
+      "n_strict_consecutive_pairs": 306,
+      "temporal_coverage": {
+        "min_ts": "2022-01-11T00:00:00+00:00",
+        "max_ts": "2026-07-01T00:00:00+00:00"
+      },
+      "unit_dominance": 0.7952,
+      "numeric_validity": {
+        "n_numeric": 2613,
+        "n_non_numeric": 673,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    },
+    {
+      "grain_id": "8ba4765c298f50cf62261ea6",
+      "source_code": "ОЖСС",
+      "normalized_label": "ОЖСС",
+      "unit": "мкмоль/л",
+      "n_subjects": 1875,
+      "n_subjects_with_repeats": 255,
+      "n_observations": 2178,
+      "n_strict_consecutive_pairs": 303,
+      "temporal_coverage": {
+        "min_ts": "2021-10-15T00:00:00+00:00",
+        "max_ts": "2025-06-23T00:00:00+00:00"
+      },
+      "unit_dominance": 0.9995,
+      "numeric_validity": {
+        "n_numeric": 2178,
+        "n_non_numeric": 1,
+        "n_missing_timestamps": 0
+      },
+      "provenance_coverage": "source_a_clinic_dump_read_only",
+      "record_origin": "OBSERVED",
+      "profile_criteria": {
+        "min_subjects_with_ge2": 100,
+        "min_strict_consecutive_pairs": 300,
+        "min_test_subjects_if_split": 30
+      },
+      "threshold_checks": {
+        "subjects_ge2_ok": true,
+        "pairs_ok": true
+      },
+      "selected": true,
+      "selection_reason": "Passed conservative profile (subjects_ge2>=100, pairs>=300); not selected by model performance."
+    }
+  ]
+}

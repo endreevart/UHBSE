@@ -1,0 +1,24 @@
+{
+  "version": "0.1.2.1.1",
+  "name": "CROSS_SOURCE_TRANSFER_EXPLORATION",
+  "transfer_gate_status": "FAIL",
+  "all_gates_pass": false,
+  "checks": {
+    "baseline_verification": true,
+    "t3_harmonization_allows_transfer": false,
+    "frozen_model_ready": true,
+    "applicability_allows_transfer": false,
+    "applicability_not_partial": false,
+    "source_a_provenance_isolation": true,
+    "source_a_population_lineage": true,
+    "transfer_execution_forbidden_this_release": false
+  },
+  "failed_checks": [
+    "applicability_allows_transfer",
+    "applicability_not_partial",
+    "t3_harmonization_allows_transfer"
+  ],
+  "b_cannot_tune_a": true,
+  "clinical_validation": "NOT_STARTED",
+  "transfer_must_not_run_this_release": true
+}

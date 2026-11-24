@@ -1,0 +1,937 @@
+{
+  "version": "0.1",
+  "MASKED_STATE_RECONSTRUCTION_STATUS": "EVALUATED",
+  "SOURCE_AWARE_TRAJECTORY_HEAD_STATUS": "EVALUATED",
+  "INCREMENTAL_STATE_REPRESENTATION_SIGNAL_STATUS": "WEAK_OR_NEGATIVE",
+  "validation_summary_a": {
+    "n_outcomes": 12,
+    "n_encoder_better_than_active": 0,
+    "mean_normalized_skill_vs_active": -0.2502362409135978
+  },
+  "validation_summary_b": {
+    "n_outcomes": 12,
+    "n_encoder_better_than_active": 0,
+    "mean_normalized_skill_vs_active": -0.11533698911423723
+  },
+  "n_encoder_better_than_active_validation": 0,
+  "prior_m2_technical_benchmark_only": true,
+  "active_m0_m1_comparator_respected": true,
+  "diagnostic_excluded_from_general_conclusion": true,
+  "ok": true,
+  "validation_trajectory_compact": {
+    "A::25(OH)витамин D::нг/мл": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1211,
+      "n_subjects": 652,
+      "identical_target_ids": true,
+      "n_target_ids": 1211,
+      "subject_macro_mae_m0": 19.334188322754272,
+      "subject_macro_mae_active": 15.437324986927793,
+      "subject_macro_mae_encoder": 18.990585801346484,
+      "normalized_mae_encoder": 0.9198065899705687,
+      "normalized_skill_vs_active": -0.17210173225697806,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -3.529275418853527,
+        "skill_diff_p05": -4.087375077476237,
+        "skill_diff_p95": -3.0277977341420765
+      }
+    },
+    "A::Базофилы::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1722,
+      "n_subjects": 803,
+      "identical_target_ids": true,
+      "n_target_ids": 1722,
+      "subject_macro_mae_m0": 0.3061159621477181,
+      "subject_macro_mae_active": 0.26361115919430367,
+      "subject_macro_mae_encoder": 0.3390251013213576,
+      "normalized_mae_encoder": 0.8201794441400834,
+      "normalized_skill_vs_active": -0.18244361521641395,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.07513526929367416,
+        "skill_diff_p05": -0.0824753292930146,
+        "skill_diff_p95": -0.06766172037428347
+      }
+    },
+    "A::Гемоглобин::г/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1538,
+      "n_subjects": 733,
+      "identical_target_ids": true,
+      "n_target_ids": 1538,
+      "subject_macro_mae_m0": 10.562449150818864,
+      "subject_macro_mae_active": 10.07089974459313,
+      "subject_macro_mae_encoder": 13.568284899928868,
+      "normalized_mae_encoder": 0.6437966301352355,
+      "normalized_skill_vs_active": -0.16594616002660362,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -3.491417559410185,
+        "skill_diff_p05": -3.86308843878529,
+        "skill_diff_p95": -3.1582431123882238
+      }
+    },
+    "A::Железо::мкмоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1341,
+      "n_subjects": 686,
+      "identical_target_ids": true,
+      "n_target_ids": 1341,
+      "subject_macro_mae_m0": 6.388546341696852,
+      "subject_macro_mae_active": 5.2991041387368085,
+      "subject_macro_mae_encoder": 5.727930395447322,
+      "normalized_mae_encoder": 0.8406045998130107,
+      "normalized_skill_vs_active": -0.06293256010896432,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.42947577339553744,
+        "skill_diff_p05": -0.5379419580782159,
+        "skill_diff_p95": -0.3207093100821288
+      }
+    },
+    "A::Лейкоциты::*10^9/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1635,
+      "n_subjects": 768,
+      "identical_target_ids": true,
+      "n_target_ids": 1635,
+      "subject_macro_mae_m0": 1.2021619097197567,
+      "subject_macro_mae_active": 1.1498894565991347,
+      "subject_macro_mae_encoder": 1.6313305845320099,
+      "normalized_mae_encoder": 0.6979045119388133,
+      "normalized_skill_vs_active": -0.20596679704479118,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.4832672452766182,
+        "skill_diff_p05": -0.5408990800464955,
+        "skill_diff_p95": -0.4126001923061535
+      }
+    },
+    "A::Лимфоциты::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1820,
+      "n_subjects": 831,
+      "identical_target_ids": true,
+      "n_target_ids": 1820,
+      "subject_macro_mae_m0": 6.506144706623767,
+      "subject_macro_mae_active": 6.0103133232691235,
+      "subject_macro_mae_encoder": 9.62452613645503,
+      "normalized_mae_encoder": 0.971302480268095,
+      "normalized_skill_vs_active": -0.3647445931252059,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -3.646172411058854,
+        "skill_diff_p05": -3.908113831812593,
+        "skill_diff_p95": -3.3842028252638405
+      }
+    },
+    "A::Моноциты::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1775,
+      "n_subjects": 824,
+      "identical_target_ids": true,
+      "n_target_ids": 1775,
+      "subject_macro_mae_m0": 1.490154937901904,
+      "subject_macro_mae_active": 1.354761183397617,
+      "subject_macro_mae_encoder": 1.6877162498862692,
+      "normalized_mae_encoder": 0.8098086793051769,
+      "normalized_skill_vs_active": -0.1597602100941509,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.33199354916317064,
+        "skill_diff_p05": -0.37121995093229043,
+        "skill_diff_p95": -0.29709999480709937
+      }
+    },
+    "A::Нейтрофилы::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1755,
+      "n_subjects": 814,
+      "identical_target_ids": true,
+      "n_target_ids": 1755,
+      "subject_macro_mae_m0": 7.254753074355348,
+      "subject_macro_mae_active": 6.6168141463177745,
+      "subject_macro_mae_encoder": 11.217758025246026,
+      "normalized_mae_encoder": 1.0375719285656828,
+      "normalized_skill_vs_active": -0.425558315925375,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -4.615482833824758,
+        "skill_diff_p05": -4.905994947701084,
+        "skill_diff_p95": -4.329738250935431
+      }
+    },
+    "A::Общий белок::г/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1449,
+      "n_subjects": 700,
+      "identical_target_ids": true,
+      "n_target_ids": 1449,
+      "subject_macro_mae_m0": 3.594516764584622,
+      "subject_macro_mae_active": 3.1595607388344837,
+      "subject_macro_mae_encoder": 4.037117765397916,
+      "normalized_mae_encoder": 0.8459559654993237,
+      "normalized_skill_vs_active": -0.1838872791995485,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.8793205947049195,
+        "skill_diff_p05": -0.981176680744082,
+        "skill_diff_p95": -0.7778097062460261
+      }
+    },
+    "A::Тромбоциты::*10^9/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1638,
+      "n_subjects": 770,
+      "identical_target_ids": true,
+      "n_target_ids": 1638,
+      "subject_macro_mae_m0": 31.45942717031716,
+      "subject_macro_mae_active": 30.404717717044168,
+      "subject_macro_mae_encoder": 52.11355877140592,
+      "normalized_mae_encoder": 0.7925731135577825,
+      "normalized_skill_vs_active": -0.33016059835136696,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -21.726333897225846,
+        "skill_diff_p05": -23.24721319733253,
+        "skill_diff_p95": -20.061672066618478
+      }
+    },
+    "A::Эозинофилы::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1762,
+      "n_subjects": 816,
+      "identical_target_ids": true,
+      "n_target_ids": 1762,
+      "subject_macro_mae_m0": 1.1233342117781455,
+      "subject_macro_mae_active": 1.0896332902267278,
+      "subject_macro_mae_encoder": 2.0789525240986118,
+      "normalized_mae_encoder": 1.0055348821711636,
+      "normalized_skill_vs_active": -0.47850780031273293,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.989912280685481,
+        "skill_diff_p05": -1.0373800338958497,
+        "skill_diff_p95": -0.9443301650162275
+      }
+    },
+    "A::Эритроциты::*10^12/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M0_persistence",
+      "n_paired": 1639,
+      "n_subjects": 768,
+      "identical_target_ids": true,
+      "n_target_ids": 1639,
+      "subject_macro_mae_m0": 0.22512991549997527,
+      "subject_macro_mae_active": 0.22512991549997527,
+      "subject_macro_mae_encoder": 0.34471518418349206,
+      "normalized_mae_encoder": 0.78067783622343,
+      "normalized_skill_vs_active": -0.2708252293010427,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.11915437474766347,
+        "skill_diff_p05": -0.13023522740939558,
+        "skill_diff_p95": -0.10756446155702304
+      }
+    },
+    "B::16::ммоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 2877,
+      "n_subjects": 1443,
+      "identical_target_ids": true,
+      "n_target_ids": 2877,
+      "subject_macro_mae_m0": 0.4496118714964869,
+      "subject_macro_mae_active": 0.4287668334944259,
+      "subject_macro_mae_encoder": 0.5891019775921917,
+      "normalized_mae_encoder": 0.0664645699398773,
+      "normalized_skill_vs_active": -0.018089578382103722,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.16015049625225103,
+        "skill_diff_p05": -0.169416092197279,
+        "skill_diff_p95": -0.1501551202314511
+      }
+    },
+    "B::28::г/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3190,
+      "n_subjects": 1566,
+      "identical_target_ids": true,
+      "n_target_ids": 3190,
+      "subject_macro_mae_m0": 3.552635476344289,
+      "subject_macro_mae_active": 2.9846096986509294,
+      "subject_macro_mae_encoder": 3.6186970563941987,
+      "normalized_mae_encoder": 0.8345593453354986,
+      "normalized_skill_vs_active": -0.14623593020274447,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.6317110533682109,
+        "skill_diff_p05": -0.7010947454187262,
+        "skill_diff_p95": -0.5661450676384079
+      }
+    },
+    "B::30::ммоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3270,
+      "n_subjects": 1585,
+      "identical_target_ids": true,
+      "n_target_ids": 3270,
+      "subject_macro_mae_m0": 0.33716530182050686,
+      "subject_macro_mae_active": 0.3152725570437674,
+      "subject_macro_mae_encoder": 0.40317659075024936,
+      "normalized_mae_encoder": 0.3031781279353977,
+      "normalized_skill_vs_active": -0.06610150735068396,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.08751660180741362,
+        "skill_diff_p05": -0.09682656347614743,
+        "skill_diff_p95": -0.07735662652312492
+      }
+    },
+    "B::32::ммоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M0_persistence",
+      "n_paired": 2496,
+      "n_subjects": 1213,
+      "identical_target_ids": true,
+      "n_target_ids": 2496,
+      "subject_macro_mae_m0": 0.3110557092216202,
+      "subject_macro_mae_active": 0.3110557092216202,
+      "subject_macro_mae_encoder": 0.6045423312230533,
+      "normalized_mae_encoder": 0.34159825969860613,
+      "normalized_skill_vs_active": -0.16583540000860927,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.29274423615314654,
+        "skill_diff_p05": -0.3333011719927516,
+        "skill_diff_p95": -0.2642605897534224
+      }
+    },
+    "B::33::ммоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3252,
+      "n_subjects": 1576,
+      "identical_target_ids": true,
+      "n_target_ids": 3252,
+      "subject_macro_mae_m0": 0.6382513609134802,
+      "subject_macro_mae_active": 0.6147115597053208,
+      "subject_macro_mae_encoder": 1.1038818694118828,
+      "normalized_mae_encoder": 0.17801003637030618,
+      "normalized_skill_vs_active": -0.07888273830290496,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.4881091125072821,
+        "skill_diff_p05": -0.5122834595548845,
+        "skill_diff_p95": -0.4661266822489485
+      }
+    },
+    "B::48::мкмоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 2854,
+      "n_subjects": 1404,
+      "identical_target_ids": true,
+      "n_target_ids": 2854,
+      "subject_macro_mae_m0": 6.277914203574993,
+      "subject_macro_mae_active": 5.091608805108521,
+      "subject_macro_mae_encoder": 5.885326465633049,
+      "normalized_mae_encoder": 0.8681991480012421,
+      "normalized_skill_vs_active": -0.1170886612059525,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.7808530677278928,
+        "skill_diff_p05": -0.8932214216479251,
+        "skill_diff_p95": -0.6685509493762609
+      }
+    },
+    "B::55::пмоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 2588,
+      "n_subjects": 1235,
+      "identical_target_ids": true,
+      "n_target_ids": 2588,
+      "subject_macro_mae_m0": 1.7913135114323375,
+      "subject_macro_mae_active": 1.6481100262514585,
+      "subject_macro_mae_encoder": 2.0802455488001734,
+      "normalized_mae_encoder": 0.6683346798491316,
+      "normalized_skill_vs_active": -0.1388351275553074,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.4313331477248284,
+        "skill_diff_p05": -0.46655488474865603,
+        "skill_diff_p95": -0.39857330825694115
+      }
+    },
+    "B::8::Ед/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 2843,
+      "n_subjects": 1382,
+      "identical_target_ids": true,
+      "n_target_ids": 2843,
+      "subject_macro_mae_m0": 8.571011389057157,
+      "subject_macro_mae_active": 8.010299340876008,
+      "subject_macro_mae_encoder": 9.293609145033017,
+      "normalized_mae_encoder": 0.4588027367710388,
+      "normalized_skill_vs_active": -0.06335386404613529,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -1.287732521885304,
+        "skill_diff_p05": -1.472610575175974,
+        "skill_diff_p95": -1.1139867788300313
+      }
+    },
+    "B::928::нг/мл": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1763,
+      "n_subjects": 1022,
+      "identical_target_ids": true,
+      "n_target_ids": 1763,
+      "subject_macro_mae_m0": 18.462608101916565,
+      "subject_macro_mae_active": 13.449146050276635,
+      "subject_macro_mae_encoder": 14.604573297743553,
+      "normalized_mae_encoder": 0.8185291728270429,
+      "normalized_skill_vs_active": -0.06475717501976208,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -1.160729433220317,
+        "skill_diff_p05": -1.3855793699661962,
+        "skill_diff_p95": -0.9290108172176534
+      }
+    },
+    "B::9::Ед/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 2830,
+      "n_subjects": 1376,
+      "identical_target_ids": true,
+      "n_target_ids": 2830,
+      "subject_macro_mae_m0": 5.812624062710545,
+      "subject_macro_mae_active": 5.355317953912533,
+      "subject_macro_mae_encoder": 6.17125866751735,
+      "normalized_mae_encoder": 0.3777765559725794,
+      "normalized_skill_vs_active": -0.049948201699255665,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.816519406247409,
+        "skill_diff_p05": -0.9167311974538999,
+        "skill_diff_p95": -0.7191446071317404
+      }
+    },
+    "B::mm_1002::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3055,
+      "n_subjects": 1470,
+      "identical_target_ids": true,
+      "n_target_ids": 3055,
+      "subject_macro_mae_m0": 1.2010581426056937,
+      "subject_macro_mae_active": 1.1793302600665738,
+      "subject_macro_mae_encoder": 1.480726501015078,
+      "normalized_mae_encoder": 0.5632323295901882,
+      "normalized_skill_vs_active": -0.11464379600336681,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.300524334117919,
+        "skill_diff_p05": -0.32556947668804037,
+        "skill_diff_p95": -0.2744119753019454
+      }
+    },
+    "B::mm_1004::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3446,
+      "n_subjects": 1592,
+      "identical_target_ids": true,
+      "n_target_ids": 3446,
+      "subject_macro_mae_m0": 6.041270176152714,
+      "subject_macro_mae_active": 5.594241200527161,
+      "subject_macro_mae_encoder": 8.650873746329584,
+      "normalized_mae_encoder": 1.019640596155231,
+      "normalized_skill_vs_active": -0.3602718895940207,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -3.0601677650035164,
+        "skill_diff_p05": -3.2312806112464934,
+        "skill_diff_p95": -2.8897669179611487
+      }
+    }
+  },
+  "test_trajectory_compact": {
+    "A::25(OH)витамин D::нг/мл": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1167,
+      "n_subjects": 640,
+      "identical_target_ids": true,
+      "n_target_ids": 1167,
+      "subject_macro_mae_m0": 19.51482473451028,
+      "subject_macro_mae_active": 14.951598792707191,
+      "subject_macro_mae_encoder": 17.940575197783023,
+      "normalized_mae_encoder": 0.8938190475644986,
+      "normalized_skill_vs_active": -0.14891406848024458,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -2.9876272948416105,
+        "skill_diff_p05": -3.611524561357161,
+        "skill_diff_p95": -2.4735786316266672
+      }
+    },
+    "A::Базофилы::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1693,
+      "n_subjects": 814,
+      "identical_target_ids": true,
+      "n_target_ids": 1693,
+      "subject_macro_mae_m0": 0.30217681642681643,
+      "subject_macro_mae_active": 0.26774468611665914,
+      "subject_macro_mae_encoder": 0.3402499929050158,
+      "normalized_mae_encoder": 0.8311015584081506,
+      "normalized_skill_vs_active": -0.17710293819605238,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.07255158941181725,
+        "skill_diff_p05": -0.07957949666716585,
+        "skill_diff_p95": -0.06504194733893298
+      }
+    },
+    "A::Гемоглобин::г/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1484,
+      "n_subjects": 739,
+      "identical_target_ids": true,
+      "n_target_ids": 1484,
+      "subject_macro_mae_m0": 10.13553366645383,
+      "subject_macro_mae_active": 9.572258812204138,
+      "subject_macro_mae_encoder": 13.096386451687712,
+      "normalized_mae_encoder": 0.6237517654303876,
+      "normalized_skill_vs_active": -0.16784636318109164,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -3.5056850445472536,
+        "skill_diff_p05": -3.87293246401258,
+        "skill_diff_p95": -3.123846943870568
+      }
+    },
+    "A::Железо::мкмоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1313,
+      "n_subjects": 697,
+      "identical_target_ids": true,
+      "n_target_ids": 1313,
+      "subject_macro_mae_m0": 6.325660675208739,
+      "subject_macro_mae_active": 5.213001659437539,
+      "subject_macro_mae_encoder": 5.7168569727005245,
+      "normalized_mae_encoder": 0.8018756553243839,
+      "normalized_skill_vs_active": -0.07067332827124666,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.5066926331039635,
+        "skill_diff_p05": -0.5991072386508272,
+        "skill_diff_p95": -0.4093762859179906
+      }
+    },
+    "A::Лейкоциты::*10^9/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1578,
+      "n_subjects": 765,
+      "identical_target_ids": true,
+      "n_target_ids": 1578,
+      "subject_macro_mae_m0": 1.21831802832244,
+      "subject_macro_mae_active": 1.1008841760384185,
+      "subject_macro_mae_encoder": 1.610137304630202,
+      "normalized_mae_encoder": 0.7781988049876675,
+      "normalized_skill_vs_active": -0.24612818730845729,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.507454694485666,
+        "skill_diff_p05": -0.5561485508002251,
+        "skill_diff_p95": -0.4630240941047652
+      }
+    },
+    "A::Лимфоциты::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1791,
+      "n_subjects": 846,
+      "identical_target_ids": true,
+      "n_target_ids": 1791,
+      "subject_macro_mae_m0": 6.500911755600585,
+      "subject_macro_mae_active": 6.007461716577388,
+      "subject_macro_mae_encoder": 9.880740810365149,
+      "normalized_mae_encoder": 0.9641024999418134,
+      "normalized_skill_vs_active": -0.3779309799702296,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -3.8580672297093965,
+        "skill_diff_p05": -4.1218028222961856,
+        "skill_diff_p95": -3.5946910940909254
+      }
+    },
+    "A::Моноциты::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1775,
+      "n_subjects": 840,
+      "identical_target_ids": true,
+      "n_target_ids": 1775,
+      "subject_macro_mae_m0": 1.5655008481928123,
+      "subject_macro_mae_active": 1.374027707210198,
+      "subject_macro_mae_encoder": 1.6637677597030207,
+      "normalized_mae_encoder": 0.7767466020104629,
+      "normalized_skill_vs_active": -0.13526803841919918,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.29069001340753337,
+        "skill_diff_p05": -0.3309469196185384,
+        "skill_diff_p95": -0.2547055813633745
+      }
+    },
+    "A::Нейтрофилы::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1728,
+      "n_subjects": 830,
+      "identical_target_ids": true,
+      "n_target_ids": 1728,
+      "subject_macro_mae_m0": 7.4822416375458545,
+      "subject_macro_mae_active": 6.8532541254723105,
+      "subject_macro_mae_encoder": 11.721779179098611,
+      "normalized_mae_encoder": 1.0332456801571235,
+      "normalized_skill_vs_active": -0.42914837445205417,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -4.85756168695816,
+        "skill_diff_p05": -5.114968283372671,
+        "skill_diff_p95": -4.530515266938583
+      }
+    },
+    "A::Общий белок::г/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1450,
+      "n_subjects": 735,
+      "identical_target_ids": true,
+      "n_target_ids": 1450,
+      "subject_macro_mae_m0": 3.666056806270072,
+      "subject_macro_mae_active": 3.2223802228698344,
+      "subject_macro_mae_encoder": 4.094438447322237,
+      "normalized_mae_encoder": 0.810021842510369,
+      "normalized_skill_vs_active": -0.17252334327048754,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.8708262689258583,
+        "skill_diff_p05": -0.9550950315669624,
+        "skill_diff_p95": -0.7828573528165705
+      }
+    },
+    "A::Тромбоциты::*10^9/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1582,
+      "n_subjects": 768,
+      "identical_target_ids": true,
+      "n_target_ids": 1582,
+      "subject_macro_mae_m0": 31.838723803323415,
+      "subject_macro_mae_active": 30.481849506059305,
+      "subject_macro_mae_encoder": 51.3200375081862,
+      "normalized_mae_encoder": 0.7871498678556377,
+      "normalized_skill_vs_active": -0.3196173995314924,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -20.754830650295766,
+        "skill_diff_p05": -22.183728375859516,
+        "skill_diff_p95": -19.28032715081521
+      }
+    },
+    "A::Эозинофилы::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1739,
+      "n_subjects": 835,
+      "identical_target_ids": true,
+      "n_target_ids": 1739,
+      "subject_macro_mae_m0": 1.182616194450925,
+      "subject_macro_mae_active": 1.1281639273250683,
+      "subject_macro_mae_encoder": 2.0804115404101737,
+      "normalized_mae_encoder": 0.9344757936257868,
+      "normalized_skill_vs_active": -0.42772899817241056,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.9554321655490763,
+        "skill_diff_p05": -1.0088662482625093,
+        "skill_diff_p95": -0.9073955175361208
+      }
+    },
+    "A::Эритроциты::*10^12/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M0_persistence",
+      "n_paired": 1582,
+      "n_subjects": 770,
+      "identical_target_ids": true,
+      "n_target_ids": 1582,
+      "subject_macro_mae_m0": 0.23079793856936714,
+      "subject_macro_mae_active": 0.23079793856936714,
+      "subject_macro_mae_encoder": 0.3405478336894228,
+      "normalized_mae_encoder": 0.7625203012901965,
+      "normalized_skill_vs_active": -0.24574087636051103,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.11014783628989354,
+        "skill_diff_p05": -0.12830216821473855,
+        "skill_diff_p95": -0.09516379735798636
+      }
+    },
+    "B::16::ммоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3041,
+      "n_subjects": 1477,
+      "identical_target_ids": true,
+      "n_target_ids": 3041,
+      "subject_macro_mae_m0": 0.8471111931681498,
+      "subject_macro_mae_active": 0.5223180983387228,
+      "subject_macro_mae_encoder": 0.5155490375530684,
+      "normalized_mae_encoder": 0.5947061240288304,
+      "normalized_skill_vs_active": 0.007808378272334014,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.014602273459513301,
+        "skill_diff_p05": -0.1601977702400934,
+        "skill_diff_p95": 0.1072456666060218
+      }
+    },
+    "B::28::г/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3394,
+      "n_subjects": 1606,
+      "identical_target_ids": true,
+      "n_target_ids": 3394,
+      "subject_macro_mae_m0": 3.3572518584915847,
+      "subject_macro_mae_active": 2.9354673557577677,
+      "subject_macro_mae_encoder": 3.665699294630988,
+      "normalized_mae_encoder": 0.846987867534946,
+      "normalized_skill_vs_active": -0.16872567633085128,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.7334398156950301,
+        "skill_diff_p05": -0.7943439543012256,
+        "skill_diff_p95": -0.6722995105647649
+      }
+    },
+    "B::30::ммоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3484,
+      "n_subjects": 1621,
+      "identical_target_ids": true,
+      "n_target_ids": 3484,
+      "subject_macro_mae_m0": 0.34408025489487554,
+      "subject_macro_mae_active": 0.32232855281963974,
+      "subject_macro_mae_encoder": 0.42104177988241664,
+      "normalized_mae_encoder": 0.38756647051394283,
+      "normalized_skill_vs_active": -0.09086494223078308,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.0985115517893585,
+        "skill_diff_p05": -0.10902962387141402,
+        "skill_diff_p95": -0.08951292369684083
+      }
+    },
+    "B::32::ммоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M0_persistence",
+      "n_paired": 2680,
+      "n_subjects": 1276,
+      "identical_target_ids": true,
+      "n_target_ids": 2680,
+      "subject_macro_mae_m0": 0.21236679173317102,
+      "subject_macro_mae_active": 0.21236679173317102,
+      "subject_macro_mae_encoder": 0.5382284422325961,
+      "normalized_mae_encoder": 1.3663458578352272,
+      "normalized_skill_vs_active": -0.8272318618844544,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.3258906283070157,
+        "skill_diff_p05": -0.33982233393445094,
+        "skill_diff_p95": -0.3115268073881974
+      }
+    },
+    "B::33::ммоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3493,
+      "n_subjects": 1639,
+      "identical_target_ids": true,
+      "n_target_ids": 3493,
+      "subject_macro_mae_m0": 0.6596435227371775,
+      "subject_macro_mae_active": 0.626066737059264,
+      "subject_macro_mae_encoder": 1.1674733254868397,
+      "normalized_mae_encoder": 0.3658489732186094,
+      "normalized_skill_vs_active": -0.169659588913881,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.5415027776053263,
+        "skill_diff_p05": -0.6151902474295918,
+        "skill_diff_p95": -0.4647962262369144
+      }
+    },
+    "B::48::мкмоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3097,
+      "n_subjects": 1463,
+      "identical_target_ids": true,
+      "n_target_ids": 3097,
+      "subject_macro_mae_m0": 6.355119126278901,
+      "subject_macro_mae_active": 5.004160207818582,
+      "subject_macro_mae_encoder": 5.815391782067723,
+      "normalized_mae_encoder": 0.9227833169916567,
+      "normalized_skill_vs_active": -0.12872580059736172,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.805683574314591,
+        "skill_diff_p05": -0.9111404757336787,
+        "skill_diff_p95": -0.6903249202266606
+      }
+    },
+    "B::55::пмоль/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 2776,
+      "n_subjects": 1281,
+      "identical_target_ids": true,
+      "n_target_ids": 2776,
+      "subject_macro_mae_m0": 1.7457133820078785,
+      "subject_macro_mae_active": 1.6092235687000842,
+      "subject_macro_mae_encoder": 2.073915112750696,
+      "normalized_mae_encoder": 0.7742897731102902,
+      "normalized_skill_vs_active": -0.17349114628515203,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.46438726405156283,
+        "skill_diff_p05": -0.5014119457622581,
+        "skill_diff_p95": -0.430533497184854
+      }
+    },
+    "B::8::Ед/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3011,
+      "n_subjects": 1405,
+      "identical_target_ids": true,
+      "n_target_ids": 3011,
+      "subject_macro_mae_m0": 7.870603065992924,
+      "subject_macro_mae_active": 7.466085715079403,
+      "subject_macro_mae_encoder": 8.963055768983917,
+      "normalized_mae_encoder": 0.6294449571441746,
+      "normalized_skill_vs_active": -0.10512712134255273,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -1.4867857236939406,
+        "skill_diff_p05": -1.6911688176280864,
+        "skill_diff_p95": -1.2764380804661535
+      }
+    },
+    "B::928::нг/мл": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 1890,
+      "n_subjects": 1052,
+      "identical_target_ids": true,
+      "n_target_ids": 1890,
+      "subject_macro_mae_m0": 18.982588279316793,
+      "subject_macro_mae_active": 13.73252977728708,
+      "subject_macro_mae_encoder": 14.681678843115208,
+      "normalized_mae_encoder": 0.8248777381296065,
+      "normalized_skill_vs_active": -0.0533271394187512,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.9565192233541839,
+        "skill_diff_p05": -1.157146400884029,
+        "skill_diff_p95": -0.7546258074454784
+      }
+    },
+    "B::9::Ед/л": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 2992,
+      "n_subjects": 1399,
+      "identical_target_ids": true,
+      "n_target_ids": 2992,
+      "subject_macro_mae_m0": 5.761841097073049,
+      "subject_macro_mae_active": 5.336879664632073,
+      "subject_macro_mae_encoder": 6.082869317267596,
+      "normalized_mae_encoder": 0.48483533438256576,
+      "normalized_skill_vs_active": -0.05945913413835173,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.7498503341014363,
+        "skill_diff_p05": -0.8842534116141634,
+        "skill_diff_p95": -0.6399786068930675
+      }
+    },
+    "B::mm_1002::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3317,
+      "n_subjects": 1528,
+      "identical_target_ids": true,
+      "n_target_ids": 3317,
+      "subject_macro_mae_m0": 1.2856843350439555,
+      "subject_macro_mae_active": 1.2264326026297416,
+      "subject_macro_mae_encoder": 1.495841102619391,
+      "normalized_mae_encoder": 0.6308284890321343,
+      "normalized_skill_vs_active": -0.11361538112790266,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -0.26861575952232747,
+        "skill_diff_p05": -0.29579817319523105,
+        "skill_diff_p95": -0.2404314947650239
+      }
+    },
+    "B::mm_1004::%": {
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "n_paired": 3687,
+      "n_subjects": 1643,
+      "identical_target_ids": true,
+      "n_target_ids": 3687,
+      "subject_macro_mae_m0": 6.071914047540341,
+      "subject_macro_mae_active": 5.668971149402314,
+      "subject_macro_mae_encoder": 8.989537998430587,
+      "normalized_mae_encoder": 1.0095020028015755,
+      "normalized_skill_vs_active": -0.37289111911154715,
+      "bootstrap_vs_active": {
+        "n_bootstrap": 200,
+        "skill_diff_mean": -3.3247676578011003,
+        "skill_diff_p05": -3.493586226110902,
+        "skill_diff_p95": -3.1414913789853536
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "label": "RECORDED_SOURCE_SPECIFIC_OUTCOME_AT_REQUESTED_HORIZON",
+  "not_latent_biological_state": true,
+  "window": "abs(days-H)/H <= 0.5 and days > 0",
+  "tie_break": [
+    "closest_to_H",
+    "earliest_timestamp",
+    "entity_id_asc"
+  ],
+  "missing_target": "not_evaluable",
+  "actual_post_t0_timestamp_as_model_input": false,
+  "requested_horizon_from_request_not_future_gap": true,
+  "predeclared_absolute_grid_days": [
+    30,
+    90,
+    180,
+    365
+  ]
+}

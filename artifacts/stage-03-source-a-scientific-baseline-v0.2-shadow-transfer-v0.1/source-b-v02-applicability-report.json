@@ -1,0 +1,60 @@
+{
+  "version": "0.2",
+  "source_b_applicability_status": "APPLICABILITY_CHECK_PASS",
+  "pass": true,
+  "feature_contract_complete": true,
+  "missing_feature_slots": 0,
+  "horizon_ood": {
+    "status": "COMPUTED",
+    "a_train_p05": 9.580700167800925,
+    "a_train_p95": 624.0,
+    "ood_fraction": 0.04699093157460841
+  },
+  "per_feature_ood": {
+    "y_t0": {
+      "n_violations": 487,
+      "fraction": 0.08029678483099753
+    },
+    "horizon_days": {
+      "n_violations": 285,
+      "fraction": 0.04699093157460841
+    },
+    "n_prior_measurements": {
+      "n_violations": 83,
+      "fraction": 0.013685078318219291
+    },
+    "prior_mean": {
+      "n_violations": 149,
+      "fraction": 0.024567188788128608
+    },
+    "prior_last_delta": {
+      "n_violations": 336,
+      "fraction": 0.05539983511953833
+    },
+    "days_since_first": {
+      "n_violations": 294,
+      "fraction": 0.04847485572959604
+    },
+    "has_prior_history": {
+      "n_violations": 0,
+      "fraction": 0.0
+    },
+    "prior_mean_missing_flag": {
+      "n_violations": 0,
+      "fraction": 0.0
+    },
+    "prior_last_delta_missing_flag": {
+      "n_violations": 0,
+      "fraction": 0.0
+    }
+  },
+  "fraction_pairs_outside_declared_support": 0.22077493816982688,
+  "n_in_support_pairs": 4726,
+  "n_out_of_support_pairs": 1339,
+  "n_subjects_in_support": 2815,
+  "n_subjects_out_of_support": 835,
+  "max_ood_fraction": 0.35,
+  "threshold_declared_before_shadow_metrics": true,
+  "not_production_ood_detector": true,
+  "not_clinical_ood_detector": true
+}

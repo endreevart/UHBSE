@@ -1,0 +1,91 @@
+{
+  "database_provenance_coverage": {
+    "total_records_evaluated": 24331,
+    "valid_records": 24331,
+    "invalid_records": 0,
+    "invalid_by_entity": {},
+    "per_entity": {
+      "source_system": {
+        "total": 1,
+        "valid": 1,
+        "invalid": 0,
+        "note": "no_provenance_column_identity_row"
+      },
+      "source_record": {
+        "total": 12544,
+        "valid": 12544,
+        "invalid": 0
+      },
+      "subject": {
+        "total": 100,
+        "valid": 100,
+        "invalid": 0
+      },
+      "subject_characteristic": {
+        "total": 200,
+        "valid": 200,
+        "invalid": 0
+      },
+      "encounter": {
+        "total": 2153,
+        "valid": 2153,
+        "invalid": 0
+      },
+      "observation": {
+        "total": 4000,
+        "valid": 4000,
+        "invalid": 0
+      },
+      "observation_component": {
+        "total": 5333,
+        "valid": 5333,
+        "invalid": 0
+      }
+    },
+    "full_coverage": true,
+    "source": "carried_from_accepted_v0.1.2",
+    "denominator_kind": "canonical_db_rows",
+    "clinical_rows_read_this_changeset": 0,
+    "raw_db_connections_this_changeset": 0,
+    "baseline_row_counts": {
+      "source_system": 1,
+      "source_record": 12544,
+      "subject": 100,
+      "subject_characteristic": 200,
+      "encounter": 2153,
+      "observation": 4000,
+      "observation_component": 5333
+    }
+  },
+  "computed_provenance_coverage": {
+    "total_records_evaluated": 7,
+    "valid_records": 7,
+    "invalid_records": 0,
+    "per_entity": {
+      "EvidenceStateSnapshot": {
+        "total": 1,
+        "valid": 1,
+        "invalid": 0
+      },
+      "StateSnapshotComponent": {
+        "total": 1,
+        "valid": 1,
+        "invalid": 0
+      },
+      "ScenarioCheckpoint": {
+        "total": 3,
+        "valid": 3,
+        "invalid": 0
+      },
+      "fork_rollback_computation_evidence": {
+        "total": 2,
+        "valid": 2,
+        "invalid": 0
+      }
+    },
+    "full_coverage": true,
+    "denominator_kind": "in_memory_computed_artifacts"
+  },
+  "overall_provenance_status": "PASS",
+  "note": "DB row denominator carried from accepted v0.1.2; computed artifacts evaluated in-memory in this changeset."
+}

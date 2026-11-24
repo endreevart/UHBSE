@@ -1,0 +1,723 @@
+{
+  "PRIOR_V01_BACKTEST_HORIZON_STATUS": "INVALID_FOR_HORIZON_ALIGNED_EVALUATION",
+  "prior_backtest": {
+    "version": "0.1",
+    "REAL_HELDOUT_MULTI_OUTCOME_BACKTEST_STATUS": "PASS",
+    "claim_level": "SECONDARY_EXPLORATORY_RETROSPECTIVE_BACKTEST",
+    "n_outcomes_evaluated": 75,
+    "n_prediction_targets": 995,
+    "overall_interval_coverage": 0.9175879396984925,
+    "fraction_states_with_ge1_prediction": 0.9924812030075187,
+    "per_outcome": [
+      {
+        "outcome": "D–димер",
+        "unit": "нг/мл",
+        "n_targets": 3,
+        "n_subjects": 2,
+        "subject_macro_mae": 228.75,
+        "pair_micro_mae": 300.0,
+        "interval_coverage": 0.3333333333333333
+      },
+      {
+        "outcome": "pH",
+        "unit": "_",
+        "n_targets": 9,
+        "n_subjects": 7,
+        "subject_macro_mae": 0.5676231079975419,
+        "pair_micro_mae": 0.5435613222736669,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "АЛТ",
+        "unit": "Ед/л",
+        "n_targets": 22,
+        "n_subjects": 16,
+        "subject_macro_mae": 4.384593310585516,
+        "pair_micro_mae": 4.626941675415465,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "АСТ",
+        "unit": "Ед/л",
+        "n_targets": 24,
+        "n_subjects": 16,
+        "subject_macro_mae": 4.360489414138695,
+        "pair_micro_mae": 4.016072148308812,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "АЧТВ",
+        "unit": "сек",
+        "n_targets": 4,
+        "n_subjects": 3,
+        "subject_macro_mae": 3.977416764501864,
+        "pair_micro_mae": 3.6696641670325514,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Альбумин",
+        "unit": "г/л",
+        "n_targets": 1,
+        "n_subjects": 1,
+        "subject_macro_mae": 1.1837001510854321,
+        "pair_micro_mae": 1.1837001510854321,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Ат к ТГ",
+        "unit": "МЕ/мл",
+        "n_targets": 10,
+        "n_subjects": 7,
+        "subject_macro_mae": 14.190714285714284,
+        "pair_micro_mae": 16.741999999999997,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Ат к ТПО",
+        "unit": "МЕ/мл",
+        "n_targets": 18,
+        "n_subjects": 12,
+        "subject_macro_mae": 37.750416666666666,
+        "pair_micro_mae": 45.79333333333333,
+        "interval_coverage": 0.9444444444444444
+      },
+      {
+        "outcome": "Ат к рТТГ",
+        "unit": "МЕ/л",
+        "n_targets": 4,
+        "n_subjects": 2,
+        "subject_macro_mae": 1.0,
+        "pair_micro_mae": 1.0,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Базофилы",
+        "unit": "%",
+        "n_targets": 42,
+        "n_subjects": 26,
+        "subject_macro_mae": 0.2723094056943545,
+        "pair_micro_mae": 0.29517979664837607,
+        "interval_coverage": 0.8571428571428571
+      },
+      {
+        "outcome": "Билирубин общий",
+        "unit": "мкмоль/л",
+        "n_targets": 10,
+        "n_subjects": 8,
+        "subject_macro_mae": 4.292638231182604,
+        "pair_micro_mae": 5.0385816812784245,
+        "interval_coverage": 0.8
+      },
+      {
+        "outcome": "Билирубин прямой",
+        "unit": "мкмоль/л",
+        "n_targets": 7,
+        "n_subjects": 5,
+        "subject_macro_mae": 1.337731010531009,
+        "pair_micro_mae": 1.2847958245744324,
+        "interval_coverage": 0.8571428571428571
+      },
+      {
+        "outcome": "ГГТ",
+        "unit": "Ед/л",
+        "n_targets": 3,
+        "n_subjects": 2,
+        "subject_macro_mae": 14.556247309453333,
+        "pair_micro_mae": 14.708310077810518,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "ГСПГ",
+        "unit": "нмоль/л",
+        "n_targets": 1,
+        "n_subjects": 1,
+        "subject_macro_mae": 2.1000000000000085,
+        "pair_micro_mae": 2.1000000000000085,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Гематокрит",
+        "unit": "%",
+        "n_targets": 8,
+        "n_subjects": 7,
+        "subject_macro_mae": 1.1262824176899235,
+        "pair_micro_mae": 1.071520289648574,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Гемоглобин",
+        "unit": "г/дл",
+        "n_targets": 8,
+        "n_subjects": 5,
+        "subject_macro_mae": 0.6799999999999999,
+        "pair_micro_mae": 0.6875,
+        "interval_coverage": 0.875
+      },
+      {
+        "outcome": "Гемоглобин",
+        "unit": "г/л",
+        "n_targets": 28,
+        "n_subjects": 19,
+        "subject_macro_mae": 19.193241056222195,
+        "pair_micro_mae": 20.827966889739194,
+        "interval_coverage": 0.8571428571428571
+      },
+      {
+        "outcome": "Глюкоза",
+        "unit": "ммоль/л",
+        "n_targets": 22,
+        "n_subjects": 16,
+        "subject_macro_mae": 6.637078842211461,
+        "pair_micro_mae": 9.520921977026594,
+        "interval_coverage": 0.9090909090909091
+      },
+      {
+        "outcome": "ДГЭА–сульфат",
+        "unit": "мкг/дл",
+        "n_targets": 5,
+        "n_subjects": 4,
+        "subject_macro_mae": 106.59791333370877,
+        "pair_micro_mae": 104.82953473671996,
+        "interval_coverage": 0.6
+      },
+      {
+        "outcome": "Железо",
+        "unit": "мкмоль/л",
+        "n_targets": 30,
+        "n_subjects": 18,
+        "subject_macro_mae": 3.9920065340672526,
+        "pair_micro_mae": 4.08391603534002,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Инсулин",
+        "unit": "мкЕд/мл",
+        "n_targets": 9,
+        "n_subjects": 6,
+        "subject_macro_mae": 10.417299515037529,
+        "pair_micro_mae": 12.43167066849295,
+        "interval_coverage": 0.6666666666666666
+      },
+      {
+        "outcome": "Инсулин",
+        "unit": "мкМЕ/мл",
+        "n_targets": 8,
+        "n_subjects": 6,
+        "subject_macro_mae": 2.485031436561917,
+        "pair_micro_mae": 2.685164449160998,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Кальций общий",
+        "unit": "ммоль/л",
+        "n_targets": 2,
+        "n_subjects": 2,
+        "subject_macro_mae": 0.13309936369819408,
+        "pair_micro_mae": 0.13309936369819408,
+        "interval_coverage": 0.5
+      },
+      {
+        "outcome": "Кортизол",
+        "unit": "мкг/дл",
+        "n_targets": 7,
+        "n_subjects": 6,
+        "subject_macro_mae": 4.383745636426245,
+        "pair_micro_mae": 4.469931025094467,
+        "interval_coverage": 0.7142857142857143
+      },
+      {
+        "outcome": "Кортизол",
+        "unit": "нмоль/л",
+        "n_targets": 5,
+        "n_subjects": 4,
+        "subject_macro_mae": 128.60394090799733,
+        "pair_micro_mae": 159.56585950322255,
+        "interval_coverage": 0.6
+      },
+      {
+        "outcome": "Креатинин",
+        "unit": "мкмоль/л",
+        "n_targets": 21,
+        "n_subjects": 15,
+        "subject_macro_mae": 6.534333333333333,
+        "pair_micro_mae": 7.040476190476189,
+        "interval_coverage": 0.9047619047619048
+      },
+      {
+        "outcome": "ЛГ",
+        "unit": "мМе/мл",
+        "n_targets": 12,
+        "n_subjects": 8,
+        "subject_macro_mae": 9.955,
+        "pair_micro_mae": 7.515000000000001,
+        "interval_coverage": 0.9166666666666666
+      },
+      {
+        "outcome": "Латентная железосвязывающая способность сыворотки",
+        "unit": "мкмоль/л",
+        "n_targets": 16,
+        "n_subjects": 12,
+        "subject_macro_mae": 8.788581000077889,
+        "pair_micro_mae": 8.694300388854959,
+        "interval_coverage": 0.875
+      },
+      {
+        "outcome": "Лейкоциты",
+        "unit": "*10^9/л",
+        "n_targets": 30,
+        "n_subjects": 21,
+        "subject_macro_mae": 0.9785138682080023,
+        "pair_micro_mae": 1.08641527913115,
+        "interval_coverage": 0.9
+      },
+      {
+        "outcome": "Лейкоциты",
+        "unit": "тыс/мкл",
+        "n_targets": 4,
+        "n_subjects": 3,
+        "subject_macro_mae": 1.3290543771675856,
+        "pair_micro_mae": 1.6330275532985234,
+        "interval_coverage": 0.75
+      },
+      {
+        "outcome": "Лимфоциты",
+        "unit": "%",
+        "n_targets": 42,
+        "n_subjects": 26,
+        "subject_macro_mae": 6.000317906912063,
+        "pair_micro_mae": 6.0621788204118365,
+        "interval_coverage": 0.8809523809523809
+      },
+      {
+        "outcome": "МНО",
+        "unit": "_",
+        "n_targets": 3,
+        "n_subjects": 3,
+        "subject_macro_mae": 0.10088039956605173,
+        "pair_micro_mae": 0.10088039956605173,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Магний",
+        "unit": "ммоль/л",
+        "n_targets": 1,
+        "n_subjects": 1,
+        "subject_macro_mae": 0.10840350183452374,
+        "pair_micro_mae": 0.10840350183452374,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Моноциты",
+        "unit": "%",
+        "n_targets": 41,
+        "n_subjects": 26,
+        "subject_macro_mae": 1.3571667865742105,
+        "pair_micro_mae": 1.4273910711245155,
+        "interval_coverage": 0.8780487804878049
+      },
+      {
+        "outcome": "Мочевая кислота",
+        "unit": "мкмоль/л",
+        "n_targets": 8,
+        "n_subjects": 6,
+        "subject_macro_mae": 33.205641511987444,
+        "pair_micro_mae": 30.326036848507982,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Мочевая кислота",
+        "unit": "ммоль/л",
+        "n_targets": 2,
+        "n_subjects": 1,
+        "subject_macro_mae": 0.03999999999999998,
+        "pair_micro_mae": 0.03999999999999998,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Мочевина",
+        "unit": "ммоль/л",
+        "n_targets": 12,
+        "n_subjects": 10,
+        "subject_macro_mae": 1.369689685993254,
+        "pair_micro_mae": 1.3029019868700809,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Нейтрофилы",
+        "unit": "%",
+        "n_targets": 40,
+        "n_subjects": 25,
+        "subject_macro_mae": 6.609712733771593,
+        "pair_micro_mae": 6.586590078766181,
+        "interval_coverage": 0.925
+      },
+      {
+        "outcome": "Общий белок",
+        "unit": "г/л",
+        "n_targets": 32,
+        "n_subjects": 23,
+        "subject_macro_mae": 3.0389497555551985,
+        "pair_micro_mae": 2.925422799289082,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Пролактин",
+        "unit": "мМЕ/л",
+        "n_targets": 18,
+        "n_subjects": 12,
+        "subject_macro_mae": 190.13728435792152,
+        "pair_micro_mae": 227.39826093514858,
+        "interval_coverage": 0.7777777777777778
+      },
+      {
+        "outcome": "Пролактин",
+        "unit": "мкМЕ/мл",
+        "n_targets": 3,
+        "n_subjects": 2,
+        "subject_macro_mae": 55.11889239754396,
+        "pair_micro_mae": 73.37496608959201,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Пролактин",
+        "unit": "нг/мл",
+        "n_targets": 3,
+        "n_subjects": 2,
+        "subject_macro_mae": 5.349498862267274,
+        "pair_micro_mae": 6.91608225962726,
+        "interval_coverage": 0.6666666666666666
+      },
+      {
+        "outcome": "Распределение эритроцитов по объему (коэфф.вариации) RDW-CV",
+        "unit": "%",
+        "n_targets": 9,
+        "n_subjects": 8,
+        "subject_macro_mae": 0.43173669594186337,
+        "pair_micro_mae": 0.42649090712194887,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Распределение эритроцитов по объему (ст.отклонение) RDW-SD",
+        "unit": "фл",
+        "n_targets": 3,
+        "n_subjects": 3,
+        "subject_macro_mae": 1.5666666666666653,
+        "pair_micro_mae": 1.5666666666666653,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "СОЭ",
+        "unit": "мм/час",
+        "n_targets": 36,
+        "n_subjects": 24,
+        "subject_macro_mae": 5.906157839152059,
+        "pair_micro_mae": 5.493105527359867,
+        "interval_coverage": 0.9444444444444444
+      },
+      {
+        "outcome": "Среднее содержание гемоглобина в эритроците (MCH)",
+        "unit": "_",
+        "n_targets": 4,
+        "n_subjects": 4,
+        "subject_macro_mae": 1.1013434492868415,
+        "pair_micro_mae": 1.1013434492868415,
+        "interval_coverage": 0.75
+      },
+      {
+        "outcome": "Среднее содержание гемоглобина в эритроците (MCH)",
+        "unit": "пг/кл",
+        "n_targets": 7,
+        "n_subjects": 6,
+        "subject_macro_mae": 0.358333333333334,
+        "pair_micro_mae": 0.35714285714285765,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Средний объем эритроцитов (MCV)",
+        "unit": "фл",
+        "n_targets": 10,
+        "n_subjects": 9,
+        "subject_macro_mae": 1.1747120635817723,
+        "pair_micro_mae": 1.2550492923970424,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+        "unit": "г/дл",
+        "n_targets": 8,
+        "n_subjects": 7,
+        "subject_macro_mae": 43.521428571428565,
+        "pair_micro_mae": 38.162499999999994,
+        "interval_coverage": 0.875
+      },
+      {
+        "outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+        "unit": "г/л",
+        "n_targets": 1,
+        "n_subjects": 1,
+        "subject_macro_mae": 2.011777166683771,
+        "pair_micro_mae": 2.011777166683771,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "С–реактивный белок",
+        "unit": "мг/л",
+        "n_targets": 11,
+        "n_subjects": 7,
+        "subject_macro_mae": 3.730293148051383,
+        "pair_micro_mae": 3.9251483269609153,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Т3 св.",
+        "unit": "пг/мл",
+        "n_targets": 3,
+        "n_subjects": 2,
+        "subject_macro_mae": 0.4719432285191828,
+        "pair_micro_mae": 0.4579170511310308,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Т3 св.",
+        "unit": "пмоль/л",
+        "n_targets": 33,
+        "n_subjects": 21,
+        "subject_macro_mae": 0.6009318051227263,
+        "pair_micro_mae": 0.624737833614969,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Т4 св.",
+        "unit": "нг/дл",
+        "n_targets": 2,
+        "n_subjects": 1,
+        "subject_macro_mae": 0.06000000000000005,
+        "pair_micro_mae": 0.06000000000000005,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Т4 св.",
+        "unit": "пмоль/л",
+        "n_targets": 30,
+        "n_subjects": 20,
+        "subject_macro_mae": 1.6198935511976793,
+        "pair_micro_mae": 1.7928763817129,
+        "interval_coverage": 0.9666666666666667
+      },
+      {
+        "outcome": "ТТГ",
+        "unit": "мЕд/л",
+        "n_targets": 1,
+        "n_subjects": 1,
+        "subject_macro_mae": 1.6009984178358279,
+        "pair_micro_mae": 1.6009984178358279,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "ТТГ",
+        "unit": "мМЕ/л",
+        "n_targets": 7,
+        "n_subjects": 5,
+        "subject_macro_mae": 0.5214,
+        "pair_micro_mae": 0.5262857142857142,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "ТТГ",
+        "unit": "мкМЕ/мл",
+        "n_targets": 25,
+        "n_subjects": 16,
+        "subject_macro_mae": 2.282931952609767,
+        "pair_micro_mae": 2.507122368974222,
+        "interval_coverage": 0.92
+      },
+      {
+        "outcome": "Тестостерон общий",
+        "unit": "нмоль/л",
+        "n_targets": 5,
+        "n_subjects": 3,
+        "subject_macro_mae": 0.46833333333333343,
+        "pair_micro_mae": 0.55,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Трансферрин",
+        "unit": "г/л",
+        "n_targets": 7,
+        "n_subjects": 6,
+        "subject_macro_mae": 0.16000000000000014,
+        "pair_micro_mae": 0.162857142857143,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Триглицериды",
+        "unit": "ммоль/л",
+        "n_targets": 34,
+        "n_subjects": 21,
+        "subject_macro_mae": 0.41151249319698896,
+        "pair_micro_mae": 0.4555050804283186,
+        "interval_coverage": 0.8529411764705882
+      },
+      {
+        "outcome": "Тромбоциты",
+        "unit": "*10^9/л",
+        "n_targets": 32,
+        "n_subjects": 21,
+        "subject_macro_mae": 34.68993181761649,
+        "pair_micro_mae": 34.98476603646184,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Тромбоциты",
+        "unit": "тыс/мкл",
+        "n_targets": 4,
+        "n_subjects": 3,
+        "subject_macro_mae": 34.54753240788004,
+        "pair_micro_mae": 41.502435979416695,
+        "interval_coverage": 0.75
+      },
+      {
+        "outcome": "ФСГ",
+        "unit": "мМе/мл",
+        "n_targets": 14,
+        "n_subjects": 9,
+        "subject_macro_mae": 10.592222222222222,
+        "pair_micro_mae": 7.531428571428571,
+        "interval_coverage": 0.9285714285714286
+      },
+      {
+        "outcome": "Ферритин",
+        "unit": "нг/мл",
+        "n_targets": 15,
+        "n_subjects": 9,
+        "subject_macro_mae": 53.18753553349367,
+        "pair_micro_mae": 60.61147645607833,
+        "interval_coverage": 0.8666666666666667
+      },
+      {
+        "outcome": "Фибриноген",
+        "unit": "г/л",
+        "n_targets": 4,
+        "n_subjects": 3,
+        "subject_macro_mae": 0.52973283963901,
+        "pair_micro_mae": 0.5038351923544405,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Фруктозамин",
+        "unit": "мкмоль/л",
+        "n_targets": 6,
+        "n_subjects": 4,
+        "subject_macro_mae": 10.375,
+        "pair_micro_mae": 12.5,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Холестерин общий",
+        "unit": "ммоль/л",
+        "n_targets": 1,
+        "n_subjects": 1,
+        "subject_macro_mae": 0.01610983809548827,
+        "pair_micro_mae": 0.01610983809548827,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Цветной показатель",
+        "unit": "_",
+        "n_targets": 6,
+        "n_subjects": 5,
+        "subject_macro_mae": 0.07100000000000004,
+        "pair_micro_mae": 0.06500000000000004,
+        "interval_coverage": 0.6666666666666666
+      },
+      {
+        "outcome": "Щелочная фосфатаза",
+        "unit": "Ед/л",
+        "n_targets": 2,
+        "n_subjects": 2,
+        "subject_macro_mae": 54.0,
+        "pair_micro_mae": 54.0,
+        "interval_coverage": 0.5
+      },
+      {
+        "outcome": "Эозинофилы",
+        "unit": "%",
+        "n_targets": 42,
+        "n_subjects": 26,
+        "subject_macro_mae": 0.8344872148077316,
+        "pair_micro_mae": 0.7826644376437036,
+        "interval_coverage": 0.9761904761904762
+      },
+      {
+        "outcome": "Эритроциты",
+        "unit": "*10^12/л",
+        "n_targets": 31,
+        "n_subjects": 20,
+        "subject_macro_mae": 0.22499999999999992,
+        "pair_micro_mae": 0.23451612903225794,
+        "interval_coverage": 0.8709677419354839
+      },
+      {
+        "outcome": "Эритроциты",
+        "unit": "млн/мкл",
+        "n_targets": 4,
+        "n_subjects": 3,
+        "subject_macro_mae": 0.07558584299872913,
+        "pair_micro_mae": 0.09317413726254165,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Эстрадиол",
+        "unit": "пг/мл",
+        "n_targets": 11,
+        "n_subjects": 7,
+        "subject_macro_mae": 15.61,
+        "pair_micro_mae": 11.53090909090909,
+        "interval_coverage": 1.0
+      },
+      {
+        "outcome": "Эстрадиол",
+        "unit": "пмоль/л",
+        "n_targets": 9,
+        "n_subjects": 6,
+        "subject_macro_mae": 245.54999999999998,
+        "pair_micro_mae": 306.53333333333336,
+        "interval_coverage": 0.7777777777777778
+      }
+    ],
+    "no_pooled_raw_mae_across_units": true,
+    "not_clinical_accuracy": true,
+    "not_joint_multi_outcome_learning": true,
+    "backtest_hash": "7d9683af0cf6ba2ff262dfac145bd5a322cada35b43f6580a2fb620876162e37"
+  },
+  "prior_inventory": {
+    "version": "0.1",
+    "REAL_HELDOUT_STATE_INVENTORY_STATUS": "PASS",
+    "n_test_subjects_considered": 100,
+    "n_test_subjects_with_ge1_valid_state": 100,
+    "n_states": 133,
+    "states_with_ge3_observed_provider_outcomes": 132,
+    "states_with_ge5_observed_provider_outcomes": 130,
+    "states_with_ge10_observed_provider_outcomes": 129,
+    "states_with_ge20_observed_provider_outcomes": 124,
+    "median_observed_outcomes_per_state": 40.0,
+    "median_predictions_per_state": 31.0,
+    "status_distributions": {
+      "MISSING": 617,
+      "PREDICTABLE": 4013,
+      "OUT_OF_SUPPORT": 964,
+      "OBSERVED": 72,
+      "STALE": 4
+    },
+    "n_targets_available_for_backtest": 995,
+    "horizon_days": {
+      "n": 995,
+      "median": 113.0,
+      "min": 1.0,
+      "max": 923.0
+    },
+    "unexplained": 0,
+    "inventory_hash": "d86843366438ffef28ef7140e9f76491c433f3331047535274c09a9e3ed80b3e"
+  },
+  "note": "Preserved for comparison; not rewritten."
+}

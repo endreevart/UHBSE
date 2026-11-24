@@ -1,0 +1,33 @@
+{
+  "version": "0.1.1",
+  "CROSS_SOURCE_IDENTITY_MERGE_STATUS": "NOT_RUN",
+  "PRIVATE_OVERLAP_GROUP_DATASET_STATUS": "BUILT",
+  "GLOBAL_A_B_SPLIT_STATUS": "PASS_OVERLAP_GUARDED",
+  "CROSS_SOURCE_INDEPENDENCE_STATUS": "NOT_ESTABLISHED",
+  "OVERLAP_UNIVERSE_RECONCILIATION_STATUS": "PASS",
+  "overlap_aware": true,
+  "n_confirmed_pairs": 20,
+  "n_candidate_pairs": 2234,
+  "n_ambiguous_nodes": 417,
+  "n_conflicting_nodes": 0,
+  "n_overlap_groups": 2254,
+  "n_unique_phone_pairs": 66,
+  "n_unique_email_pairs": 2208,
+  "source_balance": {
+    "magerya_api": {
+      "train": 30776,
+      "validation": 6607,
+      "test": 6473
+    },
+    "kgz_raw": {
+      "train": 34827,
+      "validation": 7368,
+      "test": 7369
+    }
+  },
+  "subject_role_intersection": 0,
+  "group_role_violations": 0,
+  "confirmed_candidate_cross_role_violations": 0,
+  "raw_identifiers_persisted": false,
+  "ok": true
+}

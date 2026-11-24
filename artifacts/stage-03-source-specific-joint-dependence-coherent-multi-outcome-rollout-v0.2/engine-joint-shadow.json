@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "ENGINE_JOINT_MODEL_ROUTING_STATUS": "DISK_FREEZE_REQUIRED",
+  "ENGINE_JOINT_ROLLOUT_STATUS": "TECHNICAL_SHADOW_PASS",
+  "ENGINE_CROSS_PROCESS_DETERMINISTIC_REPLAY_STATUS": "PASS_SAME_PROCESS_DETERMINISTIC",
+  "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_T1_T2_READ",
+  "ENGINE_INTERVENTION_ISOLATION_STATUS": "UNAVAILABLE_NO_PATH_CHANGE",
+  "RECURSIVE_RUNTIME_COMPOSITE_IDENTITY_STATUS": "COMPOSITE_INCLUDES_INCREMENT_PAYLOAD",
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "rollback": true,
+    "parent_isolation": true
+  },
+  "horizon_identity_90": 90,
+  "deterministic_repeat": true,
+  "different_seed": {
+    "ok": true,
+    "unconditional_or_true": false
+  },
+  "ok": true
+}

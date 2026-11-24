@@ -1,0 +1,18 @@
+{
+  "V015_FORBIDDEN_EXECUTION_AUDIT_STATUS": "CORRECTION_REQUIRED",
+  "V015_RUNTIME_FUTURE_FIELD_CONTRACT_STATUS": "PASS",
+  "claim": "v0.1.5 residual_called_on_forbidden attributes allowed NHR control residual sampling to forbidden payloads",
+  "id": 1,
+  "independent_counter_deltas": {
+    "infer_calls_on_forbidden": 0,
+    "residual_calls_on_allowed_false_flag_control": 16,
+    "residual_calls_on_allowed_missing_control": 16,
+    "residual_calls_on_forbidden": 0
+  },
+  "note": "Forbidden t1=0 does not sample residual. The published 32 count is allowed missing/false-flag NHR.",
+  "packed_zip_residual_called_on_forbidden": 32,
+  "published_ok_ignores_residual_on_leak": true,
+  "published_residual_called_on_forbidden": 32,
+  "reproduced": true,
+  "source_mislabels_total_call_count": true
+}

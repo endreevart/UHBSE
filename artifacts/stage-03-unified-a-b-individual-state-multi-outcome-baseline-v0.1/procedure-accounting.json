@@ -1,0 +1,18 @@
+{
+  "raw_rows_considered": 98,
+  "eligible": 98,
+  "materialized": 98,
+  "rejected": 0,
+  "unsupported": 0,
+  "duplicate_conflict": 0,
+  "missing_subject_ownership": 0,
+  "missing_timestamp": 0,
+  "retained_unresolved": 0,
+  "truncated": 0,
+  "unaccounted": 0,
+  "by_relation": {
+    "diagnosis_proceduresresult": 4,
+    "diagnosis_manipulationsresult": 94
+  },
+  "denominator_source": "COUNT(*) per diagnosis_*result relation"
+}

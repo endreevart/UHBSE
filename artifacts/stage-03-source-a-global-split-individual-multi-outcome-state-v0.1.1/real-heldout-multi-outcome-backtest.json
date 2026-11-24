@@ -1,0 +1,2586 @@
+{
+  "version": "0.1.1",
+  "REAL_HELDOUT_MULTI_OUTCOME_BACKTEST_STATUS": "PASS",
+  "HORIZON_ALIGNMENT_STATUS": "PASS",
+  "claim_level": "SECONDARY_EXPLORATORY_RETROSPECTIVE_BACKTEST",
+  "n_evaluable_outcomes": 85,
+  "n_diagnostic_only_outcomes": 10,
+  "n_primary_targets": 19195,
+  "n_prediction_horizon_equals_target_horizon": 19195,
+  "evaluable_per_outcome": [
+    {
+      "outcome": "25(OH)витамин D",
+      "unit": "нг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 326,
+      "n_unique_targets": 453,
+      "active_provider_subject_macro_mae": 13.224216860624296,
+      "pair_target_micro_mae": 13.100114680035606,
+      "persistence_subject_macro_mae": 16.863645194274028,
+      "active_minus_persistence": -3.6394283336497324,
+      "interval_coverage": 0.9249448123620309,
+      "n_in_support": 435,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 453,
+        "min": 51.0,
+        "max": 630.0,
+        "median": 124.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 137,
+          "91_180": 188,
+          "181_365": 99,
+          "gt_365": 29
+        }
+      }
+    },
+    {
+      "outcome": "pH",
+      "unit": "_",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 54,
+      "n_unique_targets": 66,
+      "active_provider_subject_macro_mae": 0.7213300703096278,
+      "pair_target_micro_mae": 0.7140318559069386,
+      "persistence_subject_macro_mae": 0.6938271604938272,
+      "active_minus_persistence": 0.027502909815800614,
+      "interval_coverage": 0.8939393939393939,
+      "n_in_support": 60,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 66,
+        "min": 3.0,
+        "max": 538.0,
+        "median": 36.0,
+        "bins": {
+          "1_30": 32,
+          "31_90": 13,
+          "91_180": 10,
+          "181_365": 7,
+          "gt_365": 4
+        }
+      }
+    },
+    {
+      "outcome": "АЛТ",
+      "unit": "Ед/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 283,
+      "n_unique_targets": 403,
+      "active_provider_subject_macro_mae": 8.833923980917616,
+      "pair_target_micro_mae": 9.627234739507488,
+      "persistence_subject_macro_mae": 9.244363957597173,
+      "active_minus_persistence": -0.410439976679557,
+      "interval_coverage": 0.9702233250620348,
+      "n_in_support": 389,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 403,
+        "min": 21.0,
+        "max": 660.0,
+        "median": 109.0,
+        "bins": {
+          "1_30": 30,
+          "31_90": 137,
+          "91_180": 141,
+          "181_365": 73,
+          "gt_365": 22
+        }
+      }
+    },
+    {
+      "outcome": "АСТ",
+      "unit": "Ед/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 275,
+      "n_unique_targets": 390,
+      "active_provider_subject_macro_mae": 6.205386899598753,
+      "pair_target_micro_mae": 6.578815157015506,
+      "persistence_subject_macro_mae": 6.373636363636364,
+      "active_minus_persistence": -0.16824946403761132,
+      "interval_coverage": 0.9769230769230769,
+      "n_in_support": 373,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 390,
+        "min": 21.0,
+        "max": 660.0,
+        "median": 109.0,
+        "bins": {
+          "1_30": 28,
+          "31_90": 136,
+          "91_180": 137,
+          "181_365": 70,
+          "gt_365": 19
+        }
+      }
+    },
+    {
+      "outcome": "АЧТВ",
+      "unit": "сек",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 38,
+      "n_unique_targets": 50,
+      "active_provider_subject_macro_mae": 3.995349050276947,
+      "pair_target_micro_mae": 3.969132986042242,
+      "persistence_subject_macro_mae": 3.7525307017543854,
+      "active_minus_persistence": 0.24281834852256168,
+      "interval_coverage": 0.94,
+      "n_in_support": 46,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 50,
+        "min": 4.0,
+        "max": 539.0,
+        "median": 54.0,
+        "bins": {
+          "1_30": 18,
+          "31_90": 16,
+          "91_180": 7,
+          "181_365": 7,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Альбумин",
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 31,
+      "n_unique_targets": 40,
+      "active_provider_subject_macro_mae": 2.1353393392432203,
+      "pair_target_micro_mae": 2.2189492321684186,
+      "persistence_subject_macro_mae": 2.332903225806452,
+      "active_minus_persistence": -0.19756388656323187,
+      "interval_coverage": 0.9,
+      "n_in_support": 33,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 40,
+        "min": 14.0,
+        "max": 528.0,
+        "median": 106.0,
+        "bins": {
+          "1_30": 7,
+          "31_90": 10,
+          "91_180": 16,
+          "181_365": 5,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Ат к ТГ",
+      "unit": "МЕ/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 119,
+      "n_unique_targets": 145,
+      "active_provider_subject_macro_mae": 40.614397759103646,
+      "pair_target_micro_mae": 42.278827586206894,
+      "persistence_subject_macro_mae": 40.614397759103646,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9517241379310345,
+      "n_in_support": 143,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 145,
+        "min": 24.0,
+        "max": 729.0,
+        "median": 130.0,
+        "bins": {
+          "1_30": 6,
+          "31_90": 48,
+          "91_180": 44,
+          "181_365": 34,
+          "gt_365": 13
+        }
+      }
+    },
+    {
+      "outcome": "Ат к ТПО",
+      "unit": "МЕ/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 184,
+      "n_unique_targets": 241,
+      "active_provider_subject_macro_mae": 64.80088768115942,
+      "pair_target_micro_mae": 72.13788381742738,
+      "persistence_subject_macro_mae": 64.80088768115942,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.921161825726141,
+      "n_in_support": 237,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 241,
+        "min": 28.0,
+        "max": 729.0,
+        "median": 140.0,
+        "bins": {
+          "1_30": 7,
+          "31_90": 74,
+          "91_180": 72,
+          "181_365": 64,
+          "gt_365": 24
+        }
+      }
+    },
+    {
+      "outcome": "Ат к рТТГ",
+      "unit": "МЕ/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 35,
+      "n_unique_targets": 43,
+      "active_provider_subject_macro_mae": 1.1071428571428572,
+      "pair_target_micro_mae": 1.3546511627906976,
+      "persistence_subject_macro_mae": 1.1071428571428572,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9534883720930233,
+      "n_in_support": 40,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 43,
+        "min": 24.0,
+        "max": 431.0,
+        "median": 70.0,
+        "bins": {
+          "1_30": 4,
+          "31_90": 26,
+          "91_180": 7,
+          "181_365": 4,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Базофилы",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 426,
+      "n_unique_targets": 672,
+      "active_provider_subject_macro_mae": 0.2586333519098553,
+      "pair_target_micro_mae": 0.25320140821231424,
+      "persistence_subject_macro_mae": 0.2975288732394366,
+      "active_minus_persistence": -0.038895521329581295,
+      "interval_coverage": 0.9315476190476191,
+      "n_in_support": 648,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 672,
+        "min": 14.0,
+        "max": 501.0,
+        "median": 93.0,
+        "bins": {
+          "1_30": 87,
+          "31_90": 239,
+          "91_180": 212,
+          "181_365": 111,
+          "gt_365": 23
+        }
+      }
+    },
+    {
+      "outcome": "Билирубин общий",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 116,
+      "n_unique_targets": 141,
+      "active_provider_subject_macro_mae": 3.564591331094283,
+      "pair_target_micro_mae": 3.6855239534529405,
+      "persistence_subject_macro_mae": 3.922816091954023,
+      "active_minus_persistence": -0.35822476085974,
+      "interval_coverage": 0.9290780141843972,
+      "n_in_support": 137,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 141,
+        "min": 8.0,
+        "max": 538.0,
+        "median": 84.0,
+        "bins": {
+          "1_30": 33,
+          "31_90": 43,
+          "91_180": 36,
+          "181_365": 26,
+          "gt_365": 3
+        }
+      }
+    },
+    {
+      "outcome": "Билирубин прямой",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 50,
+      "n_unique_targets": 59,
+      "active_provider_subject_macro_mae": 1.044248479286057,
+      "pair_target_micro_mae": 1.0849874491681768,
+      "persistence_subject_macro_mae": 1.0702,
+      "active_minus_persistence": -0.025951520713943133,
+      "interval_coverage": 0.9322033898305084,
+      "n_in_support": 57,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 59,
+        "min": 14.0,
+        "max": 538.0,
+        "median": 117.0,
+        "bins": {
+          "1_30": 11,
+          "31_90": 14,
+          "91_180": 18,
+          "181_365": 13,
+          "gt_365": 3
+        }
+      }
+    },
+    {
+      "outcome": "Витамин B12 (цианкобаламин)",
+      "unit": "пг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 261,
+      "n_unique_targets": 345,
+      "active_provider_subject_macro_mae": 165.40159957302868,
+      "pair_target_micro_mae": 164.02459359792442,
+      "persistence_subject_macro_mae": 160.08557471264368,
+      "active_minus_persistence": 5.316024860384999,
+      "interval_coverage": 0.9855072463768116,
+      "n_in_support": 332,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 345,
+        "min": 58.0,
+        "max": 660.0,
+        "median": 146.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 74,
+          "91_180": 148,
+          "181_365": 90,
+          "gt_365": 33
+        }
+      }
+    },
+    {
+      "outcome": "Витамин В9 (фолиевая кислота)",
+      "unit": "нг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 234,
+      "n_unique_targets": 315,
+      "active_provider_subject_macro_mae": 4.361547583357917,
+      "pair_target_micro_mae": 4.196981273680596,
+      "persistence_subject_macro_mae": 5.488354700854702,
+      "active_minus_persistence": -1.1268071174967842,
+      "interval_coverage": 0.9714285714285714,
+      "n_in_support": 300,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 315,
+        "min": 60.0,
+        "max": 660.0,
+        "median": 142.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 67,
+          "91_180": 137,
+          "181_365": 80,
+          "gt_365": 31
+        }
+      }
+    },
+    {
+      "outcome": "ГСПГ",
+      "unit": "нмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 47,
+      "n_unique_targets": 56,
+      "active_provider_subject_macro_mae": 23.63141843971631,
+      "pair_target_micro_mae": 22.40375,
+      "persistence_subject_macro_mae": 23.63141843971631,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8928571428571429,
+      "n_in_support": 53,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 56,
+        "min": 22.0,
+        "max": 727.0,
+        "median": 126.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 18,
+          "91_180": 15,
+          "181_365": 13,
+          "gt_365": 5
+        }
+      }
+    },
+    {
+      "outcome": "Гематокрит",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 83,
+      "n_unique_targets": 110,
+      "active_provider_subject_macro_mae": 2.2865549024279326,
+      "pair_target_micro_mae": 2.192945524450644,
+      "persistence_subject_macro_mae": 2.6953534136546184,
+      "active_minus_persistence": -0.40879851122668587,
+      "interval_coverage": 0.9727272727272728,
+      "n_in_support": 99,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 110,
+        "min": 6.0,
+        "max": 247.0,
+        "median": 63.0,
+        "bins": {
+          "1_30": 32,
+          "31_90": 39,
+          "91_180": 33,
+          "181_365": 6,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Гемоглобин",
+      "unit": "г/дл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 62,
+      "n_unique_targets": 92,
+      "active_provider_subject_macro_mae": 2.6881720430107525,
+      "pair_target_micro_mae": 2.010869565217391,
+      "persistence_subject_macro_mae": 2.6881720430107525,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9130434782608695,
+      "n_in_support": 88,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 92,
+        "min": 18.0,
+        "max": 389.0,
+        "median": 87.0,
+        "bins": {
+          "1_30": 12,
+          "31_90": 37,
+          "91_180": 27,
+          "181_365": 13,
+          "gt_365": 3
+        }
+      }
+    },
+    {
+      "outcome": "Гемоглобин",
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 399,
+      "n_unique_targets": 604,
+      "active_provider_subject_macro_mae": 12.180931442369143,
+      "pair_target_micro_mae": 11.470645667032207,
+      "persistence_subject_macro_mae": 12.629239766081872,
+      "active_minus_persistence": -0.44830832371272855,
+      "interval_coverage": 0.9370860927152318,
+      "n_in_support": 560,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 604,
+        "min": 13.0,
+        "max": 521.0,
+        "median": 93.0,
+        "bins": {
+          "1_30": 81,
+          "31_90": 212,
+          "91_180": 190,
+          "181_365": 98,
+          "gt_365": 23
+        }
+      }
+    },
+    {
+      "outcome": "Гликированный гемоглобин",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 104,
+      "n_unique_targets": 128,
+      "active_provider_subject_macro_mae": 0.31167703971691607,
+      "pair_target_micro_mae": 0.32253156092766994,
+      "persistence_subject_macro_mae": 0.35649038461538474,
+      "active_minus_persistence": -0.044813344898468666,
+      "interval_coverage": 0.828125,
+      "n_in_support": 118,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 128,
+        "min": 34.0,
+        "max": 610.0,
+        "median": 124.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 41,
+          "91_180": 45,
+          "181_365": 33,
+          "gt_365": 9
+        }
+      }
+    },
+    {
+      "outcome": "Глюкоза",
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 307,
+      "n_unique_targets": 447,
+      "active_provider_subject_macro_mae": 0.9671757660292871,
+      "pair_target_micro_mae": 0.8254995296345324,
+      "persistence_subject_macro_mae": 0.9954940282301846,
+      "active_minus_persistence": -0.028318262200897504,
+      "interval_coverage": 0.9977628635346756,
+      "n_in_support": 432,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 447,
+        "min": 8.0,
+        "max": 660.0,
+        "median": 87.0,
+        "bins": {
+          "1_30": 91,
+          "31_90": 142,
+          "91_180": 112,
+          "181_365": 81,
+          "gt_365": 21
+        }
+      }
+    },
+    {
+      "outcome": "Гомоцистеин",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 237,
+      "n_unique_targets": 315,
+      "active_provider_subject_macro_mae": 1.4995987970975055,
+      "pair_target_micro_mae": 1.4998415860641081,
+      "persistence_subject_macro_mae": 1.9306118143459916,
+      "active_minus_persistence": -0.43101301724848606,
+      "interval_coverage": 0.946031746031746,
+      "n_in_support": 296,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 315,
+        "min": 60.0,
+        "max": 610.0,
+        "median": 146.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 67,
+          "91_180": 134,
+          "181_365": 89,
+          "gt_365": 25
+        }
+      }
+    },
+    {
+      "outcome": "ДГЭА–сульфат",
+      "unit": "мкг/дл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 43,
+      "n_unique_targets": 51,
+      "active_provider_subject_macro_mae": 50.789164288944704,
+      "pair_target_micro_mae": 48.12436600156864,
+      "persistence_subject_macro_mae": 51.22503875968992,
+      "active_minus_persistence": -0.4358744707452189,
+      "interval_coverage": 0.8627450980392157,
+      "n_in_support": 44,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 51,
+        "min": 29.0,
+        "max": 727.0,
+        "median": 138.0,
+        "bins": {
+          "1_30": 2,
+          "31_90": 16,
+          "91_180": 15,
+          "181_365": 11,
+          "gt_365": 7
+        }
+      }
+    },
+    {
+      "outcome": "Железо",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 393,
+      "n_unique_targets": 569,
+      "active_provider_subject_macro_mae": 5.551512003225601,
+      "pair_target_micro_mae": 5.44933932657997,
+      "persistence_subject_macro_mae": 6.9286598812553,
+      "active_minus_persistence": -1.3771478780296995,
+      "interval_coverage": 0.8857644991212654,
+      "n_in_support": 539,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 569,
+        "min": 9.0,
+        "max": 552.0,
+        "median": 85.0,
+        "bins": {
+          "1_30": 117,
+          "31_90": 185,
+          "91_180": 156,
+          "181_365": 90,
+          "gt_365": 21
+        }
+      }
+    },
+    {
+      "outcome": "Инсулин",
+      "unit": "мкЕд/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 142,
+      "n_unique_targets": 182,
+      "active_provider_subject_macro_mae": 3.0216414029895673,
+      "pair_target_micro_mae": 3.2298530346198655,
+      "persistence_subject_macro_mae": 3.067992957746479,
+      "active_minus_persistence": -0.04635155475691155,
+      "interval_coverage": 0.9560439560439561,
+      "n_in_support": 177,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 182,
+        "min": 31.0,
+        "max": 727.0,
+        "median": 126.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 59,
+          "91_180": 66,
+          "181_365": 45,
+          "gt_365": 12
+        }
+      }
+    },
+    {
+      "outcome": "Инсулин",
+      "unit": "мкМЕ/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 80,
+      "n_unique_targets": 107,
+      "active_provider_subject_macro_mae": 3.103208066658291,
+      "pair_target_micro_mae": 3.029081674395724,
+      "persistence_subject_macro_mae": 2.52975,
+      "active_minus_persistence": 0.5734580666582909,
+      "interval_coverage": 0.9626168224299065,
+      "n_in_support": 106,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 107,
+        "min": 25.0,
+        "max": 596.0,
+        "median": 129.0,
+        "bins": {
+          "1_30": 2,
+          "31_90": 38,
+          "91_180": 36,
+          "181_365": 24,
+          "gt_365": 7
+        }
+      }
+    },
+    {
+      "outcome": "Кальций общий",
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 46,
+      "n_unique_targets": 57,
+      "active_provider_subject_macro_mae": 0.10167844124823114,
+      "pair_target_micro_mae": 0.1096135032573534,
+      "persistence_subject_macro_mae": 0.11126811594202898,
+      "active_minus_persistence": -0.009589674693797845,
+      "interval_coverage": 0.8245614035087719,
+      "n_in_support": 56,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 57,
+        "min": 15.0,
+        "max": 528.0,
+        "median": 91.0,
+        "bins": {
+          "1_30": 13,
+          "31_90": 15,
+          "91_180": 17,
+          "181_365": 10,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Кортизол",
+      "unit": "мкг/дл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 53,
+      "n_unique_targets": 70,
+      "active_provider_subject_macro_mae": 3.5816071345742326,
+      "pair_target_micro_mae": 3.6922714336587132,
+      "persistence_subject_macro_mae": 3.927735849056604,
+      "active_minus_persistence": -0.34612871448237126,
+      "interval_coverage": 0.8571428571428571,
+      "n_in_support": 62,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 70,
+        "min": 29.0,
+        "max": 539.0,
+        "median": 119.0,
+        "bins": {
+          "1_30": 2,
+          "31_90": 19,
+          "91_180": 28,
+          "181_365": 16,
+          "gt_365": 5
+        }
+      }
+    },
+    {
+      "outcome": "Кортизол",
+      "unit": "нмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 50,
+      "n_unique_targets": 66,
+      "active_provider_subject_macro_mae": 117.45188883630517,
+      "pair_target_micro_mae": 113.66502774618343,
+      "persistence_subject_macro_mae": 107.34450000000001,
+      "active_minus_persistence": 10.107388836305162,
+      "interval_coverage": 0.8939393939393939,
+      "n_in_support": 64,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 66,
+        "min": 29.0,
+        "max": 470.0,
+        "median": 109.0,
+        "bins": {
+          "1_30": 2,
+          "31_90": 25,
+          "91_180": 23,
+          "181_365": 14,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Коэффициент насыщения трансферрина железом",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 34,
+      "n_unique_targets": 42,
+      "active_provider_subject_macro_mae": 9.998615836682525,
+      "pair_target_micro_mae": 9.880506775078036,
+      "persistence_subject_macro_mae": 12.189019607843138,
+      "active_minus_persistence": -2.1904037711606126,
+      "interval_coverage": 0.8809523809523809,
+      "n_in_support": 40,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 42,
+        "min": 71.0,
+        "max": 439.0,
+        "median": 203.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 7,
+          "91_180": 13,
+          "181_365": 20,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Креатинин",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 183,
+      "n_unique_targets": 240,
+      "active_provider_subject_macro_mae": 8.306256830601093,
+      "pair_target_micro_mae": 8.565,
+      "persistence_subject_macro_mae": 8.306256830601093,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8958333333333334,
+      "n_in_support": 226,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 240,
+        "min": 13.0,
+        "max": 651.0,
+        "median": 91.0,
+        "bins": {
+          "1_30": 36,
+          "31_90": 84,
+          "91_180": 59,
+          "181_365": 44,
+          "gt_365": 17
+        }
+      }
+    },
+    {
+      "outcome": "ЛГ",
+      "unit": "мМе/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 99,
+      "n_unique_targets": 126,
+      "active_provider_subject_macro_mae": 6.423451178451178,
+      "pair_target_micro_mae": 7.128412698412698,
+      "persistence_subject_macro_mae": 6.423451178451178,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9047619047619048,
+      "n_in_support": 120,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 126,
+        "min": 19.0,
+        "max": 727.0,
+        "median": 130.0,
+        "bins": {
+          "1_30": 14,
+          "31_90": 34,
+          "91_180": 36,
+          "181_365": 30,
+          "gt_365": 12
+        }
+      }
+    },
+    {
+      "outcome": "ЛПВП",
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 290,
+      "n_unique_targets": 411,
+      "active_provider_subject_macro_mae": 0.23591379310344826,
+      "pair_target_micro_mae": 0.23046228710462288,
+      "persistence_subject_macro_mae": 0.23591379310344826,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8734793187347932,
+      "n_in_support": 393,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 411,
+        "min": 41.0,
+        "max": 630.0,
+        "median": 126.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 122,
+          "91_180": 161,
+          "181_365": 95,
+          "gt_365": 33
+        }
+      }
+    },
+    {
+      "outcome": "ЛПНП",
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 287,
+      "n_unique_targets": 402,
+      "active_provider_subject_macro_mae": 0.8687430890456033,
+      "pair_target_micro_mae": 0.747651944058363,
+      "persistence_subject_macro_mae": 0.9259065621370499,
+      "active_minus_persistence": -0.05716347309144665,
+      "interval_coverage": 0.9054726368159204,
+      "n_in_support": 383,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 402,
+        "min": 40.0,
+        "max": 630.0,
+        "median": 127.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 117,
+          "91_180": 158,
+          "181_365": 93,
+          "gt_365": 34
+        }
+      }
+    },
+    {
+      "outcome": "Латентная железосвязывающая способность сыворотки",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 140,
+      "n_unique_targets": 184,
+      "active_provider_subject_macro_mae": 8.097590295762487,
+      "pair_target_micro_mae": 7.896244477675453,
+      "persistence_subject_macro_mae": 9.170499999999999,
+      "active_minus_persistence": -1.072909704237512,
+      "interval_coverage": 0.9021739130434783,
+      "n_in_support": 170,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 184,
+        "min": 18.0,
+        "max": 466.0,
+        "median": 119.0,
+        "bins": {
+          "1_30": 15,
+          "31_90": 52,
+          "91_180": 75,
+          "181_365": 37,
+          "gt_365": 5
+        }
+      }
+    },
+    {
+      "outcome": "Лейкоциты",
+      "unit": "*10^9/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 413,
+      "n_unique_targets": 629,
+      "active_provider_subject_macro_mae": 1.1185151759695326,
+      "pair_target_micro_mae": 1.0981450358612068,
+      "persistence_subject_macro_mae": 1.2077401129943504,
+      "active_minus_persistence": -0.08922493702481771,
+      "interval_coverage": 0.9141494435612083,
+      "n_in_support": 606,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 629,
+        "min": 12.0,
+        "max": 516.0,
+        "median": 90.0,
+        "bins": {
+          "1_30": 91,
+          "31_90": 224,
+          "91_180": 193,
+          "181_365": 97,
+          "gt_365": 24
+        }
+      }
+    },
+    {
+      "outcome": "Лейкоциты",
+      "unit": "тыс/мкл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 43,
+      "n_unique_targets": 60,
+      "active_provider_subject_macro_mae": 0.8766510389620329,
+      "pair_target_micro_mae": 0.9957502101518878,
+      "persistence_subject_macro_mae": 1.0062790697674417,
+      "active_minus_persistence": -0.12962803080540886,
+      "interval_coverage": 0.9,
+      "n_in_support": 59,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 60,
+        "min": 25.0,
+        "max": 385.0,
+        "median": 94.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 24,
+          "91_180": 18,
+          "181_365": 11,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Лимфоциты",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 445,
+      "n_unique_targets": 707,
+      "active_provider_subject_macro_mae": 5.646518194144508,
+      "pair_target_micro_mae": 5.655430410347137,
+      "persistence_subject_macro_mae": 6.166741573033708,
+      "active_minus_persistence": -0.5202233788891997,
+      "interval_coverage": 0.9193776520509194,
+      "n_in_support": 670,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 707,
+        "min": 12.0,
+        "max": 501.0,
+        "median": 90.0,
+        "bins": {
+          "1_30": 106,
+          "31_90": 250,
+          "91_180": 219,
+          "181_365": 110,
+          "gt_365": 22
+        }
+      }
+    },
+    {
+      "outcome": "МНО",
+      "unit": "_",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 40,
+      "n_unique_targets": 48,
+      "active_provider_subject_macro_mae": 0.06318219293820528,
+      "pair_target_micro_mae": 0.0639406113409742,
+      "persistence_subject_macro_mae": 0.07251666666666667,
+      "active_minus_persistence": -0.009334473728461398,
+      "interval_coverage": 1.0,
+      "n_in_support": 46,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 48,
+        "min": 4.0,
+        "max": 539.0,
+        "median": 55.0,
+        "bins": {
+          "1_30": 16,
+          "31_90": 15,
+          "91_180": 10,
+          "181_365": 5,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Магний",
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 31,
+      "n_unique_targets": 40,
+      "active_provider_subject_macro_mae": 0.05600463514098179,
+      "pair_target_micro_mae": 0.05538403859677014,
+      "persistence_subject_macro_mae": 0.05731182795698925,
+      "active_minus_persistence": -0.0013071928160074547,
+      "interval_coverage": 0.95,
+      "n_in_support": 38,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 40,
+        "min": 21.0,
+        "max": 539.0,
+        "median": 118.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 10,
+          "91_180": 14,
+          "181_365": 9,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Медь",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 53,
+      "n_unique_targets": 64,
+      "active_provider_subject_macro_mae": 3.3690415670766636,
+      "pair_target_micro_mae": 3.4026563075984226,
+      "persistence_subject_macro_mae": 3.381415094339623,
+      "active_minus_persistence": -0.01237352726295926,
+      "interval_coverage": 0.953125,
+      "n_in_support": 58,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 64,
+        "min": 60.0,
+        "max": 539.0,
+        "median": 154.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 12,
+          "91_180": 29,
+          "181_365": 16,
+          "gt_365": 7
+        }
+      }
+    },
+    {
+      "outcome": "Молочная кислота (лактат)",
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 43,
+      "n_unique_targets": 54,
+      "active_provider_subject_macro_mae": 0.49453488372093024,
+      "pair_target_micro_mae": 0.5187037037037038,
+      "persistence_subject_macro_mae": 0.49453488372093024,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8518518518518519,
+      "n_in_support": 50,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 54,
+        "min": 54.0,
+        "max": 353.0,
+        "median": 130.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 12,
+          "91_180": 27,
+          "181_365": 15,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Моноциты",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 440,
+      "n_unique_targets": 698,
+      "active_provider_subject_macro_mae": 1.2715905386634434,
+      "pair_target_micro_mae": 1.2459415516527528,
+      "persistence_subject_macro_mae": 1.4681545454545455,
+      "active_minus_persistence": -0.19656400679110209,
+      "interval_coverage": 0.9398280802292264,
+      "n_in_support": 683,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 698,
+        "min": 13.0,
+        "max": 501.0,
+        "median": 91.0,
+        "bins": {
+          "1_30": 99,
+          "31_90": 249,
+          "91_180": 218,
+          "181_365": 109,
+          "gt_365": 23
+        }
+      }
+    },
+    {
+      "outcome": "Мочевая кислота",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 94,
+      "n_unique_targets": 121,
+      "active_provider_subject_macro_mae": 37.20993567201327,
+      "pair_target_micro_mae": 37.41162154549076,
+      "persistence_subject_macro_mae": 42.06785460992908,
+      "active_minus_persistence": -4.857918937915805,
+      "interval_coverage": 0.9338842975206612,
+      "n_in_support": 110,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 121,
+        "min": 21.0,
+        "max": 538.0,
+        "median": 105.0,
+        "bins": {
+          "1_30": 13,
+          "31_90": 39,
+          "91_180": 36,
+          "181_365": 23,
+          "gt_365": 10
+        }
+      }
+    },
+    {
+      "outcome": "Мочевина",
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 103,
+      "n_unique_targets": 129,
+      "active_provider_subject_macro_mae": 1.0736569048884228,
+      "pair_target_micro_mae": 1.0716799438147973,
+      "persistence_subject_macro_mae": 1.148042071197411,
+      "active_minus_persistence": -0.07438516630898828,
+      "interval_coverage": 1.0,
+      "n_in_support": 125,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 129,
+        "min": 11.0,
+        "max": 538.0,
+        "median": 83.0,
+        "bins": {
+          "1_30": 26,
+          "31_90": 41,
+          "91_180": 32,
+          "181_365": 26,
+          "gt_365": 4
+        }
+      }
+    },
+    {
+      "outcome": "Нейтрофилы",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 432,
+      "n_unique_targets": 682,
+      "active_provider_subject_macro_mae": 6.266594512745224,
+      "pair_target_micro_mae": 6.215499081221277,
+      "persistence_subject_macro_mae": 7.177233796296297,
+      "active_minus_persistence": -0.910639283551073,
+      "interval_coverage": 0.9310850439882697,
+      "n_in_support": 652,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 682,
+        "min": 13.0,
+        "max": 501.0,
+        "median": 91.0,
+        "bins": {
+          "1_30": 96,
+          "31_90": 244,
+          "91_180": 211,
+          "181_365": 108,
+          "gt_365": 23
+        }
+      }
+    },
+    {
+      "outcome": "Общая железосвязывающая способность сыворотки",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 140,
+      "n_unique_targets": 176,
+      "active_provider_subject_macro_mae": 5.922927287306376,
+      "pair_target_micro_mae": 5.813847191046346,
+      "persistence_subject_macro_mae": 6.803357142857143,
+      "active_minus_persistence": -0.8804298555507675,
+      "interval_coverage": 0.9147727272727273,
+      "n_in_support": 165,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 176,
+        "min": 53.0,
+        "max": 466.0,
+        "median": 133.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 43,
+          "91_180": 84,
+          "181_365": 41,
+          "gt_365": 8
+        }
+      }
+    },
+    {
+      "outcome": "Общий белок",
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 394,
+      "n_unique_targets": 587,
+      "active_provider_subject_macro_mae": 3.1482203823158446,
+      "pair_target_micro_mae": 3.0870818742140287,
+      "persistence_subject_macro_mae": 3.622216582064298,
+      "active_minus_persistence": -0.4739961997484534,
+      "interval_coverage": 0.9182282793867121,
+      "n_in_support": 557,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 587,
+        "min": 23.0,
+        "max": 539.0,
+        "median": 106.0,
+        "bins": {
+          "1_30": 31,
+          "31_90": 217,
+          "91_180": 215,
+          "181_365": 97,
+          "gt_365": 27
+        }
+      }
+    },
+    {
+      "outcome": "Паратгормон",
+      "unit": "пг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 31,
+      "n_unique_targets": 36,
+      "active_provider_subject_macro_mae": 14.671056010170672,
+      "pair_target_micro_mae": 14.624639919235992,
+      "persistence_subject_macro_mae": 16.151290322580646,
+      "active_minus_persistence": -1.4802343124099746,
+      "interval_coverage": 0.8055555555555556,
+      "n_in_support": 34,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 36,
+        "min": 54.0,
+        "max": 466.0,
+        "median": 109.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 15,
+          "91_180": 11,
+          "181_365": 8,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Пролактин",
+      "unit": "мМЕ/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 127,
+      "n_unique_targets": 171,
+      "active_provider_subject_macro_mae": 160.65736250514465,
+      "pair_target_micro_mae": 168.72543773785154,
+      "persistence_subject_macro_mae": 192.89124671916008,
+      "active_minus_persistence": -32.23388421401543,
+      "interval_coverage": 0.9298245614035088,
+      "n_in_support": 169,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 171,
+        "min": 15.0,
+        "max": 596.0,
+        "median": 107.0,
+        "bins": {
+          "1_30": 18,
+          "31_90": 57,
+          "91_180": 49,
+          "181_365": 34,
+          "gt_365": 13
+        }
+      }
+    },
+    {
+      "outcome": "Пролактин",
+      "unit": "нг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 32,
+      "n_unique_targets": 48,
+      "active_provider_subject_macro_mae": 8.818279368620038,
+      "pair_target_micro_mae": 8.913266245036079,
+      "persistence_subject_macro_mae": 9.697864583333333,
+      "active_minus_persistence": -0.8795852147132948,
+      "interval_coverage": 0.8541666666666666,
+      "n_in_support": 43,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 48,
+        "min": 13.0,
+        "max": 457.0,
+        "median": 109.0,
+        "bins": {
+          "1_30": 10,
+          "31_90": 10,
+          "91_180": 19,
+          "181_365": 8,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "Распределение эритроцитов по объему (коэфф.вариации) RDW-CV",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 98,
+      "n_unique_targets": 140,
+      "active_provider_subject_macro_mae": 0.611021921031355,
+      "pair_target_micro_mae": 0.6583072783147033,
+      "persistence_subject_macro_mae": 0.6562925170068027,
+      "active_minus_persistence": -0.04527059597544769,
+      "interval_coverage": 0.9,
+      "n_in_support": 129,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 140,
+        "min": 10.0,
+        "max": 266.0,
+        "median": 74.0,
+        "bins": {
+          "1_30": 31,
+          "31_90": 54,
+          "91_180": 42,
+          "181_365": 13,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Распределение эритроцитов по объему (ст.отклонение) RDW-SD",
+      "unit": "фл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 72,
+      "n_unique_targets": 105,
+      "active_provider_subject_macro_mae": 2.6090277777777775,
+      "pair_target_micro_mae": 2.8723809523809525,
+      "persistence_subject_macro_mae": 2.6090277777777775,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.780952380952381,
+      "n_in_support": 94,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 105,
+        "min": 10.0,
+        "max": 266.0,
+        "median": 74.0,
+        "bins": {
+          "1_30": 21,
+          "31_90": 43,
+          "91_180": 31,
+          "181_365": 10,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "СОЭ",
+      "unit": "мм/час",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 372,
+      "n_unique_targets": 565,
+      "active_provider_subject_macro_mae": 4.262840660323591,
+      "pair_target_micro_mae": 4.2706195101875695,
+      "persistence_subject_macro_mae": 4.787428315412186,
+      "active_minus_persistence": -0.5245876550885953,
+      "interval_coverage": 0.9433628318584071,
+      "n_in_support": 550,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 565,
+        "min": 16.0,
+        "max": 538.0,
+        "median": 100.0,
+        "bins": {
+          "1_30": 64,
+          "31_90": 194,
+          "91_180": 189,
+          "181_365": 91,
+          "gt_365": 27
+        }
+      }
+    },
+    {
+      "outcome": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "unit": "_",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 51,
+      "n_unique_targets": 69,
+      "active_provider_subject_macro_mae": 0.7872865224240936,
+      "pair_target_micro_mae": 0.7329204502707689,
+      "persistence_subject_macro_mae": 0.8316993464052288,
+      "active_minus_persistence": -0.04441282398113522,
+      "interval_coverage": 0.8985507246376812,
+      "n_in_support": 68,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 69,
+        "min": 4.0,
+        "max": 255.0,
+        "median": 72.0,
+        "bins": {
+          "1_30": 21,
+          "31_90": 20,
+          "91_180": 23,
+          "181_365": 5,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "unit": "пг/кл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 79,
+      "n_unique_targets": 98,
+      "active_provider_subject_macro_mae": 1.4493670886075949,
+      "pair_target_micro_mae": 1.3377551020408163,
+      "persistence_subject_macro_mae": 1.4493670886075949,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8673469387755102,
+      "n_in_support": 93,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 98,
+        "min": 11.0,
+        "max": 322.0,
+        "median": 93.0,
+        "bins": {
+          "1_30": 14,
+          "31_90": 35,
+          "91_180": 31,
+          "181_365": 18,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Средний объем эритроцитов (MCV)",
+      "unit": "фл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 133,
+      "n_unique_targets": 197,
+      "active_provider_subject_macro_mae": 2.2367497967157006,
+      "pair_target_micro_mae": 2.3442307122158903,
+      "persistence_subject_macro_mae": 2.457894736842105,
+      "active_minus_persistence": -0.2211449401264045,
+      "interval_coverage": 0.9644670050761421,
+      "n_in_support": 181,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 197,
+        "min": 10.0,
+        "max": 266.0,
+        "median": 75.0,
+        "bins": {
+          "1_30": 42,
+          "31_90": 74,
+          "91_180": 60,
+          "181_365": 21,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "unit": "г/дл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 79,
+      "n_unique_targets": 108,
+      "active_provider_subject_macro_mae": 10.20126582278481,
+      "pair_target_micro_mae": 9.008333333333333,
+      "persistence_subject_macro_mae": 10.20126582278481,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9537037037037037,
+      "n_in_support": 103,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 108,
+        "min": 14.0,
+        "max": 247.0,
+        "median": 84.0,
+        "bins": {
+          "1_30": 13,
+          "31_90": 45,
+          "91_180": 33,
+          "181_365": 17,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 46,
+      "n_unique_targets": 61,
+      "active_provider_subject_macro_mae": 8.70352310407559,
+      "pair_target_micro_mae": 9.027530066645262,
+      "persistence_subject_macro_mae": 10.634057971014494,
+      "active_minus_persistence": -1.9305348669389044,
+      "interval_coverage": 0.819672131147541,
+      "n_in_support": 51,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 61,
+        "min": 11.0,
+        "max": 266.0,
+        "median": 75.0,
+        "bins": {
+          "1_30": 17,
+          "31_90": 17,
+          "91_180": 23,
+          "181_365": 4,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "С–реактивный белок",
+      "unit": "мг/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 50,
+      "n_unique_targets": 58,
+      "active_provider_subject_macro_mae": 3.173904363490899,
+      "pair_target_micro_mae": 3.2674633008583838,
+      "persistence_subject_macro_mae": 3.8306,
+      "active_minus_persistence": -0.656695636509101,
+      "interval_coverage": 1.0,
+      "n_in_support": 54,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 58,
+        "min": 5.0,
+        "max": 539.0,
+        "median": 99.0,
+        "bins": {
+          "1_30": 12,
+          "31_90": 16,
+          "91_180": 10,
+          "181_365": 16,
+          "gt_365": 4
+        }
+      }
+    },
+    {
+      "outcome": "Т3 св.",
+      "unit": "пг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 51,
+      "n_unique_targets": 72,
+      "active_provider_subject_macro_mae": 0.6772492545532632,
+      "pair_target_micro_mae": 0.6452250730153952,
+      "persistence_subject_macro_mae": 0.6860457516339868,
+      "active_minus_persistence": -0.008796497080723609,
+      "interval_coverage": 0.9722222222222222,
+      "n_in_support": 71,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 72,
+        "min": 24.0,
+        "max": 303.0,
+        "median": 87.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 32,
+          "91_180": 24,
+          "181_365": 11,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Т3 св.",
+      "unit": "пмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 293,
+      "n_unique_targets": 433,
+      "active_provider_subject_macro_mae": 0.7214741521330982,
+      "pair_target_micro_mae": 0.70658115455171,
+      "persistence_subject_macro_mae": 0.8290216154721274,
+      "active_minus_persistence": -0.1075474633390292,
+      "interval_coverage": 0.9907621247113164,
+      "n_in_support": 420,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 433,
+        "min": 23.0,
+        "max": 596.0,
+        "median": 98.0,
+        "bins": {
+          "1_30": 27,
+          "31_90": 178,
+          "91_180": 121,
+          "181_365": 80,
+          "gt_365": 27
+        }
+      }
+    },
+    {
+      "outcome": "Т4 св.",
+      "unit": "нг/дл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 55,
+      "n_unique_targets": 79,
+      "active_provider_subject_macro_mae": 0.21211212121212122,
+      "pair_target_micro_mae": 0.19882278481012658,
+      "persistence_subject_macro_mae": 0.21211212121212122,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9620253164556962,
+      "n_in_support": 76,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 79,
+        "min": 26.0,
+        "max": 378.0,
+        "median": 98.0,
+        "bins": {
+          "1_30": 3,
+          "31_90": 34,
+          "91_180": 26,
+          "181_365": 15,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "Т4 св.",
+      "unit": "пмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 310,
+      "n_unique_targets": 456,
+      "active_provider_subject_macro_mae": 2.0177888612477988,
+      "pair_target_micro_mae": 2.024376013824885,
+      "persistence_subject_macro_mae": 2.4091612903225808,
+      "active_minus_persistence": -0.391372429074782,
+      "interval_coverage": 0.9649122807017544,
+      "n_in_support": 442,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 456,
+        "min": 21.0,
+        "max": 596.0,
+        "median": 93.0,
+        "bins": {
+          "1_30": 43,
+          "31_90": 179,
+          "91_180": 122,
+          "181_365": 81,
+          "gt_365": 31
+        }
+      }
+    },
+    {
+      "outcome": "ТТГ",
+      "unit": "мЕд/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 43,
+      "n_unique_targets": 66,
+      "active_provider_subject_macro_mae": 2.19931362855056,
+      "pair_target_micro_mae": 1.8084673224446304,
+      "persistence_subject_macro_mae": 2.139096124031008,
+      "active_minus_persistence": 0.0602175045195521,
+      "interval_coverage": 0.9848484848484849,
+      "n_in_support": 62,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 66,
+        "min": 19.0,
+        "max": 369.0,
+        "median": 80.0,
+        "bins": {
+          "1_30": 9,
+          "31_90": 30,
+          "91_180": 17,
+          "181_365": 9,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "ТТГ",
+      "unit": "мМЕ/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 37,
+      "n_unique_targets": 47,
+      "active_provider_subject_macro_mae": 4.091918918918919,
+      "pair_target_micro_mae": 3.7281702127659573,
+      "persistence_subject_macro_mae": 4.091918918918919,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8936170212765957,
+      "n_in_support": 45,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 47,
+        "min": 20.0,
+        "max": 434.0,
+        "median": 75.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 22,
+          "91_180": 11,
+          "181_365": 8,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "ТТГ",
+      "unit": "мкМЕ/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 337,
+      "n_unique_targets": 502,
+      "active_provider_subject_macro_mae": 1.5198449896194208,
+      "pair_target_micro_mae": 1.5606785327737998,
+      "persistence_subject_macro_mae": 1.5930973788328389,
+      "active_minus_persistence": -0.07325238921341803,
+      "interval_coverage": 0.9880478087649402,
+      "n_in_support": 487,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 502,
+        "min": 14.0,
+        "max": 556.0,
+        "median": 89.0,
+        "bins": {
+          "1_30": 78,
+          "31_90": 180,
+          "91_180": 143,
+          "181_365": 78,
+          "gt_365": 23
+        }
+      }
+    },
+    {
+      "outcome": "Тестостерон общий",
+      "unit": "нмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 71,
+      "n_unique_targets": 82,
+      "active_provider_subject_macro_mae": 1.5046525821596244,
+      "pair_target_micro_mae": 1.7469146341463417,
+      "persistence_subject_macro_mae": 1.5046525821596244,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9024390243902439,
+      "n_in_support": 77,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 82,
+        "min": 16.0,
+        "max": 727.0,
+        "median": 125.0,
+        "bins": {
+          "1_30": 8,
+          "31_90": 22,
+          "91_180": 27,
+          "181_365": 16,
+          "gt_365": 9
+        }
+      }
+    },
+    {
+      "outcome": "Трансферрин",
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 85,
+      "n_unique_targets": 99,
+      "active_provider_subject_macro_mae": 3.3048235294117645,
+      "pair_target_micro_mae": 2.8833333333333333,
+      "persistence_subject_macro_mae": 3.3048235294117645,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.7575757575757576,
+      "n_in_support": 92,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 99,
+        "min": 23.0,
+        "max": 596.0,
+        "median": 118.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 34,
+          "91_180": 34,
+          "181_365": 20,
+          "gt_365": 6
+        }
+      }
+    },
+    {
+      "outcome": "Триглицериды",
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 283,
+      "n_unique_targets": 393,
+      "active_provider_subject_macro_mae": 0.27342481652305556,
+      "pair_target_micro_mae": 0.27420728990445653,
+      "persistence_subject_macro_mae": 0.27470553592461716,
+      "active_minus_persistence": -0.001280719401561603,
+      "interval_coverage": 0.9694656488549618,
+      "n_in_support": 385,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 393,
+        "min": 29.0,
+        "max": 664.0,
+        "median": 122.0,
+        "bins": {
+          "1_30": 6,
+          "31_90": 129,
+          "91_180": 147,
+          "181_365": 81,
+          "gt_365": 30
+        }
+      }
+    },
+    {
+      "outcome": "Тромбоциты",
+      "unit": "*10^9/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 411,
+      "n_unique_targets": 631,
+      "active_provider_subject_macro_mae": 29.297493587168113,
+      "pair_target_micro_mae": 28.023392814133825,
+      "persistence_subject_macro_mae": 33.20993511759935,
+      "active_minus_persistence": -3.912441530431238,
+      "interval_coverage": 0.9809825673534073,
+      "n_in_support": 599,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 631,
+        "min": 12.0,
+        "max": 501.0,
+        "median": 90.0,
+        "bins": {
+          "1_30": 91,
+          "31_90": 225,
+          "91_180": 192,
+          "181_365": 99,
+          "gt_365": 24
+        }
+      }
+    },
+    {
+      "outcome": "Тромбоциты",
+      "unit": "тыс/мкл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 42,
+      "n_unique_targets": 57,
+      "active_provider_subject_macro_mae": 24.797701977013265,
+      "pair_target_micro_mae": 23.892435623040345,
+      "persistence_subject_macro_mae": 27.503968253968257,
+      "active_minus_persistence": -2.7062662769549917,
+      "interval_coverage": 0.9298245614035088,
+      "n_in_support": 55,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 57,
+        "min": 25.0,
+        "max": 369.0,
+        "median": 94.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 22,
+          "91_180": 18,
+          "181_365": 11,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "ФСГ",
+      "unit": "мМе/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 109,
+      "n_unique_targets": 142,
+      "active_provider_subject_macro_mae": 8.296238532110092,
+      "pair_target_micro_mae": 8.58549295774648,
+      "persistence_subject_macro_mae": 8.296238532110092,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9366197183098591,
+      "n_in_support": 139,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 142,
+        "min": 19.0,
+        "max": 713.0,
+        "median": 116.0,
+        "bins": {
+          "1_30": 17,
+          "31_90": 43,
+          "91_180": 44,
+          "181_365": 24,
+          "gt_365": 14
+        }
+      }
+    },
+    {
+      "outcome": "Ферритин",
+      "unit": "мкг/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 164,
+      "n_unique_targets": 244,
+      "active_provider_subject_macro_mae": 27.515994829335103,
+      "pair_target_micro_mae": 27.63142647914432,
+      "persistence_subject_macro_mae": 28.498709349593494,
+      "active_minus_persistence": -0.9827145202583907,
+      "interval_coverage": 0.9467213114754098,
+      "n_in_support": 241,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 244,
+        "min": 31.0,
+        "max": 532.0,
+        "median": 113.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 97,
+          "91_180": 94,
+          "181_365": 41,
+          "gt_365": 12
+        }
+      }
+    },
+    {
+      "outcome": "Ферритин",
+      "unit": "нг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 214,
+      "n_unique_targets": 305,
+      "active_provider_subject_macro_mae": 29.87555518315115,
+      "pair_target_micro_mae": 31.697363440724928,
+      "persistence_subject_macro_mae": 30.636339563862926,
+      "active_minus_persistence": -0.760784380711776,
+      "interval_coverage": 0.9639344262295082,
+      "n_in_support": 290,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 305,
+        "min": 29.0,
+        "max": 539.0,
+        "median": 109.0,
+        "bins": {
+          "1_30": 4,
+          "31_90": 115,
+          "91_180": 115,
+          "181_365": 57,
+          "gt_365": 14
+        }
+      }
+    },
+    {
+      "outcome": "Фибриноген",
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 42,
+      "n_unique_targets": 52,
+      "active_provider_subject_macro_mae": 0.566413628497632,
+      "pair_target_micro_mae": 0.5911126913737983,
+      "persistence_subject_macro_mae": 0.6267460317460317,
+      "active_minus_persistence": -0.060332403248399724,
+      "interval_coverage": 0.8846153846153846,
+      "n_in_support": 51,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 52,
+        "min": 7.0,
+        "max": 539.0,
+        "median": 57.0,
+        "bins": {
+          "1_30": 15,
+          "31_90": 19,
+          "91_180": 10,
+          "181_365": 6,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Фруктозамин",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 43,
+      "n_unique_targets": 55,
+      "active_provider_subject_macro_mae": 25.793643410852717,
+      "pair_target_micro_mae": 26.662909090909093,
+      "persistence_subject_macro_mae": 25.793643410852717,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.7818181818181819,
+      "n_in_support": 50,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 55,
+        "min": 28.0,
+        "max": 450.0,
+        "median": 113.0,
+        "bins": {
+          "1_30": 3,
+          "31_90": 14,
+          "91_180": 21,
+          "181_365": 16,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "Цветной показатель",
+      "unit": "_",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 148,
+      "n_unique_targets": 215,
+      "active_provider_subject_macro_mae": 0.8978254504504506,
+      "pair_target_micro_mae": 0.6258418604651164,
+      "persistence_subject_macro_mae": 0.8978254504504506,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.9116279069767442,
+      "n_in_support": 209,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 215,
+        "min": 21.0,
+        "max": 610.0,
+        "median": 117.0,
+        "bins": {
+          "1_30": 17,
+          "31_90": 63,
+          "91_180": 78,
+          "181_365": 45,
+          "gt_365": 12
+        }
+      }
+    },
+    {
+      "outcome": "Цинк",
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 73,
+      "n_unique_targets": 89,
+      "active_provider_subject_macro_mae": 1.9343860333179408,
+      "pair_target_micro_mae": 2.045852190569285,
+      "persistence_subject_macro_mae": 2.4262557077625573,
+      "active_minus_persistence": -0.4918696744446165,
+      "interval_coverage": 0.9325842696629213,
+      "n_in_support": 84,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 89,
+        "min": 62.0,
+        "max": 651.0,
+        "median": 151.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 16,
+          "91_180": 42,
+          "181_365": 22,
+          "gt_365": 9
+        }
+      }
+    },
+    {
+      "outcome": "Щелочная фосфатаза",
+      "unit": "Ед/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 38,
+      "n_unique_targets": 50,
+      "active_provider_subject_macro_mae": 44.00298245614035,
+      "pair_target_micro_mae": 44.968599999999995,
+      "persistence_subject_macro_mae": 44.00298245614035,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.74,
+      "n_in_support": 41,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 50,
+        "min": 6.0,
+        "max": 528.0,
+        "median": 112.0,
+        "bins": {
+          "1_30": 14,
+          "31_90": 8,
+          "91_180": 15,
+          "181_365": 12,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "Эозинофилы",
+      "unit": "%",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 432,
+      "n_unique_targets": 684,
+      "active_provider_subject_macro_mae": 1.1134867993079542,
+      "pair_target_micro_mae": 1.0820326617348193,
+      "persistence_subject_macro_mae": 1.2225972222222223,
+      "active_minus_persistence": -0.10911042291426809,
+      "interval_coverage": 0.9385964912280702,
+      "n_in_support": 654,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 684,
+        "min": 14.0,
+        "max": 501.0,
+        "median": 93.0,
+        "bins": {
+          "1_30": 91,
+          "31_90": 243,
+          "91_180": 217,
+          "181_365": 110,
+          "gt_365": 23
+        }
+      }
+    },
+    {
+      "outcome": "Эозинофильный катионный белок",
+      "unit": "нг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 34,
+      "n_unique_targets": 37,
+      "active_provider_subject_macro_mae": 8.61416595809737,
+      "pair_target_micro_mae": 8.612351636761408,
+      "persistence_subject_macro_mae": 11.512941176470589,
+      "active_minus_persistence": -2.8987752183732187,
+      "interval_coverage": 0.972972972972973,
+      "n_in_support": 34,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 37,
+        "min": 56.0,
+        "max": 339.0,
+        "median": 146.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 5,
+          "91_180": 19,
+          "181_365": 13,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Эритроциты",
+      "unit": "*10^12/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 412,
+      "n_unique_targets": 630,
+      "active_provider_subject_macro_mae": 0.22945226537216826,
+      "pair_target_micro_mae": 0.22835079365079364,
+      "persistence_subject_macro_mae": 0.22945226537216826,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8841269841269841,
+      "n_in_support": 587,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 630,
+        "min": 12.0,
+        "max": 501.0,
+        "median": 92.0,
+        "bins": {
+          "1_30": 88,
+          "31_90": 224,
+          "91_180": 196,
+          "181_365": 99,
+          "gt_365": 23
+        }
+      }
+    },
+    {
+      "outcome": "Эритроциты",
+      "unit": "млн/мкл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 44,
+      "n_unique_targets": 61,
+      "active_provider_subject_macro_mae": 0.146169762091419,
+      "pair_target_micro_mae": 0.1550318598293209,
+      "persistence_subject_macro_mae": 0.15969696969696973,
+      "active_minus_persistence": -0.013527207605550734,
+      "interval_coverage": 0.9344262295081968,
+      "n_in_support": 60,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 61,
+        "min": 25.0,
+        "max": 385.0,
+        "median": 94.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 23,
+          "91_180": 19,
+          "181_365": 12,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "Эстрадиол",
+      "unit": "пг/мл",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 55,
+      "n_unique_targets": 75,
+      "active_provider_subject_macro_mae": 62.297066666666666,
+      "pair_target_micro_mae": 65.12529333333333,
+      "persistence_subject_macro_mae": 62.297066666666666,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.92,
+      "n_in_support": 72,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 75,
+        "min": 6.0,
+        "max": 523.0,
+        "median": 73.0,
+        "bins": {
+          "1_30": 21,
+          "31_90": 18,
+          "91_180": 20,
+          "181_365": 15,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "Эстрадиол",
+      "unit": "пмоль/л",
+      "evidence_tier": "EVALUABLE",
+      "n_subjects": 48,
+      "n_unique_targets": 61,
+      "active_provider_subject_macro_mae": 399.839375,
+      "pair_target_micro_mae": 428.9209836065574,
+      "persistence_subject_macro_mae": 399.839375,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8524590163934426,
+      "n_in_support": 58,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 61,
+        "min": 16.0,
+        "max": 727.0,
+        "median": 136.0,
+        "bins": {
+          "1_30": 5,
+          "31_90": 19,
+          "91_180": 14,
+          "181_365": 13,
+          "gt_365": 10
+        }
+      }
+    }
+  ],
+  "diagnostic_only_per_outcome": [
+    {
+      "outcome": "D–димер",
+      "unit": "нг/мл",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 28,
+      "n_unique_targets": 31,
+      "active_provider_subject_macro_mae": 291.7989285714286,
+      "pair_target_micro_mae": 427.9635483870968,
+      "persistence_subject_macro_mae": 291.7989285714286,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8709677419354839,
+      "n_in_support": 30,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 31,
+        "min": 10.0,
+        "max": 417.0,
+        "median": 76.0,
+        "bins": {
+          "1_30": 7,
+          "31_90": 12,
+          "91_180": 6,
+          "181_365": 4,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "АЛТ",
+      "unit": "МЕ/л",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 23,
+      "n_unique_targets": 26,
+      "active_provider_subject_macro_mae": 6.908695652173912,
+      "pair_target_micro_mae": 6.938461538461538,
+      "persistence_subject_macro_mae": 6.908695652173912,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8846153846153846,
+      "n_in_support": 26,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 26,
+        "min": 8.0,
+        "max": 153.0,
+        "median": 57.0,
+        "bins": {
+          "1_30": 7,
+          "31_90": 13,
+          "91_180": 6,
+          "181_365": 0,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "ГГТ",
+      "unit": "Ед/л",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 27,
+      "n_unique_targets": 33,
+      "active_provider_subject_macro_mae": 9.564804841080546,
+      "pair_target_micro_mae": 10.669395458901601,
+      "persistence_subject_macro_mae": 9.142592592592592,
+      "active_minus_persistence": 0.4222122484879538,
+      "interval_coverage": 0.9090909090909091,
+      "n_in_support": 33,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 33,
+        "min": 6.0,
+        "max": 528.0,
+        "median": 93.0,
+        "bins": {
+          "1_30": 7,
+          "31_90": 9,
+          "91_180": 6,
+          "181_365": 9,
+          "gt_365": 2
+        }
+      }
+    },
+    {
+      "outcome": "ЛДГ",
+      "unit": "Ед/л",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 18,
+      "n_unique_targets": 22,
+      "active_provider_subject_macro_mae": 16.564284689494443,
+      "pair_target_micro_mae": 16.388799361303718,
+      "persistence_subject_macro_mae": 18.231296296296296,
+      "active_minus_persistence": -1.6670116068018537,
+      "interval_coverage": 1.0,
+      "n_in_support": 19,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 22,
+        "min": 24.0,
+        "max": 450.0,
+        "median": 116.0,
+        "bins": {
+          "1_30": 2,
+          "31_90": 5,
+          "91_180": 9,
+          "181_365": 5,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "Мочевая кислота",
+      "unit": "ммоль/л",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 29,
+      "n_unique_targets": 39,
+      "active_provider_subject_macro_mae": 10.09574712643678,
+      "pair_target_micro_mae": 7.521794871794871,
+      "persistence_subject_macro_mae": 10.09574712643678,
+      "active_minus_persistence": 0.0,
+      "interval_coverage": 0.8717948717948718,
+      "n_in_support": 36,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 39,
+        "min": 29.0,
+        "max": 796.0,
+        "median": 154.0,
+        "bins": {
+          "1_30": 1,
+          "31_90": 9,
+          "91_180": 12,
+          "181_365": 9,
+          "gt_365": 8
+        }
+      }
+    },
+    {
+      "outcome": "Пролактин",
+      "unit": "мЕд/л",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 26,
+      "n_unique_targets": 35,
+      "active_provider_subject_macro_mae": 147.53102643504766,
+      "pair_target_micro_mae": 145.96133623831028,
+      "persistence_subject_macro_mae": 190.72692307692307,
+      "active_minus_persistence": -43.19589664187541,
+      "interval_coverage": 0.9428571428571428,
+      "n_in_support": 31,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 35,
+        "min": 21.0,
+        "max": 369.0,
+        "median": 107.0,
+        "bins": {
+          "1_30": 3,
+          "31_90": 13,
+          "91_180": 14,
+          "181_365": 4,
+          "gt_365": 1
+        }
+      }
+    },
+    {
+      "outcome": "Пролактин",
+      "unit": "мкМЕ/мл",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 22,
+      "n_unique_targets": 32,
+      "active_provider_subject_macro_mae": 174.35648122394477,
+      "pair_target_micro_mae": 171.7117649450687,
+      "persistence_subject_macro_mae": 227.49015151515152,
+      "active_minus_persistence": -53.133670291206755,
+      "interval_coverage": 1.0,
+      "n_in_support": 31,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 32,
+        "min": 15.0,
+        "max": 361.0,
+        "median": 105.0,
+        "bins": {
+          "1_30": 4,
+          "31_90": 10,
+          "91_180": 15,
+          "181_365": 3,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "СОЭ (по Вестергрену)",
+      "unit": "мм/час",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 21,
+      "n_unique_targets": 24,
+      "active_provider_subject_macro_mae": 10.240571915177235,
+      "pair_target_micro_mae": 9.978526265097925,
+      "persistence_subject_macro_mae": 10.595238095238095,
+      "active_minus_persistence": -0.35466618006086037,
+      "interval_coverage": 0.7916666666666666,
+      "n_in_support": 23,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 24,
+        "min": 18.0,
+        "max": 324.0,
+        "median": 94.0,
+        "bins": {
+          "1_30": 2,
+          "31_90": 10,
+          "91_180": 5,
+          "181_365": 7,
+          "gt_365": 0
+        }
+      }
+    },
+    {
+      "outcome": "Холестерин общий",
+      "unit": "ммоль/л",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 29,
+      "n_unique_targets": 31,
+      "active_provider_subject_macro_mae": 0.6989146202126804,
+      "pair_target_micro_mae": 0.6877054868612307,
+      "persistence_subject_macro_mae": 0.7389655172413793,
+      "active_minus_persistence": -0.040050897028698906,
+      "interval_coverage": 0.8709677419354839,
+      "n_in_support": 29,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 31,
+        "min": 8.0,
+        "max": 489.0,
+        "median": 93.0,
+        "bins": {
+          "1_30": 6,
+          "31_90": 9,
+          "91_180": 10,
+          "181_365": 3,
+          "gt_365": 3
+        }
+      }
+    },
+    {
+      "outcome": "Эозинофильный катионный белок",
+      "unit": "мкг/л",
+      "evidence_tier": "DIAGNOSTIC_ONLY",
+      "n_subjects": 27,
+      "n_unique_targets": 32,
+      "active_provider_subject_macro_mae": 18.862442211582955,
+      "pair_target_micro_mae": 18.20327141007695,
+      "persistence_subject_macro_mae": 26.90987654320988,
+      "active_minus_persistence": -8.047434331626924,
+      "interval_coverage": 0.90625,
+      "n_in_support": 28,
+      "n_out_of_support": 0,
+      "horizon_distribution": {
+        "n": 32,
+        "min": 43.0,
+        "max": 423.0,
+        "median": 166.0,
+        "bins": {
+          "1_30": 0,
+          "31_90": 7,
+          "91_180": 13,
+          "181_365": 9,
+          "gt_365": 3
+        }
+      }
+    }
+  ],
+  "no_pooled_raw_mae_across_units": true,
+  "not_clinical_accuracy": true,
+  "not_joint_multi_outcome_learning": true,
+  "provider_selection_unchanged": true,
+  "test_not_used_for_model_selection": true,
+  "backtest_hash": "e1818a88661ef396bd87825d677c4bd998ff65c056487cdca4a9c8e2b305a1e2",
+  "ok": true
+}

@@ -1,0 +1,109 @@
+{
+  "version": "0.1",
+  "roles": [
+    "train",
+    "validation"
+  ],
+  "n_rows": 5261,
+  "n_unique_subjects": 559,
+  "n_unique_targets": 5261,
+  "same_timestamp_panel_collapses": 1191,
+  "skipped_no_history": 1007,
+  "skipped_no_target": 128070,
+  "skipped_nonpositive_horizon": 0,
+  "skipped_target_reuse": 12177,
+  "target_reuse_count": 0,
+  "cross_role_target_reuse": 0,
+  "unexplained_count": 0,
+  "context_sets": {
+    "source_a_rows_in_roles": 22037,
+    "usable_timestamp": 22037,
+    "rejected_unknown_timestamps": 0,
+    "same_timestamp_medication_sets": 3601,
+    "wrong_source_skipped": 0,
+    "record_class": "RECORDED_MEDICATION_CONTEXT",
+    "timestamp_semantics": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+    "administration_claim": "NOT_CLAIMED"
+  },
+  "nh_provider_identity_sha256": "d39547a835ae5532dc3556a8cda23af468ba932bdf028a0e96af0f62a5d1db4b",
+  "r1_feature_order": [
+    "persistence_value",
+    "n_prior_outcome_measurements",
+    "days_since_previous_outcome",
+    "days_since_previous_missing",
+    "prior_delta",
+    "prior_delta_missing",
+    "requested_horizon_days",
+    "n_obs_before",
+    "n_events_before",
+    "n_encounters_before",
+    "longitudinal_age_days",
+    "source_is_a",
+    "missingness_lab"
+  ],
+  "r1_feature_order_sha256": "9979b31f6b1255a6838804ede6c4abc834ad0e28bb24bd6341408628acc2ec68",
+  "actual_future_horizon_is_feature": false,
+  "requested_horizon_predeclared": [
+    30,
+    90,
+    180,
+    365
+  ],
+  "RESIDUAL_TEMPORAL_LEAKAGE_STATUS": "PASS_STRICT_POST_T0",
+  "RESIDUAL_TARGET_REUSE_STATUS": "PASS",
+  "ok": true,
+  "test_public": {
+    "version": "0.1",
+    "roles": [
+      "test"
+    ],
+    "n_rows": 986,
+    "n_unique_subjects": 92,
+    "n_unique_targets": 986,
+    "same_timestamp_panel_collapses": 209,
+    "skipped_no_history": 170,
+    "skipped_no_target": 21318,
+    "skipped_nonpositive_horizon": 0,
+    "skipped_target_reuse": 2324,
+    "target_reuse_count": 0,
+    "cross_role_target_reuse": 0,
+    "unexplained_count": 0,
+    "context_sets": {
+      "source_a_rows_in_roles": 3689,
+      "usable_timestamp": 3689,
+      "rejected_unknown_timestamps": 0,
+      "same_timestamp_medication_sets": 610,
+      "wrong_source_skipped": 0,
+      "record_class": "RECORDED_MEDICATION_CONTEXT",
+      "timestamp_semantics": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+      "administration_claim": "NOT_CLAIMED"
+    },
+    "nh_provider_identity_sha256": "d39547a835ae5532dc3556a8cda23af468ba932bdf028a0e96af0f62a5d1db4b",
+    "r1_feature_order": [
+      "persistence_value",
+      "n_prior_outcome_measurements",
+      "days_since_previous_outcome",
+      "days_since_previous_missing",
+      "prior_delta",
+      "prior_delta_missing",
+      "requested_horizon_days",
+      "n_obs_before",
+      "n_events_before",
+      "n_encounters_before",
+      "longitudinal_age_days",
+      "source_is_a",
+      "missingness_lab"
+    ],
+    "r1_feature_order_sha256": "9979b31f6b1255a6838804ede6c4abc834ad0e28bb24bd6341408628acc2ec68",
+    "actual_future_horizon_is_feature": false,
+    "requested_horizon_predeclared": [
+      30,
+      90,
+      180,
+      365
+    ],
+    "RESIDUAL_TEMPORAL_LEAKAGE_STATUS": "PASS_STRICT_POST_T0",
+    "RESIDUAL_TARGET_REUSE_STATUS": "PASS",
+    "ok": true
+  }
+}

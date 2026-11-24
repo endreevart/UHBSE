@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "opaque_subject_key": "26408fcaef13193677e8d8bc66ab74e382639d50cf5139b41c994e9dc1bc30ad",
+  "pair_id": "23c8536ac9a7ee80c748c0db",
+  "starting_state_hash": "abbef6557758a7746e38682625eb99e314a3d4c8ee7fe2dc0def908ef59c6d8f",
+  "observed": {
+    "y_t0": 9.32,
+    "y_t1": 7.28,
+    "horizon_days": 62.0
+  },
+  "predictions": {
+    "persistence": {
+      "y_pred": 9.32,
+      "abs_err": 2.04
+    },
+    "empirical_trend": {
+      "y_pred": 9.32,
+      "abs_err": 2.04
+    },
+    "first_learned": {
+      "y_pred": 7.548008376594746,
+      "abs_err": 0.26800837659474563
+    }
+  },
+  "uncertainty": {
+    "persistence": {
+      "lower": 9.32,
+      "upper": 9.32
+    },
+    "empirical_trend": {
+      "lower": 8.387999,
+      "upper": 10.252001
+    },
+    "first_learned": {
+      "lower": -2.0006793942346164,
+      "upper": 17.096696147424108
+    }
+  },
+  "layers": {
+    "observed": true,
+    "computed": true,
+    "synthetic_intervention_branch": "SEPARATED_NOT_USED_FOR_BACKTEST"
+  },
+  "kernel_final_state_hash": "abbef6557758a7746e38682625eb99e314a3d4c8ee7fe2dc0def908ef59c6d8f",
+  "claim": "RETROSPECTIVE_COMPARISON_ONLY"
+}

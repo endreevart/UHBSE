@@ -1,0 +1,41 @@
+{
+  "changeset": "Canonical Population Completion, Multi-Outcome Baselines and Intervention Readiness v0.1",
+  "version": "0.1",
+  "claims": [
+    "Canonical Source A population expansion toward all account_patient",
+    "Full population scientific-readiness accounting",
+    "Multi-outcome catalogs and technical baselines",
+    "Intervention inventory and technical episode funnel"
+  ],
+  "non_claims": [
+    "Not clinical validation",
+    "Not treatment-effect estimation",
+    "Not intervention-response model",
+    "Not QSP/PKPD",
+    "Not scientific cross-source transfer",
+    "Not identity merge",
+    "Not production readiness",
+    "Security stage remains PAUSED_NOT_ACCEPTED_BY_OWNER"
+  ],
+  "policy": {
+    "version": "0.1",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "canonical_population_ne_scientific_cohort": true,
+    "intervention_response_model_status": "NOT_STARTED",
+    "treatment_effect_status": "NOT_EVALUATED",
+    "qsp_status": "NOT_STARTED",
+    "pkpd_status": "NOT_STARTED",
+    "clinical_validation_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "seed": 42,
+    "l2": 0.1,
+    "max_ood_fraction": 0.35,
+    "tail_abs_err_thresholds_prospective": [
+      1.0,
+      2.0,
+      5.0
+    ],
+    "no_identity_merge": true,
+    "no_b_tuning": true
+  }
+}

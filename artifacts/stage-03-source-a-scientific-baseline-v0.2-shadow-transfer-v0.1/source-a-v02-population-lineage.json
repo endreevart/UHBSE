@@ -1,0 +1,96 @@
+{
+  "version": "0.2",
+  "source_a_population_lineage_status": "PASS",
+  "funnel": [
+    {
+      "name": "1_source_a_canonical_subjects",
+      "previous_population": null,
+      "resulting_population": 8262,
+      "inclusion_rule": "canonical_evidence.subject.source_system_id=magerya_api",
+      "exclusion_rule": "non-A subjects",
+      "source_relation": "canonical_evidence.subject",
+      "provenance_condition": "source_system_id=magerya_api",
+      "temporal_requirements": "none",
+      "distinctness_rule": "COUNT(subject_id)",
+      "excluded_count": 0,
+      "monotonic": true
+    },
+    {
+      "name": "2_scientific_eligible_ge2_dated_numeric_any_code",
+      "previous_population": 8262,
+      "resulting_population": 7997,
+      "inclusion_rule": "\u22652 dated numeric observation_components (any code)",
+      "exclusion_rule": "<2 dated numeric components",
+      "source_relation": "observation_component\u22c8observation\u22c8subject",
+      "provenance_condition": "source_system_id=magerya_api",
+      "temporal_requirements": "observed_at/specimen/recorded not null",
+      "distinctness_rule": "GROUP BY subject_id HAVING COUNT(*)>=2",
+      "excluded_count": 265,
+      "monotonic": true
+    },
+    {
+      "name": "3_subjects_with_ge1_dated_numeric_t3_pmol",
+      "previous_population": 7997,
+      "resulting_population": 6645,
+      "inclusion_rule": "raw_code='\u04223 \u0441\u0432.' unit='\u043f\u043c\u043e\u043b\u044c/\u043b' \u22651 dated numeric",
+      "exclusion_rule": "no matching T3 row",
+      "source_relation": "observation_component",
+      "provenance_condition": "source_system_id=magerya_api",
+      "temporal_requirements": "dated",
+      "distinctness_rule": "DISTINCT subject_id",
+      "excluded_count": 1352,
+      "monotonic": true
+    },
+    {
+      "name": "4_subjects_with_ge2_dated_numeric_t3_pmol",
+      "previous_population": 6645,
+      "resulting_population": 2928,
+      "inclusion_rule": "\u22652 dated numeric T3 measurements",
+      "exclusion_rule": "exactly one T3 measurement",
+      "source_relation": "observation_component",
+      "provenance_condition": "source_system_id=magerya_api",
+      "temporal_requirements": "dated",
+      "distinctness_rule": "HAVING COUNT(*)>=2",
+      "excluded_count": 3717,
+      "monotonic": true
+    },
+    {
+      "name": "5_subjects_with_strict_consecutive_positive_horizon_pair",
+      "previous_population": 2928,
+      "resulting_population": 2925,
+      "inclusion_rule": "strict consecutive neighbors; horizon>0",
+      "exclusion_rule": "{'missing_timestamp': 0, 'zero_horizon': 2, 'negative_horizon': 0, 'incompatible_unit': 0, 'duplicate_same_timestamp_collapsed': 17, 'all_forward_combinations_forbidden': 0}",
+      "source_relation": "build_consecutive_pairs",
+      "provenance_condition": "A-only scientific eligible universe",
+      "temporal_requirements": "positive horizon",
+      "distinctness_rule": "subjects with \u22651 pair",
+      "excluded_count": 3,
+      "monotonic": true
+    }
+  ],
+  "counts": {
+    "source_a_canonical_subjects": 8262,
+    "scientific_eligible": 7997,
+    "t3_subjects_ge1_dated_numeric": 6645,
+    "t3_subjects_ge2_dated_numeric": 2928,
+    "subjects_with_strict_pairs": 2925,
+    "all_pairs": 6345,
+    "train_subjects": 2069,
+    "validation_subjects": 411,
+    "test_subjects": 445,
+    "train_pairs": 4526,
+    "validation_pairs": 883,
+    "test_pairs": 936,
+    "series_subjects_after_code_filter": 6645
+  },
+  "naming_note": "t3_subjects_ge1 and t3_subjects_ge2 are distinct; do not equate series subjects (~ge1) with subjects that form pairs.",
+  "invariants": {
+    "source_b_rows_in_source_a_experiment": 0,
+    "source_b_in_series": 0,
+    "source_a_pair_subjects": 2925,
+    "all_horizons_positive": true,
+    "all_units_pmol": true,
+    "subject_overlap_zero": true,
+    "locator_overlap_zero": true
+  }
+}

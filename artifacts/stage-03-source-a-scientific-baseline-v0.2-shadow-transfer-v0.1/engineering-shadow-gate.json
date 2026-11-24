@@ -1,0 +1,17 @@
+{
+  "version": "0.2",
+  "engineering_shadow_gate_status": "PASS",
+  "all_pass": true,
+  "checks": {
+    "baseline_verified": true,
+    "source_a_v02_training_pass": true,
+    "source_a_held_out_evaluation_completed": true,
+    "frozen_model_verified": true,
+    "source_b_pair_dataset_built": true,
+    "feature_contract_complete": true,
+    "no_source_b_tuning": true,
+    "no_raw_identifiers_in_output": true
+  },
+  "failed_checks": [],
+  "t3_domain_review_does_not_block_engineering_shadow": true
+}

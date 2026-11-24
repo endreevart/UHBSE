@@ -1,0 +1,50 @@
+{
+  "CAUSAL_EFFECT_STATUS": "NOT_STARTED",
+  "CONFIRMED_ADMINISTRATION_MAPPING_COUNT": 0,
+  "INTERVENTION_RESPONSE_ELIGIBLE_CELL_COUNT": 0,
+  "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+  "INTERVENTION_RESPONSE_READINESS_STATUS": "NOT_READY",
+  "OWNER_SEMANTIC_REVIEW_STATUS": "AWAITING_OWNER_CONFIRMATION",
+  "PATIENT_REPORTED_INTAKE_TIER_STATUS": "NOT_ACCEPTED_PENDING_SEMANTIC_REVIEW",
+  "PRODUCTION_READINESS": "NOT_CLAIMED",
+  "SOURCE_B_FEEDBACK_SEMANTICS_STATUS": "UNKNOWN_PENDING_HUMAN_REVIEW",
+  "TREATMENT_EFFECT_STATUS": "NOT_STARTED",
+  "accepted": false,
+  "candidate_route": {
+    "count": 26066,
+    "fraction": 0.6295,
+    "identity_verification_tier": "NOT_ESTABLISHED",
+    "interval_days": {
+      "n": 26066,
+      "p10": 55.0,
+      "p50": 61.0,
+      "p90": 198.0
+    },
+    "negative_intervals_in_sample": 0,
+    "out_of_order_count": 0,
+    "route": "unverified prior drug recommendation -> feedback created -> linked consultation on or after feedback",
+    "sample_size": 26066,
+    "verified": false,
+    "zero_intervals_in_sample": 0
+  },
+  "candidate_tier": "PATIENT_REPORTED_INTAKE_CANDIDATE",
+  "equals_administration": false,
+  "equals_causal_exposure": false,
+  "equals_dispense": false,
+  "equals_prescription": false,
+  "equals_treatment_effect": false,
+  "equals_verified_ingestion": false,
+  "identity_status": "NOT_ESTABLISHED",
+  "source_a_catalog_transferred_to_source_b": false,
+  "source_a_section_codes_profiled": [
+    "activity",
+    "data_povtornogo_obrashcheniia",
+    "inye_rekomendatsii",
+    "medicines",
+    "napravlenie",
+    "napravleniia",
+    "nutrition",
+    "sport"
+  ],
+  "temporal_status": "CANDIDATE_COUNTED_IDENTITY_NOT_ESTABLISHED"
+}

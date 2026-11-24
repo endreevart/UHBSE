@@ -1,0 +1,29 @@
+{
+  "row_fields": [
+    "pair_id",
+    "opaque_subject_key",
+    "t0",
+    "t1",
+    "y_t0",
+    "y_t1",
+    "horizon_days",
+    "unit",
+    "neighbor_index",
+    "pair_kind",
+    "model_features",
+    "provenance"
+  ],
+  "feature_list": [
+    "y_t0",
+    "horizon_days",
+    "n_prior_measurements",
+    "prior_mean",
+    "prior_last_delta",
+    "days_since_first",
+    "has_prior_history",
+    "prior_mean_missing_flag",
+    "prior_last_delta_missing_flag"
+  ],
+  "pair_definition": "strict_consecutive_neighbors_only",
+  "version": "0.1.1"
+}

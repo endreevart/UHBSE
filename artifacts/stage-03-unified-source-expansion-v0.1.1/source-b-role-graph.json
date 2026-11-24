@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "source_system": "kgz_raw",
+  "distinct_users": 114748,
+  "persons_count": 0,
+  "distinct_patient_id": 49564,
+  "distinct_doctor_id": 1,
+  "null_patient_id_consultations": 0,
+  "null_doctor_id_consultations": 0,
+  "consultations_total": 88867,
+  "patient_only_users": 49564,
+  "doctor_only_users": 1,
+  "users_in_both_roles": 0,
+  "patient_id_without_user": 0,
+  "doctor_id_without_user": 0,
+  "is_doctor_distribution": {
+    "column_present": true,
+    "distribution": {
+      "false": 114703,
+      "true": 45
+    }
+  },
+  "subject_construction_candidate": {
+    "rule": "distinct users.id referenced by consultations.patient_id",
+    "n_candidate_subjects": 49564,
+    "not_all_users_are_patients": true
+  },
+  "pii_values_returned": false
+}

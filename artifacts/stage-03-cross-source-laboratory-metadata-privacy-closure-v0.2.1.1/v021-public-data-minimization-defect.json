@@ -1,0 +1,370 @@
+{
+  "version": "0.2.1.1",
+  "V021_PUBLIC_DATA_MINIMIZATION_DEFECT_STATUS": "CONFIRMED",
+  "n_prohibited_row_derived_hash_fields": 24,
+  "prohibited_fields": [
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "first_name_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "last_name_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "patronymic_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "post_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": false,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "first_name_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "last_name_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "patronymic_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_smscode",
+      "column": "platform",
+      "n_hashes": 2,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_document",
+      "column": "methodologist_document_status",
+      "n_hashes": 3,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": false,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "logg_apilogentry",
+      "column": "request_method",
+      "n_hashes": 4,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": false,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "payment_payment",
+      "column": "acquiring_provider_id",
+      "n_hashes": 2,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "public",
+      "table": "geometry_columns",
+      "column": "f_table_catalog",
+      "n_hashes": 1,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": false,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "first_name_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "last_name_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "patronymic_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "post_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": false,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "first_name_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "last_name_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "patronymic_instrumental",
+      "n_hashes": 5,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_smscode",
+      "column": "platform",
+      "n_hashes": 2,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_document",
+      "column": "methodologist_document_status",
+      "n_hashes": 3,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": false,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "logg_apilogentry",
+      "column": "request_method",
+      "n_hashes": 4,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": false,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "magerya_api",
+      "table": "payment_payment",
+      "column": "acquiring_provider_id",
+      "n_hashes": 2,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": true,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    },
+    {
+      "schema": "public",
+      "table": "geometry_columns",
+      "column": "f_table_catalog",
+      "n_hashes": 1,
+      "classification": "PROHIBITED_ROW_DERIVED_LOW_ENTROPY_HASH",
+      "sensitive_column_context": false,
+      "reasons": [
+        "hash_not_sufficient_anonymization",
+        "md5_without_salt",
+        "low_entropy_category_space",
+        "not_needed_for_scientific_review",
+        "aggregate_only_packet_must_not_contain_row_derived_fingerprints"
+      ]
+    }
+  ],
+  "note": "No reverse recovery attempted; hashes classified by context only.",
+  "old_zip_not_rewritten": true,
+  "ok": true
+}

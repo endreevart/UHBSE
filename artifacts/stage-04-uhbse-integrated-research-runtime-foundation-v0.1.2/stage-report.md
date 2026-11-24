@@ -1,0 +1,33 @@
+# UHBSE Integrated Research Runtime Foundation v0.1.2
+
+Report status: FINAL
+
+Contract closure and frozen provider execution. Not a clinical product. Not production.
+Portable synthetic flow is not evidence of source-specific frozen execution.
+
+## Required statuses
+
+- `SYNTHETIC_E2E_STATUS`=PASS
+- `SOURCE_A_FROZEN_INFERENCE_STATUS`=PASS
+- `SOURCE_B_FROZEN_INFERENCE_STATUS`=PASS
+- `FROZEN_LEP_EXECUTION_STATUS`=PASS
+- `EXACT_PROVIDER_IDENTITY_STATUS`=PASS
+- `NO_SILENT_PROVIDER_FALLBACK_STATUS`=PASS
+- `HTTP_TYPED_SCHEMA_STATUS`=PASS
+- `HTTP_DETERMINISTIC_ERROR_STATUS`=PASS
+- `WORKBENCH_BROWSER_INTEGRATION_STATUS`=PASS
+- `SOURCE_CONNECTOR_FILTERED_READ_STATUS`=PASS
+- `JOINT_PANEL_ACCOUNTING_STATUS`=RECONCILED
+- `END_TO_END_STATE_CONDITIONED_RUNTIME_STATUS`=PASS
+- `CLINICAL_SOURCE_SYSTEM_COUNT`=2
+- `MATERIALIZED_LAYER_COUNT`=2
+- `PUBLICATION_INTEGRITY_STATUS`=DETACHED_SIDECAR_AUTHORITATIVE
+- `D1_JOINT_DEPENDENCE_STATUS`=NOT_ACCEPTED
+- `PRODUCTION_READINESS`=NOT_CLAIMED
+- `SECURITY_STAGE_STATUS`=PAUSED_NOT_ACCEPTED_BY_OWNER
+
+## Non-claims
+
+No A↔B merge, no unit conversion, no D1 acceptance, no real-drug PKPD, no causal effect, no clinical validation.
+IROS did not grant a dataset. Automated contact was not run. No replacement model was trained.
+ZIP inner PUBLICATION_INTEGRITY_STATUS is DETACHED_SIDECAR_AUTHORITATIVE; publication PASS is the sidecar/attestation.

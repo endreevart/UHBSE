@@ -1,0 +1,50 @@
+{
+  "version": "0.1",
+  "ENGINE_NATURAL_HISTORY_ROLLOUT_STATUS": "TECHNICAL_SHADOW_PASS",
+  "ENGINE_DETERMINISTIC_REPLAY_STATUS": "PASS",
+  "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_T1_T2_READ",
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "rollback": true,
+    "parent_isolation": true,
+    "predictions_do_not_drive_synthetic_physiology": true
+  },
+  "inference": {
+    "status": "OK",
+    "paths_n": 8,
+    "median_endpoint": 1.3200000000000003,
+    "q05": 0.8399999999999999,
+    "q95": 1.6899999999999995,
+    "medication_representation_type": null,
+    "rollout_type": "MARGINAL_SOURCE_SPECIFIC_RECURSIVE",
+    "NATURAL_HISTORY_ONLY": true,
+    "CLINICAL_USE_PROHIBITED": true,
+    "CAUSAL_INTERPRETATION_PROHIBITED": true,
+    "model_identity_sha256": "5931be3b646806f525919c462c03a5239d239bb6cf372b48a2d1a6e2859cacb9",
+    "intervention": null,
+    "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_T1_T2_READ"
+  },
+  "deterministic_repeat": true,
+  "different_seed_contract": true,
+  "future_poison": {
+    "status": "FAIL",
+    "reason": "FUTURE_INFORMATION_LEAKAGE"
+  },
+  "hash_mismatch": {
+    "status": "FAIL",
+    "reason": "HASH_MISMATCH_HARD_FAIL"
+  },
+  "no_pad_truncate": {
+    "status": "FAIL",
+    "reason": "NO_PAD_TRUNCATE"
+  },
+  "intervention": {
+    "INTERVENTION_EFFECT_STATUS": "UNAVAILABLE",
+    "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+    "scenario_modified": false,
+    "reason": "NATURAL_HISTORY_ONLY_NO_EFFECT_MODEL"
+  },
+  "ok": true
+}

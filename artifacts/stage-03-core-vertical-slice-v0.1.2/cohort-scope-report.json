@@ -1,0 +1,28 @@
+{
+  "cohort_loaded_subjects": 100,
+  "requested_limit": 100,
+  "sample_class": "TECHNICAL_COVERAGE_BIASED_SAMPLE",
+  "forbidden_for_model_quality_evaluation": true,
+  "criteria": [
+    "account_patient",
+    ">=3 appointments",
+    ">=1 lab panel",
+    "densest_first"
+  ],
+  "timelines_built_subjects_cap": 10,
+  "snapshots_built_subjects_cap": 10,
+  "simulated_subjects_cap": 1,
+  "timelines_built_subjects": 10,
+  "snapshots_built_subjects": 10,
+  "simulated_subjects": 1,
+  "honesty_note": "Loaded 100 subjects; built timelines for 10; snapshots for 10; simulated 1 subject(s) only.",
+  "eligibility": {
+    "subjects_total": 43856,
+    "subjects_appt_ge2": 13301,
+    "subjects_appt_ge3": 8588,
+    "subjects_appt_ge4": 6050,
+    "subjects_with_lab": 18232,
+    "subjects_appt3_and_lab": 8262,
+    "subjects_appt3_lab3": 8209
+  }
+}

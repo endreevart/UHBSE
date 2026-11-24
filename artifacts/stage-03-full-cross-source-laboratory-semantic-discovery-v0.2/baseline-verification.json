@@ -1,0 +1,82 @@
+{
+  "version": "0.2",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "v011_members": 557,
+  "v011_indexed": 556,
+  "cache_members": 0,
+  "prior_before": {
+    "v011": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0",
+    "v01": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f",
+    "privacy": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+    "gs011": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+  },
+  "prior_after": {
+    "v011": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0",
+    "v01": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f",
+    "privacy": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+    "gs011": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+  },
+  "checks": [
+    {
+      "name": "v011_sha",
+      "ok": true,
+      "detail": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0"
+    },
+    {
+      "name": "v01_sha",
+      "ok": true,
+      "detail": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f"
+    },
+    {
+      "name": "privacy_sha",
+      "ok": true,
+      "detail": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231"
+    },
+    {
+      "name": "gs011_sha",
+      "ok": true,
+      "detail": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+    },
+    {
+      "name": "members_557",
+      "ok": true,
+      "detail": 557
+    },
+    {
+      "name": "indexed_556",
+      "ok": true,
+      "detail": 556
+    },
+    {
+      "name": "cache_zero",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "manifest_ok",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "tests_json_in_manifest",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sidecar",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "attestation_pass",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "prior_before_equals_after",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "ok": true
+}

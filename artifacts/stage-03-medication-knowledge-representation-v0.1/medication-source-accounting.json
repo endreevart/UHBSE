@@ -1,0 +1,38 @@
+{
+  "version": "0.1",
+  "MEDICATION_SOURCE_ACCOUNTING_STATUS": "PASS",
+  "MEDICATION_SEMANTIC_REGISTRY_STATUS": "BUILT",
+  "total_source_medicines": 487,
+  "expected_medicine_ids": 487,
+  "matches_expected_487": true,
+  "by_mapping_status": {
+    "SOURCE_EXACT": 487,
+    "SUPPORTED_TRANSFORM": 0,
+    "HYPOTHESIS": 0,
+    "UNKNOWN": 0,
+    "CONFLICT": 0
+  },
+  "accounted": 487,
+  "unaccounted": 0,
+  "join_coverage_to_diagnosis_medicines": 1.0,
+  "fk_stats": {
+    "n_with_unit_fk": 0,
+    "n_with_form_fk": 0,
+    "n_with_freq_fk": 0,
+    "note": "FK columns may be present but unused; usable non-null values audited separately",
+    "usable_nonnull_unit_fk": 0,
+    "usable_nonnull_form_fk": 0,
+    "usable_nonnull_freq_fk": 0
+  },
+  "hypothesis_extractions": {
+    "n_with_strength_hypothesis": 326,
+    "n_with_form_hypothesis": 329,
+    "active_ingredient_inferred": 0,
+    "route_inferred": 0,
+    "note": "Hypothesis extractions are not accepted clinical mappings"
+  },
+  "private_registry_path": "private/medication-knowledge-v01/registry/medication-registry-full.jsonl",
+  "private_contains_original_strings": true,
+  "sanitized_n": 487,
+  "never_invent_rule": true
+}

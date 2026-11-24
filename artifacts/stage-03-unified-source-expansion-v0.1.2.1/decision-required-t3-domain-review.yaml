@@ -1,0 +1,10 @@
+document: decision-required-t3-domain-review
+status: DOMAIN_REVIEW_REQUIRED
+reason: Preferred stratum code=53 unit=пмоль/л has empty specimen/material metadata;
+  catalog default unit нг/дл must not override observed raw_unit. Domain review required
+  before any transfer claim.
+failed_checks:
+- specimen_material_empty
+blocks_transfer: true
+migration_0005: false
+identity_merge: false

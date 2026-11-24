@@ -1,0 +1,64 @@
+{
+  "version": "0.1.1",
+  "ENGINE_NATURAL_HISTORY_ROLLOUT_STATUS": "TECHNICAL_SHADOW_PASS",
+  "ENGINE_DETERMINISTIC_REPLAY_STATUS": "PASS",
+  "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_T1_T2_READ",
+  "ENGINE_REQUESTED_HORIZON_STATUS": "PASS_T0_PLUS_H",
+  "ENGINE_REAL_STATE_INPUT_STATUS": "PRE_T0_HISTORY_CONSUMED",
+  "ENGINE_MODEL_ROUTING_STATUS": "DISK_OR_FROZEN_REGISTRY",
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "rollback": true,
+    "parent_isolation": true,
+    "predictions_do_not_drive_synthetic_physiology": true
+  },
+  "inference": {
+    "status": "OK",
+    "paths_n": 8,
+    "median_endpoint": 3.5304994169628543,
+    "q05": 2.2461907159481695,
+    "q95": 3.6650144678853005,
+    "requested_horizon_days": 90,
+    "endpoint_offset_days": 90,
+    "horizon_identity_ok": true,
+    "mode": "direct",
+    "degenerate_residual": false,
+    "NATURAL_HISTORY_ONLY": true,
+    "CLINICAL_USE_PROHIBITED": true,
+    "CAUSAL_INTERPRETATION_PROHIBITED": true,
+    "active_payload_sha256": "faf38ff14492af6958a93f5901055b5526305d66b1118f70595c275320a2c787",
+    "active_provider": "P1",
+    "intervention": null,
+    "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_T1_T2_READ",
+    "ENGINE_REQUESTED_HORIZON_STATUS": "PASS_T0_PLUS_H",
+    "ENGINE_REAL_STATE_INPUT_STATUS": "PRE_T0_HISTORY_CONSUMED"
+  },
+  "deterministic_repeat": true,
+  "different_seed": {
+    "ok": true,
+    "note": "STOCHASTIC_VARIATION",
+    "unconditional_or_true": false
+  },
+  "horizon_identity_90": 90,
+  "unused_feature_vector": {
+    "status": "FAIL",
+    "reason": "UNUSED_FEATURE_VECTOR_REJECTED"
+  },
+  "mandatory_identity": {
+    "status": "FAIL",
+    "reason": "MANDATORY_PAYLOAD_IDENTITY_MISSING"
+  },
+  "hash_mismatch": {
+    "status": "FAIL",
+    "reason": "HASH_MISMATCH_HARD_FAIL"
+  },
+  "intervention": {
+    "INTERVENTION_EFFECT_STATUS": "UNAVAILABLE",
+    "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+    "scenario_modified": false,
+    "reason": "NATURAL_HISTORY_ONLY_NO_EFFECT_MODEL"
+  },
+  "ok": true
+}

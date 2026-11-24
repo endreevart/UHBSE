@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "primary": {
+    "1_no_supported_dated_numeric_observation": 28086,
+    "2_exactly_one_supported_dated_numeric_observation": 106,
+    "3_multiple_observations_but_no_repeated_normalized_outcome": 6022,
+    "4_repeated_outcome_pair_construction_see_catalog": 9642,
+    "7_unresolved_temporal_linkage": 0
+  },
+  "secondary": {
+    "has_appointment": 20559,
+    "has_at_least_three_appointments": 8588,
+    "has_laboratory_header": 18232,
+    "has_numeric_laboratory_component": 15770,
+    "has_repeated_same_outcome_measurement": 9642,
+    "has_medication_prescription_candidate": 2791,
+    "has_pre_intervention_observation": "see_episode_funnel",
+    "has_post_intervention_observation": "see_episode_funnel",
+    "has_technically_constructible_intervention_episode": "see_episode_funnel"
+  },
+  "total": 43856,
+  "sum_equals_total": true
+}

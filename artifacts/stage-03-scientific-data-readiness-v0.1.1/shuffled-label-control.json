@@ -1,0 +1,16 @@
+{
+  "status": "COMPUTED",
+  "n_permutations": 20,
+  "method": "shuffle_train_labels_only_retrain_evaluate_fixed_test",
+  "real_subject_macro_mae": 0.5236782086594662,
+  "shuffled_subject_macro_mae": {
+    "min": 0.6034138607093362,
+    "median": 1.7657274448363844,
+    "max": 2.9619666359796852,
+    "mean": 1.7916693064374527
+  },
+  "n_shuffles_with_mae_le_real": 0,
+  "fraction_shuffles_le_real": 0.0,
+  "features_and_split_boundaries_preserved": true,
+  "test_labels_unchanged": true
+}

@@ -1,0 +1,100 @@
+{
+  "version": "0.1",
+  "TRAJECTORY_REGIME_DISCOVERY_STATUS": "CANDIDATE_ONLY_UNSTABLE",
+  "TRAJECTORY_REGIME_STABILITY_STATUS": "STABLE",
+  "k_selected_on_validation": 5,
+  "stability_ari_seeds": [
+    0.8041989987484356,
+    0.740040675844806,
+    0.7458354192740926
+  ],
+  "stability_ari_mean": 0.7633583646224448,
+  "subsample_ari_mean": 0.5071318314559866,
+  "source_assignment_ari": 0.5350250312891114,
+  "missingness_assignment_ari": 0.5196964956195244,
+  "rejected_as_source_or_missingness_only": true,
+  "clusters": [
+    {
+      "label": "TRAJECTORY_REGIME_CANDIDATE",
+      "also": "STATE_TRANSITION_SIGNATURE_CANDIDATE",
+      "cluster_id": 0,
+      "n": 1141,
+      "source_composition": {
+        "magerya_api": 838,
+        "kgz_raw": 303
+      },
+      "source_purity": 0.7344434706397897,
+      "mean_mask_density": 0.1333274525649635,
+      "centroid_l2": 1.9207095785752315,
+      "not_a_diagnosis": true,
+      "not_clinical_state": true,
+      "not_causal": true
+    },
+    {
+      "label": "TRAJECTORY_REGIME_CANDIDATE",
+      "also": "STATE_TRANSITION_SIGNATURE_CANDIDATE",
+      "cluster_id": 1,
+      "n": 4,
+      "source_composition": {
+        "magerya_api": 1,
+        "kgz_raw": 3
+      },
+      "source_purity": 0.75,
+      "mean_mask_density": 0.10308441558441558,
+      "centroid_l2": 78.73706097012543,
+      "not_a_diagnosis": true,
+      "not_clinical_state": true,
+      "not_causal": true
+    },
+    {
+      "label": "TRAJECTORY_REGIME_CANDIDATE",
+      "also": "STATE_TRANSITION_SIGNATURE_CANDIDATE",
+      "cluster_id": 2,
+      "n": 10,
+      "source_composition": {
+        "magerya_api": 10
+      },
+      "source_purity": 1.0,
+      "mean_mask_density": 0.0698051948051948,
+      "centroid_l2": 42.29720752878272,
+      "not_a_diagnosis": true,
+      "not_clinical_state": true,
+      "not_causal": true
+    },
+    {
+      "label": "TRAJECTORY_REGIME_CANDIDATE",
+      "also": "STATE_TRANSITION_SIGNATURE_CANDIDATE",
+      "cluster_id": 3,
+      "n": 161,
+      "source_composition": {
+        "magerya_api": 155,
+        "kgz_raw": 6
+      },
+      "source_purity": 0.9627329192546584,
+      "mean_mask_density": 0.034161490683229816,
+      "centroid_l2": 3.6952201638058924,
+      "not_a_diagnosis": true,
+      "not_clinical_state": true,
+      "not_causal": true
+    },
+    {
+      "label": "TRAJECTORY_REGIME_CANDIDATE",
+      "also": "STATE_TRANSITION_SIGNATURE_CANDIDATE",
+      "cluster_id": 4,
+      "n": 184,
+      "source_composition": {
+        "magerya_api": 95,
+        "kgz_raw": 89
+      },
+      "source_purity": 0.5163043478260869,
+      "mean_mask_density": 0.12102978543195934,
+      "centroid_l2": 9.248468077743729,
+      "not_a_diagnosis": true,
+      "not_clinical_state": true,
+      "not_causal": true
+    }
+  ],
+  "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_STARTED_NO_ACCEPTED_LABEL_ONTOLOGY",
+  "TRAJECTORY_CLASSIFIER_STATUS": "NOT_STARTED",
+  "ok": true
+}

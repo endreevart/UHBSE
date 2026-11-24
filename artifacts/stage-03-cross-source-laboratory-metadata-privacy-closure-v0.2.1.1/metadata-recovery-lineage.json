@@ -1,0 +1,34 @@
+{
+  "version": "0.2.1.1",
+  "source_a": {
+    "SOURCE_A_RAW_METADATA_PROBE_STATUS": "PASS",
+    "SOURCE_A_SPECIMEN_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+    "SOURCE_A_ASSAY_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+    "SOURCE_A_METADATA_RECOVERY_STATUS": "PASS_LAB_CONTEXT_NO_CONFIRMED_METADATA",
+    "LAB_CONTEXT_METADATA_DISCOVERY_STATUS": "PASS",
+    "n_candidates": 0,
+    "lab_relation_count": 2,
+    "probe_hash": "a3ab3713b908d575dcb23700974067df03abb9a721945abac6a882c41b642b4d",
+    "global_substring_scan_used": false,
+    "sample_category_hashes_emitted": false,
+    "default_specimen_invented": false
+  },
+  "source_b": {
+    "SOURCE_B_RAW_METADATA_PROBE_STATUS": "PASS",
+    "SOURCE_B_SPECIMEN_METADATA_STATUS": "NOT_AVAILABLE_IN_SOURCE",
+    "SOURCE_B_ASSAY_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+    "SOURCE_B_METADATA_RECOVERY_STATUS": "PASS_MATERIAL_EMPTY_ASSAY_DOCS_REQUIRED",
+    "analyses_catalog_rows": 1882,
+    "material_column_exists": true,
+    "material_non_null": 0,
+    "catalog_material_all_empty": true,
+    "provider_input_required": true,
+    "probe_hash": "2487ec2962a177780287ddacce4bf60d57ee5507f6e9d8b1d65f5f01bd4f8f7a",
+    "sample_category_hashes_emitted": false
+  },
+  "removed_from_public": [
+    "row-derived category fingerprints",
+    "field_sample arrays with value digests",
+    "name/platform/provider category digests"
+  ]
+}

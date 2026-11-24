@@ -1,0 +1,139 @@
+{
+  "version": "0.3.1",
+  "CURATED_DOMAIN_CLASSIFICATION_STATUS": "PASS",
+  "source_a": {
+    "version": "0.3.1",
+    "CURATED_DOMAIN_CLASSIFICATION_STATUS": "PASS",
+    "n_classified": 206,
+    "disposition_counts": {
+      "UNRESOLVED_RETAINED": 119,
+      "INFRASTRUCTURE_UNSUPPORTED": 53,
+      "SOURCE_SPECIFIC_SUPPORTED": 9,
+      "ENTITY_LINK": 13,
+      "REJECTED_FALSE_POSITIVE": 2,
+      "REFERENCE_CATALOG": 10
+    },
+    "primary_domain_uniqueness_violations": [],
+    "source_b_users_observed": false,
+    "source_b_consultations_observed": false,
+    "regex_false_positive_regressions": [
+      {
+        "relation": "magerya_api.contract_saleorder",
+        "expected": "REJECTED_FALSE_POSITIVE",
+        "observed": "REJECTED_FALSE_POSITIVE",
+        "ok": true
+      },
+      {
+        "relation": "magerya_api.evotor_evotororder",
+        "expected": "REJECTED_FALSE_POSITIVE",
+        "observed": "REJECTED_FALSE_POSITIVE",
+        "ok": true
+      },
+      {
+        "relation": "quest_digital.analyses_weight",
+        "expected": "REJECTED_FALSE_POSITIVE",
+        "observed": null,
+        "ok": false
+      },
+      {
+        "relation": "quest_digital.catalog_weights",
+        "expected": "REJECTED_FALSE_POSITIVE",
+        "observed": null,
+        "ok": false
+      },
+      {
+        "relation": "magerya_api.diagnosis_medicines",
+        "expected": "REFERENCE_CATALOG",
+        "observed": "REFERENCE_CATALOG",
+        "ok": true
+      },
+      {
+        "relation": "magerya_api.diagnosis_medicineappointments",
+        "expected": "SOURCE_SPECIFIC_SUPPORTED",
+        "observed": "SOURCE_SPECIFIC_SUPPORTED",
+        "ok": true
+      },
+      {
+        "relation": "public.users",
+        "expected": "SOURCE_SPECIFIC_SUPPORTED",
+        "observed": null,
+        "ok": false
+      },
+      {
+        "relation": "public.consultations",
+        "expected": "SOURCE_SPECIFIC_SUPPORTED",
+        "observed": null,
+        "ok": false
+      }
+    ],
+    "ok": true
+  },
+  "source_b": {
+    "version": "0.3.1",
+    "CURATED_DOMAIN_CLASSIFICATION_STATUS": "PASS",
+    "n_classified": 136,
+    "disposition_counts": {
+      "UNRESOLVED_RETAINED": 64,
+      "SOURCE_SPECIFIC_SUPPORTED": 6,
+      "INFRASTRUCTURE_UNSUPPORTED": 47,
+      "REFERENCE_CATALOG": 12,
+      "ENTITY_LINK": 5,
+      "REJECTED_FALSE_POSITIVE": 2
+    },
+    "primary_domain_uniqueness_violations": [],
+    "source_b_users_observed": true,
+    "source_b_consultations_observed": true,
+    "regex_false_positive_regressions": [
+      {
+        "relation": "magerya_api.contract_saleorder",
+        "expected": "REJECTED_FALSE_POSITIVE",
+        "observed": null,
+        "ok": false
+      },
+      {
+        "relation": "magerya_api.evotor_evotororder",
+        "expected": "REJECTED_FALSE_POSITIVE",
+        "observed": null,
+        "ok": false
+      },
+      {
+        "relation": "quest_digital.analyses_weight",
+        "expected": "REJECTED_FALSE_POSITIVE",
+        "observed": "REJECTED_FALSE_POSITIVE",
+        "ok": true
+      },
+      {
+        "relation": "quest_digital.catalog_weights",
+        "expected": "REJECTED_FALSE_POSITIVE",
+        "observed": "REJECTED_FALSE_POSITIVE",
+        "ok": true
+      },
+      {
+        "relation": "magerya_api.diagnosis_medicines",
+        "expected": "REFERENCE_CATALOG",
+        "observed": null,
+        "ok": false
+      },
+      {
+        "relation": "magerya_api.diagnosis_medicineappointments",
+        "expected": "SOURCE_SPECIFIC_SUPPORTED",
+        "observed": null,
+        "ok": false
+      },
+      {
+        "relation": "public.users",
+        "expected": "SOURCE_SPECIFIC_SUPPORTED",
+        "observed": "SOURCE_SPECIFIC_SUPPORTED",
+        "ok": true
+      },
+      {
+        "relation": "public.consultations",
+        "expected": "SOURCE_SPECIFIC_SUPPORTED",
+        "observed": "SOURCE_SPECIFIC_SUPPORTED",
+        "ok": true
+      }
+    ],
+    "ok": true
+  },
+  "ok": true
+}

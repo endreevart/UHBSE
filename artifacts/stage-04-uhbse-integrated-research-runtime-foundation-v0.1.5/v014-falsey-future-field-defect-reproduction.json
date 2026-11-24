@@ -1,0 +1,642 @@
+{
+  "V014_EXPECTED_SHA256": "1c3d8ed10c069fb46f75fbd5052b7cb398e6f4697be34e24c9e3e3e5bd15ebf7",
+  "V014_INTEGRATED_RUNTIME_CLAIM_STATUS": "CORRECTION_REQUIRED",
+  "artifact_dir": "artifacts/stage-04-uhbse-integrated-research-runtime-foundation-v0.1.5",
+  "defects": [
+    {
+      "claim": "v0.1.4 future-field checks use truthiness, so falsey/null values bypass FUTURE_INFORMATION_LEAKAGE",
+      "id": 1,
+      "lep_direct_cases": [
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "0"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "0"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "0.0"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "0.0"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "False"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "False"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "None"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "None"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "''"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "''"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "0"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "0"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "0.0"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "0.0"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "False"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "False"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "None"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "None"
+        },
+        {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "''"
+        },
+        {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t2",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "''"
+        }
+      ],
+      "live_http": {
+        "frozen_ordinary_t1_0": {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "http_status": 422,
+          "leak": null,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "status": "ABSTAIN"
+        },
+        "nhr_missing": {
+          "STATE_CONDITIONED_LEP_STATUS": null,
+          "http_status": 200,
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "status": "OK"
+        },
+        "nhr_replay_t1_empty": {
+          "STATE_CONDITIONED_LEP_STATUS": null,
+          "http_status": 200,
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "status": "OK"
+        },
+        "nhr_rollout_t1_false": {
+          "STATE_CONDITIONED_LEP_STATUS": null,
+          "http_status": 200,
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "status": "OK"
+        },
+        "nhr_t1_0": {
+          "STATE_CONDITIONED_LEP_STATUS": null,
+          "http_status": 200,
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "status": "OK"
+        },
+        "nhr_t1_null": {
+          "STATE_CONDITIONED_LEP_STATUS": null,
+          "http_status": 200,
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "status": "OK"
+        },
+        "nhr_t2_0": {
+          "STATE_CONDITIONED_LEP_STATUS": null,
+          "http_status": 200,
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "status": "OK"
+        },
+        "reference_probe_t1_0": {
+          "STATE_CONDITIONED_LEP_STATUS": null,
+          "http_status": 409,
+          "leak": null,
+          "reason": "FEATURE_ORDER_HASH_MISMATCH",
+          "status": "FAIL"
+        },
+        "syn_lep_t1_0": {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_USED_ON_THIS_ROUTE",
+          "http_status": 200,
+          "leak": null,
+          "reason": null,
+          "status": "OK"
+        },
+        "syn_lep_t2_0": {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_USED_ON_THIS_ROUTE",
+          "http_status": 200,
+          "leak": null,
+          "reason": null,
+          "status": "OK"
+        }
+      },
+      "nhr_direct_cases": [
+        {
+          "bypassed": true,
+          "field": "<absent>",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "positive_control_missing_field",
+          "status": "OK",
+          "value_repr": "<absent>"
+        },
+        {
+          "bypassed": true,
+          "field": "t1",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "None"
+        },
+        {
+          "bypassed": true,
+          "field": "t1",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0"
+        },
+        {
+          "bypassed": true,
+          "field": "t1",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0.0"
+        },
+        {
+          "bypassed": true,
+          "field": "t1",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "False"
+        },
+        {
+          "bypassed": true,
+          "field": "t1",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "''"
+        },
+        {
+          "bypassed": true,
+          "field": "t1",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "[]"
+        },
+        {
+          "bypassed": true,
+          "field": "t1",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "{}"
+        },
+        {
+          "bypassed": false,
+          "field": "t1",
+          "reason": "FUTURE_INFORMATION_LEAKAGE",
+          "role": "nonempty_control",
+          "status": "FAIL",
+          "value_repr": "'2020-01-02T00:00:00Z'"
+        },
+        {
+          "bypassed": true,
+          "field": "t2",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "None"
+        },
+        {
+          "bypassed": true,
+          "field": "t2",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0"
+        },
+        {
+          "bypassed": true,
+          "field": "t2",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0.0"
+        },
+        {
+          "bypassed": true,
+          "field": "t2",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "False"
+        },
+        {
+          "bypassed": true,
+          "field": "t2",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "''"
+        },
+        {
+          "bypassed": true,
+          "field": "t2",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "[]"
+        },
+        {
+          "bypassed": true,
+          "field": "t2",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "{}"
+        },
+        {
+          "bypassed": false,
+          "field": "t2",
+          "reason": "FUTURE_INFORMATION_LEAKAGE",
+          "role": "nonempty_control",
+          "status": "FAIL",
+          "value_repr": "'2020-01-03T00:00:00Z'"
+        },
+        {
+          "bypassed": true,
+          "field": "future_intervals",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "None"
+        },
+        {
+          "bypassed": true,
+          "field": "future_intervals",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0"
+        },
+        {
+          "bypassed": true,
+          "field": "future_intervals",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0.0"
+        },
+        {
+          "bypassed": true,
+          "field": "future_intervals",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "False"
+        },
+        {
+          "bypassed": true,
+          "field": "future_intervals",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "''"
+        },
+        {
+          "bypassed": true,
+          "field": "future_intervals",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "[]"
+        },
+        {
+          "bypassed": true,
+          "field": "future_intervals",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "{}"
+        },
+        {
+          "bypassed": false,
+          "field": "future_intervals",
+          "reason": "FUTURE_INFORMATION_LEAKAGE",
+          "role": "nonempty_control",
+          "status": "FAIL",
+          "value_repr": "[1.0]"
+        },
+        {
+          "bypassed": true,
+          "field": "actual_recorded_label_offset_days",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "None"
+        },
+        {
+          "bypassed": true,
+          "field": "actual_recorded_label_offset_days",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0"
+        },
+        {
+          "bypassed": true,
+          "field": "actual_recorded_label_offset_days",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0.0"
+        },
+        {
+          "bypassed": true,
+          "field": "actual_recorded_label_offset_days",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "False"
+        },
+        {
+          "bypassed": true,
+          "field": "actual_recorded_label_offset_days",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "''"
+        },
+        {
+          "bypassed": true,
+          "field": "actual_recorded_label_offset_days",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "[]"
+        },
+        {
+          "bypassed": true,
+          "field": "actual_recorded_label_offset_days",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "{}"
+        },
+        {
+          "bypassed": false,
+          "field": "actual_recorded_label_offset_days",
+          "reason": "FUTURE_INFORMATION_LEAKAGE",
+          "role": "nonempty_control",
+          "status": "FAIL",
+          "value_repr": "90"
+        }
+      ],
+      "note": "Live HTTP and direct API on published v0.1.4 code. Frozen probe/ordinary results are real HTTP, not a substituted backend.",
+      "proven_manifestations": {
+        "frozen_ordinary_lep_t1_0": {
+          "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reached_ordinary_abstain": true,
+          "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+          "route": "frozen_ordinary_event_probability",
+          "status": "ABSTAIN",
+          "value_repr": "0"
+        },
+        "nhr_t1_0": {
+          "bypassed": true,
+          "field": "t1",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0"
+        },
+        "nhr_t2_0": {
+          "bypassed": true,
+          "field": "t2",
+          "leak": "PASS_DECLARED_PRE_T0_SUMMARY_NO_T1_T2_FIELDS",
+          "reason": null,
+          "role": "falsey_or_null",
+          "status": "OK",
+          "value_repr": "0"
+        },
+        "syn_lep_t1_0": {
+          "bypassed": true,
+          "check": "direct_python_api",
+          "field": "t1",
+          "reason": null,
+          "route": "synthetic_event_probability",
+          "status": "OK",
+          "value_repr": "0"
+        }
+      },
+      "pydantic_dump_cause": {
+        "cause": "model_dump(exclude_none=False) inserts optional defaults so missing and explicit null both become t1=None",
+        "explicit_null_t1_in_dump": true,
+        "explicit_null_value": null,
+        "indistinguishable_after_dump": true,
+        "missing_t1_in_dump": true,
+        "missing_value": null
+      },
+      "reproduced": true,
+      "source_cause": {
+        "composition_uses_request_get_truthiness": true,
+        "has_future_uses_bool_or": true,
+        "parse_model_exclude_none_false": true,
+        "probability_uses_request_get_truthiness": true
+      }
+    }
+  ],
+  "n_defects": 1,
+  "n_reproduced": 1,
+  "no_v015_zip_overwrite": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.5-review.zip",
+  "note": "v0.1.4 falsey future-field bypass. Reproduction is required before v0.1.5 corrections.",
+  "row_values_disclosed": false,
+  "version": "0.1.5"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "CROSS_SOURCE_TRANSFER_EXPLORATION",
+  "executed": false,
+  "status": "NOT_RUN_DUE_TO_FAILED_GATE",
+  "cross_source_transfer_status": "NOT_RUN_DUE_TO_FAILED_GATE",
+  "gates": {
+    "source_b_observation_mapping_accepted": true,
+    "t3_outcome_comparable": false,
+    "overlap_exclusion_complete": true,
+    "sufficient_b_pairs": false
+  },
+  "failed_gates": [
+    "t3_outcome_comparable",
+    "sufficient_b_pairs"
+  ],
+  "external_clinical_validation": false,
+  "clinical_validation": false,
+  "treatment_effect_validation": false,
+  "intervention_response_validation": false,
+  "production_validation": false,
+  "b_cannot_tune_a": true
+}

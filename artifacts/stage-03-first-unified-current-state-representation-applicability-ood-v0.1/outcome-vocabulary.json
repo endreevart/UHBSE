@@ -1,0 +1,3567 @@
+{
+  "version": "0.1",
+  "SOURCE_SPECIFIC_OUTCOME_VOCABULARY_STATUS": "PASS",
+  "selection_on": "train_thresholds_plus_heldout_support",
+  "no_test_performance_selection": true,
+  "no_a_b_semantic_merge": true,
+  "no_unit_conversion": true,
+  "outcome_identity": "source + raw_code/analyte + unit",
+  "vocabulary_order": [
+    "A::13 С–Уреазный дыхательный текст (С–УДТ, 13C–Urea test, UBT). Выявление инфекции Helicobacter p::%",
+    "A::17-гидроксипрогестерон::пг/мл",
+    "A::25(OH)витамин D::нг/мл",
+    "A::C–пептид::нг/мл",
+    "A::D–димер::мкг FEU /мл",
+    "A::D–димер::мкг/мл",
+    "A::D–димер::нг/мл",
+    "A::pH::_",
+    "A::АЛТ::Ед/л",
+    "A::АЛТ::МЕ/л",
+    "A::АМГ::нг/мл",
+    "A::АСТ (венозная кровь кровь)::Ед/л",
+    "A::АСТ::Ед/л",
+    "A::АСТ::МЕ/л",
+    "A::АЧТВ::сек",
+    "A::Альбумин::г/л",
+    "A::Альфа-амилаза::Ед/л",
+    "A::Андростендион::пг/мл",
+    "A::Антистрептолизин–О::МЕ/мл",
+    "A::Антитела к вирусу герпеса VI типа, IgG::_",
+    "A::Антитела к вирусу простого герпеса I, II типов, IgG::_",
+    "A::Антитела к капсидному антигену вируса Эпштейна–Барр, IgG::_",
+    "A::Антитела к цитомегаловирусу, IgG::_",
+    "A::Антитела к ядерному антигену вируса Эпштейна–Барр, IgG::_",
+    "A::Антитромбин III::%",
+    "A::Ат к ТГ::МЕ/мл",
+    "A::Ат к ТПО::Ед/мл",
+    "A::Ат к ТПО::МЕ/мл",
+    "A::Ат к рТТГ::МЕ/л",
+    "A::Базофилы::%",
+    "A::Белок::г/л",
+    "A::Билирубин непрямой::мкмоль/л",
+    "A::Билирубин общий::мкмоль/л",
+    "A::Билирубин прямой::мкмоль/л",
+    "A::Витамин B12 (цианкобаламин)::пг/мл",
+    "A::Витамин А (ретинол)::мкг/мл",
+    "A::Витамин В6 (пиридоксин)::нг/мл",
+    "A::Витамин В6 (пиридоксин)::нмоль/л",
+    "A::Витамин В9 (фолиевая кислота)::нг/мл",
+    "A::Витамин В9 (фолиевая кислота)::нмоль/л",
+    "A::ГГТ::Ед/л",
+    "A::ГСПГ::нмоль/л",
+    "A::Гематокрит::%",
+    "A::Гемоглобин::г/дл",
+    "A::Гемоглобин::г/л",
+    "A::Гликированный гемоглобин::%",
+    "A::Глюкоза::ммоль/л",
+    "A::Гомоцистеин::мкмоль/л",
+    "A::ДГЭА–сульфат::мкг/дл",
+    "A::ДГЭА–сульфат::мкмоль/л",
+    "A::Дегидроэпиандростерон::нг/мл",
+    "A::Железо::мкмоль/л",
+    "A::Иммуноглобулин Е::МЕ/мл",
+    "A::Инсулин::мкЕд/мл",
+    "A::Инсулин::мкМЕ/мл",
+    "A::Калий::ммоль/л",
+    "A::Кальций ионизированный::ммоль/л",
+    "A::Кальций общий::ммоль/л",
+    "A::Кальцитонин::пг/мл",
+    "A::Кортизол::мкг/дл",
+    "A::Кортизол::нг/мл",
+    "A::Кортизол::нмоль/л",
+    "A::Кортизон::нг/мл",
+    "A::Коэффициент насыщения трансферрина железом::%",
+    "A::Креатинин::мкмоль/л",
+    "A::ЛГ::мМЕд/мл",
+    "A::ЛГ::мМе/мл",
+    "A::ЛДГ::Ед/л",
+    "A::ЛЖСС::мкмоль/л",
+    "A::ЛПВП::ммоль/л",
+    "A::ЛПНП::ммоль/л",
+    "A::ЛПОНП::ммоль/л",
+    "A::Латентная железосвязывающая способность сыворотки::мкмоль/л",
+    "A::Лейкоциты::*10^9/л",
+    "A::Лейкоциты::кл/мкл",
+    "A::Лейкоциты::тыс/мкл",
+    "A::Лимфоциты::%",
+    "A::МНО::_",
+    "A::Магний::ммоль/л",
+    "A::Медь::мкг/л",
+    "A::Медь::мкг/мл",
+    "A::Медь::мкмоль/л",
+    "A::Молочная кислота (лактат)::ммоль/л",
+    "A::Моноциты::%",
+    "A::Мочевая кислота::мкмоль/л",
+    "A::Мочевая кислота::ммоль/л",
+    "A::Мочевина::ммоль/л",
+    "A::Натрий::ммоль/л",
+    "A::Нейтрофилы::%",
+    "A::ОЖСС::мкмоль/л",
+    "A::Общая железосвязывающая способность сыворотки::мкмоль/л",
+    "A::Общий белок::г/л",
+    "A::Относительная плотность::_",
+    "A::Относительная плотность::г/мл",
+    "A::ПТВ::сек",
+    "A::Паратгормон::пг/мл",
+    "A::Паратгормон::пмоль/л",
+    "A::Прогестерон::нг/мл",
+    "A::Прогестерон::нмоль/л",
+    "A::Прогестерон::пг/мл",
+    "A::Пролактин::мЕд/л",
+    "A::Пролактин::мМЕ/л",
+    "A::Пролактин::мкМЕ/мл",
+    "A::Пролактин::нг/мл",
+    "A::Протромбиновое время::сек",
+    "A::Протромбиновый индекс по Квику::%",
+    "A::РЭА::нг/мл",
+    "A::Распределение эритроцитов по объему (коэфф.вариации) RDW-CV::%",
+    "A::Распределение эритроцитов по объему (ст.отклонение) RDW-SD::фл",
+    "A::Ревматоидный фактор::МЕ/мл",
+    "A::СОЭ (по Вестергрену)::мм/час",
+    "A::СОЭ::мм/час",
+    "A::Слизь::_",
+    "A::Среднее содержание гемоглобина в эритроците (MCH)::_",
+    "A::Среднее содержание гемоглобина в эритроците (MCH)::пг/кл",
+    "A::Средний объем эритроцитов (MCV)::фл",
+    "A::Средняя концентрация гемоглобина в эритроцитах (MCHC)::г/дл",
+    "A::Средняя концентрация гемоглобина в эритроцитах (MCHC)::г/л",
+    "A::С–реактивный белок::мг/л",
+    "A::Т3 св.::пг/мл",
+    "A::Т3 св.::пмоль/л",
+    "A::Т4 св.::нг/дл",
+    "A::Т4 св.::пмоль/л",
+    "A::ТТГ::мЕд/л",
+    "A::ТТГ::мМЕ/л",
+    "A::ТТГ::мкМЕ/мл",
+    "A::Тестостерон общий::нг/мл",
+    "A::Тестостерон общий::нмоль/л",
+    "A::Тестостерон::пг/мл",
+    "A::Трансферрин::г/л",
+    "A::Трансферрин::мг/дл",
+    "A::Триглицериды::ммоль/л",
+    "A::Тромбиновое время::сек",
+    "A::Тромбоциты::*10^9/л",
+    "A::Тромбоциты::тыс/мкл",
+    "A::Уробилиноген::мг/дл",
+    "A::ФСГ::мМЕд/мл",
+    "A::ФСГ::мМе/мл",
+    "A::Ферритин::мкг/л",
+    "A::Ферритин::нг/мл",
+    "A::Фибриноген::г/л",
+    "A::Фосфор неорганический::ммоль/л",
+    "A::Фруктозамин::мкмоль/л",
+    "A::Хлор::ммоль/л",
+    "A::Холестерин общий::ммоль/л",
+    "A::Цветной показатель::_",
+    "A::Цилиндры гиалиновые::Ед/мкл",
+    "A::Цинк::мкг/л",
+    "A::Цинк::мкг/мл",
+    "A::Цинк::мкмоль/л",
+    "A::Щелочная фосфатаза::Ед/л",
+    "A::Эозинофилы::%",
+    "A::Эозинофильный катионный белок::мкг/л",
+    "A::Эозинофильный катионный белок::нг/мл",
+    "A::Эпителий переходный::кл/мкл",
+    "A::Эпителий плоский::кл/мкл",
+    "A::Эритроциты::*10^12/л",
+    "A::Эритроциты::кл/мкл",
+    "A::Эритроциты::млн/мкл",
+    "A::Эстрадиол::пг/мл",
+    "A::Эстрадиол::пмоль/л",
+    "A::бета–ХГЧ::мМе/мл",
+    "A::железо::мкмоль/л",
+    "A::латентная  железосвязывающая способность сыворотки::мкмоль/л",
+    "A::непрямой::мкмоль/л",
+    "A::общий::мкмоль/л",
+    "A::прямой::мкмоль/л",
+    "B::101::µg/dL",
+    "B::101::мг/л",
+    "B::101::мкг/дл",
+    "B::101::мкмоль/л",
+    "B::10::г/л",
+    "B::1144::нг/мл",
+    "B::117::пг/мл",
+    "B::118::нг/мл",
+    "B::118::нмоль/л",
+    "B::1317B12::пмоль/л",
+    "B::139::мм/час",
+    "B::13::мкмоль/л",
+    "B::141::нг/мл",
+    "B::149::нмоль/л",
+    "B::14::мкмоль/л",
+    "B::153::мкмоль/л",
+    "B::155::мкмоль/л",
+    "B::15::Ед/л",
+    "B::164::Мкг/мл",
+    "B::164::мг/л",
+    "B::164::мкг feu /мл",
+    "B::164::нг/мл",
+    "B::16::мг/дл",
+    "B::16::ммоль/л",
+    "B::172::МЕ/л",
+    "B::172::мкЕд/мл",
+    "B::172::мкМЕ/мл",
+    "B::18::%",
+    "B::199::МЕ/л",
+    "B::1::сек.",
+    "B::218::ммоль/л",
+    "B::22::мкмоль/л",
+    "B::26::ммоль/л",
+    "B::27::мкмоль/л",
+    "B::28::г/дл",
+    "B::28::г/л",
+    "B::30::мг/дл",
+    "B::30::ммоль/л",
+    "B::32::мг/дл",
+    "B::32::ммоль/л",
+    "B::33::мг/дл",
+    "B::33::ммоль/л",
+    "B::36::U/I",
+    "B::36::Ед/л",
+    "B::37::ммоль/л",
+    "B::3::г/л",
+    "B::40::ммоль/л",
+    "B::42::МЕ/мл",
+    "B::43::мг/л",
+    "B::48::µmol/L",
+    "B::48::мкмоль/л",
+    "B::51::мкг/л",
+    "B::51::нг/мл",
+    "B::53::пг/мл",
+    "B::53::пмоль/л",
+    "B::55::нг/дл",
+    "B::55::пмоль/л",
+    "B::56::µIU/mL",
+    "B::56::мЕд/л",
+    "B::56::мМЕ/л",
+    "B::56::мкМЕ/мл",
+    "B::57::МЕ/мл",
+    "B::58::Ед/мл",
+    "B::58::МЕ/мл",
+    "B::59::МЕ/л",
+    "B::59::мМЕ/мл",
+    "B::59::мМЕд/мл",
+    "B::60::МЕ/л",
+    "B::60::мМЕ/мл",
+    "B::60::мМЕд/мл",
+    "B::61::мЕд/л",
+    "B::61::мМЕ/л",
+    "B::61::мкМЕ/мл",
+    "B::61::нг/мл",
+    "B::62::пг/мл",
+    "B::62::пмоль/л",
+    "B::63::нг/мл",
+    "B::63::нмоль/л",
+    "B::64::нг/дл",
+    "B::64::нг/мл",
+    "B::64::нмоль/л",
+    "B::65::мкг/дл",
+    "B::65::нмоль/л",
+    "B::66::мЕд/мл",
+    "B::66::мМЕ/мл",
+    "B::8::UI/I",
+    "B::8::undefined",
+    "B::8::Е/л",
+    "B::8::Ед/л",
+    "B::8::МЕ/л",
+    "B::928::нг/мл",
+    "B::928::нмоль/л",
+    "B::9::UI/I",
+    "B::9::undefined",
+    "B::9::Е/л",
+    "B::9::Ед/л",
+    "B::9::МЕ/л",
+    "B::B-INPL::мкмоль/л",
+    "B::m_1006::ммоль/л",
+    "B::m_1047::%",
+    "B::m_1048::*10^12/л",
+    "B::m_1048::млн/мкл",
+    "B::m_1049::фл.",
+    "B::m_1050::%",
+    "B::m_1051::пг",
+    "B::m_1051::пг/кл",
+    "B::m_1052::г/дл",
+    "B::m_1052::г/л",
+    "B::m_1053::*10^9/л",
+    "B::m_1053::тыс/мкл",
+    "B::m_1054::*10^9/л",
+    "B::m_1054::тыс/мкл",
+    "B::m_1055::%",
+    "B::m_1056::%",
+    "B::m_1057::%",
+    "B::m_1058::*10^9/л",
+    "B::m_1058::тыс/мкл",
+    "B::m_1059::*10^9/л",
+    "B::m_1059::тыс/мкл",
+    "B::m_1060::*10^9/л",
+    "B::m_1060::тыс/мкл",
+    "B::m_1061::*10^9/л",
+    "B::m_1061::тыс/мкл",
+    "B::m_1062::*10^9/л",
+    "B::m_1062::тыс/мкл",
+    "B::m_1063::фл.",
+    "B::m_1064::%",
+    "B::m_1065::%",
+    "B::m_1065::фл.",
+    "B::m_1069::undefined",
+    "B::m_1070::фл.",
+    "B::m_1071::%",
+    "B::m_1079::*10^9/л",
+    "B::m_1080::%",
+    "B::m_1085::%",
+    "B::m_1100::%",
+    "B::m_1101::%",
+    "B::mm_1001::г/дл",
+    "B::mm_1001::г/л",
+    "B::mm_1002::%",
+    "B::mm_1004::%"
+  ],
+  "vocabulary_hash": "94a29418171f0e5c129735c0e8bea7977c147415bb2ee1ab08475ba9c5e2ffcf",
+  "selected": [
+    {
+      "outcome_key": "A::13 С–Уреазный дыхательный текст (С–УДТ, 13C–Urea test, UBT). Выявление инфекции Helicobacter p::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 299,
+      "train_targets": 316,
+      "validation_subjects": 53,
+      "test_subjects": 55
+    },
+    {
+      "outcome_key": "A::17-гидроксипрогестерон::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 709,
+      "train_targets": 825,
+      "validation_subjects": 120,
+      "test_subjects": 141
+    },
+    {
+      "outcome_key": "A::25(OH)витамин D::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 5795,
+      "train_targets": 9676,
+      "validation_subjects": 1198,
+      "test_subjects": 1234
+    },
+    {
+      "outcome_key": "A::C–пептид::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 281,
+      "train_targets": 344,
+      "validation_subjects": 61,
+      "test_subjects": 68
+    },
+    {
+      "outcome_key": "A::D–димер::мкг FEU /мл",
+      "unit": "мкг FEU /мл",
+      "source_system": "magerya_api",
+      "train_subjects": 696,
+      "train_targets": 735,
+      "validation_subjects": 121,
+      "test_subjects": 135
+    },
+    {
+      "outcome_key": "A::D–димер::мкг/мл",
+      "unit": "мкг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 325,
+      "train_targets": 378,
+      "validation_subjects": 60,
+      "test_subjects": 77
+    },
+    {
+      "outcome_key": "A::D–димер::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 958,
+      "train_targets": 1105,
+      "validation_subjects": 206,
+      "test_subjects": 214
+    },
+    {
+      "outcome_key": "A::pH::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 1483,
+      "train_targets": 1991,
+      "validation_subjects": 327,
+      "test_subjects": 304
+    },
+    {
+      "outcome_key": "A::АЛТ::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5247,
+      "train_targets": 8612,
+      "validation_subjects": 1030,
+      "test_subjects": 1101
+    },
+    {
+      "outcome_key": "A::АЛТ::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "magerya_api",
+      "train_subjects": 408,
+      "train_targets": 540,
+      "validation_subjects": 100,
+      "test_subjects": 94
+    },
+    {
+      "outcome_key": "A::АМГ::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 559,
+      "train_targets": 646,
+      "validation_subjects": 130,
+      "test_subjects": 121
+    },
+    {
+      "outcome_key": "A::АСТ (венозная кровь кровь)::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "magerya_api",
+      "train_subjects": 292,
+      "train_targets": 319,
+      "validation_subjects": 50,
+      "test_subjects": 58
+    },
+    {
+      "outcome_key": "A::АСТ::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5087,
+      "train_targets": 8270,
+      "validation_subjects": 1009,
+      "test_subjects": 1068
+    },
+    {
+      "outcome_key": "A::АСТ::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "magerya_api",
+      "train_subjects": 380,
+      "train_targets": 503,
+      "validation_subjects": 93,
+      "test_subjects": 91
+    },
+    {
+      "outcome_key": "A::АЧТВ::сек",
+      "unit": "сек",
+      "source_system": "magerya_api",
+      "train_subjects": 1114,
+      "train_targets": 1487,
+      "validation_subjects": 234,
+      "test_subjects": 214
+    },
+    {
+      "outcome_key": "A::Альбумин::г/л",
+      "unit": "г/л",
+      "source_system": "magerya_api",
+      "train_subjects": 872,
+      "train_targets": 1090,
+      "validation_subjects": 177,
+      "test_subjects": 177
+    },
+    {
+      "outcome_key": "A::Альфа-амилаза::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "magerya_api",
+      "train_subjects": 535,
+      "train_targets": 661,
+      "validation_subjects": 95,
+      "test_subjects": 98
+    },
+    {
+      "outcome_key": "A::Андростендион::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 831,
+      "train_targets": 991,
+      "validation_subjects": 153,
+      "test_subjects": 168
+    },
+    {
+      "outcome_key": "A::Антистрептолизин–О::МЕ/мл",
+      "unit": "МЕ/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 380,
+      "train_targets": 423,
+      "validation_subjects": 84,
+      "test_subjects": 90
+    },
+    {
+      "outcome_key": "A::Антитела к вирусу герпеса VI типа, IgG::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 597,
+      "train_targets": 661,
+      "validation_subjects": 147,
+      "test_subjects": 129
+    },
+    {
+      "outcome_key": "A::Антитела к вирусу простого герпеса I, II типов, IgG::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 777,
+      "train_targets": 960,
+      "validation_subjects": 182,
+      "test_subjects": 173
+    },
+    {
+      "outcome_key": "A::Антитела к капсидному антигену вируса Эпштейна–Барр, IgG::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 280,
+      "train_targets": 317,
+      "validation_subjects": 63,
+      "test_subjects": 46
+    },
+    {
+      "outcome_key": "A::Антитела к цитомегаловирусу, IgG::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 795,
+      "train_targets": 974,
+      "validation_subjects": 186,
+      "test_subjects": 154
+    },
+    {
+      "outcome_key": "A::Антитела к ядерному антигену вируса Эпштейна–Барр, IgG::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 543,
+      "train_targets": 622,
+      "validation_subjects": 134,
+      "test_subjects": 119
+    },
+    {
+      "outcome_key": "A::Антитромбин III::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 322,
+      "train_targets": 381,
+      "validation_subjects": 68,
+      "test_subjects": 72
+    },
+    {
+      "outcome_key": "A::Ат к ТГ::МЕ/мл",
+      "unit": "МЕ/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 3312,
+      "train_targets": 4485,
+      "validation_subjects": 679,
+      "test_subjects": 713
+    },
+    {
+      "outcome_key": "A::Ат к ТПО::Ед/мл",
+      "unit": "Ед/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 477,
+      "train_targets": 604,
+      "validation_subjects": 86,
+      "test_subjects": 91
+    },
+    {
+      "outcome_key": "A::Ат к ТПО::МЕ/мл",
+      "unit": "МЕ/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 4295,
+      "train_targets": 6074,
+      "validation_subjects": 863,
+      "test_subjects": 909
+    },
+    {
+      "outcome_key": "A::Ат к рТТГ::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1226,
+      "train_targets": 1611,
+      "validation_subjects": 258,
+      "test_subjects": 256
+    },
+    {
+      "outcome_key": "A::Базофилы::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 6250,
+      "train_targets": 12291,
+      "validation_subjects": 1286,
+      "test_subjects": 1336
+    },
+    {
+      "outcome_key": "A::Белок::г/л",
+      "unit": "г/л",
+      "source_system": "magerya_api",
+      "train_subjects": 599,
+      "train_targets": 720,
+      "validation_subjects": 132,
+      "test_subjects": 129
+    },
+    {
+      "outcome_key": "A::Билирубин непрямой::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 910,
+      "train_targets": 1049,
+      "validation_subjects": 190,
+      "test_subjects": 191
+    },
+    {
+      "outcome_key": "A::Билирубин общий::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 2694,
+      "train_targets": 3746,
+      "validation_subjects": 566,
+      "test_subjects": 544
+    },
+    {
+      "outcome_key": "A::Билирубин прямой::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1590,
+      "train_targets": 2008,
+      "validation_subjects": 317,
+      "test_subjects": 334
+    },
+    {
+      "outcome_key": "A::Витамин B12 (цианкобаламин)::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 5430,
+      "train_targets": 8226,
+      "validation_subjects": 1095,
+      "test_subjects": 1144
+    },
+    {
+      "outcome_key": "A::Витамин А (ретинол)::мкг/мл",
+      "unit": "мкг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 357,
+      "train_targets": 421,
+      "validation_subjects": 85,
+      "test_subjects": 70
+    },
+    {
+      "outcome_key": "A::Витамин В6 (пиридоксин)::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 269,
+      "train_targets": 322,
+      "validation_subjects": 65,
+      "test_subjects": 60
+    },
+    {
+      "outcome_key": "A::Витамин В6 (пиридоксин)::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 436,
+      "train_targets": 501,
+      "validation_subjects": 86,
+      "test_subjects": 93
+    },
+    {
+      "outcome_key": "A::Витамин В9 (фолиевая кислота)::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 5046,
+      "train_targets": 7825,
+      "validation_subjects": 1023,
+      "test_subjects": 1052
+    },
+    {
+      "outcome_key": "A::Витамин В9 (фолиевая кислота)::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 600,
+      "train_targets": 790,
+      "validation_subjects": 113,
+      "test_subjects": 123
+    },
+    {
+      "outcome_key": "A::ГГТ::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "magerya_api",
+      "train_subjects": 982,
+      "train_targets": 1195,
+      "validation_subjects": 206,
+      "test_subjects": 210
+    },
+    {
+      "outcome_key": "A::ГСПГ::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1745,
+      "train_targets": 2159,
+      "validation_subjects": 383,
+      "test_subjects": 386
+    },
+    {
+      "outcome_key": "A::Гематокрит::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1937,
+      "train_targets": 2897,
+      "validation_subjects": 403,
+      "test_subjects": 417
+    },
+    {
+      "outcome_key": "A::Гемоглобин::г/дл",
+      "unit": "г/дл",
+      "source_system": "magerya_api",
+      "train_subjects": 1355,
+      "train_targets": 2114,
+      "validation_subjects": 260,
+      "test_subjects": 296
+    },
+    {
+      "outcome_key": "A::Гемоглобин::г/л",
+      "unit": "г/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5795,
+      "train_targets": 11015,
+      "validation_subjects": 1209,
+      "test_subjects": 1246
+    },
+    {
+      "outcome_key": "A::Гликированный гемоглобин::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 2979,
+      "train_targets": 3846,
+      "validation_subjects": 589,
+      "test_subjects": 616
+    },
+    {
+      "outcome_key": "A::Глюкоза::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5329,
+      "train_targets": 8900,
+      "validation_subjects": 1081,
+      "test_subjects": 1147
+    },
+    {
+      "outcome_key": "A::Гомоцистеин::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 4878,
+      "train_targets": 7598,
+      "validation_subjects": 972,
+      "test_subjects": 1006
+    },
+    {
+      "outcome_key": "A::ДГЭА–сульфат::мкг/дл",
+      "unit": "мкг/дл",
+      "source_system": "magerya_api",
+      "train_subjects": 1474,
+      "train_targets": 1774,
+      "validation_subjects": 319,
+      "test_subjects": 319
+    },
+    {
+      "outcome_key": "A::ДГЭА–сульфат::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 756,
+      "train_targets": 927,
+      "validation_subjects": 138,
+      "test_subjects": 146
+    },
+    {
+      "outcome_key": "A::Дегидроэпиандростерон::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 694,
+      "train_targets": 803,
+      "validation_subjects": 131,
+      "test_subjects": 147
+    },
+    {
+      "outcome_key": "A::Железо::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5896,
+      "train_targets": 10470,
+      "validation_subjects": 1211,
+      "test_subjects": 1257
+    },
+    {
+      "outcome_key": "A::Иммуноглобулин Е::МЕ/мл",
+      "unit": "МЕ/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 437,
+      "train_targets": 501,
+      "validation_subjects": 89,
+      "test_subjects": 89
+    },
+    {
+      "outcome_key": "A::Инсулин::мкЕд/мл",
+      "unit": "мкЕд/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 3186,
+      "train_targets": 4578,
+      "validation_subjects": 614,
+      "test_subjects": 636
+    },
+    {
+      "outcome_key": "A::Инсулин::мкМЕ/мл",
+      "unit": "мкМЕ/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 2140,
+      "train_targets": 3060,
+      "validation_subjects": 436,
+      "test_subjects": 466
+    },
+    {
+      "outcome_key": "A::Калий::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 497,
+      "train_targets": 599,
+      "validation_subjects": 107,
+      "test_subjects": 88
+    },
+    {
+      "outcome_key": "A::Кальций ионизированный::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 567,
+      "train_targets": 693,
+      "validation_subjects": 129,
+      "test_subjects": 110
+    },
+    {
+      "outcome_key": "A::Кальций общий::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1331,
+      "train_targets": 1724,
+      "validation_subjects": 292,
+      "test_subjects": 275
+    },
+    {
+      "outcome_key": "A::Кальцитонин::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 713,
+      "train_targets": 830,
+      "validation_subjects": 159,
+      "test_subjects": 116
+    },
+    {
+      "outcome_key": "A::Кортизол::мкг/дл",
+      "unit": "мкг/дл",
+      "source_system": "magerya_api",
+      "train_subjects": 1770,
+      "train_targets": 2184,
+      "validation_subjects": 400,
+      "test_subjects": 355
+    },
+    {
+      "outcome_key": "A::Кортизол::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 944,
+      "train_targets": 1140,
+      "validation_subjects": 175,
+      "test_subjects": 204
+    },
+    {
+      "outcome_key": "A::Кортизол::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1417,
+      "train_targets": 1911,
+      "validation_subjects": 255,
+      "test_subjects": 283
+    },
+    {
+      "outcome_key": "A::Кортизон::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 896,
+      "train_targets": 1066,
+      "validation_subjects": 165,
+      "test_subjects": 186
+    },
+    {
+      "outcome_key": "A::Коэффициент насыщения трансферрина железом::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1236,
+      "train_targets": 1575,
+      "validation_subjects": 265,
+      "test_subjects": 275
+    },
+    {
+      "outcome_key": "A::Креатинин::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 3994,
+      "train_targets": 5685,
+      "validation_subjects": 804,
+      "test_subjects": 848
+    },
+    {
+      "outcome_key": "A::ЛГ::мМЕд/мл",
+      "unit": "мМЕд/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 483,
+      "train_targets": 657,
+      "validation_subjects": 98,
+      "test_subjects": 102
+    },
+    {
+      "outcome_key": "A::ЛГ::мМе/мл",
+      "unit": "мМе/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 2293,
+      "train_targets": 3060,
+      "validation_subjects": 478,
+      "test_subjects": 488
+    },
+    {
+      "outcome_key": "A::ЛДГ::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1116,
+      "train_targets": 1289,
+      "validation_subjects": 200,
+      "test_subjects": 231
+    },
+    {
+      "outcome_key": "A::ЛЖСС::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 788,
+      "train_targets": 910,
+      "validation_subjects": 155,
+      "test_subjects": 173
+    },
+    {
+      "outcome_key": "A::ЛПВП::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5355,
+      "train_targets": 8722,
+      "validation_subjects": 1068,
+      "test_subjects": 1114
+    },
+    {
+      "outcome_key": "A::ЛПНП::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5346,
+      "train_targets": 8670,
+      "validation_subjects": 1062,
+      "test_subjects": 1114
+    },
+    {
+      "outcome_key": "A::ЛПОНП::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 693,
+      "train_targets": 822,
+      "validation_subjects": 131,
+      "test_subjects": 120
+    },
+    {
+      "outcome_key": "A::Латентная железосвязывающая способность сыворотки::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 3302,
+      "train_targets": 4865,
+      "validation_subjects": 656,
+      "test_subjects": 680
+    },
+    {
+      "outcome_key": "A::Лейкоциты::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5943,
+      "train_targets": 11417,
+      "validation_subjects": 1241,
+      "test_subjects": 1271
+    },
+    {
+      "outcome_key": "A::Лейкоциты::кл/мкл",
+      "unit": "кл/мкл",
+      "source_system": "magerya_api",
+      "train_subjects": 578,
+      "train_targets": 707,
+      "validation_subjects": 138,
+      "test_subjects": 127
+    },
+    {
+      "outcome_key": "A::Лейкоциты::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "magerya_api",
+      "train_subjects": 990,
+      "train_targets": 1590,
+      "validation_subjects": 177,
+      "test_subjects": 212
+    },
+    {
+      "outcome_key": "A::Лимфоциты::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 6384,
+      "train_targets": 12826,
+      "validation_subjects": 1315,
+      "test_subjects": 1373
+    },
+    {
+      "outcome_key": "A::МНО::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 1167,
+      "train_targets": 1527,
+      "validation_subjects": 239,
+      "test_subjects": 233
+    },
+    {
+      "outcome_key": "A::Магний::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1185,
+      "train_targets": 1468,
+      "validation_subjects": 270,
+      "test_subjects": 263
+    },
+    {
+      "outcome_key": "A::Медь::мкг/л",
+      "unit": "мкг/л",
+      "source_system": "magerya_api",
+      "train_subjects": 396,
+      "train_targets": 469,
+      "validation_subjects": 83,
+      "test_subjects": 81
+    },
+    {
+      "outcome_key": "A::Медь::мкг/мл",
+      "unit": "мкг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 356,
+      "train_targets": 432,
+      "validation_subjects": 67,
+      "test_subjects": 63
+    },
+    {
+      "outcome_key": "A::Медь::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1701,
+      "train_targets": 2180,
+      "validation_subjects": 368,
+      "test_subjects": 350
+    },
+    {
+      "outcome_key": "A::Молочная кислота (лактат)::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1391,
+      "train_targets": 1923,
+      "validation_subjects": 285,
+      "test_subjects": 308
+    },
+    {
+      "outcome_key": "A::Моноциты::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 6351,
+      "train_targets": 12675,
+      "validation_subjects": 1311,
+      "test_subjects": 1368
+    },
+    {
+      "outcome_key": "A::Мочевая кислота::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 2622,
+      "train_targets": 3588,
+      "validation_subjects": 532,
+      "test_subjects": 537
+    },
+    {
+      "outcome_key": "A::Мочевая кислота::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1214,
+      "train_targets": 1438,
+      "validation_subjects": 211,
+      "test_subjects": 241
+    },
+    {
+      "outcome_key": "A::Мочевина::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 2268,
+      "train_targets": 3114,
+      "validation_subjects": 475,
+      "test_subjects": 490
+    },
+    {
+      "outcome_key": "A::Натрий::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 539,
+      "train_targets": 651,
+      "validation_subjects": 120,
+      "test_subjects": 96
+    },
+    {
+      "outcome_key": "A::Нейтрофилы::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 6311,
+      "train_targets": 12473,
+      "validation_subjects": 1304,
+      "test_subjects": 1354
+    },
+    {
+      "outcome_key": "A::ОЖСС::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 874,
+      "train_targets": 1019,
+      "validation_subjects": 175,
+      "test_subjects": 185
+    },
+    {
+      "outcome_key": "A::Общая железосвязывающая способность сыворотки::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 3342,
+      "train_targets": 4969,
+      "validation_subjects": 642,
+      "test_subjects": 685
+    },
+    {
+      "outcome_key": "A::Общий белок::г/л",
+      "unit": "г/л",
+      "source_system": "magerya_api",
+      "train_subjects": 6030,
+      "train_targets": 10952,
+      "validation_subjects": 1235,
+      "test_subjects": 1303
+    },
+    {
+      "outcome_key": "A::Относительная плотность::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 547,
+      "train_targets": 657,
+      "validation_subjects": 124,
+      "test_subjects": 110
+    },
+    {
+      "outcome_key": "A::Относительная плотность::г/мл",
+      "unit": "г/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 738,
+      "train_targets": 895,
+      "validation_subjects": 170,
+      "test_subjects": 170
+    },
+    {
+      "outcome_key": "A::ПТВ::сек",
+      "unit": "сек",
+      "source_system": "magerya_api",
+      "train_subjects": 490,
+      "train_targets": 556,
+      "validation_subjects": 92,
+      "test_subjects": 93
+    },
+    {
+      "outcome_key": "A::Паратгормон::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 735,
+      "train_targets": 970,
+      "validation_subjects": 149,
+      "test_subjects": 159
+    },
+    {
+      "outcome_key": "A::Паратгормон::пмоль/л",
+      "unit": "пмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 337,
+      "train_targets": 400,
+      "validation_subjects": 65,
+      "test_subjects": 71
+    },
+    {
+      "outcome_key": "A::Прогестерон::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 471,
+      "train_targets": 582,
+      "validation_subjects": 116,
+      "test_subjects": 93
+    },
+    {
+      "outcome_key": "A::Прогестерон::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 334,
+      "train_targets": 419,
+      "validation_subjects": 69,
+      "test_subjects": 69
+    },
+    {
+      "outcome_key": "A::Прогестерон::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 789,
+      "train_targets": 946,
+      "validation_subjects": 142,
+      "test_subjects": 162
+    },
+    {
+      "outcome_key": "A::Пролактин::мЕд/л",
+      "unit": "мЕд/л",
+      "source_system": "magerya_api",
+      "train_subjects": 612,
+      "train_targets": 997,
+      "validation_subjects": 121,
+      "test_subjects": 119
+    },
+    {
+      "outcome_key": "A::Пролактин::мМЕ/л",
+      "unit": "мМЕ/л",
+      "source_system": "magerya_api",
+      "train_subjects": 3127,
+      "train_targets": 4669,
+      "validation_subjects": 653,
+      "test_subjects": 639
+    },
+    {
+      "outcome_key": "A::Пролактин::мкМЕ/мл",
+      "unit": "мкМЕ/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 566,
+      "train_targets": 861,
+      "validation_subjects": 109,
+      "test_subjects": 110
+    },
+    {
+      "outcome_key": "A::Пролактин::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 666,
+      "train_targets": 973,
+      "validation_subjects": 165,
+      "test_subjects": 153
+    },
+    {
+      "outcome_key": "A::Протромбиновое время::сек",
+      "unit": "сек",
+      "source_system": "magerya_api",
+      "train_subjects": 642,
+      "train_targets": 760,
+      "validation_subjects": 120,
+      "test_subjects": 118
+    },
+    {
+      "outcome_key": "A::Протромбиновый индекс по Квику::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 299,
+      "train_targets": 333,
+      "validation_subjects": 54,
+      "test_subjects": 60
+    },
+    {
+      "outcome_key": "A::РЭА::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 447,
+      "train_targets": 496,
+      "validation_subjects": 79,
+      "test_subjects": 76
+    },
+    {
+      "outcome_key": "A::Распределение эритроцитов по объему (коэфф.вариации) RDW-CV::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 2118,
+      "train_targets": 3316,
+      "validation_subjects": 422,
+      "test_subjects": 449
+    },
+    {
+      "outcome_key": "A::Распределение эритроцитов по объему (ст.отклонение) RDW-SD::фл",
+      "unit": "фл",
+      "source_system": "magerya_api",
+      "train_subjects": 1627,
+      "train_targets": 2437,
+      "validation_subjects": 328,
+      "test_subjects": 356
+    },
+    {
+      "outcome_key": "A::Ревматоидный фактор::МЕ/мл",
+      "unit": "МЕ/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 387,
+      "train_targets": 436,
+      "validation_subjects": 86,
+      "test_subjects": 93
+    },
+    {
+      "outcome_key": "A::СОЭ (по Вестергрену)::мм/час",
+      "unit": "мм/час",
+      "source_system": "magerya_api",
+      "train_subjects": 648,
+      "train_targets": 895,
+      "validation_subjects": 128,
+      "test_subjects": 131
+    },
+    {
+      "outcome_key": "A::СОЭ::мм/час",
+      "unit": "мм/час",
+      "source_system": "magerya_api",
+      "train_subjects": 5422,
+      "train_targets": 9935,
+      "validation_subjects": 1120,
+      "test_subjects": 1175
+    },
+    {
+      "outcome_key": "A::Слизь::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 333,
+      "train_targets": 386,
+      "validation_subjects": 86,
+      "test_subjects": 79
+    },
+    {
+      "outcome_key": "A::Среднее содержание гемоглобина в эритроците (MCH)::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 1254,
+      "train_targets": 1694,
+      "validation_subjects": 230,
+      "test_subjects": 269
+    },
+    {
+      "outcome_key": "A::Среднее содержание гемоглобина в эритроците (MCH)::пг/кл",
+      "unit": "пг/кл",
+      "source_system": "magerya_api",
+      "train_subjects": 1855,
+      "train_targets": 2672,
+      "validation_subjects": 381,
+      "test_subjects": 394
+    },
+    {
+      "outcome_key": "A::Средний объем эритроцитов (MCV)::фл",
+      "unit": "фл",
+      "source_system": "magerya_api",
+      "train_subjects": 2577,
+      "train_targets": 4362,
+      "validation_subjects": 517,
+      "test_subjects": 552
+    },
+    {
+      "outcome_key": "A::Средняя концентрация гемоглобина в эритроцитах (MCHC)::г/дл",
+      "unit": "г/дл",
+      "source_system": "magerya_api",
+      "train_subjects": 1899,
+      "train_targets": 2914,
+      "validation_subjects": 353,
+      "test_subjects": 405
+    },
+    {
+      "outcome_key": "A::Средняя концентрация гемоглобина в эритроцитах (MCHC)::г/л",
+      "unit": "г/л",
+      "source_system": "magerya_api",
+      "train_subjects": 952,
+      "train_targets": 1418,
+      "validation_subjects": 207,
+      "test_subjects": 212
+    },
+    {
+      "outcome_key": "A::С–реактивный белок::мг/л",
+      "unit": "мг/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1442,
+      "train_targets": 1879,
+      "validation_subjects": 302,
+      "test_subjects": 308
+    },
+    {
+      "outcome_key": "A::Т3 св.::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 867,
+      "train_targets": 1376,
+      "validation_subjects": 189,
+      "test_subjects": 188
+    },
+    {
+      "outcome_key": "A::Т3 св.::пмоль/л",
+      "unit": "пмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 4855,
+      "train_targets": 8425,
+      "validation_subjects": 944,
+      "test_subjects": 1018
+    },
+    {
+      "outcome_key": "A::Т4 св.::нг/дл",
+      "unit": "нг/дл",
+      "source_system": "magerya_api",
+      "train_subjects": 858,
+      "train_targets": 1380,
+      "validation_subjects": 194,
+      "test_subjects": 199
+    },
+    {
+      "outcome_key": "A::Т4 св.::пмоль/л",
+      "unit": "пмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 4957,
+      "train_targets": 8800,
+      "validation_subjects": 990,
+      "test_subjects": 1051
+    },
+    {
+      "outcome_key": "A::ТТГ::мЕд/л",
+      "unit": "мЕд/л",
+      "source_system": "magerya_api",
+      "train_subjects": 904,
+      "train_targets": 1594,
+      "validation_subjects": 163,
+      "test_subjects": 176
+    },
+    {
+      "outcome_key": "A::ТТГ::мМЕ/л",
+      "unit": "мМЕ/л",
+      "source_system": "magerya_api",
+      "train_subjects": 803,
+      "train_targets": 1218,
+      "validation_subjects": 179,
+      "test_subjects": 145
+    },
+    {
+      "outcome_key": "A::ТТГ::мкМЕ/мл",
+      "unit": "мкМЕ/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 4744,
+      "train_targets": 8582,
+      "validation_subjects": 970,
+      "test_subjects": 1029
+    },
+    {
+      "outcome_key": "A::Тестостерон общий::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 423,
+      "train_targets": 506,
+      "validation_subjects": 117,
+      "test_subjects": 86
+    },
+    {
+      "outcome_key": "A::Тестостерон общий::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 2140,
+      "train_targets": 2753,
+      "validation_subjects": 424,
+      "test_subjects": 462
+    },
+    {
+      "outcome_key": "A::Тестостерон::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 803,
+      "train_targets": 957,
+      "validation_subjects": 146,
+      "test_subjects": 161
+    },
+    {
+      "outcome_key": "A::Трансферрин::г/л",
+      "unit": "г/л",
+      "source_system": "magerya_api",
+      "train_subjects": 2458,
+      "train_targets": 3279,
+      "validation_subjects": 475,
+      "test_subjects": 526
+    },
+    {
+      "outcome_key": "A::Трансферрин::мг/дл",
+      "unit": "мг/дл",
+      "source_system": "magerya_api",
+      "train_subjects": 977,
+      "train_targets": 1132,
+      "validation_subjects": 194,
+      "test_subjects": 209
+    },
+    {
+      "outcome_key": "A::Триглицериды::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5347,
+      "train_targets": 8402,
+      "validation_subjects": 1056,
+      "test_subjects": 1112
+    },
+    {
+      "outcome_key": "A::Тромбиновое время::сек",
+      "unit": "сек",
+      "source_system": "magerya_api",
+      "train_subjects": 550,
+      "train_targets": 655,
+      "validation_subjects": 114,
+      "test_subjects": 107
+    },
+    {
+      "outcome_key": "A::Тромбоциты::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5938,
+      "train_targets": 11382,
+      "validation_subjects": 1244,
+      "test_subjects": 1271
+    },
+    {
+      "outcome_key": "A::Тромбоциты::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "magerya_api",
+      "train_subjects": 988,
+      "train_targets": 1585,
+      "validation_subjects": 173,
+      "test_subjects": 211
+    },
+    {
+      "outcome_key": "A::Уробилиноген::мг/дл",
+      "unit": "мг/дл",
+      "source_system": "magerya_api",
+      "train_subjects": 361,
+      "train_targets": 411,
+      "validation_subjects": 76,
+      "test_subjects": 82
+    },
+    {
+      "outcome_key": "A::ФСГ::мМЕд/мл",
+      "unit": "мМЕд/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 497,
+      "train_targets": 688,
+      "validation_subjects": 102,
+      "test_subjects": 104
+    },
+    {
+      "outcome_key": "A::ФСГ::мМе/мл",
+      "unit": "мМе/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 2319,
+      "train_targets": 3248,
+      "validation_subjects": 479,
+      "test_subjects": 482
+    },
+    {
+      "outcome_key": "A::Ферритин::мкг/л",
+      "unit": "мкг/л",
+      "source_system": "magerya_api",
+      "train_subjects": 3054,
+      "train_targets": 5195,
+      "validation_subjects": 628,
+      "test_subjects": 676
+    },
+    {
+      "outcome_key": "A::Ферритин::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 3943,
+      "train_targets": 6191,
+      "validation_subjects": 805,
+      "test_subjects": 818
+    },
+    {
+      "outcome_key": "A::Фибриноген::г/л",
+      "unit": "г/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1153,
+      "train_targets": 1511,
+      "validation_subjects": 226,
+      "test_subjects": 209
+    },
+    {
+      "outcome_key": "A::Фосфор неорганический::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 636,
+      "train_targets": 776,
+      "validation_subjects": 141,
+      "test_subjects": 128
+    },
+    {
+      "outcome_key": "A::Фруктозамин::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1120,
+      "train_targets": 1510,
+      "validation_subjects": 231,
+      "test_subjects": 253
+    },
+    {
+      "outcome_key": "A::Хлор::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 439,
+      "train_targets": 533,
+      "validation_subjects": 96,
+      "test_subjects": 83
+    },
+    {
+      "outcome_key": "A::Холестерин общий::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1197,
+      "train_targets": 1485,
+      "validation_subjects": 266,
+      "test_subjects": 272
+    },
+    {
+      "outcome_key": "A::Цветной показатель::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 2913,
+      "train_targets": 4528,
+      "validation_subjects": 580,
+      "test_subjects": 624
+    },
+    {
+      "outcome_key": "A::Цилиндры гиалиновые::Ед/мкл",
+      "unit": "Ед/мкл",
+      "source_system": "magerya_api",
+      "train_subjects": 352,
+      "train_targets": 408,
+      "validation_subjects": 88,
+      "test_subjects": 86
+    },
+    {
+      "outcome_key": "A::Цинк::мкг/л",
+      "unit": "мкг/л",
+      "source_system": "magerya_api",
+      "train_subjects": 294,
+      "train_targets": 360,
+      "validation_subjects": 60,
+      "test_subjects": 54
+    },
+    {
+      "outcome_key": "A::Цинк::мкг/мл",
+      "unit": "мкг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 353,
+      "train_targets": 456,
+      "validation_subjects": 70,
+      "test_subjects": 68
+    },
+    {
+      "outcome_key": "A::Цинк::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 2028,
+      "train_targets": 2696,
+      "validation_subjects": 449,
+      "test_subjects": 410
+    },
+    {
+      "outcome_key": "A::Щелочная фосфатаза::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1163,
+      "train_targets": 1406,
+      "validation_subjects": 219,
+      "test_subjects": 247
+    },
+    {
+      "outcome_key": "A::Эозинофилы::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 6316,
+      "train_targets": 12518,
+      "validation_subjects": 1301,
+      "test_subjects": 1354
+    },
+    {
+      "outcome_key": "A::Эозинофильный катионный белок::мкг/л",
+      "unit": "мкг/л",
+      "source_system": "magerya_api",
+      "train_subjects": 890,
+      "train_targets": 1092,
+      "validation_subjects": 204,
+      "test_subjects": 181
+    },
+    {
+      "outcome_key": "A::Эозинофильный катионный белок::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 1016,
+      "train_targets": 1282,
+      "validation_subjects": 206,
+      "test_subjects": 207
+    },
+    {
+      "outcome_key": "A::Эпителий переходный::кл/мкл",
+      "unit": "кл/мкл",
+      "source_system": "magerya_api",
+      "train_subjects": 394,
+      "train_targets": 468,
+      "validation_subjects": 92,
+      "test_subjects": 95
+    },
+    {
+      "outcome_key": "A::Эпителий плоский::кл/мкл",
+      "unit": "кл/мкл",
+      "source_system": "magerya_api",
+      "train_subjects": 562,
+      "train_targets": 689,
+      "validation_subjects": 130,
+      "test_subjects": 126
+    },
+    {
+      "outcome_key": "A::Эритроциты::*10^12/л",
+      "unit": "*10^12/л",
+      "source_system": "magerya_api",
+      "train_subjects": 5940,
+      "train_targets": 11397,
+      "validation_subjects": 1243,
+      "test_subjects": 1274
+    },
+    {
+      "outcome_key": "A::Эритроциты::кл/мкл",
+      "unit": "кл/мкл",
+      "source_system": "magerya_api",
+      "train_subjects": 599,
+      "train_targets": 715,
+      "validation_subjects": 142,
+      "test_subjects": 127
+    },
+    {
+      "outcome_key": "A::Эритроциты::млн/мкл",
+      "unit": "млн/мкл",
+      "source_system": "magerya_api",
+      "train_subjects": 985,
+      "train_targets": 1589,
+      "validation_subjects": 175,
+      "test_subjects": 211
+    },
+    {
+      "outcome_key": "A::Эстрадиол::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 1443,
+      "train_targets": 1936,
+      "validation_subjects": 302,
+      "test_subjects": 297
+    },
+    {
+      "outcome_key": "A::Эстрадиол::пмоль/л",
+      "unit": "пмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 1499,
+      "train_targets": 1975,
+      "validation_subjects": 323,
+      "test_subjects": 322
+    },
+    {
+      "outcome_key": "A::бета–ХГЧ::мМе/мл",
+      "unit": "мМе/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 257,
+      "train_targets": 378,
+      "validation_subjects": 46,
+      "test_subjects": 65
+    },
+    {
+      "outcome_key": "A::железо::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 719,
+      "train_targets": 775,
+      "validation_subjects": 142,
+      "test_subjects": 154
+    },
+    {
+      "outcome_key": "A::латентная  железосвязывающая способность сыворотки::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 300,
+      "train_targets": 316,
+      "validation_subjects": 52,
+      "test_subjects": 73
+    },
+    {
+      "outcome_key": "A::непрямой::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 286,
+      "train_targets": 306,
+      "validation_subjects": 66,
+      "test_subjects": 70
+    },
+    {
+      "outcome_key": "A::общий::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 316,
+      "train_targets": 336,
+      "validation_subjects": 73,
+      "test_subjects": 83
+    },
+    {
+      "outcome_key": "A::прямой::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "magerya_api",
+      "train_subjects": 312,
+      "train_targets": 333,
+      "validation_subjects": 76,
+      "test_subjects": 81
+    },
+    {
+      "outcome_key": "B::101::µg/dL",
+      "unit": "µg/dL",
+      "source_system": "kgz_raw",
+      "train_subjects": 268,
+      "train_targets": 407,
+      "validation_subjects": 42,
+      "test_subjects": 60
+    },
+    {
+      "outcome_key": "B::101::мг/л",
+      "unit": "мг/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 226,
+      "train_targets": 323,
+      "validation_subjects": 35,
+      "test_subjects": 53
+    },
+    {
+      "outcome_key": "B::101::мкг/дл",
+      "unit": "мкг/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 2761,
+      "train_targets": 4801,
+      "validation_subjects": 556,
+      "test_subjects": 587
+    },
+    {
+      "outcome_key": "B::101::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 3114,
+      "train_targets": 5717,
+      "validation_subjects": 656,
+      "test_subjects": 668
+    },
+    {
+      "outcome_key": "B::10::г/л",
+      "unit": "г/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 435,
+      "train_targets": 574,
+      "validation_subjects": 93,
+      "test_subjects": 104
+    },
+    {
+      "outcome_key": "B::1144::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 280,
+      "train_targets": 307,
+      "validation_subjects": 46,
+      "test_subjects": 53
+    },
+    {
+      "outcome_key": "B::117::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1566,
+      "train_targets": 1956,
+      "validation_subjects": 298,
+      "test_subjects": 337
+    },
+    {
+      "outcome_key": "B::118::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 2279,
+      "train_targets": 3043,
+      "validation_subjects": 481,
+      "test_subjects": 530
+    },
+    {
+      "outcome_key": "B::118::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 294,
+      "train_targets": 343,
+      "validation_subjects": 59,
+      "test_subjects": 66
+    },
+    {
+      "outcome_key": "B::1317B12::пмоль/л",
+      "unit": "пмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 863,
+      "train_targets": 1038,
+      "validation_subjects": 180,
+      "test_subjects": 188
+    },
+    {
+      "outcome_key": "B::139::мм/час",
+      "unit": "мм/час",
+      "source_system": "kgz_raw",
+      "train_subjects": 2861,
+      "train_targets": 4894,
+      "validation_subjects": 601,
+      "test_subjects": 669
+    },
+    {
+      "outcome_key": "B::13::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1519,
+      "train_targets": 2149,
+      "validation_subjects": 318,
+      "test_subjects": 357
+    },
+    {
+      "outcome_key": "B::141::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 526,
+      "train_targets": 579,
+      "validation_subjects": 114,
+      "test_subjects": 121
+    },
+    {
+      "outcome_key": "B::149::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 861,
+      "train_targets": 1146,
+      "validation_subjects": 178,
+      "test_subjects": 200
+    },
+    {
+      "outcome_key": "B::14::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 708,
+      "train_targets": 891,
+      "validation_subjects": 143,
+      "test_subjects": 146
+    },
+    {
+      "outcome_key": "B::153::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 2036,
+      "train_targets": 2532,
+      "validation_subjects": 393,
+      "test_subjects": 482
+    },
+    {
+      "outcome_key": "B::155::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 289,
+      "train_targets": 363,
+      "validation_subjects": 68,
+      "test_subjects": 74
+    },
+    {
+      "outcome_key": "B::15::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 518,
+      "train_targets": 677,
+      "validation_subjects": 106,
+      "test_subjects": 102
+    },
+    {
+      "outcome_key": "B::164::Мкг/мл",
+      "unit": "Мкг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 366,
+      "train_targets": 511,
+      "validation_subjects": 62,
+      "test_subjects": 76
+    },
+    {
+      "outcome_key": "B::164::мг/л",
+      "unit": "мг/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 348,
+      "train_targets": 504,
+      "validation_subjects": 59,
+      "test_subjects": 80
+    },
+    {
+      "outcome_key": "B::164::мкг feu /мл",
+      "unit": "мкг feu /мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 382,
+      "train_targets": 510,
+      "validation_subjects": 73,
+      "test_subjects": 103
+    },
+    {
+      "outcome_key": "B::164::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 2059,
+      "train_targets": 3294,
+      "validation_subjects": 441,
+      "test_subjects": 460
+    },
+    {
+      "outcome_key": "B::16::мг/дл",
+      "unit": "мг/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 309,
+      "train_targets": 548,
+      "validation_subjects": 59,
+      "test_subjects": 68
+    },
+    {
+      "outcome_key": "B::16::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 7035,
+      "train_targets": 14741,
+      "validation_subjects": 1491,
+      "test_subjects": 1548
+    },
+    {
+      "outcome_key": "B::172::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 373,
+      "train_targets": 484,
+      "validation_subjects": 65,
+      "test_subjects": 82
+    },
+    {
+      "outcome_key": "B::172::мкЕд/мл",
+      "unit": "мкЕд/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 3840,
+      "train_targets": 7258,
+      "validation_subjects": 870,
+      "test_subjects": 879
+    },
+    {
+      "outcome_key": "B::172::мкМЕ/мл",
+      "unit": "мкМЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 3075,
+      "train_targets": 5493,
+      "validation_subjects": 636,
+      "test_subjects": 655
+    },
+    {
+      "outcome_key": "B::18::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 588,
+      "train_targets": 738,
+      "validation_subjects": 126,
+      "test_subjects": 125
+    },
+    {
+      "outcome_key": "B::199::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 634,
+      "train_targets": 931,
+      "validation_subjects": 116,
+      "test_subjects": 126
+    },
+    {
+      "outcome_key": "B::1::сек.",
+      "unit": "сек.",
+      "source_system": "kgz_raw",
+      "train_subjects": 329,
+      "train_targets": 465,
+      "validation_subjects": 58,
+      "test_subjects": 66
+    },
+    {
+      "outcome_key": "B::218::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 666,
+      "train_targets": 883,
+      "validation_subjects": 124,
+      "test_subjects": 131
+    },
+    {
+      "outcome_key": "B::22::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1335,
+      "train_targets": 1882,
+      "validation_subjects": 271,
+      "test_subjects": 304
+    },
+    {
+      "outcome_key": "B::26::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1265,
+      "train_targets": 1822,
+      "validation_subjects": 251,
+      "test_subjects": 289
+    },
+    {
+      "outcome_key": "B::27::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 632,
+      "train_targets": 844,
+      "validation_subjects": 137,
+      "test_subjects": 144
+    },
+    {
+      "outcome_key": "B::28::г/дл",
+      "unit": "г/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 203,
+      "train_targets": 335,
+      "validation_subjects": 36,
+      "test_subjects": 37
+    },
+    {
+      "outcome_key": "B::28::г/л",
+      "unit": "г/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 7498,
+      "train_targets": 16104,
+      "validation_subjects": 1608,
+      "test_subjects": 1662
+    },
+    {
+      "outcome_key": "B::30::мг/дл",
+      "unit": "мг/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 312,
+      "train_targets": 551,
+      "validation_subjects": 54,
+      "test_subjects": 54
+    },
+    {
+      "outcome_key": "B::30::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 7587,
+      "train_targets": 16498,
+      "validation_subjects": 1616,
+      "test_subjects": 1677
+    },
+    {
+      "outcome_key": "B::32::мг/дл",
+      "unit": "мг/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 223,
+      "train_targets": 422,
+      "validation_subjects": 42,
+      "test_subjects": 40
+    },
+    {
+      "outcome_key": "B::32::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 6411,
+      "train_targets": 13583,
+      "validation_subjects": 1352,
+      "test_subjects": 1400
+    },
+    {
+      "outcome_key": "B::33::мг/дл",
+      "unit": "мг/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 231,
+      "train_targets": 450,
+      "validation_subjects": 44,
+      "test_subjects": 38
+    },
+    {
+      "outcome_key": "B::33::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 7628,
+      "train_targets": 16529,
+      "validation_subjects": 1620,
+      "test_subjects": 1689
+    },
+    {
+      "outcome_key": "B::36::U/I",
+      "unit": "U/I",
+      "source_system": "kgz_raw",
+      "train_subjects": 282,
+      "train_targets": 359,
+      "validation_subjects": 67,
+      "test_subjects": 65
+    },
+    {
+      "outcome_key": "B::36::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 299,
+      "train_targets": 365,
+      "validation_subjects": 63,
+      "test_subjects": 53
+    },
+    {
+      "outcome_key": "B::37::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 541,
+      "train_targets": 675,
+      "validation_subjects": 107,
+      "test_subjects": 127
+    },
+    {
+      "outcome_key": "B::3::г/л",
+      "unit": "г/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 409,
+      "train_targets": 605,
+      "validation_subjects": 71,
+      "test_subjects": 73
+    },
+    {
+      "outcome_key": "B::40::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 511,
+      "train_targets": 628,
+      "validation_subjects": 109,
+      "test_subjects": 121
+    },
+    {
+      "outcome_key": "B::42::МЕ/мл",
+      "unit": "МЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 284,
+      "train_targets": 307,
+      "validation_subjects": 55,
+      "test_subjects": 58
+    },
+    {
+      "outcome_key": "B::43::мг/л",
+      "unit": "мг/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 688,
+      "train_targets": 956,
+      "validation_subjects": 127,
+      "test_subjects": 152
+    },
+    {
+      "outcome_key": "B::48::µmol/L",
+      "unit": "µmol/L",
+      "source_system": "kgz_raw",
+      "train_subjects": 208,
+      "train_targets": 306,
+      "validation_subjects": 31,
+      "test_subjects": 57
+    },
+    {
+      "outcome_key": "B::48::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 7220,
+      "train_targets": 15417,
+      "validation_subjects": 1546,
+      "test_subjects": 1597
+    },
+    {
+      "outcome_key": "B::51::мкг/л",
+      "unit": "мкг/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 4948,
+      "train_targets": 10404,
+      "validation_subjects": 1040,
+      "test_subjects": 1131
+    },
+    {
+      "outcome_key": "B::51::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 3427,
+      "train_targets": 6599,
+      "validation_subjects": 722,
+      "test_subjects": 742
+    },
+    {
+      "outcome_key": "B::53::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1342,
+      "train_targets": 2340,
+      "validation_subjects": 277,
+      "test_subjects": 301
+    },
+    {
+      "outcome_key": "B::53::пмоль/л",
+      "unit": "пмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 3417,
+      "train_targets": 6429,
+      "validation_subjects": 755,
+      "test_subjects": 788
+    },
+    {
+      "outcome_key": "B::55::нг/дл",
+      "unit": "нг/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1935,
+      "train_targets": 3676,
+      "validation_subjects": 412,
+      "test_subjects": 418
+    },
+    {
+      "outcome_key": "B::55::пмоль/л",
+      "unit": "пмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 6285,
+      "train_targets": 13699,
+      "validation_subjects": 1338,
+      "test_subjects": 1394
+    },
+    {
+      "outcome_key": "B::56::µIU/mL",
+      "unit": "µIU/mL",
+      "source_system": "kgz_raw",
+      "train_subjects": 289,
+      "train_targets": 419,
+      "validation_subjects": 50,
+      "test_subjects": 64
+    },
+    {
+      "outcome_key": "B::56::мЕд/л",
+      "unit": "мЕд/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 2935,
+      "train_targets": 6103,
+      "validation_subjects": 639,
+      "test_subjects": 620
+    },
+    {
+      "outcome_key": "B::56::мМЕ/л",
+      "unit": "мМЕ/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1340,
+      "train_targets": 2284,
+      "validation_subjects": 278,
+      "test_subjects": 319
+    },
+    {
+      "outcome_key": "B::56::мкМЕ/мл",
+      "unit": "мкМЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 4180,
+      "train_targets": 8208,
+      "validation_subjects": 839,
+      "test_subjects": 894
+    },
+    {
+      "outcome_key": "B::57::МЕ/мл",
+      "unit": "МЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1977,
+      "train_targets": 2669,
+      "validation_subjects": 427,
+      "test_subjects": 427
+    },
+    {
+      "outcome_key": "B::58::Ед/мл",
+      "unit": "Ед/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1028,
+      "train_targets": 1490,
+      "validation_subjects": 237,
+      "test_subjects": 229
+    },
+    {
+      "outcome_key": "B::58::МЕ/мл",
+      "unit": "МЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1845,
+      "train_targets": 2531,
+      "validation_subjects": 402,
+      "test_subjects": 415
+    },
+    {
+      "outcome_key": "B::59::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 339,
+      "train_targets": 466,
+      "validation_subjects": 69,
+      "test_subjects": 69
+    },
+    {
+      "outcome_key": "B::59::мМЕ/мл",
+      "unit": "мМЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1557,
+      "train_targets": 2323,
+      "validation_subjects": 266,
+      "test_subjects": 337
+    },
+    {
+      "outcome_key": "B::59::мМЕд/мл",
+      "unit": "мМЕд/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 983,
+      "train_targets": 1524,
+      "validation_subjects": 205,
+      "test_subjects": 216
+    },
+    {
+      "outcome_key": "B::60::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 315,
+      "train_targets": 440,
+      "validation_subjects": 60,
+      "test_subjects": 70
+    },
+    {
+      "outcome_key": "B::60::мМЕ/мл",
+      "unit": "мМЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1446,
+      "train_targets": 2106,
+      "validation_subjects": 248,
+      "test_subjects": 310
+    },
+    {
+      "outcome_key": "B::60::мМЕд/мл",
+      "unit": "мМЕд/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 918,
+      "train_targets": 1364,
+      "validation_subjects": 193,
+      "test_subjects": 204
+    },
+    {
+      "outcome_key": "B::61::мЕд/л",
+      "unit": "мЕд/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 2426,
+      "train_targets": 4566,
+      "validation_subjects": 522,
+      "test_subjects": 509
+    },
+    {
+      "outcome_key": "B::61::мМЕ/л",
+      "unit": "мМЕ/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 2220,
+      "train_targets": 3848,
+      "validation_subjects": 468,
+      "test_subjects": 524
+    },
+    {
+      "outcome_key": "B::61::мкМЕ/мл",
+      "unit": "мкМЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 624,
+      "train_targets": 969,
+      "validation_subjects": 111,
+      "test_subjects": 127
+    },
+    {
+      "outcome_key": "B::61::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1726,
+      "train_targets": 3108,
+      "validation_subjects": 374,
+      "test_subjects": 390
+    },
+    {
+      "outcome_key": "B::62::пг/мл",
+      "unit": "пг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 2424,
+      "train_targets": 4234,
+      "validation_subjects": 499,
+      "test_subjects": 505
+    },
+    {
+      "outcome_key": "B::62::пмоль/л",
+      "unit": "пмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 4219,
+      "train_targets": 7883,
+      "validation_subjects": 882,
+      "test_subjects": 945
+    },
+    {
+      "outcome_key": "B::63::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 243,
+      "train_targets": 312,
+      "validation_subjects": 46,
+      "test_subjects": 66
+    },
+    {
+      "outcome_key": "B::63::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 276,
+      "train_targets": 343,
+      "validation_subjects": 64,
+      "test_subjects": 61
+    },
+    {
+      "outcome_key": "B::64::нг/дл",
+      "unit": "нг/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 211,
+      "train_targets": 312,
+      "validation_subjects": 44,
+      "test_subjects": 53
+    },
+    {
+      "outcome_key": "B::64::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1333,
+      "train_targets": 2296,
+      "validation_subjects": 286,
+      "test_subjects": 280
+    },
+    {
+      "outcome_key": "B::64::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 5276,
+      "train_targets": 10218,
+      "validation_subjects": 1093,
+      "test_subjects": 1164
+    },
+    {
+      "outcome_key": "B::65::мкг/дл",
+      "unit": "мкг/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 2471,
+      "train_targets": 4392,
+      "validation_subjects": 476,
+      "test_subjects": 549
+    },
+    {
+      "outcome_key": "B::65::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 5013,
+      "train_targets": 9639,
+      "validation_subjects": 1083,
+      "test_subjects": 1083
+    },
+    {
+      "outcome_key": "B::66::мЕд/мл",
+      "unit": "мЕд/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 282,
+      "train_targets": 396,
+      "validation_subjects": 63,
+      "test_subjects": 46
+    },
+    {
+      "outcome_key": "B::66::мМЕ/мл",
+      "unit": "мМЕ/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 481,
+      "train_targets": 664,
+      "validation_subjects": 94,
+      "test_subjects": 109
+    },
+    {
+      "outcome_key": "B::8::UI/I",
+      "unit": "UI/I",
+      "source_system": "kgz_raw",
+      "train_subjects": 382,
+      "train_targets": 527,
+      "validation_subjects": 71,
+      "test_subjects": 94
+    },
+    {
+      "outcome_key": "B::8::undefined",
+      "unit": "undefined",
+      "source_system": "kgz_raw",
+      "train_subjects": 391,
+      "train_targets": 456,
+      "validation_subjects": 72,
+      "test_subjects": 96
+    },
+    {
+      "outcome_key": "B::8::Е/л",
+      "unit": "Е/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 576,
+      "train_targets": 853,
+      "validation_subjects": 111,
+      "test_subjects": 118
+    },
+    {
+      "outcome_key": "B::8::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 6913,
+      "train_targets": 14787,
+      "validation_subjects": 1487,
+      "test_subjects": 1525
+    },
+    {
+      "outcome_key": "B::8::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 574,
+      "train_targets": 811,
+      "validation_subjects": 91,
+      "test_subjects": 98
+    },
+    {
+      "outcome_key": "B::928::нг/мл",
+      "unit": "нг/мл",
+      "source_system": "kgz_raw",
+      "train_subjects": 6332,
+      "train_targets": 11412,
+      "validation_subjects": 1340,
+      "test_subjects": 1405
+    },
+    {
+      "outcome_key": "B::928::нмоль/л",
+      "unit": "нмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 254,
+      "train_targets": 350,
+      "validation_subjects": 45,
+      "test_subjects": 52
+    },
+    {
+      "outcome_key": "B::9::UI/I",
+      "unit": "UI/I",
+      "source_system": "kgz_raw",
+      "train_subjects": 393,
+      "train_targets": 535,
+      "validation_subjects": 75,
+      "test_subjects": 100
+    },
+    {
+      "outcome_key": "B::9::undefined",
+      "unit": "undefined",
+      "source_system": "kgz_raw",
+      "train_subjects": 386,
+      "train_targets": 443,
+      "validation_subjects": 75,
+      "test_subjects": 96
+    },
+    {
+      "outcome_key": "B::9::Е/л",
+      "unit": "Е/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 580,
+      "train_targets": 862,
+      "validation_subjects": 114,
+      "test_subjects": 119
+    },
+    {
+      "outcome_key": "B::9::Ед/л",
+      "unit": "Ед/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 6907,
+      "train_targets": 14746,
+      "validation_subjects": 1481,
+      "test_subjects": 1527
+    },
+    {
+      "outcome_key": "B::9::МЕ/л",
+      "unit": "МЕ/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 566,
+      "train_targets": 797,
+      "validation_subjects": 90,
+      "test_subjects": 98
+    },
+    {
+      "outcome_key": "B::B-INPL::мкмоль/л",
+      "unit": "мкмоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 383,
+      "train_targets": 479,
+      "validation_subjects": 81,
+      "test_subjects": 74
+    },
+    {
+      "outcome_key": "B::m_1006::ммоль/л",
+      "unit": "ммоль/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 251,
+      "train_targets": 328,
+      "validation_subjects": 52,
+      "test_subjects": 43
+    },
+    {
+      "outcome_key": "B::m_1047::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 2982,
+      "train_targets": 4934,
+      "validation_subjects": 616,
+      "test_subjects": 673
+    },
+    {
+      "outcome_key": "B::m_1048::*10^12/л",
+      "unit": "*10^12/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1627,
+      "train_targets": 2278,
+      "validation_subjects": 311,
+      "test_subjects": 375
+    },
+    {
+      "outcome_key": "B::m_1048::млн/мкл",
+      "unit": "млн/мкл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1045,
+      "train_targets": 1553,
+      "validation_subjects": 230,
+      "test_subjects": 214
+    },
+    {
+      "outcome_key": "B::m_1049::фл.",
+      "unit": "фл.",
+      "source_system": "kgz_raw",
+      "train_subjects": 2612,
+      "train_targets": 4114,
+      "validation_subjects": 530,
+      "test_subjects": 594
+    },
+    {
+      "outcome_key": "B::m_1050::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 1570,
+      "train_targets": 2324,
+      "validation_subjects": 334,
+      "test_subjects": 349
+    },
+    {
+      "outcome_key": "B::m_1051::пг",
+      "unit": "пг",
+      "source_system": "kgz_raw",
+      "train_subjects": 2263,
+      "train_targets": 3519,
+      "validation_subjects": 484,
+      "test_subjects": 514
+    },
+    {
+      "outcome_key": "B::m_1051::пг/кл",
+      "unit": "пг/кл",
+      "source_system": "kgz_raw",
+      "train_subjects": 344,
+      "train_targets": 451,
+      "validation_subjects": 55,
+      "test_subjects": 81
+    },
+    {
+      "outcome_key": "B::m_1052::г/дл",
+      "unit": "г/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1644,
+      "train_targets": 2441,
+      "validation_subjects": 334,
+      "test_subjects": 371
+    },
+    {
+      "outcome_key": "B::m_1052::г/л",
+      "unit": "г/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1074,
+      "train_targets": 1460,
+      "validation_subjects": 227,
+      "test_subjects": 246
+    },
+    {
+      "outcome_key": "B::m_1053::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1574,
+      "train_targets": 2230,
+      "validation_subjects": 298,
+      "test_subjects": 368
+    },
+    {
+      "outcome_key": "B::m_1053::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1070,
+      "train_targets": 1610,
+      "validation_subjects": 242,
+      "test_subjects": 228
+    },
+    {
+      "outcome_key": "B::m_1054::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1578,
+      "train_targets": 2240,
+      "validation_subjects": 299,
+      "test_subjects": 358
+    },
+    {
+      "outcome_key": "B::m_1054::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "kgz_raw",
+      "train_subjects": 933,
+      "train_targets": 1353,
+      "validation_subjects": 214,
+      "test_subjects": 200
+    },
+    {
+      "outcome_key": "B::m_1055::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 1881,
+      "train_targets": 2751,
+      "validation_subjects": 392,
+      "test_subjects": 417
+    },
+    {
+      "outcome_key": "B::m_1056::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 2678,
+      "train_targets": 4296,
+      "validation_subjects": 538,
+      "test_subjects": 603
+    },
+    {
+      "outcome_key": "B::m_1057::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 2505,
+      "train_targets": 3886,
+      "validation_subjects": 505,
+      "test_subjects": 560
+    },
+    {
+      "outcome_key": "B::m_1058::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1298,
+      "train_targets": 1806,
+      "validation_subjects": 236,
+      "test_subjects": 298
+    },
+    {
+      "outcome_key": "B::m_1058::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1056,
+      "train_targets": 1582,
+      "validation_subjects": 238,
+      "test_subjects": 230
+    },
+    {
+      "outcome_key": "B::m_1059::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1498,
+      "train_targets": 2142,
+      "validation_subjects": 278,
+      "test_subjects": 323
+    },
+    {
+      "outcome_key": "B::m_1059::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1087,
+      "train_targets": 1646,
+      "validation_subjects": 245,
+      "test_subjects": 234
+    },
+    {
+      "outcome_key": "B::m_1060::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1471,
+      "train_targets": 2096,
+      "validation_subjects": 270,
+      "test_subjects": 328
+    },
+    {
+      "outcome_key": "B::m_1060::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1102,
+      "train_targets": 1677,
+      "validation_subjects": 247,
+      "test_subjects": 236
+    },
+    {
+      "outcome_key": "B::m_1061::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1426,
+      "train_targets": 2014,
+      "validation_subjects": 261,
+      "test_subjects": 320
+    },
+    {
+      "outcome_key": "B::m_1061::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1102,
+      "train_targets": 1670,
+      "validation_subjects": 251,
+      "test_subjects": 237
+    },
+    {
+      "outcome_key": "B::m_1062::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 1362,
+      "train_targets": 1887,
+      "validation_subjects": 251,
+      "test_subjects": 292
+    },
+    {
+      "outcome_key": "B::m_1062::тыс/мкл",
+      "unit": "тыс/мкл",
+      "source_system": "kgz_raw",
+      "train_subjects": 1100,
+      "train_targets": 1662,
+      "validation_subjects": 245,
+      "test_subjects": 239
+    },
+    {
+      "outcome_key": "B::m_1063::фл.",
+      "unit": "фл.",
+      "source_system": "kgz_raw",
+      "train_subjects": 1378,
+      "train_targets": 1987,
+      "validation_subjects": 244,
+      "test_subjects": 322
+    },
+    {
+      "outcome_key": "B::m_1064::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 1122,
+      "train_targets": 1585,
+      "validation_subjects": 189,
+      "test_subjects": 267
+    },
+    {
+      "outcome_key": "B::m_1065::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 757,
+      "train_targets": 1045,
+      "validation_subjects": 128,
+      "test_subjects": 169
+    },
+    {
+      "outcome_key": "B::m_1065::фл.",
+      "unit": "фл.",
+      "source_system": "kgz_raw",
+      "train_subjects": 377,
+      "train_targets": 488,
+      "validation_subjects": 70,
+      "test_subjects": 94
+    },
+    {
+      "outcome_key": "B::m_1069::undefined",
+      "unit": "undefined",
+      "source_system": "kgz_raw",
+      "train_subjects": 394,
+      "train_targets": 527,
+      "validation_subjects": 77,
+      "test_subjects": 88
+    },
+    {
+      "outcome_key": "B::m_1070::фл.",
+      "unit": "фл.",
+      "source_system": "kgz_raw",
+      "train_subjects": 820,
+      "train_targets": 1099,
+      "validation_subjects": 148,
+      "test_subjects": 187
+    },
+    {
+      "outcome_key": "B::m_1071::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 909,
+      "train_targets": 1190,
+      "validation_subjects": 166,
+      "test_subjects": 208
+    },
+    {
+      "outcome_key": "B::m_1079::*10^9/л",
+      "unit": "*10^9/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 327,
+      "train_targets": 443,
+      "validation_subjects": 80,
+      "test_subjects": 73
+    },
+    {
+      "outcome_key": "B::m_1080::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 349,
+      "train_targets": 462,
+      "validation_subjects": 79,
+      "test_subjects": 79
+    },
+    {
+      "outcome_key": "B::m_1085::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 351,
+      "train_targets": 465,
+      "validation_subjects": 61,
+      "test_subjects": 67
+    },
+    {
+      "outcome_key": "B::m_1100::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 463,
+      "train_targets": 575,
+      "validation_subjects": 91,
+      "test_subjects": 95
+    },
+    {
+      "outcome_key": "B::m_1101::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 413,
+      "train_targets": 517,
+      "validation_subjects": 79,
+      "test_subjects": 83
+    },
+    {
+      "outcome_key": "B::mm_1001::г/дл",
+      "unit": "г/дл",
+      "source_system": "kgz_raw",
+      "train_subjects": 2868,
+      "train_targets": 5757,
+      "validation_subjects": 620,
+      "test_subjects": 615
+    },
+    {
+      "outcome_key": "B::mm_1001::г/л",
+      "unit": "г/л",
+      "source_system": "kgz_raw",
+      "train_subjects": 5498,
+      "train_targets": 11149,
+      "validation_subjects": 1134,
+      "test_subjects": 1198
+    },
+    {
+      "outcome_key": "B::mm_1002::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 7395,
+      "train_targets": 16340,
+      "validation_subjects": 1548,
+      "test_subjects": 1622
+    },
+    {
+      "outcome_key": "B::mm_1004::%",
+      "unit": "%",
+      "source_system": "kgz_raw",
+      "train_subjects": 7728,
+      "train_targets": 17657,
+      "validation_subjects": 1631,
+      "test_subjects": 1698
+    }
+  ],
+  "rejected_counts": 8925,
+  "rejected_sample": [
+    {
+      "outcome_key": "A::\"a\" активноподвижные::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a\" быстрое прогрессивное движение::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a+b\" активноподвижных и малоподвижных::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 11,
+      "train_targets": 11,
+      "validation_subjects": 2,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a+b\" активноподвижных::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a+b\" прогрессивно-подвижные::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 0,
+      "train_targets": 0,
+      "validation_subjects": 0,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a+b\" прогрессивно-подвижные::млн/мл",
+      "unit": "млн/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 0,
+      "train_targets": 0,
+      "validation_subjects": 0,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a+b\"/\"PR\" - прогрессивноподвижные сперматозоиды::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a+b+c\" всего подвижных сперматозоидов::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 11,
+      "train_targets": 11,
+      "validation_subjects": 2,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a+b+c\" общая подвижность::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 0,
+      "train_targets": 0,
+      "validation_subjects": 0,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"a+b+c\" общая подвижность::млн/мл",
+      "unit": "млн/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 0,
+      "train_targets": 0,
+      "validation_subjects": 0,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"b\" малоподвижные::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"b\" медленное прогрессивное даижение::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"c\" движение на месте::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"c\" непрогрессивно-подвижные::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 0,
+      "train_targets": 0,
+      "validation_subjects": 0,
+      "test_subjects": 2,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"c\" непрогрессивно-подвижные::млн/мл",
+      "unit": "млн/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 0,
+      "train_targets": 0,
+      "validation_subjects": 0,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"c\" с отсутствием поступательного движения::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 14,
+      "train_targets": 14,
+      "validation_subjects": 3,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"d\" неподвижные сперматозоиды::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 15,
+      "train_targets": 15,
+      "validation_subjects": 3,
+      "test_subjects": 3,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"d\" неподвижные сперматозоиды::млн/мл",
+      "unit": "млн/мл",
+      "source_system": "magerya_api",
+      "train_subjects": 0,
+      "train_targets": 0,
+      "validation_subjects": 0,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"d\"/\"IM\" - неподвижные сперматозоиды::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"а+b+c\"/\"PR+NP\" - всего подвижных сперматозоидов::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::\"с\"/\"NP\" - непрогрессивноподвижные сперматозоиды::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::#LEU::_",
+      "unit": "_",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::%  пролактина био активного::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 1,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::% ПСА св.::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 1,
+      "test_subjects": 4,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::% ПСА св::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 2,
+      "train_targets": 2,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::% ПСА свободного::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::% ПТИ::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::% Пролактина биологически активного::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 2,
+      "train_targets": 3,
+      "validation_subjects": 3,
+      "test_subjects": 1,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::% Пролактина биологический активного::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    },
+    {
+      "outcome_key": "A::% Протромбин по Квику::%",
+      "unit": "%",
+      "source_system": "magerya_api",
+      "train_subjects": 1,
+      "train_targets": 1,
+      "validation_subjects": 0,
+      "test_subjects": 0,
+      "reject_reasons": [
+        "train_subjects<100",
+        "train_targets<300",
+        "val_subjects<20",
+        "test_subjects<30"
+      ]
+    }
+  ],
+  "funnel": {
+    "all_outcomes_observed": 9233,
+    "selected": 308,
+    "rejected": 8925,
+    "selected_a": 167,
+    "selected_b": 141,
+    "rejected_by_reason": {
+      "train_subjects<100": 8769,
+      "train_targets<300": 8925,
+      "val_subjects<20": 8761,
+      "test_subjects<30": 8841
+    }
+  },
+  "thresholds": {
+    "MIN_TRAIN_SUBJECTS": 100,
+    "MIN_TRAIN_TARGETS": 300,
+    "MIN_VAL_SUBJECTS": 20,
+    "MIN_TEST_SUBJECTS": 30
+  },
+  "ok": true
+}

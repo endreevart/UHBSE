@@ -1,0 +1,71 @@
+{
+  "version": "0.1",
+  "PROVIDER_ENRICHMENT_PLAN_STATUS": "PLANNED_NON_BLOCKING",
+  "blocks_technical_pilot": false,
+  "no_automatic_external_fetch": true,
+  "no_patient_level_data_sent": true,
+  "plans": [
+    {
+      "source_medicine_id": "506",
+      "n_subjects": 505,
+      "n_episodes": 13670,
+      "missing_ingredient_form_strength_evidence": [
+        "chemical_form",
+        "product_identity_or_specific_composition"
+      ],
+      "necessary_provider_type": "supplement_reference",
+      "potential_strict_cluster_after_enrichment": "recompute_strict_cluster_readiness_after_evidence_upgrade",
+      "typed_level": "INGREDIENT_FAMILY_ONLY"
+    },
+    {
+      "source_medicine_id": "507",
+      "n_subjects": 68,
+      "n_episodes": 1907,
+      "missing_ingredient_form_strength_evidence": [
+        "chemical_form",
+        "product_identity_or_specific_composition"
+      ],
+      "necessary_provider_type": "supplement_reference",
+      "potential_strict_cluster_after_enrichment": "recompute_strict_cluster_readiness_after_evidence_upgrade",
+      "typed_level": "INGREDIENT_FAMILY_ONLY"
+    },
+    {
+      "source_medicine_id": "583",
+      "n_subjects": 49,
+      "n_episodes": 1398,
+      "missing_ingredient_form_strength_evidence": [
+        "chemical_form",
+        "product_identity_or_specific_composition"
+      ],
+      "necessary_provider_type": "supplement_reference",
+      "potential_strict_cluster_after_enrichment": "recompute_strict_cluster_readiness_after_evidence_upgrade",
+      "typed_level": "INGREDIENT_FAMILY_ONLY"
+    },
+    {
+      "source_medicine_id": "331",
+      "n_subjects": 42,
+      "n_episodes": 982,
+      "missing_ingredient_form_strength_evidence": [
+        "chemical_form",
+        "route",
+        "product_identity_or_specific_composition"
+      ],
+      "necessary_provider_type": "ESKLP",
+      "potential_strict_cluster_after_enrichment": "recompute_strict_cluster_readiness_after_evidence_upgrade",
+      "typed_level": "INGREDIENT_FAMILY_ONLY"
+    },
+    {
+      "source_medicine_id": "559",
+      "n_subjects": 17,
+      "n_episodes": 491,
+      "missing_ingredient_form_strength_evidence": [
+        "chemical_form",
+        "product_identity_or_specific_composition"
+      ],
+      "necessary_provider_type": "supplement_reference",
+      "potential_strict_cluster_after_enrichment": "recompute_strict_cluster_readiness_after_evidence_upgrade",
+      "typed_level": "INGREDIENT_FAMILY_ONLY"
+    }
+  ],
+  "note": "Auxiliary artifact; absence of supplement provider does not block technical pilot."
+}

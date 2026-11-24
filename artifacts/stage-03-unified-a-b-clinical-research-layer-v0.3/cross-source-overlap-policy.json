@@ -1,0 +1,33 @@
+{
+  "version": "0.3",
+  "CROSS_SOURCE_IDENTITY_MERGE_STATUS": "NOT_RUN",
+  "CROSS_SOURCE_OVERLAP_POLICY_STATUS": "PASS",
+  "automatic_identity_merge": false,
+  "source_scoped_population_count": {
+    "source_a": 43856,
+    "source_b": 49564,
+    "sum_source_scoped": 93420
+  },
+  "confirmed_unique_people_count": null,
+  "confirmed_unique_people_provable": false,
+  "unresolved_overlap_count": "UNKNOWN_NO_LINKAGE_EVIDENCE",
+  "confirmed_overlap_groups": 0,
+  "ambiguous_overlap_groups": 0,
+  "conflicting_overlap_groups": 0,
+  "unresolved_overlap_groups": "ALL_UNLINKED",
+  "conservative_usable_population_count": {
+    "note": "Until overlap is resolved, conservative evaluation must treat A and B as potentially overlapping populations and avoid claiming A+B unique patients.",
+    "source_a_only_usable": 43856,
+    "source_b_only_usable": 49564,
+    "cross_source_pooled_unique_not_claimed": true
+  },
+  "split_policy": {
+    "possible_a_b_duplicates_must_not_span_train_and_heldout": true,
+    "ambiguous_overlap_may_be_excluded_from_cross_source_eval": true,
+    "must_not_claim_unique_patients": true
+  },
+  "linkage_keys_published": false,
+  "row_derived_fingerprints_published": false,
+  "pins_match_live": true,
+  "ok": true
+}

@@ -1,0 +1,94 @@
+{
+  "activity_fixture_rejected": true,
+  "ambiguities": [
+    "the catalog lists more than one section code",
+    "a code label does not prove that the section cannot contain medication text"
+  ],
+  "applicability": "CATALOG_ONLY",
+  "closes_question": false,
+  "diagnosis_categories": [
+    {
+      "code": "activity",
+      "label": "Образ жизни"
+    },
+    {
+      "code": "data_povtornogo_obrashcheniia",
+      "label": "Дата повторного обращения"
+    },
+    {
+      "code": "inye_rekomendatsii",
+      "label": "Иные рекомендации"
+    },
+    {
+      "code": "nutrition",
+      "label": "Питание"
+    },
+    {
+      "code": "sport",
+      "label": "Спорт"
+    }
+  ],
+  "dynamic_codes_possible": true,
+  "level": "E1",
+  "medicines_already_accepted": true,
+  "medicines_is_the_only_medication_section": false,
+  "other_codes_remain_unknown": [
+    "activity",
+    "diagnosis",
+    "inye_rekomendatsii",
+    "manipuliatsii",
+    "napravleniia",
+    "nutrition",
+    "protsedury",
+    "sport"
+  ],
+  "question_id": "A_MEDICATION_CODE_SET",
+  "sole_section_from_name": false,
+  "template_categories": [
+    {
+      "code": "activity",
+      "label": "Образ жизни",
+      "prohibit_deletion": false
+    },
+    {
+      "code": "diagnosis",
+      "label": "Диагноз",
+      "prohibit_deletion": true
+    },
+    {
+      "code": "inye_rekomendatsii",
+      "label": "Иные рекомендации",
+      "prohibit_deletion": false
+    },
+    {
+      "code": "manipuliatsii",
+      "label": "Манипуляции",
+      "prohibit_deletion": false
+    },
+    {
+      "code": "medicines",
+      "label": "Медикаменты",
+      "prohibit_deletion": true
+    },
+    {
+      "code": "napravleniia",
+      "label": "Направление к специалистам",
+      "prohibit_deletion": false
+    },
+    {
+      "code": "nutrition",
+      "label": "Питание",
+      "prohibit_deletion": true
+    },
+    {
+      "code": "protsedury",
+      "label": "Процедурный кабинет",
+      "prohibit_deletion": false
+    },
+    {
+      "code": "sport",
+      "label": "Спорт",
+      "prohibit_deletion": false
+    }
+  ]
+}

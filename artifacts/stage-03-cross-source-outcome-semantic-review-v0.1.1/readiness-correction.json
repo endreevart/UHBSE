@@ -1,0 +1,27 @@
+{
+  "version": "0.1.1",
+  "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "NOT_COMPUTED",
+  "split_counts_are_aggregate_only": true,
+  "THRESHOLD_DECISION_REQUIRED": true,
+  "THRESHOLD_OWNER_DECISION_STATUS": "DEFERRED_UNTIL_EXHAUSTIVE_DISCOVERY",
+  "threshold_options_non_authoritative": [
+    {
+      "option_id": "T1",
+      "min_scientifically_usable_accepted": 1,
+      "rationale": "Minimal single-outcome pilot readiness (owner decision required)"
+    },
+    {
+      "option_id": "T3",
+      "min_scientifically_usable_accepted": 3,
+      "rationale": "Small multi-analyte set before classifier training gate"
+    },
+    {
+      "option_id": "T5",
+      "min_scientifically_usable_accepted": 5,
+      "rationale": "Broader coverage before classifier training gate"
+    }
+  ],
+  "owner_threshold_accepted_in_this_release": false,
+  "note": "T1/T3/T5 remain non-authoritative options only.",
+  "ok": true
+}

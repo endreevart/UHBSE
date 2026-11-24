@@ -1,0 +1,133 @@
+{
+  "B_PERIOD_ROW_LEVEL_ASSIGNMENT_COUNT": 0,
+  "B_TIMING_ROW_LEVEL_ASSIGNMENT_COUNT": 0,
+  "EFFECTIVE_B_PERIOD_CLOSES_QUESTION": false,
+  "EFFECTIVE_B_TIMING_CLOSES_QUESTION": false,
+  "SUPERSESSION_RESOLUTION_STATUS": "PASS",
+  "VISIT_CLASSIFICATION_STATUS": "NOT_PERFORMED",
+  "assignment_by_temporal_category": {
+    "CONSULTATION_ID_NULL": 0,
+    "CONSULTATION_ID_PRESENT_TARGET_NOT_FOUND": 0,
+    "CONSULTATION_TARGET_FOUND_TIME_AFTER": 0,
+    "CONSULTATION_TARGET_FOUND_TIME_BEFORE": 0,
+    "CONSULTATION_TARGET_FOUND_TIME_SAME_DAY": 0,
+    "CONSULTATION_TARGET_FOUND_TIME_UNCOMPARABLE": 0
+  },
+  "observed_row_count": 41407,
+  "questions": [
+    {
+      "attestation": "accepted",
+      "attestation_scope": null,
+      "closes_question": true,
+      "question_id": "A_MEDICATION_CODE_MEDICINES",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "A_MEDICATION_CODE_SET",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "A_RECOMMENDATION_ITEMS",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "A_DOCUMENT_FINAL",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "accepted",
+      "attestation_scope": null,
+      "closes_question": true,
+      "question_id": "B_AUTHOR",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "accepted",
+      "attestation_scope": "WORKFLOW_INTENT_NOT_ROW_LEVEL_PROOF",
+      "closes_question": false,
+      "question_id": "B_TIMING",
+      "row_level_proof": false,
+      "source": "superseding"
+    },
+    {
+      "attestation": "accepted",
+      "attestation_scope": "WORKFLOW_INTENT_NOT_ROW_LEVEL_PROOF",
+      "closes_question": false,
+      "question_id": "B_PERIOD",
+      "row_level_proof": false,
+      "source": "superseding"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "B_IDENTITY",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "B_DRUGS",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "B_VITAMINS",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "B_CHANGE",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "B_DECLINE",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "B_POSITIVE",
+      "row_level_proof": false,
+      "source": "original"
+    },
+    {
+      "attestation": "insufficient",
+      "attestation_scope": null,
+      "closes_question": false,
+      "question_id": "B_SHORT",
+      "row_level_proof": false,
+      "source": "original"
+    }
+  ],
+  "workflow_and_temporal_are_separate_layers": true,
+  "workflow_applied_row_count": 0
+}

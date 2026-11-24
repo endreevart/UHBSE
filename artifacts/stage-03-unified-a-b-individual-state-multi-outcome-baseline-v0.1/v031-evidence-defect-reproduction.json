@@ -1,0 +1,43 @@
+{
+  "version": "0.1",
+  "baseline_zip": "stage-03-unified-a-b-materialized-research-layer-v0.3.1-review.zip",
+  "V031_EVIDENCE_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "defects": {
+    "1_incomplete_exact_accounting": {
+      "confirmed": true,
+      "recommendation_eligible": null,
+      "document_eligible": null,
+      "procedure_tautological": true,
+      "events_tautological": true,
+      "unaccounted_zero_does_not_prove_full_coverage": true,
+      "identity_equation_excludes_these_domains": true
+    },
+    "2_document_gap_eligible_null": {
+      "confirmed": true,
+      "v031_materialized_documents": 203659,
+      "eligible_was_null": true,
+      "note": "Live public.documents COUNT(*) must be recomputed; gap decomposed in v0.1 accounting"
+    },
+    "3_provenance_subject_linkage_gap": {
+      "confirmed": true,
+      "null_source_scoped_subject_id_count": 4689885,
+      "cannot_treat_as_individual_state_features": true
+    },
+    "4_overlap_split_gap": {
+      "confirmed": true,
+      "overlap_aware": false,
+      "pair_lists_materialized_private": false,
+      "independent_source_assignment_risk": true
+    },
+    "5_publication_report_defects": {
+      "confirmed": true,
+      "stage_report_json_encoded_string": true,
+      "stage_report_prefix": "\"# Unified A+B Materialized Research Layer v0.3.1\\n\\nGenerat",
+      "tests_output_mentions_skip": false,
+      "note": "Clean extraction: private parquet contract skipped; not equal to 14 passed"
+    }
+  },
+  "all_defects_confirmed": true,
+  "ok": true,
+  "do_not_rewrite_v031_zip": true
+}

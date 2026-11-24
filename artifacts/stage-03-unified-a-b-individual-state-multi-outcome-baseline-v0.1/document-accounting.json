@@ -1,0 +1,23 @@
+{
+  "raw_rows_considered": 262916,
+  "eligible": 203659,
+  "materialized": 203659,
+  "rejected": 59257,
+  "unsupported": 0,
+  "duplicate_conflict": 0,
+  "missing_subject_ownership": 0,
+  "missing_timestamp": 0,
+  "retained_unresolved": 0,
+  "truncated": 0,
+  "unaccounted": 0,
+  "gap_decomposition": {
+    "missing_user": 0,
+    "non_patient_user": 59257,
+    "missing_canonical_subject": 0,
+    "duplicate_conflict": 0,
+    "unsupported": 0,
+    "other": 0
+  },
+  "denominator_source": "COUNT(*) public.documents (live)",
+  "live_raw_confirmed": true
+}

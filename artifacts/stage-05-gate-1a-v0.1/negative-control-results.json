@@ -1,0 +1,90 @@
+{
+  "NEGATIVE_CONTROL_STATUS": "PASS",
+  "baseline_accepted": true,
+  "cases": [
+    {
+      "control": "missing_attestation",
+      "reason": "SCHEMA_REQUIRED",
+      "rejected": true
+    },
+    {
+      "control": "personal_name_added",
+      "reason": "SCHEMA_CLOSED",
+      "rejected": true
+    },
+    {
+      "control": "recommendation_items_accepted_from_analysis_answer",
+      "reason": "MISMATCHED_ANSWER_CANNOT_ACCEPT",
+      "rejected": true
+    },
+    {
+      "control": "recall_uncertain_identity_accepted",
+      "reason": "RECALL_CANNOT_ACCEPT",
+      "rejected": true
+    },
+    {
+      "control": "insufficient_question_marked_closed",
+      "reason": "INSUFFICIENT_STAYS_OPEN",
+      "rejected": true
+    },
+    {
+      "control": "partial_code_set_accepted_as_complete",
+      "reason": "PARTIAL_CANNOT_CLOSE",
+      "rejected": true
+    },
+    {
+      "control": "evidence_hash_replaced",
+      "reason": "EVIDENCE_BOUND_TO_ANSWER",
+      "rejected": true
+    },
+    {
+      "control": "feedback_semantics_confirmed_with_open_questions",
+      "reason": "CONFIRMATION_REQUIRES_EVERY_FEEDBACK_QUESTION",
+      "rejected": true
+    },
+    {
+      "control": "identity_marked_established",
+      "reason": "OWNER_STATEMENT_IS_NOT_DATA_PROOF",
+      "rejected": true
+    },
+    {
+      "control": "identity_data_proof_claimed",
+      "reason": "DATA_PROOF_NOT_AVAILABLE",
+      "rejected": true
+    },
+    {
+      "control": "intake_tier_accepted_as_administration",
+      "reason": "TIER_REQUIRES_EVERY_INTAKE_QUESTION",
+      "rejected": true
+    },
+    {
+      "control": "readiness_claimed",
+      "reason": "READINESS_STAYS_NOT_READY",
+      "rejected": true
+    },
+    {
+      "control": "eligible_cell_counted",
+      "reason": "ELIGIBLE_CELLS_STAY_ZERO",
+      "rejected": true
+    },
+    {
+      "control": "domain_mapping_counted",
+      "reason": "NO_DOMAIN_MAPPING",
+      "rejected": true
+    },
+    {
+      "control": "administration_counted",
+      "reason": "NO_ADMINISTRATION",
+      "rejected": true
+    },
+    {
+      "control": "cross_source_identity_linked",
+      "reason": "NO_A_B_MERGE",
+      "rejected": true
+    }
+  ],
+  "n_cases": 16,
+  "n_rejected": 16,
+  "ok": true,
+  "privacy_rejects_numeric_identifier": true
+}

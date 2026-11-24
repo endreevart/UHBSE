@@ -1,0 +1,407 @@
+source_system: kgz_raw
+version: 0.1.1
+decisions:
+- source_relation: quest_digital.analyses_catalog
+  source_field: id
+  canonical_entity: Concept
+  canonical_field: source_concept_key
+  runtime_evidence: controlled reference catalog; Stage-03 draft CONFIRMED_SCHEMA/EXACT
+  referential_coverage: catalog_self
+  null_rate: null
+  temporal_meaning: null
+  decision: EXACT
+  confidence: HIGH
+  unresolved_reason: null
+  domain_review_requirement: false
+  may_populate_semantic_canonical_field: true
+- source_relation: quest_digital.analyses_catalog
+  source_field: name_ru
+  canonical_entity: Concept
+  canonical_field: display_name
+  runtime_evidence: controlled reference catalog; Stage-03 draft CONFIRMED_SCHEMA/EXACT
+  referential_coverage: catalog_self
+  null_rate: null
+  temporal_meaning: null
+  decision: EXACT
+  confidence: HIGH
+  unresolved_reason: null
+  domain_review_requirement: false
+  may_populate_semantic_canonical_field: true
+- source_relation: quest_digital.analyses_catalog
+  source_field: code
+  canonical_entity: Concept
+  canonical_field: raw_code
+  runtime_evidence: controlled reference catalog; Stage-03 draft CONFIRMED_SCHEMA/EXACT
+  referential_coverage: catalog_self
+  null_rate: null
+  temporal_meaning: null
+  decision: EXACT
+  confidence: HIGH
+  unresolved_reason: null
+  domain_review_requirement: false
+  may_populate_semantic_canonical_field: true
+- source_relation: public.users via consultations.patient_id
+  source_field: users.id
+  canonical_entity: Subject
+  canonical_field: source_subject_key
+  runtime_evidence: Stable users.id key; Subject = distinct users referenced by consultations.patient_id
+    (n=49564); users_in_both_roles=0 handled by patient-role rule only; not all public.users
+    are patients.
+  referential_coverage:
+    patient_id_without_user: 0
+    distinct_patient_id: 49564
+  null_rate:
+    null_patient_id_consultations: 0
+  temporal_meaning: null
+  decision: SUPPORTED_TRANSFORMATION
+  confidence: MEDIUM
+  unresolved_reason: null
+  domain_review_requirement: false
+  may_populate_semantic_canonical_field: true
+- source_relation: public.consultations
+  source_field: id
+  canonical_entity: Encounter
+  canonical_field: source_encounter_key
+  runtime_evidence: consultations exact_row_count=88867; patient_fk_resolved=88867;
+    duplicate ids=0; provider deferred
+  referential_coverage:
+    patient_fk_resolved: 88867
+    patient_fk_non_null: 88867
+  null_rate: null
+  temporal_meaning: occurred_at/recorded_at from consultation timestamps when present
+  decision: SUPPORTED_TRANSFORMATION
+  confidence: MEDIUM
+  unresolved_reason: null
+  domain_review_requirement: false
+  may_populate_semantic_canonical_field: true
+- source_relation: quest_digital.analyses_constructor
+  source_field: value
+  canonical_entity: Observation
+  canonical_field: typed_value
+  runtime_evidence: value_non_null_rate=0.9787184244745447; numeric_parseability=0.2317663570339844;
+    consultation_fk_resolved=2183297; grouping_candidates_listed_only
+  referential_coverage:
+    consultation_fk_resolved: 2183297
+  null_rate:
+    value_non_null_rate: 0.9787184244745447
+  temporal_meaning: date/consultation temporal fields candidate
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: 'Observation construction contract not proven: synthetic header
+    grouping, collision tests, and typed-value XOR not accepted for load'
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.users
+  source_field: id
+  canonical_entity: Provider
+  canonical_field: source_provider_key
+  runtime_evidence: consultations.doctor_id references users; is_doctor flag present
+    but not confirmed sole role
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: users multi-role; provider role not exclusively confirmed
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: id
+  canonical_entity: ObservationComponent
+  canonical_field: component_id
+  runtime_evidence: Stage 02 laboratory_results crosswalk hypothesis
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: no confirmed Source B observation header table
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: consultation_id
+  canonical_entity: ObservationComponent
+  canonical_field: observation_id
+  runtime_evidence: FK to consultations; used in grouping rule
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: maps to synthetic Observation header key not a source row
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: pool_id
+  canonical_entity: ObservationComponent
+  canonical_field: observation_id
+  runtime_evidence: pool_id participates in grouping rule
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: header grouping hypothesis only
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: catalog_id
+  canonical_entity: ObservationComponent
+  canonical_field: raw_code
+  runtime_evidence: FK to analyses_catalog
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: date
+  canonical_entity: ObservationComponent
+  canonical_field: observation_id
+  runtime_evidence: date used in grouping rule
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: header grouping hypothesis only
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: value
+  canonical_entity: ObservationComponent
+  canonical_field: raw_value
+  runtime_evidence: schema-profile value column (not result)
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: equivalence to Source A analysisresultitem unproven
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: status
+  canonical_entity: ObservationComponent
+  canonical_field: text_value
+  runtime_evidence: schema-profile status
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: extra
+  canonical_entity: ObservationComponent
+  canonical_field: text_value
+  runtime_evidence: extra payload column present
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: UNKNOWN
+  confidence: LOW
+  unresolved_reason: payload schema unknown
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: quest_digital.analyses_constructor
+  source_field: has_result
+  canonical_entity: ObservationComponent
+  canonical_field: abnormal_flag
+  runtime_evidence: boolean result availability flag
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: birthdate
+  canonical_entity: SubjectCharacteristic
+  canonical_field: date_value
+  runtime_evidence: stable profile birthdate; not merged with users_profile birth_date
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: sex
+  canonical_entity: SubjectCharacteristic
+  canonical_field: categorical_value
+  runtime_evidence: raw sex column; not biological_sex normalization
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: weight
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  runtime_evidence: dynamic wellness indicator on profile row
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: height
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  runtime_evidence: dynamic wellness indicator on profile row
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: pregnant
+  canonical_entity: ObservationComponent
+  canonical_field: categorical_value
+  runtime_evidence: pregnant stored as raw categorical varchar
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: kok
+  canonical_entity: ObservationComponent
+  canonical_field: boolean_value
+  runtime_evidence: boolean kok flag; not OCP use without semantic confirmation
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: height_decreased
+  canonical_entity: ObservationComponent
+  canonical_field: boolean_value
+  runtime_evidence: boolean height_decreased flag
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: cigarettes
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  runtime_evidence: integer cigarettes column; not per-day count without documentation
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: temperature
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  runtime_evidence: double precision temperature; unit not stored or confirmed
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_profile
+  source_field: sleep
+  canonical_entity: ObservationComponent
+  canonical_field: numeric_value
+  runtime_evidence: integer sleep column; not hours without documentation
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.profilaxys_analyses
+  source_field: id
+  canonical_entity: ObservationComponent
+  canonical_field: component_id
+  runtime_evidence: Stage 02 measurements candidate
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: UNKNOWN
+  confidence: LOW
+  unresolved_reason: measurements:None->public.profilaxys_analyses
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.users_profile
+  source_field: birth_date
+  canonical_entity: SubjectCharacteristic
+  canonical_field: date_value
+  runtime_evidence: users_profile birth_date; not merged with profilaxys_profile birthdate
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+- source_relation: public.users_profile
+  source_field: gender
+  canonical_entity: SubjectCharacteristic
+  canonical_field: categorical_value
+  runtime_evidence: users_profile gender column; not biological_sex normalization
+  referential_coverage: null
+  null_rate: null
+  temporal_meaning: null
+  decision: HYPOTHESIS
+  confidence: LOW
+  unresolved_reason: null
+  domain_review_requirement: true
+  may_populate_semantic_canonical_field: false
+catalog_exact_count: 3
+clinical_exact_or_supported:
+  Subject: 1
+  Encounter: 1
+  Observation: 0
+  total: 2
+source_b_subject_mapping_status: ACCEPTED
+source_b_encounter_mapping_status: ACCEPTED
+source_b_observation_mapping_status: HYPOTHESIS_NOT_LOADED
+invented_exact_observation_mapping: false
+notes:
+- Catalog Concept EXACT does not complete clinical integration.
+- HYPOTHESIS mappings must not populate semantic clinical fields.
+- Observation left HYPOTHESIS without proven construction contract.

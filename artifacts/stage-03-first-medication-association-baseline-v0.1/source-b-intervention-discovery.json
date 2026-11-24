@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "SOURCE_B_INTERVENTION_DISCOVERY_STATUS": "NO_ACCEPTED_SOURCE_B_INTERVENTION_STRUCTURE_FOUND",
+  "mapping_invented": false,
+  "name_pattern_hits_after_payment_exclusion": [],
+  "excluded_payment_or_order_false_positives": [
+    {
+      "schema": "public",
+      "table": "payment_balance"
+    },
+    {
+      "schema": "public",
+      "table": "payment_invoices"
+    },
+    {
+      "schema": "public",
+      "table": "payment_promo_code"
+    },
+    {
+      "schema": "public",
+      "table": "payment_sberbank_orders"
+    },
+    {
+      "schema": "public",
+      "table": "payment_transactions"
+    }
+  ],
+  "accepted_candidates_with_medicationish_columns": [],
+  "payment_sberbank_orders_excluded": true,
+  "note": "payment_sberbank_orders and generic commercial/order tables are not accepted as medication or intervention structures."
+}

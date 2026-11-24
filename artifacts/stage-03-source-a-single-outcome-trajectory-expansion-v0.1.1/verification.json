@@ -1,0 +1,76 @@
+{
+  "version": "0.1.1",
+  "generated_at": "2026-08-20T12:10:45Z",
+  "ok": true,
+  "duration_sec": 337.3,
+  "statuses": {
+    "BASELINE_VERIFICATION_STATUS": "PASS",
+    "REGISTRY_REBUILD_RECONCILIATION_STATUS": "PASS",
+    "AUTHORITATIVE_ELIGIBLE_GRAIN_COUNT": 101,
+    "DATASET_THRESHOLD_STATUS": "PASS",
+    "ACTIVE_PROVIDER_UNCERTAINTY_STATUS": "PASS",
+    "RUNTIME_APPLICABILITY_STATUS": "PASS",
+    "INPUT_MISSINGNESS_CONTRACT_STATUS": "PASS",
+    "FROZEN_PROVIDER_REGISTRY_STATUS": "PASS",
+    "ENGINE_TRAJECTORY_EVIDENCE_INTEGRATION_STATUS": "PASS",
+    "REVIEW_BUNDLE_SELF_CONTAINMENT_STATUS": "PENDING_PUBLISH",
+    "PUBLIC_DATA_MINIMIZATION_STATUS": "PENDING_PUBLISH",
+    "TRAJECTORY_FOUNDATION_CLOSURE_STATUS": "PASS",
+    "MEDICATION_RESIDUAL_MODEL_STATUS": "NOT_STARTED",
+    "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+    "TREATMENT_EFFECT_STATUS": "NOT_EVALUATED",
+    "CAUSAL_EFFECT_STATUS": "NOT_EVALUATED",
+    "SCIENTIFIC_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY",
+    "CLINICAL_VALIDATION_STATUS": "NOT_STARTED",
+    "PRODUCTION_READINESS": "NOT_CLAIMED",
+    "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "PUBLICATION_INTEGRITY_STATUS": "PENDING_PUBLISH",
+    "MULTI_OUTCOME_MODEL_STATUS": "NOT_STARTED"
+  },
+  "aggregate": {
+    "version": "0.1.1",
+    "n_registry_grains_v01": 104,
+    "n_processed": 104,
+    "AUTHORITATIVE_ELIGIBLE_GRAIN_COUNT": 101,
+    "n_ineligible": 3,
+    "successfully_trained": 101,
+    "active_persistence": 24,
+    "active_trend": 0,
+    "active_ridge": 77,
+    "outcome_status_counts": {
+      "EXPLORATORY_INCREMENTAL_PREDICTIVE_SIGNAL_SUPPORTED": 44,
+      "NO_INCREMENTAL_SIGNAL_DETECTED": 57
+    },
+    "ineligible_outcomes": [
+      {
+        "outcome": "Антитела к вирусу простого герпеса I, II типов, IgG",
+        "unit": "_",
+        "n_pairs": 297,
+        "fails": [
+          "strict_consecutive_pairs"
+        ]
+      },
+      {
+        "outcome": "Антитела к цитомегаловирусу, IgG",
+        "unit": "_",
+        "n_pairs": 284,
+        "fails": [
+          "strict_consecutive_pairs"
+        ]
+      },
+      {
+        "outcome": "ОЖСС",
+        "unit": "мкмоль/л",
+        "n_pairs": 296,
+        "fails": [
+          "strict_consecutive_pairs"
+        ]
+      }
+    ],
+    "no_pooled_mae_across_units": true,
+    "forced_count_104": false
+  },
+  "max_grains": null,
+  "reconciliation_hash": "3fbd809bec340711f7529cf7e1c4561c50374f1d9932bc008f4321c9df287d08",
+  "provider_registry_hash": "310d73a82288844e67121711f53554056bbf072bb704970303ec385725273cfa"
+}

@@ -1,0 +1,47 @@
+{
+  "version": "0.1",
+  "ENGINE_TRAJECTORY_TTE_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+  "fixtures": {
+    "source_a": {
+      "applicability": "in_support",
+      "regime_candidate_id": 0,
+      "tte_prob_technical": 0.6837606837606838,
+      "state_representation_used": false,
+      "provenance_model_hashes": {
+        "regime_k": 5,
+        "ood_present": true
+      }
+    },
+    "source_b": {
+      "applicability": "in_support",
+      "regime_candidate_id": 0,
+      "tte_prob_technical": 0.2500740719015056,
+      "state_representation_used": false,
+      "provenance_model_hashes": {
+        "regime_k": 5,
+        "ood_present": true
+      }
+    },
+    "out_of_support": {
+      "applicability": "out_of_support_technical",
+      "regime_candidate_id": 0,
+      "tte_prob_technical": 0.2500740719015056,
+      "state_representation_used": false,
+      "provenance_model_hashes": {
+        "regime_k": 5,
+        "ood_present": true
+      }
+    }
+  },
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "parent_isolation": true,
+    "rollback": true,
+    "predicted_evidence_does_not_drive_synthetic": true,
+    "tte_is_not_intervention_recommendation": true
+  },
+  "deterministic_repeat": true,
+  "ok": true
+}

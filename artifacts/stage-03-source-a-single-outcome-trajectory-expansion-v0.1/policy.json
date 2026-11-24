@@ -1,0 +1,57 @@
+{
+  "version": "0.1",
+  "PRIMARY_THRESHOLD_PROFILE": "conservative",
+  "EXPECTED_GRAIN_COUNT": 104,
+  "global_policy_changed": false,
+  "medication_gates_changed": false,
+  "methodology_pin": {
+    "source_paths": [
+      "src/human_simulator/scientific/models.py",
+      "src/human_simulator/scientific/dataset.py",
+      "src/human_simulator/scientific/splits.py",
+      "src/human_simulator/scientific_v02/policy.py",
+      "src/human_simulator/scientific_v02/train.py",
+      "src/human_simulator/scientific_v02/evaluate.py",
+      "src/human_simulator/scientific_v02/uncertainty.py",
+      "src/human_simulator/scientific_v02/applicability.py"
+    ],
+    "seed": 42,
+    "l2": 0.1,
+    "feature_order": [
+      "y_t0",
+      "horizon_days",
+      "n_prior_measurements",
+      "prior_mean",
+      "prior_last_delta",
+      "days_since_first",
+      "has_prior_history",
+      "prior_mean_missing_flag",
+      "prior_last_delta_missing_flag"
+    ],
+    "feature_schema_hash": "14303f8d4197b9bf8205bcb912bbb294c75f4ff2f7e22d2ae42290f97c4e29ff",
+    "split_class": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+    "split_fractions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "pair_definition": "strict_consecutive_neighbors_only",
+    "preprocessing": "standardize_fit_train_only",
+    "bootstrap_iters_accepted_scientific_v02": 2000,
+    "shuffle_perms_accepted_scientific_v02": 500,
+    "bootstrap_iters": 500,
+    "shuffle_perms": 100,
+    "monte_carlo_note": "Same bootstrap/permutation algorithms as scientific_v02; iteration counts reduced for 104-grain tractability and recorded here.",
+    "residual_std_calibrated_on": "validation"
+  },
+  "MULTI_OUTCOME_MODEL_STATUS": "NOT_STARTED",
+  "MEDICATION_RESIDUAL_MODEL_STATUS": "NOT_STARTED",
+  "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+  "CLINICAL_VALIDATION_STATUS": "NOT_STARTED",
+  "PRODUCTION_READINESS": "NOT_CLAIMED",
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "no_medication_features": true,
+  "no_hpo": true,
+  "seed": 42,
+  "l2": 0.1
+}

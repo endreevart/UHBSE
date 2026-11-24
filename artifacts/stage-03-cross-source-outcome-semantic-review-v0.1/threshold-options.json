@@ -1,0 +1,24 @@
+{
+  "version": "0.1",
+  "THRESHOLD_DECISION_REQUIRED": true,
+  "configured_min_accepted_outcomes": null,
+  "options": [
+    {
+      "option_id": "T1",
+      "min_scientifically_usable_accepted": 1,
+      "rationale": "Minimal single-outcome pilot readiness (owner decision required)"
+    },
+    {
+      "option_id": "T3",
+      "min_scientifically_usable_accepted": 3,
+      "rationale": "Small multi-analyte set before classifier training gate"
+    },
+    {
+      "option_id": "T5",
+      "min_scientifically_usable_accepted": 5,
+      "rationale": "Broader coverage before classifier training gate"
+    }
+  ],
+  "note": "No existing policy min-accepted threshold found. Do not write a new global policy without owner decision.",
+  "global_policy_written": false
+}

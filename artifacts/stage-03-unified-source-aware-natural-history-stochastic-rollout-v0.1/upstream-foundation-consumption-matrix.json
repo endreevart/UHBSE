@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "medication_residual_v01": {
+    "consume_models": false,
+    "consume_vocab": false,
+    "consume_cells": false,
+    "status": "NOT_ACCEPTED_NO_INCREMENTAL_SIGNAL_FOR_EVALUATED_CONSTRUCTION"
+  },
+  "uis_v0111_m1": {
+    "consume": false,
+    "reason": "MEDICATION_FEATURES_AND_NO_REQUESTED_HORIZON"
+  },
+  "uis_m2_encoder": {
+    "consume": false,
+    "reason": "REJECTED_OR_NOT_ACCEPTED"
+  },
+  "lep_v0211": {
+    "consume_as_outcome": false,
+    "consume_as_observation_scheduler": "OPTIONAL_WITH_UPSTREAM_LIMITATION"
+  },
+  "research_layer_v031": {
+    "consume": true,
+    "role": "observation_sequences"
+  },
+  "global_split_v011": {
+    "consume": true,
+    "role": "overlap_guarded_split"
+  }
+}

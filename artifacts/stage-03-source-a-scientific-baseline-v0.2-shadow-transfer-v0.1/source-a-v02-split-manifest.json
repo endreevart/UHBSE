@@ -1,0 +1,25 @@
+{
+  "algorithm": "sha256(split|{seed}|{subject_id}) ranking of Source A scientific-eligible subjects; cut by SPLIT_TRAIN/VAL/TEST fractions; subject-disjoint",
+  "seed": 42,
+  "population_definition_hash": "7e0e3536bb5045a544775ce57c66d3147eb876bc6ed819b63faaacb392cd1a7e",
+  "split_hash": "8686b0acb2e8c7058c3354963c637a261b5e7e49a3c72ebd5327ab6449e11587",
+  "n_subjects": {
+    "train": 2069,
+    "validation": 411,
+    "test": 445,
+    "scientific_eligible_total": 7997,
+    "with_pairs_total": 2925
+  },
+  "n_pairs": {
+    "train": 4526,
+    "validation": 883,
+    "test": 936,
+    "total": 6345
+  },
+  "overlap": {
+    "subject_overlap_zero": true,
+    "locator_overlap_zero": true
+  },
+  "opaque_split_manifest_hash": "55113cbef1da8390ab3eab2862197572371012d9b61b6013131db3fd40c7cf52",
+  "contains_subject_identifiers": false
+}

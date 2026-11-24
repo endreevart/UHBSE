@@ -1,0 +1,42 @@
+{
+  "version": "0.2",
+  "source_a_model_training_status": "PASS",
+  "model_family": "ridge_regression_with_train_only_standardization",
+  "l2": 0.1,
+  "l2_retuned": false,
+  "seed": 42,
+  "n_train_pairs": 4526,
+  "n_val_pairs": 883,
+  "scaler_fit_n_rows": 4526,
+  "scaler_fit_equals_train_count": true,
+  "test_used_for_fit_or_tuning": false,
+  "source_b_used_for_fit_or_tuning": false,
+  "residual_std_calibrated_on": "validation",
+  "residual_std": 1.8164187042683952,
+  "interval_multiplier": 1.6448536269514715,
+  "feature_schema_hash": "14303f8d4197b9bf8205bcb912bbb294c75f4ff2f7e22d2ae42290f97c4e29ff",
+  "training_configuration_hash": "09a399ef644c9af83bd39139048cc046e46144f13bef55689ca6999b2ba450ab",
+  "fit_info": {
+    "n_train_pairs": 4526,
+    "feature_schema_hash": "14303f8d4197b9bf8205bcb912bbb294c75f4ff2f7e22d2ae42290f97c4e29ff",
+    "training_configuration_hash": "09a399ef644c9af83bd39139048cc046e46144f13bef55689ca6999b2ba450ab",
+    "residual_std": 1.379780439434135,
+    "preprocessing": "standardize_fit_train_only",
+    "scaler": {
+      "fitted": true,
+      "fit_n_rows": 4526,
+      "means_hash": "82b02ae675035fc6",
+      "stds_hash": "d96851cfda3bca74"
+    },
+    "claim_level": "RETROSPECTIVE_BASELINE_ONLY",
+    "l2": 0.1
+  },
+  "outcome": {
+    "candidate_id": "2685c68a3e247ca4",
+    "label": "\u04223 \u0441\u0432.",
+    "unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+    "medical_domain_interpretation": "DOMAIN_REVIEW_PENDING"
+  },
+  "claim_level": "RETROSPECTIVE_BASELINE_ONLY",
+  "clinical_validation": "NOT_CLAIMED"
+}

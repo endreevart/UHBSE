@@ -1,0 +1,82 @@
+{
+  "version": "0.1.1",
+  "canonical_expansion_lifecycle_status": "PASS",
+  "accepted_pre_expansion_snapshot": {
+    "label": "accepted_pre_expansion_snapshot",
+    "timestamp": "2026-08-18T11:55:35Z",
+    "source": "immutable accepted v0.1 live-baseline-counts.json",
+    "captured_live_or_immutable": "carried_from_immutable_accepted_artifact",
+    "source_a_subjects": 8262,
+    "canonical_row_counts": {
+      "source_system": 2,
+      "source_record": 3885993,
+      "subject": 57826,
+      "subject_characteristic": 16509,
+      "encounter": 138794,
+      "observation": 637957,
+      "observation_component": 2935305
+    },
+    "canonical_a_encounters": 49927,
+    "canonical_a_observations": 578216,
+    "canonical_a_components": 802327,
+    "note": "This is the historical pre-expansion scientific-cohort snapshot from v0.1. It must NOT be confused with canonical-counts-before.json inside v0.1, which was captured after expansion and is identical to after."
+  },
+  "expansion_execution_evidence": {
+    "label": "expansion_execution_evidence",
+    "source": "v0.1 full-population-expand-report.json + runtime checkpoint",
+    "captured_live_or_immutable": "carried_from_immutable_and_runtime",
+    "status": "PASS",
+    "n_account_patient": 43856,
+    "complete": true,
+    "truncated_rows_total": 0,
+    "skip_existing_enabled": true,
+    "note": "v0.1 canonical-counts-before.json and canonical-counts-after.json are identical because both were written after expansion completed. That pair is NOT the expansion transition evidence."
+  },
+  "post_expansion_snapshot": {
+    "label": "post_expansion_snapshot",
+    "timestamp": "2026-08-19T07:15:13Z",
+    "source": "live canonical query during v0.1.1 Phase 0",
+    "captured_live_or_immutable": "live",
+    "schema_fingerprint": "6316c75f2cdc1e7a83034feb91701c08337c56080bd59d3d575b5706a9dfe655",
+    "canonical_counts": {
+      "captured_at": "2026-08-19T07:15:13Z",
+      "source_system": 2,
+      "source_record": 4689885,
+      "subject": 93420,
+      "subject_characteristic": 87120,
+      "encounter": 156995,
+      "observation": 934233,
+      "observation_component": 3291609,
+      "subject_by_system": {
+        "kgz_raw": 49564,
+        "magerya_api": 43856
+      },
+      "magerya_api_encounter": 68128,
+      "magerya_api_observation": 874492,
+      "magerya_api_observation_component": 1158631,
+      "kgz_raw_encounter": 88867,
+      "kgz_raw_observation": 59741,
+      "kgz_raw_observation_component": 2132978,
+      "schema_fingerprint": "6316c75f2cdc1e7a83034feb91701c08337c56080bd59d3d575b5706a9dfe655"
+    },
+    "source_a_subjects": 43856
+  },
+  "idempotent_replay_snapshot": {
+    "label": "idempotent_replay_snapshot",
+    "timestamp": "2026-08-19T07:16:02Z",
+    "source": "live idempotency replay",
+    "captured_live_or_immutable": "live",
+    "status": "PASS",
+    "subjects_missing": 0,
+    "counts_unchanged": true,
+    "pending": false
+  },
+  "v01_identical_before_after_clarification": {
+    "v01_canonical_counts_before_equals_after": true,
+    "reason": "Both files captured after expansion; not a transition delta.",
+    "correct_delta_source_a_subjects": {
+      "pre": 8262,
+      "post": 43856
+    }
+  }
+}

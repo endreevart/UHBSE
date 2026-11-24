@@ -1,0 +1,113 @@
+{
+  "version": "0.3.1",
+  "baseline_zip": "stage-03-unified-a-b-clinical-research-layer-v0.3-review.zip",
+  "V03_RESEARCH_LAYER_MATERIALIZATION_STATUS": "AGGREGATE_MANIFEST_ONLY",
+  "V03_STATE_ASSEMBLY_STATUS": "COUNTS_ONLY_NOT_STATES",
+  "V03_SOURCE_B_INVENTORY_SCOPE_STATUS": "INCOMPLETE",
+  "V03_MULTI_DOMAIN_ACCOUNTING_STATUS": "ESTIMATED_RELATION_LEVEL_ONLY",
+  "V03_OVERLAP_AWARE_SPLIT_STATUS": "NOT_ESTABLISHED",
+  "V03_TECHNICAL_MERGE_CLAIM_STATUS": "CORRECTION_REQUIRED",
+  "defects": {
+    "1_patient_rows_written": {
+      "confirmed": true,
+      "patient_rows_written": false
+    },
+    "2_aggregate_manifest_only": {
+      "confirmed": true,
+      "research_layer_files": [
+        "research_schema_contract.json",
+        "research_subjects_aggregate.json",
+        "retention_contract.json",
+        "semantic_tier_summary.json"
+      ],
+      "has_row_datasets": false
+    },
+    "3_state_assembly_counts_only": {
+      "confirmed": true,
+      "state_records_created": false,
+      "assembly_status": null
+    },
+    "4_diagnoses_pending": {
+      "confirmed": true,
+      "coverage": "SOURCE_SPECIFIC_PENDING_STRUCTURED_LOAD"
+    },
+    "5_medication_pending": {
+      "confirmed": true,
+      "coverage": "SOURCE_SPECIFIC_PENDING_STRUCTURED_LOAD"
+    },
+    "6_source_b_quest_digital_only": {
+      "confirmed": true,
+      "schema_scope": "quest_digital"
+    },
+    "7_source_b_19_relations": {
+      "confirmed": true,
+      "n_relations_listed": 19
+    },
+    "8_reltuples_estimates": {
+      "confirmed": true,
+      "note": "v0.3 inventory used pg_class.reltuples for source_rows_estimated"
+    },
+    "9_unaccounted_relation_assignment": {
+      "confirmed": true,
+      "UNACCOUNTED_COUNT": 0,
+      "accounting_kind": "RELATION_ASSIGNMENT_NOT_ROW_RECONCILIATION"
+    },
+    "10_split_not_overlap_protected": {
+      "confirmed": true,
+      "overlap_aware_claim": true,
+      "independent_source_hashing": true,
+      "has_group_assignment": false
+    },
+    "11_temporal_substring_false_positives": {
+      "confirmed": true,
+      "examples": [
+        {
+          "column": "appointment_price_at_clinic_first",
+          "data_type": "numeric"
+        },
+        {
+          "column": "appointment_price_at_clinic_repeat",
+          "data_type": "numeric"
+        },
+        {
+          "column": "perform_at_clinic",
+          "data_type": "boolean"
+        },
+        {
+          "column": "perform_at_clinic",
+          "data_type": "boolean"
+        },
+        {
+          "column": "service_price_first_appointment_at_clinic_id",
+          "data_type": "bigint"
+        },
+        {
+          "column": "service_price_repeat_appointment_at_clinic_id",
+          "data_type": "bigint"
+        },
+        {
+          "column": "power_attorney",
+          "data_type": "character varying"
+        },
+        {
+          "column": "recommendation_notes",
+          "data_type": "text"
+        },
+        {
+          "column": "appointment_price_at_clinic",
+          "data_type": "matched_in_temporal_artifact"
+        },
+        {
+          "column": "service_price",
+          "data_type": "matched_in_temporal_artifact"
+        }
+      ]
+    },
+    "12_or_true_test": {
+      "confirmed": true,
+      "test_file": "tests/test_unified_research_layer_v03_unit.py"
+    }
+  },
+  "all_twelve_confirmed": true,
+  "ok": true
+}

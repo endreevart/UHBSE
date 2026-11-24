@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "probability_v0211": {
+    "status": "PUBLISHED_TECHNICAL_PARTIAL_RESULT",
+    "consume_for_medication_residual": false,
+    "reason": "NOT_USED_FOR_MEDICATION_RESIDUAL_DUE_TO_HELDOUT_LIMITATION"
+  },
+  "research_layer_v031": {
+    "status": "ACCEPTED_AS_MATERIALIZED_INPUT",
+    "consume": true,
+    "role": "medication_inventory_and_observation_lineage"
+  },
+  "uis_v0111": {
+    "status": "ACCEPTED_FOR_SPLIT_AND_OUTCOME_KEYS",
+    "frozen_m1_ridge": "NOT_USED_MEDICATION_FEATURES_AND_NO_REQUESTED_HORIZON",
+    "state_encoder": "NOT_USED_NOT_ACCEPTED"
+  },
+  "global_split_v011": {
+    "status": "ACCEPTED_OVERLAP_GUARDED_SPLIT",
+    "consume": true
+  },
+  "traj_expansion_v011": {
+    "status": "ACCEPTED_AS_IMMUTABLE_PRIOR",
+    "consume_for_residual_features": false
+  },
+  "concept_pilot_v01": {
+    "status": "ACCEPTED_AS_IMMUTABLE_PRIOR",
+    "scientifically_usable_accepted_drug_concepts": 0
+  },
+  "medication_association_v011": {
+    "status": "ACCEPTED_AS_LINEAGE_FOR_EXPANSION_ACCOUNTING",
+    "episode_rows_are_not_administrations": true
+  },
+  "medication_knowledge_v01": {
+    "status": "ACCEPTED_AS_IMMUTABLE_PRIOR",
+    "exposure_not_claimed": true
+  },
+  "medication_concept_v01": {
+    "status": "ACCEPTED_AS_IMMUTABLE_PRIOR",
+    "no_automatic_concept_acceptance": true
+  },
+  "rejected_state_encoders": "NOT_USED",
+  "no_v02112": true
+}

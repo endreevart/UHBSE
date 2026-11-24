@@ -1,0 +1,793 @@
+{
+  "catalog": {
+    "accepted_identity": false,
+    "alias_candidates": 59,
+    "catalog_version": "UNKNOWN",
+    "collision_groups": 7,
+    "common_word_or_short_terms": 4,
+    "entries": 880,
+    "matchable_entries": 869,
+    "name_set_sha256": "80854404fc7004719c4508d3c9af404cc1e2702a7fbdd6559bc60b7e8e097967",
+    "normalization": "lower; yo->e; non-letters to space; collapsed whitespace",
+    "provider": "UNKNOWN"
+  },
+  "document_medicalreport": {
+    "documents": 45062,
+    "field_presence_docs": {
+      "drugs": 4324,
+      "history_and_diagnosis_control": 45062,
+      "supplements": 4324
+    },
+    "field_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+    "history_is_not_a_recommendation": true,
+    "regions": {
+      "drugs": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "ambiguous": 1205,
+          "boundary_aware": 891,
+          "unmatched": 42966
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 307,
+          "ambiguous": 1205,
+          "boundary_aware": 2096
+        },
+        "matched_term_length": {
+          "n": 4804,
+          "p10": 8,
+          "p50": 15,
+          "p90": 44
+        },
+        "non_empty": 2108,
+        "non_empty_fraction": 0.0468,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.9516,
+          "duration_like": 0.9122,
+          "frequency_like": 0.7343,
+          "route_like": 0.2917,
+          "supplement_like": 0.1575
+        },
+        "pattern_texts": {
+          "dose_like": 2006,
+          "duration_like": 1923,
+          "frequency_like": 1548,
+          "route_like": 615,
+          "supplement_like": 332
+        },
+        "texts": 45062
+      },
+      "history_and_diagnosis_control": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 55,
+          "ambiguous": 8458,
+          "boundary_aware": 10357,
+          "unmatched": 26192
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 190,
+          "ambiguous": 8458,
+          "boundary_aware": 18815
+        },
+        "matched_term_length": {
+          "n": 31820,
+          "p10": 7,
+          "p50": 10,
+          "p90": 13
+        },
+        "non_empty": 44683,
+        "non_empty_fraction": 0.9916,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.3839,
+          "duration_like": 0.4542,
+          "frequency_like": 0.2058,
+          "route_like": 0.2726,
+          "supplement_like": 0.7448
+        },
+        "pattern_texts": {
+          "dose_like": 17155,
+          "duration_like": 20295,
+          "frequency_like": 9197,
+          "route_like": 12182,
+          "supplement_like": 33282
+        },
+        "texts": 45062
+      },
+      "other_fields": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 46,
+          "ambiguous": 5291,
+          "boundary_aware": 6642,
+          "unmatched": 33083
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 203,
+          "ambiguous": 5291,
+          "boundary_aware": 11933
+        },
+        "matched_term_length": {
+          "n": 20244,
+          "p10": 7,
+          "p50": 8,
+          "p90": 11
+        },
+        "non_empty": 45062,
+        "non_empty_fraction": 1.0,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.143,
+          "duration_like": 0.2706,
+          "frequency_like": 0.1172,
+          "route_like": 0.0899,
+          "supplement_like": 0.647
+        },
+        "pattern_texts": {
+          "dose_like": 6442,
+          "duration_like": 12192,
+          "frequency_like": 5281,
+          "route_like": 4053,
+          "supplement_like": 29155
+        },
+        "texts": 45062
+      },
+      "recommendation_items": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 67,
+          "ambiguous": 21354,
+          "boundary_aware": 6610,
+          "unmatched": 17031
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 2501,
+          "ambiguous": 21354,
+          "boundary_aware": 27964
+        },
+        "matched_term_length": {
+          "n": 82761,
+          "p10": 8,
+          "p50": 10,
+          "p90": 27
+        },
+        "non_empty": 39411,
+        "non_empty_fraction": 0.8746,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.724,
+          "duration_like": 0.7548,
+          "frequency_like": 0.79,
+          "route_like": 0.228,
+          "supplement_like": 0.5911
+        },
+        "pattern_texts": {
+          "dose_like": 28535,
+          "duration_like": 29747,
+          "frequency_like": 31136,
+          "route_like": 8987,
+          "supplement_like": 23294
+        },
+        "texts": 45062
+      },
+      "recommendations": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 67,
+          "ambiguous": 21354,
+          "boundary_aware": 6610,
+          "unmatched": 17031
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 2501,
+          "ambiguous": 21354,
+          "boundary_aware": 27964
+        },
+        "matched_term_length": {
+          "n": 82761,
+          "p10": 8,
+          "p50": 10,
+          "p90": 27
+        },
+        "non_empty": 39413,
+        "non_empty_fraction": 0.8746,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.724,
+          "duration_like": 0.7548,
+          "frequency_like": 0.79,
+          "route_like": 0.228,
+          "supplement_like": 0.7167
+        },
+        "pattern_texts": {
+          "dose_like": 28535,
+          "duration_like": 29747,
+          "frequency_like": 31136,
+          "route_like": 8987,
+          "supplement_like": 28249
+        },
+        "texts": 45062
+      },
+      "supplements": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "ambiguous": 2175,
+          "boundary_aware": 171,
+          "unmatched": 42716
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 526,
+          "ambiguous": 2175,
+          "boundary_aware": 2346
+        },
+        "matched_term_length": {
+          "n": 17180,
+          "p10": 9,
+          "p50": 21,
+          "p90": 35
+        },
+        "non_empty": 2347,
+        "non_empty_fraction": 0.0521,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.9911,
+          "duration_like": 0.9945,
+          "frequency_like": 0.9416,
+          "route_like": 0.1099,
+          "supplement_like": 0.9557
+        },
+        "pattern_texts": {
+          "dose_like": 2326,
+          "duration_like": 2334,
+          "frequency_like": 2210,
+          "route_like": 258,
+          "supplement_like": 2243
+        },
+        "texts": 45062
+      }
+    }
+  },
+  "document_recommendation": {
+    "accepted_medication_identity": false,
+    "by_section_code": {
+      "activity": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 2,
+          "ambiguous": 26043,
+          "boundary_aware": 3442,
+          "normalized_exact": 1,
+          "unmatched": 4783
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 5962,
+          "ambiguous": 26043,
+          "boundary_aware": 29486,
+          "normalized_exact": 1
+        },
+        "code_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+        "documents": 33404,
+        "item_types": {
+          "list": 34271
+        },
+        "items": 172716,
+        "items_per_section": {
+          "n": 34271,
+          "p10": 1,
+          "p50": 5,
+          "p90": 9
+        },
+        "matched_term_length": {
+          "n": 155430,
+          "p10": 8,
+          "p50": 17,
+          "p90": 31
+        },
+        "non_empty": 31574,
+        "non_empty_fraction": 0.9213,
+        "non_empty_item_fraction": 1.0,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.8994,
+          "duration_like": 0.8386,
+          "frequency_like": 0.9189,
+          "route_like": 0.2923,
+          "supplement_like": 0.7607
+        },
+        "pattern_texts": {
+          "dose_like": 28397,
+          "duration_like": 26477,
+          "frequency_like": 29012,
+          "route_like": 9230,
+          "supplement_like": 24019
+        },
+        "sections": 34271,
+        "texts": 34271
+      },
+      "data_povtornogo_obrashcheniia": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "boundary_aware": 4,
+          "unmatched": 3961
+        },
+        "catalog_method_hits": {
+          "boundary_aware": 4
+        },
+        "code_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+        "documents": 3125,
+        "item_types": {
+          "list": 3965
+        },
+        "items": 1360,
+        "items_per_section": {
+          "n": 3965,
+          "p10": 0,
+          "p50": 0,
+          "p90": 1
+        },
+        "matched_term_length": {
+          "n": 4,
+          "p10": 8,
+          "p50": 8,
+          "p90": 8
+        },
+        "non_empty": 1360,
+        "non_empty_fraction": 0.343,
+        "non_empty_item_fraction": 1.0,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.0007,
+          "duration_like": 0.1368,
+          "frequency_like": 0.0007,
+          "route_like": 0.0007,
+          "supplement_like": 0.0
+        },
+        "pattern_texts": {
+          "dose_like": 1,
+          "duration_like": 186,
+          "frequency_like": 1,
+          "route_like": 1,
+          "supplement_like": 0
+        },
+        "sections": 3965,
+        "texts": 3965
+      },
+      "inye_rekomendatsii": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "ambiguous": 20,
+          "boundary_aware": 162,
+          "unmatched": 3603
+        },
+        "catalog_method_hits": {
+          "ambiguous": 20,
+          "boundary_aware": 182
+        },
+        "code_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+        "documents": 2943,
+        "item_types": {
+          "list": 3785
+        },
+        "items": 769,
+        "items_per_section": {
+          "n": 3785,
+          "p10": 0,
+          "p50": 0,
+          "p90": 1
+        },
+        "matched_term_length": {
+          "n": 202,
+          "p10": 8,
+          "p50": 11,
+          "p90": 11
+        },
+        "non_empty": 501,
+        "non_empty_fraction": 0.1324,
+        "non_empty_item_fraction": 1.0,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.2355,
+          "duration_like": 0.8184,
+          "frequency_like": 0.4591,
+          "route_like": 0.012,
+          "supplement_like": 0.2934
+        },
+        "pattern_texts": {
+          "dose_like": 118,
+          "duration_like": 410,
+          "frequency_like": 230,
+          "route_like": 6,
+          "supplement_like": 147
+        },
+        "sections": 3785,
+        "texts": 3785
+      },
+      "medicines": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "ambiguous": 449,
+          "boundary_aware": 192
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 58,
+          "ambiguous": 449,
+          "boundary_aware": 641
+        },
+        "code_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+        "documents": 641,
+        "item_types": {
+          "list": 641
+        },
+        "items": 2455,
+        "items_per_section": {
+          "n": 641,
+          "p10": 1,
+          "p50": 3,
+          "p90": 9
+        },
+        "matched_term_length": {
+          "n": 3065,
+          "p10": 8,
+          "p50": 17,
+          "p90": 31
+        },
+        "non_empty": 641,
+        "non_empty_fraction": 1.0,
+        "non_empty_item_fraction": 1.0,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.7441,
+          "duration_like": 0.8487,
+          "frequency_like": 0.9688,
+          "route_like": 0.2715,
+          "supplement_like": 0.6427
+        },
+        "pattern_texts": {
+          "dose_like": 477,
+          "duration_like": 544,
+          "frequency_like": 621,
+          "route_like": 174,
+          "supplement_like": 412
+        },
+        "sections": 641,
+        "texts": 641
+      },
+      "napravlenie": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "boundary_aware": 16,
+          "unmatched": 9529
+        },
+        "catalog_method_hits": {
+          "boundary_aware": 16
+        },
+        "code_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+        "documents": 9545,
+        "item_types": {
+          "list": 9545
+        },
+        "items": 9556,
+        "items_per_section": {
+          "n": 9545,
+          "p10": 1,
+          "p50": 1,
+          "p90": 1
+        },
+        "matched_term_length": {
+          "n": 16,
+          "p10": 6,
+          "p50": 8,
+          "p90": 10
+        },
+        "non_empty": 9545,
+        "non_empty_fraction": 1.0,
+        "non_empty_item_fraction": 1.0,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.0,
+          "duration_like": 0.0386,
+          "frequency_like": 0.001,
+          "route_like": 0.0,
+          "supplement_like": 0.0012
+        },
+        "pattern_texts": {
+          "dose_like": 0,
+          "duration_like": 368,
+          "frequency_like": 10,
+          "route_like": 0,
+          "supplement_like": 11
+        },
+        "sections": 9545,
+        "texts": 9545
+      },
+      "napravleniia": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "ambiguous": 5,
+          "boundary_aware": 86,
+          "unmatched": 3625
+        },
+        "catalog_method_hits": {
+          "ambiguous": 5,
+          "boundary_aware": 91
+        },
+        "code_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+        "documents": 3096,
+        "item_types": {
+          "list": 3716
+        },
+        "items": 2600,
+        "items_per_section": {
+          "n": 3716,
+          "p10": 0,
+          "p50": 0,
+          "p90": 2
+        },
+        "matched_term_length": {
+          "n": 97,
+          "p10": 8,
+          "p50": 8,
+          "p90": 10
+        },
+        "non_empty": 1800,
+        "non_empty_fraction": 0.4844,
+        "non_empty_item_fraction": 1.0,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.0022,
+          "duration_like": 0.0633,
+          "frequency_like": 0.0089,
+          "route_like": 0.0006,
+          "supplement_like": 0.0111
+        },
+        "pattern_texts": {
+          "dose_like": 4,
+          "duration_like": 114,
+          "frequency_like": 16,
+          "route_like": 1,
+          "supplement_like": 20
+        },
+        "sections": 3716,
+        "texts": 3716
+      },
+      "nutrition": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 2,
+          "ambiguous": 540,
+          "boundary_aware": 5314,
+          "unmatched": 25327
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 4,
+          "ambiguous": 540,
+          "boundary_aware": 5854
+        },
+        "code_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+        "documents": 30265,
+        "item_types": {
+          "list": 31183
+        },
+        "items": 62136,
+        "items_per_section": {
+          "n": 31183,
+          "p10": 1,
+          "p50": 2,
+          "p90": 4
+        },
+        "matched_term_length": {
+          "n": 6467,
+          "p10": 8,
+          "p50": 9,
+          "p90": 18
+        },
+        "non_empty": 28904,
+        "non_empty_fraction": 0.9269,
+        "non_empty_item_fraction": 1.0,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.1559,
+          "duration_like": 0.4169,
+          "frequency_like": 0.4733,
+          "route_like": 0.0029,
+          "supplement_like": 0.25
+        },
+        "pattern_texts": {
+          "dose_like": 4507,
+          "duration_like": 12051,
+          "frequency_like": 13679,
+          "route_like": 83,
+          "supplement_like": 7225
+        },
+        "sections": 31183,
+        "texts": 31183
+      },
+      "sport": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "unmatched": 3611
+        },
+        "catalog_method_hits": {},
+        "code_semantics_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+        "documents": 2780,
+        "item_types": {
+          "list": 3611
+        },
+        "items": 0,
+        "items_per_section": {
+          "n": 3611,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0
+        },
+        "matched_term_length": {
+          "n": 0,
+          "p10": null,
+          "p50": null,
+          "p90": null
+        },
+        "non_empty": 0,
+        "non_empty_fraction": 0.0,
+        "non_empty_item_fraction": null,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": null,
+          "duration_like": null,
+          "frequency_like": null,
+          "route_like": null,
+          "supplement_like": null
+        },
+        "pattern_texts": {
+          "dose_like": 0,
+          "duration_like": 0,
+          "frequency_like": 0,
+          "route_like": 0,
+          "supplement_like": 0
+        },
+        "sections": 3611,
+        "texts": 3611
+      }
+    },
+    "documents": 53894,
+    "low_support_or_unsafe_code_sections": 9,
+    "scope_comparison": {
+      "outside_recommendations": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "ambiguous": 114,
+          "boundary_aware": 2986,
+          "unmatched": 50794
+        },
+        "catalog_method_hits": {
+          "ambiguous": 114,
+          "boundary_aware": 3100
+        },
+        "matched_term_length": {
+          "n": 3208,
+          "p10": 11,
+          "p50": 11,
+          "p90": 13
+        },
+        "non_empty": 44455,
+        "non_empty_fraction": 0.8249,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.004,
+          "duration_like": 0.0151,
+          "frequency_like": 0.0022,
+          "route_like": 0.0011,
+          "supplement_like": 0.2879
+        },
+        "pattern_texts": {
+          "dose_like": 179,
+          "duration_like": 671,
+          "frequency_like": 97,
+          "route_like": 47,
+          "supplement_like": 12798
+        },
+        "texts": 53894
+      },
+      "recommendation_items": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 2,
+          "ambiguous": 26878,
+          "boundary_aware": 4562,
+          "normalized_exact": 1,
+          "unmatched": 22451
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 6024,
+          "ambiguous": 26878,
+          "boundary_aware": 31441,
+          "normalized_exact": 1
+        },
+        "matched_term_length": {
+          "n": 164867,
+          "p10": 8,
+          "p50": 17,
+          "p90": 31
+        },
+        "non_empty": 40283,
+        "non_empty_fraction": 0.7474,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.7418,
+          "duration_like": 0.7687,
+          "frequency_like": 0.8084,
+          "route_like": 0.2346,
+          "supplement_like": 0.6309
+        },
+        "pattern_texts": {
+          "dose_like": 29880,
+          "duration_like": 30964,
+          "frequency_like": 32564,
+          "route_like": 9451,
+          "supplement_like": 25414
+        },
+        "texts": 53894
+      },
+      "recommendations_node": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 2,
+          "ambiguous": 26878,
+          "boundary_aware": 4563,
+          "unmatched": 22451
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 6024,
+          "ambiguous": 26878,
+          "boundary_aware": 31441
+        },
+        "matched_term_length": {
+          "n": 164867,
+          "p10": 8,
+          "p50": 17,
+          "p90": 31
+        },
+        "non_empty": 40696,
+        "non_empty_fraction": 0.7551,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.7342,
+          "duration_like": 0.7609,
+          "frequency_like": 0.8002,
+          "route_like": 0.2322,
+          "supplement_like": 0.7196
+        },
+        "pattern_texts": {
+          "dose_like": 29880,
+          "duration_like": 30964,
+          "frequency_like": 32564,
+          "route_like": 9451,
+          "supplement_like": 29285
+        },
+        "texts": 53894
+      },
+      "whole_document": {
+        "accepted_medication_identity": false,
+        "catalog_exclusive_class": {
+          "alias_candidate": 2,
+          "ambiguous": 27145,
+          "boundary_aware": 5038,
+          "unmatched": 21709
+        },
+        "catalog_method_hits": {
+          "alias_candidate": 6024,
+          "ambiguous": 27145,
+          "boundary_aware": 32183
+        },
+        "matched_term_length": {
+          "n": 167941,
+          "p10": 8,
+          "p50": 17,
+          "p90": 31
+        },
+        "non_empty": 47243,
+        "non_empty_fraction": 0.8766,
+        "pattern_fraction_of_non_empty": {
+          "dose_like": 0.6334,
+          "duration_like": 0.6591,
+          "frequency_like": 0.6894,
+          "route_like": 0.2009,
+          "supplement_like": 0.6714
+        },
+        "pattern_texts": {
+          "dose_like": 29922,
+          "duration_like": 31136,
+          "frequency_like": 32569,
+          "route_like": 9492,
+          "supplement_like": 31721
+        },
+        "texts": 53894
+      }
+    }
+  },
+  "source_system": "magerya_api"
+}

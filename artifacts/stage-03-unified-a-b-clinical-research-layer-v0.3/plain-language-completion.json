@@ -1,0 +1,41 @@
+{
+  "source_scoped_subjects_a": 43856,
+  "source_scoped_subjects_b": 49564,
+  "domains_unified_source_aware": [
+    "ResearchSubject",
+    "ResearchEncounter",
+    "ResearchEvent",
+    "ResearchObservation",
+    "ResearchObservationComponent",
+    "ResearchDiagnosis",
+    "ResearchConditionHistory",
+    "ResearchMedicationRecord",
+    "ResearchRecommendation",
+    "ResearchProcedure",
+    "ResearchDocumentReference",
+    "ResearchStateCutoff",
+    "ResearchProvenance"
+  ],
+  "domains_source_specific": [
+    "diagnoses",
+    "medications",
+    "procedures",
+    "recommendations",
+    "most_lab_outcomes_pending_comparability"
+  ],
+  "preserved_supported_estimated_rows": 7735465,
+  "unresolved_lab_candidates": 853,
+  "rejected_conflicts": 1201,
+  "available_for_first_common_modeling": [
+    "source-scoped states from canonical observations A and B",
+    "source-specific features with masks",
+    "overlap-aware split foundation",
+    "NOT cross-source accepted lab mappings (0)"
+  ],
+  "blockers_for_unified_a_b_models": [
+    "PROVIDER_INPUT_REQUIRED for specimen/assay scientific comparability",
+    "0 CROSS_SOURCE_ACCEPTED lab mappings",
+    "identity overlap unresolved — cannot claim unique pooled patients",
+    "CURRENT_STATE_CLASSIFIER and joint models intentionally NOT_STARTED"
+  ]
+}

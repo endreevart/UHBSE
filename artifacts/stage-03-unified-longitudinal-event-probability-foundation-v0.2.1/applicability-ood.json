@@ -1,0 +1,142 @@
+{
+  "version": "0.2.1",
+  "SOURCE_STRATIFIED_APPLICABILITY_STATUS": "TECHNICAL_EVALUATED",
+  "APPLICABILITY_FOUNDATION_STATUS": "TECHNICAL_EVALUATED",
+  "not_safety_boundary": true,
+  "validation_calibration_fpr": 0.02,
+  "ood_max_val_fpr_gate": 0.15,
+  "fpr_gate_passed": true,
+  "test_n_scored": 180,
+  "test_ood_fraction": 0.03333333333333333,
+  "sampling_accounting": {
+    "train": {
+      "label": "train_reference",
+      "per_stratum": 40,
+      "n": 240,
+      "strata": {
+        "kgz_raw|m2|h0": {
+          "available": 7957,
+          "expected": 40,
+          "actual": 40
+        },
+        "kgz_raw|m2|h1": {
+          "available": 8726,
+          "expected": 40,
+          "actual": 40
+        },
+        "kgz_raw|m2|h2": {
+          "available": 430,
+          "expected": 40,
+          "actual": 40
+        },
+        "magerya_api|m2|h0": {
+          "available": 8888,
+          "expected": 40,
+          "actual": 40
+        },
+        "magerya_api|m2|h1": {
+          "available": 20114,
+          "expected": 40,
+          "actual": 40
+        },
+        "magerya_api|m2|h2": {
+          "available": 5756,
+          "expected": 40,
+          "actual": 40
+        }
+      },
+      "stratified_by": [
+        "source_system",
+        "missingness_tertile",
+        "history_depth_tertile"
+      ]
+    },
+    "validation": {
+      "label": "validation_calibration",
+      "per_stratum": 25,
+      "n": 150,
+      "strata": {
+        "kgz_raw|m2|h0": {
+          "available": 1683,
+          "expected": 25,
+          "actual": 25
+        },
+        "kgz_raw|m2|h1": {
+          "available": 1672,
+          "expected": 25,
+          "actual": 25
+        },
+        "kgz_raw|m2|h2": {
+          "available": 77,
+          "expected": 25,
+          "actual": 25
+        },
+        "magerya_api|m2|h0": {
+          "available": 1851,
+          "expected": 25,
+          "actual": 25
+        },
+        "magerya_api|m2|h1": {
+          "available": 4207,
+          "expected": 25,
+          "actual": 25
+        },
+        "magerya_api|m2|h2": {
+          "available": 1391,
+          "expected": 25,
+          "actual": 25
+        }
+      },
+      "stratified_by": [
+        "source_system",
+        "missingness_tertile",
+        "history_depth_tertile"
+      ]
+    },
+    "test": {
+      "label": "test_after_freeze",
+      "per_stratum": 30,
+      "n": 180,
+      "strata": {
+        "kgz_raw|m2|h0": {
+          "available": 1747,
+          "expected": 30,
+          "actual": 30
+        },
+        "kgz_raw|m2|h1": {
+          "available": 1837,
+          "expected": 30,
+          "actual": 30
+        },
+        "kgz_raw|m2|h2": {
+          "available": 89,
+          "expected": 30,
+          "actual": 30
+        },
+        "magerya_api|m2|h0": {
+          "available": 1895,
+          "expected": 30,
+          "actual": 30
+        },
+        "magerya_api|m2|h1": {
+          "available": 4299,
+          "expected": 30,
+          "actual": 30
+        },
+        "magerya_api|m2|h2": {
+          "available": 1173,
+          "expected": 30,
+          "actual": 30
+        }
+      },
+      "stratified_by": [
+        "source_system",
+        "missingness_tertile",
+        "history_depth_tertile"
+      ]
+    }
+  },
+  "code_artifact_n_equality": true,
+  "engine_must_load_detector": true,
+  "ok": true
+}

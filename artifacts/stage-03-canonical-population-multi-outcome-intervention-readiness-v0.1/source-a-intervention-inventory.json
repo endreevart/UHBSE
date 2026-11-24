@@ -1,0 +1,56 @@
+{
+  "version": "0.1",
+  "source_system": "magerya_api",
+  "intervention_data_readiness_status": "PARTIAL",
+  "table": "magerya_api.diagnosis_medicineappointments",
+  "columns_present": [
+    "appointment_date",
+    "created",
+    "created_by_id",
+    "id",
+    "medicine_id",
+    "modified",
+    "patient_id",
+    "status"
+  ],
+  "related_tables_discovered": [
+    "diagnosis_conditionsmedicines",
+    "diagnosis_diagnosis_medicines",
+    "diagnosis_medicineappointments",
+    "diagnosis_medicines",
+    "diagnosis_medicines_conditions",
+    "diagnosis_medicinesform"
+  ],
+  "counts": {
+    "source_rows": 25726,
+    "unique_patients": 2791,
+    "unique_raw_medication_strings_or_codes": null,
+    "records_linked_to_patient": 25726,
+    "records_linked_to_appointment": 0,
+    "records_with_event_timestamp": 25726,
+    "records_with_start_date": null,
+    "records_with_end_date": null,
+    "records_with_parseable_dose": null,
+    "records_with_dose_unit": null,
+    "records_with_frequency": null,
+    "records_with_route": null,
+    "records_with_duration": null,
+    "records_representing_dose_change": null,
+    "records_representing_discontinuation": null,
+    "records_representing_replacement": null,
+    "duplicate_candidates": null,
+    "conflicting_same_time_records": null,
+    "polypharmacy_periods": null,
+    "supplement_candidates": null,
+    "unknown_unusable_rows": null
+  },
+  "explicit_non_claim": "25726 medicine-appointment source rows must NOT be presented as 25726 interventions without verification.",
+  "intervention_count_equals_source_rows": false,
+  "text_columns_inspected_names_only": [
+    "status"
+  ],
+  "time_columns": [
+    "created"
+  ],
+  "values_redacted": true
+}

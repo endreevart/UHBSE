@@ -1,0 +1,56 @@
+{
+  "manifest": {
+    "seed": 42,
+    "split_class": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+    "split_fractions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "n_subjects_eligible_split": {
+      "train": 68,
+      "validation": 14,
+      "test": 16,
+      "total": 98
+    },
+    "n_subjects": {
+      "train": 22,
+      "validation": 6,
+      "test": 2,
+      "total": 30
+    },
+    "n_pairs": {
+      "train": 25,
+      "validation": 13,
+      "test": 2,
+      "total": 40
+    },
+    "contains_raw_subject_ids": false,
+    "publishes_subject_hash_lists": false,
+    "unknown_subjects_in_pairs": 0
+  },
+  "verification": {
+    "subject_overlap_zero": true,
+    "locator_overlap_counts": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "locator_overlap_zero": true,
+    "split_hash": "804c9a92d4a6c3b70b014d8b3c8200b037126aa2b780c41db826840766491046",
+    "split_status": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+    "ok": true
+  },
+  "subject_split_summary": {
+    "seed": 42,
+    "split_hash": "804c9a92d4a6c3b70b014d8b3c8200b037126aa2b780c41db826840766491046",
+    "n_subjects": {
+      "train": 68,
+      "validation": 14,
+      "test": 16,
+      "total": 98
+    },
+    "split_class": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+    "subject_overlap_zero": true
+  }
+}

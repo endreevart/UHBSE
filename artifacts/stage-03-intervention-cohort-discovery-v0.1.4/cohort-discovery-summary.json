@@ -1,0 +1,90 @@
+{
+  "version": "0.1.4",
+  "generated_at": "2026-08-19T16:16:03Z",
+  "OVERALL_STATUS": "NO_CAPABLE_DECISION_SET_WITH_CURRENT_EVIDENCE",
+  "n_compatible_candidates": 85,
+  "typed_candidate_counts": {
+    "INGREDIENT_FAMILY_ONLY": 21,
+    "PRODUCT_IDENTITY_CANDIDATE": 46,
+    "INGREDIENT_FORM_ROUTE_STRENGTH_CANDIDATE": 9,
+    "INGREDIENT_FORM_ROUTE_CANDIDATE": 3,
+    "INGREDIENT_SET_CANDIDATE": 6
+  },
+  "n_strict_clusters": 69,
+  "n_capable_clusters": 43,
+  "top_three_clusters": [
+    {
+      "provider_neutral_concept_id": "pnconc_64fe025b2e44ee1a6fb1666cf242",
+      "cluster_key": "ursodeoxycholic_acid|udca_unspecified|oral|tablet|500_мг",
+      "n_subjects": 65,
+      "n_episodes": 1617,
+      "n_test_subjects": 9,
+      "n_capable": 2,
+      "n_grains_passing_gates": 0
+    },
+    {
+      "provider_neutral_concept_id": "pnconc_9ffb1713d04998948e5848a14e4c",
+      "cluster_key": "levothyroxine|levothyroxine_unspecified_salt|oral|tablet|50_мкг",
+      "n_subjects": 57,
+      "n_episodes": 1692,
+      "n_test_subjects": 9,
+      "n_capable": 1,
+      "n_grains_passing_gates": 0
+    },
+    {
+      "provider_neutral_concept_id": "pnconc_03084c1421d6a5713d30878da9da",
+      "cluster_key": "ursodeoxycholic_acid|udca_unspecified|oral|tablet|250_мг",
+      "n_subjects": 37,
+      "n_episodes": 1005,
+      "n_test_subjects": 11,
+      "n_capable": 1,
+      "n_grains_passing_gates": 0
+    }
+  ],
+  "minimum_honest_decision_sets": null,
+  "authoritative_any_READY": false,
+  "provisional_any_READY": false,
+  "FIRST_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY",
+  "scientifically_usable_accepted": 0,
+  "historical_authoritative_accepted": 1,
+  "audit_813_809": {
+    "813": "PRODUCT_IDENTITY_REVIEW_REQUIRED",
+    "809": "PRODUCT_IDENTITY_CANDIDATE_TYPED_REVIEW_REQUIRED",
+    "auto_accepted": false,
+    "809_typed_level": "PRODUCT_IDENTITY_CANDIDATE",
+    "813_typed_level": "INGREDIENT_FORM_ROUTE_STRENGTH_CANDIDATE"
+  },
+  "provider_gaps_top_n": 30,
+  "private_review_pack": "private/medication-reference-v014/review-pack",
+  "private_packet_files": [
+    "private/medication-reference-v014/review-pack/intervention-concept-priority.html",
+    "private/medication-reference-v014/review-pack/intervention-concept-priority.csv",
+    "private/medication-reference-v014/review-pack/strict-concept-clusters.json",
+    "private/medication-reference-v014/review-pack/concept-episode-coverage.json",
+    "private/medication-reference-v014/review-pack/minimum-decision-sets.json",
+    "private/medication-reference-v014/review-pack/provider-gaps-by-episode-impact.json",
+    "private/medication-reference-v014/review-pack/reviewer-instructions.md"
+  ],
+  "no_model_training": true,
+  "no_zip_published": true,
+  "no_automatic_human_accepted": true,
+  "v011_decision_log_unchanged": true,
+  "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "gates": {
+    "min_subjects": 100,
+    "min_episodes": 300,
+    "min_test_subjects": 30
+  },
+  "association_baseline_status": "NOT_RUN",
+  "intervention_response_model_status": "NOT_STARTED",
+  "treatment_effect_status": "NOT_EVALUATED",
+  "causal_effect_status": "NOT_EVALUATED",
+  "qsp_status": "NOT_STARTED",
+  "pkpd_status": "NOT_STARTED",
+  "clinical_validation_status": "NOT_STARTED",
+  "production_readiness": "NOT_CLAIMED",
+  "family_only_cannot_open_authoritative_cohort": true,
+  "provisional_ready_always_false": true,
+  "ranking_forbids_model_metrics": true,
+  "appointment_date_semantics": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP"
+}

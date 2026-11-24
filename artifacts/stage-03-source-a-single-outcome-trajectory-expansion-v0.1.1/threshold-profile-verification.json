@@ -1,0 +1,45 @@
+{
+  "THRESHOLD_PROFILE_VERIFICATION_STATUS": "PASS",
+  "THRESHOLD_PROFILE_MISMATCH": false,
+  "criteria": {
+    "min_subjects_with_ge2": 100,
+    "min_strict_consecutive_pairs": 300,
+    "min_test_subjects_if_split": 30
+  },
+  "expected_count_from_artifact": 104,
+  "actual_passing_count": 104,
+  "EXPECTED_REGISTRY_COUNT_V01": 104,
+  "threshold_options_sha256": "d9f27e8741beab1972221cdecf372df5bcb203a9d8f514df01e6501ceabecadc",
+  "passing_grains_preview": [
+    {
+      "outcome": "Лимфоциты",
+      "unit": "%",
+      "n_pairs": 12345,
+      "n_subjects_ge2": 5809
+    },
+    {
+      "outcome": "Моноциты",
+      "unit": "%",
+      "n_pairs": 12118,
+      "n_subjects_ge2": 5739
+    },
+    {
+      "outcome": "Эозинофилы",
+      "unit": "%",
+      "n_pairs": 11931,
+      "n_subjects_ge2": 5676
+    },
+    {
+      "outcome": "Нейтрофилы",
+      "unit": "%",
+      "n_pairs": 11820,
+      "n_subjects_ge2": 5642
+    },
+    {
+      "outcome": "Базофилы",
+      "unit": "%",
+      "n_pairs": 11600,
+      "n_subjects_ge2": 5551
+    }
+  ]
+}

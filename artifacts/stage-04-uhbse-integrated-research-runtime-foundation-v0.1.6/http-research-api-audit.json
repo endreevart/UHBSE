@@ -1,0 +1,159 @@
+{
+  "API_MODEL_ROUTING_STATUS": "PASS",
+  "API_NO_SILENT_FALLBACK_STATUS": "PASS",
+  "API_SCHEMA_CONTRACT_STATUS": "PASS",
+  "DECLARED_PRE_T0_SUMMARY_STATUS": "PASS",
+  "FALSEY_FUTURE_FIELD_REJECTION_STATUS": "PASS",
+  "FORBIDDEN_REQUEST_MODEL_EXECUTION_AUDIT_STATUS": "PASS",
+  "FROZEN_LEP_EXECUTION_STATUS": "PASS_REFERENCE_PROBE_ONLY",
+  "FROZEN_LEP_REFERENCE_PROBE_STATUS": "PASS",
+  "FUTURE_FIELD_PRESENCE_CONTRACT_STATUS": "PASS",
+  "HTTP_DETERMINISTIC_ERROR_STATUS": "PASS",
+  "HTTP_EXPLICIT_FIELD_PRESENCE_STATUS": "PASS",
+  "HTTP_FROZEN_ORDINARY_FUTURE_FIELD_MATRIX_STATUS": "PASS",
+  "HTTP_PRESENCE_SCENARIO_IDENTITY_STATUS": "PASS",
+  "HTTP_RESEARCH_API_STATUS": "BUILT",
+  "HTTP_TYPED_SCHEMA_STATUS": "PASS",
+  "LEP_ROUTE_BOUNDARY_STATUS": "PASS",
+  "PER_OUTCOME_IDENTITY_COMPLETENESS_STATUS": "PASS",
+  "SOURCE_NAMESPACE_BINDING_STATUS": "PASS",
+  "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+  "SYNTHETIC_EVENT_PROBABILITY_STATUS": "PASS",
+  "TEMPORAL_TIMESTAMP_VERIFICATION_STATUS": "PASS",
+  "WORKBENCH_BROWSER_INTEGRATION_STATUS": "PASS",
+  "bind": "127.0.0.1",
+  "browser": {
+    "WORKBENCH_BROWSER_INTEGRATION_STATUS": "PASS",
+    "bad_hash_or_abstain_visible": true,
+    "changed_state_visible": true,
+    "d1_unavailable_visible": true,
+    "future_field_rejection_visible": true,
+    "lep_probe_vs_abstention_visible": true,
+    "not_html_string_only": true,
+    "ok": true,
+    "replay_ran": true,
+    "temporal_evidence_tier_visible": true,
+    "unit_visible": true
+  },
+  "event_executed": true,
+  "frozen_http": {
+    "executed": true,
+    "paths_disclosed": false,
+    "reason": null,
+    "source_b": {
+      "executed": true,
+      "reason": null,
+      "status": "OK"
+    },
+    "source_system": "magerya_api",
+    "status": "OK"
+  },
+  "frozen_http_ok": true,
+  "future_offset_http_reason": "HISTORY_TIMESTAMP_AFTER_CUTOFF_T0",
+  "html_has_fetch_not_a_browser_test": true,
+  "lep_negative": {
+    "adapter_absent": {
+      "http_status": 422,
+      "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+      "status": "ABSTAIN"
+    },
+    "body_REFERENCE_FEATURE_PROBE": {
+      "http_status": 400,
+      "reason": "REFERENCE_PROBE_REQUIRES_DEDICATED_URL",
+      "status": "FAIL"
+    },
+    "client_features": {
+      "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+      "http_status": 422,
+      "reason": "LEP_CLIENT_VECTOR_IS_NOT_VERIFIED_STATE_ADAPTER",
+      "status": "ABSTAIN"
+    },
+    "fail_4xx_vs_abstain_422": true,
+    "feature_order_keys_in_state": {
+      "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+      "http_status": 422,
+      "reason": "LEP_CLIENT_VECTOR_IS_NOT_VERIFIED_STATE_ADAPTER",
+      "status": "ABSTAIN"
+    },
+    "lep_input_mode": {
+      "http_status": 400,
+      "reason": "REFERENCE_PROBE_REQUIRES_DEDICATED_URL",
+      "status": "FAIL"
+    }
+  },
+  "no_cors_wildcard": true,
+  "port": 53844,
+  "presence_http": {
+    "FALSEY_FUTURE_FIELD_REJECTION_STATUS": "PASS",
+    "FORBIDDEN_REQUEST_MODEL_EXECUTION_AUDIT_STATUS": "PASS",
+    "HTTP_EXPLICIT_FIELD_PRESENCE_STATUS": "PASS",
+    "HTTP_FROZEN_ORDINARY_FUTURE_FIELD_MATRIX_STATUS": "PASS",
+    "HTTP_PRESENCE_SCENARIO_IDENTITY_STATUS": "PASS",
+    "frozen_controls": {
+      "frozen_provider_available": true,
+      "ordinary_adapter_abstention_control": {
+        "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+        "http_status": 422,
+        "infer_call_delta": 0,
+        "model_execution_delta": 0,
+        "ok": true,
+        "reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+        "residual_call_delta": 0,
+        "status": "ABSTAIN"
+      },
+      "ordinary_future_field_pre_adapter": {
+        "http_status": 400,
+        "infer_call_delta": 0,
+        "model_execution_delta": 0,
+        "ok": true,
+        "reason": "FUTURE_INFORMATION_LEAKAGE",
+        "residual_call_delta": 0,
+        "status": "FAIL"
+      },
+      "reference_probe_control": {
+        "http_status": 200,
+        "infer_call_delta": 1,
+        "model_execution_delta": 1,
+        "ok": true,
+        "reason": null,
+        "residual_call_delta": 0,
+        "status": "OK"
+      }
+    },
+    "infer_calls_on_forbidden": 0,
+    "model_execution_calls_on_forbidden": 0,
+    "n_cases": 315,
+    "n_pass": 315,
+    "ok": true,
+    "residual_calls_on_allowed_false_flag_control": 64,
+    "residual_calls_on_allowed_missing_control": 64,
+    "residual_calls_on_forbidden": 0,
+    "scenario_classes": [
+      "frozen_ordinary_lep",
+      "frozen_reference_probe",
+      "nhr_forecast",
+      "nhr_joint",
+      "nhr_replay",
+      "nhr_rollout",
+      "synthetic_ordinary_lep"
+    ]
+  },
+  "reference_probe_http": {
+    "http_status": 200,
+    "reference_probe": true,
+    "route": "FROZEN_LEP_REFERENCE_PROBE",
+    "status": "OK"
+  },
+  "timestamp_verified_http": true,
+  "two_state_lep": {
+    "STATE_CONDITIONED_LEP_STATUS": "NOT_IMPLEMENTED",
+    "a_reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+    "a_status": "ABSTAIN",
+    "b_reason": "LEP_STATE_ADAPTER_NOT_IMPLEMENTED",
+    "b_status": "ABSTAIN",
+    "both_abstain": true,
+    "infer_called": false,
+    "ok": true,
+    "silent_identical_support_vector": false
+  }
+}

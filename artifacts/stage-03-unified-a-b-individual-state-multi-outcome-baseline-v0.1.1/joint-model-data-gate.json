@@ -1,0 +1,105 @@
+{
+  "version": "0.1.1",
+  "JOINT_MODEL_DATA_GATE_STATUS": "PASS",
+  "computed": true,
+  "hard_coded": false,
+  "source_aware": true,
+  "no_accepted_a_b_semantic_merge": true,
+  "checks": [
+    {
+      "name": "eligible_train_states",
+      "actual": 60773,
+      "threshold": 100,
+      "ok": true
+    },
+    {
+      "name": "eligible_validation_states",
+      "actual": 4018,
+      "threshold": 20,
+      "ok": true
+    },
+    {
+      "name": "eligible_test_states",
+      "actual": 4049,
+      "threshold": 20,
+      "ok": true
+    },
+    {
+      "name": "outcomes_source_a",
+      "actual": 12,
+      "threshold": 2,
+      "ok": true
+    },
+    {
+      "name": "outcomes_source_b",
+      "actual": 12,
+      "threshold": 2,
+      "ok": true
+    },
+    {
+      "name": "states_with_ge2_targets",
+      "actual": 22603,
+      "threshold": 50,
+      "ok": true
+    },
+    {
+      "name": "subjects_with_ge2_outcomes",
+      "actual": 13256,
+      "threshold": 50,
+      "ok": true
+    },
+    {
+      "name": "missingness_lab_fraction",
+      "actual": 0.0,
+      "threshold": 0.95,
+      "ok": true
+    },
+    {
+      "name": "target_reuse_pass",
+      "actual": true,
+      "threshold": true,
+      "ok": true
+    },
+    {
+      "name": "overlap_split_pass",
+      "actual": true,
+      "threshold": true,
+      "ok": true
+    },
+    {
+      "name": "min_validation_subjects",
+      "actual": 1704,
+      "threshold": 20,
+      "ok": true
+    },
+    {
+      "name": "min_test_subjects",
+      "actual": 1763,
+      "threshold": 20,
+      "ok": true
+    },
+    {
+      "name": "matrix_dims_finite",
+      "actual": {
+        "n_train": 60773,
+        "n_outcomes": 24,
+        "est_params": 384
+      },
+      "threshold": "finite_positive",
+      "ok": true
+    },
+    {
+      "name": "memory_runtime_estimate_ok",
+      "actual": {
+        "est_matrix_mb": 11.128,
+        "n_train_subjects": 11195
+      },
+      "threshold": {
+        "est_matrix_mb_lt": 2048
+      },
+      "ok": true
+    }
+  ],
+  "failed_checks": [],
+  "ok": true
+}

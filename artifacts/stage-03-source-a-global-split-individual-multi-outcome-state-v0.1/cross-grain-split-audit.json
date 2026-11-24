@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "CROSS_GRAIN_SPLIT_AUDIT_STATUS": "CONFLICTS_DETECTED",
+  "method": "rebuild_per_grain_build_subject_split_seed_42",
+  "n_grains": 101,
+  "n_unique_subjects_across_grains": 8329,
+  "n_subjects_in_multiple_grains": 7467,
+  "n_multi_grain_subjects_consistent_role": 7017,
+  "n_subjects_with_role_conflicts": 450,
+  "n_subjects_train_in_one_grain_heldout_in_another": 249,
+  "n_grain_pairs": 5050,
+  "n_grain_pairs_with_cross_role_conflicts": 4486,
+  "n_subjects_unsafe_for_global_heldout_multi_outcome": 450,
+  "note": "Per-grain build_subject_split is subset-dependent: role is rank within grain subject set. Conflicts do not invalidate single-outcome backtests, but forbid using v0.1.1 providers for globally held-out multi-outcome eval.",
+  "audit_hash": "d65d94e2bdce663b0f3a5421edac097a09500f0cb6e7121d6512c65a60f21ff4",
+  "subject_keys_published": false
+}

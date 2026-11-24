@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "rollback": true,
+  "counts_before": {
+    "source_system": 2,
+    "source_record": 1554843,
+    "subject": 8262,
+    "subject_characteristic": 16509,
+    "encounter": 49927,
+    "observation": 578216,
+    "observation_component": 802327
+  },
+  "counts_after_rollback": {
+    "source_system": 2,
+    "source_record": 1554843,
+    "subject": 8262,
+    "subject_characteristic": 16509,
+    "encounter": 49927,
+    "observation": 578216,
+    "observation_component": 802327
+  },
+  "counts_unchanged": true,
+  "slice_patients": 5,
+  "slice_consultations": 11,
+  "insert_stats_before_rollback": {
+    "subject": 5,
+    "encounter": 11,
+    "source_record": 16,
+    "subject_skip": 0,
+    "encounter_skip": 0
+  },
+  "mid_transaction_counts_redacted": {
+    "subject": 8267,
+    "encounter": 49938
+  },
+  "observation_loaded": false,
+  "migration_0005": false,
+  "hmac_key_source": "load_hmac_key_precedence"
+}

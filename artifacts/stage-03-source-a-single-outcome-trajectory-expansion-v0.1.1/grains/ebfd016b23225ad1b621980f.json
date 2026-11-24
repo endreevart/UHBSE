@@ -1,0 +1,112 @@
+{
+  "grain_id": "ebfd016b23225ad1b621980f",
+  "outcome": "Антитела к цитомегаловирусу, IgG",
+  "unit": "_",
+  "status": "BELOW_AUTHORITATIVE_THRESHOLD",
+  "authoritative_threshold_result": {
+    "eligible": false,
+    "fails": [
+      "strict_consecutive_pairs"
+    ],
+    "criteria_applied_to": "authoritative_rebuilt_dataset"
+  },
+  "dataset_summary": {
+    "grain_id": "ebfd016b23225ad1b621980f",
+    "outcome": "Антитела к цитомегаловирусу, IgG",
+    "unit": "_",
+    "n_observations": 2001,
+    "n_subjects": 1663,
+    "n_subjects_with_repeats": 246,
+    "n_pairs": 284,
+    "pair_meta": {
+      "schema": {
+        "version": "0.1.1.1",
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "row_fields_hash": null
+      },
+      "summary": {
+        "n_subjects_in_series": 1663,
+        "n_observations_after_filter": 2001,
+        "n_pairs": 284,
+        "n_subjects_with_pairs": 207,
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "horizon_days": {
+          "n": 284,
+          "min": 1.0,
+          "median": 110.0,
+          "max": 1378.0,
+          "mean": 202.65845070422534
+        },
+        "exclusions_by_reason": {
+          "missing_timestamp": 0,
+          "zero_horizon": 0,
+          "negative_horizon": 0,
+          "incompatible_unit": 0,
+          "duplicate_same_timestamp_collapsed": 54,
+          "all_forward_combinations_forbidden": 0
+        },
+        "units": [
+          "_"
+        ],
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "dataset_schema_hash": "9a5fde5e8b26931fdc000d1d1ad15a42f4e58c0bd591f772c3802485357278d7",
+        "dataset_build_configuration_hash": "c40f185ae688d875398e4706855c9f508b466785a67e17f1f1e7685e70ddd647",
+        "missingness": {
+          "prior_mean_null_pairs": 207,
+          "prior_last_delta_null_pairs": 207
+        },
+        "date_coverage_hash": "c0234c83321ef5f52a1fa0f4f9f5885b714b6db9bddc1b5d4c4fced5b9945ae1"
+      },
+      "config": {
+        "version": "0.1.1",
+        "source_system": "magerya_api"
+      }
+    },
+    "funnel_steps": [
+      {
+        "level": "numeric_observations",
+        "accepted": 2001,
+        "note": "Source A numeric typed values with timestamps"
+      },
+      {
+        "level": "subjects",
+        "accepted": 1663
+      },
+      {
+        "level": "subjects_with_repeats",
+        "accepted": 246
+      },
+      {
+        "level": "strict_consecutive_pairs",
+        "accepted": 284,
+        "exclusions": null
+      }
+    ],
+    "unexplained": 0,
+    "source_system": "magerya_api",
+    "medication_features_present": false
+  },
+  "n_pairs": 284,
+  "medication_features_present": false
+}

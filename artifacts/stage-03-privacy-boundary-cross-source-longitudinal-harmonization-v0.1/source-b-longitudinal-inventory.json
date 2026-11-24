@@ -1,0 +1,3535 @@
+{
+  "version": "0.1",
+  "SOURCE_B_LONGITUDINAL_INVENTORY_STATUS": "PASS",
+  "source_system": "kgz_raw",
+  "counts": {
+    "subjects": 49564,
+    "encounters": 88867,
+    "observations": 59741,
+    "components": 2132978,
+    "dated_numeric_observations": 1753362,
+    "subject_outcome_unit_with_ge2": 315968,
+    "unsupported_or_non_numeric_with_raw_text": 379616
+  },
+  "by_source_system_subjects": {
+    "kgz_raw": 49564,
+    "magerya_api": 43856
+  },
+  "source_a_rows_in_source_b_inventory": 0,
+  "source_a_subject_id_overlap_with_b": 0,
+  "source_b_rows_in_source_a_models": 0,
+  "raw_db_writes": 0,
+  "unexplained_accounting": 0,
+  "provenance_completeness": {
+    "n_components": 2132978,
+    "n_with_record_origin": 2132978,
+    "n_with_source_locator": 2132978,
+    "frac_record_origin": 1.0
+  },
+  "outcome_unit_catalog_top500": [
+    {
+      "raw_code": "mm_1004",
+      "unit": "%",
+      "n_components": 63332,
+      "n_numeric": 60442,
+      "n_subjects": 32973
+    },
+    {
+      "raw_code": "mm_1002",
+      "unit": "%",
+      "n_components": 61374,
+      "n_numeric": 55480,
+      "n_subjects": 32434
+    },
+    {
+      "raw_code": "28",
+      "unit": "г/л",
+      "n_components": 58267,
+      "n_numeric": 55125,
+      "n_subjects": 32167
+    },
+    {
+      "raw_code": "30",
+      "unit": "ммоль/л",
+      "n_components": 56648,
+      "n_numeric": 55537,
+      "n_subjects": 32029
+    },
+    {
+      "raw_code": "33",
+      "unit": "ммоль/л",
+      "n_components": 56299,
+      "n_numeric": 55312,
+      "n_subjects": 31957
+    },
+    {
+      "raw_code": "32",
+      "unit": "ммоль/л",
+      "n_components": 56211,
+      "n_numeric": 43989,
+      "n_subjects": 31956
+    },
+    {
+      "raw_code": "16",
+      "unit": "ммоль/л",
+      "n_components": 56072,
+      "n_numeric": 53920,
+      "n_subjects": 31786
+    },
+    {
+      "raw_code": "928",
+      "unit": "нг/мл",
+      "n_components": 49286,
+      "n_numeric": 36267,
+      "n_subjects": 31659
+    },
+    {
+      "raw_code": "48",
+      "unit": "мкмоль/л",
+      "n_components": 55689,
+      "n_numeric": 50434,
+      "n_subjects": 31282
+    },
+    {
+      "raw_code": "8",
+      "unit": "Ед/л",
+      "n_components": 49787,
+      "n_numeric": 49491,
+      "n_subjects": 28659
+    },
+    {
+      "raw_code": "9",
+      "unit": "Ед/л",
+      "n_components": 49684,
+      "n_numeric": 49324,
+      "n_subjects": 28642
+    },
+    {
+      "raw_code": "55",
+      "unit": "пмоль/л",
+      "n_components": 47810,
+      "n_numeric": 46634,
+      "n_subjects": 26508
+    },
+    {
+      "raw_code": "m_1086",
+      "unit": "undefined",
+      "n_components": 41165,
+      "n_numeric": 0,
+      "n_subjects": 25215
+    },
+    {
+      "raw_code": "m_1041",
+      "unit": "undefined",
+      "n_components": 29312,
+      "n_numeric": 0,
+      "n_subjects": 24658
+    },
+    {
+      "raw_code": "mm_1001",
+      "unit": "г/л",
+      "n_components": 43252,
+      "n_numeric": 38715,
+      "n_subjects": 24258
+    },
+    {
+      "raw_code": "64",
+      "unit": "нмоль/л",
+      "n_components": 37671,
+      "n_numeric": 35865,
+      "n_subjects": 23044
+    },
+    {
+      "raw_code": "m_1032",
+      "unit": "undefined",
+      "n_components": 29701,
+      "n_numeric": 0,
+      "n_subjects": 22788
+    },
+    {
+      "raw_code": "65",
+      "unit": "нмоль/л",
+      "n_components": 35403,
+      "n_numeric": 34468,
+      "n_subjects": 22064
+    },
+    {
+      "raw_code": "m_1027",
+      "unit": "undefined",
+      "n_components": 23221,
+      "n_numeric": 0,
+      "n_subjects": 20923
+    },
+    {
+      "raw_code": "51",
+      "unit": "мкг/л",
+      "n_components": 35167,
+      "n_numeric": 33159,
+      "n_subjects": 20495
+    },
+    {
+      "raw_code": "505",
+      "unit": "undefined",
+      "n_components": 22067,
+      "n_numeric": 1,
+      "n_subjects": 20069
+    },
+    {
+      "raw_code": "164",
+      "unit": "нг/мл",
+      "n_components": 23239,
+      "n_numeric": 23055,
+      "n_subjects": 19185
+    },
+    {
+      "raw_code": "62",
+      "unit": "пмоль/л",
+      "n_components": 30197,
+      "n_numeric": 27436,
+      "n_subjects": 18814
+    },
+    {
+      "raw_code": "56",
+      "unit": "мкМЕ/мл",
+      "n_components": 30978,
+      "n_numeric": 29669,
+      "n_subjects": 17879
+    },
+    {
+      "raw_code": "172",
+      "unit": "мкЕд/мл",
+      "n_components": 27720,
+      "n_numeric": 26851,
+      "n_subjects": 17550
+    },
+    {
+      "raw_code": "101",
+      "unit": "мкмоль/л",
+      "n_components": 24937,
+      "n_numeric": 18122,
+      "n_subjects": 15746
+    },
+    {
+      "raw_code": "51",
+      "unit": "нг/мл",
+      "n_components": 24080,
+      "n_numeric": 21994,
+      "n_subjects": 14671
+    },
+    {
+      "raw_code": "139",
+      "unit": "мм/час",
+      "n_components": 21872,
+      "n_numeric": 20551,
+      "n_subjects": 13819
+    },
+    {
+      "raw_code": "172",
+      "unit": "мкМЕ/мл",
+      "n_components": 20406,
+      "n_numeric": 19519,
+      "n_subjects": 13396
+    },
+    {
+      "raw_code": "153",
+      "unit": "мкмоль/л",
+      "n_components": 15585,
+      "n_numeric": 14641,
+      "n_subjects": 12829
+    },
+    {
+      "raw_code": "53",
+      "unit": "пмоль/л",
+      "n_components": 20585,
+      "n_numeric": 19860,
+      "n_subjects": 12697
+    },
+    {
+      "raw_code": "m_1047",
+      "unit": "%",
+      "n_components": 20323,
+      "n_numeric": 18230,
+      "n_subjects": 12560
+    },
+    {
+      "raw_code": "118",
+      "unit": "нг/мл",
+      "n_components": 15685,
+      "n_numeric": 15126,
+      "n_subjects": 12446
+    },
+    {
+      "raw_code": "56",
+      "unit": "мЕд/л",
+      "n_components": 21527,
+      "n_numeric": 20538,
+      "n_subjects": 12370
+    },
+    {
+      "raw_code": "101",
+      "unit": "мкг/дл",
+      "n_components": 18426,
+      "n_numeric": 15711,
+      "n_subjects": 12123
+    },
+    {
+      "raw_code": "mm_1001",
+      "unit": "г/дл",
+      "n_components": 20372,
+      "n_numeric": 18663,
+      "n_subjects": 11921
+    },
+    {
+      "raw_code": "62",
+      "unit": "пг/мл",
+      "n_components": 16924,
+      "n_numeric": 15275,
+      "n_subjects": 11091
+    },
+    {
+      "raw_code": "61",
+      "unit": "мЕд/л",
+      "n_components": 17310,
+      "n_numeric": 16470,
+      "n_subjects": 10792
+    },
+    {
+      "raw_code": "117",
+      "unit": "пг/мл",
+      "n_components": 11928,
+      "n_numeric": 11443,
+      "n_subjects": 10131
+    },
+    {
+      "raw_code": "65",
+      "unit": "мкг/дл",
+      "n_components": 15269,
+      "n_numeric": 14954,
+      "n_subjects": 10028
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "undefined",
+      "n_components": 19691,
+      "n_numeric": 4,
+      "n_subjects": 9851
+    },
+    {
+      "raw_code": "61",
+      "unit": "мМЕ/л",
+      "n_components": 15019,
+      "n_numeric": 14440,
+      "n_subjects": 9847
+    },
+    {
+      "raw_code": "58",
+      "unit": "МЕ/мл",
+      "n_components": 12187,
+      "n_numeric": 12119,
+      "n_subjects": 9406
+    },
+    {
+      "raw_code": "59",
+      "unit": "мМЕ/мл",
+      "n_components": 12248,
+      "n_numeric": 11731,
+      "n_subjects": 9378
+    },
+    {
+      "raw_code": "57",
+      "unit": "МЕ/мл",
+      "n_components": 11699,
+      "n_numeric": 11592,
+      "n_subjects": 9290
+    },
+    {
+      "raw_code": "m_1056",
+      "unit": "%",
+      "n_components": 13964,
+      "n_numeric": 13676,
+      "n_subjects": 9256
+    },
+    {
+      "raw_code": "m_1049",
+      "unit": "фл.",
+      "n_components": 13636,
+      "n_numeric": 12975,
+      "n_subjects": 9217
+    },
+    {
+      "raw_code": "60",
+      "unit": "мМЕ/мл",
+      "n_components": 11621,
+      "n_numeric": 11163,
+      "n_subjects": 9171
+    },
+    {
+      "raw_code": "m_1057",
+      "unit": "%",
+      "n_components": 13225,
+      "n_numeric": 12204,
+      "n_subjects": 8933
+    },
+    {
+      "raw_code": "149",
+      "unit": "нмоль/л",
+      "n_components": 10033,
+      "n_numeric": 9464,
+      "n_subjects": 8730
+    },
+    {
+      "raw_code": "55",
+      "unit": "нг/дл",
+      "n_components": 13798,
+      "n_numeric": 12884,
+      "n_subjects": 8417
+    },
+    {
+      "raw_code": "61",
+      "unit": "нг/мл",
+      "n_components": 12907,
+      "n_numeric": 11976,
+      "n_subjects": 8121
+    },
+    {
+      "raw_code": "m_1055",
+      "unit": "%",
+      "n_components": 11665,
+      "n_numeric": 8713,
+      "n_subjects": 8079
+    },
+    {
+      "raw_code": "m_1051",
+      "unit": "пг",
+      "n_components": 11626,
+      "n_numeric": 10906,
+      "n_subjects": 7999
+    },
+    {
+      "raw_code": "13",
+      "unit": "мкмоль/л",
+      "n_components": 9721,
+      "n_numeric": 9518,
+      "n_subjects": 7610
+    },
+    {
+      "raw_code": "22",
+      "unit": "мкмоль/л",
+      "n_components": 8825,
+      "n_numeric": 8239,
+      "n_subjects": 6941
+    },
+    {
+      "raw_code": "26",
+      "unit": "ммоль/л",
+      "n_components": 8269,
+      "n_numeric": 7691,
+      "n_subjects": 6440
+    },
+    {
+      "raw_code": "m_1048",
+      "unit": "*10^12/л",
+      "n_components": 8983,
+      "n_numeric": 8443,
+      "n_subjects": 6418
+    },
+    {
+      "raw_code": "m_1054",
+      "unit": "*10^9/л",
+      "n_components": 8972,
+      "n_numeric": 8019,
+      "n_subjects": 6391
+    },
+    {
+      "raw_code": "64",
+      "unit": "нг/мл",
+      "n_components": 9204,
+      "n_numeric": 8432,
+      "n_subjects": 6214
+    },
+    {
+      "raw_code": "m_1053",
+      "unit": "*10^9/л",
+      "n_components": 8485,
+      "n_numeric": 8083,
+      "n_subjects": 6100
+    },
+    {
+      "raw_code": "59",
+      "unit": "мМЕд/мл",
+      "n_components": 7610,
+      "n_numeric": 7111,
+      "n_subjects": 5891
+    },
+    {
+      "raw_code": "60",
+      "unit": "мМЕд/мл",
+      "n_components": 7348,
+      "n_numeric": 6812,
+      "n_subjects": 5858
+    },
+    {
+      "raw_code": "141",
+      "unit": "нг/мл",
+      "n_components": 6015,
+      "n_numeric": 5979,
+      "n_subjects": 5749
+    },
+    {
+      "raw_code": "56",
+      "unit": "мМЕ/л",
+      "n_components": 8743,
+      "n_numeric": 8362,
+      "n_subjects": 5738
+    },
+    {
+      "raw_code": "m_1059",
+      "unit": "*10^9/л",
+      "n_components": 7727,
+      "n_numeric": 7518,
+      "n_subjects": 5639
+    },
+    {
+      "raw_code": "m_1052",
+      "unit": "г/дл",
+      "n_components": 7688,
+      "n_numeric": 7045,
+      "n_subjects": 5478
+    },
+    {
+      "raw_code": "m_1060",
+      "unit": "*10^9/л",
+      "n_components": 7481,
+      "n_numeric": 7292,
+      "n_subjects": 5474
+    },
+    {
+      "raw_code": "m_1050",
+      "unit": "%",
+      "n_components": 7508,
+      "n_numeric": 6978,
+      "n_subjects": 5403
+    },
+    {
+      "raw_code": "m_1063",
+      "unit": "фл.",
+      "n_components": 7359,
+      "n_numeric": 7028,
+      "n_subjects": 5342
+    },
+    {
+      "raw_code": "m_1061",
+      "unit": "*10^9/л",
+      "n_components": 7254,
+      "n_numeric": 7038,
+      "n_subjects": 5315
+    },
+    {
+      "raw_code": "58",
+      "unit": "Ед/мл",
+      "n_components": 6758,
+      "n_numeric": 6717,
+      "n_subjects": 5239
+    },
+    {
+      "raw_code": "53",
+      "unit": "пг/мл",
+      "n_components": 8220,
+      "n_numeric": 7555,
+      "n_subjects": 5215
+    },
+    {
+      "raw_code": "m_1062",
+      "unit": "*10^9/л",
+      "n_components": 7048,
+      "n_numeric": 6600,
+      "n_subjects": 5206
+    },
+    {
+      "raw_code": "m_1058",
+      "unit": "*10^9/л",
+      "n_components": 7031,
+      "n_numeric": 6255,
+      "n_subjects": 5203
+    },
+    {
+      "raw_code": "1317B12",
+      "unit": "пмоль/л",
+      "n_components": 5847,
+      "n_numeric": 5711,
+      "n_subjects": 5164
+    },
+    {
+      "raw_code": "m_1031",
+      "unit": "undefined",
+      "n_components": 5106,
+      "n_numeric": 0,
+      "n_subjects": 4612
+    },
+    {
+      "raw_code": "m_1052",
+      "unit": "г/л",
+      "n_components": 5939,
+      "n_numeric": 5274,
+      "n_subjects": 4454
+    },
+    {
+      "raw_code": "116",
+      "unit": "undefined",
+      "n_components": 5224,
+      "n_numeric": 0,
+      "n_subjects": 4315
+    },
+    {
+      "raw_code": "m_1064",
+      "unit": "%",
+      "n_components": 5805,
+      "n_numeric": 5621,
+      "n_subjects": 4278
+    },
+    {
+      "raw_code": "18",
+      "unit": "%",
+      "n_components": 4348,
+      "n_numeric": 4161,
+      "n_subjects": 3732
+    },
+    {
+      "raw_code": "43",
+      "unit": "мг/л",
+      "n_components": 4616,
+      "n_numeric": 4452,
+      "n_subjects": 3728
+    },
+    {
+      "raw_code": "m_1018",
+      "unit": "undefined",
+      "n_components": 4403,
+      "n_numeric": 1,
+      "n_subjects": 3687
+    },
+    {
+      "raw_code": "27",
+      "unit": "мкмоль/л",
+      "n_components": 4274,
+      "n_numeric": 4153,
+      "n_subjects": 3626
+    },
+    {
+      "raw_code": "m_1071",
+      "unit": "%",
+      "n_components": 4721,
+      "n_numeric": 4225,
+      "n_subjects": 3604
+    },
+    {
+      "raw_code": "14",
+      "unit": "мкмоль/л",
+      "n_components": 4042,
+      "n_numeric": 3988,
+      "n_subjects": 3416
+    },
+    {
+      "raw_code": "40",
+      "unit": "ммоль/л",
+      "n_components": 3800,
+      "n_numeric": 3582,
+      "n_subjects": 3291
+    },
+    {
+      "raw_code": "164",
+      "unit": "мкг feu /мл",
+      "n_components": 3602,
+      "n_numeric": 3568,
+      "n_subjects": 3206
+    },
+    {
+      "raw_code": "m_1061",
+      "unit": "тыс/мкл",
+      "n_components": 4443,
+      "n_numeric": 4421,
+      "n_subjects": 3204
+    },
+    {
+      "raw_code": "m_1062",
+      "unit": "тыс/мкл",
+      "n_components": 4448,
+      "n_numeric": 4381,
+      "n_subjects": 3203
+    },
+    {
+      "raw_code": "m_1059",
+      "unit": "тыс/мкл",
+      "n_components": 4444,
+      "n_numeric": 4330,
+      "n_subjects": 3197
+    },
+    {
+      "raw_code": "m_1060",
+      "unit": "тыс/мкл",
+      "n_components": 4443,
+      "n_numeric": 4420,
+      "n_subjects": 3195
+    },
+    {
+      "raw_code": "m_1058",
+      "unit": "тыс/мкл",
+      "n_components": 4399,
+      "n_numeric": 4188,
+      "n_subjects": 3155
+    },
+    {
+      "raw_code": "164",
+      "unit": "Мкг/мл",
+      "n_components": 3609,
+      "n_numeric": 3576,
+      "n_subjects": 3149
+    },
+    {
+      "raw_code": "m_1053",
+      "unit": "тыс/мкл",
+      "n_components": 4384,
+      "n_numeric": 4276,
+      "n_subjects": 3130
+    },
+    {
+      "raw_code": "37",
+      "unit": "ммоль/л",
+      "n_components": 3709,
+      "n_numeric": 3474,
+      "n_subjects": 3123
+    },
+    {
+      "raw_code": "m_1054",
+      "unit": "тыс/мкл",
+      "n_components": 4357,
+      "n_numeric": 3684,
+      "n_subjects": 3106
+    },
+    {
+      "raw_code": "m_1048",
+      "unit": "млн/мкл",
+      "n_components": 4318,
+      "n_numeric": 4141,
+      "n_subjects": 3079
+    },
+    {
+      "raw_code": "m_1042",
+      "unit": "undefined",
+      "n_components": 4670,
+      "n_numeric": 0,
+      "n_subjects": 3073
+    },
+    {
+      "raw_code": "m_1070",
+      "unit": "фл.",
+      "n_components": 3992,
+      "n_numeric": 3780,
+      "n_subjects": 3067
+    },
+    {
+      "raw_code": "ОБС103",
+      "unit": "undefined",
+      "n_components": 3713,
+      "n_numeric": 0,
+      "n_subjects": 2985
+    },
+    {
+      "raw_code": "m_1114",
+      "unit": "undefined",
+      "n_components": 3653,
+      "n_numeric": 0,
+      "n_subjects": 2909
+    },
+    {
+      "raw_code": "218",
+      "unit": "ммоль/л",
+      "n_components": 3588,
+      "n_numeric": 3272,
+      "n_subjects": 2887
+    },
+    {
+      "raw_code": "15",
+      "unit": "Ед/л",
+      "n_components": 3336,
+      "n_numeric": 3296,
+      "n_subjects": 2837
+    },
+    {
+      "raw_code": "m_1065",
+      "unit": "%",
+      "n_components": 3698,
+      "n_numeric": 3559,
+      "n_subjects": 2789
+    },
+    {
+      "raw_code": "164",
+      "unit": "мг/л",
+      "n_components": 3184,
+      "n_numeric": 3028,
+      "n_subjects": 2768
+    },
+    {
+      "raw_code": "61",
+      "unit": "мкМЕ/мл",
+      "n_components": 3896,
+      "n_numeric": 3753,
+      "n_subjects": 2764
+    },
+    {
+      "raw_code": "199",
+      "unit": "МЕ/л",
+      "n_components": 3446,
+      "n_numeric": 3313,
+      "n_subjects": 2591
+    },
+    {
+      "raw_code": "8",
+      "unit": "undefined",
+      "n_components": 2758,
+      "n_numeric": 2159,
+      "n_subjects": 2322
+    },
+    {
+      "raw_code": "9",
+      "unit": "undefined",
+      "n_components": 2717,
+      "n_numeric": 2109,
+      "n_subjects": 2308
+    },
+    {
+      "raw_code": "1144",
+      "unit": "нг/мл",
+      "n_components": 2528,
+      "n_numeric": 2242,
+      "n_subjects": 2293
+    },
+    {
+      "raw_code": "10",
+      "unit": "г/л",
+      "n_components": 2757,
+      "n_numeric": 2659,
+      "n_subjects": 2264
+    },
+    {
+      "raw_code": "m_1185",
+      "unit": "undefined",
+      "n_components": 2705,
+      "n_numeric": 0,
+      "n_subjects": 2160
+    },
+    {
+      "raw_code": "8",
+      "unit": "МЕ/л",
+      "n_components": 2812,
+      "n_numeric": 2790,
+      "n_subjects": 2150
+    },
+    {
+      "raw_code": "9",
+      "unit": "МЕ/л",
+      "n_components": 2799,
+      "n_numeric": 2748,
+      "n_subjects": 2140
+    },
+    {
+      "raw_code": "m_1100",
+      "unit": "%",
+      "n_components": 2630,
+      "n_numeric": 1951,
+      "n_subjects": 2131
+    },
+    {
+      "raw_code": "8",
+      "unit": "Е/л",
+      "n_components": 2711,
+      "n_numeric": 2697,
+      "n_subjects": 2053
+    },
+    {
+      "raw_code": "9",
+      "unit": "Е/л",
+      "n_components": 2684,
+      "n_numeric": 2677,
+      "n_subjects": 2030
+    },
+    {
+      "raw_code": "59",
+      "unit": "МЕ/л",
+      "n_components": 2505,
+      "n_numeric": 2355,
+      "n_subjects": 2028
+    },
+    {
+      "raw_code": "60",
+      "unit": "МЕ/л",
+      "n_components": 2426,
+      "n_numeric": 2259,
+      "n_subjects": 1975
+    },
+    {
+      "raw_code": "63",
+      "unit": "нмоль/л",
+      "n_components": 2325,
+      "n_numeric": 2117,
+      "n_subjects": 1972
+    },
+    {
+      "raw_code": "511",
+      "unit": "undefined",
+      "n_components": 2335,
+      "n_numeric": 0,
+      "n_subjects": 1909
+    },
+    {
+      "raw_code": "118",
+      "unit": "нмоль/л",
+      "n_components": 2089,
+      "n_numeric": 1998,
+      "n_subjects": 1886
+    },
+    {
+      "raw_code": "B-INPL",
+      "unit": "мкмоль/л",
+      "n_components": 2135,
+      "n_numeric": 2091,
+      "n_subjects": 1851
+    },
+    {
+      "raw_code": "m_1121",
+      "unit": "undefined",
+      "n_components": 2242,
+      "n_numeric": 0,
+      "n_subjects": 1833
+    },
+    {
+      "raw_code": "m_1178",
+      "unit": "undefined",
+      "n_components": 2174,
+      "n_numeric": 491,
+      "n_subjects": 1808
+    },
+    {
+      "raw_code": "m_1101",
+      "unit": "%",
+      "n_components": 2223,
+      "n_numeric": 1660,
+      "n_subjects": 1800
+    },
+    {
+      "raw_code": "m_1069",
+      "unit": "undefined",
+      "n_components": 2275,
+      "n_numeric": 1815,
+      "n_subjects": 1727
+    },
+    {
+      "raw_code": "36",
+      "unit": "U/I",
+      "n_components": 2027,
+      "n_numeric": 1852,
+      "n_subjects": 1706
+    },
+    {
+      "raw_code": "56",
+      "unit": "undefined",
+      "n_components": 2257,
+      "n_numeric": 1540,
+      "n_subjects": 1700
+    },
+    {
+      "raw_code": "63",
+      "unit": "нг/мл",
+      "n_components": 2032,
+      "n_numeric": 1755,
+      "n_subjects": 1683
+    },
+    {
+      "raw_code": "m_1036",
+      "unit": "undefined",
+      "n_components": 1749,
+      "n_numeric": 0,
+      "n_subjects": 1632
+    },
+    {
+      "raw_code": "171",
+      "unit": "пг/мл",
+      "n_components": 1691,
+      "n_numeric": 1632,
+      "n_subjects": 1599
+    },
+    {
+      "raw_code": "172",
+      "unit": "undefined",
+      "n_components": 1889,
+      "n_numeric": 1321,
+      "n_subjects": 1580
+    },
+    {
+      "raw_code": "36",
+      "unit": "Ед/л",
+      "n_components": 1763,
+      "n_numeric": 1586,
+      "n_subjects": 1563
+    },
+    {
+      "raw_code": "50",
+      "unit": "г/л",
+      "n_components": 1764,
+      "n_numeric": 1449,
+      "n_subjects": 1558
+    },
+    {
+      "raw_code": "155",
+      "unit": "мкмоль/л",
+      "n_components": 1770,
+      "n_numeric": 1684,
+      "n_subjects": 1552
+    },
+    {
+      "raw_code": "m_1009",
+      "unit": "undefined",
+      "n_components": 1794,
+      "n_numeric": 0,
+      "n_subjects": 1501
+    },
+    {
+      "raw_code": "m_1065",
+      "unit": "фл.",
+      "n_components": 1854,
+      "n_numeric": 1759,
+      "n_subjects": 1475
+    },
+    {
+      "raw_code": "9",
+      "unit": "UI/I",
+      "n_components": 1904,
+      "n_numeric": 1880,
+      "n_subjects": 1462
+    },
+    {
+      "raw_code": "172",
+      "unit": "МЕ/л",
+      "n_components": 1741,
+      "n_numeric": 1546,
+      "n_subjects": 1445
+    },
+    {
+      "raw_code": "8",
+      "unit": "UI/I",
+      "n_components": 1879,
+      "n_numeric": 1857,
+      "n_subjects": 1426
+    },
+    {
+      "raw_code": "103",
+      "unit": "нг/мл",
+      "n_components": 1589,
+      "n_numeric": 1570,
+      "n_subjects": 1409
+    },
+    {
+      "raw_code": "66",
+      "unit": "мМЕ/мл",
+      "n_components": 1902,
+      "n_numeric": 1881,
+      "n_subjects": 1382
+    },
+    {
+      "raw_code": "m_1006",
+      "unit": "ммоль/л",
+      "n_components": 1633,
+      "n_numeric": 1548,
+      "n_subjects": 1376
+    },
+    {
+      "raw_code": "m_1080",
+      "unit": "%",
+      "n_components": 1748,
+      "n_numeric": 1581,
+      "n_subjects": 1366
+    },
+    {
+      "raw_code": "16",
+      "unit": "мг/дл",
+      "n_components": 2256,
+      "n_numeric": 1929,
+      "n_subjects": 1350
+    },
+    {
+      "raw_code": "49",
+      "unit": "мкмоль/л",
+      "n_components": 1523,
+      "n_numeric": 1381,
+      "n_subjects": 1340
+    },
+    {
+      "raw_code": "3",
+      "unit": "г/л",
+      "n_components": 1759,
+      "n_numeric": 1635,
+      "n_subjects": 1333
+    },
+    {
+      "raw_code": "m_1085",
+      "unit": "%",
+      "n_components": 1647,
+      "n_numeric": 1616,
+      "n_subjects": 1290
+    },
+    {
+      "raw_code": "m_1079",
+      "unit": "*10^9/л",
+      "n_components": 1660,
+      "n_numeric": 1540,
+      "n_subjects": 1285
+    },
+    {
+      "raw_code": "m_1051",
+      "unit": "пг/кл",
+      "n_components": 1596,
+      "n_numeric": 1504,
+      "n_subjects": 1262
+    },
+    {
+      "raw_code": "m_1012",
+      "unit": "ммоль/л",
+      "n_components": 1500,
+      "n_numeric": 1338,
+      "n_subjects": 1256
+    },
+    {
+      "raw_code": "30",
+      "unit": "мг/дл",
+      "n_components": 1978,
+      "n_numeric": 1696,
+      "n_subjects": 1231
+    },
+    {
+      "raw_code": "868",
+      "unit": "мкмоль/л",
+      "n_components": 1352,
+      "n_numeric": 994,
+      "n_subjects": 1206
+    },
+    {
+      "raw_code": "928",
+      "unit": "нмоль/л",
+      "n_components": 1614,
+      "n_numeric": 1174,
+      "n_subjects": 1195
+    },
+    {
+      "raw_code": "164",
+      "unit": "ng FEU/ml",
+      "n_components": 1347,
+      "n_numeric": 1343,
+      "n_subjects": 1190
+    },
+    {
+      "raw_code": "154",
+      "unit": "нмоль/л",
+      "n_components": 1291,
+      "n_numeric": 1229,
+      "n_subjects": 1183
+    },
+    {
+      "raw_code": "117",
+      "unit": "пмоль/л",
+      "n_components": 1374,
+      "n_numeric": 1279,
+      "n_subjects": 1152
+    },
+    {
+      "raw_code": "101",
+      "unit": "undefined",
+      "n_components": 1284,
+      "n_numeric": 555,
+      "n_subjects": 1140
+    },
+    {
+      "raw_code": "m_1007",
+      "unit": "undefined",
+      "n_components": 1192,
+      "n_numeric": 0,
+      "n_subjects": 1136
+    },
+    {
+      "raw_code": "m_1019",
+      "unit": "undefined",
+      "n_components": 2016,
+      "n_numeric": 0,
+      "n_subjects": 1123
+    },
+    {
+      "raw_code": "59",
+      "unit": "undefined",
+      "n_components": 1338,
+      "n_numeric": 902,
+      "n_subjects": 1123
+    },
+    {
+      "raw_code": "58",
+      "unit": "undefined",
+      "n_components": 1279,
+      "n_numeric": 983,
+      "n_subjects": 1110
+    },
+    {
+      "raw_code": "60",
+      "unit": "undefined",
+      "n_components": 1320,
+      "n_numeric": 869,
+      "n_subjects": 1108
+    },
+    {
+      "raw_code": "m_1106",
+      "unit": "undefined",
+      "n_components": 1121,
+      "n_numeric": 0,
+      "n_subjects": 1072
+    },
+    {
+      "raw_code": "101",
+      "unit": "Мкг/мл",
+      "n_components": 1291,
+      "n_numeric": 1040,
+      "n_subjects": 1016
+    },
+    {
+      "raw_code": "56",
+      "unit": "µIU/mL",
+      "n_components": 1446,
+      "n_numeric": 1373,
+      "n_subjects": 1014
+    },
+    {
+      "raw_code": "m_1010",
+      "unit": "undefined",
+      "n_components": 1357,
+      "n_numeric": 0,
+      "n_subjects": 1009
+    },
+    {
+      "raw_code": "1",
+      "unit": "сек.",
+      "n_components": 1330,
+      "n_numeric": 1198,
+      "n_subjects": 1001
+    },
+    {
+      "raw_code": "41",
+      "unit": "ммоль/л",
+      "n_components": 1142,
+      "n_numeric": 1107,
+      "n_subjects": 996
+    },
+    {
+      "raw_code": "42",
+      "unit": "МЕ/мл",
+      "n_components": 1038,
+      "n_numeric": 1032,
+      "n_subjects": 977
+    },
+    {
+      "raw_code": "238",
+      "unit": "undefined",
+      "n_components": 989,
+      "n_numeric": 392,
+      "n_subjects": 976
+    },
+    {
+      "raw_code": "165",
+      "unit": "ммоль/л",
+      "n_components": 1118,
+      "n_numeric": 953,
+      "n_subjects": 975
+    },
+    {
+      "raw_code": "239",
+      "unit": "undefined",
+      "n_components": 981,
+      "n_numeric": 400,
+      "n_subjects": 969
+    },
+    {
+      "raw_code": "32",
+      "unit": "мг/дл",
+      "n_components": 1642,
+      "n_numeric": 1251,
+      "n_subjects": 968
+    },
+    {
+      "raw_code": "101",
+      "unit": "µg/dL",
+      "n_components": 1316,
+      "n_numeric": 1269,
+      "n_subjects": 967
+    },
+    {
+      "raw_code": "39",
+      "unit": "ммоль/л",
+      "n_components": 1088,
+      "n_numeric": 1,
+      "n_subjects": 964
+    },
+    {
+      "raw_code": "48",
+      "unit": "undefined",
+      "n_components": 1139,
+      "n_numeric": 647,
+      "n_subjects": 956
+    },
+    {
+      "raw_code": "64",
+      "unit": "нг/дл",
+      "n_components": 1329,
+      "n_numeric": 1169,
+      "n_subjects": 954
+    },
+    {
+      "raw_code": "33",
+      "unit": "мг/дл",
+      "n_components": 1608,
+      "n_numeric": 1359,
+      "n_subjects": 953
+    },
+    {
+      "raw_code": "190",
+      "unit": "у.е.",
+      "n_components": 981,
+      "n_numeric": 454,
+      "n_subjects": 933
+    },
+    {
+      "raw_code": "m_1014",
+      "unit": "мЕд/л",
+      "n_components": 1095,
+      "n_numeric": 1087,
+      "n_subjects": 928
+    },
+    {
+      "raw_code": "169",
+      "unit": "пг/мл",
+      "n_components": 997,
+      "n_numeric": 941,
+      "n_subjects": 915
+    },
+    {
+      "raw_code": "154",
+      "unit": "нг/мл",
+      "n_components": 974,
+      "n_numeric": 901,
+      "n_subjects": 911
+    },
+    {
+      "raw_code": "11",
+      "unit": "Ед/л",
+      "n_components": 1042,
+      "n_numeric": 1013,
+      "n_subjects": 909
+    },
+    {
+      "raw_code": "510Б",
+      "unit": "undefined",
+      "n_components": 1071,
+      "n_numeric": 0,
+      "n_subjects": 907
+    },
+    {
+      "raw_code": "m_1044",
+      "unit": "ммоль/л",
+      "n_components": 1043,
+      "n_numeric": 944,
+      "n_subjects": 899
+    },
+    {
+      "raw_code": "101",
+      "unit": "мг/л",
+      "n_components": 1148,
+      "n_numeric": 1018,
+      "n_subjects": 874
+    },
+    {
+      "raw_code": "61",
+      "unit": "undefined",
+      "n_components": 1027,
+      "n_numeric": 735,
+      "n_subjects": 873
+    },
+    {
+      "raw_code": "28",
+      "unit": "г/дл",
+      "n_components": 1376,
+      "n_numeric": 1116,
+      "n_subjects": 871
+    },
+    {
+      "raw_code": "52",
+      "unit": "нмоль/л",
+      "n_components": 913,
+      "n_numeric": 821,
+      "n_subjects": 849
+    },
+    {
+      "raw_code": "57",
+      "unit": "Ед/мл",
+      "n_components": 956,
+      "n_numeric": 936,
+      "n_subjects": 848
+    },
+    {
+      "raw_code": "168",
+      "unit": "пг/мл",
+      "n_components": 953,
+      "n_numeric": 925,
+      "n_subjects": 839
+    },
+    {
+      "raw_code": "172",
+      "unit": "мМЕ/л",
+      "n_components": 1114,
+      "n_numeric": 1043,
+      "n_subjects": 813
+    },
+    {
+      "raw_code": "22",
+      "unit": "ммоль/л",
+      "n_components": 933,
+      "n_numeric": 877,
+      "n_subjects": 812
+    },
+    {
+      "raw_code": "58",
+      "unit": "IU/mL",
+      "n_components": 968,
+      "n_numeric": 961,
+      "n_subjects": 810
+    },
+    {
+      "raw_code": "54",
+      "unit": "нмоль/л",
+      "n_components": 871,
+      "n_numeric": 830,
+      "n_subjects": 806
+    },
+    {
+      "raw_code": "137/138",
+      "unit": "Ед/мл",
+      "n_components": 821,
+      "n_numeric": 18,
+      "n_subjects": 804
+    },
+    {
+      "raw_code": "19ГП/БЗ",
+      "unit": "undefined",
+      "n_components": 804,
+      "n_numeric": 0,
+      "n_subjects": 779
+    },
+    {
+      "raw_code": "143",
+      "unit": "Ед/мл",
+      "n_components": 834,
+      "n_numeric": 828,
+      "n_subjects": 769
+    },
+    {
+      "raw_code": "48",
+      "unit": "ммоль/л",
+      "n_components": 836,
+      "n_numeric": 718,
+      "n_subjects": 756
+    },
+    {
+      "raw_code": "13",
+      "unit": "ммоль/л",
+      "n_components": 845,
+      "n_numeric": 830,
+      "n_subjects": 755
+    },
+    {
+      "raw_code": "62",
+      "unit": "undefined",
+      "n_components": 851,
+      "n_numeric": 613,
+      "n_subjects": 753
+    },
+    {
+      "raw_code": "65",
+      "unit": "undefined",
+      "n_components": 859,
+      "n_numeric": 595,
+      "n_subjects": 751
+    },
+    {
+      "raw_code": "42",
+      "unit": "Ед/мл",
+      "n_components": 773,
+      "n_numeric": 748,
+      "n_subjects": 744
+    },
+    {
+      "raw_code": "48",
+      "unit": "µmol/L",
+      "n_components": 963,
+      "n_numeric": 877,
+      "n_subjects": 725
+    },
+    {
+      "raw_code": "967",
+      "unit": "Ед/мл",
+      "n_components": 765,
+      "n_numeric": 372,
+      "n_subjects": 722
+    },
+    {
+      "raw_code": "56",
+      "unit": "мМЕ/мл",
+      "n_components": 866,
+      "n_numeric": 818,
+      "n_subjects": 717
+    },
+    {
+      "raw_code": "24",
+      "unit": "Ед/л",
+      "n_components": 800,
+      "n_numeric": 755,
+      "n_subjects": 716
+    },
+    {
+      "raw_code": "164",
+      "unit": "undefined",
+      "n_components": 761,
+      "n_numeric": 486,
+      "n_subjects": 706
+    },
+    {
+      "raw_code": "868",
+      "unit": "Мкг/мл",
+      "n_components": 733,
+      "n_numeric": 307,
+      "n_subjects": 685
+    },
+    {
+      "raw_code": "57",
+      "unit": "undefined",
+      "n_components": 760,
+      "n_numeric": 563,
+      "n_subjects": 680
+    },
+    {
+      "raw_code": "m_1192",
+      "unit": "%",
+      "n_components": 801,
+      "n_numeric": 652,
+      "n_subjects": 672
+    },
+    {
+      "raw_code": "m_1047",
+      "unit": "undefined",
+      "n_components": 774,
+      "n_numeric": 533,
+      "n_subjects": 660
+    },
+    {
+      "raw_code": "1284",
+      "unit": "ОЕд/мл",
+      "n_components": 694,
+      "n_numeric": 503,
+      "n_subjects": 651
+    },
+    {
+      "raw_code": "197",
+      "unit": "нг/мл",
+      "n_components": 722,
+      "n_numeric": 619,
+      "n_subjects": 636
+    },
+    {
+      "raw_code": "36",
+      "unit": "МЕ/л",
+      "n_components": 694,
+      "n_numeric": 659,
+      "n_subjects": 635
+    },
+    {
+      "raw_code": "66",
+      "unit": "мЕд/мл",
+      "n_components": 853,
+      "n_numeric": 851,
+      "n_subjects": 627
+    },
+    {
+      "raw_code": "928",
+      "unit": "undefined",
+      "n_components": 710,
+      "n_numeric": 459,
+      "n_subjects": 618
+    },
+    {
+      "raw_code": "56",
+      "unit": "мкЕд/мл",
+      "n_components": 905,
+      "n_numeric": 872,
+      "n_subjects": 613
+    },
+    {
+      "raw_code": "172",
+      "unit": "мМЕ/мл",
+      "n_components": 698,
+      "n_numeric": 643,
+      "n_subjects": 610
+    },
+    {
+      "raw_code": "33",
+      "unit": "undefined",
+      "n_components": 669,
+      "n_numeric": 561,
+      "n_subjects": 610
+    },
+    {
+      "raw_code": "174",
+      "unit": "нг/мл",
+      "n_components": 683,
+      "n_numeric": 593,
+      "n_subjects": 608
+    },
+    {
+      "raw_code": "51",
+      "unit": "undefined",
+      "n_components": 707,
+      "n_numeric": 495,
+      "n_subjects": 605
+    },
+    {
+      "raw_code": "32",
+      "unit": "undefined",
+      "n_components": 661,
+      "n_numeric": 515,
+      "n_subjects": 605
+    },
+    {
+      "raw_code": "61",
+      "unit": "мМЕ/мл",
+      "n_components": 745,
+      "n_numeric": 703,
+      "n_subjects": 600
+    },
+    {
+      "raw_code": "m_1016",
+      "unit": "undefined",
+      "n_components": 710,
+      "n_numeric": 0,
+      "n_subjects": 594
+    },
+    {
+      "raw_code": "65",
+      "unit": "мкг/л",
+      "n_components": 798,
+      "n_numeric": 741,
+      "n_subjects": 590
+    },
+    {
+      "raw_code": "m_1023",
+      "unit": "undefined",
+      "n_components": 679,
+      "n_numeric": 0,
+      "n_subjects": 586
+    },
+    {
+      "raw_code": "57",
+      "unit": "Ед/л",
+      "n_components": 663,
+      "n_numeric": 627,
+      "n_subjects": 586
+    },
+    {
+      "raw_code": "888",
+      "unit": "Мкг/мл",
+      "n_components": 626,
+      "n_numeric": 232,
+      "n_subjects": 583
+    },
+    {
+      "raw_code": "65",
+      "unit": "нг/мл",
+      "n_components": 785,
+      "n_numeric": 734,
+      "n_subjects": 580
+    },
+    {
+      "raw_code": "84",
+      "unit": "МЕ/мл",
+      "n_components": 589,
+      "n_numeric": 544,
+      "n_subjects": 571
+    },
+    {
+      "raw_code": "44",
+      "unit": "МЕ/мл",
+      "n_components": 638,
+      "n_numeric": 590,
+      "n_subjects": 570
+    },
+    {
+      "raw_code": "m_1003",
+      "unit": "undefined",
+      "n_components": 619,
+      "n_numeric": 0,
+      "n_subjects": 570
+    },
+    {
+      "raw_code": "66",
+      "unit": "МЕ/л",
+      "n_components": 753,
+      "n_numeric": 730,
+      "n_subjects": 566
+    },
+    {
+      "raw_code": "ОБС109",
+      "unit": "undefined",
+      "n_components": 680,
+      "n_numeric": 1,
+      "n_subjects": 559
+    },
+    {
+      "raw_code": "888",
+      "unit": "мкмоль/л",
+      "n_components": 652,
+      "n_numeric": 292,
+      "n_subjects": 559
+    },
+    {
+      "raw_code": "172",
+      "unit": "мЕд/л",
+      "n_components": 774,
+      "n_numeric": 679,
+      "n_subjects": 557
+    },
+    {
+      "raw_code": "m_1123",
+      "unit": "undefined",
+      "n_components": 632,
+      "n_numeric": 0,
+      "n_subjects": 551
+    },
+    {
+      "raw_code": "m_1127",
+      "unit": "undefined",
+      "n_components": 635,
+      "n_numeric": 0,
+      "n_subjects": 542
+    },
+    {
+      "raw_code": "139",
+      "unit": "мм/год",
+      "n_components": 780,
+      "n_numeric": 765,
+      "n_subjects": 540
+    },
+    {
+      "raw_code": "61",
+      "unit": "МЕ/л",
+      "n_components": 619,
+      "n_numeric": 585,
+      "n_subjects": 536
+    },
+    {
+      "raw_code": "m_1107",
+      "unit": "undefined",
+      "n_components": 662,
+      "n_numeric": 0,
+      "n_subjects": 535
+    },
+    {
+      "raw_code": "16",
+      "unit": "undefined",
+      "n_components": 585,
+      "n_numeric": 419,
+      "n_subjects": 532
+    },
+    {
+      "raw_code": "mm_1002",
+      "unit": "undefined",
+      "n_components": 575,
+      "n_numeric": 386,
+      "n_subjects": 529
+    },
+    {
+      "raw_code": "48",
+      "unit": "µg/dL",
+      "n_components": 802,
+      "n_numeric": 757,
+      "n_subjects": 526
+    },
+    {
+      "raw_code": "m_1108",
+      "unit": "undefined",
+      "n_components": 547,
+      "n_numeric": 0,
+      "n_subjects": 523
+    },
+    {
+      "raw_code": "15",
+      "unit": "МЕ/л",
+      "n_components": 565,
+      "n_numeric": 560,
+      "n_subjects": 520
+    },
+    {
+      "raw_code": "65",
+      "unit": "µg/dL",
+      "n_components": 705,
+      "n_numeric": 668,
+      "n_subjects": 517
+    },
+    {
+      "raw_code": "51",
+      "unit": "пмоль/л",
+      "n_components": 594,
+      "n_numeric": 530,
+      "n_subjects": 513
+    },
+    {
+      "raw_code": "58",
+      "unit": "Е/мл",
+      "n_components": 582,
+      "n_numeric": 561,
+      "n_subjects": 513
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "%",
+      "n_components": 637,
+      "n_numeric": 2,
+      "n_subjects": 511
+    },
+    {
+      "raw_code": "66",
+      "unit": "undefined",
+      "n_components": 694,
+      "n_numeric": 552,
+      "n_subjects": 509
+    },
+    {
+      "raw_code": "mm_1001",
+      "unit": "undefined",
+      "n_components": 570,
+      "n_numeric": 392,
+      "n_subjects": 507
+    },
+    {
+      "raw_code": "mm_1004",
+      "unit": "undefined",
+      "n_components": 553,
+      "n_numeric": 409,
+      "n_subjects": 503
+    },
+    {
+      "raw_code": "m_1004",
+      "unit": "undefined",
+      "n_components": 535,
+      "n_numeric": 0,
+      "n_subjects": 496
+    },
+    {
+      "raw_code": "67",
+      "unit": "МЕ/мл",
+      "n_components": 521,
+      "n_numeric": 512,
+      "n_subjects": 496
+    },
+    {
+      "raw_code": "64",
+      "unit": "undefined",
+      "n_components": 519,
+      "n_numeric": 405,
+      "n_subjects": 493
+    },
+    {
+      "raw_code": "22",
+      "unit": "мг/дл",
+      "n_components": 733,
+      "n_numeric": 654,
+      "n_subjects": 491
+    },
+    {
+      "raw_code": "m_1051",
+      "unit": "%",
+      "n_components": 504,
+      "n_numeric": 456,
+      "n_subjects": 491
+    },
+    {
+      "raw_code": "102",
+      "unit": "пг/мл",
+      "n_components": 563,
+      "n_numeric": 508,
+      "n_subjects": 490
+    },
+    {
+      "raw_code": "28",
+      "unit": "undefined",
+      "n_components": 511,
+      "n_numeric": 341,
+      "n_subjects": 475
+    },
+    {
+      "raw_code": "139",
+      "unit": "undefined",
+      "n_components": 516,
+      "n_numeric": 323,
+      "n_subjects": 474
+    },
+    {
+      "raw_code": "62",
+      "unit": "нг/л",
+      "n_components": 685,
+      "n_numeric": 624,
+      "n_subjects": 470
+    },
+    {
+      "raw_code": "16",
+      "unit": "мкмоль/л",
+      "n_components": 492,
+      "n_numeric": 464,
+      "n_subjects": 470
+    },
+    {
+      "raw_code": "m_1011",
+      "unit": "undefined",
+      "n_components": 483,
+      "n_numeric": 0,
+      "n_subjects": 467
+    },
+    {
+      "raw_code": "55",
+      "unit": "undefined",
+      "n_components": 505,
+      "n_numeric": 387,
+      "n_subjects": 465
+    },
+    {
+      "raw_code": "61",
+      "unit": "мкг/л",
+      "n_components": 674,
+      "n_numeric": 649,
+      "n_subjects": 464
+    },
+    {
+      "raw_code": "169",
+      "unit": "нмоль/л",
+      "n_components": 496,
+      "n_numeric": 451,
+      "n_subjects": 462
+    },
+    {
+      "raw_code": "148",
+      "unit": "нг/мл",
+      "n_components": 511,
+      "n_numeric": 399,
+      "n_subjects": 456
+    },
+    {
+      "raw_code": "153",
+      "unit": "ммоль/л",
+      "n_components": 496,
+      "n_numeric": 441,
+      "n_subjects": 455
+    },
+    {
+      "raw_code": "m_1048",
+      "unit": "undefined",
+      "n_components": 524,
+      "n_numeric": 452,
+      "n_subjects": 450
+    },
+    {
+      "raw_code": "840",
+      "unit": "мг/дл",
+      "n_components": 465,
+      "n_numeric": 112,
+      "n_subjects": 450
+    },
+    {
+      "raw_code": "m_1029",
+      "unit": "undefined",
+      "n_components": 462,
+      "n_numeric": 0,
+      "n_subjects": 447
+    },
+    {
+      "raw_code": "64",
+      "unit": "мкг/л",
+      "n_components": 652,
+      "n_numeric": 634,
+      "n_subjects": 445
+    },
+    {
+      "raw_code": "m_1047",
+      "unit": "л/л",
+      "n_components": 575,
+      "n_numeric": 522,
+      "n_subjects": 432
+    },
+    {
+      "raw_code": "82",
+      "unit": "undefined",
+      "n_components": 442,
+      "n_numeric": 344,
+      "n_subjects": 430
+    },
+    {
+      "raw_code": "m_1054",
+      "unit": "undefined",
+      "n_components": 494,
+      "n_numeric": 433,
+      "n_subjects": 426
+    },
+    {
+      "raw_code": "m_1135",
+      "unit": "undefined",
+      "n_components": 465,
+      "n_numeric": 0,
+      "n_subjects": 424
+    },
+    {
+      "raw_code": "100",
+      "unit": "пг/мл",
+      "n_components": 451,
+      "n_numeric": 429,
+      "n_subjects": 422
+    },
+    {
+      "raw_code": "m_1053",
+      "unit": "undefined",
+      "n_components": 503,
+      "n_numeric": 458,
+      "n_subjects": 421
+    },
+    {
+      "raw_code": "30",
+      "unit": "undefined",
+      "n_components": 435,
+      "n_numeric": 358,
+      "n_subjects": 415
+    },
+    {
+      "raw_code": "27",
+      "unit": "ммоль/л",
+      "n_components": 456,
+      "n_numeric": 434,
+      "n_subjects": 412
+    },
+    {
+      "raw_code": "1317В12",
+      "unit": "пмоль/л",
+      "n_components": 434,
+      "n_numeric": 422,
+      "n_subjects": 412
+    },
+    {
+      "raw_code": "m_1060",
+      "unit": "undefined",
+      "n_components": 456,
+      "n_numeric": 422,
+      "n_subjects": 402
+    },
+    {
+      "raw_code": "507МОЧ",
+      "unit": "undefined",
+      "n_components": 488,
+      "n_numeric": 0,
+      "n_subjects": 401
+    },
+    {
+      "raw_code": "m_1059",
+      "unit": "undefined",
+      "n_components": 457,
+      "n_numeric": 422,
+      "n_subjects": 401
+    },
+    {
+      "raw_code": "m_1132",
+      "unit": "%",
+      "n_components": 415,
+      "n_numeric": 378,
+      "n_subjects": 400
+    },
+    {
+      "raw_code": "122",
+      "unit": "undefined",
+      "n_components": 407,
+      "n_numeric": 315,
+      "n_subjects": 395
+    },
+    {
+      "raw_code": "13",
+      "unit": "мг/дл",
+      "n_components": 565,
+      "n_numeric": 522,
+      "n_subjects": 394
+    },
+    {
+      "raw_code": "m_1093",
+      "unit": "%",
+      "n_components": 444,
+      "n_numeric": 372,
+      "n_subjects": 385
+    },
+    {
+      "raw_code": "15",
+      "unit": "Е/л",
+      "n_components": 423,
+      "n_numeric": 412,
+      "n_subjects": 382
+    },
+    {
+      "raw_code": "36",
+      "unit": "undefined",
+      "n_components": 413,
+      "n_numeric": 305,
+      "n_subjects": 382
+    },
+    {
+      "raw_code": "m_1061",
+      "unit": "undefined",
+      "n_components": 427,
+      "n_numeric": 383,
+      "n_subjects": 377
+    },
+    {
+      "raw_code": "48",
+      "unit": "мг/л",
+      "n_components": 416,
+      "n_numeric": 353,
+      "n_subjects": 377
+    },
+    {
+      "raw_code": "m_1062",
+      "unit": "undefined",
+      "n_components": 424,
+      "n_numeric": 366,
+      "n_subjects": 375
+    },
+    {
+      "raw_code": "m_1058",
+      "unit": "undefined",
+      "n_components": 422,
+      "n_numeric": 363,
+      "n_subjects": 375
+    },
+    {
+      "raw_code": "1284",
+      "unit": "Ед/мл",
+      "n_components": 395,
+      "n_numeric": 188,
+      "n_subjects": 370
+    },
+    {
+      "raw_code": "164",
+      "unit": "мг FEU/л",
+      "n_components": 419,
+      "n_numeric": 402,
+      "n_subjects": 369
+    },
+    {
+      "raw_code": "m_1043",
+      "unit": "undefined",
+      "n_components": 489,
+      "n_numeric": 0,
+      "n_subjects": 358
+    },
+    {
+      "raw_code": "mm_1001",
+      "unit": "мг/мл",
+      "n_components": 413,
+      "n_numeric": 385,
+      "n_subjects": 351
+    },
+    {
+      "raw_code": "m_1053",
+      "unit": "*10^12/л",
+      "n_components": 359,
+      "n_numeric": 353,
+      "n_subjects": 351
+    },
+    {
+      "raw_code": "26",
+      "unit": "мг/дл",
+      "n_components": 510,
+      "n_numeric": 452,
+      "n_subjects": 350
+    },
+    {
+      "raw_code": "28",
+      "unit": "мг/мл",
+      "n_components": 395,
+      "n_numeric": 356,
+      "n_subjects": 350
+    },
+    {
+      "raw_code": "mm_1004",
+      "unit": "мм/год",
+      "n_components": 386,
+      "n_numeric": 368,
+      "n_subjects": 348
+    },
+    {
+      "raw_code": "195",
+      "unit": "нг/мл",
+      "n_components": 378,
+      "n_numeric": 349,
+      "n_subjects": 346
+    },
+    {
+      "raw_code": "172",
+      "unit": "пмоль/л",
+      "n_components": 482,
+      "n_numeric": 434,
+      "n_subjects": 343
+    },
+    {
+      "raw_code": "m_1112",
+      "unit": "undefined",
+      "n_components": 359,
+      "n_numeric": 0,
+      "n_subjects": 341
+    },
+    {
+      "raw_code": "m_1065",
+      "unit": "undefined",
+      "n_components": 402,
+      "n_numeric": 360,
+      "n_subjects": 340
+    },
+    {
+      "raw_code": "m_1008",
+      "unit": "undefined",
+      "n_components": 368,
+      "n_numeric": 0,
+      "n_subjects": 340
+    },
+    {
+      "raw_code": "m_1136",
+      "unit": "undefined",
+      "n_components": 364,
+      "n_numeric": 0,
+      "n_subjects": 340
+    },
+    {
+      "raw_code": "m_1081",
+      "unit": "%",
+      "n_components": 365,
+      "n_numeric": 347,
+      "n_subjects": 339
+    },
+    {
+      "raw_code": "m_1049",
+      "unit": "undefined",
+      "n_components": 374,
+      "n_numeric": 351,
+      "n_subjects": 337
+    },
+    {
+      "raw_code": "mm_1002",
+      "unit": "мм/год",
+      "n_components": 355,
+      "n_numeric": 333,
+      "n_subjects": 334
+    },
+    {
+      "raw_code": "868",
+      "unit": "мкг/л",
+      "n_components": 352,
+      "n_numeric": 262,
+      "n_subjects": 333
+    },
+    {
+      "raw_code": "153",
+      "unit": "undefined",
+      "n_components": 356,
+      "n_numeric": 183,
+      "n_subjects": 330
+    },
+    {
+      "raw_code": "61",
+      "unit": "µIU/mL",
+      "n_components": 412,
+      "n_numeric": 389,
+      "n_subjects": 326
+    },
+    {
+      "raw_code": "164",
+      "unit": "мкг/л",
+      "n_components": 370,
+      "n_numeric": 358,
+      "n_subjects": 325
+    },
+    {
+      "raw_code": "12",
+      "unit": "Ед/л",
+      "n_components": 361,
+      "n_numeric": 334,
+      "n_subjects": 324
+    },
+    {
+      "raw_code": "59",
+      "unit": "мМЕ/л",
+      "n_components": 346,
+      "n_numeric": 323,
+      "n_subjects": 323
+    },
+    {
+      "raw_code": "48",
+      "unit": "мкг/дл",
+      "n_components": 436,
+      "n_numeric": 377,
+      "n_subjects": 317
+    },
+    {
+      "raw_code": "m_1134",
+      "unit": "undefined",
+      "n_components": 344,
+      "n_numeric": 0,
+      "n_subjects": 317
+    },
+    {
+      "raw_code": "11",
+      "unit": "МЕ/л",
+      "n_components": 345,
+      "n_numeric": 333,
+      "n_subjects": 316
+    },
+    {
+      "raw_code": "m_1052",
+      "unit": "undefined",
+      "n_components": 356,
+      "n_numeric": 322,
+      "n_subjects": 314
+    },
+    {
+      "raw_code": "948",
+      "unit": "нг/мл",
+      "n_components": 339,
+      "n_numeric": 337,
+      "n_subjects": 308
+    },
+    {
+      "raw_code": "32",
+      "unit": "мкмоль/л",
+      "n_components": 320,
+      "n_numeric": 256,
+      "n_subjects": 308
+    },
+    {
+      "raw_code": "10",
+      "unit": "г/дл",
+      "n_components": 444,
+      "n_numeric": 408,
+      "n_subjects": 305
+    },
+    {
+      "raw_code": "175",
+      "unit": "нг/мл",
+      "n_components": 335,
+      "n_numeric": 294,
+      "n_subjects": 303
+    },
+    {
+      "raw_code": "56",
+      "unit": "mU/L",
+      "n_components": 421,
+      "n_numeric": 400,
+      "n_subjects": 300
+    },
+    {
+      "raw_code": "27",
+      "unit": "мг/дл",
+      "n_components": 393,
+      "n_numeric": 366,
+      "n_subjects": 300
+    },
+    {
+      "raw_code": "m_1100",
+      "unit": "undefined",
+      "n_components": 335,
+      "n_numeric": 292,
+      "n_subjects": 300
+    },
+    {
+      "raw_code": "869",
+      "unit": "мкг/л",
+      "n_components": 306,
+      "n_numeric": 297,
+      "n_subjects": 297
+    },
+    {
+      "raw_code": "37",
+      "unit": "мг/дл",
+      "n_components": 455,
+      "n_numeric": 427,
+      "n_subjects": 296
+    },
+    {
+      "raw_code": "m_1051",
+      "unit": "undefined",
+      "n_components": 340,
+      "n_numeric": 308,
+      "n_subjects": 296
+    },
+    {
+      "raw_code": "m_1056",
+      "unit": "undefined",
+      "n_components": 313,
+      "n_numeric": 288,
+      "n_subjects": 294
+    },
+    {
+      "raw_code": "60",
+      "unit": "мМЕ/л",
+      "n_components": 315,
+      "n_numeric": 293,
+      "n_subjects": 293
+    },
+    {
+      "raw_code": "59",
+      "unit": "U/I",
+      "n_components": 354,
+      "n_numeric": 350,
+      "n_subjects": 290
+    },
+    {
+      "raw_code": "33",
+      "unit": "мкмоль/л",
+      "n_components": 299,
+      "n_numeric": 295,
+      "n_subjects": 288
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "нг/мл",
+      "n_components": 433,
+      "n_numeric": 4,
+      "n_subjects": 287
+    },
+    {
+      "raw_code": "15",
+      "unit": "undefined",
+      "n_components": 315,
+      "n_numeric": 223,
+      "n_subjects": 282
+    },
+    {
+      "raw_code": "14",
+      "unit": "undefined",
+      "n_components": 321,
+      "n_numeric": 302,
+      "n_subjects": 279
+    },
+    {
+      "raw_code": "m_1098",
+      "unit": "%",
+      "n_components": 322,
+      "n_numeric": 239,
+      "n_subjects": 276
+    },
+    {
+      "raw_code": "60",
+      "unit": "U/I",
+      "n_components": 321,
+      "n_numeric": 313,
+      "n_subjects": 273
+    },
+    {
+      "raw_code": "1491",
+      "unit": "мкг/л",
+      "n_components": 285,
+      "n_numeric": 258,
+      "n_subjects": 273
+    },
+    {
+      "raw_code": "19",
+      "unit": "Ед/л",
+      "n_components": 306,
+      "n_numeric": 301,
+      "n_subjects": 272
+    },
+    {
+      "raw_code": "190",
+      "unit": "сек.",
+      "n_components": 302,
+      "n_numeric": 252,
+      "n_subjects": 270
+    },
+    {
+      "raw_code": "29",
+      "unit": "undefined",
+      "n_components": 297,
+      "n_numeric": 0,
+      "n_subjects": 268
+    },
+    {
+      "raw_code": "m_1113",
+      "unit": "undefined",
+      "n_components": 285,
+      "n_numeric": 0,
+      "n_subjects": 263
+    },
+    {
+      "raw_code": "m_1208",
+      "unit": "undefined",
+      "n_components": 314,
+      "n_numeric": 0,
+      "n_subjects": 261
+    },
+    {
+      "raw_code": "215",
+      "unit": "ммоль/л",
+      "n_components": 283,
+      "n_numeric": 270,
+      "n_subjects": 259
+    },
+    {
+      "raw_code": "24",
+      "unit": "U/I",
+      "n_components": 305,
+      "n_numeric": 292,
+      "n_subjects": 258
+    },
+    {
+      "raw_code": "m_1097",
+      "unit": "undefined",
+      "n_components": 299,
+      "n_numeric": 264,
+      "n_subjects": 257
+    },
+    {
+      "raw_code": "m_1141",
+      "unit": "%",
+      "n_components": 285,
+      "n_numeric": 273,
+      "n_subjects": 255
+    },
+    {
+      "raw_code": "m_1142",
+      "unit": "%",
+      "n_components": 280,
+      "n_numeric": 272,
+      "n_subjects": 254
+    },
+    {
+      "raw_code": "1281",
+      "unit": "пмоль/л",
+      "n_components": 269,
+      "n_numeric": 263,
+      "n_subjects": 254
+    },
+    {
+      "raw_code": "50",
+      "unit": "мг/дл",
+      "n_components": 317,
+      "n_numeric": 264,
+      "n_subjects": 253
+    },
+    {
+      "raw_code": "62",
+      "unit": "нмоль/л",
+      "n_components": 300,
+      "n_numeric": 277,
+      "n_subjects": 250
+    },
+    {
+      "raw_code": "52",
+      "unit": "нг/мл",
+      "n_components": 280,
+      "n_numeric": 248,
+      "n_subjects": 248
+    },
+    {
+      "raw_code": "39",
+      "unit": "undefined",
+      "n_components": 257,
+      "n_numeric": 1,
+      "n_subjects": 246
+    },
+    {
+      "raw_code": "43",
+      "unit": "мг/дл",
+      "n_components": 290,
+      "n_numeric": 273,
+      "n_subjects": 244
+    },
+    {
+      "raw_code": "m_1063",
+      "unit": "undefined",
+      "n_components": 277,
+      "n_numeric": 248,
+      "n_subjects": 244
+    },
+    {
+      "raw_code": "54",
+      "unit": "мкг/дл",
+      "n_components": 274,
+      "n_numeric": 236,
+      "n_subjects": 242
+    },
+    {
+      "raw_code": "142",
+      "unit": "Ед/мл",
+      "n_components": 261,
+      "n_numeric": 261,
+      "n_subjects": 241
+    },
+    {
+      "raw_code": "840",
+      "unit": "г/л",
+      "n_components": 250,
+      "n_numeric": 96,
+      "n_subjects": 240
+    },
+    {
+      "raw_code": "11",
+      "unit": "U/I",
+      "n_components": 272,
+      "n_numeric": 265,
+      "n_subjects": 239
+    },
+    {
+      "raw_code": "m_1109",
+      "unit": "undefined",
+      "n_components": 266,
+      "n_numeric": 0,
+      "n_subjects": 238
+    },
+    {
+      "raw_code": "199",
+      "unit": "Ед/л",
+      "n_components": 257,
+      "n_numeric": 254,
+      "n_subjects": 238
+    },
+    {
+      "raw_code": "888",
+      "unit": "мкг/л",
+      "n_components": 253,
+      "n_numeric": 161,
+      "n_subjects": 238
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "ммоль/л",
+      "n_components": 331,
+      "n_numeric": 1,
+      "n_subjects": 237
+    },
+    {
+      "raw_code": "m_1207",
+      "unit": "undefined",
+      "n_components": 272,
+      "n_numeric": 0,
+      "n_subjects": 237
+    },
+    {
+      "raw_code": "102",
+      "unit": "пмоль/л",
+      "n_components": 262,
+      "n_numeric": 243,
+      "n_subjects": 234
+    },
+    {
+      "raw_code": "m_1180",
+      "unit": "undefined",
+      "n_components": 239,
+      "n_numeric": 0,
+      "n_subjects": 232
+    },
+    {
+      "raw_code": "m_1166",
+      "unit": "Мкг/мл",
+      "n_components": 242,
+      "n_numeric": 234,
+      "n_subjects": 230
+    },
+    {
+      "raw_code": "53",
+      "unit": "undefined",
+      "n_components": 241,
+      "n_numeric": 171,
+      "n_subjects": 229
+    },
+    {
+      "raw_code": "m_1017",
+      "unit": "undefined",
+      "n_components": 240,
+      "n_numeric": 0,
+      "n_subjects": 229
+    },
+    {
+      "raw_code": "7811",
+      "unit": "undefined",
+      "n_components": 234,
+      "n_numeric": 0,
+      "n_subjects": 229
+    },
+    {
+      "raw_code": "14",
+      "unit": "ммоль/л",
+      "n_components": 244,
+      "n_numeric": 239,
+      "n_subjects": 225
+    },
+    {
+      "raw_code": "13",
+      "unit": "undefined",
+      "n_components": 243,
+      "n_numeric": 176,
+      "n_subjects": 223
+    },
+    {
+      "raw_code": "m_1057",
+      "unit": "undefined",
+      "n_components": 234,
+      "n_numeric": 184,
+      "n_subjects": 223
+    },
+    {
+      "raw_code": "148",
+      "unit": "пмоль/л",
+      "n_components": 239,
+      "n_numeric": 184,
+      "n_subjects": 219
+    },
+    {
+      "raw_code": "2",
+      "unit": "undefined",
+      "n_components": 272,
+      "n_numeric": 33,
+      "n_subjects": 218
+    },
+    {
+      "raw_code": "m_1186",
+      "unit": "undefined",
+      "n_components": 229,
+      "n_numeric": 0,
+      "n_subjects": 216
+    },
+    {
+      "raw_code": "55",
+      "unit": "пг/мл",
+      "n_components": 280,
+      "n_numeric": 264,
+      "n_subjects": 213
+    },
+    {
+      "raw_code": "143",
+      "unit": "МЕ/мл",
+      "n_components": 220,
+      "n_numeric": 218,
+      "n_subjects": 210
+    },
+    {
+      "raw_code": "869",
+      "unit": "Мкг/мл",
+      "n_components": 223,
+      "n_numeric": 199,
+      "n_subjects": 207
+    },
+    {
+      "raw_code": "172",
+      "unit": "МкЕ/мл",
+      "n_components": 260,
+      "n_numeric": 238,
+      "n_subjects": 206
+    },
+    {
+      "raw_code": "m_1055",
+      "unit": "undefined",
+      "n_components": 209,
+      "n_numeric": 157,
+      "n_subjects": 204
+    },
+    {
+      "raw_code": "m_1064",
+      "unit": "undefined",
+      "n_components": 228,
+      "n_numeric": 216,
+      "n_subjects": 203
+    },
+    {
+      "raw_code": "82",
+      "unit": "Ед/мл",
+      "n_components": 209,
+      "n_numeric": 208,
+      "n_subjects": 202
+    },
+    {
+      "raw_code": "99",
+      "unit": "нг/мл",
+      "n_components": 221,
+      "n_numeric": 205,
+      "n_subjects": 201
+    },
+    {
+      "raw_code": "137/138",
+      "unit": "МЕ/мл",
+      "n_components": 209,
+      "n_numeric": 2,
+      "n_subjects": 201
+    },
+    {
+      "raw_code": "ОБС103",
+      "unit": "сек.",
+      "n_components": 208,
+      "n_numeric": 0,
+      "n_subjects": 200
+    },
+    {
+      "raw_code": "15",
+      "unit": "U/I",
+      "n_components": 222,
+      "n_numeric": 215,
+      "n_subjects": 197
+    },
+    {
+      "raw_code": "m_1028",
+      "unit": "undefined",
+      "n_components": 199,
+      "n_numeric": 0,
+      "n_subjects": 196
+    },
+    {
+      "raw_code": "53",
+      "unit": "нг/дл",
+      "n_components": 210,
+      "n_numeric": 156,
+      "n_subjects": 195
+    },
+    {
+      "raw_code": "10",
+      "unit": "%",
+      "n_components": 218,
+      "n_numeric": 185,
+      "n_subjects": 194
+    },
+    {
+      "raw_code": "19ГП",
+      "unit": "undefined",
+      "n_components": 198,
+      "n_numeric": 0,
+      "n_subjects": 193
+    },
+    {
+      "raw_code": "m_1037",
+      "unit": "undefined",
+      "n_components": 207,
+      "n_numeric": 0,
+      "n_subjects": 190
+    },
+    {
+      "raw_code": "22",
+      "unit": "undefined",
+      "n_components": 203,
+      "n_numeric": 126,
+      "n_subjects": 188
+    },
+    {
+      "raw_code": "380",
+      "unit": "undefined",
+      "n_components": 191,
+      "n_numeric": 0,
+      "n_subjects": 188
+    },
+    {
+      "raw_code": "23",
+      "unit": "U/I",
+      "n_components": 210,
+      "n_numeric": 206,
+      "n_subjects": 187
+    },
+    {
+      "raw_code": "m_1038",
+      "unit": "undefined",
+      "n_components": 189,
+      "n_numeric": 0,
+      "n_subjects": 186
+    },
+    {
+      "raw_code": "m_1167",
+      "unit": "Мкг/мл",
+      "n_components": 192,
+      "n_numeric": 177,
+      "n_subjects": 185
+    },
+    {
+      "raw_code": "B-INPL",
+      "unit": "undefined",
+      "n_components": 204,
+      "n_numeric": 198,
+      "n_subjects": 184
+    },
+    {
+      "raw_code": "218",
+      "unit": "мг/дл",
+      "n_components": 215,
+      "n_numeric": 189,
+      "n_subjects": 182
+    },
+    {
+      "raw_code": "144",
+      "unit": "Ед/мл",
+      "n_components": 205,
+      "n_numeric": 205,
+      "n_subjects": 179
+    },
+    {
+      "raw_code": "509МЖЕ",
+      "unit": "undefined",
+      "n_components": 202,
+      "n_numeric": 0,
+      "n_subjects": 179
+    },
+    {
+      "raw_code": "m_1050",
+      "unit": "undefined",
+      "n_components": 190,
+      "n_numeric": 177,
+      "n_subjects": 177
+    },
+    {
+      "raw_code": "m_1116",
+      "unit": "undefined",
+      "n_components": 186,
+      "n_numeric": 0,
+      "n_subjects": 176
+    },
+    {
+      "raw_code": "m_1073",
+      "unit": "%",
+      "n_components": 200,
+      "n_numeric": 178,
+      "n_subjects": 174
+    },
+    {
+      "raw_code": "1",
+      "unit": "undefined",
+      "n_components": 200,
+      "n_numeric": 143,
+      "n_subjects": 174
+    },
+    {
+      "raw_code": "m_1053",
+      "unit": "г/л",
+      "n_components": 239,
+      "n_numeric": 233,
+      "n_subjects": 173
+    },
+    {
+      "raw_code": "m_1054",
+      "unit": "г/л",
+      "n_components": 237,
+      "n_numeric": 213,
+      "n_subjects": 173
+    },
+    {
+      "raw_code": "3",
+      "unit": "undefined",
+      "n_components": 186,
+      "n_numeric": 146,
+      "n_subjects": 170
+    },
+    {
+      "raw_code": "6161",
+      "unit": "%",
+      "n_components": 183,
+      "n_numeric": 169,
+      "n_subjects": 169
+    },
+    {
+      "raw_code": "51",
+      "unit": "мг/л",
+      "n_components": 195,
+      "n_numeric": 185,
+      "n_subjects": 167
+    },
+    {
+      "raw_code": "55",
+      "unit": "нг/мл",
+      "n_components": 171,
+      "n_numeric": 148,
+      "n_subjects": 165
+    },
+    {
+      "raw_code": "m_1101",
+      "unit": "undefined",
+      "n_components": 172,
+      "n_numeric": 129,
+      "n_subjects": 164
+    },
+    {
+      "raw_code": "m_1048",
+      "unit": "Т/л",
+      "n_components": 222,
+      "n_numeric": 209,
+      "n_subjects": 162
+    },
+    {
+      "raw_code": "62",
+      "unit": "нг/мл",
+      "n_components": 166,
+      "n_numeric": 156,
+      "n_subjects": 162
+    },
+    {
+      "raw_code": "36",
+      "unit": "Е/л",
+      "n_components": 170,
+      "n_numeric": 162,
+      "n_subjects": 159
+    },
+    {
+      "raw_code": "m_1146",
+      "unit": "%",
+      "n_components": 169,
+      "n_numeric": 155,
+      "n_subjects": 155
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "МЕ/мл",
+      "n_components": 169,
+      "n_numeric": 2,
+      "n_subjects": 153
+    },
+    {
+      "raw_code": "m_1068",
+      "unit": "%",
+      "n_components": 180,
+      "n_numeric": 173,
+      "n_subjects": 151
+    },
+    {
+      "raw_code": "m_1082",
+      "unit": "%",
+      "n_components": 158,
+      "n_numeric": 153,
+      "n_subjects": 151
+    },
+    {
+      "raw_code": "26",
+      "unit": "мкмоль/л",
+      "n_components": 156,
+      "n_numeric": 140,
+      "n_subjects": 151
+    },
+    {
+      "raw_code": "868",
+      "unit": "undefined",
+      "n_components": 157,
+      "n_numeric": 72,
+      "n_subjects": 150
+    },
+    {
+      "raw_code": "m_1014",
+      "unit": "%",
+      "n_components": 162,
+      "n_numeric": 129,
+      "n_subjects": 149
+    },
+    {
+      "raw_code": "117",
+      "unit": "нг/мл",
+      "n_components": 149,
+      "n_numeric": 132,
+      "n_subjects": 149
+    },
+    {
+      "raw_code": "948",
+      "unit": "мкг/л",
+      "n_components": 153,
+      "n_numeric": 152,
+      "n_subjects": 146
+    },
+    {
+      "raw_code": "m_1067",
+      "unit": "%",
+      "n_components": 176,
+      "n_numeric": 143,
+      "n_subjects": 145
+    },
+    {
+      "raw_code": "m_1039",
+      "unit": "undefined",
+      "n_components": 165,
+      "n_numeric": 0,
+      "n_subjects": 143
+    },
+    {
+      "raw_code": "101",
+      "unit": "нг/мл",
+      "n_components": 158,
+      "n_numeric": 147,
+      "n_subjects": 142
+    },
+    {
+      "raw_code": "m_1139",
+      "unit": "undefined",
+      "n_components": 154,
+      "n_numeric": 0,
+      "n_subjects": 142
+    },
+    {
+      "raw_code": "63",
+      "unit": "undefined",
+      "n_components": 152,
+      "n_numeric": 97,
+      "n_subjects": 142
+    },
+    {
+      "raw_code": "1263",
+      "unit": "%",
+      "n_components": 148,
+      "n_numeric": 135,
+      "n_subjects": 142
+    },
+    {
+      "raw_code": "m_1071",
+      "unit": "undefined",
+      "n_components": 158,
+      "n_numeric": 143,
+      "n_subjects": 141
+    },
+    {
+      "raw_code": "m_1147",
+      "unit": "*10^9/л",
+      "n_components": 153,
+      "n_numeric": 140,
+      "n_subjects": 141
+    },
+    {
+      "raw_code": "1264",
+      "unit": "%",
+      "n_components": 152,
+      "n_numeric": 116,
+      "n_subjects": 141
+    },
+    {
+      "raw_code": "1508",
+      "unit": "нг/мл",
+      "n_components": 239,
+      "n_numeric": 175,
+      "n_subjects": 140
+    },
+    {
+      "raw_code": "m_1060",
+      "unit": "г/л",
+      "n_components": 192,
+      "n_numeric": 190,
+      "n_subjects": 140
+    },
+    {
+      "raw_code": "118",
+      "unit": "undefined",
+      "n_components": 149,
+      "n_numeric": 87,
+      "n_subjects": 140
+    },
+    {
+      "raw_code": "18",
+      "unit": "undefined",
+      "n_components": 154,
+      "n_numeric": 141,
+      "n_subjects": 139
+    },
+    {
+      "raw_code": "888",
+      "unit": "undefined",
+      "n_components": 144,
+      "n_numeric": 42,
+      "n_subjects": 139
+    },
+    {
+      "raw_code": "195",
+      "unit": "нмоль/л",
+      "n_components": 144,
+      "n_numeric": 136,
+      "n_subjects": 139
+    },
+    {
+      "raw_code": "m_1061",
+      "unit": "г/л",
+      "n_components": 188,
+      "n_numeric": 186,
+      "n_subjects": 138
+    },
+    {
+      "raw_code": "26",
+      "unit": "undefined",
+      "n_components": 144,
+      "n_numeric": 89,
+      "n_subjects": 135
+    },
+    {
+      "raw_code": "4",
+      "unit": "%",
+      "n_components": 141,
+      "n_numeric": 118,
+      "n_subjects": 135
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "г/л",
+      "n_components": 188,
+      "n_numeric": 0,
+      "n_subjects": 134
+    },
+    {
+      "raw_code": "m_1062",
+      "unit": "г/л",
+      "n_components": 180,
+      "n_numeric": 174,
+      "n_subjects": 134
+    },
+    {
+      "raw_code": "199",
+      "unit": "undefined",
+      "n_components": 163,
+      "n_numeric": 99,
+      "n_subjects": 134
+    },
+    {
+      "raw_code": "m_1059",
+      "unit": "г/л",
+      "n_components": 183,
+      "n_numeric": 179,
+      "n_subjects": 133
+    },
+    {
+      "raw_code": "m_1179",
+      "unit": "Мкг/мл",
+      "n_components": 145,
+      "n_numeric": 137,
+      "n_subjects": 132
+    },
+    {
+      "raw_code": "48",
+      "unit": "мкг/л",
+      "n_components": 138,
+      "n_numeric": 125,
+      "n_subjects": 132
+    },
+    {
+      "raw_code": "275",
+      "unit": "undefined",
+      "n_components": 138,
+      "n_numeric": 113,
+      "n_subjects": 132
+    },
+    {
+      "raw_code": "m_1088",
+      "unit": "%",
+      "n_components": 161,
+      "n_numeric": 150,
+      "n_subjects": 131
+    },
+    {
+      "raw_code": "m_1145",
+      "unit": "%",
+      "n_components": 137,
+      "n_numeric": 136,
+      "n_subjects": 130
+    },
+    {
+      "raw_code": "967",
+      "unit": "ОЕд/мл",
+      "n_components": 130,
+      "n_numeric": 129,
+      "n_subjects": 130
+    },
+    {
+      "raw_code": "30",
+      "unit": "мкмоль/л",
+      "n_components": 140,
+      "n_numeric": 138,
+      "n_subjects": 129
+    },
+    {
+      "raw_code": "m_1079",
+      "unit": "undefined",
+      "n_components": 133,
+      "n_numeric": 109,
+      "n_subjects": 129
+    },
+    {
+      "raw_code": "43",
+      "unit": "undefined",
+      "n_components": 137,
+      "n_numeric": 82,
+      "n_subjects": 127
+    },
+    {
+      "raw_code": "55",
+      "unit": "нмоль/л",
+      "n_components": 149,
+      "n_numeric": 142,
+      "n_subjects": 126
+    },
+    {
+      "raw_code": "101",
+      "unit": "нмоль/л",
+      "n_components": 144,
+      "n_numeric": 138,
+      "n_subjects": 126
+    },
+    {
+      "raw_code": "868",
+      "unit": "мкг/дл",
+      "n_components": 130,
+      "n_numeric": 84,
+      "n_subjects": 126
+    },
+    {
+      "raw_code": "84",
+      "unit": "undefined",
+      "n_components": 128,
+      "n_numeric": 90,
+      "n_subjects": 126
+    },
+    {
+      "raw_code": "2",
+      "unit": "сек.",
+      "n_components": 143,
+      "n_numeric": 22,
+      "n_subjects": 125
+    },
+    {
+      "raw_code": "45",
+      "unit": "г/л",
+      "n_components": 132,
+      "n_numeric": 122,
+      "n_subjects": 125
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "г/дл",
+      "n_components": 161,
+      "n_numeric": 0,
+      "n_subjects": 124
+    },
+    {
+      "raw_code": "m_1014",
+      "unit": "мМЕ/л",
+      "n_components": 133,
+      "n_numeric": 133,
+      "n_subjects": 124
+    },
+    {
+      "raw_code": "118",
+      "unit": "нг/дл",
+      "n_components": 130,
+      "n_numeric": 115,
+      "n_subjects": 124
+    },
+    {
+      "raw_code": "m_1094",
+      "unit": "%",
+      "n_components": 143,
+      "n_numeric": 142,
+      "n_subjects": 123
+    },
+    {
+      "raw_code": "m_1014",
+      "unit": "мкМЕ/мл",
+      "n_components": 136,
+      "n_numeric": 126,
+      "n_subjects": 122
+    },
+    {
+      "raw_code": "149",
+      "unit": "undefined",
+      "n_components": 124,
+      "n_numeric": 86,
+      "n_subjects": 122
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "Ед/мл",
+      "n_components": 154,
+      "n_numeric": 0,
+      "n_subjects": 121
+    },
+    {
+      "raw_code": "840",
+      "unit": "мг/л",
+      "n_components": 128,
+      "n_numeric": 55,
+      "n_subjects": 121
+    },
+    {
+      "raw_code": "23",
+      "unit": "Ед/л",
+      "n_components": 131,
+      "n_numeric": 124,
+      "n_subjects": 119
+    },
+    {
+      "raw_code": "47",
+      "unit": "г/л",
+      "n_components": 127,
+      "n_numeric": 125,
+      "n_subjects": 119
+    },
+    {
+      "raw_code": "13",
+      "unit": "µmol/L",
+      "n_components": 124,
+      "n_numeric": 122,
+      "n_subjects": 119
+    },
+    {
+      "raw_code": "m_1119",
+      "unit": "undefined",
+      "n_components": 132,
+      "n_numeric": 0,
+      "n_subjects": 118
+    },
+    {
+      "raw_code": "967",
+      "unit": "МЕ/мл",
+      "n_components": 120,
+      "n_numeric": 94,
+      "n_subjects": 118
+    },
+    {
+      "raw_code": "155",
+      "unit": "µg/dL",
+      "n_components": 133,
+      "n_numeric": 129,
+      "n_subjects": 116
+    },
+    {
+      "raw_code": "m_1002",
+      "unit": "нг/мл",
+      "n_components": 129,
+      "n_numeric": 99,
+      "n_subjects": 115
+    },
+    {
+      "raw_code": "83",
+      "unit": "undefined",
+      "n_components": 115,
+      "n_numeric": 50,
+      "n_subjects": 115
+    },
+    {
+      "raw_code": "m_1006",
+      "unit": "undefined",
+      "n_components": 137,
+      "n_numeric": 121,
+      "n_subjects": 114
+    },
+    {
+      "raw_code": "m_1133",
+      "unit": "нг/мл",
+      "n_components": 139,
+      "n_numeric": 139,
+      "n_subjects": 113
+    },
+    {
+      "raw_code": "m_1053",
+      "unit": "*10^3/μl",
+      "n_components": 134,
+      "n_numeric": 124,
+      "n_subjects": 113
+    },
+    {
+      "raw_code": "m_1173",
+      "unit": "нг/мл",
+      "n_components": 122,
+      "n_numeric": 111,
+      "n_subjects": 112
+    },
+    {
+      "raw_code": "m_1090",
+      "unit": "%",
+      "n_components": 138,
+      "n_numeric": 131,
+      "n_subjects": 109
+    },
+    {
+      "raw_code": "20",
+      "unit": "Ед/л",
+      "n_components": 114,
+      "n_numeric": 114,
+      "n_subjects": 109
+    },
+    {
+      "raw_code": "85",
+      "unit": "undefined",
+      "n_components": 109,
+      "n_numeric": 49,
+      "n_subjects": 109
+    },
+    {
+      "raw_code": "m_1103",
+      "unit": "%",
+      "n_components": 120,
+      "n_numeric": 113,
+      "n_subjects": 108
+    },
+    {
+      "raw_code": "m_1102",
+      "unit": "*10^9/л",
+      "n_components": 115,
+      "n_numeric": 105,
+      "n_subjects": 108
+    },
+    {
+      "raw_code": "61",
+      "unit": "µg/L",
+      "n_components": 143,
+      "n_numeric": 136,
+      "n_subjects": 107
+    },
+    {
+      "raw_code": "m_1058",
+      "unit": "г/л",
+      "n_components": 141,
+      "n_numeric": 124,
+      "n_subjects": 107
+    },
+    {
+      "raw_code": "m_1005",
+      "unit": "мг/дл",
+      "n_components": 129,
+      "n_numeric": 2,
+      "n_subjects": 107
+    },
+    {
+      "raw_code": "m_1190",
+      "unit": "undefined",
+      "n_components": 125,
+      "n_numeric": 0,
+      "n_subjects": 107
+    },
+    {
+      "raw_code": "46",
+      "unit": "г/л",
+      "n_components": 113,
+      "n_numeric": 108,
+      "n_subjects": 107
+    },
+    {
+      "raw_code": "m_1097",
+      "unit": "*10^12/л",
+      "n_components": 112,
+      "n_numeric": 48,
+      "n_subjects": 107
+    }
+  ],
+  "n_catalog_grains_listed": 500,
+  "do_not_sum_a_plus_b_as_unique_patients": true,
+  "inventory_hash": "4c596b4b25aeb52589af221825b1b0ae81d9c4e9ec0acc6b3b52adffd6aa59ba",
+  "ok": true
+}

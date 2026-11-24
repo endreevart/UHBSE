@@ -1,0 +1,49 @@
+{
+  "version": "0.1.1",
+  "NATURAL_HISTORY_ONLY": true,
+  "grain_definition": "source_system x outcome x original_unit",
+  "cell_definition": "grain x requested_horizon",
+  "n_selected_grains": 24,
+  "n_selected_cells": 96,
+  "requested_absolute_grid_days": [
+    30,
+    90,
+    180,
+    365
+  ],
+  "recursive_base_increment_days": 30,
+  "endpoint_identity": "t0_plus_requested_absolute_horizon",
+  "target_label": "RECORDED_SOURCE_SPECIFIC_OUTCOME_AT_REQUESTED_HORIZON",
+  "future_schedule_as_model_input": false,
+  "p1_feature_order": [
+    "persistence_value",
+    "n_prior_outcome_measurements",
+    "days_since_previous",
+    "days_since_previous_missing",
+    "prior_delta",
+    "prior_delta_missing",
+    "requested_horizon_days",
+    "history_depth",
+    "missingness"
+  ],
+  "no_medication_features": true,
+  "no_a_b_provider_transfer": true,
+  "no_unit_conversion": true,
+  "no_identity_merge": true,
+  "no_rejected_encoder": true,
+  "MULTI_OUTCOME_DEPENDENCE_STATUS": "MARGINAL_ONLY_NO_JOINT_MODEL",
+  "heldout_requires_quality_gate_not_finite_only": true,
+  "teacher_forced_cannot_determine_recursive_acceptance": true,
+  "seed": 42,
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "SCIENTIFIC_CROSS_SOURCE_PASS": false,
+  "INTERVENTION_EFFECT_STATUS": "UNAVAILABLE",
+  "min_test_subjects": 30,
+  "min_test_targets": 30,
+  "min_test_overlap_groups": 10,
+  "coverage_range": [
+    0.5,
+    0.99
+  ],
+  "error_growth_limit": 3.0
+}

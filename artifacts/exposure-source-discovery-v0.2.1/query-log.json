@@ -1,0 +1,69 @@
+{
+  "queries": [
+    {
+      "duration_seconds": 0.002,
+      "error_class": null,
+      "finished_at": "2026-11-06T17:10:38Z",
+      "lock_timeout_ms": 10000,
+      "output_aggregate_row_count": 1,
+      "parameter_contract_sha256": "31fc1768dec13be66ea3a894196cdf0c55c99fe55ce6203cef6c3fbfb4267420",
+      "query": "b_session_timezone",
+      "read_only_verified": true,
+      "schema_fingerprint": "559f9d992fcad458ba6e16ba0520e47a64a189d90da13fa9dc2f2304c761c247",
+      "source_system": "kgz_raw",
+      "sql_sha256": "507ec75c0802f7af1a157c57b121ce5858a211c3867d62ff89c49da928a7b398",
+      "started_at": "2026-11-06T17:10:38Z",
+      "statement_timeout_ms": 300000,
+      "success": true
+    },
+    {
+      "duration_seconds": 0.004,
+      "error_class": null,
+      "finished_at": "2026-11-06T17:10:38Z",
+      "lock_timeout_ms": 10000,
+      "output_aggregate_row_count": 7,
+      "parameter_contract_sha256": "31fc1768dec13be66ea3a894196cdf0c55c99fe55ce6203cef6c3fbfb4267420",
+      "query": "b_temporal_column_types",
+      "read_only_verified": true,
+      "schema_fingerprint": "559f9d992fcad458ba6e16ba0520e47a64a189d90da13fa9dc2f2304c761c247",
+      "source_system": "kgz_raw",
+      "sql_sha256": "49af76b67d2f8ef5aba37f57126a021579a86cee0eb66e5dfcc3ee59c996f68b",
+      "started_at": "2026-11-06T17:10:38Z",
+      "statement_timeout_ms": 300000,
+      "success": true
+    },
+    {
+      "duration_seconds": 0.1,
+      "error_class": null,
+      "finished_at": "2026-11-06T17:10:38Z",
+      "lock_timeout_ms": 10000,
+      "output_aggregate_row_count": 1,
+      "parameter_contract_sha256": "31fc1768dec13be66ea3a894196cdf0c55c99fe55ce6203cef6c3fbfb4267420",
+      "query": "b_feedback_exclusive_ledger",
+      "read_only_verified": true,
+      "schema_fingerprint": "559f9d992fcad458ba6e16ba0520e47a64a189d90da13fa9dc2f2304c761c247",
+      "source_system": "kgz_raw",
+      "sql_sha256": "695c4d626dbbd0e8e2e700d646778b2eab44650d7966b3a2295236a612129cfb",
+      "started_at": "2026-11-06T17:10:38Z",
+      "statement_timeout_ms": 300000,
+      "success": true
+    },
+    {
+      "duration_seconds": 2.101,
+      "error_class": null,
+      "finished_at": "2026-11-06T17:10:40Z",
+      "lock_timeout_ms": 10000,
+      "output_aggregate_row_count": 1,
+      "parameter_contract_sha256": "81fd20e34aaf0a271f24062cc97834a174af7465ca7c7890d5734d15673b1171",
+      "query": "b_prior_recommendation_candidate_route",
+      "read_only_verified": true,
+      "schema_fingerprint": "559f9d992fcad458ba6e16ba0520e47a64a189d90da13fa9dc2f2304c761c247",
+      "source_system": "kgz_raw",
+      "sql_sha256": "e2914ab584382f2a594b23de627997af2d03b17704ddda0c1b9b470e9a1d8686",
+      "started_at": "2026-11-06T17:10:38Z",
+      "statement_timeout_ms": 300000,
+      "success": true
+    }
+  ],
+  "version": "0.2.1"
+}

@@ -1,0 +1,64 @@
+{
+  "INTERVENTION_EFFECT_UNAVAILABLE": true,
+  "PATIENT_SPECIFIC_QSP_STATUS": "NOT_RUN_NO_ACCEPTED_INTERVENTION_MAPPING",
+  "PKPD_REFERENCE_SANDBOX_STATUS": "TECHNICAL_SYNTHETIC_PASS",
+  "QSP_ADAPTER_STATUS": "BUILT",
+  "QSP_REFERENCE_SANDBOX_STATUS": "TECHNICAL_SYNTHETIC_PASS",
+  "REAL_DRUG_PKPD_STATUS": "NOT_STARTED_PROVIDER_AND_DOMAIN_INPUT_REQUIRED",
+  "does_not_ignore_and_continue": true,
+  "identity_mutation_changes_hash": true,
+  "nonzero_real_intervention": {
+    "ignored": false,
+    "patient_linked": false,
+    "reason": "INTERVENTION_EFFECT_UNAVAILABLE",
+    "status": "FAIL",
+    "synthetic_only": true,
+    "version": "0.1.1"
+  },
+  "patient_specific_routing_prohibited": true,
+  "pkpd": {
+    "deterministic": true,
+    "licensing": "synthetic_fixture_no_real_drug",
+    "model_id": "SYNTHETIC_REFERENCE_COMPOUND_X_PKPD",
+    "non_negative_concentration": true,
+    "params": {
+      "dose": 5.0,
+      "ec50": 1.0,
+      "emax": 1.0,
+      "ka": 1.2,
+      "ke": 0.3,
+      "kout": 0.4,
+      "vd": 10.0
+    },
+    "patient_linked": false,
+    "payload_sha256": "68430f4ea9eb1751266d3cffba19e38400d8b74dd08491d24d74e4e78fd5dfe4",
+    "synthetic_only": true,
+    "units": {
+      "concentration": "synthetic_mass/volume",
+      "effect": "dimensionless",
+      "time": "h"
+    },
+    "zero_dose_invariant": true
+  },
+  "qsp": {
+    "deterministic": true,
+    "dose_response_sensitive": true,
+    "licensing": "synthetic_fixture_no_real_patient",
+    "model_id": "SYNTHETIC_HOMEOSTATIC_BIOMARKER_QSP",
+    "params": {
+      "kfb": 0.5,
+      "kin": 1.0,
+      "kout": 0.2,
+      "u": 0.0
+    },
+    "patient_linked": false,
+    "payload_sha256": "73a8c7ac5aacac88c9af51befad86b23126e38af4b4535f4fe785031112d50ac",
+    "synthetic_only": true,
+    "units": {
+      "biomarker": "synthetic_concentration",
+      "time": "h"
+    }
+  },
+  "separate_from_patient_trajectories": true,
+  "version": "0.1.1"
+}

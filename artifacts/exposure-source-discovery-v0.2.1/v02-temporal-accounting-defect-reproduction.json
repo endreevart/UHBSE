@@ -1,0 +1,51 @@
+{
+  "FEEDBACK_TOTAL_COUNT": 41407,
+  "V02_CORE_TEMPORAL_COMPUTATION_STATUS": "NOT_RECONCILED",
+  "V02_FINAL_REPORT_ACCOUNTING_STATUS": "CORRECTION_REQUIRED",
+  "V02_TEMPORAL_ACCOUNTING_STATUS": "NOT_RECONCILED",
+  "applies_to": "artifacts/exposure-source-discovery-v0.2",
+  "consultation_id_present_count_from_frozen_identity": 33373,
+  "consultation_target_found_count_from_frozen_identity": 33373,
+  "directional_counts_reproduced": true,
+  "disagreement_count_published": 0,
+  "disagreement_denominator_published": 33373,
+  "disagreement_query_includes_only_found_targets": true,
+  "disagreement_statement_omits_denominator": true,
+  "exclusive_partition_sums_to_total": false,
+  "four_reported_routes": {
+    "feedback_after_linked_consultation": 24,
+    "feedback_before_linked_consultation": 31271,
+    "feedback_without_linked_consultation": 8034,
+    "same_calendar_day_as_linked_consultation": 7
+  },
+  "four_route_sum": 39336,
+  "frozen_implied_target_not_found": 0,
+  "live_composition_matches_frozen_residual": true,
+  "live_composition_of_rows_outside_the_four_buckets": {
+    "CONSULTATION_ID_PRESENT_TARGET_NOT_FOUND": 0,
+    "CONSULTATION_TARGET_FOUND_TIME_UNCOMPARABLE": 2071,
+    "sum": 2071
+  },
+  "live_four_bucket_sum": 39336,
+  "meaning_of_residual": "LIVE_EXCLUSIVE_BUCKETS",
+  "not_a_stage_05_defect": true,
+  "partial_bucket": {
+    "closes_the_ledger": false,
+    "count": 2007,
+    "name": "linked_consultation_date_missing",
+    "remainder_after_adding_partial_bucket": 64
+  },
+  "present_count_equals_found_count_in_frozen_identity": true,
+  "report_mentions": {
+    "after": true,
+    "before": true,
+    "consultation_id_null": false,
+    "date_missing": false,
+    "equation": false,
+    "same_day": false
+  },
+  "residual_category_present_in_json": false,
+  "residual_category_present_in_report": false,
+  "residual_category_present_in_status_contract": false,
+  "residual_outside_four_reported_buckets": 2071
+}

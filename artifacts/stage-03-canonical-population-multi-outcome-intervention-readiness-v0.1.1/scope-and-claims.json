@@ -1,0 +1,49 @@
+{
+  "changeset": "Canonical Population, Multi-Outcome and Intervention Readiness v0.1.1 \u2014 Evidence Closure, Medication Semantics and First Intervention-Associated Trajectory Baseline",
+  "version": "0.1.1",
+  "claims": [
+    "Evidence lifecycle correction for canonical expansion",
+    "Relation-level Source A accounting and component gap explanation",
+    "Full candidate idempotency replay",
+    "Outcome concept registry distinguishing raw labels vs concepts",
+    "Medication semantics and event hierarchy Level 0\u20135",
+    "Honest non-execution of intervention-associated baseline when gates fail"
+  ],
+  "non_claims": [
+    "Not causal treatment effect",
+    "Not clinical intervention response",
+    "Not clinical validation",
+    "Not QSP/PKPD",
+    "Not production readiness",
+    "Security remains PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "1,996 v0.1 windows are Level-2 pre/post windows, not intervention episodes"
+  ],
+  "policy": {
+    "version": "0.1.1",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "intervention_response_model_status": "NOT_STARTED",
+    "treatment_effect_status": "NOT_EVALUATED",
+    "clinical_validation_status": "NOT_STARTED",
+    "qsp_status": "NOT_STARTED",
+    "pkpd_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "causal_interpretation_allowed": false,
+    "treatment_effect_estimated": false,
+    "clinical_response_claimed": false,
+    "no_identity_merge": true,
+    "no_b_tuning": true,
+    "seed": 42,
+    "l2": 0.1,
+    "tail_abs_err_thresholds_prospective": [
+      1.0,
+      2.0,
+      5.0
+    ],
+    "level5_gates": {
+      "min_subjects": 200,
+      "min_episodes": 500,
+      "min_test_subjects": 50,
+      "min_test_episodes": 100
+    }
+  }
+}

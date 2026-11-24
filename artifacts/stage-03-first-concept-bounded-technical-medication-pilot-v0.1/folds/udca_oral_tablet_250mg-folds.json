@@ -1,0 +1,61 @@
+{
+  "version": "0.1",
+  "scheme": "SUBJECT_GROUPED_REPEATED_CROSS_VALIDATION",
+  "TECHNICAL_CV_ONLY_NOT_EXTERNAL_VALIDATION": true,
+  "n_folds": 5,
+  "seed": 42,
+  "leakage_ok": true,
+  "fold_accounting": [
+    {
+      "fold": 0,
+      "n_train_subjects": 22,
+      "n_test_subjects": 7,
+      "n_train_episodes": 22,
+      "n_test_episodes": 7,
+      "zero_subject_overlap": true,
+      "zero_episode_overlap": true,
+      "zero_locator_overlap": true
+    },
+    {
+      "fold": 1,
+      "n_train_subjects": 25,
+      "n_test_subjects": 4,
+      "n_train_episodes": 25,
+      "n_test_episodes": 4,
+      "zero_subject_overlap": true,
+      "zero_episode_overlap": true,
+      "zero_locator_overlap": true
+    },
+    {
+      "fold": 2,
+      "n_train_subjects": 24,
+      "n_test_subjects": 5,
+      "n_train_episodes": 24,
+      "n_test_episodes": 5,
+      "zero_subject_overlap": true,
+      "zero_episode_overlap": true,
+      "zero_locator_overlap": true
+    },
+    {
+      "fold": 3,
+      "n_train_subjects": 25,
+      "n_test_subjects": 4,
+      "n_train_episodes": 25,
+      "n_test_episodes": 4,
+      "zero_subject_overlap": true,
+      "zero_episode_overlap": true,
+      "zero_locator_overlap": true
+    },
+    {
+      "fold": 4,
+      "n_train_subjects": 20,
+      "n_test_subjects": 9,
+      "n_train_episodes": 20,
+      "n_test_episodes": 9,
+      "zero_subject_overlap": true,
+      "zero_episode_overlap": true,
+      "zero_locator_overlap": true
+    }
+  ],
+  "n_subjects": 29
+}

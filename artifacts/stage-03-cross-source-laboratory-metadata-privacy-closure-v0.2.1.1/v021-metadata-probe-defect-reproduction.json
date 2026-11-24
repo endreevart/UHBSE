@@ -1,0 +1,306 @@
+{
+  "version": "0.2.1.1",
+  "V021_METADATA_PROBE_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "v021_SOURCE_A_ASSAY_METADATA_STATUS": "AVAILABLE_FROM_SOURCE",
+  "v021_assay_status_unreliable": true,
+  "v021_assay_status_should_not_have_been": "AVAILABLE_FROM_SOURCE",
+  "proofs": {
+    "instrumental_suffix_not_lab_instrument": true,
+    "request_method_not_laboratory_method": true,
+    "platform_without_lab_relation_not_analyzer": true,
+    "provider_id_outside_lab_not_laboratory_provider": true,
+    "fields_are_not_specimen_method_assay_analyzer": true
+  },
+  "false_positive_fields_in_v021": [
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "first_name_instrumental",
+      "rejection_reason": "instrumental_case_not_lab_instrument",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 5
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "last_name_instrumental",
+      "rejection_reason": "instrumental_case_not_lab_instrument",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 5
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "patronymic_instrumental",
+      "rejection_reason": "instrumental_case_not_lab_instrument",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 5
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "post_instrumental",
+      "rejection_reason": "person_title_instrumental_case",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 5
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "first_name_instrumental",
+      "rejection_reason": "instrumental_case_not_lab_instrument",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 5
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "last_name_instrumental",
+      "rejection_reason": "instrumental_case_not_lab_instrument",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 5
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "patronymic_instrumental",
+      "rejection_reason": "instrumental_case_not_lab_instrument",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 5
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_smscode",
+      "column": "platform",
+      "rejection_reason": "auth_platform_not_analyzer",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": "analyzer",
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 2
+    },
+    {
+      "schema": "magerya_api",
+      "table": "logg_apilogentry",
+      "column": "request_method",
+      "rejection_reason": "http_request_method_not_assay",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 4
+    },
+    {
+      "schema": "magerya_api",
+      "table": "payment_payment",
+      "column": "acquiring_provider_id",
+      "rejection_reason": "payment_acquiring_provider",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 2
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_document",
+      "column": "methodologist_document_status",
+      "rejection_reason": "document_workflow_status_not_assay",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 3
+    },
+    {
+      "schema": "public",
+      "table": "geography_columns",
+      "column": "f_table_catalog",
+      "rejection_reason": "postgis_service_metadata",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "COLUMN_EXISTS_ALL_NULL",
+      "v021_had_sample_hashes": false,
+      "n_sample_hashes": 0
+    },
+    {
+      "schema": "public",
+      "table": "geometry_columns",
+      "column": "f_table_catalog",
+      "rejection_reason": "postgis_service_metadata",
+      "is_specimen_method_assay_analyzer": false,
+      "instrumental_means_lab_instrument": false,
+      "request_method_is_lab_method": false,
+      "platform_without_lab_context_is_analyzer": false,
+      "provider_id_outside_lab_is_lab_provider": false,
+      "naive_token_role_if_any": null,
+      "must_reject": true,
+      "v021_usability": "AVAILABLE_FROM_SOURCE",
+      "v021_had_sample_hashes": true,
+      "n_sample_hashes": 1
+    }
+  ],
+  "field_proofs": [
+    {
+      "field": "magerya_api.account_employee.first_name_instrumental",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:account_employee",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.account_employee.last_name_instrumental",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:account_employee",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.account_employee.patronymic_instrumental",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:account_employee",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.account_employee.post_instrumental",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:account_employee",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.account_patient.first_name_instrumental",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:account_patient",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.account_patient.last_name_instrumental",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:account_patient",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.account_patient.patronymic_instrumental",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:account_patient",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.authentication_smscode.platform",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:authentication_smscode",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.logg_apilogentry.request_method",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:logg_apilogentry",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.payment_payment.acquiring_provider_id",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:payment_payment",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "magerya_api.document_document.methodologist_document_status",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "document_workflow_status_not_assay",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "public.geography_columns.f_table_catalog",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:geography_columns",
+      "not_lab_metadata": true
+    },
+    {
+      "field": "public.geometry_columns.f_table_catalog",
+      "present_in_v021_probe": true,
+      "correct_rejection_reason": "excluded_table:geometry_columns",
+      "not_lab_metadata": true
+    }
+  ],
+  "n_false_positives_reproduced": 13,
+  "ok": true
+}

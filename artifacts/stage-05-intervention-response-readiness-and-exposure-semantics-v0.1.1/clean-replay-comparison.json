@@ -1,0 +1,39 @@
+{
+  "CLEAN_EXTRACTION_CORE_READINESS_REPLAY_STATUS": "PASS",
+  "INTERVENTION_RESPONSE_READINESS_STATUS": "NOT_READY",
+  "TECHNICAL_AUDIT_STATUS": "PASS",
+  "comparison": {
+    "compared_files": [
+      "phase0-readiness-gaps.json",
+      "exposure-semantics-contract.json",
+      "intervention-evidence-registry.json",
+      "candidate-cell-gate-matrix.json",
+      "source-a-readiness.json",
+      "source-b-readiness.json",
+      "medication-residual-consumption-decision.json",
+      "negative-control-results.json",
+      "status-contract.json"
+    ],
+    "ignored_status_keys": [
+      "CLEAN_EXTRACTION_CORE_READINESS_REPLAY_STATUS",
+      "CORE_READINESS_REPLAY_STATUS",
+      "PUBLICATION_INTEGRITY_STATUS",
+      "REVIEW_BUNDLE_SELF_CONTAINMENT_STATUS",
+      "ZIP_CONTENT_VERIFICATION_STATUS"
+    ],
+    "ignored_unstable_keys": [
+      "duration_seconds",
+      "generated_at",
+      "literal_command",
+      "live_repo_output_tail",
+      "mutation_render_bytes",
+      "output_tail"
+    ],
+    "mismatches": [],
+    "ok": true
+  },
+  "exit_code": 0,
+  "negative_controls": "11/11",
+  "ok": true,
+  "registry_cells": 49
+}

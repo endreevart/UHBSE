@@ -1,0 +1,768 @@
+{
+  "version": "0.1",
+  "PARTIAL_SUPPORT_ACCOUNTING_STATUS": "PASS",
+  "carried_primary_targets": 19195,
+  "carried_in_support_sum": 18311,
+  "carried_out_of_support_sum": 0,
+  "carried_unclassified_gap": 884,
+  "expected_gap": 884,
+  "expected_in_support": 18311,
+  "v011_defect": "v0.1.1 metrics counted only IN_SUPPORT and OUT_OF_SUPPORT; 884 primary targets lacked those labels in the published tallies (runtime evidence: residual per outcome below). Likely PARTIAL_SUPPORT / missing applicability_status on persistence or unsupported paths — must be explicit in future funnels.",
+  "funnel_v011_reconstructed": {
+    "candidate_primary_targets": 19195,
+    "IN_SUPPORT": 18311,
+    "OUT_OF_SUPPORT": 0,
+    "UNCLASSIFIED_IN_V011_REPORTING": 884,
+    "predicted_equals_primary": 19195,
+    "evaluated_equals_primary": 19195,
+    "unexplained": 0
+  },
+  "per_outcome_residuals": [
+    {
+      "outcome": "25(OH)витамин D",
+      "unit": "нг/мл",
+      "n_unique_targets": 453,
+      "n_in_support": 435,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 18
+    },
+    {
+      "outcome": "pH",
+      "unit": "_",
+      "n_unique_targets": 66,
+      "n_in_support": 60,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 6
+    },
+    {
+      "outcome": "АЛТ",
+      "unit": "Ед/л",
+      "n_unique_targets": 403,
+      "n_in_support": 389,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 14
+    },
+    {
+      "outcome": "АСТ",
+      "unit": "Ед/л",
+      "n_unique_targets": 390,
+      "n_in_support": 373,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 17
+    },
+    {
+      "outcome": "АЧТВ",
+      "unit": "сек",
+      "n_unique_targets": 50,
+      "n_in_support": 46,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "Альбумин",
+      "unit": "г/л",
+      "n_unique_targets": 40,
+      "n_in_support": 33,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 7
+    },
+    {
+      "outcome": "Ат к ТГ",
+      "unit": "МЕ/мл",
+      "n_unique_targets": 145,
+      "n_in_support": 143,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Ат к ТПО",
+      "unit": "МЕ/мл",
+      "n_unique_targets": 241,
+      "n_in_support": 237,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "Ат к рТТГ",
+      "unit": "МЕ/л",
+      "n_unique_targets": 43,
+      "n_in_support": 40,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Базофилы",
+      "unit": "%",
+      "n_unique_targets": 672,
+      "n_in_support": 648,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 24
+    },
+    {
+      "outcome": "Билирубин общий",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 141,
+      "n_in_support": 137,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "Билирубин прямой",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 59,
+      "n_in_support": 57,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Витамин B12 (цианкобаламин)",
+      "unit": "пг/мл",
+      "n_unique_targets": 345,
+      "n_in_support": 332,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 13
+    },
+    {
+      "outcome": "Витамин В9 (фолиевая кислота)",
+      "unit": "нг/мл",
+      "n_unique_targets": 315,
+      "n_in_support": 300,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 15
+    },
+    {
+      "outcome": "ГСПГ",
+      "unit": "нмоль/л",
+      "n_unique_targets": 56,
+      "n_in_support": 53,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Гематокрит",
+      "unit": "%",
+      "n_unique_targets": 110,
+      "n_in_support": 99,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 11
+    },
+    {
+      "outcome": "Гемоглобин",
+      "unit": "г/дл",
+      "n_unique_targets": 92,
+      "n_in_support": 88,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "Гемоглобин",
+      "unit": "г/л",
+      "n_unique_targets": 604,
+      "n_in_support": 560,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 44
+    },
+    {
+      "outcome": "Гликированный гемоглобин",
+      "unit": "%",
+      "n_unique_targets": 128,
+      "n_in_support": 118,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 10
+    },
+    {
+      "outcome": "Глюкоза",
+      "unit": "ммоль/л",
+      "n_unique_targets": 447,
+      "n_in_support": 432,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 15
+    },
+    {
+      "outcome": "Гомоцистеин",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 315,
+      "n_in_support": 296,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 19
+    },
+    {
+      "outcome": "ДГЭА–сульфат",
+      "unit": "мкг/дл",
+      "n_unique_targets": 51,
+      "n_in_support": 44,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 7
+    },
+    {
+      "outcome": "Железо",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 569,
+      "n_in_support": 539,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 30
+    },
+    {
+      "outcome": "Инсулин",
+      "unit": "мкЕд/мл",
+      "n_unique_targets": 182,
+      "n_in_support": 177,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 5
+    },
+    {
+      "outcome": "Инсулин",
+      "unit": "мкМЕ/мл",
+      "n_unique_targets": 107,
+      "n_in_support": 106,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "Кальций общий",
+      "unit": "ммоль/л",
+      "n_unique_targets": 57,
+      "n_in_support": 56,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "Кортизол",
+      "unit": "мкг/дл",
+      "n_unique_targets": 70,
+      "n_in_support": 62,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 8
+    },
+    {
+      "outcome": "Кортизол",
+      "unit": "нмоль/л",
+      "n_unique_targets": 66,
+      "n_in_support": 64,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Коэффициент насыщения трансферрина железом",
+      "unit": "%",
+      "n_unique_targets": 42,
+      "n_in_support": 40,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Креатинин",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 240,
+      "n_in_support": 226,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 14
+    },
+    {
+      "outcome": "ЛГ",
+      "unit": "мМе/мл",
+      "n_unique_targets": 126,
+      "n_in_support": 120,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 6
+    },
+    {
+      "outcome": "ЛПВП",
+      "unit": "ммоль/л",
+      "n_unique_targets": 411,
+      "n_in_support": 393,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 18
+    },
+    {
+      "outcome": "ЛПНП",
+      "unit": "ммоль/л",
+      "n_unique_targets": 402,
+      "n_in_support": 383,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 19
+    },
+    {
+      "outcome": "Латентная железосвязывающая способность сыворотки",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 184,
+      "n_in_support": 170,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 14
+    },
+    {
+      "outcome": "Лейкоциты",
+      "unit": "*10^9/л",
+      "n_unique_targets": 629,
+      "n_in_support": 606,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 23
+    },
+    {
+      "outcome": "Лейкоциты",
+      "unit": "тыс/мкл",
+      "n_unique_targets": 60,
+      "n_in_support": 59,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "Лимфоциты",
+      "unit": "%",
+      "n_unique_targets": 707,
+      "n_in_support": 670,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 37
+    },
+    {
+      "outcome": "МНО",
+      "unit": "_",
+      "n_unique_targets": 48,
+      "n_in_support": 46,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Магний",
+      "unit": "ммоль/л",
+      "n_unique_targets": 40,
+      "n_in_support": 38,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Медь",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 64,
+      "n_in_support": 58,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 6
+    },
+    {
+      "outcome": "Молочная кислота (лактат)",
+      "unit": "ммоль/л",
+      "n_unique_targets": 54,
+      "n_in_support": 50,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "Моноциты",
+      "unit": "%",
+      "n_unique_targets": 698,
+      "n_in_support": 683,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 15
+    },
+    {
+      "outcome": "Мочевая кислота",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 121,
+      "n_in_support": 110,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 11
+    },
+    {
+      "outcome": "Мочевина",
+      "unit": "ммоль/л",
+      "n_unique_targets": 129,
+      "n_in_support": 125,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "Нейтрофилы",
+      "unit": "%",
+      "n_unique_targets": 682,
+      "n_in_support": 652,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 30
+    },
+    {
+      "outcome": "Общая железосвязывающая способность сыворотки",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 176,
+      "n_in_support": 165,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 11
+    },
+    {
+      "outcome": "Общий белок",
+      "unit": "г/л",
+      "n_unique_targets": 587,
+      "n_in_support": 557,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 30
+    },
+    {
+      "outcome": "Паратгормон",
+      "unit": "пг/мл",
+      "n_unique_targets": 36,
+      "n_in_support": 34,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Пролактин",
+      "unit": "мМЕ/л",
+      "n_unique_targets": 171,
+      "n_in_support": 169,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Пролактин",
+      "unit": "нг/мл",
+      "n_unique_targets": 48,
+      "n_in_support": 43,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 5
+    },
+    {
+      "outcome": "Распределение эритроцитов по объему (коэфф.вариации) RDW-CV",
+      "unit": "%",
+      "n_unique_targets": 140,
+      "n_in_support": 129,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 11
+    },
+    {
+      "outcome": "Распределение эритроцитов по объему (ст.отклонение) RDW-SD",
+      "unit": "фл",
+      "n_unique_targets": 105,
+      "n_in_support": 94,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 11
+    },
+    {
+      "outcome": "СОЭ",
+      "unit": "мм/час",
+      "n_unique_targets": 565,
+      "n_in_support": 550,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 15
+    },
+    {
+      "outcome": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "unit": "_",
+      "n_unique_targets": 69,
+      "n_in_support": 68,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "Среднее содержание гемоглобина в эритроците (MCH)",
+      "unit": "пг/кл",
+      "n_unique_targets": 98,
+      "n_in_support": 93,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 5
+    },
+    {
+      "outcome": "Средний объем эритроцитов (MCV)",
+      "unit": "фл",
+      "n_unique_targets": 197,
+      "n_in_support": 181,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 16
+    },
+    {
+      "outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "unit": "г/дл",
+      "n_unique_targets": 108,
+      "n_in_support": 103,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 5
+    },
+    {
+      "outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "unit": "г/л",
+      "n_unique_targets": 61,
+      "n_in_support": 51,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 10
+    },
+    {
+      "outcome": "С–реактивный белок",
+      "unit": "мг/л",
+      "n_unique_targets": 58,
+      "n_in_support": 54,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "Т3 св.",
+      "unit": "пг/мл",
+      "n_unique_targets": 72,
+      "n_in_support": 71,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "Т3 св.",
+      "unit": "пмоль/л",
+      "n_unique_targets": 433,
+      "n_in_support": 420,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 13
+    },
+    {
+      "outcome": "Т4 св.",
+      "unit": "нг/дл",
+      "n_unique_targets": 79,
+      "n_in_support": 76,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Т4 св.",
+      "unit": "пмоль/л",
+      "n_unique_targets": 456,
+      "n_in_support": 442,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 14
+    },
+    {
+      "outcome": "ТТГ",
+      "unit": "мЕд/л",
+      "n_unique_targets": 66,
+      "n_in_support": 62,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "ТТГ",
+      "unit": "мМЕ/л",
+      "n_unique_targets": 47,
+      "n_in_support": 45,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "ТТГ",
+      "unit": "мкМЕ/мл",
+      "n_unique_targets": 502,
+      "n_in_support": 487,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 15
+    },
+    {
+      "outcome": "Тестостерон общий",
+      "unit": "нмоль/л",
+      "n_unique_targets": 82,
+      "n_in_support": 77,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 5
+    },
+    {
+      "outcome": "Трансферрин",
+      "unit": "г/л",
+      "n_unique_targets": 99,
+      "n_in_support": 92,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 7
+    },
+    {
+      "outcome": "Триглицериды",
+      "unit": "ммоль/л",
+      "n_unique_targets": 393,
+      "n_in_support": 385,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 8
+    },
+    {
+      "outcome": "Тромбоциты",
+      "unit": "*10^9/л",
+      "n_unique_targets": 631,
+      "n_in_support": 599,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 32
+    },
+    {
+      "outcome": "Тромбоциты",
+      "unit": "тыс/мкл",
+      "n_unique_targets": 57,
+      "n_in_support": 55,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "ФСГ",
+      "unit": "мМе/мл",
+      "n_unique_targets": 142,
+      "n_in_support": 139,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Ферритин",
+      "unit": "мкг/л",
+      "n_unique_targets": 244,
+      "n_in_support": 241,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Ферритин",
+      "unit": "нг/мл",
+      "n_unique_targets": 305,
+      "n_in_support": 290,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 15
+    },
+    {
+      "outcome": "Фибриноген",
+      "unit": "г/л",
+      "n_unique_targets": 52,
+      "n_in_support": 51,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "Фруктозамин",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 55,
+      "n_in_support": 50,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 5
+    },
+    {
+      "outcome": "Цветной показатель",
+      "unit": "_",
+      "n_unique_targets": 215,
+      "n_in_support": 209,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 6
+    },
+    {
+      "outcome": "Цинк",
+      "unit": "мкмоль/л",
+      "n_unique_targets": 89,
+      "n_in_support": 84,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 5
+    },
+    {
+      "outcome": "Щелочная фосфатаза",
+      "unit": "Ед/л",
+      "n_unique_targets": 50,
+      "n_in_support": 41,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 9
+    },
+    {
+      "outcome": "Эозинофилы",
+      "unit": "%",
+      "n_unique_targets": 684,
+      "n_in_support": 654,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 30
+    },
+    {
+      "outcome": "Эозинофильный катионный белок",
+      "unit": "нг/мл",
+      "n_unique_targets": 37,
+      "n_in_support": 34,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Эритроциты",
+      "unit": "*10^12/л",
+      "n_unique_targets": 630,
+      "n_in_support": 587,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 43
+    },
+    {
+      "outcome": "Эритроциты",
+      "unit": "млн/мкл",
+      "n_unique_targets": 61,
+      "n_in_support": 60,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "Эстрадиол",
+      "unit": "пг/мл",
+      "n_unique_targets": 75,
+      "n_in_support": 72,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Эстрадиол",
+      "unit": "пмоль/л",
+      "n_unique_targets": 61,
+      "n_in_support": 58,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "D–димер",
+      "unit": "нг/мл",
+      "n_unique_targets": 31,
+      "n_in_support": 30,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "ЛДГ",
+      "unit": "Ед/л",
+      "n_unique_targets": 22,
+      "n_in_support": 19,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Мочевая кислота",
+      "unit": "ммоль/л",
+      "n_unique_targets": 39,
+      "n_in_support": 36,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 3
+    },
+    {
+      "outcome": "Пролактин",
+      "unit": "мЕд/л",
+      "n_unique_targets": 35,
+      "n_in_support": 31,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    },
+    {
+      "outcome": "Пролактин",
+      "unit": "мкМЕ/мл",
+      "n_unique_targets": 32,
+      "n_in_support": 31,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "СОЭ (по Вестергрену)",
+      "unit": "мм/час",
+      "n_unique_targets": 24,
+      "n_in_support": 23,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 1
+    },
+    {
+      "outcome": "Холестерин общий",
+      "unit": "ммоль/л",
+      "n_unique_targets": 31,
+      "n_in_support": 29,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 2
+    },
+    {
+      "outcome": "Эозинофильный катионный белок",
+      "unit": "мкг/л",
+      "n_unique_targets": 32,
+      "n_in_support": 28,
+      "n_out_of_support": 0,
+      "n_unclassified_in_v011": 4
+    }
+  ],
+  "n_outcomes_with_residual": 93,
+  "ok": true
+}

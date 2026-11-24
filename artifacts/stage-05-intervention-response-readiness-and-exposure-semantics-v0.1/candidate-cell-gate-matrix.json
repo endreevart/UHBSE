@@ -1,0 +1,2617 @@
+{
+  "cases": [
+    {
+      "cell_id": "8ccc91b9f74528e62f5a5cd9f5345f15e6018e51fc88a3ce7f93f484178215ea",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "a202d32b3c0ecb735356db42f3f0081a0635520f66fe9b276133ea7b703897e7",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "abe11abe63c7f4c6207aa103f835448ac7757f706bfdf5a019d3bdb9009f5fe8",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "a01c1c25e215fbe3ec0c3ed1670d111e58c3d0dd265915cc438f0968192216ee",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "00f0b68dbeda05f3c3c1622a4bc3b24996a8c350cd1c60951115b60f32aa48e0",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "6fbb2bcd6382e719a6680a59f76ca41f2e130507c5c53a29bc286a91bf5bc526",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "ed61f25b37dfde8f07fc8b08b63f3e68bac24e7351764024e9c98f378cc8ed4b",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "b32a170f0243cf2f8a47c6216ba41d9ae6c10c10d956956b0927f804fab1882a",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "f8e1200b94a475c6095daaaa0979de4a7d2046dfabb63ec0e6a4826dd0cba0a4",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "cc65c1f0e8f9c43ec50f48d55ecc4dca1a2ad3425225977fd303f884df7ddc78",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "eb7d0cf7eabbf71ad776d8c085bea701df424a3838add1154cb187595e70c53d",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "9a29c4a6e044c9bb9daa4790cc3a4ce140ce3b07d064bd4efdec23c040382124",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "98b5f454ad9ffeaa19ef73df30774fc6d16ea10d579b7d86edda3edc35cc2750",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "9667711b4d52184d030090b74d0cb1eaeb1cf352065e419e3b610d40e6e5e0f9",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "6ba50cf1b921b5a9d53a5d8f84001659754926ae12a63196edc3d0db82659d92",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "233f93d2519df72a5607a469c5fcb8e022843ac18fba978d64da987c140c2f2c",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "c8e5ff99fbdc1592b9269c6138afba8d568b401d321ecee7973a93e938823070",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "25c97106099a69fecb8adc6daaa43bc767c92e4887436c023956886e323b11b5",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "a9bd06e8e45ac0155b1aa54efddff0c04bc3bbba8c147194973c91e0fe932eea",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "ee345e9eeb8fa61140d855078ac4a7e3064131691be20ff3723b9fc91b0d8a02",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "087d840533170f238a3dc5f14bcd1b2e5a22c09b0dd22de082a996b7a34776ce",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "6d8a4d2dc79e07c2e41fde98cfc2835b00c921fab5a2fcd124d3e34f15cb0f2b",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "5a1a00a04daac25b5c8395d92ba9197b2edad4d5b07fa43091704df8427d960a",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "0627af58a6afcd3bd1d02fea9a986d7389a1f25a2cc2aac7422160eded8979a0",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "8b2915e2b959788d6d7877cf3590e1ec639a9119c3282de3e96511ced82a4ef5",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "0005d1dd3655c0e56613cf62f004fdb8d858890849f1e8e5d8059ee1d0402e83",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "4c784033c4d54a18b89e7bed6a0546c89b5b5f37600c67ffd7397ab80b960959",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "f7f4d05014eefd26d69d94a06ec650bed2380c0c477a4beee00f3a628e3c74b2",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "82840d5870c02138b21c69adf2476c36ea42f9390f0897af06b0d20168cf8011",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "47020aaa967a87f5999d9d1b7379dd49e20fecf5f0c4a52d0cf122b7db94cb72",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "2fff2dbfe696c6b548b624cf5d0dda424d5a6a29aa53f1d01d585ff2fd81df81",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "f68928c722d1fd11a0490da6a290a5b94ff2ef8e84797e5368e48ea8ed623209",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "1237f39d6e1dd9f693c22b9394a2a531b61754885b7f83dd9a545b99d389ba6d",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "6836cf3c5cdd1493998b41e5db242cb1f2e66582d413f04b6d15242e20822132",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "acca20c722224d4490a70040a8e8106d51af3d8adb5fb9049040e2b40f8e5a95",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "f74089db236c2f43abbdc258721effbd352068e61e791e5cf7dcb92cf71d264d",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "a0125b6873076d890c14e0654f471e4a20d23dba18dfc731ae71c6b04f1776e9",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "44e539c47d9d3c14d8d578d48c4a290b2eda44db68fea008a4085560d9aa9aca",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "7b706f0612a1e471e2517d203cd2903e8ddf5ee379f3892d1a4a6c8fda01b528",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "3c9730d1eddbaa99c7200a27a4648e2349afba055b9199a1714af6178fc7156a",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "ebe66996b2c20a87db8b6566d023b341ebba8d71cd6d0035268cd80c10ac7317",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "92aa87749b5660e473c0e1de57596777bfdc65720c7c4878bb9f61bc66be0943",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "2de63df94452864e468fbfabf407ed5e3582ad19e76e7df3299a97b58031130f",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "d126bc0da44921aaa29b58c72af4ada36e6505b8c7f48cda8996810f6ba358a3",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "122007580f740af1c1b9dc8c9dbb290f2cfc98e9a47883e6e881affd9d361fa8",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "18628136a486c0fdf1ba108dd4d4dc3fd6f6175e80114bf8eb94840e28d9da9a",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "ba102d875cffa4dabe02ca2e9ebea0acea185dd9937326551c5d62a3535bbb53",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "42f85e98852fb0c4aae146b5fe58336258bcd7f2aa56e4039a2b1b0b6d39ce7a",
+      "exposure_semantic_tier": "RECORDED_MEDICATION_ASSOCIATION",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_IDENTITY_PRESENT",
+          "status": "PASS"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_RECORDED_MEDICATION_ASSOCIATION_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "OUTCOME_DIGEST_AND_NATIVE_UNIT_PRESENT",
+          "status": "PASS"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "magerya_api"
+    },
+    {
+      "cell_id": "3bfbc24e257dc64767fba1d7a61115cc406699fb73f1c76cda0d5cf5d3fe1404",
+      "exposure_semantic_tier": "UNKNOWN",
+      "gates": {
+        "G0_SOURCE_AND_PROVENANCE_IDENTITY": {
+          "reason": "SOURCE_B_MEDICATION_CONTEXT_NOT_AVAILABLE_NO_TRANSFER",
+          "status": "FAIL"
+        },
+        "G10_FUTURE_MODEL_ELIGIBILITY": {
+          "reason": "FUTURE_MODEL_NOT_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": {
+          "reason": "VOCABULARY_AND_MAPPING_IDENTITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G2_DOMAIN_ACCEPTANCE": {
+          "reason": "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "status": "FAIL"
+        },
+        "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": {
+          "reason": "TIER_UNKNOWN_NOT_INTERVENTION_RESPONSE_ELIGIBLE",
+          "status": "FAIL"
+        },
+        "G4_TEMPORALLY_VALID_T0_START_END": {
+          "reason": "TIMEZONE_CONTRACT_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": {
+          "reason": "SOURCE_B_NO_MEDICATION_CONDITIONED_OUTCOME_CELL",
+          "status": "FAIL"
+        },
+        "G6_PRE_POST_OBSERVATION_AVAILABILITY": {
+          "reason": "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "status": "FAIL"
+        },
+        "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": {
+          "reason": "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "status": "FAIL"
+        },
+        "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": {
+          "reason": "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "status": "FAIL"
+        },
+        "G9_MINIMUM_AGGREGATE_SUPPORT": {
+          "reason": "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "status": "FAIL"
+        }
+      },
+      "intervention_response_eligible": false,
+      "mapping_status": "unknown",
+      "source_system": "kgz_raw"
+    }
+  ],
+  "gate_fail_counts": {
+    "G0_SOURCE_AND_PROVENANCE_IDENTITY": 1,
+    "G10_FUTURE_MODEL_ELIGIBILITY": 49,
+    "G1_EXACT_VOCABULARY_MAPPING_IDENTITY": 49,
+    "G2_DOMAIN_ACCEPTANCE": 49,
+    "G3_EXPOSURE_SEMANTIC_ELIGIBILITY": 49,
+    "G4_TEMPORALLY_VALID_T0_START_END": 49,
+    "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY": 1,
+    "G6_PRE_POST_OBSERVATION_AVAILABILITY": 49,
+    "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT": 49,
+    "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY": 49,
+    "G9_MINIMUM_AGGREGATE_SUPPORT": 49
+  },
+  "n_cases": 49,
+  "note": "Recorded-association cases are technical inventory, not intervention-response eligible.",
+  "version": "0.1"
+}

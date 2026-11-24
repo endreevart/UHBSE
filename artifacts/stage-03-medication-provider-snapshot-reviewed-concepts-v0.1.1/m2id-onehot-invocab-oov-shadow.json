@@ -1,0 +1,42 @@
+{
+  "version": "0.1.1",
+  "model_dir": "artifacts/stage-03-medication-reference-acquisition-first-concept-cohorts-v0.1/frozen_models_m2id_onehot/cohort_00cf513e6349",
+  "M2ID_ONEHOT_IN_VOCAB_SHADOW_STATUS": "PASS",
+  "M2ID_ONEHOT_OOV_SHADOW_STATUS": "PASS",
+  "in_vocab": {
+    "medicine_id_present_in_vocab": true,
+    "oov": false,
+    "n_features": 307,
+    "feature_order_len": 307,
+    "y_pred": 30.310368478902085,
+    "reload_deterministic": true,
+    "padding_truncation": false,
+    "model_identity_sha256": "b817984322fe1587e18f1ae29f0fec62c35f6326fd01eba2c3a7ca3971c8cbac",
+    "file_sha256": "6749e960027ff424b35c035d467453c97fdf2e3313b65c15853a128aa30b4a7d",
+    "vocab_hash": "db938e43ce94c386a439279465b44e97936f0dd616ead40f5bbfb6d225705b7f"
+  },
+  "oov": {
+    "medicine_id_present_in_vocab": false,
+    "oov": true,
+    "n_features": 307,
+    "feature_order_len": 307,
+    "y_pred": 30.06600313532996,
+    "reload_deterministic": true,
+    "padding_truncation": false,
+    "model_identity_sha256": "b817984322fe1587e18f1ae29f0fec62c35f6326fd01eba2c3a7ca3971c8cbac",
+    "file_sha256": "6749e960027ff424b35c035d467453c97fdf2e3313b65c15853a128aa30b4a7d",
+    "vocab_hash": "db938e43ce94c386a439279465b44e97936f0dd616ead40f5bbfb6d225705b7f"
+  },
+  "in_vocab_error": null,
+  "oov_error": null,
+  "no_retrain": true,
+  "scientific_fact": {
+    "statement": "M2ID_ONEHOT did not improve over M1 on any of five evaluated outcomes",
+    "verified_from_freeze_metrics": true,
+    "policy_flag": true,
+    "medication_signal_claimed": false
+  },
+  "CLINICAL_USE": "CLINICAL_USE_PROHIBITED",
+  "CAUSAL_INTERPRETATION": "CAUSAL_INTERPRETATION_PROHIBITED",
+  "ok": true
+}

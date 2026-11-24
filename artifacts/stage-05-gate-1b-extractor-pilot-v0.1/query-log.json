@@ -1,0 +1,36 @@
+{
+  "entries": [
+    {
+      "duration_seconds": 0.011,
+      "error_class": null,
+      "finished_at": "2026-11-17T15:05:07Z",
+      "lock_timeout_ms": 10000,
+      "output_aggregate_row_count": 5,
+      "parameter_contract_sha256": "31fc1768dec13be66ea3a894196cdf0c55c99fe55ce6203cef6c3fbfb4267420",
+      "query": "b_feedback_extract_columns",
+      "read_only_verified": true,
+      "schema_fingerprint": "09d28f9da4f261c6a6941965b633b341745d58817f8886e61354155b5e8a7b3d",
+      "source_system": "kgz_raw",
+      "sql_sha256": "58e33080a50ea0dad2ae1ae1c4ac2cb15fef4dc97a97b63ca93773232a08abe0",
+      "started_at": "2026-11-17T15:05:07Z",
+      "statement_timeout_ms": 300000,
+      "success": true
+    },
+    {
+      "duration_seconds": 5.474,
+      "error_class": null,
+      "finished_at": "2026-11-17T15:05:13Z",
+      "lock_timeout_ms": 10000,
+      "output_aggregate_row_count": 41407,
+      "parameter_contract_sha256": "31fc1768dec13be66ea3a894196cdf0c55c99fe55ce6203cef6c3fbfb4267420",
+      "query": "b_feedback_extract_stream",
+      "read_only_verified": true,
+      "schema_fingerprint": "09d28f9da4f261c6a6941965b633b341745d58817f8886e61354155b5e8a7b3d",
+      "source_system": "kgz_raw",
+      "sql_sha256": "835ac3ff1bf52d66ce48cf25db85fbf6cca4f3c76f76fc58ff8bd0b26726923f",
+      "started_at": "2026-11-17T15:05:07Z",
+      "statement_timeout_ms": 300000,
+      "success": true
+    }
+  ]
+}

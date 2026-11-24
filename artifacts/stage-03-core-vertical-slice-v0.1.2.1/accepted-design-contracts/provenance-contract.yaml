@@ -1,0 +1,156 @@
+stage: "03"
+phase: design
+title: Provenance Contract
+version: "0.4.0"
+
+purpose: >
+  Discriminated provenance profiles by record_origin. Source-backed records
+  require source locators; synthetic and predicted records use scenario/model
+  metadata instead.
+
+record_origins:
+  - OBSERVED
+  - CORRECTED
+  - NORMALIZED
+  - ANNOTATED
+  - DERIVED
+  - IMPUTED
+  - PREDICTED
+  - SYNTHETIC
+
+common_fields:
+  - record_origin
+  - transformation_id
+  - transformation_version
+  - transformed_at
+  - input_artifact_sha256
+  - confidence
+  - mapping_status
+
+profiles:
+  SOURCE_BACKED:
+    record_origins: [OBSERVED, CORRECTED, NORMALIZED, ANNOTATED]
+    required_fields:
+      - record_origin
+      - source_system
+      - source_schema
+      - source_relation
+      - source_record_locator
+      - transformation_id
+      - transformation_version
+      - transformed_at
+      - input_artifact_sha256
+      - confidence
+      - mapping_status
+    locator:
+      scheme: deterministic_hmac_locator
+      description: Deterministic HMAC locator; not a sealed opaque token
+      key_version_field: locator_key_version
+
+  COMPUTED:
+    record_origins: [DERIVED, IMPUTED]
+    required_fields:
+      - record_origin
+      - input_record_references
+      - computation_method
+      - computation_version
+      - uncertainty
+      - transformation_id
+      - transformation_version
+      - transformed_at
+      - input_artifact_sha256
+      - confidence
+      - mapping_status
+    forbidden_fields:
+      - source_record_locator
+
+  SCENARIO:
+    record_origins: [SYNTHETIC]
+    required_fields:
+      - record_origin
+      - transformation_id
+      - transformation_version
+      - transformed_at
+      - input_artifact_sha256
+      - confidence
+    forbidden_fields:
+      - source_schema
+      - source_relation
+      - source_record_locator
+    profile_by_entity:
+      Scenario:
+        required_context: [scenario_id]
+      ScenarioBranch:
+        required_context: [scenario_id, branch_id]
+      ScenarioIntervention:
+        required_context: [branch_id, scenario_intervention_id]
+      ScenarioEvent:
+        required_context: [branch_id, scenario_event_id]
+      SimulationRun:
+        required_context: [scenario_id, branch_id, simulation_run_id]
+      ScenarioCheckpoint:
+        required_context: [branch_id, simulation_run_id, checkpoint_id]
+      ScenarioCheckpointState:
+        required_context: [checkpoint_id, checkpoint_state_id]
+
+  MODEL_OUTPUT:
+    record_origins: [PREDICTED]
+    required_fields:
+      - record_origin
+      - simulation_run_id
+      - branch_id
+      - model_version
+      - generated_at
+      - transformation_id
+      - transformation_version
+      - transformed_at
+      - input_artifact_sha256
+      - confidence
+    forbidden_fields:
+      - source_schema
+      - source_relation
+      - source_record_locator
+      - input_snapshot_id
+      - model_id
+
+origin_specific_rules:
+  CORRECTED:
+    additionally_requires:
+      - prior_record_reference
+      - correction_reason
+  NORMALIZED:
+    additionally_requires:
+      - normalization_lineage
+    must_not_require:
+      - correction_history_ref
+  ANNOTATED:
+    additionally_requires:
+      - annotation_text
+      - annotated_at
+
+entity_exceptions:
+  SourceSystem:
+    requires_row_provenance: false
+  Provenance:
+    requires_row_provenance: false
+
+mapping_status_values:
+  - CONFIRMED_SCHEMA
+  - CANDIDATE
+  - HYPOTHESIS
+  - UNRESOLVED
+  - NOT_MAPPED
+
+mapping_status_semantics:
+  CONFIRMED_SCHEMA: Column-to-field shape only; not clinical equivalence
+
+raw_value_retention:
+  required: true
+  rule: Normalization adds parallel fields; raw_value and raw_unit are never deleted
+
+forbidden:
+  - requiring source_record_locator for SYNTHETIC or PREDICTED
+  - requiring correction_history for NORMALIZED
+  - silent_overwrite_of_observed_values
+  - treating_PREDICTED_as_OBSERVED
+  - treating_SYNTHETIC_as_OBSERVED

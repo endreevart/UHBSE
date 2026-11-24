@@ -1,0 +1,65 @@
+{
+  "check_name": "accepted_baselines_v011",
+  "expected_core_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "expected_sdr_v01_sha256": "023e8e2b4ad90d966cd792ab44d1fb6b9ace5557ec432e7021e7897eb74fd6fd",
+  "zip_present": true,
+  "sidecar_present": true,
+  "attestation_present": true,
+  "computed_core_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "computed_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "core_sha_matches": true,
+  "sidecar_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "sidecar_matches": true,
+  "attestation_status": "PASS",
+  "members": 205,
+  "indexed_members": 204,
+  "zip_member_count": 205,
+  "review_index_present": true,
+  "sdr_v01_present": true,
+  "computed_sdr_v01_sha256": "023e8e2b4ad90d966cd792ab44d1fb6b9ace5557ec432e7021e7897eb74fd6fd",
+  "sdr_v01_untouched": true,
+  "prior_zips": {
+    "core_v0.1": {
+      "present": true,
+      "sha256": "933c34bee1f03af9e22c54be2fb5aa4022228bb7353a35ad2f7e93d3793cb67c",
+      "untouched": true
+    },
+    "core_v0.1.1": {
+      "present": true,
+      "sha256": "13fbf307fd03eb8ed419a800ff7fed254a8159240482e8ac4b28b5f391941128",
+      "untouched": true
+    },
+    "core_v0.1.2": {
+      "present": true,
+      "sha256": "d4218dda05cdf8657e03768ce81727e274a691e90abee3ff701bae1018f419f8",
+      "untouched": true
+    },
+    "core_v0.1.2.1": {
+      "present": true,
+      "sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+      "untouched": true
+    },
+    "sdr_v0.1": {
+      "present": true,
+      "sha256": "023e8e2b4ad90d966cd792ab44d1fb6b9ace5557ec432e7021e7897eb74fd6fd",
+      "untouched": true
+    }
+  },
+  "ok": true,
+  "policy": {
+    "scientific_version": "0.1.1",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "security_blocks_core": false,
+    "clinical_validation_status": "NOT_STARTED",
+    "intervention_response_model_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "accepted_core_baseline_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+    "accepted_sdr_v01_sha256": "023e8e2b4ad90d966cd792ab44d1fb6b9ace5557ec432e7021e7897eb74fd6fd",
+    "split_class": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+    "pair_definition": "strict_consecutive_neighbors_only"
+  },
+  "security_stage_paused": true,
+  "clinical_validation": "NOT_STARTED"
+}

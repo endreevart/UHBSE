@@ -1,0 +1,41 @@
+---
+description: Stage 05 Gate 1A semantic confirmation constraints
+alwaysApply: true
+---
+
+Published bundle is **STAGE 05 — Intervention Response Readiness and Exposure Semantics v0.1.1**
+(`stage-05-intervention-response-readiness-and-exposure-semantics-v0.1.1`). It stays frozen.
+
+Active gate is **STAGE 05 GATE 1B EXTRACTOR PILOT v0.1**
+(`stage-05-gate-1b-extractor-pilot-v0.1`). Gate 1A v0.1 decision records, the
+completion superseding records, the evidence-recovery artifacts, and the owner-attestation
+records stay frozen.
+`GATE_1A_STATUS=SOURCE_B_ROUTE_ACCEPTED_SOURCE_A_OPEN`.
+`GATE_1B_STATUS=OPEN`. `GATE_1B_PILOT_STATUS=EXECUTED_PRECISION_RECALL_NOT_MEASURED`. `GATE_1B_ACCEPTED=false`.
+This is not model training. An open Gate 1B does not mean readiness is `READY`.
+A candidate slot is not an accepted medication and not administration.
+
+Forbidden:
+
+- train an intervention-response model;
+- treat a Gate 1B candidate as a domain-accepted mapping, administration, cohort, exposure episode, or response label;
+- rewrite Gate 1A v0.1 decision records or the completion superseding records;
+- treat the Magerya checkout, including DoctorFeedback, as Source B form evidence;
+- open Gate 2 or Gate 3;
+- open or recompute held-out statistical gates;
+- change frozen NHR, D0, or LEP;
+- claim treatment effect or causal effect;
+- accept algorithmic/LLM candidate mapping as domain-accepted;
+- transfer medication semantics from Source A to Source B;
+- perform A↔B identity merge;
+- treat appointment, recommendation, or recorded association as administration;
+- create a synthetic substitute when a private source is missing;
+- publish patient-level rows;
+- contact IROS or create letters/calendar events;
+- resume the security stage without an owner decision;
+- overwrite the published v0.1 review ZIP.
+
+`TECHNICAL_AUDIT_STATUS=PASS` does not mean `INTERVENTION_RESPONSE_READINESS_STATUS=READY`.
+
+If `DOMAIN_ACCEPTED_MAPPING_COUNT=0`, intervention-response eligible cells must be 0
+and readiness cannot be `READY`.

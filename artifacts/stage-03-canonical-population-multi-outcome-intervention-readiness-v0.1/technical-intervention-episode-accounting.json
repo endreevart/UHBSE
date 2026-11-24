@@ -1,0 +1,28 @@
+{
+  "source_rows_considered": 25726,
+  "candidate_rows": 25726,
+  "technically_constructible_episodes": 1996,
+  "rejected_rows": 0,
+  "unsupported_rows": 23730,
+  "quarantined_rows": 0,
+  "truncated_rows": 0,
+  "unexplained_rows": 0,
+  "canonical_source_a_subjects": 43856,
+  "transition_types_preserved_separately": [
+    "initiation",
+    "dose_change",
+    "discontinuation",
+    "replacement",
+    "combination_exposure",
+    "unknown_intervention_transition"
+  ],
+  "transition_type_counts": {
+    "unknown_intervention_transition": 1996,
+    "initiation": null,
+    "dose_change": null,
+    "discontinuation": null,
+    "replacement": null,
+    "combination_exposure": null
+  },
+  "note": "Transition subtypes not asserted without verified status fields; all constructible episodes counted as unknown_intervention_transition."
+}

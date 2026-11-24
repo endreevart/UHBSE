@@ -1,0 +1,343 @@
+{
+  "version": "0.3",
+  "CROSS_SOURCE_SEMANTIC_STATUS": "PARTIAL",
+  "CROSS_SOURCE_LAB_MAPPING_STATUS": "PARTIAL_NO_ACCEPTED",
+  "CROSS_SOURCE_DIAGNOSIS_MAPPING_STATUS": "SOURCE_SPECIFIC_ONLY",
+  "CROSS_SOURCE_MEDICATION_MAPPING_STATUS": "SOURCE_SPECIFIC_ONLY",
+  "CROSS_SOURCE_PROCEDURE_MAPPING_STATUS": "SOURCE_SPECIFIC_ONLY",
+  "diagnosis": {
+    "domain": "diagnoses",
+    "status": "SOURCE_SPECIFIC_REGISTRY_ONLY",
+    "CROSS_SOURCE_ACCEPTED_COUNT": 0,
+    "SOURCE_SPECIFIC_SUPPORTED_COUNT": 27,
+    "UNRESOLVED_RETAINED_COUNT": 0,
+    "REJECTED_CONFLICT_COUNT": 0,
+    "a_relations": [
+      "magerya_api.content_clinicdocument",
+      "magerya_api.diagnosis_conditionsmedicines",
+      "magerya_api.diagnosis_diagnosis",
+      "magerya_api.diagnosis_diagnosis_analysis",
+      "magerya_api.diagnosis_diagnosis_functional_studies",
+      "magerya_api.diagnosis_diagnosis_manipulations",
+      "magerya_api.diagnosis_diagnosis_medicines",
+      "magerya_api.diagnosis_diagnosis_procedures",
+      "magerya_api.diagnosis_diagnosis_recommendations",
+      "magerya_api.diagnosis_functionalstudies",
+      "magerya_api.diagnosis_functionalstudiesresult",
+      "magerya_api.diagnosis_manipulations",
+      "magerya_api.diagnosis_manipulationsresult",
+      "magerya_api.diagnosis_measurementunits",
+      "magerya_api.diagnosis_medicines",
+      "magerya_api.diagnosis_medicines_conditions",
+      "magerya_api.diagnosis_medicinesform",
+      "magerya_api.diagnosis_procedures",
+      "magerya_api.diagnosis_proceduresresult",
+      "magerya_api.diagnosis_receptionfrequency",
+      "magerya_api.diagnosis_recommendation",
+      "magerya_api.diagnosis_recommendationcategory",
+      "magerya_api.document_procedurelist_diagnosis",
+      "magerya_api.reference_disease",
+      "magerya_api.reference_disease_disease_types",
+      "magerya_api.reference_diseasetype",
+      "magerya_api.reference_diseasetype_branches"
+    ],
+    "b_relations": [],
+    "HUMAN_ACCEPTED_created": false,
+    "registry_entries": [
+      {
+        "source": "A",
+        "relation": "magerya_api.content_clinicdocument",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_conditionsmedicines",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_diagnosis",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_diagnosis_analysis",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_diagnosis_functional_studies",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_diagnosis_manipulations",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_diagnosis_medicines",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_diagnosis_procedures",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_diagnosis_recommendations",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_functionalstudies",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_functionalstudiesresult",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_manipulations",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_manipulationsresult",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_measurementunits",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_medicines",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_medicines_conditions",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_medicinesform",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_procedures",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_proceduresresult",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_receptionfrequency",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_recommendation",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.diagnosis_recommendationcategory",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.document_procedurelist_diagnosis",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.reference_disease",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.reference_disease_disease_types",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.reference_diseasetype",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.reference_diseasetype_branches",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      }
+    ]
+  },
+  "medication": {
+    "domain": "medications",
+    "status": "SOURCE_SPECIFIC_REGISTRY_ONLY",
+    "CROSS_SOURCE_ACCEPTED_COUNT": 0,
+    "SOURCE_SPECIFIC_SUPPORTED_COUNT": 0,
+    "UNRESOLVED_RETAINED_COUNT": 0,
+    "REJECTED_CONFLICT_COUNT": 0,
+    "a_relations": [],
+    "b_relations": [],
+    "HUMAN_ACCEPTED_created": false,
+    "registry_entries": []
+  },
+  "procedure": {
+    "domain": "procedures_interventions",
+    "status": "SOURCE_SPECIFIC_REGISTRY_ONLY",
+    "CROSS_SOURCE_ACCEPTED_COUNT": 0,
+    "SOURCE_SPECIFIC_SUPPORTED_COUNT": 1,
+    "UNRESOLVED_RETAINED_COUNT": 0,
+    "REJECTED_CONFLICT_COUNT": 0,
+    "a_relations": [
+      "magerya_api.document_procedurelist"
+    ],
+    "b_relations": [],
+    "HUMAN_ACCEPTED_created": false,
+    "registry_entries": [
+      {
+        "source": "A",
+        "relation": "magerya_api.document_procedurelist",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      }
+    ]
+  },
+  "recommendations": {
+    "domain": "recommendations",
+    "status": "SOURCE_SPECIFIC_REGISTRY_ONLY",
+    "CROSS_SOURCE_ACCEPTED_COUNT": 0,
+    "SOURCE_SPECIFIC_SUPPORTED_COUNT": 8,
+    "UNRESOLVED_RETAINED_COUNT": 0,
+    "REJECTED_CONFLICT_COUNT": 0,
+    "a_relations": [
+      "magerya_api.document_recommendation",
+      "magerya_api.document_recommendationtemplate",
+      "magerya_api.document_recommendationtemplate_branches",
+      "magerya_api.document_recommendationtemplate_services",
+      "magerya_api.document_recommendationtemplatecategory"
+    ],
+    "b_relations": [
+      "quest_digital.recommendations_category",
+      "quest_digital.recommendations_list",
+      "quest_digital.recommendations_user"
+    ],
+    "HUMAN_ACCEPTED_created": false,
+    "registry_entries": [
+      {
+        "source": "A",
+        "relation": "magerya_api.document_recommendation",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.document_recommendationtemplate",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.document_recommendationtemplate_branches",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.document_recommendationtemplate_services",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "A",
+        "relation": "magerya_api.document_recommendationtemplatecategory",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "B",
+        "relation": "quest_digital.recommendations_category",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "B",
+        "relation": "quest_digital.recommendations_list",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      },
+      {
+        "source": "B",
+        "relation": "quest_digital.recommendations_user",
+        "identity_status": "exact_source_identity",
+        "semantic_tier": "SOURCE_SPECIFIC_SUPPORTED"
+      }
+    ]
+  },
+  "DOMAIN_ACCEPTED_MAPPING_COUNT": 0,
+  "SOURCE_SPECIFIC_SUPPORTED_COUNT": 7735465,
+  "UNRESOLVED_RETAINED_COUNT": 853,
+  "REJECTED_CONFLICT_COUNT": 1201,
+  "HUMAN_ACCEPTED_created": false,
+  "ok": true,
+  "lab": {
+    "version": "0.3",
+    "CROSS_SOURCE_LAB_MAPPING_STATUS": "PARTIAL_NO_ACCEPTED",
+    "DOMAIN_ACCEPTED_MAPPING_COUNT": 0,
+    "CROSS_SOURCE_ACCEPTED_COUNT": 0,
+    "n_exact_synonym_candidates": 874,
+    "exact_synonym_universe_complete": true,
+    "pin_exact_synonym": 874,
+    "graph_exact_synonym": 874,
+    "A_PROVIDER_GRAINS": 95,
+    "B_CODE_UNIT_STRATA": 2426,
+    "tier_counts": {
+      "UNRESOLVED_RETAINED": 853,
+      "SOURCE_SPECIFIC_SUPPORTED": 37,
+      "REJECTED_CONFLICT": 1201
+    },
+    "specimen_assay_gaps_do_not_block_source_specific_retention": true,
+    "scientific_comparability_separate_from_retention": true,
+    "HUMAN_ACCEPTED_created": false,
+    "ok": true,
+    "n_exact_synonym_candidates_in_provider_pack": 874
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "version": "0.1",
+  "PRIVACY_BOUNDARY_STATUS": "PASS",
+  "DEIDENTIFIED_RESEARCH_VIEW_STATUS": "DEIDENTIFIED_RESEARCH_VIEW",
+  "DIRECT_IDENTIFIER_SCAN_STATUS": "PASS",
+  "REIDENTIFICATION_RISK_ASSESSMENT_STATUS": "PASS_WITH_AGGREGATE_ONLY",
+  "zones": {
+    "restricted_source_zone": {
+      "raw_db_writes": 0,
+      "direct_identifiers_in_scientific_artifacts": false,
+      "access_via_adapters_only": true
+    },
+    "pseudonymous_research_zone": {
+      "status": "PSEUDONYMOUS_RESTRICTED_VIEW",
+      "hmac_not_plain_sha": true,
+      "namespaces_separated": true,
+      "no_identity_merge": true,
+      "candidate_linkage_separate_from_scientific_state": true,
+      "source_system_retained_per_record": true
+    },
+    "deidentified_public_evidence_zone": {
+      "status": "DEIDENTIFIED_RESEARCH_VIEW",
+      "not_claiming_anonymous": true,
+      "not_claiming_impossible_reidentification": true
+    }
+  },
+  "namespace_separation": {
+    "namespaces_differ": true,
+    "same_source_id_yields_different_research_ids": true,
+    "not_plain_sha_of_source_id": true,
+    "source_a_system": "magerya_api",
+    "source_b_system": "kgz_raw",
+    "ok": true
+  },
+  "relative_time_horizon_preservation": {
+    "ok": true,
+    "n_events": 4,
+    "horizons_preserved": true,
+    "calendar_dates_published": false,
+    "representation": "relative_or_subject_specific_shift"
+  },
+  "public_scan": {
+    "ok": true,
+    "n_hits": 0,
+    "DIRECT_IDENTIFIER_SCAN_STATUS": "PASS",
+    "hits_sample": []
+  },
+  "rare_cell_audit": {
+    "min_cell": 10,
+    "n_small_cells": 0,
+    "small_cell_keys_redacted": 0,
+    "REIDENTIFICATION_RISK_ASSESSMENT_STATUS": "PASS_WITH_AGGREGATE_ONLY",
+    "ok": true,
+    "note": "Public artifacts publish aggregates only; small cells not emitted as row lists."
+  },
+  "hmac_keys_absent_from_zip": true,
+  "identifier_maps_absent_from_zip": true,
+  "SECURITY_STAGE_STATUS_UNCHANGED": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "ok": true
+}

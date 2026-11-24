@@ -1,0 +1,108 @@
+{
+  "version": "0.1",
+  "sources": [
+    {
+      "name": "ATC",
+      "purpose": "Anatomical Therapeutic Chemical classification",
+      "jurisdiction": "WHO / international",
+      "licensing": "Public classification; redistribution of derived products varies",
+      "update_mechanism": "Periodic WHO releases",
+      "identifiers": [
+        "ATC code"
+      ],
+      "dose_support": "Limited (DDD)",
+      "interaction_support": false,
+      "redistribution_restrictions": "Check WHO terms for commercial redistribution",
+      "suitability": "Useful hierarchy; not sufficient alone for product-level dosing"
+    },
+    {
+      "name": "RxNorm",
+      "purpose": "US normalized drug terminology",
+      "jurisdiction": "United States (NLM)",
+      "licensing": "UMLS Metathesaurus license required for some uses",
+      "update_mechanism": "NLM regular releases",
+      "identifiers": [
+        "RxCUI"
+      ],
+      "dose_support": true,
+      "interaction_support": "Indirect via linked sources",
+      "redistribution_restrictions": "UMLS license constraints may apply",
+      "suitability": "Strong for US product concepts; jurisdiction mismatch for local clinic data"
+    },
+    {
+      "name": "National drug registries (jurisdiction-local)",
+      "purpose": "Local authorized medicinal products",
+      "jurisdiction": "Clinic country / regional authority",
+      "licensing": "Varies; often restricted redistribution",
+      "update_mechanism": "Authority publications",
+      "identifiers": [
+        "national registration numbers"
+      ],
+      "dose_support": true,
+      "interaction_support": "Varies",
+      "redistribution_restrictions": "Often present \u2014 do not download/integrate without owner approval",
+      "suitability": "Preferred for local product identity when licensed for project use"
+    },
+    {
+      "name": "Active-ingredient catalogs",
+      "purpose": "Ingredient-level identity independent of brand",
+      "jurisdiction": "Varies",
+      "licensing": "Varies",
+      "update_mechanism": "Catalog-specific",
+      "identifiers": [
+        "INN",
+        "CAS",
+        "local ingredient ids"
+      ],
+      "dose_support": "Partial",
+      "interaction_support": false,
+      "redistribution_restrictions": "Check per source",
+      "suitability": "Useful bridge from free-text to substance"
+    },
+    {
+      "name": "Dose-form and route dictionaries",
+      "purpose": "Normalize form/route vocabulary",
+      "jurisdiction": "International / local",
+      "licensing": "Often open (EDQM, SNOMED subsets \u2014 license-dependent)",
+      "update_mechanism": "Periodic",
+      "identifiers": [
+        "EDQM",
+        "SNOMED CT ids where licensed"
+      ],
+      "dose_support": true,
+      "interaction_support": false,
+      "redistribution_restrictions": "SNOMED requires affiliate license",
+      "suitability": "Needed for episode construction quality"
+    },
+    {
+      "name": "Interaction / contraindication sources",
+      "purpose": "Safety interaction knowledge",
+      "jurisdiction": "Varies",
+      "licensing": "Often commercial",
+      "update_mechanism": "Vendor",
+      "identifiers": [
+        "vendor ids"
+      ],
+      "dose_support": "Varies",
+      "interaction_support": true,
+      "redistribution_restrictions": "Typically restricted \u2014 owner approval required",
+      "suitability": "Deferred; not integrated in this stage"
+    },
+    {
+      "name": "PK/PD reference sources",
+      "purpose": "Pharmacokinetic/pharmacodynamic parameters",
+      "jurisdiction": "Scientific literature / curated DBs",
+      "licensing": "Often restricted or citation-only",
+      "update_mechanism": "Literature / vendor",
+      "identifiers": [
+        "compound ids"
+      ],
+      "dose_support": true,
+      "interaction_support": "Partial",
+      "redistribution_restrictions": "Do not download restricted DBs without owner approval",
+      "suitability": "Out of scope for this stage (pkpd_status: NOT_STARTED)"
+    }
+  ],
+  "commercial_or_restricted_download_without_owner_approval": false,
+  "integration_status": "EVALUATION_ONLY"
+}

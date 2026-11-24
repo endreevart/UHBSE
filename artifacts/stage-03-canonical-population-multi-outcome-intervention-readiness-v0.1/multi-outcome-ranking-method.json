@@ -1,0 +1,30 @@
+{
+  "version": "0.1",
+  "criteria_predeclared": [
+    "subjects_with_pairs",
+    "strict_consecutive_positive_horizon_pairs",
+    "numeric_validity_rate",
+    "unit_dominance",
+    "horizon_median_days_present",
+    "train_validation_test_feasibility"
+  ],
+  "weights": {
+    "subjects_with_pairs": 3.0,
+    "strict_consecutive_positive_horizon_pairs": 2.0,
+    "numeric_validity_rate": 1.0,
+    "unit_dominance": 1.0
+  },
+  "exclusions": [
+    "test_set_performance_not_used",
+    "label_similarity_alone_insufficient_for_EXACT_mapping",
+    "no_unverified_unit_conversion"
+  ],
+  "gates": {
+    "min_pairs": 200,
+    "min_subjects_with_pairs": 100,
+    "min_unit_dominance": 0.7,
+    "min_numeric_validity": 0.5
+  },
+  "shortlist_max": 8,
+  "uses_test_performance_for_selection": false
+}

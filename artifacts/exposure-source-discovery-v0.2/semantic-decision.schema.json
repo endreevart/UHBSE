@@ -1,0 +1,56 @@
+{
+  "$id": "uhbse/exposure-source-discovery/semantic-decision/0.2",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "basis": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "decided_at": {
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*Z$",
+      "type": "string"
+    },
+    "decision": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "decision_schema_version": {
+      "const": "0.2"
+    },
+    "evidence_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "field_path": {
+      "minLength": 3,
+      "type": "string"
+    },
+    "reviewer_digest": {
+      "minLength": 16,
+      "type": "string"
+    },
+    "role": {
+      "minLength": 2,
+      "type": "string"
+    },
+    "source_system": {
+      "enum": [
+        "magerya_api",
+        "kgz_raw"
+      ]
+    }
+  },
+  "required": [
+    "reviewer_digest",
+    "role",
+    "source_system",
+    "field_path",
+    "decision",
+    "basis",
+    "decided_at",
+    "evidence_sha256",
+    "decision_schema_version"
+  ],
+  "type": "object"
+}

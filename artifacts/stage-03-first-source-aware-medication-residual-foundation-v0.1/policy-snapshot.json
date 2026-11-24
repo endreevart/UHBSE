@@ -1,0 +1,78 @@
+{
+  "version": "0.1",
+  "appointment_date_semantics": "CANDIDATE_TECHNICAL_EVENT_TIMESTAMP",
+  "medication_record_class": "RECORDED_MEDICATION_CONTEXT",
+  "administration_claim": "NOT_CLAIMED",
+  "HUMAN_ACCEPTED_DRUG_CONCEPT_COUNT": 0,
+  "SCIENTIFICALLY_USABLE_ACCEPTED_DRUG_CONCEPT_COUNT": 0,
+  "HUMAN_REJECTED_SOURCE_MEDICINE_IDS": [
+    "31",
+    "48",
+    "405",
+    "449",
+    "510",
+    "810"
+  ],
+  "historical_exact_813_not_scientifically_usable": true,
+  "SCIENTIFIC_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY",
+  "no_source_b_medication_transfer": true,
+  "no_ordinal_medication_encoding": true,
+  "no_state_encoder_retrain": true,
+  "STATE_ENCODER_STATUS": "NOT_ACCEPTED",
+  "no_intervention_response": true,
+  "no_treatment_effect": true,
+  "no_causal_effect": true,
+  "no_qsp": true,
+  "no_pkpd": true,
+  "no_identity_merge": true,
+  "no_new_a_b_semantic_mappings": true,
+  "predeclared_horizons_days": [
+    30,
+    90,
+    180,
+    365
+  ],
+  "target_window": "left_open_right_closed",
+  "gates": {
+    "min_unique_subjects": 100,
+    "min_unique_residual_targets": 300,
+    "min_test_subjects": 30,
+    "min_val_subjects": 20
+  },
+  "authoritative_comparisons": [
+    "R1_vs_R2COUNT",
+    "R1_vs_R2ID"
+  ],
+  "R2HASH_status": "SENSITIVITY_ONLY",
+  "R2SEM_status": "NOT_RUN_NO_SCIENTIFICALLY_USABLE_ACCEPTED_DRUG_CONCEPTS",
+  "UPSTREAM_PROBABILITY_CONSUMPTION_STATUS": "NOT_USED_FOR_MEDICATION_RESIDUAL_DUE_TO_HELDOUT_LIMITATION",
+  "no_v02112_republication": true,
+  "seed": 42,
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "SCIENTIFIC_CROSS_SOURCE_PASS": false,
+  "r1_feature_order": [
+    "persistence_value",
+    "n_prior_outcome_measurements",
+    "days_since_previous_outcome",
+    "days_since_previous_missing",
+    "prior_delta",
+    "prior_delta_missing",
+    "requested_horizon_days",
+    "n_obs_before",
+    "n_events_before",
+    "n_encounters_before",
+    "longitudinal_age_days",
+    "source_is_a",
+    "missingness_lab"
+  ],
+  "r2count_extra": [
+    "concurrent_count",
+    "polypharmacy",
+    "n_prior_recorded_medication_events",
+    "days_since_last_prior_med",
+    "days_since_last_prior_med_missing"
+  ],
+  "nh_provider_id": "M0_LAST_VALUE_CARRY_FORWARD",
+  "episode_expansion_pin_is_not_administrations": true,
+  "episode_expansion_pin": 202374
+}

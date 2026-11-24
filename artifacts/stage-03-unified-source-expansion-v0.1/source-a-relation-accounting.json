@@ -1,0 +1,56 @@
+{
+  "source_system": "magerya_api",
+  "truncated_total": 0,
+  "unaccounted_total": 0,
+  "relations": {
+    "account_patient": {
+      "runtime_count": 8262,
+      "candidate_count": 8262,
+      "eligible_count": 8262,
+      "loaded_count": 8262,
+      "source_record_count": 8262,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    },
+    "appointment_appointment": {
+      "runtime_count": 49927,
+      "candidate_count": 49927,
+      "eligible_count": 49927,
+      "loaded_count": 49927,
+      "source_record_count": 49927,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    },
+    "document_analysisresult": {
+      "runtime_count": 578216,
+      "candidate_count": 567793,
+      "eligible_count": 578216,
+      "loaded_count": 567793,
+      "source_record_count": 578216,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    },
+    "document_analysisresultitem": {
+      "runtime_count": 918438,
+      "candidate_count": 918438,
+      "eligible_count": 918438,
+      "loaded_count": 793890,
+      "source_record_count": 918438,
+      "rejected_count": 116111,
+      "unsupported_count": 8437,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    }
+  },
+  "invariant": "candidate_count = loaded + rejected + unsupported + quarantined"
+}

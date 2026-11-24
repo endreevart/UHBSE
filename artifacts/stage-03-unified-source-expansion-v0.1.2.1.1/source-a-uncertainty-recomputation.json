@@ -1,0 +1,553 @@
+{
+  "version": "0.1.2.1.1",
+  "status": "PASS",
+  "source_a_uncertainty_recomputation_status": "PASS",
+  "uncertainty": {
+    "uncertainty_policy_hash_before_recomputation": "5e0cc533e26838a3ea174232eea22c9130adb7709fb546649cc8c4aaefb51c89",
+    "uncertainty_policy": {
+      "nominal_coverage": 0.9,
+      "overcoverage_threshold": 0.05,
+      "undercoverage_threshold": 0.05,
+      "max_mean_width_vs_outcome_iqr": 2.0,
+      "require_persistence_interval_comparison": true,
+      "forbid_post_hoc_threshold_tuning": true,
+      "seed": 42
+    },
+    "nominal_coverage": 0.9,
+    "observed_coverage": 0.9811715481171548,
+    "coverage_error": 0.08117154811715477,
+    "mean_interval_width": 5.978792920292057,
+    "median_interval_width": 5.978792920292058,
+    "width_relative_to_outcome_iqr": 5.386299928191043,
+    "outcome_iqr": 1.1099999999999999,
+    "interval_score": 7.5688325018185,
+    "subject_cluster_coverage_ci": {
+      "status": "COMPUTED",
+      "n_iterations": 1000,
+      "seed": 42,
+      "mean": 0.9813430828056748,
+      "ci_95_lower": 0.969939879759519,
+      "ci_95_upper": 0.9914893617021276
+    },
+    "coverage_by_horizon": {
+      "lt_1d": {
+        "n_pairs": 7,
+        "coverage": 1.0
+      },
+      "1_7d": {
+        "n_pairs": 22,
+        "coverage": 0.9545454545454546
+      },
+      "7_30d": {
+        "n_pairs": 72,
+        "coverage": 0.9583333333333334
+      },
+      "30_90d": {
+        "n_pairs": 230,
+        "coverage": 0.9739130434782609
+      },
+      "90_365d": {
+        "n_pairs": 484,
+        "coverage": 0.987603305785124
+      },
+      "365_730d": {
+        "n_pairs": 106,
+        "coverage": 0.9905660377358491
+      },
+      "gt_730d": {
+        "n_pairs": 35,
+        "coverage": 0.9714285714285714
+      }
+    },
+    "persistence_interval_comparison": {
+      "persistence_coverage": 0.016736401673640166,
+      "persistence_mean_width": 0.0,
+      "ridge_mean_width": 5.978792920292057,
+      "ridge_narrower_than_persistence": false
+    },
+    "uncertainty_interval_construction_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+    "uncertainty_coverage_status": "UNCERTAINTY_COVERAGE_ESTIMATED",
+    "uncertainty_coverage_detail": "UNCERTAINTY_OVERCONSERVATIVE",
+    "uncertainty_sharpness_status": "NOT_ESTABLISHED",
+    "uncertainty_calibration_and_sharpness_status": "UNCERTAINTY_CALIBRATION_AND_SHARPNESS_NOT_ESTABLISHED",
+    "overcoverage_blocks_full_pass": true,
+    "n_test_pairs": 956,
+    "coverage_by_starting_value_quantile_LEGACY_BUGGY": {
+      "q1": {
+        "n_pairs": 238,
+        "coverage": 0.9957983193277311
+      },
+      "q2": {
+        "n_pairs": 239,
+        "coverage": 0.9916317991631799
+      },
+      "q3": {
+        "n_pairs": 239,
+        "coverage": 0.9874476987447699
+      },
+      "q4": {
+        "n_pairs": 956,
+        "coverage": 0.9811715481171548
+      }
+    },
+    "legacy_quantile_note": "Nested coverage_by_starting_value_quantile from evaluate_uncertainty uses overlapping bins (q4 may equal n). Authoritative exclusive bins are in exclusive_quantile_coverage.exclusive_bins."
+  },
+  "exclusive_quantile_coverage": {
+    "n": 956,
+    "exclusive_bins": {
+      "q1": {
+        "n_pairs": 239,
+        "coverage": 0.9916317991631799,
+        "mean_width": 5.978792920292057
+      },
+      "q2": {
+        "n_pairs": 239,
+        "coverage": 0.9916317991631799,
+        "mean_width": 5.978792920292057
+      },
+      "q3": {
+        "n_pairs": 239,
+        "coverage": 0.9916317991631799,
+        "mean_width": 5.978792920292057
+      },
+      "q4": {
+        "n_pairs": 239,
+        "coverage": 0.9497907949790795,
+        "mean_width": 5.978792920292057
+      }
+    },
+    "exclusive_sum": 956,
+    "exclusive_sum_equals_n": true,
+    "old_q4_all_rejected": true,
+    "quantile_assignment_report": {
+      "exclusive_counts": {
+        "q1": 239,
+        "q2": 239,
+        "q3": 239,
+        "q4": 239
+      },
+      "exclusive_sum_equals_n": true,
+      "pairwise_intersection_empty": true,
+      "union_equals_full": true,
+      "q4_bug_detected_in_legacy_method": true
+    }
+  },
+  "n_test_pairs": 956,
+  "prediction_vectors_omitted": true,
+  "subject_keys_omitted": true,
+  "robustness_sanitized": {
+    "status": "PASS",
+    "methodology": "scientific_reuse_fixed_outcome_robustness_v0.1.1",
+    "outcome": {
+      "candidate_id": "2685c68a3e247ca4",
+      "source_measurement_label": "\u04223 \u0441\u0432.",
+      "dominant_unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+      "selection_basis": "FIXED_FROM_ACCEPTED_SDR_V0.1.1.1 \u2014 do not reselect",
+      "medical_interpretation_status": "DOMAIN_REVIEW_PENDING",
+      "limitations": [
+        "Outcome fixed before expanded robustness evaluation.",
+        "Predictive next-lab forecast only \u2014 not intervention response."
+      ]
+    },
+    "outcome_reselected": false,
+    "fixed_outcome_candidate_id": "2685c68a3e247ca4",
+    "split_class": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+    "seed": 42,
+    "eligible_gap": {
+      "source_a_eligible_subjects_appt3_and_lab1": 8262,
+      "scientific_eligible_subjects_ge2_dated_numeric_SOURCE_A_ONLY": 7997,
+      "unscoped_all_sources_ge2_dated_numeric_subjects": 41492,
+      "unscoped_field_must_not_be_used_as_source_a_scientific_eligible": true,
+      "difference_source_a_load_minus_source_a_scientific": 265,
+      "expected_difference_orienting": 265,
+      "difference_matches_265": true,
+      "defect_v0121": {
+        "mislabeled_value": 41492,
+        "was_sum_of_a_and_b": true,
+        "source_a_component": 7997,
+        "source_b_component": 33495
+      },
+      "prior_raw_eligible_gap_preserved_for_audit": {
+        "source_a_eligible_subjects_appt3_and_lab1": 8262,
+        "scientific_eligible_subjects_ge2_dated_numeric": 41492,
+        "difference": -33230,
+        "expected_difference": 265,
+        "difference_matches_265": false,
+        "aggregate_exclusion_reasons": {
+          "source_a_cohort_lacks_ge2_dated_numeric_observation_components": -33230
+        },
+        "note": "Scientific eligibility requires \u22652 dated numeric observation components (any code). Source A expansion eligibility is appt\u22653 AND lab\u22651."
+      }
+    },
+    "n_scientific_eligible_subjects": 41492,
+    "n_pairs": 6345,
+    "dataset_summary": {
+      "n_subjects_in_series": 6645,
+      "n_observations_after_filter": 13009,
+      "n_pairs": 6345,
+      "n_subjects_with_pairs": 2925,
+      "pair_definition": "strict_consecutive_neighbors_only",
+      "horizon_days": {
+        "n": 6345,
+        "min": 0.08686745716435186,
+        "median": 115.0,
+        "max": 1619.0,
+        "mean": 185.19040119362532
+      },
+      "exclusions_by_reason": {
+        "missing_timestamp": 0,
+        "zero_horizon": 2,
+        "negative_horizon": 0,
+        "incompatible_unit": 0,
+        "duplicate_same_timestamp_collapsed": 17,
+        "all_forward_combinations_forbidden": 0
+      },
+      "units": [
+        "\u043f\u043c\u043e\u043b\u044c/\u043b"
+      ],
+      "date_coverage": {
+        "t0_min": "2021-07-24T00:00:00+00:00",
+        "t0_max": "2026-06-01T14:54:40.366650+00:00",
+        "t1_min": "2021-08-30T00:00:00+00:00",
+        "t1_max": "2026-06-30T00:00:00+00:00"
+      },
+      "feature_list": [
+        "y_t0",
+        "horizon_days",
+        "n_prior_measurements",
+        "prior_mean",
+        "prior_last_delta",
+        "days_since_first",
+        "has_prior_history",
+        "prior_mean_missing_flag",
+        "prior_last_delta_missing_flag"
+      ],
+      "dataset_schema_hash": "9a5fde5e8b26931fdc000d1d1ad15a42f4e58c0bd591f772c3802485357278d7",
+      "dataset_build_configuration_hash": "e737c1984255e2145185cd834c47f50f09f4ebc18ec6542f705393e10e6cd6d6",
+      "missingness": {
+        "prior_mean_null_pairs": 2924,
+        "prior_last_delta_null_pairs": 2924
+      }
+    },
+    "split_accounting": {
+      "eligible_population_subjects_by_split": {
+        "train": 29044,
+        "validation": 6223,
+        "test": 6225
+      },
+      "outcome_series_subjects_by_split": {
+        "train": 4650,
+        "validation": 968,
+        "test": 1027
+      },
+      "subjects_with_pairs_by_split": {
+        "train": 2061,
+        "validation": 410,
+        "test": 454
+      },
+      "pairs_by_split": {
+        "train": 4510,
+        "validation": 879,
+        "test": 956
+      },
+      "subjects_used_in_metrics_by_split": {
+        "train": 2061,
+        "validation": 410,
+        "test": 454
+      },
+      "note": "Do not equate eligible_population_subjects_by_split with subjects_used_in_metrics_by_split."
+    },
+    "comparison": {
+      "retrospective_backtest_status": "FIRST_EXPLORATORY_RETROSPECTIVE_BACKTEST_PASS",
+      "incremental_signal_status": "EXPLORATORY_INCREMENTAL_PREDICTIVE_SIGNAL_CANDIDATE",
+      "primary_metric": "subject_macro_mae",
+      "secondary_metric": "pair_micro_mae",
+      "outperforms_persistence": true,
+      "outperforms_empirical_trend": true,
+      "delta_subject_macro_mae_vs_persistence": -0.11084264124667498,
+      "persistence": {
+        "n_pairs": 956,
+        "n_subjects": 454,
+        "subject_macro_mae": 0.7709634537635638,
+        "pair_micro_mae": 0.8492102510460251,
+        "pair_micro_rmse": 2.023516858845874,
+        "median_absolute_error": 0.5,
+        "mean_bias": 0.06834205020920503,
+        "empirical_interval_coverage": 0.016736401673640166,
+        "mean_interval_width": 0.0,
+        "horizon_days": {
+          "min": 0.08686745716435186,
+          "median": 123.52259456938657,
+          "max": 1420.0,
+          "mean": 191.83745340186243
+        },
+        "residual_summary": {
+          "mean": -0.06834205020920503,
+          "std": 2.0223624408613494
+        }
+      },
+      "empirical_trend": {
+        "n_pairs": 956,
+        "n_subjects": 454,
+        "subject_macro_mae": 1.9037111045979926,
+        "pair_micro_mae": 2.4516471869018006,
+        "pair_micro_rmse": 18.111499871992613,
+        "median_absolute_error": 0.6903574556363674,
+        "mean_bias": 0.097157325377298,
+        "empirical_interval_coverage": 0.3682008368200837,
+        "mean_interval_width": 1.1719996351170945,
+        "horizon_days": {
+          "min": 0.08686745716435186,
+          "median": 123.52259456938657,
+          "max": 1420.0,
+          "mean": 191.83745340186243
+        },
+        "residual_summary": {
+          "mean": -0.097157325377298,
+          "std": 18.111239274751853
+        }
+      },
+      "first_learned": {
+        "n_pairs": 956,
+        "n_subjects": 454,
+        "subject_macro_mae": 0.6601208125168888,
+        "pair_micro_mae": 0.7289157682299926,
+        "pair_micro_rmse": 1.5455346390439368,
+        "median_absolute_error": 0.49957722682657835,
+        "mean_bias": -0.045185026409701706,
+        "empirical_interval_coverage": 0.9811715481171548,
+        "mean_interval_width": 5.978792920292057,
+        "horizon_days": {
+          "min": 0.08686745716435186,
+          "median": 123.52259456938657,
+          "max": 1420.0,
+          "mean": 191.83745340186243
+        },
+        "residual_summary": {
+          "mean": 0.045185026409701706,
+          "std": 1.544873986405696
+        }
+      },
+      "forbidden_statuses_not_used": [
+        "CLINICALLY_VALIDATED",
+        "CLINICALLY_ACCURATE",
+        "TREATMENT_EFFECT_CONFIRMED",
+        "PRODUCTION_READY"
+      ]
+    },
+    "effect": {
+      "absolute_macro_mae_diff_ridge_minus_persistence": -0.11084264124667498,
+      "relative_improvement_vs_persistence": 0.14377158956832706,
+      "paired_subject_level": {
+        "n_subjects": 454,
+        "mean_subject_error_diff_ridge_minus_persistence": -0.11084264124667499,
+        "median_subject_error_diff_ridge_minus_persistence": -0.04626104319036983,
+        "fraction_subjects_ridge_better": 0.552863436123348,
+        "paired_diffs_negative_is_ridge_better": true
+      },
+      "pair_micro_sensitivity": {
+        "ridge": 0.7289157682299926,
+        "persistence": 0.8492102510460251,
+        "rmse_ridge": 1.5455346390439368,
+        "rmse_persistence": 2.023516858845874
+      }
+    },
+    "bootstrap": {
+      "status": "COMPUTED",
+      "resampling_unit": "subject",
+      "n_iterations": 2000,
+      "seed": 42,
+      "statistic": "ridge_macro_mae_minus_persistence_macro_mae",
+      "bootstrap_mean_difference": -0.11127388974411978,
+      "ci_95_lower": -0.15242002666280585,
+      "ci_95_upper": -0.0683993212917392,
+      "fraction_bootstrap_differences_ge_0": 0.0,
+      "n_subjects": 454
+    },
+    "horizon_sensitivity": {
+      "buckets": {
+        "lt_1d": {
+          "n_pairs": 7,
+          "n_subjects": 7,
+          "ridge_subject_macro_mae": 0.5119810117665539,
+          "persistence_subject_macro_mae": 0.6357142857142858,
+          "ridge_pair_micro_mae": 0.5119810117665539,
+          "persistence_pair_micro_mae": 0.6357142857142858,
+          "delta_macro_mae": -0.12373327394773193
+        },
+        "1_7d": {
+          "n_pairs": 22,
+          "n_subjects": 21,
+          "ridge_subject_macro_mae": 0.9563952296918449,
+          "persistence_subject_macro_mae": 1.0347619047619048,
+          "ridge_pair_micro_mae": 1.0026077315925344,
+          "persistence_pair_micro_mae": 1.0754545454545454,
+          "delta_macro_mae": -0.0783666750700599
+        },
+        "7_30d": {
+          "n_pairs": 72,
+          "n_subjects": 62,
+          "ridge_subject_macro_mae": 0.8860480796961516,
+          "persistence_subject_macro_mae": 1.3922903225806451,
+          "ridge_pair_micro_mae": 0.8849788378602724,
+          "persistence_pair_micro_mae": 1.3805555555555555,
+          "delta_macro_mae": -0.5062422428844935
+        },
+        "30_90d": {
+          "n_pairs": 230,
+          "n_subjects": 146,
+          "ridge_subject_macro_mae": 0.7079312143009674,
+          "persistence_subject_macro_mae": 0.8669988584474886,
+          "ridge_pair_micro_mae": 0.684404933948821,
+          "persistence_pair_micro_mae": 0.8317826086956522,
+          "delta_macro_mae": -0.1590676441465212
+        },
+        "90_365d": {
+          "n_pairs": 484,
+          "n_subjects": 301,
+          "ridge_subject_macro_mae": 0.6750633517108457,
+          "persistence_subject_macro_mae": 0.7591898433792121,
+          "ridge_pair_micro_mae": 0.6932527180627891,
+          "persistence_pair_micro_mae": 0.7457128099173552,
+          "delta_macro_mae": -0.08412649166836639
+        },
+        "365_730d": {
+          "n_pairs": 106,
+          "n_subjects": 96,
+          "ridge_subject_macro_mae": 0.8695021037503629,
+          "persistence_subject_macro_mae": 1.0273958333333333,
+          "ridge_pair_micro_mae": 0.8528128693819333,
+          "persistence_pair_micro_mae": 1.0032075471698114,
+          "delta_macro_mae": -0.15789372958297043
+        },
+        "gt_730d": {
+          "n_pairs": 35,
+          "n_subjects": 35,
+          "ridge_subject_macro_mae": 0.6896613262693699,
+          "persistence_subject_macro_mae": 0.7360000000000001,
+          "ridge_pair_micro_mae": 0.6896613262693699,
+          "persistence_pair_micro_mae": 0.7360000000000001,
+          "delta_macro_mae": -0.046338673730630164
+        }
+      },
+      "secondary": {
+        "exclude_lt_1d": {
+          "n_pairs": 949,
+          "n_subjects": 449,
+          "ridge_subject_macro_mae": 0.6632445001663464,
+          "persistence_subject_macro_mae": 0.7723795278589265,
+          "delta_macro_mae": -0.1091350276925801,
+          "ridge_better_macro": true,
+          "ridge_better_micro": true
+        },
+        "exclude_lt_7d": {
+          "n_pairs": 927,
+          "n_subjects": 446,
+          "ridge_subject_macro_mae": 0.6626508263559503,
+          "persistence_subject_macro_mae": 0.7850072018788387,
+          "delta_macro_mae": -0.12235637552288836,
+          "ridge_better_macro": true,
+          "ridge_better_micro": true
+        },
+        "exclude_gt_730d": {
+          "n_pairs": 921,
+          "n_subjects": 433,
+          "ridge_subject_macro_mae": 0.6576892094614484,
+          "persistence_subject_macro_mae": 0.7729228877358207,
+          "delta_macro_mae": -0.11523367827437236,
+          "ridge_better_macro": true,
+          "ridge_better_micro": true
+        },
+        "only_7_365d": {
+          "n_pairs": 787,
+          "n_subjects": 377,
+          "ridge_subject_macro_mae": 0.6676534283829451,
+          "persistence_subject_macro_mae": 0.7921750938422026,
+          "delta_macro_mae": -0.12452166545925758,
+          "ridge_better_macro": true,
+          "ridge_better_micro": true
+        }
+      }
+    },
+    "shuffle_control": {
+      "status": "COMPUTED",
+      "n_permutations": 500,
+      "fraction_shuffles_le_real": 0.0,
+      "permutation_probability": 0.0,
+      "real_mae_rank_proxy": 0,
+      "configuration_equality": "PASS"
+    },
+    "tune_info": {
+      "selected_l2": 0.1
+    },
+    "model_constant": false,
+    "gaussian_interval_multiplier": 1.6448536269514715,
+    "learned_for_uncertainty": {
+      "val_n": 879,
+      "test_n": 956,
+      "residual_std": 1.8174240012386376,
+      "interval_multiplier": 1.6448536269514715,
+      "min_val_for_construction": 10,
+      "min_test_subjects": 10,
+      "min_test_pairs": 10
+    },
+    "source_a_predictive_signal_status": "EXPLORATORY_INCREMENTAL_PREDICTIVE_SIGNAL_SUPPORTED",
+    "source_a_signal_robustness_status": "SUPPORTED_EXPLORATORY",
+    "gates": {
+      "outcome_fixed_before_expanded_test": true,
+      "no_leakage_violations": true,
+      "adequate_outcome_bearing_test_subjects": true,
+      "ridge_macro_mae_lt_persistence": true,
+      "ridge_micro_mae_lt_persistence": true,
+      "bootstrap_ci_upper_lt_0": true,
+      "permutation_probability_le_0_05": true,
+      "improvement_not_only_lt_1d": true,
+      "model_not_constant": true,
+      "preprocessing_fitted_on_train_only": true
+    },
+    "all_supported_gates_pass": true,
+    "exploratory_because_expanded_test_viewed_in_v0.1": true,
+    "intervention_response_model_status": "NOT_STARTED",
+    "treatment_effect_status": "NOT_EVALUATED",
+    "clinical_validation_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED"
+  },
+  "authoritative_exclusive_quantile_ok": true,
+  "eligible_gap_corrected": {
+    "source_a_eligible_subjects_appt3_and_lab1": 8262,
+    "scientific_eligible_subjects_ge2_dated_numeric_SOURCE_A_ONLY": 7997,
+    "unscoped_all_sources_ge2_dated_numeric_subjects": 41492,
+    "unscoped_field_must_not_be_used_as_source_a_scientific_eligible": true,
+    "difference_source_a_load_minus_source_a_scientific": 265,
+    "expected_difference_orienting": 265,
+    "difference_matches_265": true,
+    "defect_v0121": {
+      "mislabeled_value": 41492,
+      "was_sum_of_a_and_b": true,
+      "source_a_component": 7997,
+      "source_b_component": 33495
+    },
+    "prior_raw_eligible_gap_preserved_for_audit": {
+      "source_a_eligible_subjects_appt3_and_lab1": 8262,
+      "scientific_eligible_subjects_ge2_dated_numeric": 41492,
+      "difference": -33230,
+      "expected_difference": 265,
+      "difference_matches_265": false,
+      "aggregate_exclusion_reasons": {
+        "source_a_cohort_lacks_ge2_dated_numeric_observation_components": -33230
+      },
+      "note": "Scientific eligibility requires \u22652 dated numeric observation components (any code). Source A expansion eligibility is appt\u22653 AND lab\u22651."
+    }
+  },
+  "authoritative_uncertainty_test_pairs": 936,
+  "source_a_uncertainty_evidence_status": "PASS",
+  "refit_performed": false,
+  "test_pair_count_accounting": {
+    "v0121_uncertainty_test_pairs_under_unscoped_eligible_split": 956,
+    "v01211_a_only_eligible_funnel_test_pairs": 936,
+    "explanation": "v0.1.2.1 ranked subjects from unscoped eligible (A+B), shifting some A subjects across split boundaries. T3 pair locators remained Source A only. Frozen model bytes are unchanged; exclusive-quantile evidence is carried from v0.1.2.1. A-only funnel test_pairs is the corrected lineage count.",
+    "refit_performed": false
+  },
+  "authoritative_uncertainty_test_pairs_for_carried_evidence": 956,
+  "a_only_lineage_test_pairs": 936
+}

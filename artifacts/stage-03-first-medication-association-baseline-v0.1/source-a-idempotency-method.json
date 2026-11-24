@@ -1,0 +1,55 @@
+{
+  "version": "0.1",
+  "SOURCE_A_IDEMPOTENCY_STATUS": "NOT_CLAIMED_AS_LOADER_REPLAY",
+  "idempotency_method": "FULL_SOURCE_A_EXPECTED_ID_COVERAGE_CHECK",
+  "FULL_SOURCE_A_EXPECTED_ID_COVERAGE_CHECK_STATUS": "PASS",
+  "method_description": "Resolves opaque subject keys for all account_patient rows and verifies presence in canonical_evidence.subject. Does not re-execute the full Source A upsert path. Counts are compared before/after the read-only check.",
+  "source_a_account_patient_count": 43856,
+  "canonical_subjects_present": 43856,
+  "canonical_subjects_missing": 0,
+  "counts_before": {
+    "captured_at": "2026-08-19T09:40:51Z",
+    "source_system": 2,
+    "source_record": 4689885,
+    "subject": 93420,
+    "subject_characteristic": 87120,
+    "encounter": 156995,
+    "observation": 934233,
+    "observation_component": 3291609,
+    "subject_by_system": {
+      "kgz_raw": 49564,
+      "magerya_api": 43856
+    },
+    "magerya_api_encounter": 68128,
+    "magerya_api_observation": 874492,
+    "magerya_api_observation_component": 1158631,
+    "kgz_raw_encounter": 88867,
+    "kgz_raw_observation": 59741,
+    "kgz_raw_observation_component": 2132978,
+    "schema_fingerprint": "6316c75f2cdc1e7a83034feb91701c08337c56080bd59d3d575b5706a9dfe655"
+  },
+  "counts_after": {
+    "captured_at": "2026-08-19T09:40:59Z",
+    "source_system": 2,
+    "source_record": 4689885,
+    "subject": 93420,
+    "subject_characteristic": 87120,
+    "encounter": 156995,
+    "observation": 934233,
+    "observation_component": 3291609,
+    "subject_by_system": {
+      "kgz_raw": 49564,
+      "magerya_api": 43856
+    },
+    "magerya_api_encounter": 68128,
+    "magerya_api_observation": 874492,
+    "magerya_api_observation_component": 1158631,
+    "kgz_raw_encounter": 88867,
+    "kgz_raw_observation": 59741,
+    "kgz_raw_observation_component": 2132978,
+    "schema_fingerprint": "6316c75f2cdc1e7a83034feb91701c08337c56080bd59d3d575b5706a9dfe655"
+  },
+  "counts_unchanged": true,
+  "zero_new_entities_claimed": false,
+  "note": "Preferred full upsert replay was not executed in this changeset; coverage check is the honest fallback."
+}

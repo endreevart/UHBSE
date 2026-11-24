@@ -1,0 +1,48 @@
+{
+  "PRIOR_EVIDENCE_RECOVERY_LIMITATIONS_STATUS": "REPRODUCED",
+  "points": [
+    {
+      "point": 1,
+      "reproduced": true,
+      "statement": "the previous search read Magerya application code, while Source B is kgz_raw"
+    },
+    {
+      "point": 2,
+      "reproduced": true,
+      "statement": "Magerya DoctorFeedback is a different object"
+    },
+    {
+      "asserted": false,
+      "forbidden_conclusion": "FORM_SCHEMA_NOT_FOUND_IN_SOURCE_B_CODE",
+      "point": 3,
+      "reproduced": true,
+      "statement": "a search of a non-Source-B repository does not prove that a Source B form is absent"
+    },
+    {
+      "point": 4,
+      "python_files_scanned": 1106,
+      "reproduced": true,
+      "statement": "the Python file count does not cover frontend, other-application migrations, API schemas, mobile or web forms, database functions, or a Source B repository"
+    },
+    {
+      "point": 5,
+      "reproduced": true,
+      "statement": "the original 14 decision records stay unchanged"
+    },
+    {
+      "point": 6,
+      "reproduced": true,
+      "statement": "superseding B_TIMING and B_PERIOD records are not row-level proof"
+    },
+    {
+      "point": 7,
+      "reproduced": true,
+      "statement": "B_TIMING_ROW_LEVEL_ASSIGNMENT_COUNT is 0"
+    },
+    {
+      "point": 8,
+      "reproduced": true,
+      "statement": "B_PERIOD_ROW_LEVEL_ASSIGNMENT_COUNT is 0"
+    }
+  ]
+}

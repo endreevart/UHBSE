@@ -1,0 +1,11 @@
+policy_id: empty_component_observation_v0121
+version: 0.1.2.1
+empty_component_observation_semantics_status: REQUIRES_FUTURE_SCHEMA_DECISION
+action: KEEP_ROWS_EXCLUDE_FROM_SCIENCE
+rules:
+- Keep Observation header rows in derived canonical store.
+- Do not delete or mutate raw Source A / Source B.
+- Exclude header-only Observations from scientific pair construction.
+- Do not invent ObservationComponents for empty headers.
+- No migration 0005 in this changeset.
+future_schema_decision_required: true

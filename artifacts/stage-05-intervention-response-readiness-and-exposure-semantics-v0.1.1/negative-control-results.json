@@ -1,0 +1,123 @@
+{
+  "NEGATIVE_CONTROL_STATUS": "PASS",
+  "cases": [
+    {
+      "detail": {
+        "eligible": 0
+      },
+      "id": "candidate_mapping_renamed_domain_accepted_without_evidence",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "reasons_sample": [
+          "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "FUTURE_MODEL_NOT_ELIGIBLE",
+          "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "SOURCE_B_MEDICATION_CONTEXT_NOT_AVAILABLE_NO_TRANSFER",
+          "SOURCE_B_NO_MEDICATION_CONDITIONED_OUTCOME_CELL"
+        ]
+      },
+      "id": "appointment_date_declared_administration_timestamp",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "eligible": 0
+      },
+      "id": "source_a_mapping_used_for_source_b",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "reasons_sample": [
+          "CONFOUNDING_AND_INDICATION_BIAS_UNRESOLVED",
+          "DOMAIN_ACCEPTED_MAPPING_COUNT=0",
+          "EVENT_TIME_IS_CANDIDATE_TECHNICAL_TIMESTAMP",
+          "FUTURE_MODEL_NOT_ELIGIBLE",
+          "INTERVENTION_SPLIT_FEASIBILITY_NOT_ESTABLISHED",
+          "MINIMUM_SUPPORT_NOT_MET_FOR_INTERVENTION_CELL",
+          "PRE_POST_NOT_ESTABLISHED_FOR_INTERVENTION_T0",
+          "SOURCE_B_NO_MEDICATION_CONDITIONED_OUTCOME_CELL"
+        ]
+      },
+      "id": "source_identity_or_vocabulary_version_changed",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "eligible": 0
+      },
+      "id": "missing_dose_route_duration_replaced_with_synthetic_defaults",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "eligible": 0
+      },
+      "id": "future_outcome_in_pre_t0_features",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "eligible": 0
+      },
+      "id": "exposure_timestamp_after_outcome",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "eligible": 0
+      },
+      "id": "patient_overlap_across_feasibility_partitions",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "readiness": "NOT_READY"
+      },
+      "id": "recorded_association_declared_treatment_response",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "hits": [
+          {
+            "file": "leak.json",
+            "kind": "patient_id",
+            "path": "patient_id"
+          },
+          {
+            "file": "leak.json",
+            "kind": "banned_key:rows",
+            "path": "rows"
+          },
+          {
+            "file": "leak.json",
+            "kind": "patient_id",
+            "path": "rows[0].patient_id"
+          }
+        ]
+      },
+      "id": "public_artifact_contains_patient_level_or_reversible_identifiers",
+      "rejected": true
+    },
+    {
+      "detail": {
+        "compared_key_count": 48,
+        "mismatch_keys": [
+          "INTERVENTION_RESPONSE_READINESS_STATUS"
+        ]
+      },
+      "id": "stage_report_and_status_contract_diverge_on_common_key",
+      "rejected": true
+    }
+  ],
+  "mutation_render_bytes": 4226,
+  "n_cases": 11,
+  "n_rejected": 11,
+  "ok": true
+}

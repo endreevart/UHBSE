@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "publication_status": "PRIVATE_PUBLICATION_REVIEW_REQUIRED",
+  "checks": {
+    "displayed_counts_have_evidence_binding": true,
+    "rounding_reproducible": true,
+    "no_raw_db_connection": true,
+    "no_canonical_db_connection": true,
+    "public_fixtures_autonomous": true,
+    "no_real_subject_ids": true,
+    "no_patient_level_clinical_values": true,
+    "forbidden_patterns_fail_publication": true,
+    "clinical_claims_scan": true,
+    "secret_dsn_vault_scan": true,
+    "disclosure_label_present": true,
+    "video06_no_invented_metrics": true,
+    "current_capabilities_working_now": true,
+    "future_capabilities_status": true,
+    "core_v0121_unchanged": true,
+    "core_v01_to_v0121_unchanged": true,
+    "episode_count": 6,
+    "series_title": "UHBSE \u2014 Building a Human Biology Simulation Engine",
+    "videos_present": true,
+    "covers_present": true,
+    "contact_sheets_present": true
+  },
+  "videos": [
+    "01-longitudinal-data/uhbse-roadmap-01-longitudinal-data-v0.1.mp4",
+    "02-canonicalization/uhbse-roadmap-02-canonicalization-v0.1.mp4",
+    "03-evidence-state/uhbse-roadmap-03-evidence-state-v0.1.mp4",
+    "04-counterfactual-branching/uhbse-roadmap-04-counterfactual-branching-v0.1.mp4",
+    "05-engine-verification/uhbse-roadmap-05-engine-verification-v0.1.mp4",
+    "06-first-scientific-test-next/uhbse-roadmap-06-first-scientific-test-next-v0.1.mp4"
+  ],
+  "covers": [
+    "01-longitudinal-data/cover.png",
+    "02-canonicalization/cover.png",
+    "03-evidence-state/cover.png",
+    "04-counterfactual-branching/cover.png",
+    "05-engine-verification/cover.png",
+    "06-first-scientific-test-next/cover.png"
+  ],
+  "contact_sheets": [
+    "contact-sheets/01-longitudinal-data.png",
+    "contact-sheets/02-canonicalization.png",
+    "contact-sheets/03-evidence-state.png",
+    "contact-sheets/04-counterfactual-branching.png",
+    "contact-sheets/05-engine-verification.png",
+    "contact-sheets/06-first-scientific-test-next.png"
+  ],
+  "baseline": {
+    "sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+    "members": 205,
+    "indexed": 204
+  },
+  "core_dir_untouched": true
+}

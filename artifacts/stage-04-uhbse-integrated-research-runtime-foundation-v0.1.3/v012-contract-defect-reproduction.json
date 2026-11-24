@@ -1,0 +1,61 @@
+{
+  "V012_EXPECTED_SHA256": "2e0e7e8efa6b563c4363b34e4b040738c7d8e58de864c1ee83a819cd57ead7e3",
+  "V012_INTEGRATED_RUNTIME_CLAIM_STATUS": "CORRECTION_REQUIRED",
+  "defects": [
+    {
+      "claim": "offset timestamp after cutoff_t0 still OK with PASS_NO_T1_T2_READ",
+      "cutoff_t0": "2020-01-01T00:00:00Z",
+      "id": 1,
+      "instant_utc": "2020-01-01T01:00:00Z",
+      "leak": "PASS_NO_T1_T2_READ",
+      "reproduced": true,
+      "status": "OK"
+    },
+    {
+      "claim": "empty history_timestamps with nonempty history still PASS_NO_T1_T2_READ",
+      "id": 2,
+      "leak": "PASS_NO_T1_T2_READ",
+      "reproduced": true,
+      "status": "OK"
+    },
+    {
+      "claim": "missing unit in cell_identities still OK",
+      "id": 3,
+      "reason": null,
+      "reproduced": true,
+      "status": "OK"
+    },
+    {
+      "claim": "Source A bundle with namespace=SOURCE_B still OK and labelled SOURCE_B",
+      "id": 4,
+      "reproduced": true,
+      "response_namespace": "SOURCE_B",
+      "source_system": "magerya_api",
+      "status": "OK"
+    },
+    {
+      "claim": "frozen LEP without features uses _in_support_features; state_at_t0 does not change the vector",
+      "id": 5,
+      "n_captured_vectors": 2,
+      "reproduced": true,
+      "source_uses_in_support_features": true,
+      "two_state_feature_vectors_identical": true
+    },
+    {
+      "claim": "panel bridge labelled EXPLAINED from published 43085 and 39465 without \u03943620 key decomposition",
+      "has_gained_lost_decomposition": false,
+      "id": 6,
+      "published_bridge_status": "EXPLAINED_DEFINITION_AND_UNIVERSE",
+      "published_v011_strict_panels": 39465,
+      "published_v01_strict_panels": 43085,
+      "reproduced": true,
+      "source_status_literal": true
+    }
+  ],
+  "n_defects": 6,
+  "n_reproduced": 6,
+  "no_v013_zip_overwrite": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.3-review.zip",
+  "note": "These are v0.1.2 defects. Reproduction is required before v0.1.3 corrections.",
+  "row_values_disclosed": false,
+  "version": "0.1.3"
+}

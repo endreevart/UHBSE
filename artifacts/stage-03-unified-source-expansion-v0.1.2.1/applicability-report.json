@@ -1,0 +1,35 @@
+{
+  "version": "0.1.2.1",
+  "applicability_status": "APPLICABILITY_CHECK_PARTIAL",
+  "feature_contract": {
+    "feature_order": [
+      "y_t0",
+      "horizon_days",
+      "n_prior_measurements",
+      "prior_mean",
+      "prior_last_delta",
+      "days_since_first",
+      "has_prior_history",
+      "prior_mean_missing_flag",
+      "prior_last_delta_missing_flag"
+    ],
+    "n_pairs": 6065,
+    "missing_feature_slots": 0,
+    "contract_ok": true
+  },
+  "missingness": {
+    "n_pairs": 6065,
+    "fraction_prior_mean_missing": 0.5304204451772465,
+    "fraction_has_prior_history": 0.4695795548227535
+  },
+  "horizon_ood": {
+    "status": "NO_A_TRAIN_REFERENCE",
+    "b_n": 6065,
+    "ood_fraction": null
+  },
+  "max_ood_fraction": 0.35,
+  "ood_ok": true,
+  "pass": true,
+  "b_cannot_tune_a": true,
+  "note": "Range/missingness check only \u2014 not a production clinical OOD detector."
+}

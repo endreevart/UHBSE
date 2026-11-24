@@ -1,0 +1,116 @@
+{
+  "JOINT_PANEL_ACCOUNTING_STATUS": "RECONCILED",
+  "live": {
+    "JOINT_PANEL_ACCOUNTING_STATUS": "RECONCILED",
+    "equations": {
+      "deterministic_selected_rows = strict_panel_membership_rows + asynchronous_vector_membership_rows + single_outcome_group_membership_rows + excluded_invalid_rows": {
+        "lhs": 404538,
+        "residual": 0,
+        "rhs": 404538
+      },
+      "eligible_origin_rows = duplicate_target_rows + deterministic_selected_rows": {
+        "lhs": 453808,
+        "residual": 0,
+        "rhs": 453808
+      },
+      "raw_origin_rows = outside_vocab_rows + eligible_origin_rows": {
+        "lhs": 453808,
+        "residual": 0,
+        "rhs": 453808
+      }
+    },
+    "excluded_invalid_as_leftover_balance": false,
+    "excluded_invalid_from_tagged_rows": true,
+    "exclusive_classification": true,
+    "panel_and_group_counts_not_in_row_formulas": {
+      "asynchronous_groups": 5423,
+      "single_outcome_groups": 6265,
+      "strict_panels": 39465
+    },
+    "row_counts": {
+      "asynchronous_groups": 5423,
+      "asynchronous_vector_membership_rows": 49887,
+      "deterministic_selected_rows": 404538,
+      "duplicate_target_rows": 49270,
+      "eligible_origin_rows": 453808,
+      "excluded_invalid_rows": 0,
+      "outside_vocab_rows": 0,
+      "raw_origin_rows": 453808,
+      "single_outcome_group_membership_rows": 6265,
+      "single_outcome_groups": 6265,
+      "strict_panel_membership_rows": 348386,
+      "strict_panels": 39465,
+      "unclassified_selected_rows_forced_invalid": 0
+    },
+    "row_values_disclosed": false,
+    "unexplained": 0,
+    "unexplained_assigned_as_literal": false,
+    "universe": "LIVE_ORIGIN_AGGREGATES",
+    "version": "0.1.2"
+  },
+  "synthetic_portable": {
+    "JOINT_PANEL_ACCOUNTING_STATUS": "RECONCILED",
+    "equations": {
+      "deterministic_selected_rows = strict_panel_membership_rows + asynchronous_vector_membership_rows + single_outcome_group_membership_rows + excluded_invalid_rows": {
+        "lhs": 14,
+        "residual": 0,
+        "rhs": 14
+      },
+      "eligible_origin_rows = duplicate_target_rows + deterministic_selected_rows": {
+        "lhs": 16,
+        "residual": 0,
+        "rhs": 16
+      },
+      "raw_origin_rows = outside_vocab_rows + eligible_origin_rows": {
+        "lhs": 20,
+        "residual": 0,
+        "rhs": 20
+      }
+    },
+    "ok": true,
+    "panel_and_group_counts_not_in_row_formulas": {
+      "asynchronous_groups": 2,
+      "single_outcome_groups": 2,
+      "strict_panels": 3
+    },
+    "row_counts": {
+      "asynchronous_groups": 2,
+      "asynchronous_vector_membership_rows": 4,
+      "deterministic_selected_rows": 14,
+      "duplicate_target_rows": 2,
+      "eligible_origin_rows": 16,
+      "excluded_invalid_rows": 2,
+      "outside_vocab_rows": 4,
+      "raw_origin_rows": 20,
+      "single_outcome_group_membership_rows": 2,
+      "single_outcome_groups": 2,
+      "strict_panel_membership_rows": 6,
+      "strict_panels": 3
+    },
+    "unexplained": 0,
+    "unexplained_assigned_as_literal": false,
+    "universe": "SYNTHETIC_PORTABLE_FIXTURE",
+    "version": "0.1.2"
+  },
+  "v01_v011_bridge": {
+    "JOINT_PANEL_COUNT_BRIDGE_STATUS": "EXPLAINED_DEFINITION_AND_UNIVERSE",
+    "bridge_reproduced_published_totals": true,
+    "explanation": {
+      "duplicate_resolution": "Excluding 49270 duplicate-target rows from grouping is the dominant mechanical difference. Remaining delta is predicate/group-key alignment between v0.1 effective_overlap_group collapse and v0.1.1 (source, subject, t0_iso, horizon).",
+      "input_universe": "Both counts were derived from private/integrated-research-runtime-v01/sequences/origins_train_val.parquet. Vocab in v0.1.1 is joint-dependence-rollout-v02 pre-test cells; v0.1 used the v0.1 joint payload outcomes. v0.1.1 reported outside_vocab_rows=0, so vocab coverage of that parquet was complete under the v0.2 cell set.",
+      "numeric": {
+        "delta": 3620,
+        "v011_async_groups": 5423,
+        "v011_duplicate_target_rows": 49270,
+        "v011_single_outcome_groups": 6265,
+        "v011_strict_panels": 39465,
+        "v01_strict_panels": 43085
+      },
+      "v011_definition": "v0.1.1 dropped duplicate-target rows before grouping (duplicate_target_rows=49270), then classified remaining groups into strict / async / single. excluded_invalid_rows was the leftover balance, not an independent tag.",
+      "v01_definition": "v0.1 grouped eligible origin rows including duplicate-target rows, then counted strict panels as groups with >=2 outcomes sharing one collapsed timestamp. Single-outcome groups were excluded from the panel total, not published as a row class. unexplained=0 was assigned as a literal in public_accounting()."
+    },
+    "row_values_disclosed": false,
+    "version": "0.1.2"
+  },
+  "version": "0.1.2"
+}

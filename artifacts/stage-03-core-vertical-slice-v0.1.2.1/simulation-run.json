@@ -1,0 +1,1714 @@
+{
+  "seed": 42,
+  "horizon_weeks": 12,
+  "step_weeks": 1,
+  "subject_id": "evidence-closure-subject",
+  "input_state_hash": "179f58f8304afa0b30968ea33984b1d231d6c7496bc5a91d7e636755aac63454",
+  "configuration_hash": "67abc5ce5eb74944c43b7d2f66153ab00b856c1ed5b60ce6b086d8a11c56e6ee",
+  "branches": [
+    {
+      "branch_id": "control",
+      "label": "Control",
+      "events": [
+        {
+          "week": 0,
+          "type": "start"
+        }
+      ],
+      "history": [
+        {
+          "week": 0,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.0,
+                "unit": null,
+                "lower": 100.0,
+                "upper": 100.0,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.70708006728837,
+                "unit": null,
+                "lower": 95.70707906728838,
+                "upper": 105.70708106728837,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.08740036740129,
+                "unit": null,
+                "lower": 99.08740036740129,
+                "upper": 101.08740036740129,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "b64d52d3a3a07b08baf45512faeb6a40c571ea36004a0d06db4678d99ca78f39"
+        },
+        {
+          "week": 1,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.08740036740129,
+                "unit": null,
+                "lower": 100.08740036740129,
+                "upper": 100.08740036740129,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.04424353453203,
+                "unit": null,
+                "lower": 94.03987251616196,
+                "upper": 104.0486145529021,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.01830264302404,
+                "unit": null,
+                "lower": 99.01830264302404,
+                "upper": 101.01830264302404,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "197b9a818e40a6fe3ad016a3b8115640ed85684f95c7b6e2573de66a95d4fb7b"
+        },
+        {
+          "week": 2,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.01830264302404,
+                "unit": null,
+                "lower": 100.01830264302404,
+                "upper": 100.01830264302404,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.10851245318896,
+                "unit": null,
+                "lower": 95.10759632103776,
+                "upper": 105.10942858534017,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.04499642870947,
+                "unit": null,
+                "lower": 99.04499642870947,
+                "upper": 101.04499642870947,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "795669a680fc4f1515ab713b2e5fe644a845a4e139008dc10253d00ed8fdb0ba"
+        },
+        {
+          "week": 3,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.04499642870947,
+                "unit": null,
+                "lower": 100.04499642870947,
+                "upper": 100.04499642870947,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 98.65824783043374,
+                "unit": null,
+                "lower": 93.65599700899827,
+                "upper": 103.6604986518692,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.13831367585237,
+                "unit": null,
+                "lower": 99.13831367585237,
+                "upper": 101.13831367585237,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "dcedf8e7a408ea6ada6c64de246a45dbbef21819fa4b92ccf1866f7434821be0"
+        },
+        {
+          "week": 4,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.13831367585237,
+                "unit": null,
+                "lower": 100.13831367585237,
+                "upper": 100.13831367585237,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.48692663403355,
+                "unit": null,
+                "lower": 94.48000995024093,
+                "upper": 104.49384331782618,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.13786870210626,
+                "unit": null,
+                "lower": 99.13786870210626,
+                "upper": 101.13786870210626,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "f48143e1badb33c6390fa96afb9ba5c0a4902450239ad14cfb56d61846492e36"
+        },
+        {
+          "week": 5,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.13786870210626,
+                "unit": null,
+                "lower": 100.13786870210626,
+                "upper": 100.13786870210626,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.15921025684169,
+                "unit": null,
+                "lower": 94.15231582173638,
+                "upper": 104.166104691947,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.1526564472331,
+                "unit": null,
+                "lower": 99.1526564472331,
+                "upper": 101.1526564472331,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "28b9fc9665d6753c6a6e762f228ca1a8da8ab02d40cc5c48f2de2e108ca12c00"
+        },
+        {
+          "week": 6,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.1526564472331,
+                "unit": null,
+                "lower": 100.1526564472331,
+                "upper": 100.1526564472331,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.74296727268847,
+                "unit": null,
+                "lower": 94.73533345032682,
+                "upper": 104.75060109505013,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.09687685990443,
+                "unit": null,
+                "lower": 99.09687685990443,
+                "upper": 101.09687685990443,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "e6e327a32f3e013d0055abe3ee7c7153a76d70e4ad5e3e595364571a18e2d664"
+        },
+        {
+          "week": 7,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.09687685990443,
+                "unit": null,
+                "lower": 100.09687685990443,
+                "upper": 100.09687685990443,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 98.31227437711253,
+                "unit": null,
+                "lower": 93.3074295341173,
+                "upper": 103.31711922010776,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.16804818376247,
+                "unit": null,
+                "lower": 99.16804818376247,
+                "upper": 101.16804818376247,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "3ac296003f77b3fa289db525a401feef251975cea0fda19825d0bf146284c1fe"
+        },
+        {
+          "week": 8,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.16804818376247,
+                "unit": null,
+                "lower": 100.16804818376247,
+                "upper": 100.16804818376247,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 98.40578286552166,
+                "unit": null,
+                "lower": 93.39737945633354,
+                "upper": 103.41418627470978,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.24161847985037,
+                "unit": null,
+                "lower": 99.24161847985037,
+                "upper": 101.24161847985037,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "a25b264c59f512f266272b76c638174fdcb2de0d791513450f54c5f60d26ada7"
+        },
+        {
+          "week": 9,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.24161847985037,
+                "unit": null,
+                "lower": 100.24161847985037,
+                "upper": 100.24161847985037,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.39860099312459,
+                "unit": null,
+                "lower": 94.38651906913206,
+                "upper": 104.41068291711711,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.32105482262679,
+                "unit": null,
+                "lower": 99.32105482262679,
+                "upper": 101.32105482262679,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "2056ade4a0780701214971361049aaa9b23302591416a9f78651d53b9afd6ec6"
+        },
+        {
+          "week": 10,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.32105482262679,
+                "unit": null,
+                "lower": 100.32105482262679,
+                "upper": 100.32105482262679,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 97.98281361470589,
+                "unit": null,
+                "lower": 92.96675987357455,
+                "upper": 102.99886735583723,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.33721016110675,
+                "unit": null,
+                "lower": 99.33721016110675,
+                "upper": 101.33721016110675,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "542a6eab9f828ccb0166b0a4ceefffde18c9abbe5ad08ecde6cda9b2354ea4e9"
+        },
+        {
+          "week": 11,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.33721016110675,
+                "unit": null,
+                "lower": 100.33721016110675,
+                "upper": 100.33721016110675,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 97.93552009824202,
+                "unit": null,
+                "lower": 92.91865859018668,
+                "upper": 102.95238160629737,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.36077070463115,
+                "unit": null,
+                "lower": 99.36077070463115,
+                "upper": 101.36077070463115,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "104a0406891e76b9265613ece300e8a6d9bdccd4b5e48e30e73cfe11bc7a36a2"
+        },
+        {
+          "week": 12,
+          "dose": 0.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.36077070463115,
+                "unit": null,
+                "lower": 100.36077070463115,
+                "upper": 100.36077070463115,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 98.40299230617528,
+                "unit": null,
+                "lower": 93.38495277094373,
+                "upper": 103.42103184140683,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.38638030973944,
+                "unit": null,
+                "lower": 99.38638030973944,
+                "upper": 101.38638030973944,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+        }
+      ],
+      "final_state": {
+        "metric": 100.38638030973944
+      },
+      "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+      "checkpoints": [
+        {
+          "checkpoint_id": "control-w2",
+          "branch_id": "control",
+          "week": 2,
+          "phase": "POST_STEP_CHECKPOINT",
+          "state": {
+            "metric": 100.04499642870947
+          },
+          "state_hash": "795669a680fc4f1515ab713b2e5fe644a845a4e139008dc10253d00ed8fdb0ba",
+          "dose": 0.0,
+          "created_at": "2026-08-14T14:06:41.083549+00:00",
+          "continue_from_week": 3
+        }
+      ]
+    },
+    {
+      "branch_id": "intervention_a",
+      "label": "Intervention A",
+      "events": [
+        {
+          "week": 0,
+          "type": "start"
+        },
+        {
+          "week": 0,
+          "type": "intervention_begin",
+          "name": "synthetic_intervention_a"
+        }
+      ],
+      "history": [
+        {
+          "week": 0,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.0,
+                "unit": null,
+                "lower": 100.0,
+                "upper": 100.0,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.70708006728837,
+                "unit": null,
+                "lower": 95.70707906728838,
+                "upper": 105.70708106728837,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.08740036740129,
+                "unit": null,
+                "lower": 98.08740036740129,
+                "upper": 102.08740036740129,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "b64d52d3a3a07b08baf45512faeb6a40c571ea36004a0d06db4678d99ca78f39"
+        },
+        {
+          "week": 1,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.08740036740129,
+                "unit": null,
+                "lower": 100.08740036740129,
+                "upper": 100.08740036740129,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.04424353453203,
+                "unit": null,
+                "lower": 94.03987251616196,
+                "upper": 104.0486145529021,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.51830264302404,
+                "unit": null,
+                "lower": 97.51830264302404,
+                "upper": 101.51830264302404,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "7b4992c0e26089b86334d5ed51ae59ada78a36dfe9f742f56ca460a0725a5bb5"
+        },
+        {
+          "week": 2,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 99.51830264302404,
+                "unit": null,
+                "lower": 99.51830264302404,
+                "upper": 99.51830264302404,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.60806148667693,
+                "unit": null,
+                "lower": 94.63214535452573,
+                "upper": 104.58397761882813,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 98.54499642870947,
+                "unit": null,
+                "lower": 96.54499642870947,
+                "upper": 100.54499642870947,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "7e1f78dcd3b94e3e9c2f42587f288342f77387f72a6d7d360834e4ab05931904"
+        },
+        {
+          "week": 3,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 98.54499642870947,
+                "unit": null,
+                "lower": 98.54499642870947,
+                "upper": 98.54499642870947,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 97.17903970380739,
+                "unit": null,
+                "lower": 92.25178888237191,
+                "upper": 102.10629052524287,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 97.13831367585237,
+                "unit": null,
+                "lower": 95.13831367585237,
+                "upper": 99.13831367585237,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "83a89e9f230d8087f3460deaf7fdfd7a4d53ba29216c9d96519b0291ee616135"
+        },
+        {
+          "week": 4,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 97.13831367585237,
+                "unit": null,
+                "lower": 97.13831367585237,
+                "upper": 97.13831367585237,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 96.50644125390005,
+                "unit": null,
+                "lower": 91.64952457010743,
+                "upper": 101.36335793769267,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 95.13786870210626,
+                "unit": null,
+                "lower": 93.13786870210626,
+                "upper": 97.13786870210626,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "833ab4d1f12bd28593a763f6c092a09fe6bd74a7eb4898d877bd08f196f7d9b2"
+        },
+        {
+          "week": 5,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 95.13786870210626,
+                "unit": null,
+                "lower": 95.13786870210626,
+                "upper": 95.13786870210626,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 94.20807580880265,
+                "unit": null,
+                "lower": 89.45118137369734,
+                "upper": 98.96497024390796,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 92.6526564472331,
+                "unit": null,
+                "lower": 90.6526564472331,
+                "upper": 94.6526564472331,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "62711ce2e9e3f5e0b79715eb2d6ee19f044470e80edeb51967966c73397d5e89"
+        },
+        {
+          "week": 6,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 92.6526564472331,
+                "unit": null,
+                "lower": 92.6526564472331,
+                "upper": 92.6526564472331,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 92.27364712600523,
+                "unit": null,
+                "lower": 87.64101330364358,
+                "upper": 96.90628094836688,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 89.59687685990443,
+                "unit": null,
+                "lower": 87.59687685990443,
+                "upper": 91.59687685990443,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "29be9858f12baf07794e7052df10554670965e2b3debab8bc7fb37da87c73315"
+        },
+        {
+          "week": 7,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 89.59687685990443,
+                "unit": null,
+                "lower": 89.59687685990443,
+                "upper": 89.59687685990443,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 87.99947628247808,
+                "unit": null,
+                "lower": 83.51963143948286,
+                "upper": 92.4793211254733,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 86.16804818376247,
+                "unit": null,
+                "lower": 84.16804818376247,
+                "upper": 88.16804818376247,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "0e93e6cc63d7193f7bd6b168e36c794c69fb546af97b6fb4df27e93b83f90ce8"
+        },
+        {
+          "week": 8,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 86.16804818376247,
+                "unit": null,
+                "lower": 86.16804818376247,
+                "upper": 86.16804818376247,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 84.65208610196,
+                "unit": null,
+                "lower": 80.34368269277186,
+                "upper": 88.96048951114813,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 82.24161847985037,
+                "unit": null,
+                "lower": 80.24161847985037,
+                "upper": 84.24161847985037,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "23a755e78c5ae42f12fb70c2cb7e174ea5c1ac12689ef0c12d84da9483b78543"
+        },
+        {
+          "week": 9,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 82.24161847985037,
+                "unit": null,
+                "lower": 82.24161847985037,
+                "upper": 82.24161847985037,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 81.54997838498218,
+                "unit": null,
+                "lower": 77.43789646098966,
+                "upper": 85.6620603089747,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 77.82105482262679,
+                "unit": null,
+                "lower": 75.82105482262679,
+                "upper": 79.82105482262679,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "7ca9a1344b156fc6941b8c7fae6badf68c8a7973950c77ac58505a851a183413"
+        },
+        {
+          "week": 10,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 77.82105482262679,
+                "unit": null,
+                "lower": 77.82105482262679,
+                "upper": 77.82105482262679,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 76.00723420887965,
+                "unit": null,
+                "lower": 72.11618046774831,
+                "upper": 79.898287950011,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 72.83721016110675,
+                "unit": null,
+                "lower": 70.83721016110675,
+                "upper": 74.83721016110675,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "e6c4d0bfaf069f7ca91b428b37f98d4bb95d2f2900d0c464ceeef4b8feed9db0"
+        },
+        {
+          "week": 11,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 72.83721016110675,
+                "unit": null,
+                "lower": 72.83721016110675,
+                "upper": 72.83721016110675,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 71.0937651961746,
+                "unit": null,
+                "lower": 67.45190368811926,
+                "upper": 74.73562670422994,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 67.36077070463115,
+                "unit": null,
+                "lower": 65.36077070463115,
+                "upper": 69.36077070463115,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "55cbac953300b4d1aa02171adc4af049cc48c07f6eda13779e0bb22e8de51772"
+        },
+        {
+          "week": 12,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 67.36077070463115,
+                "unit": null,
+                "lower": 67.36077070463115,
+                "upper": 67.36077070463115,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 66.04673673634896,
+                "unit": null,
+                "lower": 62.6786972011174,
+                "upper": 69.41477627158052,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 61.38638030973943,
+                "unit": null,
+                "lower": 59.38638030973943,
+                "upper": 63.38638030973943,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "8ab8fca3a74885d45948921f8f2ea47906cfbccfaa54d49ba494c1448a46c98a"
+        }
+      ],
+      "final_state": {
+        "metric": 61.38638030973943
+      },
+      "final_state_hash": "8ab8fca3a74885d45948921f8f2ea47906cfbccfaa54d49ba494c1448a46c98a",
+      "checkpoints": [
+        {
+          "checkpoint_id": "intervention_a-w2",
+          "branch_id": "intervention_a",
+          "week": 2,
+          "phase": "POST_STEP_CHECKPOINT",
+          "state": {
+            "metric": 98.54499642870947
+          },
+          "state_hash": "7e1f78dcd3b94e3e9c2f42587f288342f77387f72a6d7d360834e4ab05931904",
+          "dose": 1.0,
+          "created_at": "2026-08-14T14:06:41.083675+00:00",
+          "continue_from_week": 3
+        }
+      ]
+    },
+    {
+      "branch_id": "intervention_a_dose_change",
+      "label": "Intervention A with dose change",
+      "events": [
+        {
+          "week": 0,
+          "type": "start"
+        },
+        {
+          "week": 0,
+          "type": "intervention_begin",
+          "name": "synthetic_intervention_a"
+        },
+        {
+          "week": 4,
+          "type": "dose_change",
+          "dose": 2.0
+        }
+      ],
+      "history": [
+        {
+          "week": 0,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.0,
+                "unit": null,
+                "lower": 100.0,
+                "upper": 100.0,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.70708006728837,
+                "unit": null,
+                "lower": 95.70707906728838,
+                "upper": 105.70708106728837,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 100.08740036740129,
+                "unit": null,
+                "lower": 98.08740036740129,
+                "upper": 102.08740036740129,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "b64d52d3a3a07b08baf45512faeb6a40c571ea36004a0d06db4678d99ca78f39"
+        },
+        {
+          "week": 1,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 100.08740036740129,
+                "unit": null,
+                "lower": 100.08740036740129,
+                "upper": 100.08740036740129,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.04424353453203,
+                "unit": null,
+                "lower": 94.03987251616196,
+                "upper": 104.0486145529021,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.51830264302404,
+                "unit": null,
+                "lower": 97.51830264302404,
+                "upper": 101.51830264302404,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "7b4992c0e26089b86334d5ed51ae59ada78a36dfe9f742f56ca460a0725a5bb5"
+        },
+        {
+          "week": 2,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 99.51830264302404,
+                "unit": null,
+                "lower": 99.51830264302404,
+                "upper": 99.51830264302404,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 99.60806148667693,
+                "unit": null,
+                "lower": 94.63214535452573,
+                "upper": 104.58397761882813,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 98.54499642870947,
+                "unit": null,
+                "lower": 96.54499642870947,
+                "upper": 100.54499642870947,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "7e1f78dcd3b94e3e9c2f42587f288342f77387f72a6d7d360834e4ab05931904"
+        },
+        {
+          "week": 3,
+          "dose": 1.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 98.54499642870947,
+                "unit": null,
+                "lower": 98.54499642870947,
+                "upper": 98.54499642870947,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 97.17903970380739,
+                "unit": null,
+                "lower": 92.25178888237191,
+                "upper": 102.10629052524287,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 97.13831367585237,
+                "unit": null,
+                "lower": 95.13831367585237,
+                "upper": 99.13831367585237,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "83a89e9f230d8087f3460deaf7fdfd7a4d53ba29216c9d96519b0291ee616135"
+        },
+        {
+          "week": 4,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 97.13831367585237,
+                "unit": null,
+                "lower": 97.13831367585237,
+                "upper": 97.13831367585237,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 96.50644125390005,
+                "unit": null,
+                "lower": 91.64952457010743,
+                "upper": 101.36335793769267,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 93.13786870210626,
+                "unit": null,
+                "lower": 90.13786870210626,
+                "upper": 96.13786870210626,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "504532e1f5f0222863682a6e728f023a64d6aed85c61593a184967175102e6ab"
+        },
+        {
+          "week": 5,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 93.13786870210626,
+                "unit": null,
+                "lower": 93.13786870210626,
+                "upper": 93.13786870210626,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 92.22762202958704,
+                "unit": null,
+                "lower": 87.57072759448172,
+                "upper": 96.88451646469235,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 88.1526564472331,
+                "unit": null,
+                "lower": 85.1526564472331,
+                "upper": 91.1526564472331,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "da209223321283fbb79d3d9bb410245cd315c3751f8bc2b868f001976b0840d5"
+        },
+        {
+          "week": 6,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 88.1526564472331,
+                "unit": null,
+                "lower": 88.1526564472331,
+                "upper": 88.1526564472331,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 87.79205503799528,
+                "unit": null,
+                "lower": 83.38442121563362,
+                "upper": 92.19968886035694,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 82.09687685990443,
+                "unit": null,
+                "lower": 79.09687685990443,
+                "upper": 85.09687685990443,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "1090e42e9a82f6ceca2a302d7211fb9503b6cbf29e1afec7f1c9475a92eeb1cb"
+        },
+        {
+          "week": 7,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 82.09687685990443,
+                "unit": null,
+                "lower": 82.09687685990443,
+                "upper": 82.09687685990443,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 80.63319192916777,
+                "unit": null,
+                "lower": 76.52834708617254,
+                "upper": 84.73803677216299,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 75.16804818376247,
+                "unit": null,
+                "lower": 72.16804818376247,
+                "upper": 78.16804818376247,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "c7eb8136be69d5c3b99f456d75afc63db2a2295701aa6fe5b0269df5c205e8ae"
+        },
+        {
+          "week": 8,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 75.16804818376247,
+                "unit": null,
+                "lower": 75.16804818376247,
+                "upper": 75.16804818376247,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 73.84561007344725,
+                "unit": null,
+                "lower": 70.08720666425913,
+                "upper": 77.60401348263537,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 67.24161847985037,
+                "unit": null,
+                "lower": 64.24161847985037,
+                "upper": 70.24161847985037,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "5dde4d8e2aa7777a790f3c206ddedda219ada54bba74c359d12e1fb3ff689b49"
+        },
+        {
+          "week": 9,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 67.24161847985037,
+                "unit": null,
+                "lower": 67.24161847985037,
+                "upper": 67.24161847985037,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 66.67612621153019,
+                "unit": null,
+                "lower": 63.31404428753767,
+                "upper": 70.03820813552271,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 58.3210548226268,
+                "unit": null,
+                "lower": 55.3210548226268,
+                "upper": 61.3210548226268,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "745529c912ea9f496cacbaa6f65bd6e323653d95b3e317f23b0eea5bb31f3e14"
+        },
+        {
+          "week": 10,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 58.3210548226268,
+                "unit": null,
+                "lower": 58.3210548226268,
+                "upper": 58.3210548226268,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 56.96173205716359,
+                "unit": null,
+                "lower": 54.045678316032244,
+                "upper": 59.87778579829493,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 48.33721016110676,
+                "unit": null,
+                "lower": 45.33721016110676,
+                "upper": 51.33721016110676,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "edc8f3dfb6cfff11c891290aea669dd7f2eb788d1ba030bfc4b299e24a2cc3fd"
+        },
+        {
+          "week": 11,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 48.33721016110676,
+                "unit": null,
+                "lower": 48.33721016110676,
+                "upper": 48.33721016110676,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 47.1802017379691,
+                "unit": null,
+                "lower": 44.76334022991376,
+                "upper": 49.59706324602444,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 37.360770704631165,
+                "unit": null,
+                "lower": 34.360770704631165,
+                "upper": 40.360770704631165,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "fd70d94849c274bd610c9f09c119af3b81b5c266ad508c3c51bda40f8188066c"
+        },
+        {
+          "week": 12,
+          "dose": 2.0,
+          "predicted": {
+            "persistence": {
+              "metric": {
+                "name": "metric",
+                "value": 37.360770704631165,
+                "unit": null,
+                "lower": 37.360770704631165,
+                "upper": 37.360770704631165,
+                "status": "PREDICTED"
+              }
+            },
+            "heuristic": {
+              "metric": {
+                "name": "metric",
+                "value": 36.63195894559776,
+                "unit": null,
+                "lower": 34.7639194103662,
+                "upper": 38.49999848082932,
+                "status": "PREDICTED"
+              }
+            },
+            "synthetic": {
+              "metric": {
+                "name": "metric",
+                "value": 25.386380309739444,
+                "unit": null,
+                "lower": 22.386380309739444,
+                "upper": 28.386380309739444,
+                "status": "PREDICTED"
+              }
+            }
+          },
+          "state_hash": "f7fa7a977f5978a4c77dad6d9e315a6ed6835337fd42519f20260c03ccefa50c"
+        }
+      ],
+      "final_state": {
+        "metric": 25.386380309739444
+      },
+      "final_state_hash": "f7fa7a977f5978a4c77dad6d9e315a6ed6835337fd42519f20260c03ccefa50c",
+      "checkpoints": [
+        {
+          "checkpoint_id": "intervention_a_dose_change-w2",
+          "branch_id": "intervention_a_dose_change",
+          "week": 2,
+          "phase": "POST_STEP_CHECKPOINT",
+          "state": {
+            "metric": 98.54499642870947
+          },
+          "state_hash": "7e1f78dcd3b94e3e9c2f42587f288342f77387f72a6d7d360834e4ab05931904",
+          "dose": 1.0,
+          "created_at": "2026-08-14T14:06:41.083783+00:00",
+          "continue_from_week": 3
+        }
+      ]
+    }
+  ],
+  "checkpoints": [
+    {
+      "checkpoint_id": "control-w2",
+      "branch_id": "control",
+      "week": 2,
+      "phase": "POST_STEP_CHECKPOINT",
+      "state": {
+        "metric": 100.04499642870947
+      },
+      "state_hash": "795669a680fc4f1515ab713b2e5fe644a845a4e139008dc10253d00ed8fdb0ba",
+      "dose": 0.0,
+      "created_at": "2026-08-14T14:06:41.083549+00:00",
+      "continue_from_week": 3
+    },
+    {
+      "checkpoint_id": "intervention_a-w2",
+      "branch_id": "intervention_a",
+      "week": 2,
+      "phase": "POST_STEP_CHECKPOINT",
+      "state": {
+        "metric": 98.54499642870947
+      },
+      "state_hash": "7e1f78dcd3b94e3e9c2f42587f288342f77387f72a6d7d360834e4ab05931904",
+      "dose": 1.0,
+      "created_at": "2026-08-14T14:06:41.083675+00:00",
+      "continue_from_week": 3
+    },
+    {
+      "checkpoint_id": "intervention_a_dose_change-w2",
+      "branch_id": "intervention_a_dose_change",
+      "week": 2,
+      "phase": "POST_STEP_CHECKPOINT",
+      "state": {
+        "metric": 98.54499642870947
+      },
+      "state_hash": "7e1f78dcd3b94e3e9c2f42587f288342f77387f72a6d7d360834e4ab05931904",
+      "dose": 1.0,
+      "created_at": "2026-08-14T14:06:41.083783+00:00",
+      "continue_from_week": 3
+    }
+  ],
+  "rollback": {
+    "ok": true,
+    "branch_id": "control",
+    "restored_checkpoint": "control-w2",
+    "checkpoint_phase": "POST_STEP_CHECKPOINT",
+    "checkpoint_week": 2,
+    "continuation_start_week": 3,
+    "expected_checkpoint_hash": "795669a680fc4f1515ab713b2e5fe644a845a4e139008dc10253d00ed8fdb0ba",
+    "restored_hash": "795669a680fc4f1515ab713b2e5fe644a845a4e139008dc10253d00ed8fdb0ba",
+    "hash_match_after_rollback": true,
+    "mutated_hash_before_rollback": "af787d62b23650602f789931069123297a10ef5bc4e65e8fba13c8a103e45cdd",
+    "resimulated_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+    "original_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+    "rollback_reproduces_original_final_state": true,
+    "rollback_continuation_starts_after_checkpoint": true,
+    "rollback_history_has_no_duplicate_checkpoint_week": true,
+    "rollback_restores_checkpoint_exactly": true,
+    "history_weeks": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "history_sequence_match": true,
+    "resimulated_history_len": 10,
+    "original_tail_len": 10
+  },
+  "isolation": {
+    "control_recompute_matches": true,
+    "control_differs_from_intervention": true,
+    "dose_change_differs_from_intervention": true,
+    "crn_policy": "shared_noise_by_week_and_variable"
+  },
+  "uncertainty_present_computed": true,
+  "checkpoint_phase": "POST_STEP_CHECKPOINT",
+  "master_seed_policy": "CRN: identical noise(week,variable) across branches",
+  "fork_summary": {
+    "ok": true,
+    "final_state_hash": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3",
+    "fork_effect": {
+      "counterfactual_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+      "event_fork_final_state_hash": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3",
+      "weekly_hashes": {
+        "counterfactual": {
+          "3": "dcedf8e7a408ea6ada6c64de246a45dbbef21819fa4b92ccf1866f7434821be0",
+          "4": "f48143e1badb33c6390fa96afb9ba5c0a4902450239ad14cfb56d61846492e36",
+          "5": "28b9fc9665d6753c6a6e762f228ca1a8da8ab02d40cc5c48f2de2e108ca12c00",
+          "6": "e6e327a32f3e013d0055abe3ee7c7153a76d70e4ad5e3e595364571a18e2d664",
+          "7": "3ac296003f77b3fa289db525a401feef251975cea0fda19825d0bf146284c1fe",
+          "8": "a25b264c59f512f266272b76c638174fdcb2de0d791513450f54c5f60d26ada7",
+          "9": "2056ade4a0780701214971361049aaa9b23302591416a9f78651d53b9afd6ec6",
+          "10": "542a6eab9f828ccb0166b0a4ceefffde18c9abbe5ad08ecde6cda9b2354ea4e9",
+          "11": "104a0406891e76b9265613ece300e8a6d9bdccd4b5e48e30e73cfe11bc7a36a2",
+          "12": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+        },
+        "event_fork": {
+          "3": "aa2d1e0fc70c442c4d5bbf0f178c141cf2fc3ce7e62b2420e0e268b62da434c5",
+          "4": "a2309f62bf164dcaf3ddce3bbfde4c77398e13c08ac533503d1027b80e3455e3",
+          "5": "ada03d085babf2c5e020b56239034473cbed23c7a5415866f8e4058e242a3954",
+          "6": "7f09d42117834ef7853ef2a466c17fadbbd3f1722c8d87b5e51e1572af05a186",
+          "7": "9026eab0d9065aee2c3c3fb8ddd94201006fc5b4451f562631565c2a1363c0e2",
+          "8": "d10ec9f0535b07f52652fbf51d13bcc5c48e9d717ceb7268b89a582e73afc173",
+          "9": "1e06542001fe71ca856a8e728d6162c9fdd5b19494ccdccd81347e5314e8ac9f",
+          "10": "c868167e7c47119cdf7e48562cd82c20dfb902a9d74ca443f8a252e16d1a0744",
+          "11": "02794466180883063bfbdc1d377702cc234b9b26c2ca0ffe676734d39dac98d9",
+          "12": "55cb2ee0451628e1fe56cfb4a214f2394d96814d99f2b9cbe05da346f59c86b3"
+        }
+      },
+      "applied_event": {
+        "week": 3,
+        "type": "dose_change",
+        "dose": 1.5,
+        "name": "fork_dose_nudge"
+      },
+      "event_week": 3,
+      "changed_variables": [
+        "metric"
+      ],
+      "first_divergence_week": 3,
+      "both_started_from_same_checkpoint_hash": true,
+      "final_hashes_differ": true,
+      "at_least_one_state_variable_changed": true,
+      "divergence_not_before_event_week": true,
+      "fork_final_state_diff_explained_by_fork_event": true
+    },
+    "parent_isolation": {
+      "parent_state_unchanged_after_fork": true,
+      "parent_history_unchanged_after_fork": true,
+      "parent_events_unchanged_after_fork": true,
+      "parent_recomputed_hash_matches_stored_hash": true,
+      "fork_isolation_verified": true,
+      "before": {
+        "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+        "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+        "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+        "history_len": 13
+      },
+      "after": {
+        "final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d",
+        "history_hash": "7b801c94ba240a8f035d3a5d0f98830e854a6dac500e700cee6cf84e71a15e2c",
+        "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+        "history_len": 13,
+        "stored_final_state_hash": "89c35864d840117ec49153cb042b4ed3e4d9d67fc9da408ad48f2f1d5ee1748d"
+      }
+    }
+  }
+}

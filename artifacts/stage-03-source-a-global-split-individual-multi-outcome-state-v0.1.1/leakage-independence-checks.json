@@ -1,0 +1,71 @@
+{
+  "LEAKAGE_INDEPENDENCE_STATUS": "PASS",
+  "checks": [
+    {
+      "name": "all_subjects_global_test",
+      "ok": true,
+      "detail": 623
+    },
+    {
+      "name": "subject_absent_from_train_val",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "subject_overlap_train_test_zero",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "subject_overlap_val_test_zero",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "subject_overlap_train_val_zero",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "cutoff_strictly_before_target",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "target_absent_from_state_inputs_by_time",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "primary_target_reuse_zero",
+      "ok": true,
+      "detail": 19195
+    },
+    {
+      "name": "locator_subject_overlap_with_train_zero",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "source_b_rows_zero",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "medication_features_zero",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "model_hashes_before_equals_after",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "prediction_horizon_equals_target_horizon",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "ok": true
+}

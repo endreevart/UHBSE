@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "retrospective_backtest_status": "FIRST_EXPLORATORY_RETROSPECTIVE_BACKTEST_PASS",
+  "incremental_signal_status": "INCREMENTAL_SIGNAL_DETECTED",
+  "uncertainty_interval_construction_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+  "uncertainty_calibration_status": "UNCERTAINTY_CALIBRATION_PASS",
+  "outcome": {
+    "candidate_id": "2685c68a3e247ca4",
+    "source_measurement_label": "\u04223 \u0441\u0432.",
+    "dominant_unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+    "selection_basis": "FIXED_FROM_ACCEPTED_SDR_V0.1.1.1 \u2014 do not reselect",
+    "medical_interpretation_status": "DOMAIN_REVIEW_PENDING",
+    "limitations": [
+      "Outcome fixed from accepted Scientific Data Readiness v0.1.1.1.",
+      "Held-out results must not trigger reselection."
+    ]
+  },
+  "outcome_reselected": false,
+  "fixed_outcome_candidate_id": "2685c68a3e247ca4",
+  "n_eligible_subjects": 7997,
+  "n_series_rows": 13009,
+  "dataset_summary": {
+    "n_subjects_in_series": 6645,
+    "n_observations_after_filter": 13009,
+    "n_pairs": 6345,
+    "n_subjects_with_pairs": 2925,
+    "pair_definition": "strict_consecutive_neighbors_only",
+    "horizon_days": {
+      "n": 6345,
+      "min": 0.08686745716435186,
+      "median": 115.0,
+      "max": 1619.0,
+      "mean": 185.19040119362532
+    },
+    "exclusions_by_reason": {
+      "missing_timestamp": 0,
+      "zero_horizon": 2,
+      "negative_horizon": 0,
+      "incompatible_unit": 0,
+      "duplicate_same_timestamp_collapsed": 17,
+      "all_forward_combinations_forbidden": 0
+    },
+    "units": [
+      "\u043f\u043c\u043e\u043b\u044c/\u043b"
+    ],
+    "date_coverage": {
+      "t0_min": "2021-07-24T00:00:00+00:00",
+      "t0_max": "2026-06-01T14:54:40.366650+00:00",
+      "t1_min": "2021-08-30T00:00:00+00:00",
+      "t1_max": "2026-06-30T00:00:00+00:00"
+    },
+    "feature_list": [
+      "y_t0",
+      "horizon_days",
+      "n_prior_measurements",
+      "prior_mean",
+      "prior_last_delta",
+      "days_since_first",
+      "has_prior_history",
+      "prior_mean_missing_flag",
+      "prior_last_delta_missing_flag"
+    ],
+    "dataset_schema_hash": "9a5fde5e8b26931fdc000d1d1ad15a42f4e58c0bd591f772c3802485357278d7",
+    "dataset_build_configuration_hash": "214c92adde0828eaf4c70e1591cfee0974f5baa468c294b3fd7b1df0cd424c40",
+    "missingness": {
+      "prior_mean_null_pairs": 2924,
+      "prior_last_delta_null_pairs": 2924
+    }
+  },
+  "n_pairs": 6345,
+  "split_class": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+  "split_counts": {
+    "train_pairs": 4526,
+    "validation_pairs": 883,
+    "test_pairs": 936,
+    "train_subjects": 5597,
+    "validation_subjects": 1199,
+    "test_subjects": 1201
+  },
+  "comparison": {
+    "retrospective_backtest_status": "FIRST_EXPLORATORY_RETROSPECTIVE_BACKTEST_PASS",
+    "incremental_signal_status": "INCREMENTAL_SIGNAL_DETECTED",
+    "primary_metric": "subject_macro_mae",
+    "secondary_metric": "pair_micro_mae",
+    "outperforms_persistence": true,
+    "outperforms_empirical_trend": true,
+    "delta_subject_macro_mae_vs_persistence": -0.11154917647326168,
+    "persistence": {
+      "n_pairs": 936,
+      "n_subjects": 445,
+      "subject_macro_mae": 0.7699342502067221,
+      "pair_micro_mae": 0.8486912393162394,
+      "pair_micro_rmse": 2.030327295885765,
+      "median_absolute_error": 0.5,
+      "mean_bias": 0.06739850427350429,
+      "empirical_interval_coverage": 0.016025641025641024,
+      "mean_interval_width": 0.0,
+      "horizon_days": {
+        "min": 0.08686745716435186,
+        "median": 123.48107995427084,
+        "max": 1420.0,
+        "mean": 191.0432628377242
+      },
+      "residual_summary": {
+        "mean": -0.06739850427350429,
+        "std": 2.0292083111500645
+      }
+    },
+    "empirical_trend": {
+      "n_pairs": 936,
+      "n_subjects": 445,
+      "subject_macro_mae": 1.9129058460289312,
+      "pair_micro_mae": 2.4668344928623593,
+      "pair_micro_rmse": 18.29506144676532,
+      "median_absolute_error": 0.6903574556363674,
+      "mean_bias": 0.10816308786956357,
+      "empirical_interval_coverage": 0.36645299145299143,
+      "mean_interval_width": 1.1730419543153439,
+      "horizon_days": {
+        "min": 0.08686745716435186,
+        "median": 123.48107995427084,
+        "max": 1420.0,
+        "mean": 191.0432628377242
+      },
+      "residual_summary": {
+        "mean": -0.10816308786956357,
+        "std": 18.29474170594768
+      }
+    },
+    "first_learned": {
+      "n_pairs": 936,
+      "n_subjects": 445,
+      "subject_macro_mae": 0.6583850737334604,
+      "pair_micro_mae": 0.7273728147728197,
+      "pair_micro_rmse": 1.5538196899995838,
+      "median_absolute_error": 0.49815917578391655,
+      "mean_bias": -0.04411278128259785,
+      "empirical_interval_coverage": 0.9797008547008547,
+      "mean_interval_width": 5.975485787556725,
+      "horizon_days": {
+        "min": 0.08686745716435186,
+        "median": 123.48107995427084,
+        "max": 1420.0,
+        "mean": 191.0432628377242
+      },
+      "residual_summary": {
+        "mean": 0.04411278128259785,
+        "std": 1.5531933851127222
+      }
+    },
+    "forbidden_statuses_not_used": [
+      "CLINICALLY_VALIDATED",
+      "CLINICALLY_ACCURATE",
+      "TREATMENT_EFFECT_CONFIRMED",
+      "PRODUCTION_READY"
+    ]
+  },
+  "uncertainty": {
+    "status": "UNCERTAINTY_CALIBRATION_PASS",
+    "uncertainty_interval_construction_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+    "uncertainty_calibration_status": "UNCERTAINTY_CALIBRATION_PASS",
+    "nominal_target_coverage": 0.9,
+    "interval_multiplier": 1.6448536269514715,
+    "expected_interval_multiplier_from_nominal": 1.6448536269514715,
+    "interval_multiplier_matches_nominal": true,
+    "uses_fixed_1_96_for_0_90": false,
+    "residual_estimation_split": "validation",
+    "calibration_sample_size": 883,
+    "independent_evaluation_sample_size": {
+      "n_pairs": 936,
+      "n_subjects": 445
+    },
+    "min_required_for_construction": 10,
+    "min_required_for_calibration": {
+      "held_out_test_subjects": 10,
+      "held_out_test_pairs": 10
+    },
+    "held_out_sample_sufficient_for_calibration": true,
+    "method": "gaussian_interval_from_nominal_coverage_residual_std_fit_on_validation",
+    "observed_coverage_validation_in_sample_descriptive": 0.9818799546998868,
+    "observed_coverage_test_held_out_descriptive": 0.9797008547008547,
+    "observed_coverage_validation": 0.9818799546998868,
+    "observed_coverage_test": 0.9797008547008547,
+    "mean_interval_width_test": 5.975485787556725,
+    "interval_sharpness_status": "INTERVAL_SHARPNESS_NOT_ESTABLISHED",
+    "calibration_limitations": [
+      "INTERVAL_SHARPNESS_NOT_ESTABLISHED",
+      "validation_coverage_is_in_sample_descriptive_when_residual_scale_fit_on_validation",
+      "test_coverage_is_descriptive_only_unless_held_out_sample_meets_calibration_thresholds"
+    ]
+  },
+  "shuffle_control": {
+    "status": "COMPUTED",
+    "n_permutations": 20,
+    "real_mae_rank": null
+  },
+  "tune_info": {
+    "selected_l2": 0.1
+  },
+  "gaussian_interval_multiplier": 1.6448536269514715,
+  "methodology": "scientific_v0.1.1.1_fixed_outcome",
+  "opaque_subject_keys_redacted": true,
+  "persistence_val_n": 883
+}

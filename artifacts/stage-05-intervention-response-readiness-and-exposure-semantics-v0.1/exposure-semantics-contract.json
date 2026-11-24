@@ -1,0 +1,161 @@
+{
+  "appointment_date_is_not_administration": true,
+  "associational_does_not_raise_causal": true,
+  "created_modified_are_not_administration": true,
+  "intervention_response_eligible_tiers": [
+    "DISPENSED_OR_ADMINISTERED_EXPOSURE",
+    "PRESCRIBED_OR_ORDERED_EXPOSURE"
+  ],
+  "lanes": {
+    "administration_conditioned": {
+      "counts_as_intervention_response": true,
+      "eligible_tiers": [
+        "DISPENSED_OR_ADMINISTERED_EXPOSURE"
+      ],
+      "requires_domain_accepted_mapping": true
+    },
+    "causal": {
+      "always_evaluated_separately": true,
+      "counts_as_intervention_response": false,
+      "eligible_tiers": [
+        "CAUSAL_INTERVENTION_EVIDENCE"
+      ]
+    },
+    "descriptive_recorded_association": {
+      "counts_as_intervention_response": false,
+      "eligible_tiers": [
+        "RECORDED_MEDICATION_ASSOCIATION"
+      ]
+    },
+    "prescribed_ordered_associational": {
+      "counts_as_intervention_response": true,
+      "eligible_tiers": [
+        "PRESCRIBED_OR_ORDERED_EXPOSURE"
+      ],
+      "requires_domain_accepted_mapping": true
+    }
+  },
+  "levels": [
+    {
+      "administration_lane": false,
+      "associational_lane": false,
+      "causal_lane": false,
+      "descriptive_lane": false,
+      "evidence_source": "absence_or_unclassified_record",
+      "id": "UNKNOWN",
+      "intervention_response_eligible": false,
+      "missing_evidence": "NOT_ESTABLISHED",
+      "required_fields": [
+        "source_system"
+      ]
+    },
+    {
+      "administration_lane": false,
+      "associational_lane": false,
+      "causal_lane": false,
+      "descriptive_lane": false,
+      "evidence_source": "explicit_recommendation_record_with_time_semantics",
+      "id": "RECOMMENDED",
+      "intervention_response_eligible": false,
+      "missing_evidence": "NOT_ESTABLISHED",
+      "note": "A recommendation is not prescription, dispense, administration, or ingestion.",
+      "required_fields": [
+        "recommendation_identity",
+        "recommendation_time"
+      ]
+    },
+    {
+      "administration_lane": false,
+      "associational_lane": false,
+      "causal_lane": false,
+      "descriptive_lane": true,
+      "evidence_source": "source_medication_row_with_recorded_context_semantics",
+      "id": "RECORDED_MEDICATION_ASSOCIATION",
+      "intervention_response_eligible": false,
+      "inventory_only": true,
+      "missing_evidence": "NOT_ESTABLISHED",
+      "note": "Recorded association is technical inventory only, not intervention-response eligible.",
+      "required_fields": [
+        "source_system",
+        "source_local_medication_identity_or_public_digest",
+        "record_class=RECORDED_MEDICATION_CONTEXT"
+      ]
+    },
+    {
+      "administration_lane": false,
+      "associational_lane": true,
+      "causal_lane": false,
+      "descriptive_lane": false,
+      "evidence_source": "domain-accepted prescription or order record, not LLM/algorithmic candidate",
+      "id": "PRESCRIBED_OR_ORDERED_EXPOSURE",
+      "intervention_response_eligible": true,
+      "missing_evidence": "NOT_READY",
+      "required_fields": [
+        "domain_accepted_mapping",
+        "order_or_prescription_identity",
+        "order_time",
+        "order_time_semantics=PRESCRIBED_OR_ORDERED"
+      ]
+    },
+    {
+      "administration_lane": false,
+      "associational_lane": false,
+      "causal_lane": false,
+      "descriptive_lane": false,
+      "evidence_source": "dispense/administration candidate without verified ingest",
+      "id": "INGESTION_UNVERIFIED",
+      "intervention_response_eligible": false,
+      "missing_evidence": "NOT_ESTABLISHED",
+      "required_fields": [
+        "dispense_or_administration_candidate",
+        "ingestion_confirmation=NOT_ESTABLISHED"
+      ]
+    },
+    {
+      "administration_lane": true,
+      "associational_lane": false,
+      "causal_lane": false,
+      "descriptive_lane": false,
+      "evidence_source": "domain-accepted dispense or administration record",
+      "id": "DISPENSED_OR_ADMINISTERED_EXPOSURE",
+      "intervention_response_eligible": true,
+      "missing_evidence": "NOT_READY",
+      "required_fields": [
+        "domain_accepted_mapping",
+        "administration_or_dispense_identity",
+        "administration_or_dispense_time",
+        "time_semantics=DISPENSED_OR_ADMINISTERED",
+        "confirmed_administration_mapping"
+      ]
+    },
+    {
+      "administration_lane": false,
+      "associational_lane": false,
+      "causal_lane": true,
+      "descriptive_lane": false,
+      "evidence_source": "explicit causal identification, never inferred from associational readiness",
+      "id": "CAUSAL_INTERVENTION_EVIDENCE",
+      "intervention_response_eligible": false,
+      "missing_evidence": "NOT_ESTABLISHED",
+      "never_auto_promoted_from_associational": true,
+      "required_fields": [
+        "domain_accepted_mapping",
+        "causal_identification_strategy",
+        "resolved_confounding_and_indication_bias",
+        "temporally_valid_t0"
+      ]
+    }
+  ],
+  "promotion": "FORBIDDEN_AUTOMATIC",
+  "recorded_association_is_not_treatment_response": true,
+  "tiers": [
+    "UNKNOWN",
+    "RECOMMENDED",
+    "RECORDED_MEDICATION_ASSOCIATION",
+    "PRESCRIBED_OR_ORDERED_EXPOSURE",
+    "DISPENSED_OR_ADMINISTERED_EXPOSURE",
+    "INGESTION_UNVERIFIED",
+    "CAUSAL_INTERVENTION_EVIDENCE"
+  ],
+  "version": "0.1"
+}

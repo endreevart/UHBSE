@@ -1,0 +1,103 @@
+{
+  "version": "0.1.1.1",
+  "V011_METHOD_EVIDENCE_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "defects": [
+    {
+      "id": "source_a_subject_split_30776_6607_6473",
+      "observed": {
+        "train": 30776,
+        "validation": 6607,
+        "test": 6473
+      },
+      "expected": {
+        "train": 30776,
+        "validation": 6607,
+        "test": 6473
+      },
+      "reproduced": true
+    },
+    {
+      "id": "source_a_primary_target_subjects_8888_151_164",
+      "observed": {
+        "train": 8888,
+        "validation": 151,
+        "test": 164
+      },
+      "expected": {
+        "train": 8888,
+        "validation": 151,
+        "test": 164
+      },
+      "reproduced": true
+    },
+    {
+      "id": "val_test_pick_primary_index_before_eligibility",
+      "defect": "validation/test select one primary_index before checking positive horizon, same-timestamp collapse, and numeric target presence",
+      "code_marker": true,
+      "reproduced": true
+    },
+    {
+      "id": "tiny_a_test_cohorts_in_wins_losses",
+      "n_a_outcomes_with_1_to_9_test_subjects": 11,
+      "examples": [
+        {
+          "outcome": "A::Базофилы::%",
+          "n_test_subjects": 4
+        },
+        {
+          "outcome": "A::Гемоглобин::г/л",
+          "n_test_subjects": 4
+        },
+        {
+          "outcome": "A::Железо::мкмоль/л",
+          "n_test_subjects": 2
+        },
+        {
+          "outcome": "A::Лейкоциты::*10^9/л",
+          "n_test_subjects": 5
+        },
+        {
+          "outcome": "A::Лимфоциты::%",
+          "n_test_subjects": 4
+        },
+        {
+          "outcome": "A::Моноциты::%",
+          "n_test_subjects": 4
+        }
+      ],
+      "wins_losses_include_them": true,
+      "aggregate_status": "MIXED_OUTCOME_SPECIFIC_RESULTS",
+      "reproduced": true
+    },
+    {
+      "id": "m2_status_without_fit",
+      "JOINT_MULTI_OUTCOME_MODEL_STATUS": "TECHNICAL_MASKED_MULTI_OUTPUT_EVALUATED",
+      "defect": "status set to TECHNICAL_MASKED_MULTI_OUTPUT_EVALUATED without fit/predict/evaluate",
+      "reproduced": true
+    },
+    {
+      "id": "m2_metrics_lack_real_artifacts",
+      "keys": [
+        "clinical_claim",
+        "compared_to_validation_selected_m0_m1",
+        "note",
+        "test_opened_once"
+      ],
+      "has_predictions": false,
+      "has_parameters": false,
+      "has_loss": false,
+      "has_per_outcome_metrics": false,
+      "reproduced": true
+    },
+    {
+      "id": "engine_shadow_m1_only_single_provider",
+      "ENGINE_UNIFIED_STATE_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+      "defect": "shadow runs M1 Ridge for one provider/fixture; does not confirm M2 execution",
+      "single_outcome_key": true,
+      "no_m2_path": true,
+      "reproduced": true
+    }
+  ],
+  "n_defects": 7,
+  "ok": true
+}

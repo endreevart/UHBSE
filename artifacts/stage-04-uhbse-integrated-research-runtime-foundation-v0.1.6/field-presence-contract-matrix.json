@@ -1,0 +1,18 @@
+{
+  "FALSEY_FUTURE_FIELD_REJECTION_STATUS": "PASS",
+  "FORBIDDEN_REQUEST_MODEL_EXECUTION_AUDIT_STATUS": "PASS",
+  "FUTURE_FIELD_PRESENCE_CONTRACT_STATUS": "PASS",
+  "HTTP_EXPLICIT_FIELD_PRESENCE_STATUS": "PASS",
+  "HTTP_FROZEN_ORDINARY_FUTURE_FIELD_MATRIX_STATUS": "PASS",
+  "HTTP_PRESENCE_SCENARIO_IDENTITY_STATUS": "PASS",
+  "direct_ok": true,
+  "http_ok": true,
+  "missing_vs_null": {
+    "explicit_null_keys_include_t1": true,
+    "explicit_null_rejected": true,
+    "missing_keys_include_t1": false,
+    "missing_rejected": false,
+    "ok": true
+  },
+  "note": "Presence is original request keys / raw HTTP JSON keys. Truthiness is not used."
+}

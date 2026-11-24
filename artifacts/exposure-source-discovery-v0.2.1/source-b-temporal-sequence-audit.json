@@ -1,0 +1,80 @@
+{
+  "SOURCE_B_TEMPORAL_SEQUENCE_STATUS": "CANDIDATE_COUNTED_IDENTITY_NOT_ESTABLISHED",
+  "route": {
+    "SOURCE_B_TEMPORAL_SEQUENCE_STATUS": "CANDIDATE_COUNTED_IDENTITY_NOT_ESTABLISHED",
+    "candidate_count": 26066,
+    "candidate_fraction": 0.6295,
+    "denominator": 41407,
+    "excluded_no_prior_recommendation_count": 5212,
+    "excluded_out_of_order_count": 6,
+    "excluded_same_consultation_only_count": 3747,
+    "excluded_target_missing_count": 8034,
+    "exclusive_funnel_sums_to_denominator": true,
+    "identity_assumption_status": "NOT_ESTABLISHED",
+    "interval_consultation_minus_feedback_days": {
+      "n": 26066,
+      "p10": 8.0,
+      "p50": 21.0,
+      "p90": 66.0
+    },
+    "interval_feedback_minus_prior_recommendation_days": {
+      "n": 26066,
+      "p10": 55.0,
+      "p50": 61.0,
+      "p90": 198.0
+    },
+    "missing_target_is_not_a_completed_chain": true,
+    "prior_recommendation_on_missing_target_count": 36,
+    "same_consultation_recommendation_is_not_prior": true,
+    "uses_unverified_user_id_equals_patient_id": true,
+    "verified_exposure": false
+  },
+  "temporal_contract": {
+    "SOURCE_B_TIMEZONE_SEMANTICS_STATUS": "UNKNOWN_SOURCE_TIMEZONE",
+    "column_catalog": {
+      "consultations.created_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "udt_name": "timestamp"
+      },
+      "consultations.date": {
+        "data_type": "date",
+        "nullable": true,
+        "udt_name": "date"
+      },
+      "consultations.patient_id": {
+        "data_type": "integer",
+        "nullable": false,
+        "udt_name": "int4"
+      },
+      "feedback.consultation_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "udt_name": "int4"
+      },
+      "feedback.created_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "udt_name": "timestamp"
+      },
+      "feedback.date": {
+        "data_type": "date",
+        "nullable": true,
+        "udt_name": "date"
+      },
+      "feedback.user_id": {
+        "data_type": "integer",
+        "nullable": false,
+        "udt_name": "int4"
+      }
+    },
+    "comparison_rule": "created_at::date compared with consultations.date; no AT TIME ZONE conversion",
+    "consultations.date": "date",
+    "feedback.created_at": "timestamp without time zone",
+    "null_rule": "a found target with null created_at, null consultation date, or disagreeing target dates is UNCOMPARABLE",
+    "same_day_rule": "calendar dates are equal after the cast above",
+    "session_timezone": "Etc/UTC",
+    "timezone_metadata_on_columns": "none: timestamp without time zone and date carry no zone",
+    "timezone_proof": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "version": "0.1",
+  "seed": 42,
+  "fractions": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "splits": {
+    "train": {
+      "n_episodes": 139065,
+      "n_subjects": 587,
+      "n_medicine_ids": 317,
+      "n_outcome_units": 303
+    },
+    "validation": {
+      "n_episodes": 32551,
+      "n_subjects": 130,
+      "n_medicine_ids": 205,
+      "n_outcome_units": 213
+    },
+    "test": {
+      "n_episodes": 30758,
+      "n_subjects": 127,
+      "n_medicine_ids": 172,
+      "n_outcome_units": 161
+    }
+  },
+  "subject_overlap_count": 0,
+  "episode_overlap_count": 0,
+  "locator_overlap_count": 0,
+  "zero_subject_overlap": true,
+  "zero_episode_overlap": true,
+  "zero_locator_overlap": true,
+  "test_size_gate_passed": true
+}

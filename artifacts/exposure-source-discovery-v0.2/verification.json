@@ -1,0 +1,60 @@
+{
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "NEGATIVE_CONTROL_STATUS": "PASS",
+  "PUBLIC_DATA_MINIMIZATION_STATUS": "PASS_AGGREGATE_ONLY",
+  "TECHNICAL_DISCOVERY_STATUS": "PASS",
+  "baseline_after_matches_before": true,
+  "baseline_before": {
+    "BASELINE_VERIFICATION_STATUS": "PASS",
+    "files": [
+      {
+        "actual_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+        "expected_sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d",
+        "ok": true,
+        "path": "src/human_simulator/exposure_source_discovery_v01/discover.py"
+      },
+      {
+        "actual_sha256": "cba48005d11fd19643e9348140bbcefd055260c2928bc4c24a9b15f47445ff58",
+        "expected_sha256": "cba48005d11fd19643e9348140bbcefd055260c2928bc4c24a9b15f47445ff58",
+        "ok": true,
+        "path": "artifacts/exposure-source-discovery-v0.1/discovery-report.md"
+      },
+      {
+        "actual_sha256": "b33edb7005d4896e389fbe1888ff90b889f026e67d9972a89fdf3ea567d0bb4f",
+        "expected_sha256": "b33edb7005d4896e389fbe1888ff90b889f026e67d9972a89fdf3ea567d0bb4f",
+        "ok": true,
+        "path": "artifacts/exposure-source-discovery-v0.1/source-a-discovery.json"
+      },
+      {
+        "actual_sha256": "9775003c1569032b2174a452cc4f31fc15962f16dae1b08c2c4b4631982276ae",
+        "expected_sha256": "9775003c1569032b2174a452cc4f31fc15962f16dae1b08c2c4b4631982276ae",
+        "ok": true,
+        "path": "artifacts/exposure-source-discovery-v0.1/source-b-discovery.json"
+      },
+      {
+        "actual_sha256": "0d7096e9fc02deb8f3bde2a517136243cf85684ae438d4a981b4958ad4744df5",
+        "expected_sha256": "0d7096e9fc02deb8f3bde2a517136243cf85684ae438d4a981b4958ad4744df5",
+        "ok": true,
+        "path": "artifacts/exposure-source-discovery-v0.1/followup-discovery.json"
+      },
+      {
+        "actual_sha256": "0d70bb96f849c6df86c248a26f972d6d1b4b1b5f16a930c66aa08bcb61468a06",
+        "expected_sha256": "0d70bb96f849c6df86c248a26f972d6d1b4b1b5f16a930c66aa08bcb61468a06",
+        "ok": true,
+        "path": "artifacts/exposure-source-discovery-v0.1/query-log.json"
+      },
+      {
+        "actual_sha256": "b60ed25a62549ce5a0be51d2dab325c5993b1204ee442a1188acaa08361ad37c",
+        "expected_sha256": "b60ed25a62549ce5a0be51d2dab325c5993b1204ee442a1188acaa08361ad37c",
+        "ok": true,
+        "path": "artifacts/exposure-source-discovery-v0.1/privacy-scan.json"
+      }
+    ],
+    "ok": true,
+    "writes_into_v01": false
+  },
+  "external_review_zip_created": false,
+  "missing_artifacts": [],
+  "ok": true,
+  "stage_05_bundle_modified": false
+}

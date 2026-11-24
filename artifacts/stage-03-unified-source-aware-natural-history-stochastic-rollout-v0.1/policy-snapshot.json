@@ -1,0 +1,41 @@
+{
+  "version": "0.1",
+  "NATURAL_HISTORY_ONLY": true,
+  "no_medication_effects": true,
+  "no_medication_residual_consumption": true,
+  "no_a_b_provider_transfer": true,
+  "no_unit_conversion": true,
+  "no_identity_merge": true,
+  "no_rejected_encoder": true,
+  "no_joint_neural_model": true,
+  "MULTI_OUTCOME_DEPENDENCE_STATUS": "MARGINAL_ONLY_NO_JOINT_MODEL",
+  "predeclared_horizons_days": [
+    30,
+    90,
+    180,
+    365
+  ],
+  "max_steps": 4,
+  "error_growth_limit": 3.0,
+  "coverage_range": [
+    0.5,
+    0.99
+  ],
+  "p1_feature_order": [
+    "persistence_value",
+    "n_prior_outcome_measurements",
+    "days_since_previous",
+    "days_since_previous_missing",
+    "prior_delta",
+    "prior_delta_missing",
+    "requested_horizon_days",
+    "history_depth",
+    "missingness"
+  ],
+  "seed": 42,
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "SCIENTIFIC_CROSS_SOURCE_PASS": false,
+  "INTERVENTION_EFFECT_STATUS": "UNAVAILABLE",
+  "OBSERVATION_PROCESS_SCHEDULER_STATUS": "TECHNICAL_OPTIONAL_WITH_UPSTREAM_LIMITATION",
+  "PRIOR_MEDICATION_RESIDUAL_FOUNDATION_STATUS": "NOT_ACCEPTED_NO_INCREMENTAL_SIGNAL_FOR_EVALUATED_CONSTRUCTION"
+}

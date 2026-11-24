@@ -1,0 +1,28 @@
+{
+  "status": "OUTCOME_NOT_COMPARABLE",
+  "gates": {
+    "source_b_observation_mapping_accepted": false,
+    "fixed_outcome_comparable": false,
+    "units_compatible": false,
+    "timestamps_compatible": false,
+    "sufficient_b_repeated_pairs": false,
+    "conservative_overlap_exclusion_completed": true
+  },
+  "failed_gates": [
+    "source_b_observation_mapping_accepted",
+    "fixed_outcome_comparable",
+    "units_compatible",
+    "timestamps_compatible",
+    "sufficient_b_repeated_pairs"
+  ],
+  "cross_source_outcome_comparability_status": "OUTCOME_NOT_COMPARABLE",
+  "independence_status": "INDEPENDENCE_NOT_ESTABLISHED",
+  "external_clinical_validation": false,
+  "overlap_control": {
+    "cross_source_overlap_control_status": "NO_DETECTED_OVERLAP_AFTER_CONSERVATIVE_EXCLUSION",
+    "excluded_candidate_count_aggregate": 2583,
+    "evaluation_subset": "Source B subjects after excluding all detected overlap candidates",
+    "proves_absence_of_all_overlap": false,
+    "identity_merge": false
+  }
+}

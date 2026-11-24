@@ -1,0 +1,14 @@
+{
+  "version": "0.2",
+  "PROCESS_INDEPENDENT_RNG_STATUS": "FAIL_BUILTIN_HASH",
+  "CROSS_PROCESS_REPLAY_STATUS": "FAIL_UNDER_V011_HASH",
+  "hash_two_processes": {
+    "process_a": "7917500375689634322",
+    "process_b": "-7883644071076953219",
+    "equal": false,
+    "process_dependent": true,
+    "PYTHONHASHSEED_required_for_stability": true
+  },
+  "PYTHONHASHSEED_must_not_be_reproducibility_condition": true,
+  "ok": true
+}

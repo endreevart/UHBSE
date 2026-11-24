@@ -1,0 +1,89 @@
+{
+  "scientific_data_readiness_status": "EXPLORATORY_RETROSPECTIVE_PIPELINE_PASS",
+  "technical_pipeline_status": "TECHNICAL_PIPELINE_PASS",
+  "retrospective_backtest_status": "FIRST_EXPLORATORY_RETROSPECTIVE_BACKTEST_PASS",
+  "incremental_signal_status": "NO_INCREMENTAL_SIGNAL_DETECTED",
+  "uncertainty_calibration_status": "INSUFFICIENT_DATA_FOR_UNCERTAINTY_CALIBRATION",
+  "uncertainty_interval_construction_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+  "interval_sharpness_status": "INTERVAL_SHARPNESS_NOT_ESTABLISHED",
+  "clinical_validation_status": "NOT_STARTED",
+  "intervention_response_model_status": "NOT_STARTED",
+  "production_readiness": "NOT_CLAIMED",
+  "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "checks": {
+    "baseline_ok": "PASS",
+    "subject_overlap_zero": "PASS",
+    "outcome_selected_or_insufficient": "PASS",
+    "outcome_train_only": "PASS",
+    "leakage_ok": "PASS",
+    "split_ok": "PASS",
+    "engine_ok": "PASS",
+    "scope_ok": "PASS",
+    "schema_hash_present": "PASS",
+    "repro_splits": "PASS",
+    "raw_db_writes_zero": "PASS",
+    "pair_definition_consecutive": "PASS",
+    "split_class_honest": "PASS",
+    "shuffled_control_uses_same_frozen_model_configuration": "PASS",
+    "interval_multiplier_matches_nominal": "PASS",
+    "no_false_uncertainty_calibration_pass": "PASS"
+  },
+  "failed_checks": [],
+  "selected_outcome": {
+    "candidate_id": "2685c68a3e247ca4",
+    "source_measurement_label": "\u04223 \u0441\u0432.",
+    "dominant_unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+    "selection_population": "train_discovery_subjects_only",
+    "medical_interpretation_status": "DOMAIN_REVIEW_PENDING"
+  },
+  "n_subjects_with_pairs": 30,
+  "n_pairs": 40,
+  "n_observations_after_filter": 114,
+  "split_counts": {
+    "train": 25,
+    "validation": 13,
+    "test": 2,
+    "total": 40
+  },
+  "split_subjects": {
+    "train": 22,
+    "validation": 6,
+    "test": 2,
+    "total": 30
+  },
+  "split_class": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+  "pair_definition": "strict_consecutive_neighbors_only",
+  "clinical_rows_read": 114,
+  "raw_db_writes": 0,
+  "primary_metric_test": {
+    "subject_macro_mae": {
+      "persistence": 1.425,
+      "empirical_trend": 1.425,
+      "first_learned": 0.5236782086594662
+    },
+    "pair_micro_mae": {
+      "persistence": 1.425,
+      "empirical_trend": 1.425,
+      "first_learned": 0.5236782086594662
+    }
+  },
+  "started_at": "2026-08-15T08:17:47.545345+00:00",
+  "finished_at": "2026-08-15T08:17:47.660747+00:00",
+  "policy": {
+    "scientific_version": "0.1.1.1",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "security_blocks_core": false,
+    "clinical_validation_status": "NOT_STARTED",
+    "intervention_response_model_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "accepted_core_baseline_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+    "accepted_sdr_v01_sha256": "023e8e2b4ad90d966cd792ab44d1fb6b9ace5557ec432e7021e7897eb74fd6fd",
+    "accepted_sdr_v011_sha256": "3db322611437e69be5249a150b4519da50ad11657b67a3e524f7cc3bd7dc1e07",
+    "split_class": "EXPLORATORY_SUBJECT_DISJOINT_SPLIT",
+    "pair_definition": "strict_consecutive_neighbors_only",
+    "nominal_coverage": 0.9,
+    "gaussian_interval_multiplier": 1.6448536269514715
+  }
+}

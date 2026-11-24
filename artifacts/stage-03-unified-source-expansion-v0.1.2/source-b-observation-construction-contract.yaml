@@ -1,0 +1,82 @@
+document: source-b-observation-construction-contract
+version: 0.1.2
+source_system: kgz_raw
+subject_ownership:
+  rule: analyses_constructor.user_id == consultations.patient_id
+  evidence:
+    total_rows: 2183297
+    user_equals_patient: 2183297
+    differ: 0
+    user_null: 0
+    verdict: constructor.user_id always equals consultation.patient_id
+encounter_ownership:
+  rule: analyses_constructor.consultation_id → Encounter(HMAC); Observation.encounter_id
+    column remains NULL (pilot CHECK); encounter_id_hmac stored in provenance until
+    owner-approved migration 0005
+  encounter_policy_ref: source-b-encounter-construction-policy.yaml
+  fk_column: NULL_PILOT_CONSTRAINT
+  migration_0005: false
+Observation_grouping_key: pool_id
+Observation_timestamp:
+  clinical_observed_at_order:
+  - analyses_constructor.date
+  - consultation confirmed_at
+  - consultation success_at
+  - consultation date+time
+  - consultation created_at
+  recorded_at: analyses_constructor.created_at
+Observation_status: from analyses_constructor.status as source code string; not lab
+  text result
+ObservationComponent_source_row: one component per eligible analyses_constructor.id
+catalog_concept_mapping:
+  status: EXACT
+  scope: REFERENCE_CATALOG identity via analyses_catalog.id/code only
+  note: Concept EXACT does not imply clinical Observation EXACT
+typed_value_parsing:
+  numeric_xor_text: true
+  inequality_and_range_as_text: true
+  empty_rejected: true
+  never_strip_comparators_to_float: true
+unit_mapping:
+  priority:
+  - constructor.weight_id → analyses_weight
+  - catalog.weight_id → analyses_weight
+  - value suffix last-resort
+  unverified_conversion_forbidden: true
+reject_taxonomy:
+- EMPTY_VALUE
+- MISSING_SUBJECT
+- MISSING_ENCOUNTER
+- UNSUPPORTED_NUMERIC_PARSE
+- DATABASE_CONSTRAINT_ERROR
+unsupported_taxonomy:
+- UNKNOWN_VALUE_CLASS
+- QUARANTINE_INVALID
+source_locator: deterministic_hmac_locator(kgz_raw|analyses_constructor|pk)
+computed_provenance:
+  record_origin: OBSERVED
+  transformation_id: unified_source_expansion_v0.1.2
+  transformation_version: 0.1.2
+  source_system: kgz_raw
+idempotency_key: HMAC entity ids (Observation=pool_id, ObservationComponent=constructor.id)
+collision_handling: ON CONFLICT DO NOTHING; unexplained must remain 0
+gates:
+  subject_ownership_deterministic: true
+  encounter_ownership_deterministic: true
+  header_grouping_zero_cross_subject: true
+  header_grouping_zero_cross_consultation: true
+  timestamp_policy_deterministic: true
+  typed_value_xor: true
+  unit_provenance_recorded: true
+  source_locators_stable: true
+  rerun_identical_construction_hashes: true
+  no_raw_identifier_leak: true
+gates_pass: true
+observation_mapping_status: SUPPORTED_TRANSFORMATION
+may_populate_observation: true
+subject_mapping_status: ACCEPTED
+encounter_mapping_status: ACCEPTED
+concept_mapping_status: EXACT
+encounter_policy_digest:
+  occurred_at: COALESCE(confirmed_at, success_at, (date::timestamp + COALESCE(time,
+    time '00:00')), created_at)

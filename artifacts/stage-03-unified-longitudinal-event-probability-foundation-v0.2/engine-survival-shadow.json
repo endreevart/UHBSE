@@ -1,0 +1,67 @@
+{
+  "version": "0.2",
+  "ENGINE_SURVIVAL_INFERENCE_STATUS": "TECHNICAL_SHADOW_PASS",
+  "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_FUTURE_HORIZON_READ",
+  "fixtures": {
+    "source_a_h30": {
+      "ok": true,
+      "abstain": false,
+      "requested_horizon": 30.0,
+      "event_probability": 0.903362892014063,
+      "survival_probability": 0.09663710798593705,
+      "supported_horizons": [
+        30.0,
+        90.0,
+        180.0,
+        365.0
+      ],
+      "endpoint": "TIME_TO_NEXT_RECORDED_EVENT",
+      "model_identity_sha256": "b6a6d2471f6eb43af351ccdf815237bf6663384500497fcd298f74883206ca98",
+      "not_clinical_claim": true,
+      "not_intervention_recommendation": true,
+      "no_regime_candidate_id": true,
+      "no_future_horizon_read": true,
+      "poisoned_time_days_ignored": true
+    },
+    "source_b_h90": {
+      "ok": true,
+      "abstain": false,
+      "requested_horizon": 90.0,
+      "event_probability": 0.9883216884996814,
+      "survival_probability": 0.011678311500318617,
+      "supported_horizons": [
+        30.0,
+        90.0,
+        180.0,
+        365.0
+      ],
+      "endpoint": "TIME_TO_NEXT_RECORDED_EVENT",
+      "model_identity_sha256": "b6a6d2471f6eb43af351ccdf815237bf6663384500497fcd298f74883206ca98",
+      "not_clinical_claim": true,
+      "not_intervention_recommendation": true,
+      "no_regime_candidate_id": true,
+      "no_future_horizon_read": true,
+      "poisoned_time_days_ignored": true
+    },
+    "out_of_support": {
+      "ok": true,
+      "abstain": true,
+      "reason": "out_of_support_technical",
+      "requested_horizon": 90.0,
+      "poisoned_time_days_ignored": true
+    }
+  },
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "parent_isolation": true,
+    "rollback": true,
+    "predicted_evidence_does_not_drive_synthetic": true
+  },
+  "deterministic_repeat": true,
+  "feature_mismatch_fails": true,
+  "requested_horizons_ok": true,
+  "no_regime_id_emitted": true,
+  "ok": true
+}

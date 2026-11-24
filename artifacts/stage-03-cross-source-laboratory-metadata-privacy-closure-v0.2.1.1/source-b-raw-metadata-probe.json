@@ -1,0 +1,46 @@
+{
+  "version": "0.2.1.1",
+  "SOURCE_B_RAW_METADATA_PROBE_STATUS": "PASS",
+  "connection": "OK",
+  "candidates": [
+    {
+      "source_system": "kgz_raw",
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "material",
+      "relation_semantic_role": "specimen",
+      "route_from_laboratory_observation_or_catalog": [
+        "quest_digital.analyses_catalog",
+        "seed:analyses_catalog"
+      ],
+      "fk_lineage": [],
+      "non_null_count": 0,
+      "distinct_count": 0,
+      "semantic_classification": "lab_context_specimen",
+      "accepted_usability_status": "COLUMN_EXISTS_ALL_NULL",
+      "rejection_reason": null
+    }
+  ],
+  "column_reclassification": {
+    "n_columns_scanned": 148,
+    "bucket_counts": {
+      "infrastructure": 75,
+      "laboratory_relevant": 1,
+      "unrelated": 72
+    },
+    "n_sample_rejected": 0,
+    "n_sample_lab_relevant": 1
+  },
+  "ok": true,
+  "analyses_catalog_rows": 1882,
+  "material_column_exists": true,
+  "material_non_null": 0,
+  "catalog_material_all_empty": true,
+  "SOURCE_B_SPECIMEN_METADATA_STATUS": "NOT_AVAILABLE_IN_SOURCE",
+  "SOURCE_B_ASSAY_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+  "SOURCE_B_METADATA_RECOVERY_STATUS": "PASS_MATERIAL_EMPTY_ASSAY_DOCS_REQUIRED",
+  "provider_input_required": true,
+  "sample_category_hashes_emitted": false,
+  "global_substring_scan_used": false,
+  "probe_hash": "2487ec2962a177780287ddacce4bf60d57ee5507f6e9d8b1d65f5f01bd4f8f7a"
+}

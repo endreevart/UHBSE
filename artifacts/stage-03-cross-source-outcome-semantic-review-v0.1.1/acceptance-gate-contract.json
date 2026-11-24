@@ -1,0 +1,28 @@
+{
+  "version": "0.1.1",
+  "ACCEPTED_COMPARABLE_requires": [
+    "analyte confirmed",
+    "specimen confirmed",
+    "assay/method compatibility confirmed",
+    "unit exact or approved conversion contract",
+    "numeric semantics confirmed",
+    "temporal semantics confirmed",
+    "provenance isolation PASS",
+    "no hard conflicts",
+    "mapping_id + universe_hash + classification_hash + stratum hashes",
+    "reviewer_id + reviewer_role + reason + decision_scope + evidence hashes"
+  ],
+  "ACCEPTED_WITH_RESTRICTIONS_not_scientifically_usable_if": [
+    "analyte_unverified",
+    "assay_unverified",
+    "numeric_semantics_unverified",
+    "specimen_unverified",
+    "unit_unverified"
+  ],
+  "hard_conflict_override": "FORBIDDEN without new evidence artifact and reclassification",
+  "counts_separated": [
+    "DOMAIN_ACCEPTED_MAPPING_COUNT",
+    "SCIENTIFICALLY_USABLE_ACCEPTED_OUTCOME_COUNT",
+    "TECHNICAL_SHADOW_ELIGIBLE_MAPPING_COUNT"
+  ]
+}

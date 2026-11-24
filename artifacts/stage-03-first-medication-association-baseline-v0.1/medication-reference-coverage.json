@@ -1,0 +1,86 @@
+{
+  "version": "0.1",
+  "medicine_id_is_source_a_identity_only": true,
+  "inferred_forbidden": [
+    "active_ingredient",
+    "dose",
+    "route",
+    "duration",
+    "adherence",
+    "administration",
+    "treatment_start",
+    "treatment_discontinuation"
+  ],
+  "diagnosis_medicines_columns": [
+    "id",
+    "created",
+    "modified",
+    "name",
+    "unit_of_measurement_id",
+    "form_id",
+    "reception_frequency_id",
+    "description",
+    "category"
+  ],
+  "appointment_rows": 25726,
+  "rows_with_medicine_id": 25726,
+  "joined_to_diagnosis_medicines": 25726,
+  "medicine_id_unjoined": 0,
+  "field_coverage": {
+    "name": {
+      "present_in_schema": true,
+      "column": "name",
+      "non_null_joined_rows": 25726,
+      "join_rate": 1.0
+    },
+    "title": {
+      "present_in_schema": false,
+      "non_null_join_rate": null
+    },
+    "unit": {
+      "present_in_schema": true,
+      "column": "unit_of_measurement_id",
+      "non_null_joined_rows": 0,
+      "join_rate": 0.0
+    },
+    "form": {
+      "present_in_schema": true,
+      "column": "form_id",
+      "non_null_joined_rows": 0,
+      "join_rate": 0.0
+    },
+    "frequency": {
+      "present_in_schema": true,
+      "column": "reception_frequency_id",
+      "non_null_joined_rows": 0,
+      "join_rate": 0.0
+    },
+    "description": {
+      "present_in_schema": true,
+      "column": "description",
+      "non_null_joined_rows": 25726,
+      "join_rate": 1.0
+    },
+    "category": {
+      "present_in_schema": true,
+      "column": "category",
+      "non_null_joined_rows": 25726,
+      "join_rate": 1.0
+    },
+    "reception_frequency": {
+      "present_in_schema": true,
+      "column": "reception_frequency_id",
+      "non_null_joined_rows": 0,
+      "join_rate": 0.0
+    }
+  },
+  "future_reference_sources_needed": [
+    "ATC",
+    "RxNorm",
+    "DrugBank_or_licensed_commercial",
+    "national_drug_registries",
+    "ingredient_strength_form_route_dictionaries"
+  ],
+  "commercial_db_connected": false,
+  "llm_auto_accept_forbidden": true
+}

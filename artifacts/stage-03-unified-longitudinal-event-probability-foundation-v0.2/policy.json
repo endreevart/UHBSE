@@ -1,0 +1,40 @@
+{
+  "version": "0.2",
+  "no_encoder_retrain": true,
+  "raw_source_aware_features_only": true,
+  "no_future_horizon_in_inference": true,
+  "no_a_b_semantic_merge": true,
+  "no_unit_conversion": true,
+  "no_identity_merge": true,
+  "regimes_not_runtime_prediction": true,
+  "horizons_days": [
+    30.0,
+    90.0,
+    180.0,
+    365.0
+  ],
+  "time_bins_days": [
+    7.0,
+    14.0,
+    30.0,
+    60.0,
+    90.0,
+    180.0,
+    365.0
+  ],
+  "predeclared_max_followup_days": 365.0,
+  "ood_max_val_fpr": 0.15,
+  "gates": {
+    "MIN_TRAIN_SUBJECTS": 80,
+    "MIN_VAL_SUBJECTS": 20,
+    "MIN_TEST_SUBJECTS": 30,
+    "MIN_TRAIN_EVENTS": 30,
+    "GATE_MIN_VAL_CONCORDANCE": 0.52,
+    "GATE_CAL_SLOPE_LO": 0.5,
+    "GATE_CAL_SLOPE_HI": 1.5,
+    "GATE_MAX_ECE": 0.25
+  },
+  "SCIENTIFIC_CROSS_SOURCE_PASS": false,
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "seed": 42
+}

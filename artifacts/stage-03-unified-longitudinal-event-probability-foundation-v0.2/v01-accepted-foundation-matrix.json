@@ -1,0 +1,33 @@
+{
+  "version": "0.2",
+  "PRIOR_TRANSITION_DATASET_FOUNDATION_STATUS": "ACCEPTED_TECHNICAL_LONGITUDINAL_INPUT",
+  "PRIOR_TTE_DATASET_FOUNDATION_STATUS": "NOT_ACCEPTED_INCORRECT_SURVIVAL_COHORTS",
+  "PRIOR_TTE_MODEL_FOUNDATION_STATUS": "NOT_ACCEPTED_NOT_PROBABILISTIC",
+  "PRIOR_ENGINE_TTE_INFERENCE_STATUS": "NOT_ACCEPTED_FUTURE_HORIZON_LEAKAGE",
+  "PRIOR_STATE_ENCODER_FOUNDATION_STATUS": "NOT_ACCEPTED",
+  "PRIOR_CSR_ENCODER_FOUNDATION_STATUS": "NOT_ACCEPTED_WEAK_OR_NEGATIVE_EVIDENCE",
+  "PRIOR_REGIME_RUNTIME_STATUS": "NOT_ACCEPTED_RETROSPECTIVE_CANDIDATES_ONLY",
+  "other_defects": [
+    {
+      "id": "ood_validation_fpr_0_2625",
+      "reproduced": true,
+      "observed": 0.2625
+    },
+    {
+      "id": "vocab_test_evaluable_copied_from_validation_count",
+      "reproduced": true,
+      "funnel": {
+        "validation_evaluable_in_vocab": 307,
+        "test_evaluable_in_vocab": 307
+      }
+    },
+    {
+      "id": "denoising_val_n_fore_zero_encoder_not_accepted",
+      "reproduced": true,
+      "observed_val_n_fore": 0.0
+    }
+  ],
+  "n_defects_reproduced": 17,
+  "n_defects": 18,
+  "ok": true
+}

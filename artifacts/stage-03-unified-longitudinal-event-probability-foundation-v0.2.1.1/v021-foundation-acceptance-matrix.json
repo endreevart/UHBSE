@@ -1,0 +1,72 @@
+{
+  "version": "0.2.1.1",
+  "v021_global_status": "PARTIAL_ACCEPTED",
+  "v021_accepted_cells": 9,
+  "do_not_copy_count_of_nine": true,
+  "cells": [
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 90,
+      "v021_acceptance_status": "ACCEPTED"
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 180,
+      "v021_acceptance_status": "ACCEPTED"
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "horizon_days": 365,
+      "v021_acceptance_status": "ACCEPTED"
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 30,
+      "v021_acceptance_status": "ACCEPTED"
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 90,
+      "v021_acceptance_status": "ACCEPTED"
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 180,
+      "v021_acceptance_status": "ACCEPTED"
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_ENCOUNTER",
+      "outcome_key": null,
+      "horizon_days": 365,
+      "v021_acceptance_status": "ACCEPTED"
+    },
+    {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 90,
+      "v021_acceptance_status": "ACCEPTED"
+    },
+    {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "A::Лимфоциты::%",
+      "horizon_days": 180,
+      "v021_acceptance_status": "ACCEPTED"
+    }
+  ],
+  "ok": true
+}

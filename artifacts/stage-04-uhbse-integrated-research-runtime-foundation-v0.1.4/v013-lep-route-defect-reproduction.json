@@ -1,0 +1,119 @@
+{
+  "V013_EXPECTED_SHA256": "351febd77c018dacf1f04117d2a9a11d6022749d8c34b9f1f4a0c3514eaafa65",
+  "V013_INTEGRATED_RUNTIME_CLAIM_STATUS": "CORRECTION_REQUIRED",
+  "artifact_dir": "artifacts/stage-04-uhbse-integrated-research-runtime-foundation-v0.1.4",
+  "defects": [
+    {
+      "claim": "body REFERENCE_FEATURE_PROBE / lep_input_mode selects frozen reference probe on the ordinary URL",
+      "id": 1,
+      "live_http": {
+        "CLINICAL_USE_PROHIBITED": true,
+        "FROZEN_LEP_EXECUTION_STATUS": "PASS_REFERENCE_PROBE_ONLY",
+        "FROZEN_LEP_REFERENCE_PROBE_STATUS": "PASS",
+        "STATE_CONDITIONED_LEP_STATUS": "NOT_USED_ON_THIS_ROUTE",
+        "SYNTHETIC_EVENT_PROBABILITY_STATUS": "NOT_USED_ON_THIS_ROUTE",
+        "check": "frozen_provider_http_when_available",
+        "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+        "event_probability": 0.08283533863182137,
+        "evidence_tier": "FROZEN_LEP_REFERENCE_PROBE",
+        "executed": true,
+        "feature_order_sha256": "001d2a4edb7e53ef2d166ef24d78367de0ab02777a27310d8d276525fe98f02f",
+        "feature_value_origin": {
+          "cutoff_ordinal": "FIXED_SUPPORT_DEFAULT",
+          "days_since_last_event": "OOD_RANGE_MIDPOINT",
+          "has_lab_history": "FIXED_SUPPORT_DEFAULT",
+          "has_med_history": "FIXED_SUPPORT_DEFAULT",
+          "longitudinal_age_days": "OOD_RANGE_MIDPOINT",
+          "missingness_lab": "OOD_RANGE_MIDPOINT",
+          "n_documents_before": "FIXED_SUPPORT_DEFAULT",
+          "n_encounters_before": "FIXED_SUPPORT_DEFAULT",
+          "n_events_before": "FIXED_SUPPORT_DEFAULT",
+          "n_medications_before": "FIXED_SUPPORT_DEFAULT",
+          "n_obs_before": "OOD_RANGE_MIDPOINT",
+          "n_procedures_before": "FIXED_SUPPORT_DEFAULT",
+          "n_recommendations_before": "FIXED_SUPPORT_DEFAULT",
+          "source_is_a": "REQUEST_SOURCE_FLAG",
+          "source_is_b": "REQUEST_SOURCE_FLAG"
+        },
+        "http_status": 200,
+        "individual_interpretation_prohibited": true,
+        "model_id": "ff2a94b72f36f3572c219823cd9a241bb0110350084cd0b08d2799c918ae6118",
+        "namespace": "SOURCE_B",
+        "not_biological_risk": true,
+        "observation_process_only": true,
+        "reference_probe": true,
+        "requested_horizon_days": 90,
+        "route": "FROZEN_LEP_REFERENCE_PROBE",
+        "source_system": "kgz_raw",
+        "state_conditioned": false,
+        "status": "OK",
+        "survival_probability": 0.9171646613681786,
+        "version": "0.1.3"
+      },
+      "ordinary_http_path_forwards_body": true,
+      "reproduced": true,
+      "routing_status_REFERENCE_FEATURE_PROBE": {
+        "FROZEN_LEP_REFERENCE_PROBE_STATUS": "PASS",
+        "check": "routing_status_not_frozen_model_execution",
+        "client_switch": "REFERENCE_FEATURE_PROBE=true",
+        "reference_probe": true,
+        "route": "FROZEN_LEP_REFERENCE_PROBE",
+        "status": "OK",
+        "url_used": "/research/event-probability (direct execute_event_probability, not /reference-probe)"
+      },
+      "routing_status_lep_input_mode": {
+        "FROZEN_LEP_REFERENCE_PROBE_STATUS": "PASS",
+        "check": "routing_status_not_frozen_model_execution",
+        "client_switch": "lep_input_mode=REFERENCE_FEATURE_PROBE",
+        "reference_probe": true,
+        "route": "FROZEN_LEP_REFERENCE_PROBE",
+        "status": "OK",
+        "url_used": "/research/event-probability (direct execute_event_probability, not /reference-probe)"
+      },
+      "source_body_selects_probe": true
+    },
+    {
+      "claim": "client features or FEATURE_ORDER keys in state_at_t0 can yield STATE_CONDITIONED_LEP_STATUS=PASS",
+      "client_features_case": {
+        "STATE_CONDITIONED_LEP_STATUS": "PASS",
+        "check": "routing_status_not_frozen_model_execution",
+        "route": "STATE_CONDITIONED_LEP",
+        "state_conditioned": true,
+        "status": "OK",
+        "vector_kind": "CLIENT_FEATURES_FIELD"
+      },
+      "feature_order_keys_in_state_case": {
+        "STATE_CONDITIONED_LEP_STATUS": "PASS",
+        "check": "routing_status_not_frozen_model_execution",
+        "route": "STATE_CONDITIONED_LEP",
+        "state_conditioned": true,
+        "status": "OK",
+        "vector_kind": "FEATURE_ORDER_KEYS_IN_STATE_AT_T0"
+      },
+      "id": 2,
+      "live_http": {
+        "FROZEN_LEP_REFERENCE_PROBE_STATUS": "NOT_USED_ON_THIS_ROUTE",
+        "STATE_CONDITIONED_LEP_STATUS": "out_of_support_technical",
+        "executed": false,
+        "http_status": 422,
+        "not_biological_risk": true,
+        "reason": "out_of_support_technical",
+        "reference_probe": false,
+        "route": "STATE_CONDITIONED_LEP",
+        "state_conditioned": true,
+        "status": "ABSTAIN",
+        "version": "0.1.3"
+      },
+      "reproduced": true,
+      "source_accepts_feature_order_keys_in_state": true,
+      "source_accepts_request_features": true,
+      "source_system_used": "kgz_raw"
+    }
+  ],
+  "n_defects": 2,
+  "n_reproduced": 2,
+  "no_v014_zip_overwrite": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.4-review.zip",
+  "note": "v0.1.3 LEP route-boundary defects. Routing/status checks may stub LEP infer; frozen HTTP is separate when the private provider exists.",
+  "row_values_disclosed": false,
+  "version": "0.1.4"
+}

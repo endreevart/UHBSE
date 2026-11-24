@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "control": "yes_is_not_intake",
+      "reason": "YES_TREATED_AS_INTAKE",
+      "rejected": true
+    },
+    {
+      "control": "no_is_not_a_replacement",
+      "reason": "NO_TREATED_AS_REPLACEMENT",
+      "rejected": true
+    },
+    {
+      "control": "dose_without_name",
+      "reason": "DOSE_BECAME_A_NAME",
+      "rejected": true
+    },
+    {
+      "control": "decline_has_no_early_stop",
+      "reason": "EARLY_STOP_ADDED",
+      "rejected": true
+    },
+    {
+      "control": "administration_stays_zero",
+      "reason": "ADMINISTRATION_CLAIMED",
+      "rejected": true
+    },
+    {
+      "control": "precision_without_labels",
+      "reason": "PRECISION_WITHOUT_PRIVATE_LABELS",
+      "rejected": true
+    },
+    {
+      "control": "synthetic_labels",
+      "reason": "SYNTHETIC_LABELS",
+      "rejected": true
+    },
+    {
+      "control": "model_training",
+      "reason": "MODEL_STARTED",
+      "rejected": true
+    },
+    {
+      "control": "eligible_cells",
+      "reason": "CELLS_RECOMPUTED",
+      "rejected": true
+    },
+    {
+      "control": "domain_accepted",
+      "reason": "MAPPING_ACCEPTED",
+      "rejected": true
+    },
+    {
+      "control": "gate_2",
+      "reason": "GATE_2_OPENED",
+      "rejected": true
+    },
+    {
+      "control": "positive_changes",
+      "reason": "POSITIVE_CHANGES_EXTRACTED",
+      "rejected": true
+    }
+  ],
+  "passed": true
+}

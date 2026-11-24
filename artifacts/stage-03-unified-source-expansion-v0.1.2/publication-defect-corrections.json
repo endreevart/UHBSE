@@ -1,0 +1,35 @@
+{
+  "status": "CORRECTED_EVIDENCE",
+  "v011_zip_counts": {
+    "zip_path": "stage-03-unified-source-expansion-v0.1.1-review.zip",
+    "zip_sha256": "d0e8a973ecbbee6e618cf5976d8a688abf23023ccc477710668fed3b16072faa",
+    "zip_member_count": 256,
+    "review_index_entry_count": 255,
+    "self_excluded": true,
+    "members_equals_indexed_plus_one": true,
+    "unindexed_members": [],
+    "duplicate_members": [],
+    "review_index_present": true,
+    "correct_indexed_members": 255,
+    "correct_members": 256
+  },
+  "v011_attestation": {
+    "members": 256,
+    "indexed_members": 256,
+    "defect_members_copied_to_indexed": true
+  },
+  "correction": {
+    "members": 256,
+    "indexed_members": 255,
+    "rule": "indexed_members = zip_member_count - 1 when REVIEW_INDEX present; never copy members",
+    "members_equals_indexed_plus_one": true
+  },
+  "required_invariants": {
+    "members_equals_indexed_plus_one": true,
+    "self_excluded": true,
+    "unindexed_members": [],
+    "duplicate_members": []
+  },
+  "invariants_hold_on_zip": true,
+  "ok": true
+}

@@ -1,0 +1,2142 @@
+{
+  "version": "0.1.1.1",
+  "PER_OUTCOME_EVIDENCE_TIER_STATUS": "PASS",
+  "HELDOUT_OUTCOME_ACCOUNTING_STATUS": "PASS",
+  "SOURCE_A_BASELINE_STATUS": "TECHNICAL_SOURCE_AWARE_BASELINE_EVALUATED",
+  "SOURCE_B_BASELINE_STATUS": "TECHNICAL_SOURCE_AWARE_BASELINE_EVALUATED",
+  "SOURCE_A_INCREMENTAL_SIGNAL_STATUS": "MIXED_OUTCOME_SPECIFIC_RESULTS",
+  "SOURCE_B_INCREMENTAL_SIGNAL_STATUS": "MIXED_OUTCOME_SPECIFIC_RESULTS",
+  "OVERALL_SOURCE_AWARE_BASELINE_STATUS": "MIXED_OUTCOME_SPECIFIC_RESULTS",
+  "CROSS_OUTCOME_AGGREGATE_STATUS": "NORMALIZED_SKILL_SUMMARY_ONLY",
+  "JOINT_MODEL_DATA_GATE_STATUS": "PASS",
+  "JOINT_MULTI_OUTCOME_MODEL_STATUS": "TECHNICAL_MASKED_MULTI_OUTPUT_EVALUATED",
+  "M2_MODEL_FREEZE_STATUS": "FROZEN",
+  "MODEL_FILE_HASH_STATUS": "PASS",
+  "MODEL_IDENTITY_RECOMPUTATION_STATUS": "PASS",
+  "SOURCE_AWARE_MODEL_FREEZE_STATUS": "FROZEN",
+  "source_a_summary_evaluable": {
+    "n_outcomes": 12,
+    "wins": 11,
+    "losses": 1,
+    "ties": 0,
+    "median_standardized_skill": 0.05352891665557276,
+    "INCREMENTAL_SIGNAL_STATUS": "MIXED_OUTCOME_SPECIFIC_RESULTS",
+    "evaluable_only": true,
+    "pooled_raw_mae_across_units": "FORBIDDEN_NOT_COMPUTED"
+  },
+  "source_b_summary_evaluable": {
+    "n_outcomes": 12,
+    "wins": 11,
+    "losses": 1,
+    "ties": 0,
+    "median_standardized_skill": 0.041668207669839474,
+    "INCREMENTAL_SIGNAL_STATUS": "MIXED_OUTCOME_SPECIFIC_RESULTS",
+    "evaluable_only": true,
+    "pooled_raw_mae_across_units": "FORBIDDEN_NOT_COMPUTED"
+  },
+  "diagnostic_outcomes": {},
+  "outcome_eligibility": {
+    "A::25(OH)витамин D::нг/мл": {
+      "unit": "нг/мл",
+      "train": {
+        "n_subjects": 5795,
+        "n_targets": 9676,
+        "persistence_available": 5485,
+        "horizon_days_median": 32.0
+      },
+      "validation": {
+        "n_subjects": 1198,
+        "n_targets": 2082,
+        "persistence_available": 1211,
+        "horizon_days_median": 30.116200042766206
+      },
+      "test": {
+        "n_subjects": 1234,
+        "n_targets": 2068,
+        "persistence_available": 1167,
+        "horizon_days_median": 32.52127466284722
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Базофилы::%": {
+      "unit": "%",
+      "train": {
+        "n_subjects": 6250,
+        "n_targets": 12291,
+        "persistence_available": 8124,
+        "horizon_days_median": 33.70707539004629
+      },
+      "validation": {
+        "n_subjects": 1286,
+        "n_targets": 2602,
+        "persistence_available": 1722,
+        "horizon_days_median": 34.0
+      },
+      "test": {
+        "n_subjects": 1336,
+        "n_targets": 2605,
+        "persistence_available": 1693,
+        "horizon_days_median": 33.583498393738424
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Гемоглобин::г/л": {
+      "unit": "г/л",
+      "train": {
+        "n_subjects": 5795,
+        "n_targets": 11015,
+        "persistence_available": 7185,
+        "horizon_days_median": 32.0
+      },
+      "validation": {
+        "n_subjects": 1209,
+        "n_targets": 2356,
+        "persistence_available": 1538,
+        "horizon_days_median": 34.0
+      },
+      "test": {
+        "n_subjects": 1246,
+        "n_targets": 2335,
+        "persistence_available": 1484,
+        "horizon_days_median": 34.32592100052083
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Железо::мкмоль/л": {
+      "unit": "мкмоль/л",
+      "train": {
+        "n_subjects": 5896,
+        "n_targets": 10470,
+        "persistence_available": 6269,
+        "horizon_days_median": 22.279468824166667
+      },
+      "validation": {
+        "n_subjects": 1211,
+        "n_targets": 2212,
+        "persistence_available": 1341,
+        "horizon_days_median": 22.7033667009375
+      },
+      "test": {
+        "n_subjects": 1257,
+        "n_targets": 2225,
+        "persistence_available": 1313,
+        "horizon_days_median": 21.52320328347222
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Лейкоциты::*10^9/л": {
+      "unit": "*10^9/л",
+      "train": {
+        "n_subjects": 5943,
+        "n_targets": 11417,
+        "persistence_available": 7525,
+        "horizon_days_median": 31.0
+      },
+      "validation": {
+        "n_subjects": 1241,
+        "n_targets": 2463,
+        "persistence_available": 1635,
+        "horizon_days_median": 32.536440727858796
+      },
+      "test": {
+        "n_subjects": 1271,
+        "n_targets": 2435,
+        "persistence_available": 1578,
+        "horizon_days_median": 33.0
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Лимфоциты::%": {
+      "unit": "%",
+      "train": {
+        "n_subjects": 6384,
+        "n_targets": 12826,
+        "persistence_available": 8623,
+        "horizon_days_median": 32.7482248912037
+      },
+      "validation": {
+        "n_subjects": 1315,
+        "n_targets": 2708,
+        "persistence_available": 1820,
+        "horizon_days_median": 33.0
+      },
+      "test": {
+        "n_subjects": 1373,
+        "n_targets": 2723,
+        "persistence_available": 1791,
+        "horizon_days_median": 33.0
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Моноциты::%": {
+      "unit": "%",
+      "train": {
+        "n_subjects": 6351,
+        "n_targets": 12675,
+        "persistence_available": 8476,
+        "horizon_days_median": 33.0
+      },
+      "validation": {
+        "n_subjects": 1311,
+        "n_targets": 2669,
+        "persistence_available": 1775,
+        "horizon_days_median": 33.352915774479165
+      },
+      "test": {
+        "n_subjects": 1368,
+        "n_targets": 2704,
+        "persistence_available": 1775,
+        "horizon_days_median": 33.0
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Нейтрофилы::%": {
+      "unit": "%",
+      "train": {
+        "n_subjects": 6311,
+        "n_targets": 12473,
+        "persistence_available": 8283,
+        "horizon_days_median": 33.50423902417824
+      },
+      "validation": {
+        "n_subjects": 1304,
+        "n_targets": 2640,
+        "persistence_available": 1755,
+        "horizon_days_median": 34.0
+      },
+      "test": {
+        "n_subjects": 1354,
+        "n_targets": 2651,
+        "persistence_available": 1728,
+        "horizon_days_median": 33.48521847773148
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Общий белок::г/л": {
+      "unit": "г/л",
+      "train": {
+        "n_subjects": 6030,
+        "n_targets": 10952,
+        "persistence_available": 6748,
+        "horizon_days_median": 35.0
+      },
+      "validation": {
+        "n_subjects": 1235,
+        "n_targets": 2320,
+        "persistence_available": 1449,
+        "horizon_days_median": 33.0
+      },
+      "test": {
+        "n_subjects": 1303,
+        "n_targets": 2347,
+        "persistence_available": 1450,
+        "horizon_days_median": 33.71411176943287
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Тромбоциты::*10^9/л": {
+      "unit": "*10^9/л",
+      "train": {
+        "n_subjects": 5938,
+        "n_targets": 11382,
+        "persistence_available": 7487,
+        "horizon_days_median": 31.0
+      },
+      "validation": {
+        "n_subjects": 1244,
+        "n_targets": 2466,
+        "persistence_available": 1638,
+        "horizon_days_median": 33.0
+      },
+      "test": {
+        "n_subjects": 1271,
+        "n_targets": 2443,
+        "persistence_available": 1582,
+        "horizon_days_median": 33.48521847773148
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Эозинофилы::%": {
+      "unit": "%",
+      "train": {
+        "n_subjects": 6316,
+        "n_targets": 12518,
+        "persistence_available": 8342,
+        "horizon_days_median": 33.41920272528935
+      },
+      "validation": {
+        "n_subjects": 1301,
+        "n_targets": 2646,
+        "persistence_available": 1762,
+        "horizon_days_median": 34.0
+      },
+      "test": {
+        "n_subjects": 1354,
+        "n_targets": 2663,
+        "persistence_available": 1739,
+        "horizon_days_median": 33.48521847773148
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "A::Эритроциты::*10^12/л": {
+      "unit": "*10^12/л",
+      "train": {
+        "n_subjects": 5940,
+        "n_targets": 11397,
+        "persistence_available": 7512,
+        "horizon_days_median": 31.0
+      },
+      "validation": {
+        "n_subjects": 1243,
+        "n_targets": 2466,
+        "persistence_available": 1639,
+        "horizon_days_median": 32.439088065289354
+      },
+      "test": {
+        "n_subjects": 1274,
+        "n_targets": 2441,
+        "persistence_available": 1582,
+        "horizon_days_median": 33.0
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::16::ммоль/л": {
+      "unit": "ммоль/л",
+      "train": {
+        "n_subjects": 7035,
+        "n_targets": 14741,
+        "persistence_available": 14166,
+        "horizon_days_median": 105.29997685185185
+      },
+      "validation": {
+        "n_subjects": 1491,
+        "n_targets": 2964,
+        "persistence_available": 2877,
+        "horizon_days_median": 104.76555555555555
+      },
+      "test": {
+        "n_subjects": 1548,
+        "n_targets": 3166,
+        "persistence_available": 3041,
+        "horizon_days_median": 108.82112268518519
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::28::г/л": {
+      "unit": "г/л",
+      "train": {
+        "n_subjects": 7498,
+        "n_targets": 16104,
+        "persistence_available": 15652,
+        "horizon_days_median": 102.94532407407408
+      },
+      "validation": {
+        "n_subjects": 1608,
+        "n_targets": 3272,
+        "persistence_available": 3190,
+        "horizon_days_median": 102.4990162037037
+      },
+      "test": {
+        "n_subjects": 1662,
+        "n_targets": 3495,
+        "persistence_available": 3394,
+        "horizon_days_median": 105.0494212962963
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::30::ммоль/л": {
+      "unit": "ммоль/л",
+      "train": {
+        "n_subjects": 7587,
+        "n_targets": 16498,
+        "persistence_available": 16186,
+        "horizon_days_median": 101.91363425925925
+      },
+      "validation": {
+        "n_subjects": 1616,
+        "n_targets": 3328,
+        "persistence_available": 3270,
+        "horizon_days_median": 102.06769675925926
+      },
+      "test": {
+        "n_subjects": 1677,
+        "n_targets": 3571,
+        "persistence_available": 3484,
+        "horizon_days_median": 104.05725694444445
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::32::ммоль/л": {
+      "unit": "ммоль/л",
+      "train": {
+        "n_subjects": 6411,
+        "n_targets": 13583,
+        "persistence_available": 12604,
+        "horizon_days_median": 101.41585648148148
+      },
+      "validation": {
+        "n_subjects": 1352,
+        "n_targets": 2714,
+        "persistence_available": 2496,
+        "horizon_days_median": 101.78892361111112
+      },
+      "test": {
+        "n_subjects": 1400,
+        "n_targets": 2891,
+        "persistence_available": 2680,
+        "horizon_days_median": 105.63436342592593
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::33::ммоль/л": {
+      "unit": "ммоль/л",
+      "train": {
+        "n_subjects": 7628,
+        "n_targets": 16529,
+        "persistence_available": 16177,
+        "horizon_days_median": 101.52996527777778
+      },
+      "validation": {
+        "n_subjects": 1620,
+        "n_targets": 3331,
+        "persistence_available": 3252,
+        "horizon_days_median": 101.11931712962964
+      },
+      "test": {
+        "n_subjects": 1689,
+        "n_targets": 3579,
+        "persistence_available": 3493,
+        "horizon_days_median": 104.74435185185185
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::48::мкмоль/л": {
+      "unit": "мкмоль/л",
+      "train": {
+        "n_subjects": 7220,
+        "n_targets": 15417,
+        "persistence_available": 14360,
+        "horizon_days_median": 101.56163194444444
+      },
+      "validation": {
+        "n_subjects": 1546,
+        "n_targets": 3088,
+        "persistence_available": 2854,
+        "horizon_days_median": 101.11931712962964
+      },
+      "test": {
+        "n_subjects": 1597,
+        "n_targets": 3354,
+        "persistence_available": 3097,
+        "horizon_days_median": 104.22886574074074
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::55::пмоль/л": {
+      "unit": "пмоль/л",
+      "train": {
+        "n_subjects": 6285,
+        "n_targets": 13699,
+        "persistence_available": 12941,
+        "horizon_days_median": 102.01288194444444
+      },
+      "validation": {
+        "n_subjects": 1338,
+        "n_targets": 2750,
+        "persistence_available": 2588,
+        "horizon_days_median": 102.30998842592592
+      },
+      "test": {
+        "n_subjects": 1394,
+        "n_targets": 2958,
+        "persistence_available": 2776,
+        "horizon_days_median": 104.99935185185186
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::8::Ед/л": {
+      "unit": "Ед/л",
+      "train": {
+        "n_subjects": 6913,
+        "n_targets": 14787,
+        "persistence_available": 13815,
+        "horizon_days_median": 102.67083333333333
+      },
+      "validation": {
+        "n_subjects": 1487,
+        "n_targets": 3033,
+        "persistence_available": 2843,
+        "horizon_days_median": 101.83446759259259
+      },
+      "test": {
+        "n_subjects": 1525,
+        "n_targets": 3222,
+        "persistence_available": 3011,
+        "horizon_days_median": 104.66253472222222
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::928::нг/мл": {
+      "unit": "нг/мл",
+      "train": {
+        "n_subjects": 6332,
+        "n_targets": 11412,
+        "persistence_available": 8914,
+        "horizon_days_median": 109.42771990740741
+      },
+      "validation": {
+        "n_subjects": 1340,
+        "n_targets": 2294,
+        "persistence_available": 1763,
+        "horizon_days_median": 110.13439814814815
+      },
+      "test": {
+        "n_subjects": 1405,
+        "n_targets": 2461,
+        "persistence_available": 1890,
+        "horizon_days_median": 112.95663194444444
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::9::Ед/л": {
+      "unit": "Ед/л",
+      "train": {
+        "n_subjects": 6907,
+        "n_targets": 14746,
+        "persistence_available": 13768,
+        "horizon_days_median": 102.64777777777778
+      },
+      "validation": {
+        "n_subjects": 1481,
+        "n_targets": 3021,
+        "persistence_available": 2830,
+        "horizon_days_median": 101.54644675925925
+      },
+      "test": {
+        "n_subjects": 1527,
+        "n_targets": 3211,
+        "persistence_available": 2992,
+        "horizon_days_median": 104.29611111111112
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::mm_1002::%": {
+      "unit": "%",
+      "train": {
+        "n_subjects": 7395,
+        "n_targets": 16340,
+        "persistence_available": 15518,
+        "horizon_days_median": 102.73059027777778
+      },
+      "validation": {
+        "n_subjects": 1548,
+        "n_targets": 3217,
+        "persistence_available": 3055,
+        "horizon_days_median": 102.84181712962963
+      },
+      "test": {
+        "n_subjects": 1622,
+        "n_targets": 3489,
+        "persistence_available": 3317,
+        "horizon_days_median": 105.13787037037036
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    },
+    "B::mm_1004::%": {
+      "unit": "%",
+      "train": {
+        "n_subjects": 7728,
+        "n_targets": 17657,
+        "persistence_available": 17229,
+        "horizon_days_median": 103.14079861111111
+      },
+      "validation": {
+        "n_subjects": 1631,
+        "n_targets": 3517,
+        "persistence_available": 3446,
+        "horizon_days_median": 102.87418981481481
+      },
+      "test": {
+        "n_subjects": 1698,
+        "n_targets": 3785,
+        "persistence_available": 3687,
+        "horizon_days_median": 105.51802083333334
+      },
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT"
+    }
+  },
+  "outcome_metrics": {
+    "A::25(OH)витамин D::нг/мл": {
+      "unit": "нг/мл",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1211,
+        "n_subjects": 652,
+        "subject_macro_mae_m0": 19.334188322754272,
+        "subject_macro_mae_m1": 15.437324986927793,
+        "normalized_mae_m0": 0.9604096333039177,
+        "normalized_mae_m1": 0.7668362065367869,
+        "standardized_skill": 0.19357342676713085,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 652,
+          "delta_mae_mean": 3.6661526555536006,
+          "ci95": [
+            2.8046561540796446,
+            4.453376667182612
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1167,
+        "n_subjects": 640,
+        "subject_macro_mae_m0": 19.51482473451028,
+        "subject_macro_mae_m1": 14.951598792707191,
+        "normalized_mae_m0": 0.9693825959688025,
+        "normalized_mae_m1": 0.7427081641131751,
+        "standardized_skill": 0.22667443185562738,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 640,
+          "delta_mae_mean": 3.9438542929961447,
+          "ci95": [
+            2.967843910910407,
+            4.730478168592471
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Базофилы::%": {
+      "unit": "%",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1722,
+        "n_subjects": 803,
+        "subject_macro_mae_m0": 0.3061159621477181,
+        "subject_macro_mae_m1": 0.26361115919430367,
+        "normalized_mae_m0": 0.778043729238427,
+        "normalized_mae_m1": 0.6700108283455927,
+        "standardized_skill": 0.10803290089283434,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 803,
+          "delta_mae_mean": 0.04596711937567508,
+          "ci95": [
+            0.035739291750265634,
+            0.05751682284491699
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1693,
+        "n_subjects": 814,
+        "subject_macro_mae_m0": 0.30217681642681643,
+        "subject_macro_mae_m1": 0.26774468611665914,
+        "normalized_mae_m0": 0.7680317468341088,
+        "normalized_mae_m1": 0.6805168623302725,
+        "standardized_skill": 0.08751488450383625,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 814,
+          "delta_mae_mean": 0.03515644002621848,
+          "ci95": [
+            0.024748275564749456,
+            0.04684312076699215
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Гемоглобин::г/л": {
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1538,
+        "n_subjects": 733,
+        "subject_macro_mae_m0": 10.562449150818864,
+        "subject_macro_mae_m1": 10.07089974459313,
+        "normalized_mae_m0": 0.48264065231064435,
+        "normalized_mae_m1": 0.4601797890509801,
+        "standardized_skill": 0.02246086325966418,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 733,
+          "delta_mae_mean": 0.2810183717641079,
+          "ci95": [
+            -0.2270377906581995,
+            0.8363396929879521
+          ],
+          "p_value": 0.14427860696517414
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1484,
+        "n_subjects": 739,
+        "subject_macro_mae_m0": 10.13553366645383,
+        "subject_macro_mae_m1": 9.572258812204138,
+        "normalized_mae_m0": 0.4631331720933804,
+        "normalized_mae_m1": 0.4373948855271272,
+        "standardized_skill": 0.025738286566253238,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 739,
+          "delta_mae_mean": 0.25187428019036034,
+          "ci95": [
+            -0.45383774958662926,
+            0.7997718507054845
+          ],
+          "p_value": 0.208955223880597
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Железо::мкмоль/л": {
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1341,
+        "n_subjects": 686,
+        "subject_macro_mae_m0": 6.388546341696852,
+        "subject_macro_mae_m1": 5.2991041387368085,
+        "normalized_mae_m0": 0.8945559443368067,
+        "normalized_mae_m1": 0.7420068437208379,
+        "standardized_skill": 0.15254910061596885,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 686,
+          "delta_mae_mean": 1.0299035871279727,
+          "ci95": [
+            0.7619354018526208,
+            1.2676121710971682
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1313,
+        "n_subjects": 697,
+        "subject_macro_mae_m0": 6.325660675208739,
+        "subject_macro_mae_m1": 5.213001659437539,
+        "normalized_mae_m0": 0.8857503814181567,
+        "normalized_mae_m1": 0.729950347522856,
+        "standardized_skill": 0.15580003389530056,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 697,
+          "delta_mae_mean": 0.9857460458206482,
+          "ci95": [
+            0.6242627319618848,
+            1.2922044582060224
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Лейкоциты::*10^9/л": {
+      "unit": "*10^9/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1635,
+        "n_subjects": 768,
+        "subject_macro_mae_m0": 1.2021619097197567,
+        "subject_macro_mae_m1": 1.1498894565991347,
+        "normalized_mae_m0": 0.5479716744389626,
+        "normalized_mae_m1": 0.5241447477729724,
+        "standardized_skill": 0.023826926665990237,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 768,
+          "delta_mae_mean": 0.05643336464918472,
+          "ci95": [
+            0.016442326393557805,
+            0.09356746867995769
+          ],
+          "p_value": 0.009950248756218905
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1578,
+        "n_subjects": 765,
+        "subject_macro_mae_m0": 1.21831802832244,
+        "subject_macro_mae_m1": 1.1008841760384185,
+        "normalized_mae_m0": 0.5553359864268633,
+        "normalized_mae_m1": 0.5018070697712905,
+        "standardized_skill": 0.05352891665557276,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 765,
+          "delta_mae_mean": 0.10075384813851737,
+          "ci95": [
+            0.06843363375157874,
+            0.13498873586047555
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Лимфоциты::%": {
+      "unit": "%",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1820,
+        "n_subjects": 831,
+        "subject_macro_mae_m0": 6.506144706623767,
+        "subject_macro_mae_m1": 6.0103133232691235,
+        "normalized_mae_m0": 0.6706872165042135,
+        "normalized_mae_m1": 0.6195743400846343,
+        "standardized_skill": 0.05111287641957916,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 831,
+          "delta_mae_mean": 0.3733778936231901,
+          "ci95": [
+            0.1682850182340907,
+            0.5865509068837085
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1791,
+        "n_subjects": 846,
+        "subject_macro_mae_m0": 6.500911755600585,
+        "subject_macro_mae_m1": 6.007461716577388,
+        "normalized_mae_m0": 0.670147776710895,
+        "normalized_mae_m1": 0.6192803816436703,
+        "standardized_skill": 0.050867395067224666,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 846,
+          "delta_mae_mean": 0.3318342158569997,
+          "ci95": [
+            0.14136888073526688,
+            0.547421111010129
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Моноциты::%": {
+      "unit": "%",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1775,
+        "n_subjects": 824,
+        "subject_macro_mae_m0": 1.490154937901904,
+        "subject_macro_mae_m1": 1.354761183397617,
+        "normalized_mae_m0": 0.7043523534636226,
+        "normalized_mae_m1": 0.6403557131118203,
+        "standardized_skill": 0.0639966403518023,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 824,
+          "delta_mae_mean": 0.16589748589084038,
+          "ci95": [
+            0.11833036818940879,
+            0.21070756157956816
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1775,
+        "n_subjects": 840,
+        "subject_macro_mae_m0": 1.5655008481928123,
+        "subject_macro_mae_m1": 1.374027707210198,
+        "normalized_mae_m0": 0.739966146289744,
+        "normalized_mae_m1": 0.649462431510889,
+        "standardized_skill": 0.09050371477885504,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 840,
+          "delta_mae_mean": 0.17911750012284572,
+          "ci95": [
+            0.12436895418742377,
+            0.22743013715849147
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Нейтрофилы::%": {
+      "unit": "%",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1755,
+        "n_subjects": 814,
+        "subject_macro_mae_m0": 7.254753074355348,
+        "subject_macro_mae_m1": 6.6168141463177745,
+        "normalized_mae_m0": 0.6057951651157565,
+        "normalized_mae_m1": 0.5525252172231976,
+        "standardized_skill": 0.053269947892558824,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 814,
+          "delta_mae_mean": 0.5296708575148001,
+          "ci95": [
+            0.30732862760627633,
+            0.7360184100647675
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1728,
+        "n_subjects": 830,
+        "subject_macro_mae_m0": 7.4822416375458545,
+        "subject_macro_mae_m1": 6.8532541254723105,
+        "normalized_mae_m0": 0.624791190244039,
+        "normalized_mae_m1": 0.5722687143131542,
+        "standardized_skill": 0.05252247593088482,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 830,
+          "delta_mae_mean": 0.44108242522717306,
+          "ci95": [
+            0.23477853474983768,
+            0.6677256398899907
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Общий белок::г/л": {
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1449,
+        "n_subjects": 700,
+        "subject_macro_mae_m0": 3.594516764584622,
+        "subject_macro_mae_m1": 3.1595607388344837,
+        "normalized_mae_m0": 0.7415939241348606,
+        "normalized_mae_m1": 0.6518570367901655,
+        "standardized_skill": 0.08973688734469518,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 700,
+          "delta_mae_mean": 0.41618164029347776,
+          "ci95": [
+            0.2919935440418415,
+            0.5317331909747307
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1450,
+        "n_subjects": 735,
+        "subject_macro_mae_m0": 3.666056806270072,
+        "subject_macro_mae_m1": 3.2223802228698344,
+        "normalized_mae_m0": 0.756353532649975,
+        "normalized_mae_m1": 0.664817484808353,
+        "standardized_skill": 0.09153604784162188,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 735,
+          "delta_mae_mean": 0.4535710116417975,
+          "ci95": [
+            0.340622623580483,
+            0.5707252531383085
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Тромбоциты::*10^9/л": {
+      "unit": "*10^9/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1638,
+        "n_subjects": 770,
+        "subject_macro_mae_m0": 31.45942717031716,
+        "subject_macro_mae_m1": 30.404717717044168,
+        "normalized_mae_m0": 0.4610963919949848,
+        "normalized_mae_m1": 0.4456376641270458,
+        "standardized_skill": 0.015458727867939006,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 770,
+          "delta_mae_mean": 1.4816022343520954,
+          "ci95": [
+            0.5653135539993741,
+            2.2679397176368497
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1582,
+        "n_subjects": 768,
+        "subject_macro_mae_m0": 31.838723803323415,
+        "subject_macro_mae_m1": 30.481849506059305,
+        "normalized_mae_m0": 0.46665568930921075,
+        "normalized_mae_m1": 0.44676817389222534,
+        "standardized_skill": 0.01988751541698539,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 768,
+          "delta_mae_mean": 0.7567087261240547,
+          "ci95": [
+            -0.20324184850003846,
+            1.6243074479260464
+          ],
+          "p_value": 0.05472636815920398
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Эозинофилы::%": {
+      "unit": "%",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1762,
+        "n_subjects": 816,
+        "subject_macro_mae_m0": 1.1233342117781455,
+        "subject_macro_mae_m1": 1.0896332902267278,
+        "normalized_mae_m0": 0.4989031647020273,
+        "normalized_mae_m1": 0.4839356721792431,
+        "standardized_skill": 0.014967492522784166,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 816,
+          "delta_mae_mean": 0.02422195528558925,
+          "ci95": [
+            -0.02064167646522952,
+            0.08143023425788565
+          ],
+          "p_value": 0.1691542288557214
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1739,
+        "n_subjects": 835,
+        "subject_macro_mae_m0": 1.182616194450925,
+        "subject_macro_mae_m1": 1.1281639273250683,
+        "normalized_mae_m0": 0.5252318996903831,
+        "normalized_mae_m1": 0.5010481722569528,
+        "standardized_skill": 0.024183727433430422,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 835,
+          "delta_mae_mean": 0.04787859307008236,
+          "ci95": [
+            -0.005144369246673053,
+            0.0985789976965803
+          ],
+          "p_value": 0.04477611940298507
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "A::Эритроциты::*10^12/л": {
+      "unit": "*10^12/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M0_persistence",
+      "validation": {
+        "n_paired_rows": 1639,
+        "n_subjects": 768,
+        "subject_macro_mae_m0": 0.22512991549997527,
+        "subject_macro_mae_m1": 0.32032438410112113,
+        "normalized_mae_m0": 0.19493770722891596,
+        "normalized_mae_m1": 0.27736563071820647,
+        "standardized_skill": -0.08242792348929052,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 768,
+          "delta_mae_mean": -0.10253608432069532,
+          "ci95": [
+            -0.12214790598621691,
+            -0.08430518096371103
+          ],
+          "p_value": 1.0
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1582,
+        "n_subjects": 770,
+        "subject_macro_mae_m0": 0.23079793856936714,
+        "subject_macro_mae_m1": 0.31306269638842277,
+        "normalized_mae_m0": 0.19984559083565046,
+        "normalized_mae_m1": 0.2710778090833871,
+        "standardized_skill": -0.07123221824773661,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 770,
+          "delta_mae_mean": -0.09944225905026961,
+          "ci95": [
+            -0.1205503876346268,
+            -0.07879484211684631
+          ],
+          "p_value": 1.0
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "B::16::ммоль/л": {
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 2877,
+        "n_subjects": 1443,
+        "subject_macro_mae_m0": 0.4496118714964869,
+        "subject_macro_mae_m1": 0.4287668334944259,
+        "normalized_mae_m0": 0.09977121202669205,
+        "normalized_mae_m1": 0.09514558971096916,
+        "standardized_skill": 0.004625622315722888,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1443,
+          "delta_mae_mean": 0.01469680163090017,
+          "ci95": [
+            0.0017513616070152782,
+            0.02774967154316843
+          ],
+          "p_value": 0.014925373134328358
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 3041,
+        "n_subjects": 1477,
+        "subject_macro_mae_m0": 0.8471111931681498,
+        "subject_macro_mae_m1": 0.5223180983387228,
+        "normalized_mae_m0": 0.1879783782898267,
+        "normalized_mae_m1": 0.11590510179653583,
+        "standardized_skill": 0.07207327649329086,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1477,
+          "delta_mae_mean": 0.1478097006714002,
+          "ci95": [
+            0.010543145082210992,
+            0.4536953932912119
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "B::28::г/л": {
+      "unit": "г/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 3190,
+        "n_subjects": 1566,
+        "subject_macro_mae_m0": 3.552635476344289,
+        "subject_macro_mae_m1": 2.9846096986509294,
+        "normalized_mae_m0": 0.17952847398706273,
+        "normalized_mae_m1": 0.15082392443965492,
+        "standardized_skill": 0.028704549547407806,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1566,
+          "delta_mae_mean": 0.5278582243617632,
+          "ci95": [
+            0.4227372395282045,
+            0.6478828173441817
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 3394,
+        "n_subjects": 1606,
+        "subject_macro_mae_m0": 3.3572518584915847,
+        "subject_macro_mae_m1": 2.9354673557577677,
+        "normalized_mae_m0": 0.16965498063579382,
+        "normalized_mae_m1": 0.1483405709161922,
+        "standardized_skill": 0.02131440971960162,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1606,
+          "delta_mae_mean": 0.3991325864941208,
+          "ci95": [
+            0.3123685949681163,
+            0.5036628552380322
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 1.0
+    },
+    "B::30::ммоль/л": {
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 3270,
+        "n_subjects": 1585,
+        "subject_macro_mae_m0": 0.33716530182050686,
+        "subject_macro_mae_m1": 0.3152725570437674,
+        "normalized_mae_m0": 0.2811029353760091,
+        "normalized_mae_m1": 0.26285042010545656,
+        "standardized_skill": 0.018252515270552536,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1585,
+          "delta_mae_mean": 0.012664412727849482,
+          "ci95": [
+            0.003772394451391048,
+            0.021129670573439285
+          ],
+          "p_value": 0.009950248756218905
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 3484,
+        "n_subjects": 1621,
+        "subject_macro_mae_m0": 0.34408025489487554,
+        "subject_macro_mae_m1": 0.32232855281963974,
+        "normalized_mae_m0": 0.2868681004054379,
+        "normalized_mae_m1": 0.2687331758750712,
+        "standardized_skill": 0.018134924530366733,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1621,
+          "delta_mae_mean": 0.018269886349589787,
+          "ci95": [
+            0.00931085523086217,
+            0.0279456671913757
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "B::32::ммоль/л": {
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M0_persistence",
+      "validation": {
+        "n_paired_rows": 2496,
+        "n_subjects": 1213,
+        "subject_macro_mae_m0": 0.3110557092216202,
+        "subject_macro_mae_m1": 0.36060068246091465,
+        "normalized_mae_m0": 0.2699763986216778,
+        "normalized_mae_m1": 0.3129782566439077,
+        "standardized_skill": -0.043001858022229854,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1213,
+          "delta_mae_mean": -0.03310390249436297,
+          "ci95": [
+            -0.091283002511939,
+            0.052120293612540336
+          ],
+          "p_value": 0.7562189054726368
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 2680,
+        "n_subjects": 1276,
+        "subject_macro_mae_m0": 0.21236679173317102,
+        "subject_macro_mae_m1": 0.2892227273935787,
+        "normalized_mae_m0": 0.18432075001109277,
+        "normalized_mae_m1": 0.25102677117437205,
+        "standardized_skill": -0.06670602116327928,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1276,
+          "delta_mae_mean": -0.07435095102441494,
+          "ci95": [
+            -0.08763214039320022,
+            -0.0594773909664707
+          ],
+          "p_value": 1.0
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.01
+    },
+    "B::33::ммоль/л": {
+      "unit": "ммоль/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 3252,
+        "n_subjects": 1576,
+        "subject_macro_mae_m0": 0.6382513609134802,
+        "subject_macro_mae_m1": 0.6147115597053208,
+        "normalized_mae_m0": 0.6367971936374817,
+        "normalized_mae_m1": 0.6133110246041936,
+        "standardized_skill": 0.023486169033288068,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1576,
+          "delta_mae_mean": 0.024954506707113567,
+          "ci95": [
+            0.017659479397990285,
+            0.03327625481011465
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 3493,
+        "n_subjects": 1639,
+        "subject_macro_mae_m0": 0.6596435227371775,
+        "subject_macro_mae_m1": 0.626066737059264,
+        "normalized_mae_m0": 0.658140616385022,
+        "normalized_mae_m1": 0.6246403307601536,
+        "standardized_skill": 0.03350028562486838,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1639,
+          "delta_mae_mean": 0.039042473190696154,
+          "ci95": [
+            0.011673677933021764,
+            0.08052152310874894
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.1
+    },
+    "B::48::мкмоль/л": {
+      "unit": "мкмоль/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 2854,
+        "n_subjects": 1404,
+        "subject_macro_mae_m0": 6.277914203574993,
+        "subject_macro_mae_m1": 5.091608805108521,
+        "normalized_mae_m0": 0.9201375284219092,
+        "normalized_mae_m1": 0.7462638369533462,
+        "standardized_skill": 0.17387369146856302,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1404,
+          "delta_mae_mean": 1.2413635100073077,
+          "ci95": [
+            1.0882757827920333,
+            1.4245437032840256
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 3097,
+        "n_subjects": 1463,
+        "subject_macro_mae_m0": 6.355119126278901,
+        "subject_macro_mae_m1": 5.004160207818582,
+        "normalized_mae_m0": 0.9314532527939188,
+        "normalized_mae_m1": 0.7334467238859987,
+        "standardized_skill": 0.19800652890792012,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1463,
+          "delta_mae_mean": 1.2886472143821786,
+          "ci95": [
+            1.1547369432478538,
+            1.4404695937035248
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 1.0
+    },
+    "B::55::пмоль/л": {
+      "unit": "пмоль/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 2588,
+        "n_subjects": 1235,
+        "subject_macro_mae_m0": 1.7913135114323375,
+        "subject_macro_mae_m1": 1.6481100262514585,
+        "normalized_mae_m0": 0.636440736351593,
+        "normalized_mae_m1": 0.585561573672941,
+        "standardized_skill": 0.0508791626786519,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1235,
+          "delta_mae_mean": 0.11884037430236177,
+          "ci95": [
+            0.04514482345406168,
+            0.1939543026273738
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 2776,
+        "n_subjects": 1281,
+        "subject_macro_mae_m0": 1.7457133820078785,
+        "subject_macro_mae_m1": 1.6092235687000842,
+        "normalized_mae_m0": 0.620239340134007,
+        "normalized_mae_m1": 0.5717454965205322,
+        "standardized_skill": 0.04849384361347474,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1281,
+          "delta_mae_mean": 0.14392003185914562,
+          "ci95": [
+            0.06587523872644518,
+            0.23033218305361958
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 1.0
+    },
+    "B::8::Ед/л": {
+      "unit": "Ед/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 2843,
+        "n_subjects": 1382,
+        "subject_macro_mae_m0": 8.571011389057157,
+        "subject_macro_mae_m1": 8.010299340876008,
+        "normalized_mae_m0": 0.5386079488336666,
+        "normalized_mae_m1": 0.5033724378246918,
+        "standardized_skill": 0.035235511008974874,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1382,
+          "delta_mae_mean": 0.38417038406854315,
+          "ci95": [
+            -0.21816014425776054,
+            0.8105039234867322
+          ],
+          "p_value": 0.07462686567164178
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 3011,
+        "n_subjects": 1405,
+        "subject_macro_mae_m0": 7.870603065992924,
+        "subject_macro_mae_m1": 7.466085715079403,
+        "normalized_mae_m0": 0.49459383275008584,
+        "normalized_mae_m1": 0.4691736984446609,
+        "standardized_skill": 0.025420134305424967,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1405,
+          "delta_mae_mean": 0.5840761740029499,
+          "ci95": [
+            0.15247857316292812,
+            1.0173858164382903
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 1.0
+    },
+    "B::928::нг/мл": {
+      "unit": "нг/мл",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 1763,
+        "n_subjects": 1022,
+        "subject_macro_mae_m0": 18.462608101916565,
+        "subject_macro_mae_m1": 13.449146050276635,
+        "normalized_mae_m0": 1.0158669426244242,
+        "normalized_mae_m1": 0.7400115305261555,
+        "standardized_skill": 0.27585541209826875,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1022,
+          "delta_mae_mean": 4.5061489191099415,
+          "ci95": [
+            3.862597028645826,
+            5.189368657783264
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 1890,
+        "n_subjects": 1052,
+        "subject_macro_mae_m0": 18.982588279316793,
+        "subject_macro_mae_m1": 13.73252977728708,
+        "normalized_mae_m0": 1.0444777797350295,
+        "normalized_mae_m1": 0.7556041357939742,
+        "standardized_skill": 0.28887364394105536,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1052,
+          "delta_mae_mean": 4.438663642589135,
+          "ci95": [
+            3.7666038930684316,
+            5.029043211592063
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 1.0
+    },
+    "B::9::Ед/л": {
+      "unit": "Ед/л",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 2830,
+        "n_subjects": 1376,
+        "subject_macro_mae_m0": 5.812624062710545,
+        "subject_macro_mae_m1": 5.355317953912533,
+        "normalized_mae_m0": 0.5699379003890406,
+        "normalized_mae_m1": 0.5250982409389365,
+        "standardized_skill": 0.04483965945010401,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1376,
+          "delta_mae_mean": 0.39914733861943374,
+          "ci95": [
+            0.06423244304058695,
+            0.768282595080291
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 2992,
+        "n_subjects": 1399,
+        "subject_macro_mae_m0": 5.761841097073049,
+        "subject_macro_mae_m1": 5.336879664632073,
+        "normalized_mae_m0": 0.5649585422714838,
+        "normalized_mae_m1": 0.5232903346016443,
+        "standardized_skill": 0.041668207669839474,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1399,
+          "delta_mae_mean": 0.5269868042281665,
+          "ci95": [
+            0.08528081306677748,
+            1.0786820495303662
+          ],
+          "p_value": 0.014925373134328358
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.1
+    },
+    "B::mm_1002::%": {
+      "unit": "%",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 3055,
+        "n_subjects": 1470,
+        "subject_macro_mae_m0": 1.2010581426056937,
+        "subject_macro_mae_m1": 1.1793302600665738,
+        "normalized_mae_m0": 0.4929387295621785,
+        "normalized_mae_m1": 0.4840211639298657,
+        "standardized_skill": 0.008917565632312795,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1470,
+          "delta_mae_mean": 0.06589813056824392,
+          "ci95": [
+            0.021734580051377517,
+            0.11917931565678597
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 3317,
+        "n_subjects": 1528,
+        "subject_macro_mae_m0": 1.2856843350439555,
+        "subject_macro_mae_m1": 1.2264326026297416,
+        "normalized_mae_m0": 0.527671042935201,
+        "normalized_mae_m1": 0.503352924882019,
+        "standardized_skill": 0.024318118053181986,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1528,
+          "delta_mae_mean": 0.07016168308633755,
+          "ci95": [
+            0.028380375002686975,
+            0.10822465714341845
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 1.0
+    },
+    "B::mm_1004::%": {
+      "unit": "%",
+      "evidence_tier": "EVALUABLE_TECHNICAL_HELDOUT",
+      "active_provider": "M1_ridge",
+      "validation": {
+        "n_paired_rows": 3446,
+        "n_subjects": 1592,
+        "subject_macro_mae_m0": 6.041270176152714,
+        "subject_macro_mae_m1": 5.594241200527161,
+        "normalized_mae_m0": 0.6942373082089655,
+        "normalized_mae_m1": 0.6428666222967965,
+        "standardized_skill": 0.05137068591216896,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1592,
+          "delta_mae_mean": 0.490956653045658,
+          "ci95": [
+            0.3703823556952761,
+            0.5890595442652984
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "test": {
+        "n_paired_rows": 3687,
+        "n_subjects": 1643,
+        "subject_macro_mae_m0": 6.071914047540341,
+        "subject_macro_mae_m1": 5.668971149402314,
+        "normalized_mae_m0": 0.697758772762765,
+        "normalized_mae_m1": 0.6514542730783278,
+        "standardized_skill": 0.046304499684437256,
+        "bootstrap": {
+          "n_bootstrap": 200,
+          "n_subjects": 1643,
+          "delta_mae_mean": 0.41140421674688077,
+          "ci95": [
+            0.2683393005684236,
+            0.5328845916217553
+          ],
+          "p_value": 0.004975124378109453
+        },
+        "identical_m0_m1_rows": true
+      },
+      "l2_selected_on_validation": 0.1
+    }
+  },
+  "evidence_tiers": {
+    "A::25(OH)витамин D::нг/мл": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Базофилы::%": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Гемоглобин::г/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Железо::мкмоль/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Лейкоциты::*10^9/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Лимфоциты::%": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Моноциты::%": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Нейтрофилы::%": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Общий белок::г/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Тромбоциты::*10^9/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Эозинофилы::%": "EVALUABLE_TECHNICAL_HELDOUT",
+    "A::Эритроциты::*10^12/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::16::ммоль/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::28::г/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::30::ммоль/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::32::ммоль/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::33::ммоль/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::48::мкмоль/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::55::пмоль/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::8::Ед/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::928::нг/мл": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::9::Ед/л": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::mm_1002::%": "EVALUABLE_TECHNICAL_HELDOUT",
+    "B::mm_1004::%": "EVALUABLE_TECHNICAL_HELDOUT"
+  },
+  "m2_gate": {
+    "version": "0.1.1.1",
+    "JOINT_MODEL_DATA_GATE_STATUS": "PASS",
+    "computed": true,
+    "hard_coded": false,
+    "checks": [
+      {
+        "name": "train_states",
+        "actual": 51880,
+        "threshold": 100,
+        "ok": true
+      },
+      {
+        "name": "validation_states",
+        "actual": 10882,
+        "threshold": 50,
+        "ok": true
+      },
+      {
+        "name": "test_states",
+        "actual": 11044,
+        "threshold": 50,
+        "ok": true
+      },
+      {
+        "name": "outcomes_a",
+        "actual": 12,
+        "threshold": 2,
+        "ok": true
+      },
+      {
+        "name": "outcomes_b",
+        "actual": 12,
+        "threshold": 2,
+        "ok": true
+      },
+      {
+        "name": "states_ge2_targets",
+        "actual": 45658,
+        "threshold": 50,
+        "ok": true
+      },
+      {
+        "name": "subjects_ge2_outcomes",
+        "actual": 21225,
+        "threshold": 50,
+        "ok": true
+      },
+      {
+        "name": "mask_density",
+        "actual": 0.257489,
+        "threshold": 0.001,
+        "ok": true
+      },
+      {
+        "name": "val_support_a",
+        "actual": 1558,
+        "threshold": 20,
+        "ok": true
+      },
+      {
+        "name": "val_support_b",
+        "actual": 1682,
+        "threshold": 20,
+        "ok": true
+      },
+      {
+        "name": "test_support_a",
+        "actual": 1610,
+        "threshold": 30,
+        "ok": true
+      },
+      {
+        "name": "test_support_b",
+        "actual": 1747,
+        "threshold": 30,
+        "ok": true
+      },
+      {
+        "name": "target_reuse_pass",
+        "actual": true,
+        "threshold": true,
+        "ok": true
+      },
+      {
+        "name": "overlap_split_pass",
+        "actual": true,
+        "threshold": true,
+        "ok": true
+      }
+    ],
+    "failed_checks": [],
+    "ok": true
+  },
+  "m2_metrics": {
+    "architecture": {
+      "type": "shared_tanh_encoder_outcome_heads",
+      "rank": 8,
+      "epochs": 8,
+      "lr": 0.05,
+      "l2": 0.1,
+      "activation": "tanh"
+    },
+    "n_parameters": 360,
+    "final_train_masked_mse": 1.0348597851381374,
+    "validation": {
+      "per_outcome": {
+        "A::25(OH)витамин D::нг/мл": {
+          "n": 2079,
+          "micro_mae": 16.37071093263959
+        },
+        "A::Базофилы::%": {
+          "n": 2580,
+          "micro_mae": 0.28044295278763387
+        },
+        "A::Гемоглобин::г/л": {
+          "n": 2346,
+          "micro_mae": 12.75797064184879
+        },
+        "A::Железо::мкмоль/л": {
+          "n": 2178,
+          "micro_mae": 5.461771541769964
+        },
+        "A::Лейкоциты::*10^9/л": {
+          "n": 2451,
+          "micro_mae": 1.4624343630914276
+        },
+        "A::Лимфоциты::%": {
+          "n": 2672,
+          "micro_mae": 7.790092130773448
+        },
+        "A::Моноциты::%": {
+          "n": 2636,
+          "micro_mae": 1.8178873486313538
+        },
+        "A::Нейтрофилы::%": {
+          "n": 2623,
+          "micro_mae": 8.38639799517135
+        },
+        "A::Общий белок::г/л": {
+          "n": 2317,
+          "micro_mae": 3.7208183001774953
+        },
+        "A::Тромбоциты::*10^9/л": {
+          "n": 2455,
+          "micro_mae": 49.93772758608648
+        },
+        "A::Эозинофилы::%": {
+          "n": 2617,
+          "micro_mae": 1.4450103512723511
+        },
+        "A::Эритроциты::*10^12/л": {
+          "n": 2455,
+          "micro_mae": 0.3443929423702877
+        },
+        "B::16::ммоль/л": {
+          "n": 2756,
+          "micro_mae": 0.5895874888125634
+        },
+        "B::28::г/л": {
+          "n": 3161,
+          "micro_mae": 3.3431460950713374
+        },
+        "B::30::ммоль/л": {
+          "n": 3248,
+          "micro_mae": 0.3680776907982253
+        },
+        "B::32::ммоль/л": {
+          "n": 2672,
+          "micro_mae": 0.3362376906127077
+        },
+        "B::33::ммоль/л": {
+          "n": 3259,
+          "micro_mae": 0.896882682945991
+        },
+        "B::48::мкмоль/л": {
+          "n": 3000,
+          "micro_mae": 5.16569352030675
+        },
+        "B::55::пмоль/л": {
+          "n": 2605,
+          "micro_mae": 1.8272551933010628
+        },
+        "B::8::Ед/л": {
+          "n": 2918,
+          "micro_mae": 8.90071701783864
+        },
+        "B::928::нг/мл": {
+          "n": 2254,
+          "micro_mae": 16.15372843355343
+        },
+        "B::9::Ед/л": {
+          "n": 2909,
+          "micro_mae": 5.440637538521877
+        },
+        "B::mm_1002::%": {
+          "n": 2997,
+          "micro_mae": 1.420373033886593
+        },
+        "B::mm_1004::%": {
+          "n": 3239,
+          "micro_mae": 6.728901806749113
+        }
+      }
+    },
+    "test": {
+      "per_outcome": {
+        "A::25(OH)витамин D::нг/мл": {
+          "n": 2063,
+          "micro_mae": 16.090481797814103
+        },
+        "A::Базофилы::%": {
+          "n": 2589,
+          "micro_mae": 0.2924145379910537
+        },
+        "A::Гемоглобин::г/л": {
+          "n": 2332,
+          "micro_mae": 12.849448198243202
+        },
+        "A::Железо::мкмоль/л": {
+          "n": 2195,
+          "micro_mae": 5.524380444490117
+        },
+        "A::Лейкоциты::*10^9/л": {
+          "n": 2430,
+          "micro_mae": 1.4487538732656273
+        },
+        "A::Лимфоциты::%": {
+          "n": 2694,
+          "micro_mae": 7.631283351894525
+        },
+        "A::Моноциты::%": {
+          "n": 2678,
+          "micro_mae": 1.9198967056645497
+        },
+        "A::Нейтрофилы::%": {
+          "n": 2635,
+          "micro_mae": 8.514130280820487
+        },
+        "A::Общий белок::г/л": {
+          "n": 2342,
+          "micro_mae": 3.7051205064462027
+        },
+        "A::Тромбоциты::*10^9/л": {
+          "n": 2436,
+          "micro_mae": 48.7997096001974
+        },
+        "A::Эозинофилы::%": {
+          "n": 2638,
+          "micro_mae": 1.5219314736659153
+        },
+        "A::Эритроциты::*10^12/л": {
+          "n": 2435,
+          "micro_mae": 0.3425812351416284
+        },
+        "B::16::ммоль/л": {
+          "n": 2958,
+          "micro_mae": 0.4328632584972645
+        },
+        "B::28::г/л": {
+          "n": 3362,
+          "micro_mae": 3.418195260053697
+        },
+        "B::30::ммоль/л": {
+          "n": 3491,
+          "micro_mae": 0.3718993952705468
+        },
+        "B::32::ммоль/л": {
+          "n": 2843,
+          "micro_mae": 0.32557232268036096
+        },
+        "B::33::ммоль/л": {
+          "n": 3507,
+          "micro_mae": 0.8818374846421682
+        },
+        "B::48::мкмоль/л": {
+          "n": 3232,
+          "micro_mae": 5.0384102005267355
+        },
+        "B::55::пмоль/л": {
+          "n": 2796,
+          "micro_mae": 1.8143680507274005
+        },
+        "B::8::Ед/л": {
+          "n": 3094,
+          "micro_mae": 8.521045920858029
+        },
+        "B::928::нг/мл": {
+          "n": 2422,
+          "micro_mae": 16.186055913498247
+        },
+        "B::9::Ед/л": {
+          "n": 3083,
+          "micro_mae": 5.5373302943070195
+        },
+        "B::mm_1002::%": {
+          "n": 3224,
+          "micro_mae": 1.401857606008276
+        },
+        "B::mm_1004::%": {
+          "n": 3474,
+          "micro_mae": 6.956778603295333
+        }
+      }
+    },
+    "comparator_vs_m0_m1_identical_target_ids": {
+      "A::25(OH)витамин D::нг/мл": {
+        "n_identical_target_ids": 1167,
+        "mae_m1": 14.914342058266927,
+        "mae_m2": 15.535983749608162
+      },
+      "A::Базофилы::%": {
+        "n_identical_target_ids": 1693,
+        "mae_m1": 0.2750640407725608,
+        "mae_m2": 0.30155126862097537
+      },
+      "A::Гемоглобин::г/л": {
+        "n_identical_target_ids": 1484,
+        "mae_m1": 9.563379380327385,
+        "mae_m2": 12.646846057741394
+      },
+      "A::Железо::мкмоль/л": {
+        "n_identical_target_ids": 1313,
+        "mae_m1": 5.229743683070408,
+        "mae_m2": 5.538754415861284
+      },
+      "A::Лейкоциты::*10^9/л": {
+        "n_identical_target_ids": 1578,
+        "mae_m1": 1.115796984750938,
+        "mae_m2": 1.4803565962375762
+      },
+      "A::Лимфоциты::%": {
+        "n_identical_target_ids": 1791,
+        "mae_m1": 6.132936253977405,
+        "mae_m2": 7.952275230801867
+      },
+      "A::Моноциты::%": {
+        "n_identical_target_ids": 1775,
+        "mae_m1": 1.3832999491545301,
+        "mae_m2": 1.9382519932917894
+      },
+      "A::Нейтрофилы::%": {
+        "n_identical_target_ids": 1728,
+        "mae_m1": 6.89478202741307,
+        "mae_m2": 8.833813899277873
+      },
+      "A::Общий белок::г/л": {
+        "n_identical_target_ids": 1450,
+        "mae_m1": 3.183251539662762,
+        "mae_m2": 3.752250830500932
+      },
+      "A::Тромбоциты::*10^9/л": {
+        "n_identical_target_ids": 1582,
+        "mae_m1": 29.91030742491731,
+        "mae_m2": 49.266376678670746
+      },
+      "A::Эозинофилы::%": {
+        "n_identical_target_ids": 1739,
+        "mae_m1": 1.160969535117536,
+        "mae_m2": 1.493061330056786
+      },
+      "A::Эритроциты::*10^12/л": {
+        "n_identical_target_ids": 1582,
+        "mae_m1": 0.3269150875826416,
+        "mae_m2": 0.3483986041515613
+      },
+      "B::16::ммоль/л": {
+        "n_identical_target_ids": 3041,
+        "mae_m1": 0.47474674986122545,
+        "mae_m2": 0.44889452026312837
+      },
+      "B::28::г/л": {
+        "n_identical_target_ids": 3394,
+        "mae_m1": 2.9951125710590785,
+        "mae_m2": 3.3889187213064718
+      },
+      "B::30::ммоль/л": {
+        "n_identical_target_ids": 3484,
+        "mae_m1": 0.3106693231925873,
+        "mae_m2": 0.37729890189382137
+      },
+      "B::32::ммоль/л": {
+        "n_identical_target_ids": 2680,
+        "mae_m1": 0.28876610189401875,
+        "mae_m2": 0.30731417420809676
+      },
+      "B::33::ммоль/л": {
+        "n_identical_target_ids": 3493,
+        "mae_m1": 0.6108390159638877,
+        "mae_m2": 0.8589324947061926
+      },
+      "B::48::мкмоль/л": {
+        "n_identical_target_ids": 3097,
+        "mae_m1": 4.931867826978185,
+        "mae_m2": 5.035535430139488
+      },
+      "B::55::пмоль/л": {
+        "n_identical_target_ids": 2776,
+        "mae_m1": 1.6210595781750665,
+        "mae_m2": 1.7986040923726885
+      },
+      "B::8::Ед/л": {
+        "n_identical_target_ids": 3011,
+        "mae_m1": 7.604066533133865,
+        "mae_m2": 8.61280408889537
+      },
+      "B::928::нг/мл": {
+        "n_identical_target_ids": 1890,
+        "mae_m1": 13.5857749157919,
+        "mae_m2": 15.639069198469238
+      },
+      "B::9::Ед/л": {
+        "n_identical_target_ids": 2992,
+        "mae_m1": 5.415069312417675,
+        "mae_m2": 5.674718849489459
+      },
+      "B::mm_1002::%": {
+        "n_identical_target_ids": 3317,
+        "mae_m1": 1.2283237372937579,
+        "mae_m2": 1.4253225475958406
+      },
+      "B::mm_1004::%": {
+        "n_identical_target_ids": 3687,
+        "mae_m1": 5.708283912211516,
+        "mae_m2": 7.008535572620783
+      }
+    },
+    "weights_serialized": true,
+    "predictions_computed": true,
+    "per_outcome_metrics": true,
+    "identity_recompute_ok": true,
+    "coefficient_mutation_breaks_identity": true,
+    "output_order_mutation_breaks_identity": true,
+    "reload_prediction_equality": true,
+    "no_accepted_a_b_semantic_merge": true,
+    "distinct_a_b_namespaces": true
+  },
+  "m0_m1_model_file_sha256": "1d8965bc4de8ff21d913966047cac3f968bad54c7009cb3d3a97fb8aadeff1b8",
+  "m2_model_file_sha256": "2b5c202953ff6ebd6ee8d7314526432c005c831e04eb44e8a102a15c124c6bc2",
+  "m2_model_identity_sha256": "bc82ee45d94448b1d853e386333f29e29c1cb3811d808fdfb482e9418cc65259",
+  "n_outcomes": 24,
+  "ok": true
+}

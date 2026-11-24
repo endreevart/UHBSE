@@ -1,0 +1,28 @@
+{
+  "V011_ANALYTICAL_PAYLOAD_STATUS": "VERIFIED",
+  "V011_REVIEW_BUNDLE_SELF_CONTAINMENT_STATUS": "FAIL",
+  "packaging_defects": [
+    {
+      "id": "STALE_PENDING_WRITE_IN_VERIFICATION_JSON",
+      "detail": "verification.json statuses.pre_pack_manifest_status=PENDING_WRITE"
+    },
+    {
+      "id": "STALE_PENDING_PUBLISH_IN_VERIFICATION_JSON",
+      "detail": "verification.json statuses.clean_staging_test_status=PENDING_PUBLISH"
+    },
+    {
+      "id": "REPRODUCE_AUDIT_WITHOUT_CLI",
+      "detail": "REPRODUCE.md invokes audit but ZIP lacks src/human_simulator/cli.py"
+    },
+    {
+      "id": "V01_TEST_WITHOUT_FULL_PACKAGE",
+      "detail": "v01 unit test present; missing modules: ['accounting.py', 'episodes.py', 'evaluate.py', 'policy.py']"
+    },
+    {
+      "id": "CLEAN_EXTRACTION_NARROW_SUITE",
+      "detail": "attestation unit_reproduce.passed=12; does not prove v01 regression or audit CLI"
+    }
+  ],
+  "CARRIED_FORWARD_EVIDENCE_CORRECTION_STATUS": "PASS",
+  "note": "v0.1.1 ZIP is immutable; corrections are applied in the new medication-knowledge-representation v0.1 review bundle"
+}

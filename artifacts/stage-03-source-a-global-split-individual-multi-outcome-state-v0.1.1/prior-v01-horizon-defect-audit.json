@@ -1,0 +1,58 @@
+{
+  "version": "0.1.1",
+  "PRIOR_V01_BACKTEST_HORIZON_STATUS": "INVALID_FOR_HORIZON_ALIGNED_EVALUATION",
+  "defect_statement": "v0.1 built predictions with horizon_days=30 but compared them to the strict next observation at the actual horizon (1–923 days).",
+  "prediction_horizon_days_v01": 30.0,
+  "n_targets_audited": 995,
+  "n_exact_horizon_matches": 0,
+  "frac_exact_horizon_matches": 0.0,
+  "n_horizon_mismatches": 995,
+  "frac_horizon_mismatches": 1.0,
+  "actual_horizon_distribution": {
+    "n": 995,
+    "min": 1.0,
+    "max": 923.0,
+    "median": 113.0,
+    "bins": {
+      "1_30": 99,
+      "31_90": 237,
+      "91_180": 323,
+      "181_365": 143,
+      "gt_365": 193,
+      "lt_1": 0
+    },
+    "n_unique_integer_horizons": 106
+  },
+  "mismatch_by_active_provider": {
+    "ridge": {
+      "exact": 0,
+      "mismatch": 798,
+      "n": 798
+    },
+    "persistence": {
+      "exact": 0,
+      "mismatch": 197,
+      "n": 197
+    },
+    "other": {
+      "exact": 0,
+      "mismatch": 0,
+      "n": 0
+    }
+  },
+  "ridge_prediction_change_30_to_actual": {
+    "n_recomputed": 660,
+    "median_delta": 0.002547966777796784,
+    "median_abs_delta": 0.04510167059243564,
+    "mean_abs_delta": 0.3887957552966614,
+    "frac_nonzero_abs_delta": 1.0
+  },
+  "prior_v01_metrics_preserved_not_rewritten": true,
+  "prior_v01_backtest_status_field": "PASS",
+  "prior_v01_n_prediction_targets": 995,
+  "prior_v01_n_outcomes_evaluated": 75,
+  "does_not_invalidate_global_split": true,
+  "does_not_invalidate_frozen_providers": true,
+  "does_not_invalidate_engine_technical_shadow": true,
+  "audit_hash": "111aaee1c30fff591ccc390da7ddcffde0d771035f61ec3e92ffd053f3077e4b"
+}

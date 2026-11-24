@@ -1,0 +1,72 @@
+{
+  "cohorts": [
+    {
+      "cohort_id": "udca_oral_tablet_500mg",
+      "role": "primary",
+      "provider_neutral_concept_id": "pnconc_64fe025b2e44ee1a6fb1666cf242",
+      "cluster_key": "ursodeoxycholic_acid|udca_unspecified|oral|tablet|500_\u043c\u0433",
+      "candidate_semantic_label": "UDCA \u00b7 oral \u00b7 tablet \u00b7 500 mg",
+      "capable_source_medicine_ids": [
+        "418",
+        "739"
+      ],
+      "strength_stratum": "500_\u043c\u0433"
+    },
+    {
+      "cohort_id": "levothyroxine_oral_tablet_50mcg",
+      "role": "primary",
+      "provider_neutral_concept_id": "pnconc_9ffb1713d04998948e5848a14e4c",
+      "cluster_key": "levothyroxine|levothyroxine_unspecified_salt|oral|tablet|50_\u043c\u043a\u0433",
+      "candidate_semantic_label": "Levothyroxine \u00b7 oral \u00b7 tablet \u00b7 50 mcg",
+      "capable_source_medicine_ids": [
+        "7"
+      ],
+      "strength_stratum": "50_\u043c\u043a\u0433"
+    },
+    {
+      "cohort_id": "udca_oral_tablet_250mg",
+      "role": "sensitivity",
+      "provider_neutral_concept_id": "pnconc_03084c1421d6a5713d30878da9da",
+      "cluster_key": "ursodeoxycholic_acid|udca_unspecified|oral|tablet|250_\u043c\u0433",
+      "candidate_semantic_label": "UDCA \u00b7 oral \u00b7 tablet \u00b7 250 mg",
+      "capable_source_medicine_ids": [
+        "595"
+      ],
+      "strength_stratum": "250_\u043c\u0433"
+    }
+  ],
+  "verify": {
+    "ok": true,
+    "checks": [
+      {
+        "cohort_id": "udca_oral_tablet_500mg",
+        "concept_id": "pnconc_64fe025b2e44ee1a6fb1666cf242",
+        "found": true,
+        "key_match": true,
+        "capable_ids": [
+          "418",
+          "739"
+        ]
+      },
+      {
+        "cohort_id": "levothyroxine_oral_tablet_50mcg",
+        "concept_id": "pnconc_9ffb1713d04998948e5848a14e4c",
+        "found": true,
+        "key_match": true,
+        "capable_ids": [
+          "7"
+        ]
+      },
+      {
+        "cohort_id": "udca_oral_tablet_250mg",
+        "concept_id": "pnconc_03084c1421d6a5713d30878da9da",
+        "found": true,
+        "key_match": true,
+        "capable_ids": [
+          "595"
+        ]
+      }
+    ],
+    "n_v014_clusters": 69
+  }
+}

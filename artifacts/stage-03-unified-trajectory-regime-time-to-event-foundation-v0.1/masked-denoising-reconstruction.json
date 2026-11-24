@@ -1,0 +1,44 @@
+{
+  "validation": {
+    "role": "validation",
+    "metric_space": "train_normalized",
+    "per_source": {
+      "A": {
+        "subject_macro_mae": 0.5770014585760256,
+        "baseline_train_mean_mae": 0.5763480760263638,
+        "baseline_source_outcome_train_mean_mae": 0.6039432775752717,
+        "n_subjects": 330,
+        "n_masked_entries": 5328
+      },
+      "B": {
+        "subject_macro_mae": 0.49741586704203894,
+        "baseline_train_mean_mae": 0.4890384150785844,
+        "baseline_source_outcome_train_mean_mae": 0.4958645211837843,
+        "n_subjects": 161,
+        "n_masked_entries": 2191
+      }
+    },
+    "ok": true
+  },
+  "test": {
+    "role": "test",
+    "metric_space": "train_normalized",
+    "per_source": {
+      "A": {
+        "subject_macro_mae": 0.5648833270574646,
+        "baseline_train_mean_mae": 0.5647284106026753,
+        "baseline_source_outcome_train_mean_mae": 0.5850173602611568,
+        "n_subjects": 316,
+        "n_masked_entries": 5067
+      },
+      "B": {
+        "subject_macro_mae": 2.6163050854056578,
+        "baseline_train_mean_mae": 2.6086978029358665,
+        "baseline_source_outcome_train_mean_mae": 2.6159224764581177,
+        "n_subjects": 180,
+        "n_masked_entries": 2419
+      }
+    },
+    "ok": true
+  }
+}

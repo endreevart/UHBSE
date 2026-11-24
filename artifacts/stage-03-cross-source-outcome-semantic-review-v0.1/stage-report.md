@@ -1,0 +1,53 @@
+# Cross-Source Outcome Semantic Review v0.1
+
+Generated: 2026-08-25T11:54:49Z
+
+## Final statuses
+
+- `BASELINE_VERIFICATION_STATUS` = `PASS`
+- `MAPPING_UNIVERSE_ACCOUNTING_STATUS` = `PASS`
+- `CROSS_SOURCE_SEMANTIC_REVIEW_STATUS` = `PASS`
+- `DOMAIN_REVIEW_WORKBENCH_STATUS` = `PASS`
+- `DOMAIN_REVIEW_DECISION_STATUS` = `DOMAIN_REVIEW_DECISION_REQUIRED`
+- `SCIENTIFICALLY_USABLE_ACCEPTED_OUTCOME_COUNT` = `0`
+- `T3_DOMAIN_REVIEW_STATUS` = `DOMAIN_REVIEW_REQUIRED`
+- `CROSS_SOURCE_INDEPENDENCE_STATUS` = `INDEPENDENCE_NOT_ESTABLISHED`
+- `A_TO_B_ZERO_SHOT_SHADOW_STATUS` = `NOT_RUN_NO_ACCEPTED_MAPPINGS`
+- `ENGINE_CROSS_SOURCE_SHADOW_STATUS` = `NOT_RUN_NO_ACCEPTED_MAPPINGS`
+- `CURRENT_STATE_CLASSIFIER_STATUS` = `NOT_STARTED`
+- `JOINT_MULTI_OUTCOME_MODEL_STATUS` = `NOT_STARTED`
+- `MEDICATION_RESIDUAL_MODEL_STATUS` = `NOT_STARTED`
+- `INTERVENTION_RESPONSE_MODEL_STATUS` = `NOT_STARTED`
+- `CLINICAL_VALIDATION_STATUS` = `NOT_STARTED`
+- `PUBLIC_DATA_MINIMIZATION_STATUS` = `PASS_AGGREGATE_ONLY`
+- `SECURITY_STAGE_STATUS` = `PAUSED_NOT_ACCEPTED_BY_OWNER`
+- `PUBLICATION_STATUS` = `REFUSED_DOMAIN_REVIEW_REQUIRED`
+- `THRESHOLD_DECISION_REQUIRED` = `True`
+
+## Mapping universe
+
+- strata: 98
+- candidate classes: `{'INSUFFICIENT_EVIDENCE': 88, 'SPECIMEN_MISSING': 2, 'UNIT_CONFLICT': 5, 'ANALYTE_AMBIGUOUS': 3}`
+- scientifically usable accepted: **0**
+
+## Stop
+
+- `DOMAIN_REVIEW_DECISION_REQUIRED`
+
+## Non-actions
+
+- No Current State Classifier training
+- No joint multi-outcome model training
+- No A→B zero-shot without accepted mappings
+- No automatic domain acceptance
+- No unverified unit conversion
+- No identity merge
+- No medication residual / intervention-response / QSP / PKPD
+- No clinical or production claims
+- No security remediation
+- No prior ZIP overwrite
+
+## Private review
+
+- `private/cross-source-outcome-review-v01/`
+

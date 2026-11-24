@@ -1,0 +1,239 @@
+{
+  "version": "0.2.1",
+  "source_a_probe": {
+    "SOURCE_A_RAW_METADATA_PROBE_STATUS": "PASS",
+    "SOURCE_A_METADATA_RECOVERY_STATUS": "PASS_WITH_GAPS",
+    "SOURCE_A_SPECIMEN_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+    "SOURCE_A_ASSAY_METADATA_STATUS": "AVAILABLE_FROM_SOURCE",
+    "connection": "OK",
+    "n_metadata_columns": 13,
+    "n_lab_fks": 0,
+    "probe_hash": "4d2bb860a1670e125695fc634efe378d4d583e53ecf1aae0dcba55c6e89a18dc",
+    "default_specimen_invented": false
+  },
+  "source_b_probe": {
+    "SOURCE_B_RAW_METADATA_PROBE_STATUS": "PASS",
+    "SOURCE_B_METADATA_RECOVERY_STATUS": "PASS_MATERIAL_EMPTY_ASSAY_GAPS",
+    "SOURCE_B_SPECIMEN_METADATA_STATUS": "NOT_AVAILABLE_IN_SOURCE",
+    "SOURCE_B_ASSAY_METADATA_STATUS": "SOURCE_DOCUMENTATION_REQUIRED",
+    "analyses_catalog_rows": 1882,
+    "material_column_exists": true,
+    "material_non_null": 0,
+    "catalog_material_all_empty": true,
+    "provider_input_required": true,
+    "probe_hash": "b7f4c323c582f524e03c370dcae60e90bfa8b17af1f6635a01dfbd9dab6c41b2"
+  },
+  "field_sample_a": [
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "first_name_instrumental",
+      "fk_lineage": [],
+      "non_null_count": 59,
+      "distinct_count": 36,
+      "sample_category_hashes": [
+        "5824b1a3b6770592896921b1d725d834",
+        "8ce40ba815be48d476a69fea251e234f",
+        "d23fd6f81e5a2d58b02c803495311a74",
+        "28f349676c0efcc9275ce897273d4838",
+        "9a4568168bb408989436aa15775fecb5"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "last_name_instrumental",
+      "fk_lineage": [],
+      "non_null_count": 59,
+      "distinct_count": 59,
+      "sample_category_hashes": [
+        "73e48b105a8aaed5e37f2b605fbc16c0",
+        "5fb03ba5bc774e3c6c45ea2639a496cd",
+        "1df3bb4df29d15f03c13fb9fa518ceb6",
+        "03989359f134e048986407b703b1bdd7",
+        "5c1ad06994ad3a0f96689ac369df79bb"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "patronymic_instrumental",
+      "fk_lineage": [],
+      "non_null_count": 57,
+      "distinct_count": 28,
+      "sample_category_hashes": [
+        "31406cc689bfb6460601c51d4f628e52",
+        "f7cd4216a88020956d1c04424abba562",
+        "575675cb92ae0ac7f00a083aea02a1fc",
+        "013a9b7dafff986db74665a44e356911",
+        "8fcac16f428af8700f2aceea94988639"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_employee",
+      "column": "post_instrumental",
+      "fk_lineage": [],
+      "non_null_count": 37,
+      "distinct_count": 18,
+      "sample_category_hashes": [
+        "e3965a655df5d8927561651d2dbbdd2e",
+        "468a308632bb51571aa041579d7438ea",
+        "fdecf7208e1096e7286ab381923b0136",
+        "bd935bd3be22a0e8ce7870e3a44eafd6",
+        "4780a6718961fe1b676e44e369a12426"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "first_name_instrumental",
+      "fk_lineage": [],
+      "non_null_count": 15893,
+      "distinct_count": 1270,
+      "sample_category_hashes": [
+        "336d5ebc5436534e61d16e63ddfca327",
+        "7728f47785ee5717459ef26483c2101c",
+        "28f349676c0efcc9275ce897273d4838",
+        "5824b1a3b6770592896921b1d725d834",
+        "9a4568168bb408989436aa15775fecb5"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "last_name_instrumental",
+      "fk_lineage": [],
+      "non_null_count": 15892,
+      "distinct_count": 8470,
+      "sample_category_hashes": [
+        "336d5ebc5436534e61d16e63ddfca327",
+        "f40348b628688dc0b1864f121fab7491",
+        "2f39e5b2cc9cd17e88eba22aea535167",
+        "11cb9ca2b5d5690d690be26fe09ffd6f",
+        "42ced494d6d6fed043c3d12d45f64ff0"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "account_patient",
+      "column": "patronymic_instrumental",
+      "fk_lineage": [],
+      "non_null_count": 14589,
+      "distinct_count": 1580,
+      "sample_category_hashes": [
+        "31406cc689bfb6460601c51d4f628e52",
+        "575675cb92ae0ac7f00a083aea02a1fc",
+        "c7c4a67389b7eeaf8b777836e608992a",
+        "d2ae4fcb061b482d60a8ab330724dd51",
+        "336d5ebc5436534e61d16e63ddfca327"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "authentication_smscode",
+      "column": "platform",
+      "fk_lineage": [],
+      "non_null_count": 28773,
+      "distinct_count": 2,
+      "sample_category_hashes": [
+        "532c28d5412dd75bf975fb951c740a30",
+        "2567a5ec9705eb7ac2c984033e06189d"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "document_document",
+      "column": "methodologist_document_status",
+      "fk_lineage": [],
+      "non_null_count": 286048,
+      "distinct_count": 3,
+      "sample_category_hashes": [
+        "888d0ee361af3603736f32131e7b20a2",
+        "22af645d1859cb5ca6da0c484f1f37ea",
+        "d41d8cd98f00b204e9800998ecf8427e"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "logg_apilogentry",
+      "column": "request_method",
+      "fk_lineage": [],
+      "non_null_count": 83080,
+      "distinct_count": 4,
+      "sample_category_hashes": [
+        "a02439ec229d8be0e74b0c1602392310",
+        "63bc9a3997d66d835d9f3ec29451407d",
+        "3e75383a5992a6d15fb81e872e46e256",
+        "32f68a60cef40faedbc6af20298c1a1e"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "magerya_api",
+      "table": "payment_payment",
+      "column": "acquiring_provider_id",
+      "fk_lineage": [],
+      "non_null_count": 32346,
+      "distinct_count": 2,
+      "sample_category_hashes": [
+        "56aed7e7485ff03d5605b885b86e947e",
+        "617610eb183de54fd91a1cc8b9923ae0"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    },
+    {
+      "schema": "public",
+      "table": "geography_columns",
+      "column": "f_table_catalog",
+      "fk_lineage": [],
+      "non_null_count": 0,
+      "distinct_count": 0,
+      "sample_category_hashes": [],
+      "accepted_usability_status": "COLUMN_EXISTS_ALL_NULL"
+    },
+    {
+      "schema": "public",
+      "table": "geometry_columns",
+      "column": "f_table_catalog",
+      "fk_lineage": [],
+      "non_null_count": 12,
+      "distinct_count": 1,
+      "sample_category_hashes": [
+        "d69c5d52f9d2e20fadc7fee6c3bf2ab5"
+      ],
+      "accepted_usability_status": "AVAILABLE_FROM_SOURCE"
+    }
+  ],
+  "field_sample_b": [
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "material",
+      "fk_lineage": [],
+      "non_null_count": 0,
+      "distinct_count": null,
+      "sample_category_hashes": [],
+      "accepted_usability_status": "COLUMN_EXISTS_ALL_NULL"
+    },
+    {
+      "schema": "quest_digital",
+      "table": "analyses_catalog",
+      "column": "material",
+      "fk_lineage": [],
+      "non_null_count": 0,
+      "distinct_count": 0,
+      "sample_category_hashes": [],
+      "accepted_usability_status": "COLUMN_EXISTS_ALL_NULL"
+    }
+  ]
+}

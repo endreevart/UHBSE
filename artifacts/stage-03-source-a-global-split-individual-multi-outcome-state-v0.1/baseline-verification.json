@@ -1,0 +1,84 @@
+{
+  "version": "0.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "accepted_v011_sha256_expected": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d",
+  "accepted_v011_sha256_observed": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d",
+  "baseline_before": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d",
+  "baseline_after": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d",
+  "baseline_before_equals_after": true,
+  "v01_sha256": "ef3e53c3732691ac371599dfbd3181d317d74b6c1663cec76a40ee34e5373602",
+  "members": 594,
+  "indexed_members": 593,
+  "n_providers": 101,
+  "checks": [
+    {
+      "name": "v011_zip_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "v011_sha256",
+      "ok": true,
+      "detail": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d"
+    },
+    {
+      "name": "sidecar_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sidecar_matches",
+      "ok": true,
+      "detail": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d"
+    },
+    {
+      "name": "attestation_status",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "attestation_sha",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "members_indexed",
+      "ok": true,
+      "detail": {
+        "members": 594,
+        "indexed": 593
+      }
+    },
+    {
+      "name": "zip_member_count",
+      "ok": true,
+      "detail": 594
+    },
+    {
+      "name": "REVIEW_INDEX_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "evidence_manifest_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "provider_registry_101",
+      "ok": true,
+      "detail": 101
+    },
+    {
+      "name": "provider_hashes_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "v01_unchanged",
+      "ok": true,
+      "detail": "ef3e53c3732691ac371599dfbd3181d317d74b6c1663cec76a40ee34e5373602"
+    }
+  ],
+  "ok": true
+}

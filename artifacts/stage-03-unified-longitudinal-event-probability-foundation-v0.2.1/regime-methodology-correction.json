@@ -1,0 +1,34 @@
+{
+  "version": "0.2.1",
+  "regime_contract": "t0_assignable",
+  "NOT_AVAILABLE_AT_T0_features_removed": [
+    "n_appeared",
+    "n_disappeared",
+    "mean_abs_delta_observed"
+  ],
+  "feature_names": [
+    "history_depth_t0",
+    "mask_density_t0",
+    "n_medications_before",
+    "days_since_last_event",
+    "longitudinal_age_days"
+  ],
+  "engine_inference_forbidden": true,
+  "REGIME_NUMERICAL_STABILITY_STATUS": "STABLE",
+  "REGIME_CONFOUNDING_STATUS": "NOT_SOURCE_OR_MISSINGNESS_DOMINATED",
+  "REGIME_FOUNDATION_ACCEPTANCE_STATUS": "NOT_ACCEPTED_RETROSPECTIVE_ONLY",
+  "not_runtime_prediction": true,
+  "no_regime_candidate_id_in_engine": true,
+  "features_exclude_source_flag": true,
+  "features_exclude_future_horizon": true,
+  "features_exclude_transition_deltas": true,
+  "stability_unit": "subject_or_overlap_group_subsample",
+  "train_only_standardization": true,
+  "k_selected_by_silhouette": 3,
+  "silhouette": 0.3031948219584155,
+  "stability_ari_mean": 0.736480014889158,
+  "true_adjusted_rand_index": true,
+  "source_assignment_ari": -0.00960590513626738,
+  "missingness_assignment_ari": 0.10383730263277306,
+  "ok": true
+}

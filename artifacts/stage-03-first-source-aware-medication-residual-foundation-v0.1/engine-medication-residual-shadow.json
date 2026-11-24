@@ -1,0 +1,39 @@
+{
+  "version": "0.1",
+  "ENGINE_MEDICATION_RESIDUAL_SHADOW_STATUS": "TECHNICAL_SHADOW_ABSTAIN_NO_ELIGIBLE_CELL",
+  "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_FUTURE_CONTEXT",
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "rollback": true,
+    "parent_isolation": true,
+    "predictions_do_not_drive_synthetic_physiology": true,
+    "no_medication_recommendations": true
+  },
+  "abstain": {
+    "status": "ABSTAIN",
+    "reason": "NO_ENGINE_ELIGIBLE_CELL",
+    "rejected_cell_refusal": true,
+    "did_not_run_rejected_model": true
+  },
+  "future_poison": {
+    "status": "FAIL",
+    "reason": "FUTURE_MEDICATION_CONTEXT_POISON",
+    "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "FAIL"
+  },
+  "hash_mismatch": {
+    "status": "ABSTAIN",
+    "reason": "NO_ENGINE_ELIGIBLE_CELL",
+    "rejected_cell_refusal": true,
+    "did_not_run_rejected_model": true
+  },
+  "no_pad_truncate": {
+    "status": "ABSTAIN",
+    "reason": "NO_ENGINE_ELIGIBLE_CELL",
+    "rejected_cell_refusal": true,
+    "did_not_run_rejected_model": true
+  },
+  "n_eligible": 0,
+  "ok": true
+}

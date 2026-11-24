@@ -1,0 +1,68 @@
+{
+  "version": "0.1.1",
+  "ENGINE_TRAJECTORY_EVIDENCE_INTEGRATION_STATUS": "PASS",
+  "checks": {
+    "all_provider_hashes_verified": true,
+    "predictions_attached_to_evidence_history": true,
+    "n_predictions_in_history_gt_0": true,
+    "checkpoint_ok": true,
+    "fork_ok": true,
+    "rollback_ok": true,
+    "parent_isolation_ok": true,
+    "determinism_ok": true,
+    "horizon_perturbation_ran": true,
+    "missing_outcome_perturbation_ran": true,
+    "observed_outcome_perturbation_ran": true,
+    "physiology_unchanged_by_predictions": true,
+    "synthetic_intervention_kept_separate": true,
+    "no_medication_effect": true
+  },
+  "fixture_public": {
+    "fixture_id": "traj_exp_v011_heldout_synthetic_support",
+    "n_components": 24,
+    "fixture_hash": "6bf06a1b5e4ee0cda137f71f68641653517265e75ead8b840662f620746dcef7",
+    "private_path": "private/trajectory-expansion-v011/engine-heldout-fixture.json",
+    "row_level_published": false
+  },
+  "n_providers_loaded": 101,
+  "n_predictions": 24,
+  "n_predictions_in_evidence_history": 24,
+  "predictions_hash_run1": "098219bd9340e5d666bf7cbedf44444d30e85883fdc889ab7a13eb71cd52c633",
+  "predictions_hash_run2": "098219bd9340e5d666bf7cbedf44444d30e85883fdc889ab7a13eb71cd52c633",
+  "horizon_perturbation_n_preds": 24,
+  "missing_outcome_perturbation": {
+    "n_predictions": 12,
+    "n_missing": 89
+  },
+  "observed_perturbation_hash": "cbea7977eed55e3edb207af072261af83862365af9b07872532bade2b51efe56",
+  "checkpoint": {
+    "checkpoint_id": "traj_exp_v011_parent-w2",
+    "state_hash": "2cd764fb1e1d51b4aa91a12c07afe7747ac050b294be7c0f623e254fc8c6627a"
+  },
+  "parent_isolation": {
+    "parent_state_unchanged_after_fork": true,
+    "parent_history_unchanged_after_fork": true,
+    "parent_events_unchanged_after_fork": true,
+    "parent_recomputed_hash_matches_stored_hash": true,
+    "fork_isolation_verified": true,
+    "before": {
+      "final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955",
+      "history_hash": "efc9695d4d5e44cb8134120be5b2838d6857ea2fd2bb1b9c3e0eef6a190787af",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7
+    },
+    "after": {
+      "final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955",
+      "history_hash": "efc9695d4d5e44cb8134120be5b2838d6857ea2fd2bb1b9c3e0eef6a190787af",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7,
+      "stored_final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955"
+    }
+  },
+  "evidence_history_kinds": [
+    "OBSERVED_SNAPSHOT",
+    "TRAJECTORY_PREDICTION"
+  ],
+  "no_medication_features": true,
+  "no_treatment_response": true
+}

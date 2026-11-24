@@ -1,0 +1,1222 @@
+{
+  "STAGE05_BASELINE_VERIFICATION_STATUS": "PASS",
+  "V01_BASELINE_VERIFICATION_STATUS": "PASS",
+  "V021_BASELINE_VERIFICATION_STATUS": "PASS",
+  "V022_BASELINE_VERIFICATION_STATUS": "PASS",
+  "V02_BASELINE_VERIFICATION_STATUS": "PASS",
+  "after": {
+    "stage05": {
+      "STAGE05_BASELINE_VERIFICATION_STATUS": "PASS",
+      "files": [
+        {
+          "actual_sha256": "6605a4b643ea68ae893d6b52d0a0a196e1e2ad2ec505adad5691a41df70cf992",
+          "expected_sha256": "6605a4b643ea68ae893d6b52d0a0a196e1e2ad2ec505adad5691a41df70cf992",
+          "ok": true,
+          "path": "artifacts/external-review/stage-05-intervention-response-readiness-and-exposure-semantics-v0.1-review.zip"
+        },
+        {
+          "actual_sha256": "1a53215e69e5de22c57c1396fab3d93d0124c667315331a450e0712a166b20ef",
+          "expected_sha256": "1a53215e69e5de22c57c1396fab3d93d0124c667315331a450e0712a166b20ef",
+          "ok": true,
+          "path": "artifacts/external-review/stage-05-intervention-response-readiness-and-exposure-semantics-v0.1.1-review.zip"
+        }
+      ]
+    },
+    "v01_artifacts": [
+      {
+        "bytes": 5846,
+        "path": "artifacts/exposure-source-discovery-v0.1/discovery-report.md",
+        "sha256": "cba48005d11fd19643e9348140bbcefd055260c2928bc4c24a9b15f47445ff58"
+      },
+      {
+        "bytes": 1242,
+        "path": "artifacts/exposure-source-discovery-v0.1/followup-discovery.json",
+        "sha256": "0d7096e9fc02deb8f3bde2a517136243cf85684ae438d4a981b4958ad4744df5"
+      },
+      {
+        "bytes": 184,
+        "path": "artifacts/exposure-source-discovery-v0.1/privacy-scan.json",
+        "sha256": "b60ed25a62549ce5a0be51d2dab325c5993b1204ee442a1188acaa08361ad37c"
+      },
+      {
+        "bytes": 3684,
+        "path": "artifacts/exposure-source-discovery-v0.1/query-log.json",
+        "sha256": "0d70bb96f849c6df86c248a26f972d6d1b4b1b5f16a930c66aa08bcb61468a06"
+      },
+      {
+        "bytes": 10338,
+        "path": "artifacts/exposure-source-discovery-v0.1/source-a-discovery.json",
+        "sha256": "b33edb7005d4896e389fbe1888ff90b889f026e67d9972a89fdf3ea567d0bb4f"
+      },
+      {
+        "bytes": 13709,
+        "path": "artifacts/exposure-source-discovery-v0.1/source-b-discovery.json",
+        "sha256": "9775003c1569032b2174a452cc4f31fc15962f16dae1b08c2c4b4631982276ae"
+      }
+    ],
+    "v01_source": [
+      {
+        "bytes": 112,
+        "path": "src/human_simulator/exposure_source_discovery_v01/__init__.py",
+        "sha256": "5b06070d839e1a51248c3e32366ec29ccd005297b2c5ef71ad8f7470ef8c11a7"
+      },
+      {
+        "bytes": 323,
+        "path": "src/human_simulator/exposure_source_discovery_v01/__pycache__/__init__.cpython-313.pyc",
+        "sha256": "d4ceae2660319ee9d7471611b999d4005f372f362e95d6247f2e44d9867d58fd"
+      },
+      {
+        "bytes": 33900,
+        "path": "src/human_simulator/exposure_source_discovery_v01/__pycache__/discover.cpython-313.pyc",
+        "sha256": "c4da999996257ae4727627b327fa3aaef41f811498fd9d2ef3cc6664e196d627"
+      },
+      {
+        "bytes": 22842,
+        "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+        "sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d"
+      }
+    ],
+    "v021_artifacts": [
+      {
+        "bytes": 2171,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/MANIFEST.json",
+        "sha256": "15125a46adea1cd49c1c7db3971950bb5d9e3f770fdb9f13e68868fdfb853728"
+      },
+      {
+        "bytes": 24964,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/baseline-verification.json",
+        "sha256": "d632aceb9019bc40fabdb0dcd2df589bb44e595e3f5138031deb6845158db865"
+      },
+      {
+        "bytes": 391,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/consultation-target-accounting.json",
+        "sha256": "a7becd47b3f2736a44114ef9617c1c5f27c51ec5711566036ca0304be45f0bbf"
+      },
+      {
+        "bytes": 3215,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/discovery-report.md",
+        "sha256": "42b3d3dcd80f70df95a82852f68cd835870ca7f66a3e571584dbe0ac25792e28"
+      },
+      {
+        "bytes": 1037,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/feedback-exclusive-classification.json",
+        "sha256": "a92d2c13a36cc6b09bc8173f226bcd8a8b7b7bc042c3bdb497c512ebf64a2ee0"
+      },
+      {
+        "bytes": 5145,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/negative-control-results.json",
+        "sha256": "41adeee9213740d2b44c7312062686ce0df80274be0cfd95325114fc698abd0d"
+      },
+      {
+        "bytes": 467,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/privacy-scan.json",
+        "sha256": "0f6d59b10fa164cec390f8544d0fa9a3371a531c883c497d9f490e575505240e"
+      },
+      {
+        "bytes": 2816,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/query-log.json",
+        "sha256": "37561cf2146a8a275e848e5ca89827d642c30d9c56a664c49a0615f470a14da9"
+      },
+      {
+        "bytes": 2701,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/source-b-temporal-sequence-audit.json",
+        "sha256": "a2bd056247295a8b115ae04b658aedc0a24821723bff2f8fd9bb9b4bb33c4abb"
+      },
+      {
+        "bytes": 3091,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/status-contract.json",
+        "sha256": "d6aad5bc3a4f09d235a97084d1a332abddef0c21d73c20b92920736645e1c0ab"
+      },
+      {
+        "bytes": 899,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/subject-key-comparison-accounting.json",
+        "sha256": "b555f80518fe66a7080125101468b869478f680f383c71b83704621cae8f0dd4"
+      },
+      {
+        "bytes": 1185,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/temporal-accounting-reconciliation.json",
+        "sha256": "5eb5ef2a379ba658ffed63dfe882ae91df1a267bce7f0b9df027579c529e90e1"
+      },
+      {
+        "bytes": 1945,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/v02-temporal-accounting-defect-reproduction.json",
+        "sha256": "e6577a413dfb3d34738d7e4026d4d6143be7624eca2632169c03ee4f7c93f4e9"
+      },
+      {
+        "bytes": 400,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/verification.json",
+        "sha256": "5d40610e24ae181138f04dba06e03c8254cded1427279c3d832e63c903ea1af9"
+      }
+    ],
+    "v021_source": [
+      {
+        "bytes": 104,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__init__.py",
+        "sha256": "95907f9481b28e4fd617a39184b89b0fca59dddce40c36a30c38f2b2c8241f6b"
+      },
+      {
+        "bytes": 316,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/__init__.cpython-313.pyc",
+        "sha256": "0d041dba72c9fd91d26f32e2450fa65febdd3007f61d7885e2a586ac1fde841d"
+      },
+      {
+        "bytes": 16051,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/accounting.cpython-313.pyc",
+        "sha256": "36b1235ee086ef524a17bb938ba97731118846ce1a040bf8749882af473c9826"
+      },
+      {
+        "bytes": 4442,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/baseline.cpython-313.pyc",
+        "sha256": "5ce86bb7e337e924f4b0f97057a171865574f91a6af97f825b23d6e07c42dadf"
+      },
+      {
+        "bytes": 4686,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/classify.cpython-313.pyc",
+        "sha256": "2dcec2a06b41019d11d9d4da280f799661de39ed4b5435b88804e01659de5a0c"
+      },
+      {
+        "bytes": 7992,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/defect.cpython-313.pyc",
+        "sha256": "60ffd352abc1d7212f6cd2daa79a7956154df67d832a4732d20ea2f0ce155b95"
+      },
+      {
+        "bytes": 6580,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/mutations.cpython-313.pyc",
+        "sha256": "30e9db3615c29255609d85db821b8b77a3403cecba9f9a546e5002b9ccb21e01"
+      },
+      {
+        "bytes": 12630,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/orchestrator.cpython-313.pyc",
+        "sha256": "868d6c2d8c6fa4d4a86f25d84984908fc02c15e93c2dacc5f69200cbe98a79a9"
+      },
+      {
+        "bytes": 2995,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/policy.cpython-313.pyc",
+        "sha256": "72462c9847cf3f5bf24b8490d9a38d611a9359a20e91d9d017bb6ab947a5585d"
+      },
+      {
+        "bytes": 10312,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/report.cpython-313.pyc",
+        "sha256": "07d0227ddb4c3263f17565a392168645fa03b7d7912979aaae20d4e11ccd75c7"
+      },
+      {
+        "bytes": 15430,
+        "path": "src/human_simulator/exposure_source_discovery_v021/accounting.py",
+        "sha256": "f2024af8953f2c49e195e13d3e2b705726d2f697fbfaacb98aa231df84c6ab24"
+      },
+      {
+        "bytes": 2784,
+        "path": "src/human_simulator/exposure_source_discovery_v021/baseline.py",
+        "sha256": "887ca46691565898fcccbd691a3cdf0b92a975959687e21a3f588c46e3606d8a"
+      },
+      {
+        "bytes": 3219,
+        "path": "src/human_simulator/exposure_source_discovery_v021/classify.py",
+        "sha256": "56331b60cd10b964b973abd0f7ad6e3929405bc65f27e2f2ee4b862eb3b57141"
+      },
+      {
+        "bytes": 7361,
+        "path": "src/human_simulator/exposure_source_discovery_v021/defect.py",
+        "sha256": "33493de56b76cc426b7892bedf7f62bd3d8899a6046c8d2da2c532c5fdfdc749"
+      },
+      {
+        "bytes": 5766,
+        "path": "src/human_simulator/exposure_source_discovery_v021/mutations.py",
+        "sha256": "81a0c5a3a088c00fa02d09ffeb52e6181543b627c732d070ce24ab623773d6dd"
+      },
+      {
+        "bytes": 11016,
+        "path": "src/human_simulator/exposure_source_discovery_v021/orchestrator.py",
+        "sha256": "921863ed17e8d4c2874184b315f57b51548b7751874a27d0d281ba572e2cdb62"
+      },
+      {
+        "bytes": 2882,
+        "path": "src/human_simulator/exposure_source_discovery_v021/policy.py",
+        "sha256": "a8cfcc9546bc4080e5b03861152474d15b3612e901730070480518d223c91902"
+      },
+      {
+        "bytes": 8597,
+        "path": "src/human_simulator/exposure_source_discovery_v021/report.py",
+        "sha256": "c055841b439d5b614112900001b0c34204739b5a61fe566dd2ed1d29799fb066"
+      }
+    ],
+    "v022_artifacts": [
+      {
+        "bytes": 1936,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/MANIFEST.json",
+        "sha256": "238e9fe0b96719e783a25afdd33c8e17f5ae9ed6d2aee6d70357efcb23d373e6"
+      },
+      {
+        "bytes": 39104,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/baseline-verification.json",
+        "sha256": "0542db780bbe14cc9b742789eb62e9df119510fbe4ff539cb800c89d76d886c9"
+      },
+      {
+        "bytes": 1047,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/decision-validation.json",
+        "sha256": "40c04d0d1a5e3244ec86a17d057c8d62693a8a174b7f477b0c13d4422e957a06"
+      },
+      {
+        "bytes": 5621,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/discovery-report.md",
+        "sha256": "ecb7e66498165eef1ae621a12af0764e5ab698672962a06bba94b2b0ca35aab6"
+      },
+      {
+        "bytes": 5829,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/field-semantic-status.json",
+        "sha256": "0fb636e22390c8a6c3b000e00fafccc3319d2eb4cac838cb0cb38019d8db392b"
+      },
+      {
+        "bytes": 2484,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/negative-control-results.json",
+        "sha256": "15388c0eeea8656ec0fc4b4e1b51b0e4fc56f31a49764873c6405450eb967ddc"
+      },
+      {
+        "bytes": 6186,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/owner-answer-record.json",
+        "sha256": "2c7c87dbcf681d9e92282fff2e85d703c870b2b503687e9aa6eff0439a74a77c"
+      },
+      {
+        "bytes": 5204,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/owner-decisions.json",
+        "sha256": "64d6eb78b11e0b308d9d96454f7d16a3b21045c5ccf5f6a2339535d2ba170d83"
+      },
+      {
+        "bytes": 467,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/privacy-scan.json",
+        "sha256": "a026620c048871e6cba04e04f6f901f7b50eb9f85167bdf67cf604d9596e45f6"
+      },
+      {
+        "bytes": 6240,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/query-log.json",
+        "sha256": "16a21b9f96c533c2bd8bb7275bf32bb8bfe191bed680bfb8fb21622ce9f58a92"
+      },
+      {
+        "bytes": 6213,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/source-a-code-and-catalog-evidence.json",
+        "sha256": "894c7300802df3e15190753f96e6b7c8dfe77726e9c6f62d9d918821b08f8920"
+      },
+      {
+        "bytes": 2803,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/status-contract.json",
+        "sha256": "c8e08d92786a8dd6123a552943aeaadfd77e03d5fd202691bc08a54e63ef3f2f"
+      },
+      {
+        "bytes": 515,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/verification.json",
+        "sha256": "7dee40e6a2e80666d42b5a8feb65402cc2ba6e28ed74bca7bcd4433c1c566162"
+      }
+    ],
+    "v022_source": [
+      {
+        "bytes": 115,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__init__.py",
+        "sha256": "74675bd6c478a6952267e1fd8b03cc1e8c1f54d91a3060a86d202158bd439de7"
+      },
+      {
+        "bytes": 327,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/__init__.cpython-313.pyc",
+        "sha256": "206b0bcd5f16b02c8fd0330a5e3d45f82addd6d262d2f43135fc624b7128b965"
+      },
+      {
+        "bytes": 9477,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/contract.cpython-313.pyc",
+        "sha256": "184f834f5c91cd5999251094d6b399b72a3a8137ec9fd6a02931f38d1b30b3c4"
+      },
+      {
+        "bytes": 6710,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/decisions.cpython-313.pyc",
+        "sha256": "f954ac2e2d4d3729b7fa1182f12ff2e32b888bc06c06dfd18af3cd95e78a313e"
+      },
+      {
+        "bytes": 8086,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/evidence.cpython-313.pyc",
+        "sha256": "9c686788971dbdacaf02b5e566bf59602cb837e23848f9d1b68b5c0c33eb76ff"
+      },
+      {
+        "bytes": 10600,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/mutations.cpython-313.pyc",
+        "sha256": "8ca43a527bb9b72b5ee94be1a0ae21fa3037f393708a41d417d8d26fe63b76e1"
+      },
+      {
+        "bytes": 11288,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/orchestrator.cpython-313.pyc",
+        "sha256": "ba632549afba5d0335018e616ecdfc01059326013fdb3731b87e225b658927db"
+      },
+      {
+        "bytes": 5730,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/policy.cpython-313.pyc",
+        "sha256": "f09cf3dd6717c2da5d033df5b0cb2bbecfd55c1d3c9898c4c223b3aec1800f05"
+      },
+      {
+        "bytes": 6247,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/report.cpython-313.pyc",
+        "sha256": "0e64d9375322052e33009cdb22c0cabad940e0a0b7ad8b2d5e206e0e3d892247"
+      },
+      {
+        "bytes": 8049,
+        "path": "src/human_simulator/exposure_source_discovery_v022/contract.py",
+        "sha256": "52e5fdb9c9bc0d052f10ade1b914a8cda3fec3098fab89ff9fbd621f48c75f73"
+      },
+      {
+        "bytes": 4375,
+        "path": "src/human_simulator/exposure_source_discovery_v022/decisions.py",
+        "sha256": "b42263717845f09778cd9e88cf91107031a94f516781c0268df5f83dca7a75f3"
+      },
+      {
+        "bytes": 5975,
+        "path": "src/human_simulator/exposure_source_discovery_v022/evidence.py",
+        "sha256": "81169324ca98f0a396595a0c11979b29c209b673349b1ff9570a47c0a6bf9907"
+      },
+      {
+        "bytes": 7819,
+        "path": "src/human_simulator/exposure_source_discovery_v022/mutations.py",
+        "sha256": "577bd01d68ddb6a8444bc240f9953f1f8996d013f277abf7c260c8f174d7b577"
+      },
+      {
+        "bytes": 8848,
+        "path": "src/human_simulator/exposure_source_discovery_v022/orchestrator.py",
+        "sha256": "af0a48ff1be65908926a7a3dab2542b06f91b4348b2551023e4e386715147c3a"
+      },
+      {
+        "bytes": 7886,
+        "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+        "sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877"
+      },
+      {
+        "bytes": 4965,
+        "path": "src/human_simulator/exposure_source_discovery_v022/report.py",
+        "sha256": "58bb23cf19f0e4e732b7589915689d022dd605251d94a935a7372c837f21a403"
+      }
+    ],
+    "v02_artifacts": [
+      {
+        "bytes": 2154,
+        "path": "artifacts/exposure-source-discovery-v0.2/baseline-verification.json",
+        "sha256": "428d02e2f98dae0d4b0f12abdd25153397a536f29a3feac9d8c694f0a2cf03c3"
+      },
+      {
+        "bytes": 1703,
+        "path": "artifacts/exposure-source-discovery-v0.2/candidate-exposure-chain.json",
+        "sha256": "5f7753043927dda77eb3f3024e478b545b35fa9bcbd8c2254de0b7c3e3b3e685"
+      },
+      {
+        "bytes": 2584,
+        "path": "artifacts/exposure-source-discovery-v0.2/discovery-report.md",
+        "sha256": "4745cf078e44801ac69b36865dd4bfe5f8638935a59bad49adf00f81661978f5"
+      },
+      {
+        "bytes": 1697,
+        "path": "artifacts/exposure-source-discovery-v0.2/evidence-manifest.sha256",
+        "sha256": "feaec715fbc7571e20ca953e14a9df891e6f5d07f171e38a18e86dca9785047d"
+      },
+      {
+        "bytes": 3234,
+        "path": "artifacts/exposure-source-discovery-v0.2/negative-control-results.json",
+        "sha256": "7a146fb8ac8000a95a928cb833895df962c2aec71b1b95acce66e33334e0f260"
+      },
+      {
+        "bytes": 1991,
+        "path": "artifacts/exposure-source-discovery-v0.2/owner-questions.md",
+        "sha256": "03310d9ba8dd2af2562e85c0f5500cc22505139a779db9a260ffc9908ffe7f77"
+      },
+      {
+        "bytes": 3870,
+        "path": "artifacts/exposure-source-discovery-v0.2/owner-response-template.json",
+        "sha256": "c5783dbd6793184eceffc1c7a8b09d86f68c691c30d78ac9786fbaa7b372e6cc"
+      },
+      {
+        "bytes": 467,
+        "path": "artifacts/exposure-source-discovery-v0.2/privacy-scan.json",
+        "sha256": "ed6d8fce6391c2394ad07467cd685229777136b829ab59bef0b2919c7530b2f1"
+      },
+      {
+        "bytes": 22305,
+        "path": "artifacts/exposure-source-discovery-v0.2/query-log.json",
+        "sha256": "e72e48ee5367a88cbf67f06eb9470d0e2152c0db5f018808f6d034e05cd2782f"
+      },
+      {
+        "bytes": 1096,
+        "path": "artifacts/exposure-source-discovery-v0.2/semantic-decision.schema.json",
+        "sha256": "808287b239129ba419ba4c83f76e7a32d7f3aa70577fba5fac1b0bd87d087147"
+      },
+      {
+        "bytes": 21702,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-a-recommendation-localization.json",
+        "sha256": "2f980e3b8c69cc54ecdfbe864a4976397cb5ba3dfa36572410cf25fa1fa06f04"
+      },
+      {
+        "bytes": 4658,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-a-structured-linkage.json",
+        "sha256": "e660eec35593a56f57cbf2200afb604d5ef9788a95edd9f0ed1a064dfabc3a41"
+      },
+      {
+        "bytes": 772,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-b-identity-linkage-audit.json",
+        "sha256": "c9c33d3ba24c91db7fb9685627ef2029424679371a304cace38657a3a3fab325"
+      },
+      {
+        "bytes": 28513,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-b-schema-contract.json",
+        "sha256": "0f3bd60bc8154360f44513e202347bd0b57a20d5c5b4d81ec56e7b155ceb73dd"
+      },
+      {
+        "bytes": 7245,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-b-sentinel-profile.json",
+        "sha256": "60a449cf1b32a15f0feb1bdb3eddc176d7e5bd0475b5bd00ba7cc386fb86b8d9"
+      },
+      {
+        "bytes": 3699,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-b-temporal-sequence-audit.json",
+        "sha256": "156cd0bb2417207af40288f74b41ac63329e4df44b58de1cbc4b9eca935bc7b6"
+      },
+      {
+        "bytes": 2032,
+        "path": "artifacts/exposure-source-discovery-v0.2/status-contract.json",
+        "sha256": "63b6a2c70ae4fee529eb20cc21ac67dc4ec226c0fbe25b9cf70a2177aa85cea3"
+      },
+      {
+        "bytes": 2813,
+        "path": "artifacts/exposure-source-discovery-v0.2/v01-method-limitations-reproduction.json",
+        "sha256": "a04d6521364aed01404b8d59c5ee47dc9938d6300d42e14c177b947ddda760cb"
+      },
+      {
+        "bytes": 2613,
+        "path": "artifacts/exposure-source-discovery-v0.2/verification.json",
+        "sha256": "60202b9bea6660778d205d351400c866020cb22f4ca46704841b78607ecfff15"
+      }
+    ],
+    "v02_source": [
+      {
+        "bytes": 99,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__init__.py",
+        "sha256": "6ab3546cdee331ab0a98bbab1c64002ecfd8f4350c735480a2e96db326ea697b"
+      },
+      {
+        "bytes": 310,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/__init__.cpython-313.pyc",
+        "sha256": "74b822fe3a7b0af9f3116dc4d611b9f6c20ff11809861e715eb2445936c71ba4"
+      },
+      {
+        "bytes": 2074,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/baseline.cpython-313.pyc",
+        "sha256": "ff2caa78ac6c56261436a30e63dc1a1af6dfb1d65b87caf31cdaeffb8ca8fffb"
+      },
+      {
+        "bytes": 9770,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/db.cpython-313.pyc",
+        "sha256": "5b2c37456eabaa0235ffca06867303be22bda81def5592dc51908a7e805a325b"
+      },
+      {
+        "bytes": 4891,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/decisions.cpython-313.pyc",
+        "sha256": "f3287189f2c814a7a4f844c30fd64fa35dc43447df07db443926c66e1513fbb2"
+      },
+      {
+        "bytes": 7681,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/limitations.cpython-313.pyc",
+        "sha256": "c4a1d9538e26140469e5ff744ddd2637a4ccad473a1f7054934d3100a663b9bb"
+      },
+      {
+        "bytes": 6382,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/mutations.cpython-313.pyc",
+        "sha256": "d8b1325e97c74753cae7c948ab5a15bd8be307b507c2eff3e323874238777390"
+      },
+      {
+        "bytes": 16413,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/orchestrator.cpython-313.pyc",
+        "sha256": "2ef6469a7e7a9b1e40e7b51573faaf5656c9550dcfe765d29dad075e90067e8b"
+      },
+      {
+        "bytes": 3064,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/policy.cpython-313.pyc",
+        "sha256": "5bbd6cabe08d7d3de79490130f6028711929c8eb58071fa05d95d01900495903"
+      },
+      {
+        "bytes": 8751,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/privacy.cpython-313.pyc",
+        "sha256": "76e886dddecdba6d130f0f371f08a4bf435020c4891f4e3f37f658d64545edc6"
+      },
+      {
+        "bytes": 18439,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/source_a.cpython-313.pyc",
+        "sha256": "b180102cc881b6535ec9da9d4ca455de25f372b24fa8a7c5e9480a83e37e27ba"
+      },
+      {
+        "bytes": 20167,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/source_b.cpython-313.pyc",
+        "sha256": "a5696364165e3617c69870dc59f4dbc9cba38e7d1714d0ec25bbf5749c6f1c1b"
+      },
+      {
+        "bytes": 14962,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/textutil.cpython-313.pyc",
+        "sha256": "cd17d9aaef2dd0b77e7c822f70fe79e12c430a8919ecc06dd32beb0f49e3fc9e"
+      },
+      {
+        "bytes": 1082,
+        "path": "src/human_simulator/exposure_source_discovery_v02/baseline.py",
+        "sha256": "57524842eb9de313676e8091984d06ab9bd83901349b061288c653f282380274"
+      },
+      {
+        "bytes": 6256,
+        "path": "src/human_simulator/exposure_source_discovery_v02/db.py",
+        "sha256": "884c64b0afd651dadc309c1033160079f80632db90dce6b1e275ee17643951a2"
+      },
+      {
+        "bytes": 4565,
+        "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+        "sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad"
+      },
+      {
+        "bytes": 6371,
+        "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+        "sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2"
+      },
+      {
+        "bytes": 5466,
+        "path": "src/human_simulator/exposure_source_discovery_v02/mutations.py",
+        "sha256": "25751cb2c2e20207d44d2872364301cc48ec918e18511987f482ff73b1ad0a8c"
+      },
+      {
+        "bytes": 14149,
+        "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+        "sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a"
+      },
+      {
+        "bytes": 3027,
+        "path": "src/human_simulator/exposure_source_discovery_v02/policy.py",
+        "sha256": "32b0aef4e278a9a3badbb5d2c36ef3f8a3a4821eb2b3e43703f499c6695af174"
+      },
+      {
+        "bytes": 6185,
+        "path": "src/human_simulator/exposure_source_discovery_v02/privacy.py",
+        "sha256": "ec7522a4ac0feda6d3040f4e794c71fc423f386409ffd6746aa4d4305b012126"
+      },
+      {
+        "bytes": 13486,
+        "path": "src/human_simulator/exposure_source_discovery_v02/source_a.py",
+        "sha256": "4479dcec8df14c0770460fad66d54835963f7a3c186c07e8cc21c925c7c18b9d"
+      },
+      {
+        "bytes": 18104,
+        "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+        "sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e"
+      },
+      {
+        "bytes": 9580,
+        "path": "src/human_simulator/exposure_source_discovery_v02/textutil.py",
+        "sha256": "81190f2b1de3b8d19da830bd593eca777c603c12b1bce3134cfa0e620cf423f1"
+      }
+    ]
+  },
+  "before": {
+    "stage05": {
+      "STAGE05_BASELINE_VERIFICATION_STATUS": "PASS",
+      "files": [
+        {
+          "actual_sha256": "6605a4b643ea68ae893d6b52d0a0a196e1e2ad2ec505adad5691a41df70cf992",
+          "expected_sha256": "6605a4b643ea68ae893d6b52d0a0a196e1e2ad2ec505adad5691a41df70cf992",
+          "ok": true,
+          "path": "artifacts/external-review/stage-05-intervention-response-readiness-and-exposure-semantics-v0.1-review.zip"
+        },
+        {
+          "actual_sha256": "1a53215e69e5de22c57c1396fab3d93d0124c667315331a450e0712a166b20ef",
+          "expected_sha256": "1a53215e69e5de22c57c1396fab3d93d0124c667315331a450e0712a166b20ef",
+          "ok": true,
+          "path": "artifacts/external-review/stage-05-intervention-response-readiness-and-exposure-semantics-v0.1.1-review.zip"
+        }
+      ]
+    },
+    "v01_artifacts": [
+      {
+        "bytes": 5846,
+        "path": "artifacts/exposure-source-discovery-v0.1/discovery-report.md",
+        "sha256": "cba48005d11fd19643e9348140bbcefd055260c2928bc4c24a9b15f47445ff58"
+      },
+      {
+        "bytes": 1242,
+        "path": "artifacts/exposure-source-discovery-v0.1/followup-discovery.json",
+        "sha256": "0d7096e9fc02deb8f3bde2a517136243cf85684ae438d4a981b4958ad4744df5"
+      },
+      {
+        "bytes": 184,
+        "path": "artifacts/exposure-source-discovery-v0.1/privacy-scan.json",
+        "sha256": "b60ed25a62549ce5a0be51d2dab325c5993b1204ee442a1188acaa08361ad37c"
+      },
+      {
+        "bytes": 3684,
+        "path": "artifacts/exposure-source-discovery-v0.1/query-log.json",
+        "sha256": "0d70bb96f849c6df86c248a26f972d6d1b4b1b5f16a930c66aa08bcb61468a06"
+      },
+      {
+        "bytes": 10338,
+        "path": "artifacts/exposure-source-discovery-v0.1/source-a-discovery.json",
+        "sha256": "b33edb7005d4896e389fbe1888ff90b889f026e67d9972a89fdf3ea567d0bb4f"
+      },
+      {
+        "bytes": 13709,
+        "path": "artifacts/exposure-source-discovery-v0.1/source-b-discovery.json",
+        "sha256": "9775003c1569032b2174a452cc4f31fc15962f16dae1b08c2c4b4631982276ae"
+      }
+    ],
+    "v01_source": [
+      {
+        "bytes": 112,
+        "path": "src/human_simulator/exposure_source_discovery_v01/__init__.py",
+        "sha256": "5b06070d839e1a51248c3e32366ec29ccd005297b2c5ef71ad8f7470ef8c11a7"
+      },
+      {
+        "bytes": 323,
+        "path": "src/human_simulator/exposure_source_discovery_v01/__pycache__/__init__.cpython-313.pyc",
+        "sha256": "d4ceae2660319ee9d7471611b999d4005f372f362e95d6247f2e44d9867d58fd"
+      },
+      {
+        "bytes": 33900,
+        "path": "src/human_simulator/exposure_source_discovery_v01/__pycache__/discover.cpython-313.pyc",
+        "sha256": "c4da999996257ae4727627b327fa3aaef41f811498fd9d2ef3cc6664e196d627"
+      },
+      {
+        "bytes": 22842,
+        "path": "src/human_simulator/exposure_source_discovery_v01/discover.py",
+        "sha256": "5d93e43b5269cf00c29f3becb5d38db537d93576ee28539fcb64e2c34045e92d"
+      }
+    ],
+    "v021_artifacts": [
+      {
+        "bytes": 2171,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/MANIFEST.json",
+        "sha256": "15125a46adea1cd49c1c7db3971950bb5d9e3f770fdb9f13e68868fdfb853728"
+      },
+      {
+        "bytes": 24964,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/baseline-verification.json",
+        "sha256": "d632aceb9019bc40fabdb0dcd2df589bb44e595e3f5138031deb6845158db865"
+      },
+      {
+        "bytes": 391,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/consultation-target-accounting.json",
+        "sha256": "a7becd47b3f2736a44114ef9617c1c5f27c51ec5711566036ca0304be45f0bbf"
+      },
+      {
+        "bytes": 3215,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/discovery-report.md",
+        "sha256": "42b3d3dcd80f70df95a82852f68cd835870ca7f66a3e571584dbe0ac25792e28"
+      },
+      {
+        "bytes": 1037,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/feedback-exclusive-classification.json",
+        "sha256": "a92d2c13a36cc6b09bc8173f226bcd8a8b7b7bc042c3bdb497c512ebf64a2ee0"
+      },
+      {
+        "bytes": 5145,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/negative-control-results.json",
+        "sha256": "41adeee9213740d2b44c7312062686ce0df80274be0cfd95325114fc698abd0d"
+      },
+      {
+        "bytes": 467,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/privacy-scan.json",
+        "sha256": "0f6d59b10fa164cec390f8544d0fa9a3371a531c883c497d9f490e575505240e"
+      },
+      {
+        "bytes": 2816,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/query-log.json",
+        "sha256": "37561cf2146a8a275e848e5ca89827d642c30d9c56a664c49a0615f470a14da9"
+      },
+      {
+        "bytes": 2701,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/source-b-temporal-sequence-audit.json",
+        "sha256": "a2bd056247295a8b115ae04b658aedc0a24821723bff2f8fd9bb9b4bb33c4abb"
+      },
+      {
+        "bytes": 3091,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/status-contract.json",
+        "sha256": "d6aad5bc3a4f09d235a97084d1a332abddef0c21d73c20b92920736645e1c0ab"
+      },
+      {
+        "bytes": 899,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/subject-key-comparison-accounting.json",
+        "sha256": "b555f80518fe66a7080125101468b869478f680f383c71b83704621cae8f0dd4"
+      },
+      {
+        "bytes": 1185,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/temporal-accounting-reconciliation.json",
+        "sha256": "5eb5ef2a379ba658ffed63dfe882ae91df1a267bce7f0b9df027579c529e90e1"
+      },
+      {
+        "bytes": 1945,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/v02-temporal-accounting-defect-reproduction.json",
+        "sha256": "e6577a413dfb3d34738d7e4026d4d6143be7624eca2632169c03ee4f7c93f4e9"
+      },
+      {
+        "bytes": 400,
+        "path": "artifacts/exposure-source-discovery-v0.2.1/verification.json",
+        "sha256": "5d40610e24ae181138f04dba06e03c8254cded1427279c3d832e63c903ea1af9"
+      }
+    ],
+    "v021_source": [
+      {
+        "bytes": 104,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__init__.py",
+        "sha256": "95907f9481b28e4fd617a39184b89b0fca59dddce40c36a30c38f2b2c8241f6b"
+      },
+      {
+        "bytes": 316,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/__init__.cpython-313.pyc",
+        "sha256": "0d041dba72c9fd91d26f32e2450fa65febdd3007f61d7885e2a586ac1fde841d"
+      },
+      {
+        "bytes": 16051,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/accounting.cpython-313.pyc",
+        "sha256": "36b1235ee086ef524a17bb938ba97731118846ce1a040bf8749882af473c9826"
+      },
+      {
+        "bytes": 4442,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/baseline.cpython-313.pyc",
+        "sha256": "5ce86bb7e337e924f4b0f97057a171865574f91a6af97f825b23d6e07c42dadf"
+      },
+      {
+        "bytes": 4686,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/classify.cpython-313.pyc",
+        "sha256": "2dcec2a06b41019d11d9d4da280f799661de39ed4b5435b88804e01659de5a0c"
+      },
+      {
+        "bytes": 7992,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/defect.cpython-313.pyc",
+        "sha256": "60ffd352abc1d7212f6cd2daa79a7956154df67d832a4732d20ea2f0ce155b95"
+      },
+      {
+        "bytes": 6580,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/mutations.cpython-313.pyc",
+        "sha256": "30e9db3615c29255609d85db821b8b77a3403cecba9f9a546e5002b9ccb21e01"
+      },
+      {
+        "bytes": 12630,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/orchestrator.cpython-313.pyc",
+        "sha256": "868d6c2d8c6fa4d4a86f25d84984908fc02c15e93c2dacc5f69200cbe98a79a9"
+      },
+      {
+        "bytes": 2995,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/policy.cpython-313.pyc",
+        "sha256": "72462c9847cf3f5bf24b8490d9a38d611a9359a20e91d9d017bb6ab947a5585d"
+      },
+      {
+        "bytes": 10312,
+        "path": "src/human_simulator/exposure_source_discovery_v021/__pycache__/report.cpython-313.pyc",
+        "sha256": "07d0227ddb4c3263f17565a392168645fa03b7d7912979aaae20d4e11ccd75c7"
+      },
+      {
+        "bytes": 15430,
+        "path": "src/human_simulator/exposure_source_discovery_v021/accounting.py",
+        "sha256": "f2024af8953f2c49e195e13d3e2b705726d2f697fbfaacb98aa231df84c6ab24"
+      },
+      {
+        "bytes": 2784,
+        "path": "src/human_simulator/exposure_source_discovery_v021/baseline.py",
+        "sha256": "887ca46691565898fcccbd691a3cdf0b92a975959687e21a3f588c46e3606d8a"
+      },
+      {
+        "bytes": 3219,
+        "path": "src/human_simulator/exposure_source_discovery_v021/classify.py",
+        "sha256": "56331b60cd10b964b973abd0f7ad6e3929405bc65f27e2f2ee4b862eb3b57141"
+      },
+      {
+        "bytes": 7361,
+        "path": "src/human_simulator/exposure_source_discovery_v021/defect.py",
+        "sha256": "33493de56b76cc426b7892bedf7f62bd3d8899a6046c8d2da2c532c5fdfdc749"
+      },
+      {
+        "bytes": 5766,
+        "path": "src/human_simulator/exposure_source_discovery_v021/mutations.py",
+        "sha256": "81a0c5a3a088c00fa02d09ffeb52e6181543b627c732d070ce24ab623773d6dd"
+      },
+      {
+        "bytes": 11016,
+        "path": "src/human_simulator/exposure_source_discovery_v021/orchestrator.py",
+        "sha256": "921863ed17e8d4c2874184b315f57b51548b7751874a27d0d281ba572e2cdb62"
+      },
+      {
+        "bytes": 2882,
+        "path": "src/human_simulator/exposure_source_discovery_v021/policy.py",
+        "sha256": "a8cfcc9546bc4080e5b03861152474d15b3612e901730070480518d223c91902"
+      },
+      {
+        "bytes": 8597,
+        "path": "src/human_simulator/exposure_source_discovery_v021/report.py",
+        "sha256": "c055841b439d5b614112900001b0c34204739b5a61fe566dd2ed1d29799fb066"
+      }
+    ],
+    "v022_artifacts": [
+      {
+        "bytes": 1936,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/MANIFEST.json",
+        "sha256": "238e9fe0b96719e783a25afdd33c8e17f5ae9ed6d2aee6d70357efcb23d373e6"
+      },
+      {
+        "bytes": 39104,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/baseline-verification.json",
+        "sha256": "0542db780bbe14cc9b742789eb62e9df119510fbe4ff539cb800c89d76d886c9"
+      },
+      {
+        "bytes": 1047,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/decision-validation.json",
+        "sha256": "40c04d0d1a5e3244ec86a17d057c8d62693a8a174b7f477b0c13d4422e957a06"
+      },
+      {
+        "bytes": 5621,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/discovery-report.md",
+        "sha256": "ecb7e66498165eef1ae621a12af0764e5ab698672962a06bba94b2b0ca35aab6"
+      },
+      {
+        "bytes": 5829,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/field-semantic-status.json",
+        "sha256": "0fb636e22390c8a6c3b000e00fafccc3319d2eb4cac838cb0cb38019d8db392b"
+      },
+      {
+        "bytes": 2484,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/negative-control-results.json",
+        "sha256": "15388c0eeea8656ec0fc4b4e1b51b0e4fc56f31a49764873c6405450eb967ddc"
+      },
+      {
+        "bytes": 6186,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/owner-answer-record.json",
+        "sha256": "2c7c87dbcf681d9e92282fff2e85d703c870b2b503687e9aa6eff0439a74a77c"
+      },
+      {
+        "bytes": 5204,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/owner-decisions.json",
+        "sha256": "64d6eb78b11e0b308d9d96454f7d16a3b21045c5ccf5f6a2339535d2ba170d83"
+      },
+      {
+        "bytes": 467,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/privacy-scan.json",
+        "sha256": "a026620c048871e6cba04e04f6f901f7b50eb9f85167bdf67cf604d9596e45f6"
+      },
+      {
+        "bytes": 6240,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/query-log.json",
+        "sha256": "16a21b9f96c533c2bd8bb7275bf32bb8bfe191bed680bfb8fb21622ce9f58a92"
+      },
+      {
+        "bytes": 6213,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/source-a-code-and-catalog-evidence.json",
+        "sha256": "894c7300802df3e15190753f96e6b7c8dfe77726e9c6f62d9d918821b08f8920"
+      },
+      {
+        "bytes": 2803,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/status-contract.json",
+        "sha256": "c8e08d92786a8dd6123a552943aeaadfd77e03d5fd202691bc08a54e63ef3f2f"
+      },
+      {
+        "bytes": 515,
+        "path": "artifacts/exposure-source-discovery-v0.2.2/verification.json",
+        "sha256": "7dee40e6a2e80666d42b5a8feb65402cc2ba6e28ed74bca7bcd4433c1c566162"
+      }
+    ],
+    "v022_source": [
+      {
+        "bytes": 115,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__init__.py",
+        "sha256": "74675bd6c478a6952267e1fd8b03cc1e8c1f54d91a3060a86d202158bd439de7"
+      },
+      {
+        "bytes": 327,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/__init__.cpython-313.pyc",
+        "sha256": "206b0bcd5f16b02c8fd0330a5e3d45f82addd6d262d2f43135fc624b7128b965"
+      },
+      {
+        "bytes": 9477,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/contract.cpython-313.pyc",
+        "sha256": "184f834f5c91cd5999251094d6b399b72a3a8137ec9fd6a02931f38d1b30b3c4"
+      },
+      {
+        "bytes": 6710,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/decisions.cpython-313.pyc",
+        "sha256": "f954ac2e2d4d3729b7fa1182f12ff2e32b888bc06c06dfd18af3cd95e78a313e"
+      },
+      {
+        "bytes": 8086,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/evidence.cpython-313.pyc",
+        "sha256": "9c686788971dbdacaf02b5e566bf59602cb837e23848f9d1b68b5c0c33eb76ff"
+      },
+      {
+        "bytes": 10600,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/mutations.cpython-313.pyc",
+        "sha256": "8ca43a527bb9b72b5ee94be1a0ae21fa3037f393708a41d417d8d26fe63b76e1"
+      },
+      {
+        "bytes": 11288,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/orchestrator.cpython-313.pyc",
+        "sha256": "ba632549afba5d0335018e616ecdfc01059326013fdb3731b87e225b658927db"
+      },
+      {
+        "bytes": 5730,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/policy.cpython-313.pyc",
+        "sha256": "f09cf3dd6717c2da5d033df5b0cb2bbecfd55c1d3c9898c4c223b3aec1800f05"
+      },
+      {
+        "bytes": 6247,
+        "path": "src/human_simulator/exposure_source_discovery_v022/__pycache__/report.cpython-313.pyc",
+        "sha256": "0e64d9375322052e33009cdb22c0cabad940e0a0b7ad8b2d5e206e0e3d892247"
+      },
+      {
+        "bytes": 8049,
+        "path": "src/human_simulator/exposure_source_discovery_v022/contract.py",
+        "sha256": "52e5fdb9c9bc0d052f10ade1b914a8cda3fec3098fab89ff9fbd621f48c75f73"
+      },
+      {
+        "bytes": 4375,
+        "path": "src/human_simulator/exposure_source_discovery_v022/decisions.py",
+        "sha256": "b42263717845f09778cd9e88cf91107031a94f516781c0268df5f83dca7a75f3"
+      },
+      {
+        "bytes": 5975,
+        "path": "src/human_simulator/exposure_source_discovery_v022/evidence.py",
+        "sha256": "81169324ca98f0a396595a0c11979b29c209b673349b1ff9570a47c0a6bf9907"
+      },
+      {
+        "bytes": 7819,
+        "path": "src/human_simulator/exposure_source_discovery_v022/mutations.py",
+        "sha256": "577bd01d68ddb6a8444bc240f9953f1f8996d013f277abf7c260c8f174d7b577"
+      },
+      {
+        "bytes": 8848,
+        "path": "src/human_simulator/exposure_source_discovery_v022/orchestrator.py",
+        "sha256": "af0a48ff1be65908926a7a3dab2542b06f91b4348b2551023e4e386715147c3a"
+      },
+      {
+        "bytes": 7886,
+        "path": "src/human_simulator/exposure_source_discovery_v022/policy.py",
+        "sha256": "e70c20e83027d75ece372fab797501cd5a83e8f5d37ac6e3a6591b59bfff4877"
+      },
+      {
+        "bytes": 4965,
+        "path": "src/human_simulator/exposure_source_discovery_v022/report.py",
+        "sha256": "58bb23cf19f0e4e732b7589915689d022dd605251d94a935a7372c837f21a403"
+      }
+    ],
+    "v02_artifacts": [
+      {
+        "bytes": 2154,
+        "path": "artifacts/exposure-source-discovery-v0.2/baseline-verification.json",
+        "sha256": "428d02e2f98dae0d4b0f12abdd25153397a536f29a3feac9d8c694f0a2cf03c3"
+      },
+      {
+        "bytes": 1703,
+        "path": "artifacts/exposure-source-discovery-v0.2/candidate-exposure-chain.json",
+        "sha256": "5f7753043927dda77eb3f3024e478b545b35fa9bcbd8c2254de0b7c3e3b3e685"
+      },
+      {
+        "bytes": 2584,
+        "path": "artifacts/exposure-source-discovery-v0.2/discovery-report.md",
+        "sha256": "4745cf078e44801ac69b36865dd4bfe5f8638935a59bad49adf00f81661978f5"
+      },
+      {
+        "bytes": 1697,
+        "path": "artifacts/exposure-source-discovery-v0.2/evidence-manifest.sha256",
+        "sha256": "feaec715fbc7571e20ca953e14a9df891e6f5d07f171e38a18e86dca9785047d"
+      },
+      {
+        "bytes": 3234,
+        "path": "artifacts/exposure-source-discovery-v0.2/negative-control-results.json",
+        "sha256": "7a146fb8ac8000a95a928cb833895df962c2aec71b1b95acce66e33334e0f260"
+      },
+      {
+        "bytes": 1991,
+        "path": "artifacts/exposure-source-discovery-v0.2/owner-questions.md",
+        "sha256": "03310d9ba8dd2af2562e85c0f5500cc22505139a779db9a260ffc9908ffe7f77"
+      },
+      {
+        "bytes": 3870,
+        "path": "artifacts/exposure-source-discovery-v0.2/owner-response-template.json",
+        "sha256": "c5783dbd6793184eceffc1c7a8b09d86f68c691c30d78ac9786fbaa7b372e6cc"
+      },
+      {
+        "bytes": 467,
+        "path": "artifacts/exposure-source-discovery-v0.2/privacy-scan.json",
+        "sha256": "ed6d8fce6391c2394ad07467cd685229777136b829ab59bef0b2919c7530b2f1"
+      },
+      {
+        "bytes": 22305,
+        "path": "artifacts/exposure-source-discovery-v0.2/query-log.json",
+        "sha256": "e72e48ee5367a88cbf67f06eb9470d0e2152c0db5f018808f6d034e05cd2782f"
+      },
+      {
+        "bytes": 1096,
+        "path": "artifacts/exposure-source-discovery-v0.2/semantic-decision.schema.json",
+        "sha256": "808287b239129ba419ba4c83f76e7a32d7f3aa70577fba5fac1b0bd87d087147"
+      },
+      {
+        "bytes": 21702,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-a-recommendation-localization.json",
+        "sha256": "2f980e3b8c69cc54ecdfbe864a4976397cb5ba3dfa36572410cf25fa1fa06f04"
+      },
+      {
+        "bytes": 4658,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-a-structured-linkage.json",
+        "sha256": "e660eec35593a56f57cbf2200afb604d5ef9788a95edd9f0ed1a064dfabc3a41"
+      },
+      {
+        "bytes": 772,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-b-identity-linkage-audit.json",
+        "sha256": "c9c33d3ba24c91db7fb9685627ef2029424679371a304cace38657a3a3fab325"
+      },
+      {
+        "bytes": 28513,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-b-schema-contract.json",
+        "sha256": "0f3bd60bc8154360f44513e202347bd0b57a20d5c5b4d81ec56e7b155ceb73dd"
+      },
+      {
+        "bytes": 7245,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-b-sentinel-profile.json",
+        "sha256": "60a449cf1b32a15f0feb1bdb3eddc176d7e5bd0475b5bd00ba7cc386fb86b8d9"
+      },
+      {
+        "bytes": 3699,
+        "path": "artifacts/exposure-source-discovery-v0.2/source-b-temporal-sequence-audit.json",
+        "sha256": "156cd0bb2417207af40288f74b41ac63329e4df44b58de1cbc4b9eca935bc7b6"
+      },
+      {
+        "bytes": 2032,
+        "path": "artifacts/exposure-source-discovery-v0.2/status-contract.json",
+        "sha256": "63b6a2c70ae4fee529eb20cc21ac67dc4ec226c0fbe25b9cf70a2177aa85cea3"
+      },
+      {
+        "bytes": 2813,
+        "path": "artifacts/exposure-source-discovery-v0.2/v01-method-limitations-reproduction.json",
+        "sha256": "a04d6521364aed01404b8d59c5ee47dc9938d6300d42e14c177b947ddda760cb"
+      },
+      {
+        "bytes": 2613,
+        "path": "artifacts/exposure-source-discovery-v0.2/verification.json",
+        "sha256": "60202b9bea6660778d205d351400c866020cb22f4ca46704841b78607ecfff15"
+      }
+    ],
+    "v02_source": [
+      {
+        "bytes": 99,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__init__.py",
+        "sha256": "6ab3546cdee331ab0a98bbab1c64002ecfd8f4350c735480a2e96db326ea697b"
+      },
+      {
+        "bytes": 310,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/__init__.cpython-313.pyc",
+        "sha256": "74b822fe3a7b0af9f3116dc4d611b9f6c20ff11809861e715eb2445936c71ba4"
+      },
+      {
+        "bytes": 2074,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/baseline.cpython-313.pyc",
+        "sha256": "ff2caa78ac6c56261436a30e63dc1a1af6dfb1d65b87caf31cdaeffb8ca8fffb"
+      },
+      {
+        "bytes": 9770,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/db.cpython-313.pyc",
+        "sha256": "5b2c37456eabaa0235ffca06867303be22bda81def5592dc51908a7e805a325b"
+      },
+      {
+        "bytes": 4891,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/decisions.cpython-313.pyc",
+        "sha256": "f3287189f2c814a7a4f844c30fd64fa35dc43447df07db443926c66e1513fbb2"
+      },
+      {
+        "bytes": 7681,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/limitations.cpython-313.pyc",
+        "sha256": "c4a1d9538e26140469e5ff744ddd2637a4ccad473a1f7054934d3100a663b9bb"
+      },
+      {
+        "bytes": 6382,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/mutations.cpython-313.pyc",
+        "sha256": "d8b1325e97c74753cae7c948ab5a15bd8be307b507c2eff3e323874238777390"
+      },
+      {
+        "bytes": 16413,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/orchestrator.cpython-313.pyc",
+        "sha256": "2ef6469a7e7a9b1e40e7b51573faaf5656c9550dcfe765d29dad075e90067e8b"
+      },
+      {
+        "bytes": 3064,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/policy.cpython-313.pyc",
+        "sha256": "5bbd6cabe08d7d3de79490130f6028711929c8eb58071fa05d95d01900495903"
+      },
+      {
+        "bytes": 8751,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/privacy.cpython-313.pyc",
+        "sha256": "76e886dddecdba6d130f0f371f08a4bf435020c4891f4e3f37f658d64545edc6"
+      },
+      {
+        "bytes": 18439,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/source_a.cpython-313.pyc",
+        "sha256": "b180102cc881b6535ec9da9d4ca455de25f372b24fa8a7c5e9480a83e37e27ba"
+      },
+      {
+        "bytes": 20167,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/source_b.cpython-313.pyc",
+        "sha256": "a5696364165e3617c69870dc59f4dbc9cba38e7d1714d0ec25bbf5749c6f1c1b"
+      },
+      {
+        "bytes": 14962,
+        "path": "src/human_simulator/exposure_source_discovery_v02/__pycache__/textutil.cpython-313.pyc",
+        "sha256": "cd17d9aaef2dd0b77e7c822f70fe79e12c430a8919ecc06dd32beb0f49e3fc9e"
+      },
+      {
+        "bytes": 1082,
+        "path": "src/human_simulator/exposure_source_discovery_v02/baseline.py",
+        "sha256": "57524842eb9de313676e8091984d06ab9bd83901349b061288c653f282380274"
+      },
+      {
+        "bytes": 6256,
+        "path": "src/human_simulator/exposure_source_discovery_v02/db.py",
+        "sha256": "884c64b0afd651dadc309c1033160079f80632db90dce6b1e275ee17643951a2"
+      },
+      {
+        "bytes": 4565,
+        "path": "src/human_simulator/exposure_source_discovery_v02/decisions.py",
+        "sha256": "c11147e8fb60dda9bf3b5c3e6cc147e0aab1d169c7bc39485c7190731dbc97ad"
+      },
+      {
+        "bytes": 6371,
+        "path": "src/human_simulator/exposure_source_discovery_v02/limitations.py",
+        "sha256": "2f75438a15f3936f135d11539299ba7773a8d0edb6dcf9e227712c07fc57dba2"
+      },
+      {
+        "bytes": 5466,
+        "path": "src/human_simulator/exposure_source_discovery_v02/mutations.py",
+        "sha256": "25751cb2c2e20207d44d2872364301cc48ec918e18511987f482ff73b1ad0a8c"
+      },
+      {
+        "bytes": 14149,
+        "path": "src/human_simulator/exposure_source_discovery_v02/orchestrator.py",
+        "sha256": "edef527dd0082cfec851c046f9c1f91cda3c9aa097ce8714053ef5d57a93a85a"
+      },
+      {
+        "bytes": 3027,
+        "path": "src/human_simulator/exposure_source_discovery_v02/policy.py",
+        "sha256": "32b0aef4e278a9a3badbb5d2c36ef3f8a3a4821eb2b3e43703f499c6695af174"
+      },
+      {
+        "bytes": 6185,
+        "path": "src/human_simulator/exposure_source_discovery_v02/privacy.py",
+        "sha256": "ec7522a4ac0feda6d3040f4e794c71fc423f386409ffd6746aa4d4305b012126"
+      },
+      {
+        "bytes": 13486,
+        "path": "src/human_simulator/exposure_source_discovery_v02/source_a.py",
+        "sha256": "4479dcec8df14c0770460fad66d54835963f7a3c186c07e8cc21c925c7c18b9d"
+      },
+      {
+        "bytes": 18104,
+        "path": "src/human_simulator/exposure_source_discovery_v02/source_b.py",
+        "sha256": "841ee02ad5ef86fb7d8fd6989d49e4c4334285524f565b3dba7ab51512de703e"
+      },
+      {
+        "bytes": 9580,
+        "path": "src/human_simulator/exposure_source_discovery_v02/textutil.py",
+        "sha256": "81190f2b1de3b8d19da830bd593eca777c603c12b1bce3134cfa0e620cf423f1"
+      }
+    ]
+  },
+  "database_access": "NOT_PERFORMED",
+  "external_review_zip_created": false,
+  "writes_into_v01": false,
+  "writes_into_v02": false,
+  "writes_into_v022": false
+}

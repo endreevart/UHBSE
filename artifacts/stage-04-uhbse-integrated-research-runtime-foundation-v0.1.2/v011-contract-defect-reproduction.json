@@ -1,0 +1,138 @@
+{
+  "V011_EXPECTED_SHA256": "e940199fdbf978241ad2dc1db22d7def015942a5d42f82cb842360d094fbeeb6",
+  "V011_INTEGRATED_RUNTIME_CLAIM_STATUS": "CORRECTION_REQUIRED",
+  "defects": [
+    {
+      "claim": "mutated payload/feature/scaler/unit still OK",
+      "id": 1,
+      "reproduced": true,
+      "status": "OK"
+    },
+    {
+      "claim": "model_id equal to feature-order hash accepted as model identity",
+      "id": 2,
+      "model_id_is_feature_order_hash": true,
+      "model_id_is_not_active_payload": true,
+      "reproduced": true,
+      "status": "OK"
+    },
+    {
+      "cases": [
+        {
+          "cell": {
+            "active_provider": "P1"
+          },
+          "equals_p0": true,
+          "yhat": 7.0
+        },
+        {
+          "cell": {
+            "active_provider": "UNKNOWN_FAMILY"
+          },
+          "equals_p0": true,
+          "yhat": 7.0
+        },
+        {
+          "cell": {
+            "active_provider": null
+          },
+          "equals_p0": true,
+          "yhat": 7.0
+        }
+      ],
+      "claim": "P1 without payload / unknown / None falls back to P0 and would be OK",
+      "id": 3,
+      "reproduced": true
+    },
+    {
+      "claim": "synthetic cells accept source_system=magerya_api",
+      "id": 4,
+      "reproduced": true,
+      "status": "OK"
+    },
+    {
+      "claim": "missing cutoff_t0 does not stop inference",
+      "id": 5,
+      "reproduced": true,
+      "status": "OK"
+    },
+    {
+      "claim": "event-probability fixture accepts arbitrary nonempty feature_order_sha256",
+      "id": 6,
+      "reproduced": true,
+      "status": "OK"
+    },
+    {
+      "claim": "invalid state / n_paths<1 can drop the HTTP connection without deterministic error",
+      "id": 7,
+      "n_paths_reason": null,
+      "nan_reason": null,
+      "reproduced": true
+    },
+    {
+      "claim": "ResearchApp defaults to synthetic bundle; frozen A/B registry is not executed",
+      "default_synthetic": true,
+      "handle_loads_nhr_frozen": true,
+      "id": 8,
+      "reproduced": true
+    },
+    {
+      "claim": "HTTP event-probability executes synthetic fixture; frozen LEP not proven",
+      "http_does_not_pass_lep": true,
+      "id": 9,
+      "lep_infer_default_none": true,
+      "reproduced": true
+    },
+    {
+      "claim": "workbench tests check fetch() HTML strings, not browser execution",
+      "html_has_fetch": true,
+      "id": 10,
+      "playwright_absent": true,
+      "reproduced": true,
+      "unit_test_asserts_fetch_string": true
+    },
+    {
+      "claim": "CLINICAL_SOURCE_CONNECTOR_COUNT includes unified layer as a third clinical source",
+      "count": 3,
+      "id": 11,
+      "reproduced": true,
+      "unified_appended": true
+    },
+    {
+      "claim": "A/B scan one Parquet; foreign_source flag is a constant; read_aggregate is not filtered",
+      "constant_true": true,
+      "id": 12,
+      "read_aggregate_unfiltered": true,
+      "reproduced": true,
+      "same_parquet_both_connectors": true
+    },
+    {
+      "claim": "excluded_invalid_rows is the leftover balance, forcing residual_selected=0",
+      "id": 13,
+      "leftover_assigned": true,
+      "reproduced": true
+    },
+    {
+      "bridge_published_in_v011": false,
+      "claim": "strict panel count 43085 (v0.1) vs 39465 (v0.1.1) is unexplained in v0.1.1",
+      "delta": 3620,
+      "id": 14,
+      "reproduced": true,
+      "v011_strict_panels": 39465,
+      "v01_strict_panels": 43085
+    },
+    {
+      "attestation_publication_integrity": "PASS",
+      "claim": "ZIP status-contract leaves publication PENDING while detached attestation is PASS",
+      "id": 15,
+      "reproduced": true,
+      "zip_publication_integrity": "PENDING",
+      "zip_self_containment": "PENDING_PUBLISH"
+    }
+  ],
+  "n_defects": 15,
+  "n_reproduced": 15,
+  "no_v012_zip_overwrite": "stage-04-uhbse-integrated-research-runtime-foundation-v0.1.2-review.zip",
+  "note": "These are v0.1.1 defects. Reproduction is required before v0.1.2 corrections.",
+  "version": "0.1.2"
+}

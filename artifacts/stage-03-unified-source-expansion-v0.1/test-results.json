@@ -1,0 +1,31 @@
+{
+  "unit/static suite": {
+    "status": "PASS",
+    "exit_code": 0,
+    "output_tail": "..........                                                               [100%]\n10 passed in 0.04s\n",
+    "collected_passed": "see output_tail"
+  },
+  "Source A live suite": {
+    "status": "LIVE_VIA_RUN",
+    "note": "Executed inside run_unified expand"
+  },
+  "Source B live suite": {
+    "status": "PASS",
+    "note": "Aggregate readiness only"
+  },
+  "full expansion run": {
+    "status": "PASS"
+  },
+  "idempotency run": {
+    "status": "PASS"
+  },
+  "scientific Source A suite": {
+    "status": "PASS"
+  },
+  "cross-source suite": {
+    "status": "OUTCOME_NOT_COMPARABLE"
+  },
+  "clean-extraction suite": {
+    "status": "DEFERRED_TO_PUBLISH"
+  }
+}

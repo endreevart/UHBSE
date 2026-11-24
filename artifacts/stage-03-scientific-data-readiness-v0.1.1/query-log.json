@@ -1,0 +1,30 @@
+{
+  "queries": [
+    {
+      "name": "row_counts",
+      "kind": "aggregate"
+    },
+    {
+      "name": "fetch_eligible_subjects",
+      "kind": "aggregate_ids_runtime"
+    },
+    {
+      "name": "profile_candidates_train_only",
+      "kind": "aggregate",
+      "n_train_subjects": 68,
+      "relations": [
+        "canonical_evidence.observation",
+        "canonical_evidence.observation_component"
+      ]
+    },
+    {
+      "name": "fetch_measurement_series",
+      "kind": "row_level_runtime_only",
+      "n_rows": 114,
+      "values_written_to_git_artifacts": false
+    }
+  ],
+  "clinical_rows_read": 114,
+  "raw_db_writes": 0,
+  "row_values_in_git_artifacts": false
+}

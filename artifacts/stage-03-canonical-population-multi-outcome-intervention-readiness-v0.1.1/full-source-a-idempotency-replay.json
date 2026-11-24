@@ -1,0 +1,58 @@
+{
+  "version": "0.1.1",
+  "source_a_idempotency_replay_status": "PASS",
+  "n_account_patient_candidates": 43856,
+  "subjects_present": 43856,
+  "subjects_missing": 0,
+  "new_subjects_inserted": 0,
+  "new_encounters_inserted": 0,
+  "new_observations_inserted": 0,
+  "new_components_inserted": 0,
+  "counts_unchanged": true,
+  "schema_fingerprint_unchanged": true,
+  "duplicate_subject_provenance_locator_groups": 0,
+  "before": {
+    "captured_at": "2026-08-19T07:15:37Z",
+    "source_system": 2,
+    "source_record": 4689885,
+    "subject": 93420,
+    "subject_characteristic": 87120,
+    "encounter": 156995,
+    "observation": 934233,
+    "observation_component": 3291609,
+    "subject_by_system": {
+      "kgz_raw": 49564,
+      "magerya_api": 43856
+    },
+    "magerya_api_encounter": 68128,
+    "magerya_api_observation": 874492,
+    "magerya_api_observation_component": 1158631,
+    "kgz_raw_encounter": 88867,
+    "kgz_raw_observation": 59741,
+    "kgz_raw_observation_component": 2132978,
+    "schema_fingerprint": "6316c75f2cdc1e7a83034feb91701c08337c56080bd59d3d575b5706a9dfe655"
+  },
+  "after": {
+    "captured_at": "2026-08-19T07:15:51Z",
+    "source_system": 2,
+    "source_record": 4689885,
+    "subject": 93420,
+    "subject_characteristic": 87120,
+    "encounter": 156995,
+    "observation": 934233,
+    "observation_component": 3291609,
+    "subject_by_system": {
+      "kgz_raw": 49564,
+      "magerya_api": 43856
+    },
+    "magerya_api_encounter": 68128,
+    "magerya_api_observation": 874492,
+    "magerya_api_observation_component": 1158631,
+    "kgz_raw_encounter": 88867,
+    "kgz_raw_observation": 59741,
+    "kgz_raw_observation_component": 2132978,
+    "schema_fingerprint": "6316c75f2cdc1e7a83034feb91701c08337c56080bd59d3d575b5706a9dfe655"
+  },
+  "mode": "read_compare_resolve_expected_ids",
+  "note": "Full candidate enumeration with expected canonical ID resolution; no delete/reload. Zero missing subjects proves complete coverage; count/fingerprint equality proves no mutation during replay."
+}

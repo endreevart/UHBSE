@@ -1,0 +1,123 @@
+{
+  "SOURCE_A_STRUCTURED_LINKAGE_STATUS": "NO_DIRECT_VISIT_KEY",
+  "constraints": [
+    {
+      "definition": "FOREIGN KEY (branch_id) REFERENCES magerya_api.reference_branch(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "appointment_appointment",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (chat_room_id) REFERENCES magerya_api.chat_chatroom(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "appointment_appointment",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (doctor_id) REFERENCES magerya_api.account_doctor(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "appointment_appointment",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (parent_appointment_id) REFERENCES magerya_api.appointment_appointment(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "appointment_appointment",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (patient_id) REFERENCES magerya_api.account_patient(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "appointment_appointment",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (representative_id) REFERENCES magerya_api.account_patient(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "appointment_appointment",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (created_by_id) REFERENCES magerya_api.account_doctor(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "diagnosis_medicineappointments",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (medicine_id) REFERENCES magerya_api.diagnosis_medicines(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "diagnosis_medicineappointments",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (patient_id) REFERENCES magerya_api.account_patient(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "diagnosis_medicineappointments",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (appointment_id) REFERENCES magerya_api.appointment_appointment(id) DEFERRABLE INITIALLY DEFERRED",
+      "relation": "document_recommendation",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "UNIQUE (appointment_id)",
+      "relation": "document_recommendation",
+      "type": "UNIQUE"
+    }
+  ],
+  "direct_foreign_key_between_medicine_row_and_recommendation_document": false,
+  "interpretation_status": "UNKNOWN_PENDING_HUMAN_REVIEW",
+  "patient_windows": {
+    "0_day": {
+      "absence_is_not_evidence_of_no_link": true,
+      "clock": "created",
+      "documents_ambiguous": 188,
+      "documents_single_candidate": 44,
+      "documents_without_structured_row": 53662,
+      "medicine_rows": 25726,
+      "medicine_rows_ambiguous": 93,
+      "medicine_rows_single_candidate": 1103,
+      "medicine_rows_without_candidate": 24530,
+      "recommendation_documents": 53894,
+      "route": "same_patient_only",
+      "strength": "WEAK_NOT_AN_EVENT_LINK"
+    },
+    "1_day": {
+      "absence_is_not_evidence_of_no_link": true,
+      "clock": "created",
+      "documents_ambiguous": 242,
+      "documents_single_candidate": 43,
+      "documents_without_structured_row": 53609,
+      "medicine_rows": 25726,
+      "medicine_rows_ambiguous": 121,
+      "medicine_rows_single_candidate": 1393,
+      "medicine_rows_without_candidate": 24212,
+      "recommendation_documents": 53894,
+      "route": "same_patient_only",
+      "strength": "WEAK_NOT_AN_EVENT_LINK"
+    },
+    "3_day": {
+      "absence_is_not_evidence_of_no_link": true,
+      "clock": "created",
+      "documents_ambiguous": 353,
+      "documents_single_candidate": 48,
+      "documents_without_structured_row": 53493,
+      "medicine_rows": 25726,
+      "medicine_rows_ambiguous": 173,
+      "medicine_rows_single_candidate": 2235,
+      "medicine_rows_without_candidate": 23318,
+      "recommendation_documents": 53894,
+      "route": "same_patient_only",
+      "strength": "WEAK_NOT_AN_EVENT_LINK"
+    },
+    "7_day": {
+      "absence_is_not_evidence_of_no_link": true,
+      "clock": "created",
+      "documents_ambiguous": 502,
+      "documents_single_candidate": 44,
+      "documents_without_structured_row": 53348,
+      "medicine_rows": 25726,
+      "medicine_rows_ambiguous": 362,
+      "medicine_rows_single_candidate": 3342,
+      "medicine_rows_without_candidate": 22022,
+      "recommendation_documents": 53894,
+      "route": "same_patient_only",
+      "strength": "WEAK_NOT_AN_EVENT_LINK"
+    }
+  },
+  "shared_appointment_route": "NOT_AVAILABLE",
+  "shared_visit_key_columns_on_medicine_row": 0,
+  "source_system": "magerya_api"
+}

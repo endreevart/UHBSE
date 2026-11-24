@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "cell": {
+        "active_provider": "P1"
+      },
+      "equals_p0": true,
+      "yhat": 7.0
+    },
+    {
+      "cell": {
+        "active_provider": "UNKNOWN_FAMILY"
+      },
+      "equals_p0": true,
+      "yhat": 7.0
+    },
+    {
+      "cell": {
+        "active_provider": null
+      },
+      "equals_p0": true,
+      "yhat": 7.0
+    }
+  ],
+  "claim": "P1 without payload / unknown / None falls back to P0 and would be OK",
+  "id": 3,
+  "reproduced": true
+}

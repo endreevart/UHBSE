@@ -1,0 +1,24 @@
+{
+  "version": "0.1.2.1",
+  "total_source_b_headers": 59741,
+  "header_only_count": 1677,
+  "headers_with_components": 58064,
+  "classification_reasons": {
+    "zero_accepted_components": 1677,
+    "has_at_least_one_component": 58064
+  },
+  "policy": "KEEP_ROWS_EXCLUDE_FROM_SCIENCE",
+  "empty_component_observation_semantics_status": "REQUIRES_FUTURE_SCHEMA_DECISION",
+  "migration_0005": false,
+  "keep_rows": true,
+  "exclude_from_science_pairs": true,
+  "note": "Header-only Observations retained in canonical store; excluded from scientific pair construction. Schema decision deferred (no migration 0005).",
+  "missingness_reason_aggregates": [
+    {
+      "missingness_reason": "(null)",
+      "n": 1677
+    }
+  ],
+  "live_error_type": null,
+  "repo_root_used": "/Volumes/Siska/DEVELOP/Human simulator"
+}

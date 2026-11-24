@@ -1,0 +1,35 @@
+{
+  "version": "0.1",
+  "source_system": "magerya_api",
+  "expected_source_medicines": 487,
+  "total_source_medicines": 487,
+  "duplicate_source_ids": 0,
+  "accounted": 487,
+  "unaccounted": 0,
+  "SOURCE_RECORD_LINKAGE_STATUS": "PASS",
+  "SOURCE_RECORD_EXACT_JOIN": 487,
+  "SOURCE_RECORD_MISSING_JOIN": 0,
+  "DRUG_CONCEPT_MAPPING_STATUS": "NO_ACCEPTED_MAPPINGS",
+  "DRUG_CONCEPT_EXACT": 0,
+  "DRUG_CONCEPT_SUPPORTED_TRANSFORM": 0,
+  "DRUG_CONCEPT_CANDIDATE_OR_UNKNOWN": 487,
+  "MEDICATION_SOURCE_ACCOUNTING_STATUS": "PASS",
+  "matches_expected": true,
+  "note": "SOURCE_RECORD_EXACT_JOIN is source-table join only; it is not accepted drug-concept harmonization",
+  "fk_usable_nonnull": {
+    "unit": 0,
+    "form": 0,
+    "frequency": 0
+  },
+  "DRUG_CONCEPT_ACCEPTED_COUNT": 0,
+  "DRUG_CONCEPT_UNRESOLVED_COUNT": 487,
+  "by_drug_concept_status": {
+    "EXACT": 0,
+    "SUPPORTED_TRANSFORM": 0,
+    "CANDIDATE": 0,
+    "AMBIGUOUS": 0,
+    "NO_MATCH": 487,
+    "CONFLICT": 0
+  },
+  "drug_concept_unaccounted": 0
+}

@@ -1,0 +1,65 @@
+{
+  "version": "0.2.1.1",
+  "ADMINISTRATIVE_OBSERVATION_WINDOW_STATUS": "BUILT",
+  "CENSORING_CONTRACT_STATUS": "PASS",
+  "predeclared_max_followup_days": 365.0,
+  "windows": {
+    "magerya_api": {
+      "source_system": "magerya_api",
+      "n_reliable_timestamps": 1022338,
+      "n_null_timestamps": 0,
+      "n_rejected_out_of_bound_timestamps": 0,
+      "minimum_reliable_timestamp": "2002-04-20T00:00:00+00:00",
+      "maximum_reliable_timestamp": "2026-07-03T09:30:27.231456+00:00",
+      "administrative_observation_end": "2026-07-03T09:30:27.231456+00:00",
+      "timestamp_completeness": 1.0,
+      "event_type_counts": {
+        "encounter": 68128,
+        "observation": 874492,
+        "medication_appointment": 25726,
+        "recommendation": 53894,
+        "procedure": 98
+      },
+      "left_truncation_rule": "landmarks require t0 within [min_reliable, admin_end)",
+      "right_censoring_rule": "followup_end = min(source_administrative_observation_end, t0 + 365.0d); if no event by followup_end then event=0",
+      "no_arbitrary_plus_90": true,
+      "source_specific": true,
+      "global_source_maximum_is_administrative_boundary": true,
+      "not_proof_of_continuous_observation_per_patient": true,
+      "year_bounds": {
+        "min": 1990,
+        "max": 2027
+      }
+    },
+    "kgz_raw": {
+      "source_system": "kgz_raw",
+      "n_reliable_timestamps": 1351846,
+      "n_null_timestamps": 0,
+      "n_rejected_out_of_bound_timestamps": 27,
+      "minimum_reliable_timestamp": "1990-10-14T20:46:44+00:00",
+      "maximum_reliable_timestamp": "2023-06-19T22:02:20+00:00",
+      "administrative_observation_end": "2023-06-19T22:02:20+00:00",
+      "timestamp_completeness": 0.9999800277097035,
+      "event_type_counts": {
+        "encounter": 88867,
+        "observation": 59741,
+        "recommendation": 999606,
+        "document_reference": 203659
+      },
+      "left_truncation_rule": "landmarks require t0 within [min_reliable, admin_end)",
+      "right_censoring_rule": "followup_end = min(source_administrative_observation_end, t0 + 365.0d); if no event by followup_end then event=0",
+      "no_arbitrary_plus_90": true,
+      "source_specific": true,
+      "global_source_maximum_is_administrative_boundary": true,
+      "not_proof_of_continuous_observation_per_patient": true,
+      "year_bounds": {
+        "min": 1990,
+        "max": 2027
+      }
+    }
+  },
+  "global_source_maximum": "2026-07-03T09:30:27.231456+00:00",
+  "global_source_maximum_is_administrative_boundary": true,
+  "not_proof_of_continuous_observation_per_patient": true,
+  "ok": true
+}

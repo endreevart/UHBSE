@@ -1,0 +1,50 @@
+{
+  "version": "0.3",
+  "UNIFIED_SOURCE_AWARE_STATE_STATUS": "PASS",
+  "classifier_trained": false,
+  "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_STARTED",
+  "subjects_with_any_state": {
+    "source_a": 18232,
+    "source_b": 34693,
+    "total_source_scoped": 52925
+  },
+  "subjects_with_longitudinal_state": {
+    "source_a": 18004,
+    "source_b": 11833
+  },
+  "states_per_source": {
+    "source_a_observations": 874492,
+    "source_b_observations": 59741
+  },
+  "modalities_supported": [
+    "shared_accepted_features",
+    "source_specific_features",
+    "modality_masks",
+    "missingness_masks",
+    "observation_age",
+    "recent_trends",
+    "diagnoses_history",
+    "medication_context",
+    "recommendations",
+    "temporal_density",
+    "source_identity",
+    "provenance",
+    "applicability_metadata"
+  ],
+  "outcomes_proxy_components": 3291609,
+  "observations_with_components": 754751,
+  "diagnoses_coverage": "SOURCE_SPECIFIC_PENDING_STRUCTURED_LOAD",
+  "medication_coverage": "SOURCE_SPECIFIC_PENDING_STRUCTURED_LOAD",
+  "document_coverage": "PRIVATE_UNSTRUCTURED_RETAINED",
+  "encounter_subjects": 70123,
+  "population": {
+    "source_a": 43856,
+    "source_b": 49564
+  },
+  "shared_feature_count": 0,
+  "source_specific_feature_count": "ALL_RETAINED_SOURCE_SCOPED",
+  "missingness": "REPORTED_VIA_MASKS_CONTRACT",
+  "temporal_horizon": "SOURCE_NATIVE",
+  "unexplained": 0,
+  "ok": true
+}

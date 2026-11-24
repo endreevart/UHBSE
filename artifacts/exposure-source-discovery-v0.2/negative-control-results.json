@@ -1,0 +1,108 @@
+{
+  "NEGATIVE_CONTROL_STATUS": "PASS",
+  "cases": [
+    {
+      "control": "whole_document_match_presented_as_localized",
+      "reason": "WHOLE_DOCUMENT_MATCH_IS_NOT_RECOMMENDATION_LOCALIZED",
+      "rejected": true
+    },
+    {
+      "control": "diagnosis_match_presented_as_medication_recommendation",
+      "reason": "HISTORY_OR_DIAGNOSIS_IS_NOT_A_RECOMMENDATION",
+      "rejected": true
+    },
+    {
+      "control": "substring_collision_presented_as_exact",
+      "reason": "SUBSTRING_COLLISION_IS_NOT_NORMALIZED_EXACT",
+      "rejected": true
+    },
+    {
+      "control": "fuzzy_candidate_presented_as_accepted_identity",
+      "reason": "ALIAS_OR_FUZZY_MATCH_IS_NOT_ACCEPTED_IDENTITY",
+      "rejected": true
+    },
+    {
+      "control": "feedback_user_id_auto_equated_to_patient_id",
+      "reason": "NUMERIC_EQUALITY_IS_NOT_A_VERIFIED_RELATION",
+      "rejected": true
+    },
+    {
+      "control": "shuffled_subject_keys",
+      "reason": "SHUFFLED_KEYS_ARE_NOT_ESTABLISHED",
+      "rejected": true
+    },
+    {
+      "control": "same_consultation_recommendation_presented_as_prior",
+      "reason": "SAME_CONSULTATION_RECOMMENDATION_IS_NOT_PRIOR",
+      "rejected": true
+    },
+    {
+      "control": "feedback_after_consultation_presented_as_previsit",
+      "reason": "POST_CONSULTATION_FEEDBACK_IS_NOT_PREVISIT",
+      "rejected": true
+    },
+    {
+      "control": "naive_timestamp_presented_as_verified",
+      "reason": "TIMESTAMP_WITHOUT_TIME_ZONE_IS_NOT_VERIFIED_CIVIL_TIME",
+      "rejected": true
+    },
+    {
+      "control": "placeholder_net_presented_as_medication_description",
+      "reason": "NEGATIVE_SHORT_IS_NOT_A_MEDICATION_DESCRIPTION",
+      "rejected": true
+    },
+    {
+      "control": "short_affirmative_presented_as_confirmed_intake",
+      "reason": "AFFIRMATIVE_SHORT_IS_NOT_CONFIRMED_INTAKE",
+      "rejected": true
+    },
+    {
+      "control": "positive_changes_attributed_to_a_drug",
+      "reason": "POSITIVE_CHANGES_HAS_NO_DRUG_ATTRIBUTION",
+      "rejected": true
+    },
+    {
+      "control": "source_a_catalog_applied_to_source_b_as_accepted_mapping",
+      "reason": "CROSS_SOURCE_CATALOG_TRANSFER_IS_NOT_ACCEPTED",
+      "rejected": true
+    },
+    {
+      "control": "patient_reported_intake_promoted_to_administration",
+      "reason": "PATIENT_REPORTED_INTAKE_IS_NOT_ADMINISTRATION",
+      "rejected": true
+    },
+    {
+      "control": "raw_text_written_to_json",
+      "reason": "RAW_TEXT_DETECTED",
+      "rejected": true
+    },
+    {
+      "control": "numeric_patient_id_missed_by_privacy_scanner",
+      "reason": "NUMERIC_PATIENT_ID_DETECTED",
+      "rejected": true
+    },
+    {
+      "control": "source_a_merged_with_source_b",
+      "reason": "CROSS_SOURCE_MERGE_NOT_PERFORMED",
+      "rejected": true
+    },
+    {
+      "control": "stage_05_readiness_promoted",
+      "reason": "READINESS_PROMOTION_FORBIDDEN",
+      "rejected": true
+    },
+    {
+      "control": "training_or_cohort_path",
+      "reason": "TRAINING_AND_COHORT_PATHS_NOT_AVAILABLE",
+      "rejected": true
+    },
+    {
+      "control": "baseline_v01_overwritten",
+      "reason": "V01_PATH_IS_NOT_A_WRITE_TARGET",
+      "rejected": true
+    }
+  ],
+  "n_cases": 20,
+  "n_rejected": 20,
+  "ok": true
+}

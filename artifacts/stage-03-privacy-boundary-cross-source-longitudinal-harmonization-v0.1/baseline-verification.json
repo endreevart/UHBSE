@@ -1,0 +1,149 @@
+{
+  "version": "0.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "accepted_gs011_sha256_observed": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d",
+  "members": 531,
+  "indexed_members": 530,
+  "carried_facts": {
+    "source_a_subjects": 43856,
+    "source_b_subjects": 49564,
+    "do_not_sum_as_unique_patients": true,
+    "source_a_global_test": 6635,
+    "v011_horizon_aligned_subjects": 623,
+    "v011_primary_targets": 19195,
+    "v011_providers": 95,
+    "v011_evaluable": 85,
+    "v011_diagnostic_only": 10,
+    "v011_in_support_sum": 18311,
+    "v011_applicability_unclassified_gap": 884,
+    "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_STARTED",
+    "SCIENTIFIC_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY"
+  },
+  "checks": [
+    {
+      "name": "gs011_zip_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "gs011_sha256",
+      "ok": true,
+      "detail": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+    },
+    {
+      "name": "gs011_sidecar",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "gs011_attestation_pass",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "gs011_members_indexed",
+      "ok": true,
+      "detail": {
+        "members": 531,
+        "indexed": 530
+      }
+    },
+    {
+      "name": "gs011_zip_member_count",
+      "ok": true,
+      "detail": 531
+    },
+    {
+      "name": "REVIEW_INDEX_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "evidence_manifest_present",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "gs01_unchanged",
+      "ok": true,
+      "detail": "3f98628fca0c7c78f29310cd88fb5cf30903720bb2528451dba6661bfb200ffc"
+    },
+    {
+      "name": "traj011_unchanged",
+      "ok": true,
+      "detail": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d"
+    },
+    {
+      "name": "unified012_unchanged",
+      "ok": true,
+      "detail": "55b92ce7b9762114040233be30eaa4705b03e1aa2d378097e21be4ef2258b269"
+    },
+    {
+      "name": "unified01211_unchanged",
+      "ok": true,
+      "detail": "5f9d10e1e57ed7423b651a0156714ce976b3ec01f5c85306e929f91f7ccdb997"
+    },
+    {
+      "name": "concept_pilot_unchanged",
+      "ok": true,
+      "detail": "aba265d5a4d6f01560b02c3e3fa68d827aba9bd3e1e594d4974d53d4bef8c7b9"
+    },
+    {
+      "name": "carried_providers_95",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "carried_evaluable_85",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "carried_diagnostic_10",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "carried_primary_targets",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "carried_horizon_subjects",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "carried_global_test",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "classifier_not_started",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "carried_in_support_sum_18311",
+      "ok": true,
+      "detail": 18311
+    },
+    {
+      "name": "carried_applicability_gap_884",
+      "ok": true,
+      "detail": 884
+    },
+    {
+      "name": "live_a_subjects",
+      "ok": true,
+      "detail": 43856
+    },
+    {
+      "name": "live_b_subjects",
+      "ok": true,
+      "detail": 49564
+    }
+  ],
+  "ok": true,
+  "drift": false
+}

@@ -1,0 +1,21 @@
+{
+  "version": "0.1.2.1",
+  "name": "CROSS_SOURCE_TRANSFER_EXPLORATION",
+  "transfer_gate_status": "FAIL",
+  "all_gates_pass": false,
+  "checks": {
+    "baseline_verification": true,
+    "validation_rollback": true,
+    "uncertainty_recompute": true,
+    "t3_harmonization_allows_transfer": false,
+    "source_b_pairs_built": true,
+    "source_b_min_sample": true,
+    "frozen_model_ready": true,
+    "applicability": true
+  },
+  "failed_checks": [
+    "t3_harmonization_allows_transfer"
+  ],
+  "b_cannot_tune_a": true,
+  "clinical_validation": "NOT_STARTED"
+}

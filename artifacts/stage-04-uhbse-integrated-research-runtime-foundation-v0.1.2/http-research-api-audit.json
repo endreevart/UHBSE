@@ -1,0 +1,38 @@
+{
+  "API_MODEL_ROUTING_STATUS": "PASS",
+  "API_NO_SILENT_FALLBACK_STATUS": "PASS",
+  "API_SCHEMA_CONTRACT_STATUS": "PASS",
+  "FROZEN_LEP_EXECUTION_STATUS": "PASS",
+  "HTTP_DETERMINISTIC_ERROR_STATUS": "PASS",
+  "HTTP_RESEARCH_API_STATUS": "BUILT",
+  "HTTP_TYPED_SCHEMA_STATUS": "PASS",
+  "SYNTHETIC_EVENT_PROBABILITY_STATUS": "PASS",
+  "WORKBENCH_BROWSER_INTEGRATION_STATUS": "PASS",
+  "bind": "127.0.0.1",
+  "browser": {
+    "WORKBENCH_BROWSER_INTEGRATION_STATUS": "PASS",
+    "bad_hash_or_abstain_visible": true,
+    "changed_state_visible": true,
+    "d1_unavailable_visible": true,
+    "not_html_string_only": true,
+    "ok": true,
+    "replay_ran": true,
+    "unit_visible": true
+  },
+  "event_executed": true,
+  "frozen_http": {
+    "executed": true,
+    "paths_disclosed": false,
+    "reason": null,
+    "source_b": {
+      "executed": true,
+      "reason": null,
+      "status": "OK"
+    },
+    "source_system": "magerya_api",
+    "status": "OK"
+  },
+  "html_has_fetch_not_a_browser_test": true,
+  "no_cors_wildcard": true,
+  "port": 63477
+}

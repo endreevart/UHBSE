@@ -1,0 +1,98 @@
+{
+  "version": "0.2.1",
+  "ENGINE_SURVIVAL_INFERENCE_STATUS": "TECHNICAL_SHADOW_PASS",
+  "ENGINE_MODEL_ROUTING_STATUS": "PASS",
+  "ENGINE_SUPPORTED_HORIZON_STATUS": "PASS",
+  "ENGINE_APPLICABILITY_INTEGRATION_STATUS": "PASS",
+  "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_FUTURE_HORIZON_READ",
+  "used_accepted_cell": true,
+  "ood_detector_invoked": true,
+  "fixtures": {
+    "accepted_b": {
+      "ok": true,
+      "abstain": false,
+      "requested_horizon": 90.0,
+      "event_probability": 0.6285782344606432,
+      "survival_probability": 0.3714217655393568,
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_LAB_PANEL",
+      "outcome_key": null,
+      "supported_horizon": 90,
+      "model_identity_sha256": "090931488d091e647c2e46c8c871036c4b288432deefa7153684477e4c383ab1",
+      "ood_detector_invoked": true,
+      "not_clinical_claim": true,
+      "not_intervention_recommendation": true,
+      "no_regime_candidate_id": true,
+      "no_future_horizon_read": true,
+      "regime_id": null
+    },
+    "future_poison_identical": true,
+    "rejected_a": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_ACCEPTED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED"
+    },
+    "unsupported_horizon": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_FOUND",
+      "requested_horizon": 14.0
+    },
+    "unsupported_365": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_FOUND",
+      "requested_horizon": 14.0
+    },
+    "wrong_source": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_ACCEPTED",
+      "acceptance_status": "EVALUATED_NOT_ACCEPTED"
+    },
+    "source_model_hijack": {
+      "ok": false,
+      "error": "MODEL_SOURCE_MISMATCH"
+    },
+    "wrong_endpoint": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_FOUND",
+      "requested_horizon": 90.0
+    },
+    "wrong_outcome": {
+      "ok": false,
+      "abstain": true,
+      "error": "CELL_NOT_FOUND",
+      "requested_horizon": 90.0
+    },
+    "ood_mutation": {
+      "ok": true,
+      "abstain": true,
+      "reason": "out_of_support_technical",
+      "ood": {
+        "in_support": false,
+        "reasons": [
+          "missing_source_reference"
+        ],
+        "invoked": true
+      },
+      "requested_horizon": 90.0
+    },
+    "hash_mismatch": {
+      "ok": false,
+      "error": "MODEL_IDENTITY_HASH_MISMATCH"
+    }
+  },
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "parent_isolation": true,
+    "rollback": true,
+    "predicted_evidence_does_not_drive_synthetic": true
+  },
+  "no_regime_id_emitted": true,
+  "ok": true
+}

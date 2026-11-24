@@ -1,0 +1,120 @@
+{
+  "version": "0.2.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "v02_members": 572,
+  "v02_indexed": 571,
+  "cache_members": 0,
+  "v02_accounting_expected": {
+    "a_grains": 95,
+    "b_code_unit_strata": 2426,
+    "candidate_records": 1096,
+    "a_grains_with_candidate": 56,
+    "no_candidate_after_exhaustive_search": 39,
+    "semantically_aligned": 0,
+    "accepted": 0,
+    "technical_shadow_eligible": 0,
+    "scientifically_usable": 0
+  },
+  "prior_before": {
+    "v02": "5e2ebf7a45b5dec207d333e515c635a5323074e8b9b01f774b51386304f0d99d",
+    "v011": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0",
+    "v01": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f",
+    "privacy": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+    "gs011": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+  },
+  "prior_after": {
+    "v02": "5e2ebf7a45b5dec207d333e515c635a5323074e8b9b01f774b51386304f0d99d",
+    "v011": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0",
+    "v01": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f",
+    "privacy": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+    "gs011": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+  },
+  "checks": [
+    {
+      "name": "v02_sha",
+      "ok": true,
+      "detail": "5e2ebf7a45b5dec207d333e515c635a5323074e8b9b01f774b51386304f0d99d"
+    },
+    {
+      "name": "v011_sha",
+      "ok": true,
+      "detail": "22ddd1d37ebe27ff59dadb2f462a15467642925f6158f94b86fcfa4afffa3cb0"
+    },
+    {
+      "name": "v01_sha",
+      "ok": true,
+      "detail": "cf0c6982bcfd8933bb1a43e6c90b10d2294c5045abfb627a26988dd89beac84f"
+    },
+    {
+      "name": "privacy_sha",
+      "ok": true,
+      "detail": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231"
+    },
+    {
+      "name": "gs011_sha",
+      "ok": true,
+      "detail": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d"
+    },
+    {
+      "name": "v02_accounting",
+      "ok": true,
+      "detail": {
+        "a_grains": 95,
+        "b_code_unit_strata": 2426,
+        "candidate_records": 1096,
+        "a_grains_with_candidate": 56,
+        "no_candidate_after_exhaustive_search": 39,
+        "semantically_aligned": 0,
+        "accepted": 0,
+        "technical_shadow_eligible": 0,
+        "scientifically_usable": 0
+      }
+    },
+    {
+      "name": "members_572",
+      "ok": true,
+      "detail": 572
+    },
+    {
+      "name": "indexed_571",
+      "ok": true,
+      "detail": 571
+    },
+    {
+      "name": "cache_zero",
+      "ok": true,
+      "detail": 0
+    },
+    {
+      "name": "manifest_ok",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "tests_json_in_manifest",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "sidecar",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "attestation_pass",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "attestation_sha",
+      "ok": true,
+      "detail": "5e2ebf7a45b5dec207d333e515c635a5323074e8b9b01f774b51386304f0d99d"
+    },
+    {
+      "name": "prior_before_equals_after",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "ok": true
+}

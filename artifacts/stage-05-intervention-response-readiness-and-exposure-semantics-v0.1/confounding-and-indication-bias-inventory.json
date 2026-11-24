@@ -1,0 +1,29 @@
+{
+  "CONFUNDING_INVENTORY_STATUS": "UNRESOLVED",
+  "associational_does_not_raise_causal": true,
+  "causal_readiness": "NOT_ESTABLISHED",
+  "evidence_source": "artifacts/stage-03-first-source-aware-medication-residual-foundation-v0.1/confounding-inventory.json",
+  "items": {
+    "adherence_unknown": true,
+    "care_intensity_confounding": "UNRESOLVED",
+    "dose_route_duration_missingness": true,
+    "indication_confounding": "UNRESOLVED",
+    "measurement_scheduling": "UNRESOLVED",
+    "not_pharmacological_effect": true,
+    "prevalent_vs_incident_context_ambiguity": "UNRESOLVED",
+    "recorded_recommendation_vs_administration_ambiguity": true,
+    "source_b_transfer_confounding": "NOT_APPLICABLE_NO_TRANSFER",
+    "statistical_signal_does_not_remove_these": true
+  },
+  "unresolved_keys": [
+    "indication_confounding",
+    "care_intensity_confounding",
+    "measurement_scheduling",
+    "prevalent_vs_incident_context_ambiguity",
+    "adherence_unknown",
+    "dose_route_duration_missingness",
+    "recorded_recommendation_vs_administration_ambiguity",
+    "statistical_signal_does_not_remove_these",
+    "not_pharmacological_effect"
+  ]
+}

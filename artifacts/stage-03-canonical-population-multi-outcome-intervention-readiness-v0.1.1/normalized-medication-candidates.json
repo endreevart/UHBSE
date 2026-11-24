@@ -1,0 +1,40 @@
+{
+  "version": "0.1.1",
+  "medication_normalization_status": "PARTIAL",
+  "layers": [
+    "SourceMedicationRecord",
+    "SourceMedicationConcept",
+    "NormalizedMedicationCandidate",
+    "ActiveIngredientCandidate"
+  ],
+  "source_medication_concepts": {
+    "n_unique_medicine_id": 487,
+    "confidence_default": "EXACT_SOURCE_ID",
+    "note": "medicine_id retained as source identity only"
+  },
+  "normalized_medication_candidates": {
+    "n_accepted": 0,
+    "n_hypothesis": 487,
+    "llm_auto_accept_forbidden": true
+  },
+  "active_ingredient_candidates": {
+    "n": 0,
+    "note": "No automatic trade-name\u2192ingredient mapping"
+  },
+  "reference_bindings": {
+    "ATC": "EVALUATION_ONLY",
+    "RxNorm": "EVALUATION_ONLY_UMLS_LICENSE_CONSTRAINTS",
+    "national_registries": "OWNER_APPROVAL_REQUIRED_BEFORE_INTEGRATION",
+    "commercial_download": false
+  },
+  "confidence_levels": [
+    "EXACT_SOURCE_ID",
+    "EXACT_REFERENCE_ID",
+    "DETERMINISTIC_TEXT_NORMALIZATION",
+    "REFERENCE_DICTIONARY_MATCH",
+    "ACTIVE_INGREDIENT_CANDIDATE",
+    "LLM_CANDIDATE",
+    "HYPOTHESIS",
+    "UNKNOWN"
+  ]
+}

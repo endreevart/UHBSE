@@ -1,0 +1,21 @@
+{
+  "medicine_id_non_null": 25726,
+  "medicine_id_non_null_rate": 1.0,
+  "unique_medicine_ids": 487,
+  "join_coverage": {
+    "rows_with_medicine_id_joined": 25726,
+    "rows_with_medicine_id_unjoined": 0,
+    "join_rate": 1.0
+  },
+  "medicine_name_columns_available": [
+    "name"
+  ],
+  "active_ingredient_availability": "UNKNOWN_REQUIRES_COLUMN_EVIDENCE",
+  "trade_name_availability": "CANDIDATE_IF_NAME_COLUMN",
+  "dose_availability": "NOT_FOUND_ON_MEDICINEAPPOINTMENTS",
+  "dose_unit_availability": "NOT_FOUND_ON_MEDICINEAPPOINTMENTS",
+  "route_availability": "NOT_FOUND_ON_MEDICINEAPPOINTMENTS",
+  "frequency_availability": "NOT_FOUND_ON_MEDICINEAPPOINTMENTS",
+  "duration_availability": "NOT_FOUND_ON_MEDICINEAPPOINTMENTS",
+  "note": "medicine_id is a source identity, not automatically an active ingredient. Trade names must not be treated as ingredients without evidence."
+}

@@ -1,0 +1,49 @@
+{
+  "version": "0.1.1",
+  "ENGINE_REAL_HELDOUT_TRAJECTORY_STATUS": "TECHNICAL_REAL_HELDOUT_PASS",
+  "INDIVIDUAL_STATE_ASSEMBLY_STATUS": "BUILT",
+  "claim_level": "TECHNICAL_REAL_HELDOUT_ONLY",
+  "not_clinical_validation": true,
+  "checks": {
+    "never_in_train_validation": true,
+    "determinism_ok": true,
+    "horizon_perturbation_changes_output": true,
+    "observed_value_perturbation_changes_output": true,
+    "missing_outcome_reduces_coverage": true,
+    "actual_horizon_prediction_equals_target_horizon": true,
+    "predictions_in_evidence_history": true,
+    "physiology_unchanged_by_predictions": true,
+    "checkpoint_ok": true,
+    "fork_ok": true,
+    "rollback_ok": true,
+    "parent_isolation_ok": true,
+    "no_medication_selection": true
+  },
+  "split_proof": {
+    "subject_role": "test",
+    "never_in_train_validation": true,
+    "global_split_hash": "ba3579f909712863fe97b1cb752bd5249682c586a9b91bdadc089e06c7f24c06"
+  },
+  "demo_fixed_30d_note": "Fixed 30-day state is engine/demo snapshot only; primary backtest uses actual-horizon predictions.",
+  "actual_horizon_replay": {
+    "prediction_horizon_days": 213.0,
+    "target_horizon_days": 213.0,
+    "horizons_equal": true,
+    "outcome": "Т4 св.",
+    "unit": "нг/дл",
+    "y_pred_matches_primary_row": true
+  },
+  "state_hash": "cbd5ca6a312ffc77cf5bab9cbdca0a286f0e42492036b5d87cfd302c7f67af5c",
+  "n_predictions_demo_30d": 35,
+  "predictions_hash_run1": "a24c99645e7981148cef1dc04746775cf89bbd0c6c84d826633bd73ef9eb1cc6",
+  "predictions_hash_run2": "a24c99645e7981148cef1dc04746775cf89bbd0c6c84d826633bd73ef9eb1cc6",
+  "checkpoint": {
+    "checkpoint_id": "global_state_v011_parent-w2",
+    "state_hash": "2cd764fb1e1d51b4aa91a12c07afe7747ac050b294be7c0f623e254fc8c6627a"
+  },
+  "parent_isolation": {
+    "fork_isolation_verified": true
+  },
+  "public_fields_only": true,
+  "ok": true
+}

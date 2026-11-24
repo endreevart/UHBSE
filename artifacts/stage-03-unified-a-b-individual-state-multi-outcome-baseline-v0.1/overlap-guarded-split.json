@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "CROSS_SOURCE_IDENTITY_MERGE_STATUS": "NOT_RUN",
+  "PRIVATE_OVERLAP_GROUP_DATASET_STATUS": "BUILT",
+  "GLOBAL_A_B_SPLIT_STATUS": "PASS_OVERLAP_GUARDED",
+  "CROSS_SOURCE_INDEPENDENCE_STATUS": "NOT_ESTABLISHED",
+  "overlap_aware": true,
+  "n_confirmed_pairs": 0,
+  "n_candidate_pairs": 0,
+  "n_ambiguous_nodes": 0,
+  "n_conflicting_nodes": 0,
+  "n_overlap_groups": 0,
+  "source_balance": {
+    "magerya_api": {
+      "train": 30713,
+      "validation": 6506,
+      "test": 6637
+    },
+    "kgz_raw": {
+      "train": 34867,
+      "validation": 7346,
+      "test": 7351
+    }
+  },
+  "subject_role_intersection": 0,
+  "group_role_violations": 0,
+  "confirmed_candidate_cross_role_violations": 0,
+  "repeatable": true,
+  "raw_identifiers_persisted": false,
+  "ok": true
+}

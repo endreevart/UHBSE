@@ -1,0 +1,59 @@
+{
+  "version": "0.2.1",
+  "V02_PROBABILITY_ACCEPTANCE_CLAIM_STATUS": "CORRECTION_REQUIRED",
+  "cells": [
+    {
+      "source_system": "magerya_api",
+      "endpoint": "TIME_TO_NEXT_RECORDED_EVENT",
+      "outcome_key": null,
+      "v02_status": "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_OR_CALIBRATED_SIGNAL",
+      "v02_horizons": []
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_NEXT_RECORDED_EVENT",
+      "outcome_key": null,
+      "v02_status": "TECHNICAL_PROBABILITY_FOUNDATION_ACCEPTED",
+      "v02_horizons": [
+        30,
+        90,
+        180
+      ]
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1004::%",
+      "v02_status": "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_OR_CALIBRATED_SIGNAL",
+      "v02_horizons": []
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::33::ммоль/л",
+      "v02_status": "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_OR_CALIBRATED_SIGNAL",
+      "v02_horizons": []
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::30::ммоль/л",
+      "v02_status": "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_OR_CALIBRATED_SIGNAL",
+      "v02_horizons": []
+    },
+    {
+      "source_system": "kgz_raw",
+      "endpoint": "TIME_TO_FIRST_SOURCE_SPECIFIC_OUTCOME_EXCURSION",
+      "outcome_key": "B::mm_1002::%",
+      "v02_status": "EVALUATED_NOT_ACCEPTED_NO_INCREMENTAL_OR_CALIBRATED_SIGNAL",
+      "v02_horizons": []
+    }
+  ],
+  "unselected_excursion_outcomes_without_NOT_RUN": [
+    "B::28::г/л",
+    "B::48::мкмоль/л",
+    "B::8::Ед/л",
+    "B::9::Ед/л"
+  ],
+  "ok": true
+}

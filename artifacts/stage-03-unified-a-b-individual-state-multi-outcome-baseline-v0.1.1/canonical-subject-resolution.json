@@ -1,0 +1,43 @@
+{
+  "version": "0.1.1",
+  "CANONICAL_SUBJECT_ID_RESOLUTION_STATUS": "PASS",
+  "n_map_rows": 93420,
+  "n_a": 43856,
+  "n_b": 49564,
+  "fixtures": {
+    "version": "0.1.1",
+    "cases": [
+      {
+        "source": "magerya_api",
+        "source_subject_key_present": true,
+        "subject_id_in_research": true,
+        "subject_id_equals_source_subject_key": false,
+        "expected_subject_id_equals_source_subject_key": false,
+        "wrong_double_form_in_research": false
+      },
+      {
+        "source": "kgz_raw",
+        "source_subject_key_present": true,
+        "subject_id_in_research": true,
+        "subject_id_equals_source_subject_key": true,
+        "expected_subject_id_equals_source_subject_key": true,
+        "wrong_double_hmac_in_research": false,
+        "wrong_double_hmac_must_be_absent": true
+      }
+    ]
+  },
+  "live_resolution": {
+    "a": {
+      "resolved": true,
+      "in_research": true,
+      "matches_entity_id_formula": true
+    },
+    "b": {
+      "resolved": true,
+      "in_research": true,
+      "no_second_entity_id": true,
+      "double_hmac_absent": true
+    }
+  },
+  "ok": true
+}

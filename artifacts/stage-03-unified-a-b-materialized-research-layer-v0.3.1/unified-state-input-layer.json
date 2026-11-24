@@ -1,0 +1,50 @@
+{
+  "version": "0.3.1",
+  "UNIFIED_STATE_INPUT_LAYER_STATUS": "BUILT",
+  "INDIVIDUAL_STATE_DATASET_STATUS": "NOT_STARTED",
+  "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_STARTED",
+  "n_individual_state_records": 0,
+  "cutoff_x_subject_states_created": false,
+  "feature_availability_inventory": {
+    "research_observation": {
+      "rows": 934233,
+      "file_exists": true
+    },
+    "research_observation_component": {
+      "rows": 3291609,
+      "file_exists": true
+    },
+    "research_diagnosis": {
+      "rows": 0,
+      "file_exists": true
+    },
+    "research_medication_record": {
+      "rows": 25726,
+      "file_exists": true
+    },
+    "research_recommendation": {
+      "rows": 1053500,
+      "file_exists": true
+    },
+    "research_encounter": {
+      "rows": 156995,
+      "file_exists": true
+    },
+    "research_event": {
+      "rows": 2374211,
+      "file_exists": true
+    },
+    "research_provenance": {
+      "rows": 4689885,
+      "file_exists": true
+    }
+  },
+  "missingness_metadata": {
+    "diagnosis_patient_facts": "ABSENT_STRUCTURED",
+    "medication_administration": "NOT_CLAIMED",
+    "recommendation_body_text": "EXCLUDED_PRIVACY"
+  },
+  "source_specific_semantic_keys_present": true,
+  "accepted_shared_keys": 0,
+  "ok": true
+}

@@ -1,0 +1,58 @@
+{
+  "version": "0.1",
+  "INDIVIDUAL_STATE_DATASET_STATUS": "BUILT",
+  "STATE_TARGET_DATASET_STATUS": "BUILT",
+  "STATE_DATASET_ACCOUNTING_STATUS": "PASS",
+  "STATE_TEMPORAL_LEAKAGE_STATUS": "PASS",
+  "STATE_PRIVACY_STATUS": "PASS",
+  "funnel": {
+    "all_source_scoped_subjects": 93420,
+    "subjects_with_any_event": 70512,
+    "longitudinal_subjects": 68732,
+    "subjects_with_valid_cutoff": 24030,
+    "subjects_with_state": 24030,
+    "subjects_with_future_target": 24030,
+    "train_subjects": 16870,
+    "validation_subjects": 3595,
+    "test_subjects": 3565,
+    "state_rows": 234683,
+    "target_rows": 8471281,
+    "excluded": {
+      "no_valid_cutoff": 44702,
+      "not_longitudinal": 1780
+    }
+  },
+  "n_state_rows": 234683,
+  "n_target_rows": 8471281,
+  "selected_outcomes_a": [
+    "A::Лимфоциты::%",
+    "A::Моноциты::%",
+    "A::Эозинофилы::%",
+    "A::Нейтрофилы::%",
+    "A::Базофилы::%",
+    "A::Общий белок::г/л",
+    "A::Эритроциты::*10^12/л",
+    "A::Тромбоциты::*10^9/л",
+    "A::Лейкоциты::*10^9/л",
+    "A::Железо::мкмоль/л",
+    "A::Гемоглобин::г/л",
+    "A::25(OH)витамин D::нг/мл"
+  ],
+  "selected_outcomes_b": [
+    "B::mm_1004::%",
+    "B::33::ммоль/л",
+    "B::30::ммоль/л",
+    "B::28::г/л",
+    "B::mm_1002::%",
+    "B::48::мкмоль/л",
+    "B::16::ммоль/л",
+    "B::8::Ед/л",
+    "B::9::Ед/л",
+    "B::32::ммоль/л",
+    "B::928::нг/мл",
+    "B::55::пмоль/л"
+  ],
+  "accepted_shared_feature_count": 0,
+  "same_time_targets": 0,
+  "ok": true
+}

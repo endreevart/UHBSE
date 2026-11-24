@@ -1,0 +1,100 @@
+{
+  "NEGATIVE_CONTROL_STATUS": "PASS",
+  "baseline_accepted": true,
+  "cases": [
+    {
+      "control": "missing_reviewer_digest",
+      "reason": "SCHEMA_REQUIRED",
+      "rejected": true
+    },
+    {
+      "control": "extra_property_with_personal_name",
+      "reason": "SCHEMA_CLOSED",
+      "rejected": true
+    },
+    {
+      "control": "decided_at_without_utc",
+      "reason": "SCHEMA_PATTERN",
+      "rejected": true
+    },
+    {
+      "control": "evidence_hash_not_sha256",
+      "reason": "SCHEMA_PATTERN",
+      "rejected": true
+    },
+    {
+      "control": "reviewer_digest_is_plain_text",
+      "reason": "DIGEST_REQUIRED",
+      "rejected": true
+    },
+    {
+      "control": "answer_edited_after_hashing",
+      "reason": "EVIDENCE_HASH_BOUND",
+      "rejected": true
+    },
+    {
+      "control": "decision_fabricated_from_not_remembered_answer",
+      "reason": "UNKNOWN_STAYS_UNKNOWN",
+      "rejected": true
+    },
+    {
+      "control": "recall_uncertain_identity_promoted_to_confirmed",
+      "reason": "RECALL_CAVEAT_PRESERVED",
+      "rejected": true
+    },
+    {
+      "control": "identity_claimed_established",
+      "reason": "OWNER_STATEMENT_IS_NOT_DATA_PROOF",
+      "rejected": true
+    },
+    {
+      "control": "identity_data_proof_claimed",
+      "reason": "OWNER_STATEMENT_IS_NOT_DATA_PROOF",
+      "rejected": true
+    },
+    {
+      "control": "administration_mapping_counted",
+      "reason": "CEILING_ADMINISTRATION",
+      "rejected": true
+    },
+    {
+      "control": "domain_mapping_accepted",
+      "reason": "CEILING_DOMAIN",
+      "rejected": true
+    },
+    {
+      "control": "cross_source_identity_linked",
+      "reason": "NO_A_B_MERGE",
+      "rejected": true
+    },
+    {
+      "control": "readiness_claimed",
+      "reason": "CEILING_READINESS",
+      "rejected": true
+    },
+    {
+      "control": "activity_section_labelled_medication",
+      "reason": "CATALOG_LABEL_IS_LIFESTYLE",
+      "rejected": true
+    },
+    {
+      "control": "assignment_treated_as_administration",
+      "reason": "ASSIGNMENT_NOT_ADMINISTRATION",
+      "rejected": true
+    },
+    {
+      "control": "code_only_fact_kept_confirmed_without_code",
+      "reason": "CODE_EVIDENCE_REQUIRED",
+      "rejected": true
+    },
+    {
+      "control": "timezone_kept_without_answer",
+      "reason": "TIMEZONE_NEEDS_OWNER_ANSWER",
+      "rejected": true
+    }
+  ],
+  "n_cases": 18,
+  "n_rejected": 18,
+  "ok": true,
+  "privacy_rejects_numeric_identifier": true
+}

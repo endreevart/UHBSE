@@ -1,0 +1,52 @@
+{
+  "expected_subjects": 49564,
+  "expected_encounters": 88867,
+  "repair_performed": false,
+  "migration_0005": false,
+  "source_b_aggregates": {
+    "distinct_consultations_patient_id": 49564,
+    "null_patient_id": 0,
+    "patient_id_without_user": 0,
+    "users_in_both_patient_and_doctor_roles": 0
+  },
+  "temporal_aggregates": {
+    "date_non_null": 82696,
+    "time_non_null": 82696,
+    "created_at_non_null": 88867,
+    "confirmed_at_non_null": 83743,
+    "success_at_non_null": 83854,
+    "cancel_at_non_null": 718,
+    "confirmed_true": 83742,
+    "confirmed_false": 5125,
+    "confirmed_null": 0,
+    "success_true": 83854,
+    "success_false": 5013,
+    "success_null": 0,
+    "cancel_true": 719,
+    "cancel_false": 88148,
+    "cancel_null": 0,
+    "completed_consultations": 83830,
+    "cancelled_consultations": 719,
+    "scheduled_confirmed_consultations": 50,
+    "incomplete_open_consultations": 4268,
+    "contradictory_success_and_cancel": 24,
+    "confirmed_at_before_created_at": 1059,
+    "success_at_before_created_at": 1060,
+    "cancel_at_before_created_at": 3,
+    "total_consultations": 88867
+  },
+  "canonical": {
+    "subjects": 49564,
+    "encounters": 88867,
+    "subjects_missing_source_record": 0,
+    "source_a_b_subject_key_collisions": 0,
+    "non_opaque_subject_keys": 0,
+    "matches_expected_subjects": true,
+    "matches_expected_encounters": true
+  },
+  "source_b_subject_mapping_status": "ACCEPTED",
+  "source_b_encounter_mapping_status": "ACCEPTED",
+  "source_b_encounter_audit_status": "PASS",
+  "repair_needed": false,
+  "status": "PASS"
+}

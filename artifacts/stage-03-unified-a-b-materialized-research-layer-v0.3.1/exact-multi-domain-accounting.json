@@ -1,0 +1,124 @@
+{
+  "version": "0.3.1",
+  "EXACT_MULTI_DOMAIN_ACCOUNTING_STATUS": "PASS",
+  "count_method_authoritative": "COUNT(*)_or_canonical_manifest",
+  "reltuples_used_for_pass": false,
+  "do_not_publish_summed_supported_millions": true,
+  "grains": {
+    "subjects": {
+      "eligible": 93420,
+      "materialized": 93420
+    },
+    "encounters": {
+      "eligible": 156995,
+      "materialized": 156995
+    },
+    "observations": {
+      "eligible": 934233,
+      "materialized": 934233
+    },
+    "observation_components": {
+      "eligible": 3291609,
+      "materialized": 3291609
+    },
+    "source_records_provenance": {
+      "eligible": 4689885,
+      "materialized": 4689885
+    },
+    "medication_events_a": {
+      "eligible": 25726,
+      "materialized": 25726,
+      "rejected": 0
+    },
+    "recommendation_patient_events": {
+      "eligible": null,
+      "materialized": 1053500,
+      "rejected": 0
+    },
+    "procedures_a": {
+      "eligible": 98,
+      "materialized": 98
+    },
+    "document_references_b": {
+      "eligible": null,
+      "materialized": 203659
+    },
+    "diagnosis_patient_facts": {
+      "eligible": 0,
+      "materialized": 0,
+      "retained_unresolved": 0,
+      "note": "diagnosis_diagnosis is REFERENCE_CATALOG (name/description only); no structured patient/encounter-linked diagnosis fact table confirmed"
+    },
+    "events": {
+      "eligible": 2374211,
+      "materialized": 2374211
+    }
+  },
+  "grain_reconciliation": [
+    {
+      "grain": "subjects",
+      "ok": true,
+      "eligible": 93420,
+      "materialized": 93420
+    },
+    {
+      "grain": "encounters",
+      "ok": true,
+      "eligible": 156995,
+      "materialized": 156995
+    },
+    {
+      "grain": "observations",
+      "ok": true,
+      "eligible": 934233,
+      "materialized": 934233
+    },
+    {
+      "grain": "observation_components",
+      "ok": true,
+      "eligible": 3291609,
+      "materialized": 3291609
+    },
+    {
+      "grain": "source_records_provenance",
+      "ok": true,
+      "eligible": 4689885,
+      "materialized": 4689885
+    },
+    {
+      "grain": "medication_events_a",
+      "ok": true,
+      "eligible": 25726,
+      "materialized": 25726,
+      "rejected": 0
+    }
+  ],
+  "identity": {
+    "raw_or_eligible": 9191868,
+    "materialized_plus_rejected": 9191868,
+    "retained_unresolved_catalog_relations": 183,
+    "unsupported_infrastructure_relations": 100,
+    "truncated": 0,
+    "unaccounted": 0,
+    "equation": "eligible_canonical_and_meds = materialized + rejected"
+  },
+  "UNACCOUNTED_COUNT": 0,
+  "TRUNCATED_COUNT": 0,
+  "source_a_schemas": [
+    "magerya_api",
+    "public",
+    "tiger",
+    "tiger_data",
+    "topology"
+  ],
+  "source_b_schemas": [
+    "public",
+    "quest_digital",
+    "tiger",
+    "tiger_data",
+    "topology"
+  ],
+  "source_b_users_observed": true,
+  "source_b_consultations_observed": true,
+  "ok": true
+}

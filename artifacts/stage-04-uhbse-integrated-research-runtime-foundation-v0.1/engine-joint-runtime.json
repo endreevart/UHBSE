@@ -1,0 +1,28 @@
+{
+  "ENGINE_CROSS_PROCESS_REPLAY_STATUS": "PASS_TWO_SUBPROCESS",
+  "ENGINE_FUTURE_INFORMATION_LEAKAGE_STATUS": "PASS_NO_T1_T2_READ",
+  "ENGINE_JOINT_MODEL_ROUTING_STATUS": "D1_ONLY_IF_ACCEPTED_ELSE_EXPLICIT_D0_OR_ABSTAIN",
+  "ENGINE_JOINT_ROLLOUT_STATUS": "PASS",
+  "corrupted_payload_status": "FAIL",
+  "lifecycle": {
+    "checkpoint": true,
+    "fork": true,
+    "ok": true,
+    "parent_isolation": true,
+    "rollback": true
+  },
+  "model_hash_mismatch_hard_fail": true,
+  "n_path_outcomes": 9,
+  "ok": true,
+  "outcome_order_mismatch_hard_fail": true,
+  "replay": {
+    "ENGINE_CROSS_PROCESS_REPLAY_STATUS": "PASS_TWO_SUBPROCESS",
+    "byte_identical_same_seed": true,
+    "different_seed_nondegenerate": true,
+    "n_outcomes": 9,
+    "ok": true
+  },
+  "route_used": "D0",
+  "scalar_cannot_joint_pass": true,
+  "version": "0.1"
+}

@@ -1,0 +1,11 @@
+{
+  "constructor_date_non_null": 2132316,
+  "constructor_date_null": 50981,
+  "created_at_non_null": 2183297,
+  "updated_at_non_null": 2183297,
+  "date_far_before_created_at_365d": 18386,
+  "clinical_time_policy": [
+    "1. analyses_constructor.date",
+    "2. consultation confirmed_at / success_at / date+time / created_at"
+  ]
+}

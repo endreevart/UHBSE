@@ -1,0 +1,58 @@
+{
+  "version": "0.1.1",
+  "levels": {
+    "level_0_source_medication_row": 25726,
+    "level_0_with_patient_link": 25726,
+    "level_1_timestamped_medication_event_candidate": 24880,
+    "level_2_pre_post_event_window": 9969,
+    "level_3_outcome_specific_event_episode_pairs": 212456,
+    "level_3_outcome_specific_event_episodes": 7965,
+    "level_3_subjects": 878,
+    "level_4_medication_specific_outcome_episodes": 7965,
+    "level_4_subjects": 878,
+    "level_5_intervention_associated_modeling_episodes": 0,
+    "level_5_subjects": 0
+  },
+  "hierarchy_monotonic": true,
+  "terminology": {
+    "intervention_episode_allowed_below_level_4": false,
+    "level_2_label": "pre_post_event_window",
+    "level_5_label": "intervention_associated_modeling_episode",
+    "not_treatment_effect": true
+  },
+  "reinterpretation_of_v01_1996": {
+    "v01_reported_pre_post_windows": 1996,
+    "recomputed_level2_using_created": 4408,
+    "recomputed_level2_using_candidate_timestamp": 9969,
+    "candidate_timestamp": "appointment_date",
+    "correct_label_for_v01_1996": "level_2_pre_post_event_window",
+    "not_an_intervention_episode": true,
+    "not_treatment_effect": true,
+    "note": "The v0.1 figure of ~1,996 is a Level-2 pre/post laboratory window around a medication row timestamp (created), NOT a verified intervention episode."
+  },
+  "overlap_polypharmacy": {
+    "patient_days_with_gt1_distinct_medicine_id": 3574
+  },
+  "modeling_gates": {
+    "technical_event_timestamp_accepted": false,
+    "clinical_event_time_status": "CANDIDATE_ONLY",
+    "min_level5_subjects": 200,
+    "min_level5_episodes": 500,
+    "min_test_subjects": 50,
+    "min_test_episodes": 100,
+    "level5_subjects": 0,
+    "level5_episodes": 0,
+    "cohort_gate_pass": false,
+    "failed_gates": [
+      "technical_event_timestamp_not_ACCEPTED",
+      "level5_cohort_below_predeclared_minimum"
+    ]
+  },
+  "causal_interpretation_allowed": false,
+  "treatment_effect_estimated": false,
+  "clinical_response_claimed": false,
+  "technical_event_window_status": "BUILT",
+  "outcome_specific_episode_status": "BUILT",
+  "medication_specific_episode_status": "BUILT",
+  "intervention_modeling_dataset_status": "NOT_BUILT_GATES_FAILED"
+}

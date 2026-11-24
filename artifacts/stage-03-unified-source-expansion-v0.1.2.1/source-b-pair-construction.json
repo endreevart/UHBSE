@@ -1,0 +1,38 @@
+{
+  "version": "0.1.2.1",
+  "status": "BUILT",
+  "source_b_pair_construction_status": "BUILT",
+  "stratum": {
+    "raw_code": "53",
+    "raw_unit": "\u043f\u043c\u043e\u043b\u044c/\u043b"
+  },
+  "exclusion_reasons": {
+    "non_numeric": 0,
+    "header_only_excluded": 0,
+    "undefined_unit": 0,
+    "wrong_unit": 0,
+    "horizon_le_0": 1360,
+    "single_point_subjects": 8640
+  },
+  "horizon_histogram": {
+    "lt_1d": 7,
+    "1_7d": 10,
+    "7_30d": 37,
+    "30_90d": 1960,
+    "90_365d": 3379,
+    "365_730d": 494,
+    "gt_730d": 178
+  },
+  "technical_min_sample_gate": {
+    "n_subjects_with_pairs": 3217,
+    "n_pairs": 6065,
+    "min_subjects": 100,
+    "min_pairs": 200,
+    "pass": true,
+    "threshold_class": "ENGINEERING_ONLY_NOT_CLINICAL"
+  },
+  "n_input_rows": 19860,
+  "live_error_type": null,
+  "subject_keys_omitted": true,
+  "pair_ids_omitted": true
+}

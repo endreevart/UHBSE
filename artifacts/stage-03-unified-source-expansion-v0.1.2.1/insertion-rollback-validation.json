@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "insertion_rollback_validation_status": "PASS",
+  "rollback": true,
+  "counts_before": {
+    "observation": 637957,
+    "observation_component": 2935305,
+    "source_record": 3885993
+  },
+  "deltas_after_first_insert": {
+    "observation": 1,
+    "observation_component": 1,
+    "source_record": 2
+  },
+  "counts_after_rollback": {
+    "observation": 637957,
+    "observation_component": 2935305,
+    "source_record": 3885993
+  },
+  "counts_unchanged_after_rollback": true,
+  "first_insert_rowcounts": {
+    "observation_id_prefix": "v0121test_",
+    "component_id_prefix": "v0121test_",
+    "source_record_obs_rowcount": "1",
+    "observation_rowcount": "1",
+    "source_record_comp_rowcount": "1",
+    "component_rowcount": "1"
+  },
+  "second_insert_rowcounts": {
+    "observation_id_prefix": "v0121test_",
+    "component_id_prefix": "v0121test_",
+    "source_record_obs_rowcount": "0",
+    "observation_rowcount": "0",
+    "source_record_comp_rowcount": "0",
+    "component_rowcount": "0"
+  },
+  "idempotency_on_conflict_proven": true,
+  "encounter_id_null": true,
+  "mapping_status": "CANDIDATE",
+  "validation_id_prefix": "v0121test_",
+  "no_raw_ab_writes": true,
+  "no_pii_in_artifact": true,
+  "raw_subject_id_omitted": true
+}

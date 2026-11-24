@@ -1,0 +1,98 @@
+{
+  "accepted_zip": "stage-03-medication-reference-acquisition-first-concept-cohorts-v0.1-review.zip",
+  "accepted_sha256_pin": "d45c57b3ee35a3a3bae560b79a101343c8d0e1ed9c64e36228c455932eff7534",
+  "accepted_members_pin": 412,
+  "accepted_indexed_pin": 411,
+  "carried_status": {
+    "M2ID_ONEHOT_MODEL_FREEZE_STATUS": "FROZEN",
+    "M2ID_ONEHOT_ENGINE_SHADOW_STATUS": "PASS",
+    "DRUG_CONCEPT_ACCEPTED_COUNT": 0,
+    "FIRST_INTERVENTION_COHORT_READINESS_STATUS": "ZERO_READY"
+  },
+  "zip_exists": true,
+  "zip_sha256": "d45c57b3ee35a3a3bae560b79a101343c8d0e1ed9c64e36228c455932eff7534",
+  "zip_sha_matches_pin": true,
+  "sidecar_exists": true,
+  "sidecar_matches": true,
+  "attestation_exists": true,
+  "attestation_sha_matches": true,
+  "attestation_members": 412,
+  "attestation_indexed": 411,
+  "attestation_status": "PASS",
+  "members": 412,
+  "unique_members": 412,
+  "has_review_index": true,
+  "has_evidence_manifest": true,
+  "members_match_pin": true,
+  "members_eq_indexed_plus_1": true,
+  "v01_freeze_artifact_exists": true,
+  "v01_shadow_artifact_exists": true,
+  "v01_freeze_status": "FROZEN",
+  "frozen_m2id_onehot_hashes": [
+    {
+      "outcome": "Лимфоциты",
+      "unit": "%",
+      "file_sha256": "7ce14b43c1960a6011032bbd2c266ed5d80c57bca0ca646226bf01dff5989a18",
+      "model_identity_sha256": "8cee91c6c2b98e974e9c600269972073dfb8ca0bf1b641707a1b9d2b06e9a302",
+      "vocab_hash": "878c6c9a1b6380ab4056430c2ab352958da803ebf62fb8cf7354d93df17552fe"
+    },
+    {
+      "outcome": "Средний объем эритроцитов (MCV)",
+      "unit": "фл",
+      "file_sha256": "6749e960027ff424b35c035d467453c97fdf2e3313b65c15853a128aa30b4a7d",
+      "model_identity_sha256": "b817984322fe1587e18f1ae29f0fec62c35f6326fd01eba2c3a7ca3971c8cbac",
+      "vocab_hash": "db938e43ce94c386a439279465b44e97936f0dd616ead40f5bbfb6d225705b7f"
+    },
+    {
+      "outcome": "Моноциты",
+      "unit": "%",
+      "file_sha256": "faa1c56915ee1d12b12c14120aab2b84d72d2aeee5e6f6231b4073c40777f37a",
+      "model_identity_sha256": "e202f4bf8c88fa9717d799d1df2973078449974c2d4061e40d5a8ed97b700acf",
+      "vocab_hash": "f145d16d1402e1deb4c93a4b7fb23531bc7d6461868b0e607785091ffb154339"
+    },
+    {
+      "outcome": "Нейтрофилы",
+      "unit": "%",
+      "file_sha256": "80ee556ff3bc8a6ece9c0487361b1d269c5dd0eadff782b60bda0dcfc847f7e4",
+      "model_identity_sha256": "094706a3d45d231ff58742aadf0dee56ea3e12a91c95871699ffeec13c3d3427",
+      "vocab_hash": "62a0816deeb67bc7d5fe9921af232366b4668360216ef34d977cf310bbd2f6d3"
+    },
+    {
+      "outcome": "Эозинофилы",
+      "unit": "%",
+      "file_sha256": "a792a0183f3f3e63656ffa467fbb15d1fcb40f85026c66b9fec821a53b28e787",
+      "model_identity_sha256": "9a96368bef8b2def778e74bea73ba4f78e90b9e94c6bb8222ab78ba3271adb65",
+      "vocab_hash": "bbb0da49b588e1274cede982f8a7b56cf83fd04582f617e5b0fdf87275b66bc1"
+    }
+  ],
+  "v01_shadow_status": "PASS",
+  "prior_immutable_zips": {
+    "medication_reference_v0.1": {
+      "exists": true,
+      "sha256": "d45c57b3ee35a3a3bae560b79a101343c8d0e1ed9c64e36228c455932eff7534",
+      "unchanged": true,
+      "pin": "d45c57b3ee35a3a3bae560b79a101343c8d0e1ed9c64e36228c455932eff7534"
+    },
+    "medication_concept_harmonization_v0.1": {
+      "exists": true,
+      "sha256": "be8b24391bcdc21dcef215e0de157fdcb06216b7dafd19e45dafac84adf82982",
+      "unchanged": true,
+      "pin": "be8b24391bcdc21dcef215e0de157fdcb06216b7dafd19e45dafac84adf82982"
+    },
+    "medication_knowledge_v0.1": {
+      "exists": true,
+      "sha256": "ae0943317facef424097f3784274192ae379aa1add33ab78653dc1811542ca3c",
+      "unchanged": true,
+      "pin": "ae0943317facef424097f3784274192ae379aa1add33ab78653dc1811542ca3c"
+    },
+    "medication_association_v0.1.1": {
+      "exists": true,
+      "sha256": "7c2d1bc1fcf3a96130bc2a8cf944850a88f5727ee7f3be43fca969fa1dcaa963",
+      "unchanged": true,
+      "pin": "7c2d1bc1fcf3a96130bc2a8cf944850a88f5727ee7f3be43fca969fa1dcaa963"
+    }
+  },
+  "all_priors_unchanged": true,
+  "ok": true,
+  "BASELINE_VERIFICATION_STATUS": "PASS"
+}

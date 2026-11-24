@@ -1,0 +1,1291 @@
+{
+  "version": "0.2",
+  "DOMAIN_REVIEW_WORKBENCH_STATUS": "PASS",
+  "pack_dir": "private/cross-source-lab-semantic-v02/review-pack",
+  "required_files": {
+    "exhaustive-priority-review.html": true,
+    "exhaustive-priority-review.csv": true,
+    "full-source-a-provider-inventory.json": true,
+    "full-source-b-outcome-unit-inventory.json": true,
+    "cross-source-candidate-graph.json": true,
+    "semantic-conflicts.json": true,
+    "metadata-recovery-lineage.json": true,
+    "provider-input-required.json": true,
+    "outcome-specific-b-split-coverage.json": true,
+    "t3-review-v02.html": true,
+    "thyroid-panel-review.html": true,
+    "threshold-impact-after-discovery.json": true,
+    "reviewer-instructions.md": true,
+    "decision-log.jsonl": true
+  },
+  "file_hashes": {
+    "exhaustive-priority-review.html": "c7394c7ab3ae1e563b21fefaff6c1e3fc5f0027c351825b40cb48505e8ee1d2f",
+    "exhaustive-priority-review.csv": "3a22aa2c874ce9ddc6da6acc9776780b17df910ffd270c3653614f921e6b600f",
+    "full-source-a-provider-inventory.json": "3afc65b824599729d1bc984ac20b7458500afc1c10bfd6a145716a4fb4f6f711",
+    "full-source-b-outcome-unit-inventory.json": "42795f4390dc43b77e5c3359f39fddca3eaef42954a269e629c0a68f23a7e7af",
+    "cross-source-candidate-graph.json": "3ca12a2202f105552ee4be3a7b280859ce036a472dd923d6db5f293cf5c39996",
+    "semantic-conflicts.json": "224a446f576078ab6fff4f26ee3f2f79445ef387b82148b7da50b236a61e16d6",
+    "metadata-recovery-lineage.json": "2d2bef4031706712e6b6fd8c9a84ce3a015b76643dc4d57e156870c6b10ae5a6",
+    "provider-input-required.json": "1a88fd263b4cff21241635f7003de4d825a0fd21a3790bc43d5aca3519e2723b",
+    "outcome-specific-b-split-coverage.json": "eaffc290890ef8360d0770c8a7c1b56a7bd2a68a08a33ba10975c6541563afee",
+    "t3-review-v02.html": "43b8c2c103d8ea08185e74d81009d898d6875e5408d65e38725be134555e5ad5",
+    "thyroid-panel-review.html": "ec3fcdcd04ab61347d722159d88938ba4be30d90de292a5bbd8f6121c276c755",
+    "threshold-impact-after-discovery.json": "b8b1a7166febdb1bf25cf27efc11c4509807406d8679a89aa740bce68f2a5d0e",
+    "reviewer-instructions.md": "dc8e00dec82f69eb5f599ed5fc8d62fffe656077ed31c6f03f576d2814b304a4",
+    "decision-log.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "n_priority": 1057,
+  "top": [
+    {
+      "mapping_id": "110b44bee531d77686c09922cc9341d6f8e0dc81b43f0e45aa0793e198cd108a",
+      "a_grain_id": "1491d981e846918085276594",
+      "a_outcome": "Холестерин общий",
+      "a_unit": "ммоль/л",
+      "a_stratum_hash": "6330a54880a0b79e3cd3b87f2d4127a034f81d8b0e9f2fddc9ce6943ef2746f8",
+      "b_raw_code": "33",
+      "b_unit": "ммоль/л",
+      "b_catalog_name_ru": "Холестерин ЛПНП (Холестерин липопротеинов низкой плотности, ЛПНП, β-холестерин)",
+      "b_stratum_hash": "ca5c737b3ebbdc811d353a2ad00d3ada9209273c34b96dd0d59847b4dee98943",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 36.457,
+      "b_subjects": 31957,
+      "b_subjects_with_pairs": 10653,
+      "b_strict_pairs": 22451,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "30ee78d9f4e311be081cda1c3ebe1992fd7da66928ad4f2f23ee2e2085c52994",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 10653,
+        "by_role_subjects_with_pairs": {
+          "train": 7437,
+          "validation": 1589,
+          "test": 1627
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 1
+    },
+    {
+      "mapping_id": "d3948bfb8c235b9787d21e2c393a6c3ae64063b7f767c6bb179aa2e753499b50",
+      "a_grain_id": "df891adcd79c48f79df36168",
+      "a_outcome": "Глюкоза",
+      "a_unit": "ммоль/л",
+      "a_stratum_hash": "602eb25bb07f88f8f3929f73add621472f55e07a36784de9b6e76146a4c26e3f",
+      "b_raw_code": "16",
+      "b_unit": "ммоль/л",
+      "b_catalog_name_ru": "Глюкоза",
+      "b_stratum_hash": "5e62facd2f63dd00a2942651b1398b45d20542508ae7747d06fa2a796b8cbe42",
+      "candidate_generation_methods": [
+        "normalized_exact_label",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 1.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 40.286,
+      "b_subjects": 31786,
+      "b_subjects_with_pairs": 9661,
+      "b_strict_pairs": 18725,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "e719f8e48384338ec0728ed40ad3d42e6f1a484eb518a24f15d47080815e8f0b",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 9661,
+        "by_role_subjects_with_pairs": {
+          "train": 6743,
+          "validation": 1430,
+          "test": 1488
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 2
+    },
+    {
+      "mapping_id": "745686b77d332dc0dd6642c74a2022210abc860b59696a8a89ca9635204509c9",
+      "a_grain_id": "793aa5157f9905ddea501114",
+      "a_outcome": "АЛТ",
+      "a_unit": "Ед/л",
+      "a_stratum_hash": "dbc25d5cbe1f55f35efa86afbde85544999723dda0db83107dc332a2e13f4e3e",
+      "b_raw_code": "8",
+      "b_unit": "Ед/л",
+      "b_catalog_name_ru": "АлАТ, (АЛТ, Аланинаминотрансфераза, аланинтрансаминаза)",
+      "b_stratum_hash": "4dbde7e64bb88803198115fd5afbfb2fecff8011f1454b107713f4ceae4d0f2b",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 33.159,
+      "b_subjects": 28659,
+      "b_subjects_with_pairs": 9161,
+      "b_strict_pairs": 18908,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "855c8d671b101f51d7713e62c49895ebe684525e831bfec3d14117198a1488b2",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 9161,
+        "by_role_subjects_with_pairs": {
+          "train": 6359,
+          "validation": 1393,
+          "test": 1409
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 3
+    },
+    {
+      "mapping_id": "e4b12dba71ab1d173ca27f511b24cfd23cea2011a07432e3dc75f603c33cf1cd",
+      "a_grain_id": "253e5cb1bcf4e6d4f9532b67",
+      "a_outcome": "АСТ",
+      "a_unit": "Ед/л",
+      "a_stratum_hash": "47bdc427041208a5e7399696cd840426cd2eb1e8d313c61c79bed3d743121bf2",
+      "b_raw_code": "9",
+      "b_unit": "Ед/л",
+      "b_catalog_name_ru": "АсАТ (АСТ, аспартатаминотрансфераза)",
+      "b_stratum_hash": "c530d68d069f70c2efcb4506ffea733a8ab2659c981082551d1b37f2a738bd3d",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 33.142,
+      "b_subjects": 28642,
+      "b_subjects_with_pairs": 9133,
+      "b_strict_pairs": 18846,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "84be014ed42adda2de008e39dac8f20b00c5b506669ea41b796c0b98ee2a52b3",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 9133,
+        "by_role_subjects_with_pairs": {
+          "train": 6341,
+          "validation": 1394,
+          "test": 1398
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 4
+    },
+    {
+      "mapping_id": "8db93f7c7e362452b7636f1fa4c8682bbb76cc2915b447497b12f2fab46ac282",
+      "a_grain_id": "4fa47bfb963e75a77d8917a7",
+      "a_outcome": "Т4 св.",
+      "a_unit": "пмоль/л",
+      "a_stratum_hash": "5cd7780db7bb12525dea4ad62c562c13b2c2b1049c1598adafc1471729ac4c92",
+      "b_raw_code": "55",
+      "b_unit": "пмоль/л",
+      "b_catalog_name_ru": "Тироксин свободный (Т4 свободный)",
+      "b_stratum_hash": "82f3bb930b0a7d0a4b4f2a5108d9f707bc4c2d52dbd06a9cd624076f854244d1",
+      "candidate_generation_methods": [
+        "approved_synonym_dictionary",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 1.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 34.008,
+      "b_subjects": 26508,
+      "b_subjects_with_pairs": 8368,
+      "b_strict_pairs": 17343,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "30f651ff02063fddda500151dc322b6811dec638a4f6436767d996233827c79c",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 8368,
+        "by_role_subjects_with_pairs": {
+          "train": 5848,
+          "validation": 1234,
+          "test": 1286
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 5
+    },
+    {
+      "mapping_id": "3553631e16251912d1546e3130c8e107ee1d2e90d824341df788b97b2614f7b2",
+      "a_grain_id": "1491d981e846918085276594",
+      "a_outcome": "Холестерин общий",
+      "a_unit": "ммоль/л",
+      "a_stratum_hash": "6330a54880a0b79e3cd3b87f2d4127a034f81d8b0e9f2fddc9ce6943ef2746f8",
+      "b_raw_code": "32",
+      "b_unit": "ммоль/л",
+      "b_catalog_name_ru": "Холестерин ЛПВП (Холестерин липопротеинов высокой плотности, ЛПВП, α-холестерин)",
+      "b_stratum_hash": "c54abfc04a624286d72deada7c18344dbc09b5e53151d8da45de365d14a330e4",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 36.456,
+      "b_subjects": 31956,
+      "b_subjects_with_pairs": 8304,
+      "b_strict_pairs": 17470,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "e1a87cb021962c484b7e538ebe60960a54d5394300d87156d7e4281007e89123",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 8304,
+        "by_role_subjects_with_pairs": {
+          "train": 5771,
+          "validation": 1274,
+          "test": 1259
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 6
+    },
+    {
+      "mapping_id": "f7fe822cfb81c38ab1820f8ef9681f5f5f50a2fd94ad734847c5b81bb0e93f6a",
+      "a_grain_id": "555f9ae6487af1d52b7436bf",
+      "a_outcome": "Гемоглобин",
+      "a_unit": "г/л",
+      "a_stratum_hash": "8698db0a2b416d27e083f221c70ff305d6953752d22467b042f0af9ac275613d",
+      "b_raw_code": "mm_1001",
+      "b_unit": "г/л",
+      "b_catalog_name_ru": "Гемоглобин (HGB)",
+      "b_stratum_hash": "cef1b2061b3ef8f81bf531a366642b942e03a1e0128fc30c09df1ea9ed4ae07d",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 28.758,
+      "b_subjects": 24258,
+      "b_subjects_with_pairs": 6744,
+      "b_strict_pairs": 12891,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "a6b523bbe20962c48fb10b1caf5fbe54a2f89f49947469f55077045f77b2e36f",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 6744,
+        "by_role_subjects_with_pairs": {
+          "train": 4693,
+          "validation": 990,
+          "test": 1061
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 7
+    },
+    {
+      "mapping_id": "55ac6d9eadf2f64fc61326ebe8dfd7854aa197dc4f2f6758b2fded09fc3723c5",
+      "a_grain_id": "33a544d0acc02a3b999d2a5b",
+      "a_outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "a_unit": "г/л",
+      "a_stratum_hash": "d9e50689e2d185d9e89e0e56c659b744bc99c9b16242017b6292fe2eaa176f30",
+      "b_raw_code": "mm_1001",
+      "b_unit": "г/л",
+      "b_catalog_name_ru": "Гемоглобин (HGB)",
+      "b_stratum_hash": "cef1b2061b3ef8f81bf531a366642b942e03a1e0128fc30c09df1ea9ed4ae07d",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 28.758,
+      "b_subjects": 24258,
+      "b_subjects_with_pairs": 6744,
+      "b_strict_pairs": 12891,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "1b585499f850659a8c2a4df2b51b1ad154d0e4319955431c9ecde656556b61a3",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 6744,
+        "by_role_subjects_with_pairs": {
+          "train": 4693,
+          "validation": 990,
+          "test": 1061
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 8
+    },
+    {
+      "mapping_id": "5c75e45ef2af57ba5b9915ab87689761d9b7c26c9458ed165a829d6553566542",
+      "a_grain_id": "f05441d07d1a03f76c49dc56",
+      "a_outcome": "Кортизол",
+      "a_unit": "нмоль/л",
+      "a_stratum_hash": "c4e6d5e5820820e08a158e98827ed6d0ac1f24a2fb624ca9c8709e4d43a41ec1",
+      "b_raw_code": "65",
+      "b_unit": "нмоль/л",
+      "b_catalog_name_ru": "Кортизол (Гидрокортизон), кровь",
+      "b_stratum_hash": "538f3c3b76c8b2de6cb7e3cf69a11a83d61f69ccf391c26a96f1f22908996008",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 26.564,
+      "b_subjects": 22064,
+      "b_subjects_with_pairs": 6410,
+      "b_strict_pairs": 12404,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "31cc6d0ef6c59f108d29fef6c67ad47ae4da932b23e4a23c31dbc9fd8c7567aa",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 6410,
+        "by_role_subjects_with_pairs": {
+          "train": 4438,
+          "validation": 948,
+          "test": 1024
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 9
+    },
+    {
+      "mapping_id": "d44217d623b666f630f9d4401f1e41b8b519a237595772c8db72e1f2f58d4f37",
+      "a_grain_id": "d2fb8ac88f06f219ea557114",
+      "a_outcome": "Ферритин",
+      "a_unit": "мкг/л",
+      "a_stratum_hash": "db82675be1373e6b6e8d904fd41622fa78967b6b66548b44473ec5505d25a5ff",
+      "b_raw_code": "51",
+      "b_unit": "мкг/л",
+      "b_catalog_name_ru": "Ферритин",
+      "b_stratum_hash": "e893ff5ccd1d91cd2c6ed08aa89e69ed8633b310dd17d7408ec7dd3ed294d641",
+      "candidate_generation_methods": [
+        "normalized_exact_label",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 1.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 28.995,
+      "b_subjects": 20495,
+      "b_subjects_with_pairs": 6106,
+      "b_strict_pairs": 12609,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "e1f1128b6b4c39552edd0354cd6dda5473aeaa7726b7289afe99dc670d229e62",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 6106,
+        "by_role_subjects_with_pairs": {
+          "train": 4267,
+          "validation": 891,
+          "test": 948
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 10
+    },
+    {
+      "mapping_id": "8eb5662623ddded68b2e4d3044e2410b37d2ef2161dca73e2e83f38089388eb7",
+      "a_grain_id": "8393c9903807b11de0d69f73",
+      "a_outcome": "Инсулин",
+      "a_unit": "мкЕд/мл",
+      "a_stratum_hash": "6ee144188d6061c191f74367758df7201d53d23986d0f0c114368f28917fe4b3",
+      "b_raw_code": "172",
+      "b_unit": "мкЕд/мл",
+      "b_catalog_name_ru": "Инсулин",
+      "b_stratum_hash": "97fb29eaed17aef8e665fa5a1bb08adc4ffcef58d19f3d9905390289dd118347",
+      "candidate_generation_methods": [
+        "normalized_exact_label",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 1.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 26.05,
+      "b_subjects": 17550,
+      "b_subjects_with_pairs": 4845,
+      "b_strict_pairs": 9121,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "51ee95d0cf9e53ae60b1164ef4953b6119c3a0a0bd2a97cf1e3d4509dc159841",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 4845,
+        "by_role_subjects_with_pairs": {
+          "train": 3355,
+          "validation": 736,
+          "test": 754
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 11
+    },
+    {
+      "mapping_id": "14d0977cc63cd1a24d06842e487aeb755fb314812509e9b82c86019765048447",
+      "a_grain_id": "2b3b834bd354cc27cabbcf12",
+      "a_outcome": "ТТГ",
+      "a_unit": "мкМЕ/мл",
+      "a_stratum_hash": "ff8416b30c52366fea9b20e497ca6cf3f3d4d3ac4975aa164543df35cdb2b31d",
+      "b_raw_code": "56",
+      "b_unit": "мкМЕ/мл",
+      "b_catalog_name_ru": "Тиреотропный гормон (ТТГ, тиротропин)",
+      "b_stratum_hash": "4321d1d6f7f9982eaa56ca947f35b3ab09b4cd551966468710d877bc9e35856d",
+      "candidate_generation_methods": [
+        "approved_synonym_dictionary",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 1.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 25.379,
+      "b_subjects": 17879,
+      "b_subjects_with_pairs": 4844,
+      "b_strict_pairs": 8972,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "4a4efdd62c115756329803d4a4355e040e3738e1aec185c4d7c5774225fc084e",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 4844,
+        "by_role_subjects_with_pairs": {
+          "train": 3414,
+          "validation": 690,
+          "test": 740
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 12
+    },
+    {
+      "mapping_id": "b70ebf78dce5bec4c42b844c7e382362f9daf70130c603710e50cacff937369b",
+      "a_grain_id": "8f807fe735bfa4f3d20d3543",
+      "a_outcome": "Ферритин",
+      "a_unit": "нг/мл",
+      "a_stratum_hash": "90a7b0d7017cd6ae17b549cab115a2772174598a832e7aaedc6ed9f73d38a7b9",
+      "b_raw_code": "51",
+      "b_unit": "нг/мл",
+      "b_catalog_name_ru": "Ферритин",
+      "b_stratum_hash": "458805e289d1639ae1e828f76ff6e207a90ec73a10b224bdd61a4e82c6e570f9",
+      "candidate_generation_methods": [
+        "normalized_exact_label",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 1.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 23.171,
+      "b_subjects": 14671,
+      "b_subjects_with_pairs": 3942,
+      "b_strict_pairs": 7625,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "298901ecaa6b9ae0cb97603ca156d26f72d6d71bedf683a021e28402d8d285a0",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 3942,
+        "by_role_subjects_with_pairs": {
+          "train": 2748,
+          "validation": 594,
+          "test": 600
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 13
+    },
+    {
+      "mapping_id": "de93a2094e673c5d98a8fbc202a769f23755e209084317764049d9a3741b74b3",
+      "a_grain_id": "ab651a8ef741ad2f7bb7efe4",
+      "a_outcome": "ТТГ",
+      "a_unit": "мЕд/л",
+      "a_stratum_hash": "33837d0cdf008db2edb1111f3ebf0137e1174470dd49084c6a236ca5c82cc8c5",
+      "b_raw_code": "56",
+      "b_unit": "мЕд/л",
+      "b_catalog_name_ru": "Тиреотропный гормон (ТТГ, тиротропин)",
+      "b_stratum_hash": "e3a9b2932399b9b608cb6dcdc775ee41fe41cf31e64b869030546f5d5adabb94",
+      "candidate_generation_methods": [
+        "approved_synonym_dictionary",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 1.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 19.87,
+      "b_subjects": 12370,
+      "b_subjects_with_pairs": 3489,
+      "b_strict_pairs": 7246,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "06c2af1945fcbb6508f45462dbf3a709362eb27aaf542dc1f3e0baa3457fc348",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 3489,
+        "by_role_subjects_with_pairs": {
+          "train": 2419,
+          "validation": 535,
+          "test": 535
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 14
+    },
+    {
+      "mapping_id": "26b681c8f50ad57e306de34a36225a0567729b0b2a17450dd5ed4e1206beecba",
+      "a_grain_id": "9b0e6d951675dbe6b3f25a59",
+      "a_outcome": "Инсулин",
+      "a_unit": "мкМЕ/мл",
+      "a_stratum_hash": "39b99bf432e50311757759c6c250382731f06e2bb57cff12a3339a33292b4da6",
+      "b_raw_code": "172",
+      "b_unit": "мкМЕ/мл",
+      "b_catalog_name_ru": "Инсулин",
+      "b_stratum_hash": "f6b3571c4f575a89d40dfbeb0a378a0c4b6b051b072307531b40e1923cc7154a",
+      "candidate_generation_methods": [
+        "normalized_exact_label",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 1.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 21.896,
+      "b_subjects": 13396,
+      "b_subjects_with_pairs": 3440,
+      "b_strict_pairs": 6115,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "35c6b73bcb47579050d5ac8f283d0297a8cd81d0f3674a75275264888a554d98",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 3440,
+        "by_role_subjects_with_pairs": {
+          "train": 2405,
+          "validation": 514,
+          "test": 521
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 15
+    },
+    {
+      "mapping_id": "f29134a799160b4a24d1c109ea32d31d71b511ad4e595d95d3d7bd449e808410",
+      "a_grain_id": "5ef24901893d30b26ed99948",
+      "a_outcome": "Гемоглобин",
+      "a_unit": "г/дл",
+      "a_stratum_hash": "1405c8c39c276a8ae1ed9f3fd6dfeb8b4767b9ae8d70c0cf292942e78cae0454",
+      "b_raw_code": "mm_1001",
+      "b_unit": "г/дл",
+      "b_catalog_name_ru": "Гемоглобин (HGB)",
+      "b_stratum_hash": "3e09505f1397075c996103f300f85d8060b2205a93ed55c6ce65e0bbbc4ebac9",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 16.421,
+      "b_subjects": 11921,
+      "b_subjects_with_pairs": 3293,
+      "b_strict_pairs": 6661,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "502311ffebd511753678b8fa1c8216ea20f5cc4436616fcba11f44472aae0e06",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 3293,
+        "by_role_subjects_with_pairs": {
+          "train": 2300,
+          "validation": 486,
+          "test": 507
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 16
+    },
+    {
+      "mapping_id": "22a8e1a4b078866e50e751fbadfb3cc97fbafd51b103d08c6133e1a1ece5dc21",
+      "a_grain_id": "0e4e3c20e01290d3c6bffa53",
+      "a_outcome": "Средняя концентрация гемоглобина в эритроцитах (MCHC)",
+      "a_unit": "г/дл",
+      "a_stratum_hash": "7b42e22c33ddb57882bf3fad7a589e7e54f86a78ae112815143ddd6f11e5f238",
+      "b_raw_code": "mm_1001",
+      "b_unit": "г/дл",
+      "b_catalog_name_ru": "Гемоглобин (HGB)",
+      "b_stratum_hash": "3e09505f1397075c996103f300f85d8060b2205a93ed55c6ce65e0bbbc4ebac9",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 16.421,
+      "b_subjects": 11921,
+      "b_subjects_with_pairs": 3293,
+      "b_strict_pairs": 6661,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "ba194eb8e59929bd507459ebe14015fc150332949757c525216870800f01be53",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 3293,
+        "by_role_subjects_with_pairs": {
+          "train": 2300,
+          "validation": 486,
+          "test": 507
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 17
+    },
+    {
+      "mapping_id": "917fb21be87862c557a5297b2813ae710035288e62bd9574dc047bc837913251",
+      "a_grain_id": "eb3769c87b7e0ee064e5f52e",
+      "a_outcome": "Т3 св.",
+      "a_unit": "пмоль/л",
+      "a_stratum_hash": "94f916dd2016c5263ef92c057296fcd28ee3e39f9730f20c68e1e2bc26e2cb26",
+      "b_raw_code": "53",
+      "b_unit": "пмоль/л",
+      "b_catalog_name_ru": "Трийодтиронин свободный (Т3 свободный)",
+      "b_stratum_hash": "24d8fbd31427624567704422b7b479c9ca4d972afec202bcc15070449b949d01",
+      "candidate_generation_methods": [
+        "approved_synonym_dictionary",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 1.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 20.197,
+      "b_subjects": 12697,
+      "b_subjects_with_pairs": 3217,
+      "b_strict_pairs": 6065,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "b6330938120176f0100e2e52bdefbb970996d084820cd58bba750dce2d0b73ef",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 3217,
+        "by_role_subjects_with_pairs": {
+          "train": 2246,
+          "validation": 478,
+          "test": 493
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 18
+    },
+    {
+      "mapping_id": "bf404ccd32f69a19846dca317d02f0450f06f4405411e2515feb5fafa84cab98",
+      "a_grain_id": "c3fe06459111b5019a0b9b14",
+      "a_outcome": "Пролактин",
+      "a_unit": "мЕд/л",
+      "a_stratum_hash": "898c5ab5c51f635d94835b76dca670b141bb890f36a24496ac4540a826d84e95",
+      "b_raw_code": "61",
+      "b_unit": "мЕд/л",
+      "b_catalog_name_ru": "Пролактин",
+      "b_stratum_hash": "d035fa24cc30c723275cfed5c09572e74924482b090baa6a070497f8923fafc0",
+      "candidate_generation_methods": [
+        "normalized_exact_label",
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 1.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 19.292,
+      "b_subjects": 10792,
+      "b_subjects_with_pairs": 2858,
+      "b_strict_pairs": 5482,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "9236a7939f1d0b1f1ae3331f8332e7e45ecfa407388059b1e348026ee5ccc1f0",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 2858,
+        "by_role_subjects_with_pairs": {
+          "train": 1964,
+          "validation": 428,
+          "test": 466
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 19
+    },
+    {
+      "mapping_id": "700cdc2ec693373687a509bc1d828eb157d4f08e110125b31336a70cdf0e4f23",
+      "a_grain_id": "1629c568257248aa4c8f614f",
+      "a_outcome": "Кортизол",
+      "a_unit": "мкг/дл",
+      "a_stratum_hash": "9b2ca469394abf71a1fea84b9042576bfc0fdc304afe2921dc69f71fb3ebe362",
+      "b_raw_code": "65",
+      "b_unit": "мкг/дл",
+      "b_catalog_name_ru": "Кортизол (Гидрокортизон), кровь",
+      "b_stratum_hash": "c0d5e5c84461f446b0230dbcd081fa7a92a87d3436f7d616c442d54376a6d7b9",
+      "candidate_generation_methods": [
+        "analyte_token_compatibility",
+        "exact_unit"
+      ],
+      "score_components": {
+        "exact_normalized_label": 0.0,
+        "approved_synonym": 0.0,
+        "analyte_family": 1.0,
+        "exact_unit": 1.0,
+        "specimen": 0.0,
+        "assay": 0.0
+      },
+      "priority_score": 14.528,
+      "b_subjects": 10028,
+      "b_subjects_with_pairs": 2734,
+      "b_strict_pairs": 4927,
+      "candidate_class": "SPECIMEN_MISSING",
+      "missing_evidence": [
+        "specimen_material",
+        "method_assay"
+      ],
+      "conflicts": [],
+      "evidence_contract": {
+        "analyte_concept": true,
+        "specimen_material": false,
+        "method_assay_compatibility": false,
+        "unit_identity_or_approved_conversion": true,
+        "numeric_semantics": true,
+        "temporal_semantics": true,
+        "provenance_isolation": true
+      },
+      "hard_conflict": false,
+      "analyte_ok": true,
+      "unit_exact": true,
+      "ranking_uses_model_performance": false,
+      "classification_hash": "a4a85fe763ceed31fb8c6cdaa8aa365eeddbe8746fc087c80c9ac02d8e028541",
+      "outcome_specific_split": {
+        "OUTCOME_SPECIFIC_B_SPLIT_ACCOUNTING_STATUS": "PASS",
+        "n_subjects_with_pairs": 2734,
+        "by_role_subjects_with_pairs": {
+          "train": 1938,
+          "validation": 393,
+          "test": 403
+        },
+        "split_overlap_zero": true,
+        "locator_overlap": "NOT_PUBLISHED",
+        "unexplained": 0,
+        "aggregate_only": false,
+        "note": "Counts are outcome-specific (subjects with pairs for this code×unit)."
+      },
+      "priority": 20
+    }
+  ],
+  "ok": true
+}

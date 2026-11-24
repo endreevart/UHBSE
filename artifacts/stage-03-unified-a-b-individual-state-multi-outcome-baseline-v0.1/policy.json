@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "stage": "unified_a_b_individual_state_multi_outcome_baseline",
+  "INTEGRATION_FIRST_BEFORE_NEW_MODELING": true,
+  "accepted_v031_sha256": "ccf2627c10b472e10591f54c528170ad1e98ae259ecdf97e2d0b3c85722f54e9",
+  "no_model_training_before_state_gates": true,
+  "no_identity_merge": true,
+  "no_migration_0005": true,
+  "no_false_cross_source_mappings": true,
+  "DOMAIN_ACCEPTED_MAPPING_COUNT_default": 0,
+  "does_not_block_source_aware_heads": true,
+  "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_STARTED",
+  "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "SCIENTIFIC_CROSS_SOURCE_PASS": false,
+  "seed": 42,
+  "cutoff_policy_predeclared": true,
+  "cutoff_policy": {
+    "train": "all_eligible_internal_cutoffs_with_prior_history_and_future_target",
+    "validation_test": "one_deterministic_eligible_cutoff_per_subject",
+    "same_time_target_forbidden": true,
+    "post_cutoff_features_forbidden": true
+  }
+}

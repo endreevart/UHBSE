@@ -1,0 +1,39 @@
+{
+  "version": "0.1",
+  "GLOBAL_SUBJECT_SPLIT_STATUS": "PASS",
+  "namespace": "source-a-global-state-v01",
+  "seed": 42,
+  "bucket_boundaries": {
+    "train": [
+      0.0,
+      0.7
+    ],
+    "validation": [
+      0.7,
+      0.85
+    ],
+    "test": [
+      0.85,
+      1.0
+    ]
+  },
+  "method": "sha256_namespace_hash_fraction_fixed_buckets",
+  "n_subjects": {
+    "total": 43856,
+    "train": 30652,
+    "validation": 6569,
+    "test": 6635
+  },
+  "overlap_counts": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "subject_overlap_zero": true,
+  "repeatability_ok": true,
+  "subset_invariance_sample_ok": true,
+  "subset_invariance_sample_n": 50,
+  "split_hash": "ba3579f909712863fe97b1cb752bd5249682c586a9b91bdadc089e06c7f24c06",
+  "raw_identifiers_published": false,
+  "ok": true
+}

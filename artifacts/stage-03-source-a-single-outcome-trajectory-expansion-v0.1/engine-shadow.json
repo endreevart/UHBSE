@@ -1,0 +1,47 @@
+{
+  "version": "0.1",
+  "ENGINE_TRAJECTORY_SHADOW_STATUS": "PASS",
+  "checks": {
+    "checkpoint_ok": true,
+    "fork_ok": true,
+    "rollback_ok": true,
+    "parent_isolation_ok": true,
+    "determinism_ok": true,
+    "no_medication_effect": true,
+    "synthetic_intervention_kept_separate": true
+  },
+  "fixture_n_providers": 8,
+  "predictions_hash_run1": "6e16c2a9d76ac91a135b37516f910a05ca47a4960c8b57fc419cf624f2d1e68c",
+  "predictions_hash_run2": "6e16c2a9d76ac91a135b37516f910a05ca47a4960c8b57fc419cf624f2d1e68c",
+  "horizon_perturbation_n_preds": 8,
+  "missing_outcome_perturbation": {
+    "n_predictions": 4,
+    "n_missing": 4
+  },
+  "checkpoint": {
+    "checkpoint_id": "traj_exp_shadow_parent-w2",
+    "state_hash": "2cd764fb1e1d51b4aa91a12c07afe7747ac050b294be7c0f623e254fc8c6627a"
+  },
+  "parent_isolation": {
+    "parent_state_unchanged_after_fork": true,
+    "parent_history_unchanged_after_fork": true,
+    "parent_events_unchanged_after_fork": true,
+    "parent_recomputed_hash_matches_stored_hash": true,
+    "fork_isolation_verified": true,
+    "before": {
+      "final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955",
+      "history_hash": "efc9695d4d5e44cb8134120be5b2838d6857ea2fd2bb1b9c3e0eef6a190787af",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7
+    },
+    "after": {
+      "final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955",
+      "history_hash": "efc9695d4d5e44cb8134120be5b2838d6857ea2fd2bb1b9c3e0eef6a190787af",
+      "events_hash": "697bc5a5f5a84349b7de2864ce5366d97e907debff19efb8e0e195e22ba7f2c4",
+      "history_len": 7,
+      "stored_final_state_hash": "11fca464e9efdd12f8a95100d69322c13691e3807dd72ea3c2279b6e3b810955"
+    }
+  },
+  "no_medication_features": true,
+  "no_treatment_response": true
+}

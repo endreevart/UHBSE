@@ -1,0 +1,26 @@
+{
+  "status_non_null": 25726,
+  "status_distribution_top": [
+    {
+      "status": "added",
+      "n": 24318
+    },
+    {
+      "status": "draft",
+      "n": 846
+    },
+    {
+      "status": "not_received",
+      "n": 562
+    }
+  ],
+  "inferred_transitions": {
+    "initiation": "NOT_INFERRED",
+    "dose_change": "NOT_INFERRED",
+    "discontinuation": "NOT_INFERRED",
+    "replacement": "NOT_INFERRED",
+    "ongoing_use": "NOT_INFERRED"
+  },
+  "default_transition_label": "UNKNOWN_RECORDED_MEDICATION_EVENT",
+  "note": "Unknown status does not become initiation/discontinuation without evidence."
+}

@@ -1,0 +1,27 @@
+{
+  "version": "0.1",
+  "v01_approx_1996": {
+    "count": 1996,
+    "query_grain": "patient_id + created timestamp",
+    "collapses_concurrent_medication_rows": true,
+    "timestamp_column": "created"
+  },
+  "v011_created_4408": {
+    "count": 4408,
+    "query_grain": "diagnosis_medicineappointments.id",
+    "collapses_concurrent_medication_rows": false,
+    "timestamp_column": "created"
+  },
+  "appointment_date_row_id_level2": {
+    "count": 9969,
+    "query_grain": "diagnosis_medicineappointments.id",
+    "timestamp_column": "appointment_date"
+  },
+  "concurrent_created_groups": {
+    "multi_row_groups": 2389,
+    "rows_in_multi_groups": 22936,
+    "extra_rows_beyond_one_per_group": 20547
+  },
+  "explanation": "v0.1 counted distinct (patient_id, created) pairs with any pre and post lab (1996). v0.1.1 counted distinct medicine-appointment row ids with pre/post (4408). Concurrent medication rows sharing the same patient_id+created inflate the row-id count relative to the patient-timestamp grain.",
+  "difference": 2412
+}

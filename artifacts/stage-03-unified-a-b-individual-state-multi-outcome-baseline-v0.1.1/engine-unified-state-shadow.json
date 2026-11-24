@@ -1,0 +1,24 @@
+{
+  "version": "0.1.1",
+  "ENGINE_UNIFIED_STATE_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+  "real_operations": {
+    "checkpoint": true,
+    "fork": true,
+    "parent_isolation": true,
+    "rollback": true,
+    "repeat_inference": true,
+    "dictionary_hash_only": false
+  },
+  "checkpoint_id": "uis_v011_parent-w2",
+  "fork_ok": true,
+  "parent_isolation_ok": true,
+  "rollback_ok": true,
+  "deterministic_inference": true,
+  "model_file_sha256_match": true,
+  "model_identity_sha256": "e6304df5362516653cfdadfdc5ca120092686195d70f9009235dbf05f1177871",
+  "predictions_do_not_drive_physiology": true,
+  "physiology_hash_unchanged_by_evidence_attach": true,
+  "medication_context_not_intervention_effect": true,
+  "fixture_sanitized": true,
+  "ok": true
+}

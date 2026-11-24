@@ -1,0 +1,41 @@
+{
+  "shuffle_context_ran": true,
+  "shuffle_ids_keep_count_ran": true,
+  "n_shuffle_context": 20,
+  "n_shuffle_keep_count": 20,
+  "same_timestamp_determinism": {
+    "ok": true,
+    "sorted_equal": true
+  },
+  "oov": {
+    "explicit_oov_index": 250,
+    "oov_flag_for_unknown": true,
+    "oov_count": 1,
+    "ok": true
+  },
+  "target_poison": {
+    "ok": true,
+    "leaked": []
+  },
+  "future_medication_poison_fails": true,
+  "source_id_hijack": {
+    "ok": true,
+    "SOURCE_B_MEDICATION_CONTEXT_STATUS": "NOT_AVAILABLE_NO_TRANSFER",
+    "refuses_source_b_transfer": true
+  },
+  "rejected_pairs": {
+    "rejected_ids": [
+      "31",
+      "48",
+      "405",
+      "449",
+      "510",
+      "810"
+    ],
+    "remain_excluded": true,
+    "R2SEM_blocked": true,
+    "ok": true
+  },
+  "pre_t0_falsification_would_fail": false,
+  "ok": true
+}

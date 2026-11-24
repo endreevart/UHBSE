@@ -1,0 +1,21 @@
+{
+  "version": "0.2",
+  "V01_ENGINE_FUTURE_LEAKAGE_STATUS": "CONFIRMED_FUTURE_HORIZON_LEAKAGE",
+  "defects": [
+    {
+      "id": "engine_uses_actual_future_horizon_days",
+      "reproduced": true,
+      "V01_ENGINE_FUTURE_LEAKAGE_STATUS": "CONFIRMED_FUTURE_HORIZON_LEAKAGE"
+    },
+    {
+      "id": "engine_regime_pad_3_of_9_features",
+      "reproduced": true,
+      "note": "Training regime features are 9-D; engine feeds 3 then pads"
+    },
+    {
+      "id": "engine_emits_regime_id_despite_rejection",
+      "reproduced": true
+    }
+  ],
+  "ok": true
+}

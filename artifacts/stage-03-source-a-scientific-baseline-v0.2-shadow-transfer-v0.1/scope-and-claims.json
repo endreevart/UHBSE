@@ -1,0 +1,50 @@
+{
+  "changeset": "Source A Scientific Baseline v0.2 + First Technical Shadow Transfer A\u2192B v0.1",
+  "version": "0.2",
+  "claims": [
+    "Clean Source A-only Ridge v0.2 training and held-out evaluation.",
+    "Technical shadow scoring on provisional Source B T3 stratum."
+  ],
+  "non_claims": [
+    "Not clinical validation.",
+    "Not scientific cross-source transfer.",
+    "Not treatment-effect / intervention-response.",
+    "T3 domain review remains required."
+  ],
+  "policy": {
+    "scientific_baseline_version": "0.2",
+    "shadow_transfer_version": "0.1",
+    "seed": 42,
+    "l2": 0.1,
+    "bootstrap_iters": 2000,
+    "shuffle_perms": 500,
+    "max_ood_fraction": 0.35,
+    "fixed_outcome_candidate_id": "2685c68a3e247ca4",
+    "fixed_outcome_label": "\u04223 \u0441\u0432.",
+    "fixed_outcome_unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+    "feature_order": [
+      "y_t0",
+      "horizon_days",
+      "n_prior_measurements",
+      "prior_mean",
+      "prior_last_delta",
+      "days_since_first",
+      "has_prior_history",
+      "prior_mean_missing_flag",
+      "prior_last_delta_missing_flag"
+    ],
+    "source_a_system_id": "magerya_api",
+    "source_b_system_id": "kgz_raw",
+    "preferred_b_code": "53",
+    "preferred_b_unit": "\u043f\u043c\u043e\u043b\u044c/\u043b",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "clinical_validation_status": "NOT_STARTED",
+    "intervention_response_model_status": "NOT_STARTED",
+    "treatment_effect_status": "NOT_EVALUATED",
+    "production_readiness": "NOT_CLAIMED",
+    "accepted_unified_v01211_sha256": "5f9d10e1e57ed7423b651a0156714ce976b3ec01f5c85306e929f91f7ccdb997",
+    "no_b_tuning": true,
+    "no_raw_writes": true,
+    "no_canonical_writes": true
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "status": "PASS",
+  "started_at": "2026-08-15T10:09:51Z",
+  "finished_at": "2026-08-15T10:09:52Z",
+  "source_system": "magerya_api",
+  "mode": "full",
+  "batch_size": 25,
+  "n_eligible_subjects": 8262,
+  "n_batches": 331,
+  "batches_completed": 331,
+  "per_patient_limit": 1000000000,
+  "per_result_limit": 1000000000,
+  "pilot_caps_disabled": true,
+  "eligibility": {
+    "subjects_total": 43856,
+    "subjects_appt_ge2": 13301,
+    "subjects_appt_ge3": 8588,
+    "subjects_appt_ge4": 6050,
+    "subjects_with_lab": 18232,
+    "subjects_appt3_and_lab": 8262,
+    "subjects_appt3_lab3": 8209
+  },
+  "source_snapshot_counts": {
+    "account_patient": 43856,
+    "appointment_appointment": 68128,
+    "document_analysisresult": 874492,
+    "document_analysisresultitem": 1372259,
+    "diagnosis_medicineappointments": 25726
+  },
+  "opaque_cohort_fingerprint": "dfab85a1ab9ae86fadc7e488dbe6fbf0539eb0628b328137745a6d216331c400",
+  "inserted_totals": {
+    "source_system": 0,
+    "source_record": 1527190,
+    "subject": 8112,
+    "subject_characteristic": 16209,
+    "encounter": 47117,
+    "observation": 563158,
+    "observation_component": 793890
+  },
+  "reject_totals": {
+    "INVALID_NUMERIC_REPRESENTATION": 3639,
+    "MISSING_SOURCE_VALUE": 112472
+  },
+  "relation_accounting": {
+    "account_patient": {
+      "runtime_count": 8262,
+      "candidate_count": 8262,
+      "eligible_count": 8262,
+      "loaded_count": 8262,
+      "source_record_count": 8262,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    },
+    "appointment_appointment": {
+      "runtime_count": 49927,
+      "candidate_count": 49927,
+      "eligible_count": 49927,
+      "loaded_count": 49927,
+      "source_record_count": 49927,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    },
+    "document_analysisresult": {
+      "runtime_count": 578216,
+      "candidate_count": 567793,
+      "eligible_count": 578216,
+      "loaded_count": 567793,
+      "source_record_count": 578216,
+      "rejected_count": 0,
+      "unsupported_count": 0,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    },
+    "document_analysisresultitem": {
+      "runtime_count": 918438,
+      "candidate_count": 918438,
+      "eligible_count": 918438,
+      "loaded_count": 793890,
+      "source_record_count": 918438,
+      "rejected_count": 116111,
+      "unsupported_count": 8437,
+      "quarantined_count": 0,
+      "truncated_count": 0,
+      "unaccounted_count": 0
+    }
+  },
+  "truncated_total": 0,
+  "unaccounted_total": 0,
+  "batch_summaries": [
+    {
+      "batch_index": 0,
+      "subjects_in_batch": 25,
+      "inserted": {
+        "source_system": 0,
+        "source_record": 15341,
+        "subject": 0,
+        "subject_characteristic": 0,
+        "encounter": 0,
+        "observation": 3028,
+        "observation_component": 11571
+      },
+      "reject_count": 862,
+      "write_error_count": 0,
+      "truncation_truncated_total": 0
+    },
+    {
+      "batch_index": 1,
+      "subjects_in_batch": 25,
+      "inserted": {
+        "source_system": 0,
+        "source_record": 16282,
+        "subject": 0,
+        "subject_characteristic": 0,
+        "encounter": 0,
+        "observation": 6301,
+        "observation_component": 9541
+      },
+      "reject_count": 747,
+      "write_error_count": 0,
+      "truncation_truncated_total": 0
+    },
+    {
+      "batch_index": 2,
+      "subjects_in_batch": 25,
+      "inserted": {
+        "source_system": 0,
+        "source_record": 14903,
+        "subject": 0,
+        "subject_characteristic": 0,
+        "encounter": 0,
+        "observation": 5712,
+        "observation_component": 8561
+      },
+      "reject_count": 981,
+      "write_error_count": 0,
+      "truncation_truncated_total": 0
+    },
+    {
+      "batch_index": 3,
+      "subjects_in_batch": 25,
+      "inserted": {
+        "source_system": 0,
+        "source_record": 13621,
+        "subject": 0,
+        "subject_characteristic": 0,
+        "encounter": 0,
+        "observation": 5328,
+        "observation_component": 7859
+      },
+      "reject_count": 614,
+      "write_error_count": 0,
+      "truncation_truncated_total": 0
+    },
+    {
+      "batch_index": 4,
+      "subjects_in_batch": 25,
+      "inserted": {
+        "source_system": 0,
+        "source_record": 15972,
+        "subject": 25,
+        "subject_characteristic": 50,
+        "encounter": 430,
+        "observation": 5915,
+        "observation_component": 8806
+      },
+      "reject_count": 796,
+      "write_error_count": 0,
+      "truncation_truncated_total": 0
+    }
+  ],
+  "patient_ids_not_in_report": true,
+  "checkpoint_path": "private/unified-runtime/v0.1/source_a_expansion_checkpoint.json",
+  "batch_summaries_truncated": true,
+  "batch_summaries_total": 331
+}

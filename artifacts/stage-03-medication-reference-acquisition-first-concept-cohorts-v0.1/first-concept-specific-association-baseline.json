@@ -1,0 +1,49 @@
+{
+  "FIRST_CONCEPT_SPECIFIC_ASSOCIATION_BASELINE_STATUS": "NOT_RUN_DUE_TO_FAILED_READINESS_GATE",
+  "name": "FIRST_CONCEPT_SPECIFIC_MEDICATION_ASSOCIATION_BASELINE",
+  "not_intervention_response": true,
+  "not_treatment_effect": true,
+  "not_causal": true,
+  "blockers_sample": [
+    {
+      "outcome": "\u041b\u0438\u043c\u0444\u043e\u0446\u0438\u0442\u044b",
+      "n_subjects": 622,
+      "n_episodes": 5890,
+      "block_reasons": [
+        "no_accepted_drug_concept_mapping"
+      ]
+    },
+    {
+      "outcome": "\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u043e\u0431\u044a\u0435\u043c \u044d\u0440\u0438\u0442\u0440\u043e\u0446\u0438\u0442\u043e\u0432 (MCV)",
+      "n_subjects": 620,
+      "n_episodes": 5888,
+      "block_reasons": [
+        "no_accepted_drug_concept_mapping"
+      ]
+    },
+    {
+      "outcome": "\u041c\u043e\u043d\u043e\u0446\u0438\u0442\u044b",
+      "n_subjects": 614,
+      "n_episodes": 5828,
+      "block_reasons": [
+        "no_accepted_drug_concept_mapping"
+      ]
+    },
+    {
+      "outcome": "\u041d\u0435\u0439\u0442\u0440\u043e\u0444\u0438\u043b\u044b",
+      "n_subjects": 611,
+      "n_episodes": 5787,
+      "block_reasons": [
+        "no_accepted_drug_concept_mapping"
+      ]
+    },
+    {
+      "outcome": "\u042d\u043e\u0437\u0438\u043d\u043e\u0444\u0438\u043b\u044b",
+      "n_subjects": 608,
+      "n_episodes": 5765,
+      "block_reasons": [
+        "no_accepted_drug_concept_mapping"
+      ]
+    }
+  ]
+}

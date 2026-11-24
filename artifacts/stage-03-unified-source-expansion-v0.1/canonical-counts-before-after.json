@@ -1,0 +1,34 @@
+{
+  "before": {
+    "source_system": 1,
+    "source_record": 12544,
+    "subject": 100,
+    "subject_characteristic": 200,
+    "encounter": 2153,
+    "observation": 4000,
+    "observation_component": 5333,
+    "note": "Accepted core vertical-slice pilot counts prior to unified expansion"
+  },
+  "after": {
+    "source_system": 2,
+    "source_record": 1554843,
+    "subject": 8262,
+    "subject_characteristic": 16509,
+    "encounter": 49927,
+    "observation": 578216,
+    "observation_component": 802327,
+    "note": "Post full Source A expansion + Source B source_system registration only"
+  },
+  "delta": {
+    "source_system": 1,
+    "source_record": 1542299,
+    "subject": 8162,
+    "subject_characteristic": 16309,
+    "encounter": 47774,
+    "observation": 574216,
+    "observation_component": 796994
+  },
+  "source_a_system": "magerya_api",
+  "source_b_system": "kgz_raw",
+  "orchestrator_live_before_note": "Live orchestrator before/after were identical because expansion completed in a prior resume session; this artifact records the accepted pilot baseline versus post-expansion canonical counts."
+}

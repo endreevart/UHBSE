@@ -1,0 +1,2573 @@
+{
+  "version": "0.3.1",
+  "CURATED_DOMAIN_CLASSIFICATION_STATUS": "PASS",
+  "n_classified": 206,
+  "disposition_counts": {
+    "UNRESOLVED_RETAINED": 119,
+    "INFRASTRUCTURE_UNSUPPORTED": 53,
+    "SOURCE_SPECIFIC_SUPPORTED": 9,
+    "ENTITY_LINK": 13,
+    "REJECTED_FALSE_POSITIVE": 2,
+    "REFERENCE_CATALOG": 10
+  },
+  "primary_domain_uniqueness_violations": [],
+  "source_b_users_observed": false,
+  "source_b_consultations_observed": false,
+  "regex_false_positive_regressions": [
+    {
+      "relation": "magerya_api.contract_saleorder",
+      "expected": "REJECTED_FALSE_POSITIVE",
+      "observed": "REJECTED_FALSE_POSITIVE",
+      "ok": true
+    },
+    {
+      "relation": "magerya_api.evotor_evotororder",
+      "expected": "REJECTED_FALSE_POSITIVE",
+      "observed": "REJECTED_FALSE_POSITIVE",
+      "ok": true
+    },
+    {
+      "relation": "quest_digital.analyses_weight",
+      "expected": "REJECTED_FALSE_POSITIVE",
+      "observed": null,
+      "ok": false
+    },
+    {
+      "relation": "quest_digital.catalog_weights",
+      "expected": "REJECTED_FALSE_POSITIVE",
+      "observed": null,
+      "ok": false
+    },
+    {
+      "relation": "magerya_api.diagnosis_medicines",
+      "expected": "REFERENCE_CATALOG",
+      "observed": "REFERENCE_CATALOG",
+      "ok": true
+    },
+    {
+      "relation": "magerya_api.diagnosis_medicineappointments",
+      "expected": "SOURCE_SPECIFIC_SUPPORTED",
+      "observed": "SOURCE_SPECIFIC_SUPPORTED",
+      "ok": true
+    },
+    {
+      "relation": "public.users",
+      "expected": "SOURCE_SPECIFIC_SUPPORTED",
+      "observed": null,
+      "ok": false
+    },
+    {
+      "relation": "public.consultations",
+      "expected": "SOURCE_SPECIFIC_SUPPORTED",
+      "observed": null,
+      "ok": false
+    }
+  ],
+  "relations": [
+    {
+      "schema": "magerya_api",
+      "relation": "account_contractor",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "orders_commerce",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_doctor",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_doctorbranch",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_doctorcertificateimage",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_doctorfeedback",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_employee",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_methodologistpatientsession",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_patient",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "subjects_patients",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "subject_anchor"
+      ],
+      "evidence": [
+        "stage01_entity",
+        "fk_ownership",
+        "canonical_loaded"
+      ],
+      "exact_row_count": 43856
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_patient_wards",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "subjects_patients",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_user",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_user_groups",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "account_user_user_permissions",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "appointment_appointment",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "encounters",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "encounter_anchor"
+      ],
+      "evidence": [
+        "stage01_table_role",
+        "canonical_loaded"
+      ],
+      "exact_row_count": 68128
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "appointment_appointmentrequest",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "encounters",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "appointment_callbackrequest",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "encounters",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "appointments_services_view",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "encounters",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "auth_group",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "auth_group_permissions",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "auth_permission",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "authentication_actiontoken",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "authentication_blacklist",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "authentication_smscode",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "authentication_whitelistphone",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "authtoken_token",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "bonus_program_bonusprofile",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "bonus_program_bonustransaction",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "bonus_program_programsegment",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "bonus_program_segmentlocation",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "certificates_certificate",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "certificates_certificatebatch",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "certificates_certificatetransaction",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "chat_channel",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "chat_chatroom",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "chat_chatroommember",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "chat_message",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "chat_messageadditionalinfo",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "chat_messagetemplates",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "content_clinicdocument",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "content_contentdocs",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "content_documentcategory",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "content_news",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "content_newsimage",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "content_vacancy",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "contract_contract",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "orders_commerce",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "contract_estimate",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "orders_commerce",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "contract_estimateitem",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "orders_commerce",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "contract_refundorder",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "orders_commerce",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "contract_saleorder",
+      "primary_disposition": "REJECTED_FALSE_POSITIVE",
+      "primary_domain": "orders_commerce",
+      "support_status": "REJECTED_FALSE_POSITIVE",
+      "secondary_roles": [],
+      "evidence": [
+        "negative_control_not_lab_order"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "coupon_management_allowedusersrule",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "coupon_management_allowedusersrule_users",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "coupon_management_coupon",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "coupon_management_couponuser",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "coupon_management_discount",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "coupon_management_maxusesrule",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "coupon_management_ruleset",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "coupon_management_validityrule",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_appointrecommendation",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "encounters",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_appointrecommendation_service_prices",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "encounters",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_appointrecommendationresult",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "encounters",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_conditionsmedicines",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_diagnosis",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [
+        "diagnosis_catalog"
+      ],
+      "evidence": [
+        "stage01_REFERENCE_CATALOG",
+        "columns_name_description_only"
+      ],
+      "exact_row_count": 14626
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_diagnosis_analysis",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_diagnosis_appointment_recommendations",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_diagnosis_functional_studies",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_diagnosis_manipulations",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_diagnosis_medicines",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_diagnosis_procedures",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_diagnosis_recommendations",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_functionalstudies",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_REFERENCE_CATALOG"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_functionalstudiesresult",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_manipulations",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_REFERENCE_CATALOG"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_manipulationsresult",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "procedures",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "procedure_event"
+      ],
+      "evidence": [
+        "patient_id_appointment_date"
+      ],
+      "exact_row_count": 94
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_measurementunits",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_REFERENCE_CATALOG"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_medicineappointments",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "medications",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "medication_event"
+      ],
+      "evidence": [
+        "column_signature_patient_id_medicine_id_appointment_date",
+        "not_ordinary_encounter"
+      ],
+      "exact_row_count": 25726
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_medicines",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "medications",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [
+        "medication_reference"
+      ],
+      "evidence": [
+        "stage01_REFERENCE_CATALOG",
+        "no_patient_fk"
+      ],
+      "exact_row_count": 880
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_medicines_conditions",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_medicinesform",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_REFERENCE_CATALOG"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_procedures",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_REFERENCE_CATALOG"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_proceduresresult",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "procedures",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "procedure_event"
+      ],
+      "evidence": [
+        "patient_id_appointment_date"
+      ],
+      "exact_row_count": 4
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_receptionfrequency",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_REFERENCE_CATALOG"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_recommendation",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "diagnosis_recommendationcategory",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_REFERENCE_CATALOG"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "django_admin_log",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "django_content_type",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "django_migrations",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "django_session",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_analysis",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "laboratory",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_analysis_analyzes",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "laboratory",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_analysisitem",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "laboratory",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_analysisresult",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "laboratory_results",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "lab_result"
+      ],
+      "evidence": [
+        "canonical_observation_load",
+        "stage01"
+      ],
+      "exact_row_count": 874492
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_analysisresultitem",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "laboratory_components",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "lab_component"
+      ],
+      "evidence": [
+        "canonical_component_load"
+      ],
+      "exact_row_count": 1372259
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_appointmentanalysisresult",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_doctorquestion",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_doctorquestiongroup",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_doctorquestionnaire",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_doctorquestionnairetemplate",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_document",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": 409445
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_document_messages",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_informationform",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_manipulationreport",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_medicalreport",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_patientquestion",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "subjects_patients",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_patientquestionnaire",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "subjects_patients",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_patientquestionnairetemplate",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "subjects_patients",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_procedurelist",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "procedures",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "procedure_event",
+        "document_reference"
+      ],
+      "evidence": [
+        "patient_id_appointment_id"
+      ],
+      "exact_row_count": 5
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_procedurelist_diagnosis",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "diagnoses",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_questionnairefilledtemplate",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_recommendation",
+      "primary_disposition": "SOURCE_SPECIFIC_SUPPORTED",
+      "primary_domain": "recommendations",
+      "support_status": "SOURCE_SPECIFIC_SUPPORTED",
+      "secondary_roles": [
+        "recommendation_patient_event",
+        "document_reference"
+      ],
+      "evidence": [
+        "appointment_id_link_all_rows",
+        "no_body_in_research_layer"
+      ],
+      "exact_row_count": 53894
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_recommendationtemplate",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "recommendations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_recommendationtemplate_branches",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "recommendations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_recommendationtemplate_services",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "recommendations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_recommendationtemplatecategory",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "recommendations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_suggestion",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "document_unit",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "easy_thumbnails_source",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "easy_thumbnails_thumbnail",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "easy_thumbnails_thumbnaildimensions",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "evotor_evotororder",
+      "primary_disposition": "REJECTED_FALSE_POSITIVE",
+      "primary_domain": "orders_commerce",
+      "support_status": "REJECTED_FALSE_POSITIVE",
+      "secondary_roles": [],
+      "evidence": [
+        "negative_control_not_lab_order"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "fcm_django_fcmdevice",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "knowledge_base_article",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "knowledge_base_article_categories",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "knowledge_base_article_read_users",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "knowledge_base_articlecategory",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "knowledge_base_paragraph",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "knowledge_base_paragraphimage",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "logg_apilogentry",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "lottery_lottery",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "lottery_lotteryprizewinner",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "lottery_prize",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "notification_notification",
+      "primary_disposition": "ENTITY_LINK",
+      "primary_domain": "entity_links",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_LINK"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "payment_acquiringprovider",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "payment_payment",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "payment_paymentitem",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "payment_receipt",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "payment_vat",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "prodoctorov_prodocclaim",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "promocode_promocode",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "promocode_promocode_patients",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "subjects_patients",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "promocode_promocode_service_prices",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "promocode_promocodepatient",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "subjects_patients",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "promocode_promocodepatientservice",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "subjects_patients",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_branch",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_clinic",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_disease",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_disease_disease_types",
+      "primary_disposition": "REFERENCE_CATALOG",
+      "primary_domain": "reference_catalogs",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "prior_REFERENCE_CATALOG"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_diseasetype",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_diseasetype_branches",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_doctorbranchoptions",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_doctorbranchservices",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_option",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_serviceprice",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_servicepricegroup",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_servicepricegroup_items",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_settings",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "reference_termsofusedocument",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "salary_directionplan",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "salary_payroll",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "schedule_doctorschedule",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "schedule_schedule",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "schedule_slot",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "statistic_stats",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "tax_refund_relationconfirmationdocument",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "documents",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "tax_refund_taxapplicant",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "tax_refund_taxpayer",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "tax_refund_taxrefundapplication",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "tax_refund_taxrefundreference",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "magerya_api",
+      "relation": "voximplant_voximplantuser",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "public",
+      "relation": "geography_columns",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "public",
+      "relation": "geometry_columns",
+      "primary_disposition": "UNRESOLVED_RETAINED",
+      "primary_domain": "unknown_clinical_relations",
+      "support_status": "UNRESOLVED_RETAINED",
+      "secondary_roles": [],
+      "evidence": [
+        "no_curated_or_fk_proof"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "public",
+      "relation": "spatial_ref_sys",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "name_or_prior_infrastructure"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "addr",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "addrfeat",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "bg",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "county",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "county_lookup",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "countysub_lookup",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "cousub",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "direction_lookup",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "edges",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "faces",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "featnames",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "geocode_settings",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "geocode_settings_default",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "loader_lookuptables",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "loader_platform",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "loader_variables",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "pagc_gaz",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "pagc_lex",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "pagc_rules",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "place",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "place_lookup",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "secondary_unit_lookup",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "state",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "state_lookup",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "street_type_lookup",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "tabblock",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "tabblock20",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "tract",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "zcta5",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "zip_lookup",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "zip_lookup_all",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "zip_lookup_base",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "zip_state",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "tiger",
+      "relation": "zip_state_loc",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "topology",
+      "relation": "layer",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    },
+    {
+      "schema": "topology",
+      "relation": "topology",
+      "primary_disposition": "INFRASTRUCTURE_UNSUPPORTED",
+      "primary_domain": "infrastructure",
+      "support_status": "INFRASTRUCTURE_UNSUPPORTED",
+      "secondary_roles": [],
+      "evidence": [
+        "infrastructure_schema"
+      ],
+      "exact_row_count": null
+    }
+  ],
+  "ok": true
+}

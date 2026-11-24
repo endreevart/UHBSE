@@ -1,0 +1,25 @@
+{
+  "version": "0.3",
+  "adapters_prepared": [
+    "laboratory_dictionaries",
+    "medication_references",
+    "diagnosis_ontologies",
+    "procedure_catalogs",
+    "local_document_extraction",
+    "llm_assisted_candidate_generation"
+  ],
+  "llm_may": [
+    "structure_local_documents",
+    "propose_mappings",
+    "explain_conflicts",
+    "form_review_queues"
+  ],
+  "llm_must_not": [
+    "accept_clinical_mapping",
+    "create_HUMAN_ACCEPTED",
+    "unit_conversion_without_contract",
+    "receive_raw_patient_data_via_external_api",
+    "invent_diagnosis_or_intervention"
+  ],
+  "ok": true
+}

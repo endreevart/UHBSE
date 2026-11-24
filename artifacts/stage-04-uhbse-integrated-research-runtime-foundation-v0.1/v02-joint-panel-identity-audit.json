@@ -1,0 +1,20 @@
+{
+  "defects": [
+    {
+      "claim": "Panels grouped by source+subject+t0+horizon; targets may differ in timestamp/id",
+      "grouped_by_t0_horizon": true,
+      "id": 5,
+      "no_strict_timestamp_collapse_in_build_panels": true,
+      "reproduced": true
+    },
+    {
+      "claim": "Joint identity hashes correlation/support and ECDF sizes, not full ECDF payloads",
+      "full_ecdf_in_identity_hash": false,
+      "id": 10,
+      "identity_uses_ecdf_n": true,
+      "reproduced": true
+    }
+  ],
+  "ok": true,
+  "version": "0.1"
+}

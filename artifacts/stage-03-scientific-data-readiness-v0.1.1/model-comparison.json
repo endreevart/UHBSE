@@ -1,0 +1,78 @@
+{
+  "retrospective_backtest_status": "FIRST_EXPLORATORY_RETROSPECTIVE_BACKTEST_PASS",
+  "incremental_signal_status": "NO_INCREMENTAL_SIGNAL_DETECTED",
+  "primary_metric": "subject_macro_mae",
+  "secondary_metric": "pair_micro_mae",
+  "outperforms_persistence": false,
+  "outperforms_empirical_trend": false,
+  "delta_subject_macro_mae_vs_persistence": -0.9013217913405338,
+  "persistence": {
+    "n_pairs": 2,
+    "n_subjects": 2,
+    "subject_macro_mae": 1.425,
+    "pair_micro_mae": 1.425,
+    "pair_micro_rmse": 1.5520470353697404,
+    "median_absolute_error": 2.04,
+    "mean_bias": 1.425,
+    "empirical_interval_coverage": 0.0,
+    "mean_interval_width": 0.0,
+    "horizon_days": {
+      "min": 62.0,
+      "median": 115.0,
+      "max": 115.0,
+      "mean": 88.5
+    },
+    "residual_summary": {
+      "mean": -1.425,
+      "std": 0.615
+    }
+  },
+  "empirical_trend": {
+    "n_pairs": 2,
+    "n_subjects": 2,
+    "subject_macro_mae": 1.425,
+    "pair_micro_mae": 1.425,
+    "pair_micro_rmse": 1.5520470353697404,
+    "median_absolute_error": 2.04,
+    "mean_bias": 1.425,
+    "empirical_interval_coverage": 0.0,
+    "mean_interval_width": 1.3940019999999995,
+    "horizon_days": {
+      "min": 62.0,
+      "median": 115.0,
+      "max": 115.0,
+      "mean": 88.5
+    },
+    "residual_summary": {
+      "mean": -1.425,
+      "std": 0.615
+    }
+  },
+  "first_learned": {
+    "n_pairs": 2,
+    "n_subjects": 2,
+    "subject_macro_mae": 0.5236782086594662,
+    "pair_micro_mae": 0.5236782086594662,
+    "pair_micro_rmse": 0.5827571786368572,
+    "median_absolute_error": 0.7793480407241868,
+    "mean_bias": 0.5236782086594662,
+    "empirical_interval_coverage": 1.0,
+    "mean_interval_width": 19.097375541658725,
+    "horizon_days": {
+      "min": 62.0,
+      "median": 115.0,
+      "max": 115.0,
+      "mean": 88.5
+    },
+    "residual_summary": {
+      "mean": -0.5236782086594662,
+      "std": 0.2556698320647206
+    }
+  },
+  "forbidden_statuses_not_used": [
+    "CLINICALLY_VALIDATED",
+    "CLINICALLY_ACCURATE",
+    "TREATMENT_EFFECT_CONFIRMED",
+    "PRODUCTION_READY"
+  ]
+}

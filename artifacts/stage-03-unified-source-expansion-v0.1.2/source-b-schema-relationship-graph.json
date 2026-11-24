@@ -1,0 +1,133 @@
+{
+  "analyses_constructor_columns": [
+    {
+      "name": "id",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "name": "user_id",
+      "type": "integer",
+      "nullable": "YES"
+    },
+    {
+      "name": "consultation_id",
+      "type": "integer",
+      "nullable": "YES"
+    },
+    {
+      "name": "pool_id",
+      "type": "integer",
+      "nullable": "YES"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone",
+      "nullable": "YES"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone",
+      "nullable": "YES"
+    },
+    {
+      "name": "catalog_id",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "name": "weight_id",
+      "type": "integer",
+      "nullable": "YES"
+    },
+    {
+      "name": "date",
+      "type": "timestamp without time zone",
+      "nullable": "YES"
+    },
+    {
+      "name": "status",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "name": "value",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "name": "extra",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "name": "has_result",
+      "type": "boolean",
+      "nullable": "YES"
+    }
+  ],
+  "analyses_catalog_columns": [
+    {
+      "name": "id",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "name": "code",
+      "type": "character varying",
+      "nullable": "YES"
+    },
+    {
+      "name": "name_ru",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "name": "name_en",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "name": "material",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "name": "weight_id",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "name": "created_at",
+      "type": "timestamp without time zone",
+      "nullable": "YES"
+    },
+    {
+      "name": "updated_at",
+      "type": "timestamp without time zone",
+      "nullable": "YES"
+    },
+    {
+      "name": "name_alt",
+      "type": "text",
+      "nullable": "YES"
+    },
+    {
+      "name": "priority",
+      "type": "integer",
+      "nullable": "NO"
+    },
+    {
+      "name": "deleted_at",
+      "type": "timestamp without time zone",
+      "nullable": "YES"
+    },
+    {
+      "name": "type",
+      "type": "character varying",
+      "nullable": "NO"
+    }
+  ],
+  "foreign_keys": [],
+  "weight_table": "quest_digital.analyses_weight"
+}

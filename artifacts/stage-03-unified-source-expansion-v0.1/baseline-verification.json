@@ -1,0 +1,59 @@
+{
+  "check_name": "unified_source_expansion_baselines_v0.1",
+  "expected_core_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "expected_sdr_v0111_sha256": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+  "expected_roadmap_v011_sha256": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+  "core_present": true,
+  "sdr_v0111_present": true,
+  "roadmap_v011_present": true,
+  "computed_core_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+  "core_sha_matches": true,
+  "core_zip_member_count": 205,
+  "core_review_index_present": true,
+  "computed_sdr_v0111_sha256": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+  "sdr_v0111_untouched": true,
+  "computed_roadmap_v011_sha256": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+  "roadmap_v011_untouched": true,
+  "core_attestation_present": true,
+  "core_attestation_status": "PASS",
+  "prior_zips": {
+    "core_v0.1.2.1": {
+      "present": true,
+      "sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+      "untouched": true
+    },
+    "sdr_v0.1.1.1": {
+      "present": true,
+      "sha256": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+      "untouched": true
+    },
+    "roadmap_v0.1.1": {
+      "present": true,
+      "sha256": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+      "untouched": true
+    }
+  },
+  "ok": true,
+  "policy": {
+    "unified_version": "0.1",
+    "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "security_findings_status": "RECORDED_NON_BLOCKING",
+    "security_gate_mode": "ADVISORY_ONLY",
+    "security_blocks_core": false,
+    "clinical_validation_status": "NOT_STARTED",
+    "intervention_response_model_status": "NOT_STARTED",
+    "production_readiness": "NOT_CLAIMED",
+    "accepted_core_baseline_sha256": "9eea316ccc022e6aed75075b47089b10a1263e55e2c58b9fd6852e8201fe1a5f",
+    "accepted_sdr_v0111_sha256": "2b23e48fa9e6687171c60ca371b7aa923d04285e6c3edfe5637cd64060edb67e",
+    "accepted_roadmap_v011_sha256": "780758ec0c69573611ccf04311f22f28866c7efecb40153e8b47175c913aee30",
+    "fixed_outcome_candidate_id": "2685c68a3e247ca4",
+    "batch_size": 25,
+    "no_lab_cap": 1000000000,
+    "source_a_system_id": "magerya_api",
+    "source_b_system_id": "kgz_raw",
+    "identity_merge": false,
+    "migration_0005": false
+  },
+  "security_stage_paused": true,
+  "clinical_validation": "NOT_STARTED"
+}

@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "ENGINE_CURRENT_STATE_REPRESENTATION_SHADOW_STATUS": "TECHNICAL_SHADOW_PASS",
+  "fixtures": {
+    "source_a": {
+      "state_vector_inference": true,
+      "latent_dim": 24,
+      "trajectory_head_n_outcomes": 308,
+      "mask_density": 0.00974025974025974,
+      "applicability_decision": "out_of_support_technical"
+    },
+    "source_b": {
+      "state_vector_inference": true,
+      "latent_dim": 24,
+      "trajectory_head_n_outcomes": 308,
+      "mask_density": 0.1331168831168831,
+      "applicability_decision": "in_support"
+    },
+    "partial_missing": {
+      "state_vector_inference": true,
+      "latent_dim": 24,
+      "trajectory_head_n_outcomes": 308,
+      "mask_density": 0.0,
+      "applicability_decision": "out_of_support_technical"
+    },
+    "ood": {
+      "state_vector_inference": true,
+      "latent_dim": 24,
+      "trajectory_head_n_outcomes": 308,
+      "mask_density": 0.1331168831168831,
+      "applicability_decision": "out_of_support_technical"
+    }
+  },
+  "lifecycle": {
+    "ok": true,
+    "checkpoint": true,
+    "fork": true,
+    "parent_isolation": true,
+    "rollback": true,
+    "predicted_evidence_does_not_drive_synthetic": true
+  },
+  "deterministic_repeat": true,
+  "ok": true
+}

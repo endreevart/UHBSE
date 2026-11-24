@@ -1,0 +1,110 @@
+{
+  "version": "0.2.1.1",
+  "baseline_zip": "stage-03-unified-longitudinal-event-probability-foundation-v0.2.1-review.zip",
+  "baseline_sha256": "d0036ecacb52a4e622cf363e9acea27ffadf0163300c596b9fcf2a7bfa2e90dd",
+  "V021_DEFECT_REPRODUCTION_STATUS": "PASS",
+  "n_reproduced": 12,
+  "n_required": 12,
+  "defects": [
+    {
+      "id": 1,
+      "claim": "excursion_landmarks_are_full_state_times_selected_outcome_product",
+      "reproduced": true,
+      "observed": {
+        "A_states": 49574,
+        "A_excursion": 198296,
+        "B_states": 24218,
+        "B_excursion": 96872
+      }
+    },
+    {
+      "id": 2,
+      "claim": "inclusion_does_not_require_pre_t0_history_of_specific_outcome",
+      "reproduced": true
+    },
+    {
+      "id": 3,
+      "claim": "no_subsequent_measurement_censored_at_administrative_max_followup",
+      "reproduced": true
+    },
+    {
+      "id": 4,
+      "claim": "excursion_features_lack_outcome_specific_last_value_recency_count_delta_mask",
+      "reproduced": true
+    },
+    {
+      "id": 5,
+      "claim": "ipcw_calibration_report_returns_fitted_calibrator_slope_not_independent_eval",
+      "reproduced": true
+    },
+    {
+      "id": 6,
+      "claim": "validation_and_test_slopes_identical_by_construction",
+      "reproduced": true,
+      "observed": {
+        "validation_slope": 1.3189316691174195,
+        "test_slope": 1.3189316691174195
+      }
+    },
+    {
+      "id": 7,
+      "claim": "test_evaluation_runs_before_frozen_payload_and_pretest_registry",
+      "reproduced": true
+    },
+    {
+      "id": 8,
+      "claim": "365_day_accepted_cells_sit_on_censoring_boundary",
+      "reproduced": true,
+      "observed": {
+        "B_lab_val": {
+          "n_at_risk": 93,
+          "n_censored_before_horizon": 93
+        },
+        "B_lab_test": {
+          "n_at_risk": 281,
+          "n_censored_before_horizon": 281
+        },
+        "B_enc_val": {
+          "n_at_risk": 28,
+          "n_censored_before_horizon": 28
+        },
+        "B_enc_test": {
+          "n_at_risk": 66,
+          "n_censored_before_horizon": 66
+        }
+      }
+    },
+    {
+      "id": 9,
+      "claim": "payload_identity_hashes_singular_calibrator_while_payload_stores_calibrators",
+      "reproduced": true
+    },
+    {
+      "id": 10,
+      "claim": "mutated_or_missing_ood_returns_ok_true_plus_abstain",
+      "reproduced": true,
+      "observed": {
+        "ood_mutation_ok": true,
+        "ood_mutation_abstain": true
+      }
+    },
+    {
+      "id": 11,
+      "claim": "unsupported_365_fixture_actually_requested_14_days",
+      "reproduced": true,
+      "observed": 14.0
+    },
+    {
+      "id": 12,
+      "claim": "baseline_verification_publishes_traj_v01_member_counts_not_v021_zip",
+      "reproduced": true,
+      "observed": {
+        "published_members": 703,
+        "published_indexed": 702,
+        "v021_zip_members": 734,
+        "v021_zip_indexed": 733
+      }
+    }
+  ],
+  "ok": true
+}

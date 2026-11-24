@@ -1,0 +1,37 @@
+{
+  "published_v011_quantile_counts": {
+    "q1": 233,
+    "q2": 234,
+    "q3": 234,
+    "q4": 936
+  },
+  "bug_detection": {
+    "published_counts": {
+      "q1": 233,
+      "q2": 234,
+      "q3": 234,
+      "q4": 936
+    },
+    "n": 936,
+    "sum": 1637,
+    "sum_equals_n": false,
+    "q4_equals_full_test": true,
+    "invalid": true,
+    "regression_rejected": true
+  },
+  "correction_method": "exclusive assignment by sorted (starting_value, row_index)",
+  "exclusive_demo_on_n_rows": {
+    "n": 936,
+    "exclusive_counts": {
+      "q1": 234,
+      "q2": 234,
+      "q3": 234,
+      "q4": 234
+    },
+    "exclusive_sum_equals_n": true,
+    "pairwise_intersection_empty": true,
+    "union_equals_full": true
+  },
+  "note": "Live coverage recomputation requires re-running uncertainty with exclusive bins; algorithm verified by unit tests. Published v0.1.1 q4 bug rejected.",
+  "status": "CORRECTED_ALGORITHM"
+}

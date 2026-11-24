@@ -1,0 +1,115 @@
+{
+  "grain_id": "50b798414d93d78f90dcfd42",
+  "outcome": "ЛГ",
+  "unit": "мМЕд/мл",
+  "status": "BELOW_GLOBAL_THRESHOLD",
+  "reason": "test_subjects_below_conservative_min",
+  "n_test_subjects": 23,
+  "split_counts": {
+    "train_pairs": 231,
+    "val_pairs": 41,
+    "test_pairs": 36,
+    "train_subjects": 148,
+    "val_subjects": 25,
+    "test_subjects": 23
+  },
+  "n_pairs": 308,
+  "dataset_summary": {
+    "grain_id": "50b798414d93d78f90dcfd42",
+    "outcome": "ЛГ",
+    "unit": "мМЕд/мл",
+    "n_observations": 1298,
+    "n_subjects": 982,
+    "n_subjects_with_repeats": 201,
+    "n_pairs": 308,
+    "pair_meta": {
+      "schema": {
+        "version": "0.1.1.1",
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ]
+      },
+      "summary": {
+        "n_subjects_in_series": 982,
+        "n_observations_after_filter": 1298,
+        "n_pairs": 308,
+        "n_subjects_with_pairs": 196,
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "horizon_days": {
+          "n": 308,
+          "min": 1.0,
+          "median": 152.0,
+          "max": 1017.0,
+          "mean": 231.58441558441558
+        },
+        "exclusions_by_reason": {
+          "missing_timestamp": 0,
+          "zero_horizon": 1,
+          "negative_horizon": 0,
+          "incompatible_unit": 0,
+          "duplicate_same_timestamp_collapsed": 7,
+          "all_forward_combinations_forbidden": 0
+        },
+        "units": [
+          "мМЕд/мл"
+        ],
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "dataset_schema_hash": "9a5fde5e8b26931fdc000d1d1ad15a42f4e58c0bd591f772c3802485357278d7",
+        "dataset_build_configuration_hash": "c40f185ae688d875398e4706855c9f508b466785a67e17f1f1e7685e70ddd647",
+        "missingness": {
+          "prior_mean_null_pairs": 196,
+          "prior_last_delta_null_pairs": 196
+        },
+        "date_coverage_hash": "78670d8c31773ceed2169258b84f83b04db43e035576ddda3050128857f02cbf"
+      },
+      "config": {
+        "version": "0.1.1",
+        "source_system": "magerya_api"
+      }
+    },
+    "funnel_steps": [
+      {
+        "level": "numeric_observations",
+        "accepted": 1298,
+        "note": "Source A numeric typed values with timestamps"
+      },
+      {
+        "level": "subjects",
+        "accepted": 982
+      },
+      {
+        "level": "subjects_with_repeats",
+        "accepted": 201
+      },
+      {
+        "level": "strict_consecutive_pairs",
+        "accepted": 308,
+        "exclusions": null
+      }
+    ],
+    "unexplained": 0,
+    "source_system": "magerya_api",
+    "medication_features_present": false
+  },
+  "v011_active_provider": "persistence",
+  "provider_changed": true
+}

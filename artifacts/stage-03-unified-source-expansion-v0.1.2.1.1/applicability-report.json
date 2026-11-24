@@ -1,0 +1,33 @@
+{
+  "version": "0.1.2.1.1",
+  "applicability_status": "INSUFFICIENT_DATA",
+  "feature_contract": {
+    "feature_order": [
+      "y_t0",
+      "horizon_days",
+      "n_prior_measurements",
+      "prior_mean",
+      "prior_last_delta",
+      "days_since_first",
+      "has_prior_history",
+      "prior_mean_missing_flag",
+      "prior_last_delta_missing_flag"
+    ],
+    "n_pairs": 0,
+    "missing_feature_slots": 0,
+    "contract_ok": false
+  },
+  "horizon_ood": {
+    "status": "INSUFFICIENT",
+    "ood_fraction": null
+  },
+  "max_ood_fraction": 0.35,
+  "ood_ok": false,
+  "pass": false,
+  "applicability_gate_integrity_status": "PASS",
+  "b_cannot_tune_a": true,
+  "not_production_ood_detector": true,
+  "note": "Range/missingness check only \u2014 not a production clinical OOD detector. PARTIAL/FAIL/INSUFFICIENT never open the transfer gate.",
+  "a_train_reference_available": true,
+  "note_release": "A-train reference rebuilt without refit; Source B pairs not evaluated because transfer is not executed in this integrity correction."
+}

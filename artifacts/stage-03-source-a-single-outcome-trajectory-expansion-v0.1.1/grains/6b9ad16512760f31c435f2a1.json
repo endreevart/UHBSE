@@ -1,0 +1,610 @@
+{
+  "grain_id": "6b9ad16512760f31c435f2a1",
+  "outcome": "Эритроциты",
+  "unit": "млн/мкл",
+  "status": "EXPLORATORY_INCREMENTAL_PREDICTIVE_SIGNAL_SUPPORTED",
+  "active_provider": "ridge",
+  "active_provider_decision_reason": "Lowest validation subject-macro MAE among P0/P1/P2 (persistence=0.2508912601626016, trend=0.34518121636086746, ridge=0.22261191226038604); test unused for selection.",
+  "split_counts": {
+    "train_pairs": 695,
+    "val_pairs": 158,
+    "test_pairs": 141,
+    "train_subjects": 383,
+    "val_subjects": 82,
+    "test_subjects": 83
+  },
+  "subject_overlap_zero": true,
+  "pair_overlap_zero": true,
+  "validation_metrics": {
+    "persistence": {
+      "n_pairs": 158,
+      "n_subjects": 82,
+      "pair_micro_mae": 0.24063291139240509,
+      "pair_micro_rmse": 0.30457274494285486,
+      "median_absolute_error": 0.20000000000000018,
+      "mean_bias": -0.003924050632911374,
+      "subject_macro_mae": 0.2508912601626016
+    },
+    "empirical_trend": {
+      "n_pairs": 158,
+      "n_subjects": 82,
+      "pair_micro_mae": 0.391666850994278,
+      "pair_micro_rmse": 0.7617871020224493,
+      "median_absolute_error": 0.233650793650793,
+      "mean_bias": -0.06027439320890813,
+      "subject_macro_mae": 0.34518121636086746
+    },
+    "ridge": {
+      "n_pairs": 158,
+      "n_subjects": 82,
+      "pair_micro_mae": 0.21073749219751323,
+      "pair_micro_rmse": 0.27470595113618707,
+      "median_absolute_error": 0.17053839781315183,
+      "mean_bias": 5.991835475578018e-05,
+      "subject_macro_mae": 0.22261191226038604
+    }
+  },
+  "test_metrics": {
+    "persistence": {
+      "n_pairs": 141,
+      "n_subjects": 83,
+      "pair_micro_mae": 0.2033333333333333,
+      "pair_micro_rmse": 0.24456793570970203,
+      "median_absolute_error": 0.16999999999999993,
+      "mean_bias": 0.00560283687943265,
+      "subject_macro_mae": 0.20841465863453812
+    },
+    "empirical_trend": {
+      "n_pairs": 141,
+      "n_subjects": 83,
+      "pair_micro_mae": 0.27314868970107586,
+      "pair_micro_rmse": 0.3447266482019241,
+      "median_absolute_error": 0.22999999999999954,
+      "mean_bias": -0.0052147898141864735,
+      "subject_macro_mae": 0.24447063960483337
+    },
+    "ridge": {
+      "n_pairs": 141,
+      "n_subjects": 83,
+      "pair_micro_mae": 0.1850650916706643,
+      "pair_micro_rmse": 0.229184672468097,
+      "median_absolute_error": 0.15740367534204225,
+      "mean_bias": 0.008010460235135883,
+      "subject_macro_mae": 0.19327999965400686
+    }
+  },
+  "evaluation": {
+    "version": "0.1.1",
+    "source_a_incremental_signal_status": "EXPLORATORY_INCREMENTAL_PREDICTIVE_SIGNAL_SUPPORTED",
+    "test_metrics": {
+      "ridge": {
+        "n_pairs": 141,
+        "n_subjects": 83,
+        "pair_micro_mae": 0.1850650916706643,
+        "pair_micro_rmse": 0.229184672468097,
+        "median_absolute_error": 0.15740367534204225,
+        "mean_bias": 0.008010460235135883,
+        "subject_macro_mae": 0.19327999965400686
+      },
+      "persistence": {
+        "n_pairs": 141,
+        "n_subjects": 83,
+        "pair_micro_mae": 0.2033333333333333,
+        "pair_micro_rmse": 0.24456793570970203,
+        "median_absolute_error": 0.16999999999999993,
+        "mean_bias": 0.00560283687943265,
+        "subject_macro_mae": 0.20841465863453812
+      },
+      "empirical_trend": {
+        "n_pairs": 141,
+        "n_subjects": 83,
+        "pair_micro_mae": 0.27314868970107586,
+        "pair_micro_rmse": 0.3447266482019241,
+        "median_absolute_error": 0.22999999999999954,
+        "mean_bias": -0.0052147898141864735,
+        "subject_macro_mae": 0.24447063960483337
+      },
+      "ridge_minus_persistence_macro_mae": -0.015134658980531263,
+      "relative_improvement_vs_persistence": -0.07261801583289963
+    },
+    "subject_improvement": {
+      "n_subjects": 83,
+      "mean_subject_error_diff_ridge_minus_persistence": -0.015134658980531278,
+      "median_subject_improvement_ridge_minus_persistence": -0.01325336885783246,
+      "fraction_subjects_ridge_better": 0.6144578313253012,
+      "negative_diff_means_ridge_better": true
+    },
+    "bootstrap": {
+      "status": "COMPUTED",
+      "n_iterations": 500,
+      "seed": 42,
+      "resampling_unit": "subject",
+      "mean_diff_ridge_minus_persistence": -0.015066038859175354,
+      "ci_95_lower": -0.022809487543466928,
+      "ci_95_upper": -0.006379751451865895,
+      "fraction_negative": 1.0
+    },
+    "shuffle_control": {
+      "n_permutations": 100,
+      "seed": 42,
+      "shuffle_train_labels_only": true,
+      "evaluate_on_fixed_a_only_test": true,
+      "real_ridge_minus_persistence_macro_mae": -0.015134658980531263,
+      "count_shuffles_le_real": 0,
+      "fraction_shuffles_le_real": 0.0,
+      "permutation_p_value": 0.009900990099009901,
+      "permutation_p_value_formula": "(count_shuffles_le_real + 1) / (n_permutations + 1)",
+      "permutation_count_fixed_before_results": true
+    },
+    "horizon_sensitivity": {
+      "lt_1d": {
+        "n_pairs": 0,
+        "ridge": {
+          "n_pairs": 0,
+          "n_subjects": 0,
+          "pair_micro_mae": null,
+          "pair_micro_rmse": null,
+          "median_absolute_error": null,
+          "mean_bias": null,
+          "subject_macro_mae": null
+        },
+        "persistence": {
+          "n_pairs": 0,
+          "n_subjects": 0,
+          "pair_micro_mae": null,
+          "pair_micro_rmse": null,
+          "median_absolute_error": null,
+          "mean_bias": null,
+          "subject_macro_mae": null
+        }
+      },
+      "1_7d": {
+        "n_pairs": 1,
+        "ridge": {
+          "n_pairs": 1,
+          "n_subjects": 1,
+          "pair_micro_mae": 0.40664158138875983,
+          "pair_micro_rmse": 0.40664158138875983,
+          "median_absolute_error": 0.40664158138875983,
+          "mean_bias": 0.40664158138875983,
+          "subject_macro_mae": 0.40664158138875983
+        },
+        "persistence": {
+          "n_pairs": 1,
+          "n_subjects": 1,
+          "pair_micro_mae": 0.4299999999999997,
+          "pair_micro_rmse": 0.4299999999999997,
+          "median_absolute_error": 0.4299999999999997,
+          "mean_bias": 0.4299999999999997,
+          "subject_macro_mae": 0.4299999999999997
+        }
+      },
+      "7_30d": {
+        "n_pairs": 5,
+        "ridge": {
+          "n_pairs": 5,
+          "n_subjects": 5,
+          "pair_micro_mae": 0.15782181247076074,
+          "pair_micro_rmse": 0.22110472659097524,
+          "median_absolute_error": 0.11769583837093212,
+          "mean_bias": -0.10315813157096869,
+          "subject_macro_mae": 0.15782181247076074
+        },
+        "persistence": {
+          "n_pairs": 5,
+          "n_subjects": 5,
+          "pair_micro_mae": 0.22000000000000003,
+          "pair_micro_rmse": 0.290998281781869,
+          "median_absolute_error": 0.1299999999999999,
+          "mean_bias": -0.13600000000000004,
+          "subject_macro_mae": 0.22000000000000003
+        }
+      },
+      "30_90d": {
+        "n_pairs": 39,
+        "ridge": {
+          "n_pairs": 39,
+          "n_subjects": 31,
+          "pair_micro_mae": 0.18943332125600654,
+          "pair_micro_rmse": 0.22649846557597172,
+          "median_absolute_error": 0.15770730529700216,
+          "mean_bias": -0.013622193922661308,
+          "subject_macro_mae": 0.1936151325823594
+        },
+        "persistence": {
+          "n_pairs": 39,
+          "n_subjects": 31,
+          "pair_micro_mae": 0.21000000000000002,
+          "pair_micro_rmse": 0.24113513606721404,
+          "median_absolute_error": 0.20000000000000018,
+          "mean_bias": -0.00487179487179487,
+          "subject_macro_mae": 0.21569892473118282
+        }
+      },
+      "90_365d": {
+        "n_pairs": 86,
+        "ridge": {
+          "n_pairs": 86,
+          "n_subjects": 57,
+          "pair_micro_mae": 0.1809391284107685,
+          "pair_micro_rmse": 0.228094791250141,
+          "median_absolute_error": 0.15561378375047408,
+          "mean_bias": 0.006449670554686464,
+          "subject_macro_mae": 0.1718564534557991
+        },
+        "persistence": {
+          "n_pairs": 86,
+          "n_subjects": 57,
+          "pair_micro_mae": 0.19988372093023254,
+          "pair_micro_rmse": 0.2450177971703944,
+          "median_absolute_error": 0.16999999999999993,
+          "mean_bias": 0.002441860465116315,
+          "subject_macro_mae": 0.18773391812865495
+        }
+      },
+      "gt_365d": {
+        "n_pairs": 10,
+        "ridge": {
+          "n_pairs": 10,
+          "n_subjects": 10,
+          "pair_micro_mae": 0.19497627095107561,
+          "pair_micro_rmse": 0.22830132788664043,
+          "median_absolute_error": 0.16837277432444964,
+          "mean_bias": 0.12152178649009984,
+          "subject_macro_mae": 0.19497627095107561
+        },
+        "persistence": {
+          "n_pairs": 10,
+          "n_subjects": 10,
+          "pair_micro_mae": 0.1760000000000001,
+          "pair_micro_rmse": 0.19869574731231676,
+          "median_absolute_error": 0.16999999999999993,
+          "mean_bias": 0.10200000000000009,
+          "subject_macro_mae": 0.1760000000000001
+        }
+      }
+    },
+    "signal_gates": {
+      "ridge_macro_lt_persistence": true,
+      "ridge_micro_lt_persistence": true,
+      "bootstrap_ci_upper_lt_0": true,
+      "permutation_p_le_0_05": true
+    }
+  },
+  "uncertainty": {
+    "version": "0.2",
+    "source_a_uncertainty_status": "UNCERTAINTY_CALIBRATION_AND_SHARPNESS_NOT_ESTABLISHED",
+    "uncertainty_interval_construction_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+    "n_test_pairs": 141,
+    "legacy_956_pair_metrics_not_reused": true,
+    "nominal_coverage": 0.9,
+    "observed_coverage": 0.950354609929078,
+    "mean_interval_width": 0.9037021601430215,
+    "median_interval_width": 0.9037021601430215,
+    "interval_width_relative_to_outcome_iqr": 1.9645699133543948,
+    "outcome_iqr": 0.45999999999999996,
+    "exclusive_starting_value_quartiles": {
+      "bins": {
+        "q1": {
+          "n_pairs": 36,
+          "coverage": 0.9444444444444444,
+          "mean_width": 0.9037021601430215
+        },
+        "q2": {
+          "n_pairs": 35,
+          "coverage": 0.9714285714285714,
+          "mean_width": 0.9037021601430215
+        },
+        "q3": {
+          "n_pairs": 35,
+          "coverage": 0.9142857142857143,
+          "mean_width": 0.9037021601430215
+        },
+        "q4": {
+          "n_pairs": 35,
+          "coverage": 0.9714285714285714,
+          "mean_width": 0.9037021601430215
+        }
+      },
+      "sum_bucket_counts": 141,
+      "sum_equals_n": true,
+      "pairwise_intersection_empty": true,
+      "union_equals_full": true
+    },
+    "coverage_by_horizon": {
+      "lt_7d": {
+        "n_pairs": 1,
+        "coverage": 1.0
+      },
+      "7_30d": {
+        "n_pairs": 5,
+        "coverage": 1.0
+      },
+      "30_90d": {
+        "n_pairs": 39,
+        "coverage": 0.9743589743589743
+      },
+      "90_365d": {
+        "n_pairs": 86,
+        "coverage": 0.9302325581395349
+      },
+      "gt_365d": {
+        "n_pairs": 10,
+        "coverage": 1.0
+      }
+    },
+    "note": "High coverage alone does not imply calibration PASS. Not clinical validation.",
+    "active_provider": "ridge",
+    "interval_spec": {
+      "active_provider": "ridge",
+      "interval_method": "validation_gaussian_residual_std",
+      "nominal_coverage": 0.9,
+      "validation_count": 158,
+      "residual_std": 0.27470595113618707,
+      "interval_multiplier": 1.6448536269514715,
+      "half_width": 0.451851080071511,
+      "interval_payload_hash": "1fd06789ec5ded59aefa77c775eb12f8ec31dbc32621521d9f413a5984338972"
+    },
+    "ACTIVE_PROVIDER_UNCERTAINTY_BOUND": true
+  },
+  "uncertainty_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+  "active_provider_uncertainty_ok": true,
+  "n_active_test_preds": 141,
+  "applicability_reference": {
+    "version": "0.2",
+    "source_a_applicability_reference_status": "BUILT",
+    "n_train_pairs": 695,
+    "scaler_fit_n_rows": 695,
+    "training_pair_manifest_hash": "5b977dd9deb09b3d4b04d902f67003934b4be3567425493697008205e55ad216",
+    "feature_schema_hash": "14303f8d4197b9bf8205bcb912bbb294c75f4ff2f7e22d2ae42290f97c4e29ff",
+    "feature_order": [
+      "y_t0",
+      "horizon_days",
+      "n_prior_measurements",
+      "prior_mean",
+      "prior_last_delta",
+      "days_since_first",
+      "has_prior_history",
+      "prior_mean_missing_flag",
+      "prior_last_delta_missing_flag"
+    ],
+    "horizon_quantiles": {
+      "p01": 7.0,
+      "p05": 22.0,
+      "p25": 74.0,
+      "p50": 111.0,
+      "p75": 190.0,
+      "p95": 489.0,
+      "p99": 859.0,
+      "min": 1.0,
+      "max": 1096.0
+    },
+    "max_ood_fraction_declared_before_shadow_metrics": 0.35,
+    "not_production_ood_detector": true,
+    "exploratory_applicability_profile": true,
+    "equalities": {
+      "scaler_fit_n_rows_eq_n_train_pairs": true,
+      "manifest_hash_bound": true
+    },
+    "ood_fraction_threshold": 0.1,
+    "scaler_means": [
+      4.550244604316547,
+      164.93812949640287,
+      0.962589928057554,
+      2.0378884492406075,
+      -0.0029064748201438773,
+      134.09208633093525,
+      0.4489208633093525,
+      0.5510791366906475,
+      0.5510791366906475
+    ],
+    "scaler_stds": [
+      0.47457403606634097,
+      163.8665378141805,
+      1.5570805268491417,
+      2.2760201298441936,
+      0.17187132932216703,
+      222.07897391873527,
+      0.49738407875095697,
+      0.49738407875095697,
+      0.49738407875095697
+    ],
+    "feature_support": {
+      "y_t0": {
+        "p01": 3.63,
+        "p05": 3.85,
+        "p95": 5.43,
+        "p99": 5.85,
+        "min": 3.24,
+        "max": 6.4
+      },
+      "horizon_days": {
+        "p01": 7.0,
+        "p05": 22.0,
+        "p95": 489.0,
+        "p99": 859.0,
+        "min": 1.0,
+        "max": 1096.0
+      },
+      "n_prior_measurements": {
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 4.0,
+        "p99": 7.0,
+        "min": 0.0,
+        "max": 11.0
+      },
+      "prior_mean": {
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 5.07,
+        "p99": 5.55,
+        "min": 0.0,
+        "max": 6.0
+      },
+      "prior_last_delta": {
+        "p01": -0.5499999999999998,
+        "p05": -0.3100000000000005,
+        "p95": 0.30000000000000027,
+        "p99": 0.5,
+        "min": -0.8800000000000003,
+        "max": 0.8499999999999996
+      },
+      "days_since_first": {
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 644.0,
+        "p99": 940.0,
+        "min": 0.0,
+        "max": 1252.0
+      },
+      "has_prior_history": {
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "prior_mean_missing_flag": {
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "prior_last_delta_missing_flag": {
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      }
+    }
+  },
+  "applicability_sample": {
+    "version": "0.1.1",
+    "source_a_heldout_applicability_status": "APPLICABILITY_CHECK_PASS",
+    "pass": true,
+    "n_pairs": 50,
+    "in_support_fraction": 0.98,
+    "out_of_support_fraction": 0.02,
+    "partial_support_fraction": 0.0,
+    "unsupported_fraction": 0.0,
+    "horizon_ood_fraction": 0.02,
+    "ood_fraction_threshold": 0.1,
+    "note": "Source A held-out check; not Source B transfer."
+  },
+  "medication_features_present": false,
+  "n_pairs": 994,
+  "dataset_summary": {
+    "grain_id": "6b9ad16512760f31c435f2a1",
+    "outcome": "Эритроциты",
+    "unit": "млн/мкл",
+    "n_observations": 2786,
+    "n_subjects": 1781,
+    "n_subjects_with_repeats": 550,
+    "n_pairs": 994,
+    "pair_meta": {
+      "schema": {
+        "version": "0.1.1.1",
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "row_fields_hash": null
+      },
+      "summary": {
+        "n_subjects_in_series": 1781,
+        "n_observations_after_filter": 2786,
+        "n_pairs": 994,
+        "n_subjects_with_pairs": 548,
+        "pair_definition": "strict_consecutive_neighbors_only",
+        "horizon_days": {
+          "n": 994,
+          "min": 1.0,
+          "median": 113.0,
+          "max": 1410.0,
+          "mean": 163.56438631790743
+        },
+        "exclusions_by_reason": {
+          "missing_timestamp": 0,
+          "zero_horizon": 0,
+          "negative_horizon": 0,
+          "incompatible_unit": 0,
+          "duplicate_same_timestamp_collapsed": 11,
+          "all_forward_combinations_forbidden": 0
+        },
+        "units": [
+          "млн/мкл"
+        ],
+        "feature_list": [
+          "y_t0",
+          "horizon_days",
+          "n_prior_measurements",
+          "prior_mean",
+          "prior_last_delta",
+          "days_since_first",
+          "has_prior_history",
+          "prior_mean_missing_flag",
+          "prior_last_delta_missing_flag"
+        ],
+        "dataset_schema_hash": "9a5fde5e8b26931fdc000d1d1ad15a42f4e58c0bd591f772c3802485357278d7",
+        "dataset_build_configuration_hash": "c40f185ae688d875398e4706855c9f508b466785a67e17f1f1e7685e70ddd647",
+        "missingness": {
+          "prior_mean_null_pairs": 548,
+          "prior_last_delta_null_pairs": 548
+        },
+        "date_coverage_hash": "fccf2933fc96cf54f99b6c6cf06137a155587c7d33c1e5467a90895aeb75aba7"
+      },
+      "config": {
+        "version": "0.1.1",
+        "source_system": "magerya_api"
+      }
+    },
+    "funnel_steps": [
+      {
+        "level": "numeric_observations",
+        "accepted": 2786,
+        "note": "Source A numeric typed values with timestamps"
+      },
+      {
+        "level": "subjects",
+        "accepted": 1781
+      },
+      {
+        "level": "subjects_with_repeats",
+        "accepted": 550
+      },
+      {
+        "level": "strict_consecutive_pairs",
+        "accepted": 994,
+        "exclusions": null
+      }
+    ],
+    "unexplained": 0,
+    "source_system": "magerya_api",
+    "medication_features_present": false
+  },
+  "authoritative_threshold_result": {
+    "eligible": true,
+    "fails": [],
+    "criteria_applied_to": "authoritative_rebuilt_dataset"
+  },
+  "frozen_hashes": {
+    "model_file_hash": "ed31f1b00729fc59bd0be959bcce484a5e47583f6ed0e325ed4f019ed4cf2f33",
+    "model_identity_hash": "a7fd51368426e3bbf7d96b98dfcdd604a49b1b77e9b6f4bfc4aed67a932f42ff",
+    "active_provider": "ridge",
+    "interval_payload_hash": "1fd06789ec5ded59aefa77c775eb12f8ec31dbc32621521d9f413a5984338972"
+  }
+}

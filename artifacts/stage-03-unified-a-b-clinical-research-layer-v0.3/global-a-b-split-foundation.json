@@ -1,0 +1,50 @@
+{
+  "version": "0.3",
+  "GLOBAL_A_B_SPLIT_FOUNDATION_STATUS": "PASS",
+  "namespace": "unified-a-b-research-layer-v03",
+  "seed": 42,
+  "method": "sha256_namespace_hash_fraction_fixed_buckets",
+  "buckets": {
+    "train": [
+      0.0,
+      0.7
+    ],
+    "validation": [
+      0.7,
+      0.85
+    ],
+    "test": [
+      0.85,
+      1.0
+    ]
+  },
+  "subject_grouped": true,
+  "repeatable": true,
+  "subset_invariant": true,
+  "overlap_aware": true,
+  "no_subject_leakage_by_construction": true,
+  "no_locator_leakage_in_public": true,
+  "no_confirmed_cross_source_duplicate_leakage": true,
+  "suspected_duplicates_policy": {
+    "possible_a_b_duplicates_must_not_span_train_and_heldout": true,
+    "ambiguous_overlap_may_be_excluded_from_cross_source_eval": true,
+    "must_not_claim_unique_patients": true
+  },
+  "source_balance": {
+    "magerya_api": {
+      "train": 30677,
+      "validation": 6555,
+      "test": 6624
+    },
+    "kgz_raw": {
+      "train": 34671,
+      "validation": 7351,
+      "test": 7542
+    }
+  },
+  "n_subjects_assigned": 93420,
+  "test_based_feature_selection": false,
+  "backtest_run": false,
+  "model_training_run": false,
+  "ok": true
+}

@@ -1,0 +1,1162 @@
+{
+  "SOURCE_B_FEEDBACK_SCHEMA_STATUS": "SCHEMA_CAPTURED_SEMANTICS_UNKNOWN",
+  "application_code": {
+    "human_or_domain_acceptance": false,
+    "searched": "repository working tree",
+    "status": "NOT_FOUND_IN_REPOSITORY"
+  },
+  "columns": [
+    {
+      "column": "id",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "doctor_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "patient_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "confirmed",
+      "data_type": "boolean",
+      "has_default": true,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "bool"
+    },
+    {
+      "column": "confirmed_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "date",
+      "data_type": "date",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "date"
+    },
+    {
+      "column": "time",
+      "data_type": "time without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "time"
+    },
+    {
+      "column": "success",
+      "data_type": "boolean",
+      "has_default": true,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "bool"
+    },
+    {
+      "column": "success_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "payed",
+      "data_type": "boolean",
+      "has_default": false,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "bool"
+    },
+    {
+      "column": "payed_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "payed_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "document_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "type",
+      "data_type": "character varying",
+      "has_default": true,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "varchar"
+    },
+    {
+      "column": "cancel",
+      "data_type": "boolean",
+      "has_default": true,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "bool"
+    },
+    {
+      "column": "cancel_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "next_consultation_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "recommendations",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "price",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "service_product_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "last_anketa_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "is_active",
+      "data_type": "boolean",
+      "has_default": true,
+      "nullable": false,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "bool"
+    },
+    {
+      "column": "complete_anketa_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "recommendations_from",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "consultations",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "id",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": false,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "user_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": false,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "drugs",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "allergy",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "state",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "target",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "document_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "day_cycle",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "change_drugs",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "complaints",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "date",
+      "data_type": "date",
+      "has_default": true,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "date"
+    },
+    {
+      "column": "decline_drugs",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "positive_changes",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "vitamins",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "weight_before",
+      "data_type": "double precision",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "float8"
+    },
+    {
+      "column": "weight_now",
+      "data_type": "double precision",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "float8"
+    },
+    {
+      "column": "sleeping",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "pain",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "consultation_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "outside_doctor_medicine",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "physical_activity",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "menstrual_length",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "pregnancy",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "infant_feeding",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "menopausa",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "is_complete",
+      "data_type": "boolean",
+      "has_default": true,
+      "nullable": false,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "bool"
+    },
+    {
+      "column": "anamneses_data",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "preview_diagnosis",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "drugs_first",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "feedback",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "id",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": false,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "user_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": false,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "full_name",
+      "data_type": "character varying",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "varchar"
+    },
+    {
+      "column": "city",
+      "data_type": "character varying",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "varchar"
+    },
+    {
+      "column": "birth_date",
+      "data_type": "date",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "date"
+    },
+    {
+      "column": "weight",
+      "data_type": "double precision",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "float8"
+    },
+    {
+      "column": "complaints",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "medicines",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "menstrual",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "additional",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "target",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "document_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "muscles",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "age",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "date",
+      "data_type": "date",
+      "has_default": true,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "date"
+    },
+    {
+      "column": "drugs",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "abortion",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "allergy",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "height",
+      "data_type": "double precision",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "float8"
+    },
+    {
+      "column": "illnesses",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "surgery",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "drugs_first",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "drugs_second",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "drugs_third",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "sleeping",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "pain",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "consultation_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "int4"
+    },
+    {
+      "column": "menstrual_length",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "pregnancy",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "infant_feeding",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "menopausa",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "outside_doctor_medicine",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "physical_activity",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "instagram",
+      "data_type": "character varying",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "varchar"
+    },
+    {
+      "column": "is_complete",
+      "data_type": "boolean",
+      "has_default": true,
+      "nullable": false,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "bool"
+    },
+    {
+      "column": "dental_fillings",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "anamneses_data",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "preview_diagnosis",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "preview_treatment",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "questionnaire",
+      "schema": "public",
+      "udt_name": "text"
+    },
+    {
+      "column": "id",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": false,
+      "relation": "recommendations_category",
+      "schema": "quest_digital",
+      "udt_name": "int4"
+    },
+    {
+      "column": "title",
+      "data_type": "character varying",
+      "has_default": true,
+      "nullable": true,
+      "relation": "recommendations_category",
+      "schema": "quest_digital",
+      "udt_name": "varchar"
+    },
+    {
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_category",
+      "schema": "quest_digital",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_category",
+      "schema": "quest_digital",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "user_title",
+      "data_type": "character varying",
+      "has_default": true,
+      "nullable": true,
+      "relation": "recommendations_category",
+      "schema": "quest_digital",
+      "udt_name": "varchar"
+    },
+    {
+      "column": "priority",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": false,
+      "relation": "recommendations_category",
+      "schema": "quest_digital",
+      "udt_name": "int4"
+    },
+    {
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "recommendations_category",
+      "schema": "quest_digital",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "id",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": false,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "int4"
+    },
+    {
+      "column": "category_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "int4"
+    },
+    {
+      "column": "title",
+      "data_type": "character varying",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "varchar"
+    },
+    {
+      "column": "description",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "text"
+    },
+    {
+      "column": "link",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "text"
+    },
+    {
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "priority",
+      "data_type": "integer",
+      "has_default": true,
+      "nullable": true,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "int4"
+    },
+    {
+      "column": "title_en",
+      "data_type": "character varying",
+      "has_default": false,
+      "nullable": true,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "varchar"
+    },
+    {
+      "column": "description_en",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "text"
+    },
+    {
+      "column": "deleted_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": true,
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "udt_name": "int4"
+    },
+    {
+      "column": "recommendations_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "udt_name": "int4"
+    },
+    {
+      "column": "consultations_id",
+      "data_type": "integer",
+      "has_default": false,
+      "nullable": true,
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "udt_name": "int4"
+    },
+    {
+      "column": "is_active",
+      "data_type": "boolean",
+      "has_default": true,
+      "nullable": true,
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "udt_name": "bool"
+    },
+    {
+      "column": "created_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "updated_at",
+      "data_type": "timestamp without time zone",
+      "has_default": false,
+      "nullable": false,
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "udt_name": "timestamp"
+    },
+    {
+      "column": "description",
+      "data_type": "text",
+      "has_default": false,
+      "nullable": true,
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "udt_name": "text"
+    }
+  ],
+  "constraints": [
+    {
+      "definition": "FOREIGN KEY (consultation_id) REFERENCES consultations(id)",
+      "relation": "feedback",
+      "schema": "public",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (consultation_id) REFERENCES consultations(id)",
+      "relation": "questionnaire",
+      "schema": "public",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (category_id) REFERENCES quest_digital.recommendations_category(id)",
+      "relation": "recommendations_list",
+      "schema": "quest_digital",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (consultations_id) REFERENCES consultations(id)",
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "type": "FOREIGN_KEY"
+    },
+    {
+      "definition": "FOREIGN KEY (recommendations_id) REFERENCES quest_digital.recommendations_list(id)",
+      "relation": "recommendations_user",
+      "schema": "quest_digital",
+      "type": "FOREIGN_KEY"
+    }
+  ],
+  "consultations_patient_id_foreign_key": [],
+  "documented_crosswalk": null,
+  "feedback_user_id_foreign_key": [],
+  "schema_fingerprint": "dce10ab0610f8a747e2bba9c9f69773b8181fd7c48f04690e20951f859a29393",
+  "source_system": "kgz_raw",
+  "timezone_contract": {
+    "comparisons": "naive, not a verified civil-time contract",
+    "consultations.created_at": "timestamp without time zone",
+    "consultations.date": "date",
+    "feedback.created_at": "timestamp without time zone",
+    "recommendations_user.created_at": "timestamp without time zone",
+    "zone": "UNKNOWN"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "version": "0.1.1",
+  "n_registry_grains_v01": 104,
+  "n_processed": 104,
+  "AUTHORITATIVE_ELIGIBLE_GRAIN_COUNT": 101,
+  "n_ineligible": 3,
+  "successfully_trained": 101,
+  "active_persistence": 24,
+  "active_trend": 0,
+  "active_ridge": 77,
+  "outcome_status_counts": {
+    "EXPLORATORY_INCREMENTAL_PREDICTIVE_SIGNAL_SUPPORTED": 44,
+    "NO_INCREMENTAL_SIGNAL_DETECTED": 57
+  },
+  "ineligible_outcomes": [
+    {
+      "outcome": "Антитела к вирусу простого герпеса I, II типов, IgG",
+      "unit": "_",
+      "n_pairs": 297,
+      "fails": [
+        "strict_consecutive_pairs"
+      ]
+    },
+    {
+      "outcome": "Антитела к цитомегаловирусу, IgG",
+      "unit": "_",
+      "n_pairs": 284,
+      "fails": [
+        "strict_consecutive_pairs"
+      ]
+    },
+    {
+      "outcome": "ОЖСС",
+      "unit": "мкмоль/л",
+      "n_pairs": 296,
+      "fails": [
+        "strict_consecutive_pairs"
+      ]
+    }
+  ],
+  "no_pooled_mae_across_units": true,
+  "forced_count_104": false
+}

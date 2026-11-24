@@ -1,0 +1,196 @@
+{
+  "fields": [
+    {
+      "answer_key": "A1",
+      "decision": "MEDICINES_SECTION_HOLDS_DRUGS_AND_SUPPLEMENTS",
+      "evidence": [
+        "owner-answer-record.json#A1"
+      ],
+      "field_path": "document_recommendation.document.recommendations[].code=medicines",
+      "source_system": "magerya_api",
+      "status": "OWNER_CONFIRMED"
+    },
+    {
+      "answer_key": "A2",
+      "decision": "ANALYSIS_ITEMS_ARE_COMPONENT_SUBANALYSES",
+      "evidence": [
+        "owner-answer-record.json#A2"
+      ],
+      "field_path": "document_analysis.items->document_analysisitem",
+      "source_system": "magerya_api",
+      "status": "OWNER_CONFIRMED"
+    },
+    {
+      "answer_key": "B1",
+      "decision": "FILLED_BY_PATIENT_OR_STAFF_FROM_PATIENT_WORDS",
+      "evidence": [
+        "owner-answer-record.json#B1"
+      ],
+      "field_path": "public.feedback",
+      "source_system": "kgz_raw",
+      "status": "OWNER_CONFIRMED"
+    },
+    {
+      "answer_key": "B2",
+      "decision": "FILLED_BEFORE_CONSULTATION",
+      "evidence": [
+        "owner-answer-record.json#B2"
+      ],
+      "field_path": "public.feedback.created_at",
+      "source_system": "kgz_raw",
+      "status": "OWNER_CONFIRMED"
+    },
+    {
+      "answer_key": "B3",
+      "decision": "FIRST_VISIT_GENERAL_HISTORY_REPEAT_VISIT_SINCE_PREVIOUS_VISIT",
+      "evidence": [
+        "owner-answer-record.json#B3"
+      ],
+      "field_path": "public.feedback",
+      "source_system": "kgz_raw",
+      "status": "OWNER_CONFIRMED"
+    },
+    {
+      "answer_key": "B4",
+      "decision": "SAME_SUBJECT_AS_CONSULTATIONS_PATIENT_ID",
+      "evidence": [
+        "owner-answer-record.json#B4"
+      ],
+      "field_path": "public.feedback.user_id",
+      "source_system": "kgz_raw",
+      "status": "OWNER_STATED_RECALL_UNCERTAIN"
+    },
+    {
+      "answer_key": "B5",
+      "decision": "DRUGS_MEDICATIONS_VITAMINS_SUPPLEMENTS",
+      "evidence": [
+        "owner-answer-record.json#B5"
+      ],
+      "field_path": "public.feedback.drugs,public.feedback.vitamins",
+      "source_system": "kgz_raw",
+      "status": "OWNER_STATED_RECALL_UNCERTAIN"
+    },
+    {
+      "answer_key": "B6",
+      "decision": null,
+      "evidence": [
+        "owner-answer-record.json#B6"
+      ],
+      "field_path": "public.feedback.drugs_first",
+      "source_system": "kgz_raw",
+      "status": "UNKNOWN"
+    },
+    {
+      "answer_key": "B7",
+      "decision": "CHANGE_OR_DECLINE_RELATIVE_TO_DOCTOR_RECOMMENDATIONS",
+      "evidence": [
+        "owner-answer-record.json#B7"
+      ],
+      "field_path": "public.feedback.change_drugs,public.feedback.decline_drugs",
+      "source_system": "kgz_raw",
+      "status": "OWNER_CONFIRMED"
+    },
+    {
+      "answer_key": "B8",
+      "decision": null,
+      "evidence": [
+        "owner-answer-record.json#B8"
+      ],
+      "field_path": "public.feedback.positive_changes",
+      "source_system": "kgz_raw",
+      "status": "UNKNOWN"
+    },
+    {
+      "answer_key": "B9",
+      "decision": null,
+      "evidence": [
+        "owner-answer-record.json#B9"
+      ],
+      "field_path": "public.feedback",
+      "source_system": "kgz_raw",
+      "status": "UNKNOWN"
+    },
+    {
+      "answer_key": "B10",
+      "decision": null,
+      "evidence": [
+        "owner-answer-record.json#B10"
+      ],
+      "field_path": "public.consultations.date",
+      "source_system": "kgz_raw",
+      "status": "UNKNOWN"
+    },
+    {
+      "answer_key": "B11",
+      "decision": "SOURCE_TIMEZONE_EUROPE_MOSCOW",
+      "evidence": [
+        "owner-answer-record.json#B11"
+      ],
+      "field_path": "public.feedback.created_at,public.consultations.date",
+      "source_system": "kgz_raw",
+      "status": "OWNER_CONFIRMED"
+    },
+    {
+      "catalog_label": "Образ жизни",
+      "decision": "LIFESTYLE_SECTION_NOT_MEDICATION_SECTION",
+      "evidence": [
+        "query:a_template_categories",
+        "owner-answer-record.json#A1"
+      ],
+      "field_path": "document_recommendation.document.recommendations[].code=activity",
+      "source_system": "magerya_api",
+      "status": "LIKELY"
+    },
+    {
+      "decision": "ONE_RECOMMENDATION_PER_ITEM_NAME_AND_DOCTOR_TEXT",
+      "evidence": [
+        "query:a_item_keys",
+        "code:apps/document/models/recommendation/v1_0.py"
+      ],
+      "field_path": "document_recommendation.document.recommendations[].items",
+      "observed_item_keys": [
+        "description",
+        "name"
+      ],
+      "semantic_status": "LIKELY",
+      "source_system": "magerya_api",
+      "status": "CONFIRMED_SCHEMA"
+    },
+    {
+      "decision": "ONE_MUTABLE_DOCUMENT_PER_APPOINTMENT_READ_ONLY_AFTER_APPOINTMENT_CLOSES_NO_VERSION_HISTORY",
+      "delivery_to_patient_status": "UNKNOWN",
+      "evidence": [
+        "query:a_recommendation_shape",
+        "code:apps/document/models/recommendation/models.py",
+        "code:apps/document/lk_doctor/views.py",
+        "code:apps/document/lk_doctor/serializers.py"
+      ],
+      "field_path": "document_recommendation",
+      "source_system": "magerya_api",
+      "status": "LIKELY"
+    },
+    {
+      "decision": "ASSIGNMENT_LINKED_TO_APPOINTMENT_VIA_DOCUMENT_APPOINTMENTANALYSISRESULT",
+      "evidence": [
+        "query:a_medicine_link",
+        "query:a_medicine_status",
+        "code:apps/mixin/models/results.py"
+      ],
+      "field_path": "diagnosis_medicineappointments->appointment",
+      "semantic_status": "ASSIGNMENT_NOT_ADMINISTRATION",
+      "source_system": "magerya_api",
+      "status": "CONFIRMED_SCHEMA"
+    },
+    {
+      "decision": "DRUG_OR_SUPPLEMENTS",
+      "evidence": [
+        "query:a_medicine_catalog",
+        "code:apps/diagnosis/enums.py"
+      ],
+      "field_path": "diagnosis_medicines.category",
+      "source_system": "magerya_api",
+      "status": "CONFIRMED_SCHEMA"
+    }
+  ],
+  "version": "0.2.2"
+}

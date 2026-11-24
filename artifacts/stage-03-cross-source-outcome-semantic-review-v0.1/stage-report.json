@@ -1,0 +1,263 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-08-25T11:54:49Z",
+  "elapsed_s": 5.69,
+  "baseline_verification": {
+    "status": "PASS",
+    "privacy_xs_sha256": "a04df9fb03d85852a0d56c694751a026eddb34f4d8362c8a8943ba415090e231",
+    "gs011_sha256": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d",
+    "members": 540,
+    "indexed_members": 539
+  },
+  "mapping_universe_accounting": {
+    "status": "PASS",
+    "n_mapping_strata": 98,
+    "n_with_b_candidate": 10,
+    "prior_lineage_status_counts": {
+      "HYPOTHESIS": 8,
+      "UNKNOWN": 90
+    }
+  },
+  "candidate_class_counts": {
+    "INSUFFICIENT_EVIDENCE": 88,
+    "SPECIMEN_MISSING": 2,
+    "UNIT_CONFLICT": 5,
+    "ANALYTE_AMBIGUOUS": 3
+  },
+  "scientifically_usable_accepted": [],
+  "SCIENTIFICALLY_USABLE_ACCEPTED_OUTCOME_COUNT": 0,
+  "t3_domain_review_status": "DOMAIN_REVIEW_REQUIRED",
+  "missing_evidence_categories": {
+    "no_b_candidate": 88,
+    "class:INSUFFICIENT_EVIDENCE": 88,
+    "specimen_material": 10,
+    "method_assay": 10,
+    "class:SPECIMEN_MISSING": 2,
+    "analyte_concept_unconfirmed": 5,
+    "conflict:unit_conflict": 8,
+    "class:UNIT_CONFLICT": 5,
+    "conflict:analyte_catalog_mismatch": 3,
+    "class:ANALYTE_AMBIGUOUS": 3
+  },
+  "top_candidates_by_longitudinal_coverage": [
+    {
+      "priority": 1,
+      "mapping_id": "d253deabe1bcc5fc1b118326cd6dae2673087989de73ca92f3d03056cbf9f4f9",
+      "a_outcome": "ТТГ",
+      "a_unit": "мЕд/л",
+      "b_raw_code": "55",
+      "b_unit": "пмоль/л",
+      "candidate_class": "ANALYTE_AMBIGUOUS",
+      "prior_lineage_status": "HYPOTHESIS",
+      "b_subjects": 26508,
+      "b_subjects_with_pairs": 8368,
+      "b_strict_pairs": 17343,
+      "zero_shot_shadow_suitable_if_accepted": false,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 2,
+      "mapping_id": "3fc35f76538a5eee93eef07e95951802bf1eb70225487c124b2f3e923e6fc6f5",
+      "a_outcome": "ТТГ",
+      "a_unit": "мМЕ/л",
+      "b_raw_code": "55",
+      "b_unit": "пмоль/л",
+      "candidate_class": "ANALYTE_AMBIGUOUS",
+      "prior_lineage_status": "HYPOTHESIS",
+      "b_subjects": 26508,
+      "b_subjects_with_pairs": 8368,
+      "b_strict_pairs": 17343,
+      "zero_shot_shadow_suitable_if_accepted": false,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 3,
+      "mapping_id": "385baabf218ab70a0416b0791aaa131fa9d47b2e1e60878c1f2ec7a6c548b9f6",
+      "a_outcome": "ТТГ",
+      "a_unit": "мкМЕ/мл",
+      "b_raw_code": "55",
+      "b_unit": "пмоль/л",
+      "candidate_class": "ANALYTE_AMBIGUOUS",
+      "prior_lineage_status": "HYPOTHESIS",
+      "b_subjects": 26508,
+      "b_subjects_with_pairs": 8368,
+      "b_strict_pairs": 17343,
+      "zero_shot_shadow_suitable_if_accepted": false,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 4,
+      "mapping_id": "59fbc0a36b3afe3ee6af9d618d416ded8a4bd7ad524bd0b210d383a5c7918956",
+      "a_outcome": "Т3 св.",
+      "a_unit": "пмоль/л",
+      "b_raw_code": "53",
+      "b_unit": "пмоль/л",
+      "candidate_class": "SPECIMEN_MISSING",
+      "prior_lineage_status": "HYPOTHESIS",
+      "b_subjects": 12697,
+      "b_subjects_with_pairs": 3217,
+      "b_strict_pairs": 6065,
+      "zero_shot_shadow_suitable_if_accepted": true,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 5,
+      "mapping_id": "7b5d55c1dfa962866de25b68c56dd0a5e96e39c62f3474ad5fdd5472e50ba98a",
+      "a_outcome": "Т3 св.",
+      "a_unit": "пг/мл",
+      "b_raw_code": "53",
+      "b_unit": "пг/мл",
+      "candidate_class": "SPECIMEN_MISSING",
+      "prior_lineage_status": "HYPOTHESIS",
+      "b_subjects": 5215,
+      "b_subjects_with_pairs": 1186,
+      "b_strict_pairs": 2083,
+      "zero_shot_shadow_suitable_if_accepted": true,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 6,
+      "mapping_id": "fc030561ac4e87236d815db4a17d8293787e6f4a745556f22c781b7adf0709e8",
+      "a_outcome": "ТТГ",
+      "a_unit": "мЕд/л",
+      "b_raw_code": "1",
+      "b_unit": "сек.",
+      "candidate_class": "UNIT_CONFLICT",
+      "prior_lineage_status": "HYPOTHESIS",
+      "b_subjects": 1001,
+      "b_subjects_with_pairs": 95,
+      "b_strict_pairs": 119,
+      "zero_shot_shadow_suitable_if_accepted": false,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 7,
+      "mapping_id": "31d9a987f2d0a90f4b3845af5f0a7af1f48eee0eea3a3f6e81ea4dac25784824",
+      "a_outcome": "ТТГ",
+      "a_unit": "мМЕ/л",
+      "b_raw_code": "1",
+      "b_unit": "сек.",
+      "candidate_class": "UNIT_CONFLICT",
+      "prior_lineage_status": "HYPOTHESIS",
+      "b_subjects": 1001,
+      "b_subjects_with_pairs": 95,
+      "b_strict_pairs": 119,
+      "zero_shot_shadow_suitable_if_accepted": false,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 8,
+      "mapping_id": "0d0e78d0722c5c4ae32f19667fa0a1b694efe1fce0b5cceba406ba6bdb0a7c0a",
+      "a_outcome": "ТТГ",
+      "a_unit": "мкМЕ/мл",
+      "b_raw_code": "1",
+      "b_unit": "сек.",
+      "candidate_class": "UNIT_CONFLICT",
+      "prior_lineage_status": "HYPOTHESIS",
+      "b_subjects": 1001,
+      "b_subjects_with_pairs": 95,
+      "b_strict_pairs": 119,
+      "zero_shot_shadow_suitable_if_accepted": false,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 9,
+      "mapping_id": "215604009a50bab2c07570099c6b4337d98160f861fe5828368dd8c68050fa76",
+      "a_outcome": "Т4 св.",
+      "a_unit": "нг/дл",
+      "b_raw_code": "54",
+      "b_unit": "нмоль/л",
+      "candidate_class": "UNIT_CONFLICT",
+      "prior_lineage_status": "UNKNOWN",
+      "b_subjects": 806,
+      "b_subjects_with_pairs": 22,
+      "b_strict_pairs": 25,
+      "zero_shot_shadow_suitable_if_accepted": false,
+      "ranking_uses_model_performance": false
+    },
+    {
+      "priority": 10,
+      "mapping_id": "6bbbcc6cc139034d8377c446731f8085b455d67cd056c3dc10cfddaaeb8a475d",
+      "a_outcome": "Т4 св.",
+      "a_unit": "пмоль/л",
+      "b_raw_code": "54",
+      "b_unit": "нмоль/л",
+      "candidate_class": "UNIT_CONFLICT",
+      "prior_lineage_status": "UNKNOWN",
+      "b_subjects": 806,
+      "b_subjects_with_pairs": 22,
+      "b_strict_pairs": 25,
+      "zero_shot_shadow_suitable_if_accepted": false,
+      "ranking_uses_model_performance": false
+    }
+  ],
+  "readiness_impact_summary": {
+    "n": 10,
+    "threshold": {
+      "version": "0.1",
+      "THRESHOLD_DECISION_REQUIRED": true,
+      "configured_min_accepted_outcomes": null,
+      "options": [
+        {
+          "option_id": "T1",
+          "min_scientifically_usable_accepted": 1,
+          "rationale": "Minimal single-outcome pilot readiness (owner decision required)"
+        },
+        {
+          "option_id": "T3",
+          "min_scientifically_usable_accepted": 3,
+          "rationale": "Small multi-analyte set before classifier training gate"
+        },
+        {
+          "option_id": "T5",
+          "min_scientifically_usable_accepted": 5,
+          "rationale": "Broader coverage before classifier training gate"
+        }
+      ],
+      "note": "No existing policy min-accepted threshold found. Do not write a new global policy without owner decision.",
+      "global_policy_written": false
+    }
+  },
+  "human_decisions_ingested": 0,
+  "privacy_scan": {
+    "status": "PASS",
+    "n_hits": 0
+  },
+  "private_review_paths": [
+    "private/cross-source-outcome-review-v01"
+  ],
+  "non_actions": [
+    "No Current State Classifier training",
+    "No joint multi-outcome model training",
+    "No A→B zero-shot without accepted mappings",
+    "No automatic domain acceptance",
+    "No unverified unit conversion",
+    "No identity merge",
+    "No medication residual / intervention-response / QSP / PKPD",
+    "No clinical or production claims",
+    "No security remediation",
+    "No prior ZIP overwrite"
+  ],
+  "statuses": {
+    "BASELINE_VERIFICATION_STATUS": "PASS",
+    "MAPPING_UNIVERSE_ACCOUNTING_STATUS": "PASS",
+    "CROSS_SOURCE_SEMANTIC_REVIEW_STATUS": "PASS",
+    "DOMAIN_REVIEW_WORKBENCH_STATUS": "PASS",
+    "DOMAIN_REVIEW_DECISION_STATUS": "DOMAIN_REVIEW_DECISION_REQUIRED",
+    "SCIENTIFICALLY_USABLE_ACCEPTED_OUTCOME_COUNT": 0,
+    "T3_DOMAIN_REVIEW_STATUS": "DOMAIN_REVIEW_REQUIRED",
+    "CROSS_SOURCE_INDEPENDENCE_STATUS": "INDEPENDENCE_NOT_ESTABLISHED",
+    "A_TO_B_ZERO_SHOT_SHADOW_STATUS": "NOT_RUN_NO_ACCEPTED_MAPPINGS",
+    "ENGINE_CROSS_SOURCE_SHADOW_STATUS": "NOT_RUN_NO_ACCEPTED_MAPPINGS",
+    "CURRENT_STATE_CLASSIFIER_STATUS": "NOT_STARTED",
+    "JOINT_MULTI_OUTCOME_MODEL_STATUS": "NOT_STARTED",
+    "MEDICATION_RESIDUAL_MODEL_STATUS": "NOT_STARTED",
+    "INTERVENTION_RESPONSE_MODEL_STATUS": "NOT_STARTED",
+    "CLINICAL_VALIDATION_STATUS": "NOT_STARTED",
+    "PUBLIC_DATA_MINIMIZATION_STATUS": "PASS_AGGREGATE_ONLY",
+    "SECURITY_STAGE_STATUS": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+    "PUBLICATION_STATUS": "REFUSED_DOMAIN_REVIEW_REQUIRED",
+    "THRESHOLD_DECISION_REQUIRED": true
+  },
+  "stop_reason": "DOMAIN_REVIEW_DECISION_REQUIRED"
+}

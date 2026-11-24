@@ -1,0 +1,95 @@
+{
+  "subjects": {
+    "relation_source": "canonical_evidence.subject",
+    "exact_eligible": 93420,
+    "materialized": 93420,
+    "subject_ownership_path": "canonical.subject_id"
+  },
+  "encounters": {
+    "relation_source": "canonical_evidence.encounter",
+    "exact_eligible": 156995,
+    "materialized": 156995,
+    "subject_ownership_path": "encounter.subject_id -> subject",
+    "encounter_ownership_path": "self",
+    "event_timestamp_source": "occurred_at|recorded_at"
+  },
+  "observations": {
+    "relation_source": "canonical_evidence.observation",
+    "exact_eligible": 934233,
+    "materialized": 934233,
+    "subject_ownership_path": "observation.subject_id",
+    "encounter_ownership_path": "observation.encounter_id",
+    "event_timestamp_source": "observed_at>specimen>result>recorded",
+    "note": "raw_value omitted from observation header; components hold values"
+  },
+  "observation_components": {
+    "relation_source": "canonical_evidence.observation_component",
+    "exact_eligible": 3291609,
+    "materialized": 3291609,
+    "note": "text_value excluded from parquet to reduce free-text leakage risk"
+  },
+  "medications": {
+    "relation_source": "magerya_api.diagnosis_medicineappointments",
+    "exact_eligible": 25726,
+    "materialized": 25726,
+    "rejected": 0,
+    "subject_ownership_path": "patient_id -> opaque_subject_key -> canonical.subject",
+    "encounter_ownership_path": "none_direct",
+    "event_timestamp_source": "appointment_date|created",
+    "administration_claim": "NOT_CLAIMED",
+    "source_b_structured_medications": "ABSENT"
+  },
+  "diagnoses": {
+    "relation_source": "magerya_api.diagnosis_diagnosis",
+    "catalog_rows_exact": null,
+    "patient_diagnosis_facts_materialized": 0,
+    "materialized": 0,
+    "unresolved_reason": "diagnosis_diagnosis is REFERENCE_CATALOG (name/description only); no structured patient/encounter-linked diagnosis fact table confirmed",
+    "source_b_structured_diagnoses": "ABSENT_AFTER_MULTI_SCHEMA_INVENTORY",
+    "support_status": "UNRESOLVED_RETAINED"
+  },
+  "recommendations": {
+    "relation_sources": [
+      "magerya_api.document_recommendation",
+      "quest_digital.recommendations_user"
+    ],
+    "catalog_excluded_from_patient_event_count": [
+      "quest_digital.recommendations_list",
+      "quest_digital.recommendations_category"
+    ],
+    "materialized_patient_events": 1053500,
+    "rejected": 0,
+    "body_text_included": false
+  },
+  "procedures": {
+    "relation_source": [
+      "diagnosis_proceduresresult",
+      "diagnosis_manipulationsresult"
+    ],
+    "materialized": 98,
+    "source_b_structured_procedures": "NOT_CLAIMED"
+  },
+  "documents": {
+    "relation_source": "public.documents",
+    "materialized": 203659,
+    "body_included": false,
+    "path_included": false,
+    "name_included": false
+  },
+  "provenance": {
+    "relation_source": "canonical_evidence.source_record",
+    "exact_eligible": 4689885,
+    "materialized": 4689885
+  },
+  "events": {
+    "materialized": 2374211,
+    "constituent_types": [
+      "document_reference",
+      "encounter",
+      "medication_appointment",
+      "observation",
+      "procedure",
+      "recommendation"
+    ]
+  }
+}

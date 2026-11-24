@@ -1,0 +1,38 @@
+document: source-b-encounter-construction-policy
+version: 0.1.2
+source_system: kgz_raw
+source_relation: public.consultations
+occurred_at:
+  primary: COALESCE(confirmed_at, success_at, (date::timestamp + COALESCE(time, time
+    '00:00')), created_at)
+  fallback_order:
+  - confirmed_at
+  - success_at
+  - date+time (date alone → midnight)
+  - created_at
+  notes: Deterministic clinical occurrence; never invent from cancel_at.
+recorded_at:
+  primary: created_at
+  fallback_order:
+  - created_at
+completed_at:
+  primary: success_at WHEN success IS TRUE
+  else: null
+cancelled_at:
+  primary: cancel_at WHEN cancel IS TRUE
+  else: null
+status_derivation:
+  cancelled: cancel IS TRUE
+  completed: success IS TRUE AND cancel IS NOT TRUE
+  confirmed: confirmed IS TRUE AND success IS NOT TRUE AND cancel IS NOT TRUE
+  open: else
+  contradiction_priority:
+  - cancelled
+  - completed
+  - confirmed
+  - open
+temporal_precision: timestamp with time zone (source timestamps treated as clinic-local
+  stored UTC-capable)
+provider_id_policy: NULL in v0.1.2 — provider mapping not promoted
+repair_policy: Do not rewrite ACCEPTED rows unless audit detects mapping defect vs
+  this policy

@@ -1,0 +1,44 @@
+{
+  "n_subjects_in_series": 74,
+  "n_pairs": 56,
+  "n_subjects_with_pairs": 30,
+  "horizon_days": {
+    "n": 56,
+    "min": 7.5059998617708334,
+    "median": 56.0,
+    "max": 302.0,
+    "mean": 72.44949785160694
+  },
+  "exclusions_by_reason": {
+    "missing_timestamp": 0,
+    "non_positive_horizon": 0,
+    "incompatible_unit": 0,
+    "duplicate_collapsed": 0
+  },
+  "units": [
+    "\u043f\u043c\u043e\u043b\u044c/\u043b"
+  ],
+  "date_coverage": {
+    "t0_min": "2023-02-25T00:00:00+00:00",
+    "t0_max": "2026-05-12T00:00:00+00:00",
+    "t1_min": "2023-05-19T00:00:00+00:00",
+    "t1_max": "2026-06-30T00:00:00+00:00"
+  },
+  "feature_list": [
+    "y_t0",
+    "horizon_days",
+    "n_prior_measurements",
+    "prior_mean",
+    "prior_last_delta",
+    "days_since_first",
+    "has_prior_history",
+    "prior_mean_missing_flag",
+    "prior_last_delta_missing_flag"
+  ],
+  "dataset_schema_hash": "41aedb1c65fac096937e3a40748ad730808756aa45a96a517e80caee85fb790b",
+  "dataset_build_configuration_hash": "0db986a5efc03aafa3ee19f53aae338d2c222579c74d7265db2166706016a871",
+  "missingness": {
+    "prior_mean_null_pairs": 40,
+    "prior_last_delta_null_pairs": 40
+  }
+}

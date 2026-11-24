@@ -1,0 +1,128 @@
+{
+  "NEGATIVE_CONTROL_STATUS": "PASS",
+  "cases": [
+    {
+      "control": "concatenated_baseline_sha_accepted",
+      "reason": "PIN_MUST_BE_EXACT",
+      "rejected": true
+    },
+    {
+      "control": "prior_decision_hash_replaced",
+      "reason": "PRIOR_FILE_HASH_IS_PINNED",
+      "rejected": true
+    },
+    {
+      "control": "superseding_record_without_prior_hash",
+      "reason": "SUPERSEDING_MUST_CITE_PRIOR",
+      "rejected": true
+    },
+    {
+      "control": "older_closes_question_wins",
+      "reason": "NEWER_SCOPE_WINS",
+      "rejected": true
+    },
+    {
+      "control": "timing_applied_to_a_row",
+      "reason": "NO_ROW_ASSIGNMENT",
+      "rejected": true
+    },
+    {
+      "control": "period_applied_without_visit_class",
+      "reason": "VISIT_CLASS_REQUIRED",
+      "rejected": true
+    },
+    {
+      "control": "doctor_feedback_accepted_as_source_b",
+      "reason": "UNRELATED_FORM",
+      "rejected": true
+    },
+    {
+      "control": "column_name_accepted_as_semantics",
+      "reason": "E0_DOES_NOT_CLOSE",
+      "rejected": true
+    },
+    {
+      "control": "numeric_agreement_accepted_as_identity",
+      "reason": "NUMERIC_AGREEMENT_IS_NOT_PROOF",
+      "rejected": true
+    },
+    {
+      "control": "unrelated_repository_accepted",
+      "reason": "REPOSITORY_MUST_MATCH",
+      "rejected": true
+    },
+    {
+      "control": "test_fixture_accepted_as_production",
+      "reason": "FIXTURE_IS_NOT_PRODUCTION",
+      "rejected": true
+    },
+    {
+      "control": "dead_code_accepted",
+      "reason": "USAGE_PATH_REQUIRED",
+      "rejected": true
+    },
+    {
+      "control": "ui_label_without_database_binding",
+      "reason": "BINDING_REQUIRED",
+      "rejected": true
+    },
+    {
+      "control": "database_column_without_form_meaning",
+      "reason": "E1_DOES_NOT_CLOSE_SEMANTICS",
+      "rejected": true
+    },
+    {
+      "control": "drugs_and_vitamins_merged",
+      "reason": "FIELDS_STAY_SEPARATE",
+      "rejected": true
+    },
+    {
+      "control": "short_yes_accepted_as_intake",
+      "reason": "YES_IS_NOT_INTAKE",
+      "rejected": true
+    },
+    {
+      "control": "change_accepted_from_the_word_change",
+      "reason": "TOKEN_IS_NOT_A_QUESTION",
+      "rejected": true
+    },
+    {
+      "control": "decline_interpreted_as_refusal",
+      "reason": "REFUSAL_NEEDS_THE_QUESTION",
+      "rejected": true
+    },
+    {
+      "control": "analysis_items_accepted_as_recommendation_items",
+      "reason": "DIFFERENT_OBJECT",
+      "rejected": true
+    },
+    {
+      "control": "medicines_declared_the_only_section",
+      "reason": "ONE_CODE_IS_NOT_THE_REGISTRY",
+      "rejected": true
+    },
+    {
+      "control": "draft_document_declared_issued",
+      "reason": "PRESENCE_IS_NOT_DELIVERY",
+      "rejected": true
+    },
+    {
+      "control": "raw_patient_value_published",
+      "reason": "PRIVACY",
+      "rejected": true
+    },
+    {
+      "control": "gate_1b_opened_with_a_blocker",
+      "reason": "ONE_OPEN_BLOCKER_BLOCKS_1B",
+      "rejected": true
+    },
+    {
+      "control": "extractor_or_model_started",
+      "reason": "MODEL_STAYS_NOT_STARTED",
+      "rejected": true
+    }
+  ],
+  "n_cases": 24,
+  "n_rejected": 24,
+  "ok": true
+}

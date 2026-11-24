@@ -1,0 +1,32 @@
+{
+  "version": "0.1.1",
+  "accepted_pilot_baseline": {
+    "subject_limit": 100,
+    "note": "Pilot vertical slice loaded capped subjects before full expansion"
+  },
+  "database_state_before_original_v0.1_expansion": {
+    "note": "Pilot rows present; full eligible cohort not yet loaded"
+  },
+  "rows_inserted_by_v0.1": {
+    "observation": 563158,
+    "document_analysisresult_batch_loaded_counter": 574216,
+    "already_present_pilot_on_conflict": 4000
+  },
+  "database_state_at_start_of_v0.1.1": {
+    "document_analysisresult_source_records": 578216,
+    "document_analysisresult_observations": 578216
+  },
+  "rows_inserted_by_v0.1.1": {
+    "subject": 0,
+    "encounter": 0,
+    "observation": 0,
+    "observation_component": 0,
+    "source_record": 0
+  },
+  "final_canonical_total": {
+    "document_analysisresult_source_records": 578216,
+    "document_analysisresult_observations": 578216
+  },
+  "idempotent_if_v011_inserts_zero": true,
+  "source_a_accounting_evidence_status": "PASS"
+}

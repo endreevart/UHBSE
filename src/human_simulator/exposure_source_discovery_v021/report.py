@@ -1,0 +1,152 @@
+"""FINAL technical report. Counts are copied from the live ledger."""
+
+from __future__ import annotations
+
+from typing import Any
+
+
+def count_tokens(ledger: dict[str, Any]) -> dict[str, int]:
+    temporal = ledger["exclusive"]["categories"]
+    subject = ledger["subjects"]["categories"]
+    targets = ledger["targets"]
+    route = ledger["route"]
+    return {
+        "feedback_total": ledger["exclusive"]["FEEDBACK_TOTAL_COUNT"],
+        "consultation_id_null": temporal["CONSULTATION_ID_NULL"]["count"],
+        "consultation_target_missing": temporal["CONSULTATION_ID_PRESENT_TARGET_NOT_FOUND"]["count"],
+        "target_found_before": temporal["CONSULTATION_TARGET_FOUND_TIME_BEFORE"]["count"],
+        "target_found_same_day": temporal["CONSULTATION_TARGET_FOUND_TIME_SAME_DAY"]["count"],
+        "target_found_after": temporal["CONSULTATION_TARGET_FOUND_TIME_AFTER"]["count"],
+        "target_found_time_uncomparable": temporal["CONSULTATION_TARGET_FOUND_TIME_UNCOMPARABLE"]["count"],
+        "consultation_id_present": targets["CONSULTATION_ID_PRESENT_COUNT"],
+        "consultation_target_found": targets["CONSULTATION_TARGET_FOUND_COUNT"],
+        "consultation_target_not_found": targets["CONSULTATION_TARGET_NOT_FOUND_COUNT"],
+        "consultation_target_multiple_match": targets["CONSULTATION_TARGET_MULTIPLE_MATCH_COUNT"],
+        "subject_target_missing": subject["SUBJECT_COMPARISON_NOT_RUN_TARGET_MISSING"]["count"],
+        "subject_both_null": subject["BOTH_SUBJECT_KEYS_NULL"]["count"],
+        "subject_user_id_null": subject["FEEDBACK_USER_ID_NULL"]["count"],
+        "subject_patient_id_null": subject["CONSULTATION_PATIENT_ID_NULL"]["count"],
+        "subject_keys_equal": subject["SUBJECT_KEYS_BOTH_PRESENT_EQUAL"]["count"],
+        "subject_keys_unequal": subject["SUBJECT_KEYS_BOTH_PRESENT_UNEQUAL"]["count"],
+        "subject_equality_denominator": ledger["subjects"]["equality_denominator"],
+        "candidate_count": route["candidate_count"],
+        "candidate_denominator": route["denominator"],
+        "excluded_target_missing": route["excluded_target_missing_count"],
+        "excluded_no_prior_recommendation": route["excluded_no_prior_recommendation_count"],
+        "excluded_out_of_order": route["excluded_out_of_order_count"],
+        "excluded_same_consultation_only": route["excluded_same_consultation_only_count"],
+    }
+
+
+def tokens_match(text: str, tokens: dict[str, int]) -> bool:
+    return all(f"{key}={tokens[key]}" in text for key in tokens)
+
+
+def render(ledger: dict[str, Any], defect: dict[str, Any], status: dict[str, str]) -> str:
+    tokens = count_tokens(ledger)
+    contract = ledger["temporal_contract"]
+    route = ledger["route"]
+    prior = route["interval_feedback_minus_prior_recommendation_days"]
+    until = route["interval_consultation_minus_feedback_days"]
+    lines = [
+        "# Exposure source discovery v0.2.1",
+        "",
+        "Report status: FINAL",
+        "",
+        "Temporal and identity accounting correction of discovery v0.2.",
+        "Technical reconciliation only. This is not Stage 05 Gate 1.",
+        "Field meanings stay pending. Numeric key agreement is not an identity proof.",
+        "",
+        f"`TECHNICAL_DISCOVERY_STATUS`={status['TECHNICAL_DISCOVERY_STATUS']}",
+        f"`V02_TEMPORAL_ACCOUNTING_STATUS`={defect['V02_TEMPORAL_ACCOUNTING_STATUS']}",
+        f"`V02_FINAL_REPORT_ACCOUNTING_STATUS`={defect['V02_FINAL_REPORT_ACCOUNTING_STATUS']}",
+        f"`SOURCE_B_SUBJECT_IDENTITY_LINKAGE_STATUS`={status['SOURCE_B_SUBJECT_IDENTITY_LINKAGE_STATUS']}",
+        f"`SOURCE_B_TIMEZONE_SEMANTICS_STATUS`={contract['SOURCE_B_TIMEZONE_SEMANTICS_STATUS']}",
+        f"`SOURCE_B_TEMPORAL_SEQUENCE_STATUS`={route['SOURCE_B_TEMPORAL_SEQUENCE_STATUS']}",
+        f"`INTERVENTION_RESPONSE_READINESS_STATUS`={status['INTERVENTION_RESPONSE_READINESS_STATUS']}",
+        "",
+        "## Feedback reconciliation",
+        "",
+        "```text",
+        "feedback_total",
+        "= consultation_id_null",
+        "+ consultation_target_missing",
+        "+ target_found_before",
+        "+ target_found_same_day",
+        "+ target_found_after",
+        "+ target_found_time_uncomparable",
+        "```",
+        "",
+        f"feedback_total={tokens['feedback_total']}",
+        f"consultation_id_null={tokens['consultation_id_null']}",
+        f"consultation_target_missing={tokens['consultation_target_missing']}",
+        f"target_found_before={tokens['target_found_before']}",
+        f"target_found_same_day={tokens['target_found_same_day']}",
+        f"target_found_after={tokens['target_found_after']}",
+        f"target_found_time_uncomparable={tokens['target_found_time_uncomparable']}",
+        "",
+        "Uncomparable rows are found consultation targets whose dates cannot be ordered:",
+        f"created_at null and consultation date null={ledger['exclusive']['uncomparable_components']['created_at_null_and_consultation_date_null']}",
+        f"created_at null and consultation date present={ledger['exclusive']['uncomparable_components']['created_at_null_and_consultation_date_present']}",
+        f"created_at present and consultation date missing={ledger['exclusive']['uncomparable_components']['created_at_present_and_consultation_date_missing_or_targets_disagree']}",
+        "",
+        f"consultation_id_present={tokens['consultation_id_present']}",
+        f"consultation_target_found={tokens['consultation_target_found']}",
+        f"consultation_target_not_found={tokens['consultation_target_not_found']}",
+        f"consultation_target_multiple_match={tokens['consultation_target_multiple_match']}",
+        "",
+        "## Subject-key reconciliation",
+        "",
+        "```text",
+        "feedback_total",
+        "= subject_target_missing",
+        "+ subject_both_null",
+        "+ subject_user_id_null",
+        "+ subject_patient_id_null",
+        "+ subject_keys_equal",
+        "+ subject_keys_unequal",
+        "```",
+        "",
+        f"subject_target_missing={tokens['subject_target_missing']}",
+        f"subject_both_null={tokens['subject_both_null']}",
+        f"subject_user_id_null={tokens['subject_user_id_null']}",
+        f"subject_patient_id_null={tokens['subject_patient_id_null']}",
+        f"subject_keys_equal={tokens['subject_keys_equal']}",
+        f"subject_keys_unequal={tokens['subject_keys_unequal']}",
+        "",
+        "Comparison of feedback.user_id and consultations.patient_id ran only where a consultation",
+        "target was found. The equality denominator is the sum of equal and unequal rows.",
+        f"subject_equality_denominator={tokens['subject_equality_denominator']}",
+        "Phrase: `NUMERIC_KEY_AGREEMENT_OBSERVED_NOT_IDENTITY_PROOF`.",
+        "There is no foreign key, documented crosswalk, or owner confirmation.",
+        "",
+        "## Time",
+        "",
+        f"`feedback.created_at` is `{contract['feedback.created_at']}`.",
+        f"`consultations.date` is `{contract['consultations.date']}`.",
+        f"Session TimeZone recorded as `{contract['session_timezone']}` and is not source-timezone proof.",
+        "Same day means the stored calendar dates are equal. A null timestamp or null consultation date",
+        "stays in `target_found_time_uncomparable`.",
+        "",
+        "## Candidate route",
+        "",
+        "Earlier drug recommendation on another consultation, then feedback, then a found consultation",
+        "on the same calendar day or later. Identity equality stays an unverified assumption.",
+        "A recommendation on the consultation itself is not a prior recommendation.",
+        "A missing consultation target is not a completed chain.",
+        "",
+        f"candidate_denominator={tokens['candidate_denominator']}",
+        f"candidate_count={tokens['candidate_count']}",
+        f"excluded_target_missing={tokens['excluded_target_missing']}",
+        f"excluded_no_prior_recommendation={tokens['excluded_no_prior_recommendation']}",
+        f"excluded_out_of_order={tokens['excluded_out_of_order']}",
+        f"excluded_same_consultation_only={tokens['excluded_same_consultation_only']}",
+        f"days since prior recommendation p10/p50/p90: {prior['p10']} / {prior['p50']} / {prior['p90']}",
+        f"days from feedback to consultation p10/p50/p90: {until['p10']} / {until['p50']} / {until['p90']}",
+        "",
+        "v0.2 published four route counts that do not add up to feedback_total.",
+        "That gap is a discovery-accounting omission, not a Stage 05 defect.",
+        "The v0.2 directories were not modified.",
+        "",
+    ]
+    return "\n".join(lines)

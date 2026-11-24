@@ -1,0 +1,89 @@
+{
+  "uncertainty_policy_hash_before_recomputation": "5e0cc533e26838a3ea174232eea22c9130adb7709fb546649cc8c4aaefb51c89",
+  "uncertainty_policy": {
+    "nominal_coverage": 0.9,
+    "overcoverage_threshold": 0.05,
+    "undercoverage_threshold": 0.05,
+    "max_mean_width_vs_outcome_iqr": 2.0,
+    "require_persistence_interval_comparison": true,
+    "forbid_post_hoc_threshold_tuning": true,
+    "seed": 42
+  },
+  "nominal_coverage": 0.9,
+  "observed_coverage": 0.9797008547008547,
+  "coverage_error": 0.07970085470085464,
+  "mean_interval_width": 5.975485787556725,
+  "median_interval_width": 5.975485787556725,
+  "width_relative_to_outcome_iqr": 5.432259806869749,
+  "outcome_iqr": 1.1,
+  "interval_score": 7.600672958405501,
+  "subject_cluster_coverage_ci": {
+    "status": "COMPUTED",
+    "n_iterations": 1000,
+    "seed": 42,
+    "mean": 0.9795830549217382,
+    "ci_95_lower": 0.9679752066115702,
+    "ci_95_upper": 0.9899553571428571
+  },
+  "coverage_by_horizon": {
+    "lt_1d": {
+      "n_pairs": 7,
+      "coverage": 1.0
+    },
+    "1_7d": {
+      "n_pairs": 22,
+      "coverage": 0.9545454545454546
+    },
+    "7_30d": {
+      "n_pairs": 71,
+      "coverage": 0.9577464788732394
+    },
+    "30_90d": {
+      "n_pairs": 226,
+      "coverage": 0.9690265486725663
+    },
+    "90_365d": {
+      "n_pairs": 474,
+      "coverage": 0.9873417721518988
+    },
+    "365_730d": {
+      "n_pairs": 101,
+      "coverage": 0.9900990099009901
+    },
+    "gt_730d": {
+      "n_pairs": 35,
+      "coverage": 0.9714285714285714
+    }
+  },
+  "coverage_by_starting_value_quantile": {
+    "q1": {
+      "n_pairs": 233,
+      "coverage": 0.9957081545064378
+    },
+    "q2": {
+      "n_pairs": 234,
+      "coverage": 0.9957264957264957
+    },
+    "q3": {
+      "n_pairs": 234,
+      "coverage": 0.9829059829059829
+    },
+    "q4": {
+      "n_pairs": 936,
+      "coverage": 0.9797008547008547
+    }
+  },
+  "persistence_interval_comparison": {
+    "persistence_coverage": 0.016025641025641024,
+    "persistence_mean_width": 0.0,
+    "ridge_mean_width": 5.975485787556725,
+    "ridge_narrower_than_persistence": false
+  },
+  "uncertainty_interval_construction_status": "UNCERTAINTY_INTERVAL_CONSTRUCTION_PASS",
+  "uncertainty_coverage_status": "UNCERTAINTY_COVERAGE_ESTIMATED",
+  "uncertainty_coverage_detail": "UNCERTAINTY_OVERCONSERVATIVE",
+  "uncertainty_sharpness_status": "NOT_ESTABLISHED",
+  "uncertainty_calibration_and_sharpness_status": "UNCERTAINTY_CALIBRATION_AND_SHARPNESS_NOT_ESTABLISHED",
+  "overcoverage_blocks_full_pass": true,
+  "n_test_pairs": 936
+}

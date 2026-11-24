@@ -1,0 +1,50 @@
+{
+  "artifact_dir": "artifacts/stage-05-intervention-response-readiness-and-exposure-semantics-v0.1",
+  "code_version": "intervention-response-readiness-v01/0.1",
+  "exposure_tiers": [
+    "UNKNOWN",
+    "RECOMMENDED",
+    "RECORDED_MEDICATION_ASSOCIATION",
+    "PRESCRIBED_OR_ORDERED_EXPOSURE",
+    "DISPENSED_OR_ADMINISTERED_EXPOSURE",
+    "INGESTION_UNVERIFIED",
+    "CAUSAL_INTERVENTION_EVIDENCE"
+  ],
+  "gates": [
+    "G0_SOURCE_AND_PROVENANCE_IDENTITY",
+    "G1_EXACT_VOCABULARY_MAPPING_IDENTITY",
+    "G2_DOMAIN_ACCEPTANCE",
+    "G3_EXPOSURE_SEMANTIC_ELIGIBILITY",
+    "G4_TEMPORALLY_VALID_T0_START_END",
+    "G5_OUTCOME_AND_NATIVE_UNIT_IDENTITY",
+    "G6_PRE_POST_OBSERVATION_AVAILABILITY",
+    "G7_SUBJECT_DISJOINT_LEAKAGE_SAFE_SPLIT",
+    "G8_CONFOUNDING_AND_INDICATION_BIAS_INVENTORY",
+    "G9_MINIMUM_AGGREGATE_SUPPORT",
+    "G10_FUTURE_MODEL_ELIGIBILITY"
+  ],
+  "hard_bans": [
+    "no_intervention_response_model_training",
+    "no_heldout_reopen_or_recompute",
+    "no_frozen_nhr_d0_lep_mutation",
+    "no_treatment_effect_claim",
+    "no_causal_effect_claim",
+    "no_algorithmic_or_llm_mapping_as_domain_accepted",
+    "no_source_a_to_source_b_medication_transfer",
+    "no_a_b_identity_merge",
+    "no_appointment_as_administration",
+    "no_recommendation_as_administration",
+    "no_recorded_association_as_administration",
+    "no_synthetic_source_substitute",
+    "no_patient_level_publication",
+    "no_iros_contact_or_calendar",
+    "no_security_stage_resume_without_owner"
+  ],
+  "namespace": "intervention-response-readiness-v01",
+  "review_zip": "stage-05-intervention-response-readiness-and-exposure-semantics-v0.1-review.zip",
+  "security_stage_status": "PAUSED_NOT_ACCEPTED_BY_OWNER",
+  "source_a": "magerya_api",
+  "source_b": "kgz_raw",
+  "stage_name": "STAGE 05 \u2014 INTERVENTION RESPONSE READINESS AND EXPOSURE SEMANTICS",
+  "version": "0.1"
+}

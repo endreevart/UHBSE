@@ -1,0 +1,198 @@
+{
+  "version": "0.1",
+  "BASELINE_VERIFICATION_STATUS": "PASS",
+  "prior_sha_before": {
+    "medres_v01": "a08ded64ed4790660861fe79b57eff54a3de1889d2c6ea796bc85d9fc487c612",
+    "lep_v0211": "151e085ec92c77a189de5aa49a79869e07eddda3fc825c78ea134787f7f30d9c",
+    "research_layer_v031": "ccf2627c10b472e10591f54c528170ad1e98ae259ecdf97e2d0b3c85722f54e9",
+    "uis_v0111": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88",
+    "global_split_v011": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d",
+    "traj_expansion_v011": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d"
+  },
+  "prior_sha_after": {
+    "medres_v01": "a08ded64ed4790660861fe79b57eff54a3de1889d2c6ea796bc85d9fc487c612",
+    "lep_v0211": "151e085ec92c77a189de5aa49a79869e07eddda3fc825c78ea134787f7f30d9c",
+    "research_layer_v031": "ccf2627c10b472e10591f54c528170ad1e98ae259ecdf97e2d0b3c85722f54e9",
+    "uis_v0111": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88",
+    "global_split_v011": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d",
+    "traj_expansion_v011": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d"
+  },
+  "prior_zips_immutable": true,
+  "zips": {
+    "medres_v01": {
+      "zip": "stage-03-first-source-aware-medication-residual-foundation-v0.1-review.zip",
+      "sha256": "a08ded64ed4790660861fe79b57eff54a3de1889d2c6ea796bc85d9fc487c612",
+      "members": 773,
+      "has_parquet": false,
+      "indexed": 772,
+      "recon_ok": true
+    },
+    "lep_v0211": {
+      "zip": "stage-03-unified-longitudinal-event-probability-foundation-v0.2.1.1-review.zip",
+      "sha256": "151e085ec92c77a189de5aa49a79869e07eddda3fc825c78ea134787f7f30d9c",
+      "members": 752,
+      "has_parquet": false,
+      "indexed": 751,
+      "recon_ok": true
+    },
+    "research_layer_v031": {
+      "zip": "stage-03-unified-a-b-materialized-research-layer-v0.3.1-review.zip",
+      "sha256": "ccf2627c10b472e10591f54c528170ad1e98ae259ecdf97e2d0b3c85722f54e9",
+      "members": 635,
+      "has_parquet": false,
+      "indexed": 634,
+      "recon_ok": true
+    },
+    "uis_v0111": {
+      "zip": "stage-03-unified-a-b-individual-state-multi-outcome-baseline-v0.1.1.1-review.zip",
+      "sha256": "9a468aa225cf8ffc7f819152646c4d8788524564bf398bffbfb8e4634c3c0f88",
+      "members": 672,
+      "has_parquet": false,
+      "indexed": 671,
+      "recon_ok": true
+    },
+    "global_split_v011": {
+      "zip": "stage-03-source-a-global-split-individual-multi-outcome-state-v0.1.1-review.zip",
+      "sha256": "86643de61303d772b43b7abddf048f0cb42f355dd649c885457dacc43b44a96d",
+      "members": 531,
+      "has_parquet": false,
+      "indexed": 530,
+      "recon_ok": true
+    },
+    "traj_expansion_v011": {
+      "zip": "stage-03-source-a-single-outcome-trajectory-expansion-v0.1.1-review.zip",
+      "sha256": "922158a22212aedd903f5a62ea532119465da7cb74faf16326e07c1beaba6c0d",
+      "members": 594,
+      "has_parquet": false,
+      "indexed": 593,
+      "recon_ok": true
+    }
+  },
+  "checks": [
+    {
+      "name": "medres_v01_sha",
+      "ok": true
+    },
+    {
+      "name": "medres_v01_sidecar",
+      "ok": true
+    },
+    {
+      "name": "medres_v01_attestation",
+      "ok": true
+    },
+    {
+      "name": "medres_v01_members_indexed",
+      "ok": true
+    },
+    {
+      "name": "medres_v01_no_parquet",
+      "ok": true
+    },
+    {
+      "name": "lep_v0211_sha",
+      "ok": true
+    },
+    {
+      "name": "lep_v0211_sidecar",
+      "ok": true
+    },
+    {
+      "name": "lep_v0211_attestation",
+      "ok": true
+    },
+    {
+      "name": "lep_v0211_members_indexed",
+      "ok": true
+    },
+    {
+      "name": "lep_v0211_no_parquet",
+      "ok": true
+    },
+    {
+      "name": "research_layer_v031_sha",
+      "ok": true
+    },
+    {
+      "name": "research_layer_v031_sidecar",
+      "ok": true
+    },
+    {
+      "name": "research_layer_v031_attestation",
+      "ok": true
+    },
+    {
+      "name": "research_layer_v031_members_indexed",
+      "ok": true
+    },
+    {
+      "name": "research_layer_v031_no_parquet",
+      "ok": true
+    },
+    {
+      "name": "uis_v0111_sha",
+      "ok": true
+    },
+    {
+      "name": "uis_v0111_sidecar",
+      "ok": true
+    },
+    {
+      "name": "uis_v0111_attestation",
+      "ok": true
+    },
+    {
+      "name": "uis_v0111_members_indexed",
+      "ok": true
+    },
+    {
+      "name": "uis_v0111_no_parquet",
+      "ok": true
+    },
+    {
+      "name": "global_split_v011_sha",
+      "ok": true
+    },
+    {
+      "name": "global_split_v011_sidecar",
+      "ok": true
+    },
+    {
+      "name": "global_split_v011_attestation",
+      "ok": true
+    },
+    {
+      "name": "global_split_v011_members_indexed",
+      "ok": true
+    },
+    {
+      "name": "global_split_v011_no_parquet",
+      "ok": true
+    },
+    {
+      "name": "traj_expansion_v011_sha",
+      "ok": true
+    },
+    {
+      "name": "traj_expansion_v011_sidecar",
+      "ok": true
+    },
+    {
+      "name": "traj_expansion_v011_attestation",
+      "ok": true
+    },
+    {
+      "name": "traj_expansion_v011_members_indexed",
+      "ok": true
+    },
+    {
+      "name": "traj_expansion_v011_no_parquet",
+      "ok": true
+    },
+    {
+      "name": "prior_before_after",
+      "ok": true
+    }
+  ],
+  "ok": true
+}

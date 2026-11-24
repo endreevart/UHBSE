@@ -1,0 +1,54 @@
+{
+  "version": "0.1.1",
+  "OVERLAP_UNIVERSE_RECONCILIATION_STATUS": "PASS",
+  "prior_stage02": {
+    "confirmed": 22,
+    "candidate_overlap": 2274,
+    "ambiguous": 133,
+    "conflicting": 21,
+    "source_file": "artifacts/stage-02/identity-linkage-assessment.json",
+    "stage02_confirmed": 22
+  },
+  "live": {
+    "n_unique_phone_pairs": 66,
+    "n_unique_email_pairs": 2208,
+    "n_confirmed_pairs": 20,
+    "n_candidate_pairs": 2234,
+    "n_ambiguous_nodes": 417,
+    "n_conflicting_nodes": 0,
+    "n_overlap_groups": 2254,
+    "n_a_linkage_resolved": 43856,
+    "n_b_linkage_resolved": 49564,
+    "n_a_missing_canonical": 0,
+    "n_b_missing_canonical": 0
+  },
+  "diffs": {
+    "confirmed": {
+      "prior": 22,
+      "live": 20,
+      "delta": -2
+    },
+    "candidate_overlap_phone_plus_email_unique": {
+      "prior": 2274,
+      "live": 2274,
+      "delta": 0,
+      "note": "prior=uniquely_resolved phone+email pair counts (66+2208)"
+    },
+    "ambiguous": {
+      "prior": 133,
+      "live": 417,
+      "delta": 284
+    },
+    "conflicting": {
+      "prior": 21,
+      "live": 0,
+      "delta": -21
+    }
+  },
+  "explanations": [
+    "patient_role_filter_source_b_consultations",
+    "normalization_or_source_drift_or_linkage_policy"
+  ],
+  "raw_identifiers_persisted": false,
+  "ok": true
+}
